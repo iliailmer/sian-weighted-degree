@@ -23,19 +23,17 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
 
   local system_vars, vt, rhs_terms, opposites, i, j, substitutions, new_subs, each, elem:
   
-  # get polynomial system, basically fisrt step of SIAN
+  # get polynomial system, basically fisrt step of SIAN, see imports/generate_poly_system.mpl
   system_vars := GetPolySystem(sigma, GetParameters(sigma)):
 
-  # get visibility table in BFS-fashion
+  # get visibility table in BFS-fashion, see imports/bfs_deriv.mpl
   vt := GetMinLevelBFS(sigma):
   
   # get right hand side terms from the ODEs. 
-  # example input: x1'(t) = a*x1(t)+b*x2(t) -> {a*x1(t), b*x2(t)}
+  # example input: 
+  # x1'(t) = a*x1(t)+b*x2(t) -> {a*x1(t), b*x2(t)}
   # x2'(t) = -a*x1(t)+c*x2(t) -> {-a*x1(t), c*x2(t)}
   rhs_terms := map(f->op(rhs(f)), select(f->is_diff(lhs(f)), sigma)):
-  
-  # sum_odes:= {add(l, l in select(f->type(int(lhs(f), t), function(name)), map(f->lhs(f)=expand(rhs(f)), sigma)))}:
-  # remaining_terms := map(f->op(rhs(f)), sum_odes):
   
   # collect terms that cancel each other
   # for the example above this will be 
@@ -93,3 +91,8 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
   # output
   return substitutions, system_vars[1], system_vars[2]:
 end proc:
+
+# legacy code:
+  # sum_odes:= {add(l, l in select(f->type(int(lhs(f), t), function(name)), map(f->lhs(f)=expand(rhs(f)), sigma)))}:
+  # remaining_terms := map(f->op(rhs(f)), sum_odes):
+  

@@ -60,7 +60,8 @@ GetMinLevelBFS := proc(sigma)
     # begin differentiation
     current_level := current_level + 1:
 
-    # we don't want to go untion s+1, we can terminate earlier once everything has been seen
+    # we don't want to go up s+1-th order of derivatives,
+    # we can terminate earlier once everything has been seen
     continue:=true:
 
     # for every y(t)-function
@@ -81,13 +82,15 @@ GetMinLevelBFS := proc(sigma)
         # get rhs candidates that are x_vars
         candidates := map(x->parse(cat(StringTools[Split](convert(x, string), "_")[1], "_")), indets(subs(x_eqs, -(poly_d - separant * leader) / separant))) intersect {op(x_vars)}:
         
-        # if found at least one new rhs element then we will diff again else we will skip this equation
+        # if found at least one new rhs element then we will diff that function again
+        # else we will skip this in the future
         if op(map(x->not assigned(visibility_table[x]), candidates)) <> NULL then
           continue := foldl(`or`, op(map(x->not assigned(visibility_table[x]), candidates))):
         else
           continue := false;
         fi:
         if continue then
+          # if current function will need more orders of differentiation
           differentiate_[i]:=1:
         else
           differentiate_[i]:=0:

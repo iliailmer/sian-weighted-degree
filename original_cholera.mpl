@@ -4,6 +4,7 @@ interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
 read "imports/create_substitutions.mpl":
+
 sigma := [
   diff(s(t), t) = mu - bi * s(t) * i(t) - bw * s(t) * w(t) - mu * s(t) + al * r(t),
   diff(i(t), t) = bw * s(t) * w(t) + bi * s(t) * i(t) - g * i(t) - mu * i(t),
@@ -57,35 +58,3 @@ else
 fi:
 quit:
 
-
-# get_function_name := f -> parse(convert(FunctionToVariable(f), string)[..-2]):
-# is_function:= f->StringTools[Has](convert(f, string), "(t)");
-# rename := f-> if is_function(f) then get_function_name(f) else f; end if:
-# system_vars := GetPolySystem(sigma, GetParameters(sigma)):
-# vt := GetMinLevelBFS(sigma):
-# rhs_terms := map(f->op(rhs(f)), sigma);
-# opposites := {}:
-# for i from 1 to nops(rhs_terms)-1 do
-#   for j from i+1 to nops(rhs_terms) do
-#     if rhs_terms[i]= - rhs_terms[j] then  
-#       opposites := {op(opposites), (rhs_terms[i])};
-#     end if:
-#   end do:
-# end do:
-# substitutions := table(map(f->parse(StringTools[Split](convert(lhs(f), string), "_")[1])=1, select(f->evalb(rhs(f)=1), [entries(vt, `pairs`)])));
-
-# new_subs:={}:
-# for each in opposites do
-#   for elem in indets(each)do 
-#     if is_function(elem) and get_function_name(elem) in {indices(substitutions, `nolist`)} then
-#       new_subs := {op(new_subs), op(indets(each))} minus {t}:
-#       break:
-#     fi:
-#   od:
-# od:
-# new_subs := map(rename, new_subs):
-# for each in new_subs do
-#   if not assigned(substitutions[each]) then
-#     substitutions[each]:=2;
-#   end if:
-# end do;
