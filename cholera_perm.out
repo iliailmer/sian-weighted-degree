@@ -1,0 +1,208 @@
+    |\^/|     Maple 2020 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2020
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> kernelopts(printbytes=false):
+> interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `Et_x_vars` is implicitly declared local
+|generate_poly_system.mpl:254|
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), i(t), w(t), r(t)]
+Output variables:         [y1(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [al, bi, bw, dz, g, k, mu]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [al, bi, bw, dz, g, k, mu, s(0), i(0), w(0), r(0)]
+Nonidentifiable parameter:  []
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+
+[s_, i_, w_, r_]
+
+[i_9, w_8, i_8, s_8, r_7, w_7, i_7, s_7, r_6, w_6, i_6, s_6, r_5, w_5, i_5, s_5, r_4, w_4, i_4, s_4, r_3, w_3, i_3, s_3, r_2, w_2, i_2, s_2, r_1, w_1, i_1, s_1, r_0, w_0, i_0, s_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 97.004
+Total Time dt: 958.978,
+Time per iteration: 95.898
+
+[s_, i_, r_, w_]
+
+[i_9, w_8, i_8, s_8, w_7, r_7, i_7, s_7, w_6, r_6, i_6, s_6, w_5, r_5, i_5, s_5, w_4, r_4, i_4, s_4, w_3, r_3, i_3, s_3, w_2, r_2, i_2, s_2, w_1, r_1, i_1, s_1, w_0, r_0, i_0, s_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 96.375
+Total Time dt: 975.987,
+Time per iteration: 97.599
+
+[s_, w_, i_, r_]
+
+[i_9, i_8, w_8, s_8, r_7, i_7, w_7, s_7, r_6, i_6, w_6, s_6, r_5, i_5, w_5, s_5, r_4, i_4, w_4, s_4, r_3, i_3, w_3, s_3, r_2, i_2, w_2, s_2, r_1, i_1, w_1, s_1, r_0, i_0, w_0, s_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 93.053
+Total Time dt: 959.777,
+Time per iteration: 95.978
+
+[s_, w_, r_, i_]
+
+[i_9, i_8, w_8, s_8, i_7, r_7, w_7, s_7, i_6, r_6, w_6, s_6, i_5, r_5, w_5, s_5, i_4, r_4, w_4, s_4, i_3, r_3, w_3, s_3, i_2, r_2, w_2, s_2, i_1, r_1, w_1, s_1, i_0, r_0, w_0, s_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 102.569
+Total Time dt: 1048.003,
+Time per iteration: 104.800
+
+[s_, r_, i_, w_]
+
+[i_9, w_8, i_8, s_8, w_7, i_7, r_7, s_7, w_6, i_6, r_6, s_6, w_5, i_5, r_5, s_5, w_4, i_4, r_4, s_4, w_3, i_3, r_3, s_3, w_2, i_2, r_2, s_2, w_1, i_1, r_1, s_1, w_0, i_0, r_0, s_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 103.297
+Total Time dt: 1052.469,
+Time per iteration: 105.247
+
+[s_, r_, w_, i_]
+
+[i_9, i_8, w_8, s_8, i_7, w_7, r_7, s_7, i_6, w_6, r_6, s_6, i_5, w_5, r_5, s_5, i_4, w_4, r_4, s_4, i_3, w_3, r_3, s_3, i_2, w_2, r_2, s_2, i_1, w_1, r_1, s_1, i_0, w_0, r_0, s_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 101.575
+Total Time dt: 1058.828,
+Time per iteration: 105.883
+
+[i_, s_, w_, r_]
+
+[i_9, w_8, s_8, i_8, r_7, w_7, s_7, i_7, r_6, w_6, s_6, i_6, r_5, w_5, s_5, i_5, r_4, w_4, s_4, i_4, r_3, w_3, s_3, i_3, r_2, w_2, s_2, i_2, r_1, w_1, s_1, i_1, r_0, w_0, s_0, i_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 91.705
+Total Time dt: 933.662,
+Time per iteration: 93.366
+
+[i_, s_, r_, w_]
+
+[i_9, w_8, s_8, i_8, w_7, r_7, s_7, i_7, w_6, r_6, s_6, i_6, w_5, r_5, s_5, i_5, w_4, r_4, s_4, i_4, w_3, r_3, s_3, i_3, w_2, r_2, s_2, i_2, w_1, r_1, s_1, i_1, w_0, r_0, s_0, i_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 97.109
+Total Time dt: 977.482,
+Time per iteration: 97.748
+
+[i_, w_, s_, r_]
+
+[i_9, s_8, w_8, i_8, r_7, s_7, w_7, i_7, r_6, s_6, w_6, i_6, r_5, s_5, w_5, i_5, r_4, s_4, w_4, i_4, r_3, s_3, w_3, i_3, r_2, s_2, w_2, i_2, r_1, s_1, w_1, i_1, r_0, s_0, w_0, i_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 91.855
+Total Time dt: 953.110,
+Time per iteration: 95.311
+
+[i_, w_, r_, s_]
+
+[i_9, s_8, w_8, i_8, s_7, r_7, w_7, i_7, s_6, r_6, w_6, i_6, s_5, r_5, w_5, i_5, s_4, r_4, w_4, i_4, s_3, r_3, w_3, i_3, s_2, r_2, w_2, i_2, s_1, r_1, w_1, i_1, s_0, r_0, w_0, i_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 90.347
+Total Time dt: 932.947,
+Time per iteration: 93.295
+
+[i_, r_, s_, w_]
+
+[i_9, w_8, s_8, i_8, w_7, s_7, r_7, i_7, w_6, s_6, r_6, i_6, w_5, s_5, r_5, i_5, w_4, s_4, r_4, i_4, w_3, s_3, r_3, i_3, w_2, s_2, r_2, i_2, w_1, s_1, r_1, i_1, w_0, s_0, r_0, i_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 90.733
+Total Time dt: 915.280,
+Time per iteration: 91.528
+
+[i_, r_, w_, s_]
+
+[i_9, s_8, w_8, i_8, s_7, w_7, r_7, i_7, s_6, w_6, r_6, i_6, s_5, w_5, r_5, i_5, s_4, w_4, r_4, i_4, s_3, w_3, r_3, i_3, s_2, w_2, r_2, i_2, s_1, w_1, r_1, i_1, s_0, w_0, r_0, i_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 92.157
+Total Time dt: 951.130,
+Time per iteration: 95.113
+
+[w_, s_, i_, r_]
+
+[i_9, i_8, s_8, w_8, r_7, i_7, s_7, w_7, r_6, i_6, s_6, w_6, r_5, i_5, s_5, w_5, r_4, i_4, s_4, w_4, r_3, i_3, s_3, w_3, r_2, i_2, s_2, w_2, r_1, i_1, s_1, w_1, r_0, i_0, s_0, w_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 97.160
+Total Time dt: 1011.198,
+Time per iteration: 101.120
+
+[w_, s_, r_, i_]
+
+[i_9, i_8, s_8, w_8, i_7, r_7, s_7, w_7, i_6, r_6, s_6, w_6, i_5, r_5, s_5, w_5, i_4, r_4, s_4, w_4, i_3, r_3, s_3, w_3, i_2, r_2, s_2, w_2, i_1, r_1, s_1, w_1, i_0, r_0, s_0, w_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 112.709
+Total Time dt: 1135.190,
+Time per iteration: 113.519
+
+[w_, i_, s_, r_]
+
+[i_9, s_8, i_8, w_8, r_7, s_7, i_7, w_7, r_6, s_6, i_6, w_6, r_5, s_5, i_5, w_5, r_4, s_4, i_4, w_4, r_3, s_3, i_3, w_3, r_2, s_2, i_2, w_2, r_1, s_1, i_1, w_1, r_0, s_0, i_0, w_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 102.715
+Total Time dt: 1046.084,
+Time per iteration: 104.608
+
+[w_, i_, r_, s_]
+
+[i_9, s_8, i_8, w_8, s_7, r_7, i_7, w_7, s_6, r_6, i_6, w_6, s_5, r_5, i_5, w_5, s_4, r_4, i_4, w_4, s_3, r_3, i_3, w_3, s_2, r_2, i_2, w_2, s_1, r_1, i_1, w_1, s_0, r_0, i_0, w_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 95.516
+Total Time dt: 959.818,
+Time per iteration: 95.982
+
+[w_, r_, s_, i_]
+
+[i_9, i_8, s_8, w_8, i_7, s_7, r_7, w_7, i_6, s_6, r_6, w_6, i_5, s_5, r_5, w_5, i_4, s_4, r_4, w_4, i_3, s_3, r_3, w_3, i_2, s_2, r_2, w_2, i_1, s_1, r_1, w_1, i_0, s_0, r_0, w_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 108.520
+Total Time dt: 1099.159,
+Time per iteration: 109.916
+
+[w_, r_, i_, s_]
+
+[i_9, s_8, i_8, w_8, s_7, i_7, r_7, w_7, s_6, i_6, r_6, w_6, s_5, i_5, r_5, w_5, s_4, i_4, r_4, w_4, s_3, i_3, r_3, w_3, s_2, i_2, r_2, w_2, s_1, i_1, r_1, w_1, s_0, i_0, r_0, w_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 103.596
+Total Time dt: 1035.267,
+Time per iteration: 103.527
+
+[r_, s_, i_, w_]
+
+[i_9, w_8, i_8, s_8, w_7, i_7, s_7, r_7, w_6, i_6, s_6, r_6, w_5, i_5, s_5, r_5, w_4, i_4, s_4, r_4, w_3, i_3, s_3, r_3, w_2, i_2, s_2, r_2, w_1, i_1, s_1, r_1, w_0, i_0, s_0, r_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 103.581
+Total Time dt: 1032.292,
+Time per iteration: 103.229
+
+[r_, s_, w_, i_]
+
+[i_9, i_8, w_8, s_8, i_7, w_7, s_7, r_7, i_6, w_6, s_6, r_6, i_5, w_5, s_5, r_5, i_4, w_4, s_4, r_4, i_3, w_3, s_3, r_3, i_2, w_2, s_2, r_2, i_1, w_1, s_1, r_1, i_0, w_0, s_0, r_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 108.820
+Total Time dt: 1090.653,
+Time per iteration: 109.065
+
+[r_, i_, s_, w_]
+
+[i_9, w_8, s_8, i_8, w_7, s_7, i_7, r_7, w_6, s_6, i_6, r_6, w_5, s_5, i_5, r_5, w_4, s_4, i_4, r_4, w_3, s_3, i_3, r_3, w_2, s_2, i_2, r_2, w_1, s_1, i_1, r_1, w_0, s_0, i_0, r_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 95.377
+Total Time dt: 935.696,
+Time per iteration: 93.570
+
+[r_, i_, w_, s_]
+
+[i_9, s_8, w_8, i_8, s_7, w_7, i_7, r_7, s_6, w_6, i_6, r_6, s_5, w_5, i_5, r_5, s_4, w_4, i_4, r_4, s_3, w_3, i_3, r_3, s_2, w_2, i_2, r_2, s_1, w_1, i_1, r_1, s_0, w_0, i_0, r_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 97.177
+Total Time dt: 963.691,
+Time per iteration: 96.369
+
+[r_, w_, s_, i_]
+
+[i_9, i_8, s_8, w_8, i_7, s_7, w_7, r_7, i_6, s_6, w_6, r_6, i_5, s_5, w_5, r_5, i_4, s_4, w_4, r_4, i_3, s_3, w_3, r_3, i_2, s_2, w_2, r_2, i_1, s_1, w_1, r_1, i_0, s_0, w_0, r_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 100.191
+Total Time dt: 1026.201,
+Time per iteration: 102.620
+
+[r_, w_, i_, s_]
+
+[i_9, s_8, i_8, w_8, s_7, i_7, w_7, r_7, s_6, i_6, w_6, r_6, s_5, i_5, w_5, r_5, s_4, i_4, w_4, r_4, s_3, i_3, w_3, r_3, s_2, i_2, w_2, r_2, s_1, i_1, w_1, r_1, s_0, i_0, w_0, r_0, z_aux, w_aux, al, bi, bw, dz, g, k, mu]
+Median time: 96.798
+Total Time dt: 1000.171,
+Time per iteration: 100.017
+memory used=299.7MB, alloc=116.8MB, time=24054.68
