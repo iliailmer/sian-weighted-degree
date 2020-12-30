@@ -1,3 +1,16 @@
+# The code below performs Depth-first approach to differentiation of
+# y(t) functions
+
+# the goal is to extract functions x(t) that occur after such differentiation
+
+# for example, if x1'(t)= a*x1(t), x2'(t) = x1(t)+x2(t), y1(t) = x2(t),
+# we say that x2(t) is on level 0
+# after 1 differentiation, y1'(t) = x2'(t)= x1(t) + x2(t) => x1 occured on 1st derivative, 
+# hence it is on level 1. We are interested in all function with level >= 1.
+
+# the difference here is that we differentiate i-th function until no new x-functions occur
+# this is very order-dependent and probably needs more work, have not used it much.
+
 kernelopts(printbytes=false):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":

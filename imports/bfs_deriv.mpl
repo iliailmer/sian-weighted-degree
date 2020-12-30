@@ -1,8 +1,19 @@
+# The code below performs Breadth-first approach to differentiation of
+# y(t) functions
+
+# the goal is to extract functions x(t) that occur after such differentiation
+
+# for example, if x1'(t)= a*x1(t), x2'(t) = x1(t)+x2(t), y1(t) = x2(t),
+# we say that x2(t) is on level 0
+# after 1 differentiation, y1'(t) = x2'(t)= x1(t) + x2(t) => x1 occured on 1st derivative, 
+# hence it is on level 1. We are interested in all function with level >= 1.
+
 kernelopts(printbytes=false):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 
 GetMinLevelBFS := proc(sigma)
+  # this part is copied from original SIAN code
   local x_functions, y_functions, all_functions, all_symbols_rhs, xy_ders, u_functions, mu, x_vars, y_vars, u_vars, subst_first_order, subst_zero_order, x_eqs, y_eqs, n, m, s, x_zero_vars, all_vars, current_level, visible_x_functions, visibility_table, i, j, continue, poly_d, leader, separant, candidates, each, differentiate_:
 
   x_functions := map(f -> int(f, t), select( f -> type(int(f, t), function(name)), map(lhs, sigma) )):
@@ -32,16 +43,30 @@ GetMinLevelBFS := proc(sigma)
   s := nops(mu) + n:
   all_vars := [ op(x_vars), op(y_vars), op(u_vars) ]:
 
+  # this part is new
+
   current_level := 0:
+
+  # get functions on level 0
   visible_x_functions := map(x->parse(cat(StringTools[Split](convert(x, string), "_")[1], "_")), select(f -> f in x_zero_vars, foldl(`union`, op(map(x->indets(rhs(x)), y_eqs))))):
+  
+  # construct a hash table of "visibility"
   visibility_table := table([seq(each=current_level, each in visible_x_functions)]):
-  differentiate_ := [seq(1, i=1..nops(y_eqs))]: # 1 == must differentiate again
-  # print();
+  
+  # this is a flag array: if i-th position == 1 then we must differentiat i-th y(t) function 
+  differentiate_ := [seq(1, i=1..nops(y_eqs))]: 
+
   for j from 1 to s + 1 do
+    # begin differentiation
     current_level := current_level + 1:
+
+    # we don't want to go untion s+1, we can terminate earlier once everything has been seen
     continue:=true:
+
+    # for every y(t)-function
     for i from 1 to m do
       # printf(`i=%d,\tj=%d\n`, i, j):
+
       if differentiate_[i]=1 then 
         # if this equation is marked as to be differentiated then diff:
         poly_d := numer(lhs(y_eqs[i]) - rhs(y_eqs[i])):
@@ -67,6 +92,7 @@ GetMinLevelBFS := proc(sigma)
         else
           differentiate_[i]:=0:
         fi:
+
         # assign visibility
         for each in candidates do
           if not assigned(visibility_table[each]) then 
@@ -75,7 +101,7 @@ GetMinLevelBFS := proc(sigma)
         od;
       fi:
     od:
-    # 
+    # check if this needs to be repeated
     if add(k, k in differentiate_)=0 then
         break:
     fi:
@@ -93,6 +119,6 @@ sigma := [
   y1(t) = w(t),
   y2(t) = z(t)
 ]:
-vt := GetMinLevelBFS(sigma):
+vt := GetMinLevelBFS(sigma): 
 
 entries(vt, `pairs`);

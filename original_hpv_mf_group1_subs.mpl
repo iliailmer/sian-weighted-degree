@@ -17,12 +17,12 @@ sigma := [diff(SM(t),t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
     y3(t) = IOGM(t)];
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# substitutions := table([SM=2, IOGF=2, gammaGF=2]): # gammaGF=2, gammaGM=1, gammaOM=1, SM=2, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=2]):
+substitutions := table([SM=2, IOGF=2, gammaGF=2]): # gammaGF=2, gammaGM=1, gammaOM=1, SM=2, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=2]):
 # substitutions[gammaGF]:=2:
 print(substitutions):
 
 all_subs := {}:
-char:=0:
+char:=2^29-3: # 1918928, 615.857
 for each in system_vars[2] do
   if "aux" in StringTools[Split](convert(each, string), "_") then
     name_ := each:
