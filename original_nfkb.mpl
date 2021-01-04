@@ -48,7 +48,8 @@ sigma := subs(known_data, [
   y5(t) = x7(t)
 ]):
 
-substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
+output, mem_used_pre := CodeTools[Usage](GetSubsTable(sigma, exponent=2,  min_level=1, strict=true), output=['output', 'bytesused']):
+printf("Memory used in preprocessing: %a", mem_used_pre):
 substitutions:=table([]):#x4 = 2, x5 = 2, x8=2]):
 
 print(substitutions):
@@ -100,7 +101,7 @@ od:
 finish_global:= time() - start_global:
 if char>0 then 
   printf("Median time: %.3f\n",Statistics[Median](final_times)):
-  printf("Max memory: %.3f\n",Statistics[Median](mem_used)):
+  printf("Median memory: %.3f\n",Statistics[Median](final_memory_used)):
   printf("Total Time dt: %.3f,\nTime per iteration: %.3f\n", finish_global, finish_global/10): # the whole loop
 else
   printf("Time: %.3f, Memory: %.3f\n", finish_local, mem_used);

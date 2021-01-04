@@ -50,7 +50,7 @@ for attempt from 1 to 10 do
 od:
 if char>0 then 
   printf("Median time: %.3f\n",Statistics[Median](final_times)):
-  printf("Max memory: %.3f\n",Statistics[Median](mem_used)):
+  printf("Median memory: %.3f\n",Statistics[Median](final_memory_used)):
   printf("Total Time dt: %.3f,\nTime per iteration: %.3f\n", finish_global, finish_global/10): # the whole loop
 else
   printf("Time: %.3f, Memory: %.3f\n", finish_local, mem_used);
