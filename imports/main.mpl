@@ -7,7 +7,7 @@ read "imports/bfs_deriv.mpl":
 read "imports/create_substitutions.mpl":
 
 
-  MainProgram := proc(sigma, {custom_subs:=[], exponent:= 2, strict:= false, min_level:=1, char:=0})
+MainProgram := proc(sigma, {custom_subs:=[], exponent:= 2, strict:= false, min_level:=1, char:=0})
   local attempt, substitutions, system_vars, all_subs, name_, each, final_times, final_memory_used, start_global, start_local, finish_global, finish_local, mem_used:
 
   # get visibility table

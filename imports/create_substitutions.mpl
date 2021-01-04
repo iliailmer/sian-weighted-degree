@@ -28,7 +28,7 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
 
   # get visibility table in BFS-fashion, see imports/bfs_deriv.mpl
   vt := GetMinLevelBFS(sigma):
-  
+  # [function_name=1 i=0,...]
   # get right hand side terms from the ODEs. 
   # example input: 
   # x1'(t) = a*x1(t)+b*x2(t) -> {a*x1(t), b*x2(t)}
@@ -60,10 +60,11 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
   # this is a hacky way of collecting functions from the terms we got above
   new_subs:={}:
   for each in opposites do
+  # bw * i(t). [w=2]
     for elem in indets(each)do 
       if is_function(elem) and get_function_name(elem) in {indices(substitutions, `nolist`)} then
         # if substitutions[get_function_name(elem)]=min_level then
-          new_subs := {op(new_subs), op(indets(each))} minus {t}:
+          new_subs := {op(new_subs), op(indets(each))} minus {t}: # s
           break:
         # fi:
       fi:
@@ -83,7 +84,7 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
   # update the substitutions table
   for each in new_subs do
     if not assigned(substitutions[each]) then
-      substitutions[each]:=exponent;
+      substitutions[each]:=exponent; # s=2
     end if:
   end do:
   print("Visibility Table: ", vt):

@@ -1,6 +1,6 @@
 kernelopts(printbytes=false):
 interface(echo=0, prettyprint=0):
-read "generate_poly_system.mpl":
+read "imports/generate_poly_system.mpl":
 
 #===============================================================================
 CompareStateVars := proc(dvl, dvr, var_list)
@@ -19,15 +19,14 @@ end proc:
 
 
 sigma := [
-  diff(x1(t), t) = -k1 * x1(t) * x2(t) + k2 * x4(t) + k4 * x6(t),
-  diff(x2(t), t) = k1 * x1(t) * x2(t) + k2 * x4(t) + k3 * x4(t),
-  diff(x3(t), t) = k3 * x4(t) + k5 * x6(t) - k6 * x3(t) * x5(t),
-  diff(x4(t), t) = k1 * x1(t) * x2(t) - k2 * x4(t) - k3 * x4(t),
-  diff(x5(t), t) = k4 * x6(t) + k5 * x6(t) - k6 * x3(t) * x5(t),
-  diff(x6(t), t) = -k4 * x6(t) - k5 * x6(t) + k6 * x3(t) * x5(t),
-  y1(t) = x3(t),
-  y2(t) = x2(t)
+  diff(x4(t), t) = - k5 * x4(t) / (k6 + x4(t)),
+  diff(x5(t), t) = k5 * x4(t) / (k6 + x4(t)) - k7 * x5(t)/(k8 + x5(t) + x6(t)),
+  diff(x6(t), t) = k7 * x5(t) / (k8 + x5(t) + x6(t)) - k9 * x6(t) * (k10 - x6(t)) / k10, # x6-> x6^2, 5.64, 6.63, 5.762, 6.05, 4.659, 7.952
+  diff(x7(t), t) = k9 * x6(t) * (k10 - x6(t)) / k10, # does not occur in polynomial
+  y1(t) = x4(t),
+  y2(t) = x5(t)
 ]:
+
 
 system_vars := GetPolySystem(sigma, GetParameters(sigma)):
 Et_x_vars:= [op(system_vars[3])]:
@@ -46,14 +45,14 @@ for x_vars in all_permutations do # [[x4_, x6_, x1_, x2_, x3_, x5_]] do
     finish_local:= time() - start_local:
     final_times := [op(final_times), finish_local]:
     if char >0 then 
-char := prevprime(char):
-else:
-break:
-fi:
+      char := prevprime(char):
+    else:
+      break:
+    fi:
   od:
   finish_global:= time() - start_global:
   printf("\n%a\n", x_vars);
-  printf("\n%a\n", vars);
+  printf("%a\n", vars);
   printf("Median time: %.3f\n",Statistics[Median](final_times)):
   printf("Total Time dt: %.3f,\nTime per iteration: %.3f\n", finish_global, finish_global/10): # the whole loop
 end do:

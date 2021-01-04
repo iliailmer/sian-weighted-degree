@@ -10,13 +10,12 @@ sigma := [
   diff(i(t), t) = bw * s(t) * w(t) + bi * s(t) * i(t) - g * i(t) - mu * i(t),
   diff(w(t), t) = dz * (i(t) - w(t)), # this one works: w=2. also the combination w*s is seen only twice, so combining w and s subs works well too
   diff(r(t), t) = g * i(t) - mu * r(t) - al * r(t),
-  y1(t) = k * i(t),
+  y1(t) = k * i(t), 
   y2(t) = i(t) + r(t) + s(t)
 ]:
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
-
-# substitutions := table([w=2, s=2]):
+substitutions := table([w=2]):
 
 all_subs := {}:
 for each in system_vars[2] do
@@ -38,7 +37,7 @@ final_memory_used:=[]:
 start_global := time():
 for attempt from 1 to 10 do 
   # start_local := time():
-  finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']): 
+  finish_local, mem_used := CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']):
   # finish_local:= time() - start_local:
   print(mem_used);
   final_memory_used:=[op(final_memory_used), mem_used]:
@@ -50,8 +49,8 @@ for attempt from 1 to 10 do
   fi:
 od:
 if char>0 then 
-  printf("Median time: %.3f\n",Statistics[Median](final_times)):
-  printf("Max memory: %.3f\n",Statistics[Median](mem_used)):
+  printf("Median time: %.3f\n", Statistics[Median](final_times)):
+  printf("Max memory: %.3f\n", Statistics[Median](mem_used)):
   printf("Total Time dt: %.3f,\nTime per iteration: %.3f\n", finish_global, finish_global/10): # the whole loop
 else
   printf("Time: %.3f, Memory: %.3f\n", finish_local, mem_used);

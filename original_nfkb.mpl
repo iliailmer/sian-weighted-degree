@@ -49,7 +49,7 @@ sigma := subs(known_data, [
 ]):
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
-substitutions:=table([x4 = 2, x5 = 2, x8=2]):
+substitutions:=table([]):#x4 = 2, x5 = 2, x8=2]):
 
 print(substitutions):
 
