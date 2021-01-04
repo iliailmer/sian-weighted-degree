@@ -48,9 +48,11 @@ sigma := subs(known_data, [
   y5(t) = x7(t)
 ]):
 
-output, mem_used_pre := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
-substitutions:=table([]):#x4 = 2, x5 = 2, x8=2]):
+output_, preprocessing_memory := CodeTools[Usage](GetSubsTable(sigma, exponent=2,  min_level=1, strict=true), output=['output','bytesused']):
+#GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
+substitutions, system_vars[1], system_vars[2] := op(output_):
 
+substitutions:=table([]):#x4 = 2, x5 = 2, x8=2]):
 print(substitutions):
 
 
@@ -102,14 +104,16 @@ od:
 finish_global:= time() - start_global:
 if char>0 then
   printf("\n==========================================================\n"):
-  printf("First reported memory usage: %.3f bytes\n", first_memory_report):
-  printf("Median time: %.3f seconds\n ", Statistics[Median](final_times)):
-  printf("Median memory: %.3f bytes\n", Statistics[Median](final_memory_used)):
-  printf("Total Time dt: %.3f bytes,\nTime per iteration: %.3f seconds\n", finish_global, finish_global/10): # the whole loop
+  printf("Preprocessing memory usage: \t%.3f bytes\n", preprocessing_memory):
+  printf("First reported memory usage: \t%.3f bytes\n", first_memory_report):
+  printf("Median time: \t%.3f seconds\n", Statistics[Median](final_times)):
+  printf("Median memory: \t%.3f bytes\n", Statistics[Median](final_memory_used)):
+  printf("Total Time dt: \t%.3f bytes,\nTime per iteration: \t%.3f seconds\n", finish_global, finish_global/10): 
   printf("==========================================================\n"):
 else
   printf("\n==========================================================\n"):
-  printf("Time: %.3f seconds, Memory: %.3f bytes\n", finish_local, mem_used);
+  printf("Preprocessing memory usage: \t%.3f bytes\n", preprocessing_memory):
+  printf("Time: \t%.3f seconds,\nMemory: \t%.3f bytes\n", finish_local, mem_used);
   printf("==========================================================\n"):
 fi:
 quit:

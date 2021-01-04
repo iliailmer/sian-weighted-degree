@@ -54,14 +54,14 @@ od:
 finish_global:= time() - start_global:
 if char>0 then
   printf("\n==========================================================\n"):
-  printf("First reported memory usage: %.3f bytes\n", first_memory_report):
-  printf("Median time: %.3f seconds\n ", Statistics[Median](final_times)):
-  printf("Median memory: %.3f bytes\n", Statistics[Median](final_memory_used)):
-  printf("Total Time dt: %.3f bytes,\nTime per iteration: %.3f seconds\n", finish_global, finish_global/10): # the whole loop
+  printf("First reported memory usage: \t%.3f bytes\n", first_memory_report):
+  printf("Median time: \t%.3f seconds\n ", Statistics[Median](final_times)):
+  printf("Median memory: \t%.3f bytes\n", Statistics[Median](final_memory_used)):
+  printf("Total Time dt: \t%.3f bytes,\nTime per iteration: \t%.3f seconds\n", finish_global, finish_global/10): 
   printf("\n==========================================================\n"):
 else
   printf("\n==========================================================\n"):
-  printf("Time: %.3f seconds, Memory: %.3f bytes\n", finish_local, mem_used);
+  printf("Time: \t%.3f seconds, Memory: \t%.3f bytes\n", finish_local, mem_used);
   printf("\n==========================================================\n"):
 fi:
 quit:
