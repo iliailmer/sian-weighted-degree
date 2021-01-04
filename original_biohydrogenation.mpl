@@ -37,11 +37,13 @@ final_times := []:
 final_memory_used:=[]:
 start_global := time():
 for attempt from 1 to 10 do 
-  # start_local := time():
+  
   finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']): 
   print(mem_used, finish_local);
   # Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char):
-  # finish_local:= time() - start_local:
+  if attempt = 1 then
+    first_memory_report:=mem_used:
+  end if:
   final_times := [op(final_times), finish_local]:
   final_memory_used:=[op(final_memory_used), mem_used]:
   if char >0 then 
@@ -51,9 +53,10 @@ for attempt from 1 to 10 do
   fi:
 od:
 finish_global:= time() - start_global:
-if char>0 then 
-  printf("Median time: %.3f\n",Statistics[Median](final_times)):
-  printf("Median memory: %.3f\n",Statistics[Median](final_memory_used)):
+if char>0 then
+  printf("First reported memory usage: %.3f bytes\n", first_memory_report):
+  printf("Median time: %.3f\n", Statistics[Median](final_times)):
+  printf("Median memory: %.3f\n", Statistics[Median](final_memory_used)):
   printf("Total Time dt: %.3f,\nTime per iteration: %.3f\n", finish_global, finish_global/10): # the whole loop
 else
   printf("Time: %.3f, Memory: %.3f", finish_local, mem_used);

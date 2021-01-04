@@ -48,8 +48,7 @@ sigma := subs(known_data, [
   y5(t) = x7(t)
 ]):
 
-output, mem_used_pre := CodeTools[Usage](GetSubsTable(sigma, exponent=2,  min_level=1, strict=true), output=['output', 'bytesused']):
-printf("Memory used in preprocessing: %a", mem_used_pre):
+output, mem_used_pre := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
 substitutions:=table([]):#x4 = 2, x5 = 2, x8=2]):
 
 print(substitutions):
@@ -86,10 +85,12 @@ final_times := []:
 final_memory_used:=[]:
 start_global := time():
 for attempt from 1 to 10 do 
-  # start_local := time():
+  
   finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']): 
   print(mem_used):
-  # finish_local:= time() - start_local:
+  if attempt = 1 then
+    first_memory_report:=mem_used:
+  end if:
   final_memory_used:=[op(final_memory_used), mem_used]:
   final_times := [op(final_times), finish_local]:
   if char >0 then 
@@ -99,12 +100,17 @@ for attempt from 1 to 10 do
   fi:
 od:
 finish_global:= time() - start_global:
-if char>0 then 
-  printf("Median time: %.3f\n",Statistics[Median](final_times)):
-  printf("Median memory: %.3f\n",Statistics[Median](final_memory_used)):
-  printf("Total Time dt: %.3f,\nTime per iteration: %.3f\n", finish_global, finish_global/10): # the whole loop
+if char>0 then
+  printf("\n==========================================================\n"):
+  printf("First reported memory usage: %.3f bytes\n", first_memory_report):
+  printf("Median time: %.3f seconds\n ", Statistics[Median](final_times)):
+  printf("Median memory: %.3f bytes\n", Statistics[Median](final_memory_used)):
+  printf("Total Time dt: %.3f bytes,\nTime per iteration: %.3f seconds\n", finish_global, finish_global/10): # the whole loop
+  printf("==========================================================\n"):
 else
-  printf("Time: %.3f, Memory: %.3f\n", finish_local, mem_used);
+  printf("\n==========================================================\n"):
+  printf("Time: %.3f seconds, Memory: %.3f bytes\n", finish_local, mem_used);
+  printf("==========================================================\n"):
 fi:
 quit:
 

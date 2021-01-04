@@ -53,6 +53,6 @@ for x_vars in all_permutations do # [[x4_, x6_, x1_, x2_, x3_, x5_]] do
   finish_global:= time() - start_global:
   printf("\n%a\n", x_vars);
   printf("%a\n", vars);
-  printf("Median time: %.3f\n",Statistics[Median](final_times)):
+  printf("Median time: %.3f\n", Statistics[Median](final_times)):
   printf("Total Time dt: %.3f,\nTime per iteration: %.3f\n", finish_global, finish_global/10): # the whole loop
 end do:

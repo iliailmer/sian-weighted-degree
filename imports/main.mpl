@@ -63,8 +63,8 @@ MainProgram := proc(sigma, {custom_subs:=[], exponent:= 2, strict:= false, min_l
 
   # outputs
   if char>0 then 
-    printf("Median time: %.3f\n",Statistics[Median](final_times)):
-    printf("Median memory: %.3f\n",Statistics[Median](final_memory_used)):
+    printf("Median time: %.3f\n", Statistics[Median](final_times)):
+    printf("Median memory: %.3f\n", Statistics[Median](final_memory_used)):
     printf("Total Time dt: %.3f,\nTime per iteration: %.3f\n", finish_global, finish_global/10): # the whole loop
   else
     # usefult to grep when running bash/zsh for loop like so:
