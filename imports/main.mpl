@@ -16,20 +16,15 @@ MainProgram := proc(sigma, {use_custom_subs:=[], exponent:= 2, strict:= false, m
     printf("==========================================================\n"):
     # if you want to overwrite substitutions, provide a list use_custom_subs as [x_function=weight], e.g. [x1=2, w=2]
     substitutions := table(use_custom_subs):
-    system_vars, preprocessing_memory := CodeTools[Usage](GetPolySystem(sigma, GetParameters(sigma)), output=['output','bytesused']):
+    system_vars := GetPolySystem(sigma, GetParameters(sigma)):
   else
     # get visibility table
     printf("\n==========================================================\n"):
     printf("GENERATING SUBS\n"):
     printf("==========================================================\n"):
-    output_, preprocessing_memory := CodeTools[Usage](GetSubsTable(sigma, exponent=exponent,  min_level=min_level, strict=strict), output=['output','bytesused']):
-
-    substitutions, system_vars[1], system_vars[2] := op(output_):
+    substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=exponent,  min_level=min_level, strict=strict): # CodeTools[Usage](, output=['output','bytesused']):
   fi:
-  printf("\n==========================================================\n"):
-  printf("Preprocessing memory usage: \t%.3f bytes\n", preprocessing_memory):
-  printf("==========================================================\n"):
-  print(substitutions); # silly debugging
+
 
   all_subs := {}:
   for each in system_vars[2] do
@@ -50,17 +45,14 @@ MainProgram := proc(sigma, {use_custom_subs:=[], exponent:= 2, strict:= false, m
   od:
 
   # debugging output
+  printf("\n=====================Substitutions========================\n"):
   printf("%a\n", all_subs):
-
+  printf("==========================================================\n"):
   
   final_times := []:
-  final_memory_used:=[]:
   start_global := time():
   for attempt from 1 to reps do 
-    finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime', 'bytesused', 'output']): 
-    
-    print(mem_used): # printing memory usage here because first attempt takes more than other, median may become unreliable
-    final_memory_used:=[op(final_memory_used), mem_used]:
+    finish_local, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime', 'output']): 
     final_times := [op(final_times), finish_local]:
     if char >0 then 
       # if we use positive characteristic -> prevprime it
@@ -74,14 +66,12 @@ MainProgram := proc(sigma, {use_custom_subs:=[], exponent:= 2, strict:= false, m
   # outputs
   if char>0 then
     printf("\n==========================================================\n"):
-    printf("First reported memory usage: \t%.3f bytes\n", first_memory_report):
     printf("Median time: \t%.3f seconds\n", Statistics[Median](final_times)):
-    printf("Median memory: \t%.3f bytes\n", Statistics[Median](final_memory_used)):
     printf("Total Time dt: \t%.3f bytes,\nTime per iteration: \t%.3f seconds\n", finish_global, finish_global/10): 
     printf("==========================================================\n"):
   else
     printf("\n==========================================================\n"):
-    printf("Time: \t%.3f seconds,\nMemory: \t%.3f bytes\n", finish_local, mem_used);
+    printf("Time: \t%.3f seconds\n", finish_local);
     printf("==========================================================\n"):
   fi:
   return gb:

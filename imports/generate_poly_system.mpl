@@ -268,7 +268,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {p := 0.99, infolevel := 1,
     printf("Variable ordering to be used for Groebner basis computation %a\n", vars);
   end if:
  
-  return [Et_hat, vars, Et_x_vars, [z_aux, w_aux,
+  return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
     op(sort(mu))], x_vars]:
 end proc:
 
