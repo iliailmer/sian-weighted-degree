@@ -13,23 +13,5 @@ sigma := [
 
 sigma := subs(substitutions, sigma):
 
-# MainProgram(sigma);
-
-all_subs := {}:
-char:=0:
-for each in system_vars[2] do
-  if "aux" in StringTools[Split](convert(each, string), "_") then
-    name_ := each:
-  else
-    name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
-  fi:
-  if assigned(substitutions[name_]) then
-    system_vars[1] := subs({each = each^substitutions[name_]}, system_vars[1]):
-    all_subs:= all_subs union {each = each^substitutions[name_]}:
-  fi:
-od:
-print(all_subs);
-finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime', 'bytesused']): 
-print(mem_used, finish_local):
-
+MainProgram(sigma);
 quit:

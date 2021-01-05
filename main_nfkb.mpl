@@ -44,7 +44,7 @@ sigma := subs(known_data, [
   y5(t) = x7(t)
 ]):
 
-runtime, memory_used := CodeTools[Usage](MainProgram(sigma, custom_subs=[x1=1]), output=['cputime', 'bytesused']):
+runtime, memory_used := CodeTools[Usage](MainProgram(sigma, use_custom_subs=[x1=1]), output=['cputime', 'bytesused']):
 
 printf("\n\n\n==========================================================\n"):
 printf("Global Time: \t%.3f seconds,\nGlobal Memory: \t%.3f bytes\n", runtime, memory_used);
