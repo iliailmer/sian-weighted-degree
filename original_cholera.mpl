@@ -15,8 +15,8 @@ sigma := [
 ]:
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
-
-substitutions := table([]):
+# print(system_vars[1]): 1808.908
+# substitutions := table([]):
 
 all_subs := {}:
 for each in system_vars[2] do

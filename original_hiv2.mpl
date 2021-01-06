@@ -15,7 +15,7 @@ sigma := [
 ]:
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# substitutions:= table([ x=2, y=2, v=2, w=1, z=1]):
+# substitutions:= table([]):# x=2, y=2, v=2, w=1, z=1]): 157
 print(substitutions):
 
 all_subs := {}:
@@ -60,7 +60,7 @@ if char>0 then
   printf("\n==========================================================\n"):
 else
   printf("\n==========================================================\n"):
-  printf("Time: \t%.3f seconds, Memory: \t%.3f bytes\n", finish_local, mem_used);
+  printf("Time: \t%.3f seconds,\nMemory: \t%.3f bytes\n", finish_local, mem_used);
   printf("\n==========================================================\n"):
 fi:
 
