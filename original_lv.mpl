@@ -11,10 +11,9 @@ sigma := [
   y(t) = x1(t) + u(t)
 ]:
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# substitutions := table([x2=2]):
+substitutions := table([x2=2, d=3]):
 
 print(substitutions):
-
 
 
 all_subs := {}:

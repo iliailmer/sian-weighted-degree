@@ -15,7 +15,9 @@ sigma := [
   y3(t) = Gb(t)
 ]:
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# substitutions := table([G=1, X=2, R=2, Ib=1, Gb=1]):
+substitutions := table([p3=2, X=2, R=2]):
+
+
 print(substitutions):
 
 all_subs := {}:

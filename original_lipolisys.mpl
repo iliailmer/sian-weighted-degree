@@ -7,7 +7,7 @@ read "imports/create_substitutions.mpl":
 sigma := [
   diff(x1(t), t) = -x1(t) * x5(t) / (k2 + x1(t)),
   diff(x2(t), t) = 2 * x1(t) * x5(t) / ((k2 + x1(t)) * 3) - k4 * x2(t),
-  diff(x3(t), t) = k4*(x2(t))/2 - k4*x3(t),
+  diff(x3(t), t) = k4*x2(t)/2 - k4*x3(t),
   diff(x4(t), t) = x1(t) * x5(t) / (3 * (k2 + x1(t))) + k4 * (x2(t))/2 + k4 * x3(t),
   diff(x5(t), t) = -k3 * x5(t),
   y1(t) = x1(t),
@@ -15,7 +15,7 @@ sigma := [
   y3(t) = x4(t)
 ]:
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# substitutions := table([ x1=1, x2=1, x3=1, x4=1, x5=2, z_aux=1]):
+substitutions := table([x5=2, k3=2]):
 print(substitutions):
 
 

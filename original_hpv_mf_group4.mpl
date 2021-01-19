@@ -16,12 +16,12 @@ sigma:= [diff(SM(t), t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
   y3(t) = IGF(t) + IOGF(t),
   y4(t) = IOF(t) + IOGF(t)]:
 
-{-SF(t)*(betaOGMF*(IOM(t)+IOGM(t))+betaGGMF*(IGM(t)+IOGM(t))), -SF(t)*(betaOOMF*(IOM(t)+IOGM(t))+betaGOMF*(IGM(t)+IOGM(t))), -SM(t)*(betaOGFM*(IOF(t)+IOGF
-(t))+betaGGFM*(IGF(t)+IOGF(t))), -SM(t)*(betaOOFM*(IOF(t)+IOGF(t))+betaGOFM*(IGF(t)+IOGF(t)))}
+# {-SF(t)*(betaOGMF*(IOM(t)+IOGM(t))+betaGGMF*(IGM(t)+IOGM(t))), -SF(t)*(betaOOMF*(IOM(t)+IOGM(t))+betaGOMF*(IGM(t)+IOGM(t))), -SM(t)*(betaOGFM*(IOF(t)+IOGF(t))+betaGGFM*(IGF(t)+IOGF(t))), -SM(t)*(betaOOFM*(IOF(t)+IOGF(t))+betaGOFM*(IGF(t)+IOGF(t)))}
 
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-substitutions := table([]): #SM=1, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=1]):
+substitutions := table([ betaOOFM=2, IGF=2, IGM=2, IOF=2, IOGF=2, IOGM=2, IOM=2, SF=2, SM=2]):
+#SM=1, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=1]):
 
 all_subs := {}:
 char:=0:

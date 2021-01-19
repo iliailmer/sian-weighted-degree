@@ -82,6 +82,9 @@ GetMinLevelBFS := proc(sigma)
         # get rhs candidates that are x_vars
         candidates := map(x->parse(cat(StringTools[Split](convert(x, string), "_")[1], "_")), indets(subs(x_eqs, -(poly_d - separant * leader) / separant))) intersect {op(x_vars)}:
         
+        # # get candidate constants (i.e. when do we start seeing constants?)
+        # map(x->parse(cat(StringTools[Split](convert(x, string), "_")[1], "_")), indets(subs(x_eqs, -(poly_d - separant * leader) / separant))) intersect {op(x_vars)}:
+
         # if found at least one new rhs element then we will diff that function again
         # else we will skip this in the future
         if op(map(x->not assigned(visibility_table[x]), candidates)) <> NULL then
@@ -113,15 +116,15 @@ GetMinLevelBFS := proc(sigma)
 end proc:
 
 
-sigma := [
-  diff(x(t), t) = lm - d * x(t) - beta * x(t) * v(t), # this one combined with v
-  diff(y(t), t) = beta * x(t) * v(t) - a * y(t),
-  diff(v(t), t) = k * y(t) - u * v(t),
-  diff(w(t), t) = c * z(t) * y(t) * w(t) - c * q * y(t) * w(t) - b * w(t),
-  diff(z(t), t) = c * q * y(t) * w(t) - h * z(t),
-  y1(t) = w(t),
-  y2(t) = z(t)
-]:
-vt := GetMinLevelBFS(sigma): 
+# sigma := [
+#   diff(x(t), t) = lm - d * x(t) - beta * x(t) * v(t), # this one combined with v
+#   diff(y(t), t) = beta * x(t) * v(t) - a * y(t),
+#   diff(v(t), t) = k * y(t) - u * v(t),
+#   diff(w(t), t) = c * z(t) * y(t) * w(t) - c * q * y(t) * w(t) - b * w(t),
+#   diff(z(t), t) = c * q * y(t) * w(t) - h * z(t),
+#   y1(t) = w(t),
+#   y2(t) = z(t)
+# ]:
+# vt := GetMinLevelBFS(sigma): 
 
-entries(vt, `pairs`);
+# entries(vt, `pairs`);

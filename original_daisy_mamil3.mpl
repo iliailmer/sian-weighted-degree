@@ -13,7 +13,7 @@ sigma := [
   y(t) = x1(t)
 ]:
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
-# substitutions:= table([x1=1, x2=2, x3=2]):
+substitutions:= table([x2=2, x3=2]):
 print(substitutions):
 
 all_subs := {}:

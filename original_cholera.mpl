@@ -10,14 +10,15 @@ sigma := [
   diff(i(t), t) = bw * s(t) * w(t) + bi * s(t) * i(t) - g * i(t) - mu * i(t),
   diff(w(t), t) = dz * (i(t) - w(t)), # this one works: w=2. also the combination w*s is seen only twice, so combining w and s subs works well too
   diff(r(t), t) = g * i(t) - mu * r(t) - al * r(t),
-  y1(t) = k * i(t), 
+  y1(t) = k * i(t),
   y2(t) = i(t) + r(t) + s(t)
 ]:
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
 # print(system_vars[1]): 1808.908
-# substitutions := table([]):
-
+substitutions := table([s=2, w=2, bi=2, g=2, k=2, bw=2]): # bi=2, g=2, k=2
+# bi, bw, mu, al, g, dz, k
+# mu, dz
 all_subs := {}:
 for each in system_vars[2] do
   if "aux" in StringTools[Split](convert(each, string), "_") then
@@ -38,7 +39,7 @@ final_memory_used:=[]:
 start_global := time():
 for attempt from 1 to 10 do 
   
-  finish_local, mem_used := CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']):
+  finish_local, mem_used, gb := CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused', 'output']):
   if attempt = 1 then
     first_memory_report:=mem_used:
   end if:
@@ -47,6 +48,7 @@ for attempt from 1 to 10 do
   if char >0 then 
     char := prevprime(char):
   else:
+    printf("%a", gb):
     break:
   fi:
 od:

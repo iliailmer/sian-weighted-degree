@@ -3,7 +3,7 @@ interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
 read "imports/create_substitutions.mpl":
-
+# betaGOFM, betaOOFM, betaOGFM, betaGGFM, gammaGM, gammaOM, gammaGF, gammaOG, 
 sigma := [diff(SM(t),t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t) * mu - SM(t) * IOF(t) * betaOOFM - SM(t) * IOGF(t) * betaGOFM - SM(t) * IOGF(t) * betaOOFM - SM(t) * IGF(t) * betaGOFM - SM(t) * IOF(t) * betaOGFM - SM(t) * IOGF(t) * betaGGFM - SM(t) * IOGF(t) * betaOGFM - SM(t) * IGF(t) * betaGGFM,
     diff(IOM(t),t) = - IOM(t) * IOF(t) * betaOGFM - IOM(t) * IOGF(t) * betaGGFM - IOM(t) * IOGF(t) * betaOGFM - IOM(t) * IGF(t) * betaGGFM + SM(t) * IOF(t) * betaOOFM + SM(t) * IOGF(t) * betaGOFM + SM(t) * IOGF(t) * betaOOFM + SM(t) * IGF(t) * betaGOFM + gammaGM * IOGM(t) - gammaOM * IOM(t) - IOM(t) * mu - IOM(t) * nuOGM,
     diff(IGM(t),t) = - IGM(t) * IOF(t) * betaOOFM - IGM(t) * IOGF(t) * betaGOFM - IGM(t) * IOGF(t) * betaOOFM - IGM(t) * IGF(t) * betaGOFM + SM(t) * IOF(t) * betaOGFM + SM(t) * IOGF(t) * betaGGFM + SM(t) * IOGF(t) * betaOGFM + SM(t) * IGF(t) * betaGGFM + gammaOM * IOGM(t) - gammaGM * IGM(t) - IGM(t) * mu - IGM(t) * nuGOM,
@@ -17,7 +17,7 @@ sigma := [diff(SM(t),t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
     y3(t) = IOGM(t)];
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-substitutions := table([SM=2, IOGF=2, gammaGF=2]): # gammaGF=2, gammaGM=1, gammaOM=1, SM=2, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=2]):
+substitutions := table([betaGGFM=2,betaGOFM=2, betaOOFM=2, gammaOM=2, gammaGM=2, gammaGF=2, IOM = 2, SF = 2, IGM = 2, IGF = 2, SM = 2, IOGM = 2, IOF = 2, IOGF = 2]): # gammaGF=2, gammaGM=1, gammaOM=1, SM=2, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=2]): 
 # substitutions[gammaGF]:=2:
 print(substitutions):
 

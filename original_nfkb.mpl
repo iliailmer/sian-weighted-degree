@@ -51,10 +51,13 @@ sigma := subs(known_data, [
 output_, preprocessing_memory := CodeTools[Usage](GetSubsTable(sigma, exponent=2,  min_level=1, strict=true), output=['output','bytesused']):
 #GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
 substitutions, system_vars[1], system_vars[2] := op(output_):
-
-substitutions:=table([]):#x4 = 2, x5 = 2, x8=2]):
+# c5, ,  
+substitutions:=table([c5=2, k2=2, x8 = 2, x14 = 2, x5 = 2, x10 = 2, x7 = 2, x11 = 2, x4 = 2, x6 = 2]):
+#x4 = 2, x5 = 2, x8=2]): 
 print(substitutions):
 
+# k2 => improvement
+# 
 
 # x3_ = 0, x12_ = 0, x10_ = 0, x5_ = 2, x14_ = 1, x7_ = 0, x8_ = 2, x1_ = 0, x2_ = 0, x11_ = 1, x4_ = 2, x9_ = 0, x13_ = 0, x6_ = 2
 

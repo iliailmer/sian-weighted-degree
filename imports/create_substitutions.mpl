@@ -131,7 +131,6 @@ GetSubsTableOnly := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_f
   # this is a hacky way of collecting functions from the terms we got above
   new_subs:={}:
   for each in opposites do
-  # bw * i(t). [w=2]
     for elem in indets(each)do 
       if is_function(elem) and get_function_name(elem) in {indices(substitutions, `nolist`)} then
         # if substitutions[get_function_name(elem)]=min_level then
