@@ -14,7 +14,7 @@ sigma := [
 ]:
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-substitutions := table([S=2, E=2, In=1, N=1]):
+substitutions := table([S=2, E=2, a=2]):
 print(substitutions);
 all_subs := {}:
 for each in system_vars[2] do
@@ -35,8 +35,8 @@ final_memory_used:=[]:
 start_global := time():
 for attempt from 1 to 10 do 
   
-  finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']): 
-  print(mem_used):
+  finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused','output']): 
+  print(gb):
   if attempt = 1 then
     first_memory_report:=mem_used:
   end if:

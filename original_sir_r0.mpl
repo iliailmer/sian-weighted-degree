@@ -13,7 +13,7 @@ sigma := [
   y2(t) = b / g + AUX(t)
 ]:
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# substitutions := table([S=2, In=1, R=2, AUX=1]):
+substitutions := table([S=2, b=2]):
 print(substitutions);
 
 all_subs := {}:

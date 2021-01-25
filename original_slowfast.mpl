@@ -16,7 +16,7 @@ sigma := [
   y4(t) = eC(t)
 ]:
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# substitutions := table([xA=2, k1=1, xB=1, k2=1, xC=1, eA=1, eC=1]):
+substitutions := table([k1=2,k2=2]):
 print(substitutions);
 
 
