@@ -155,6 +155,7 @@ GetSubsTableOnly := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_f
       substitutions[each]:=exponent; # s=2
     end if:
   end do:
+  substitutions[z_aux]:=2:
   return substitutions:
 end proc:
 
