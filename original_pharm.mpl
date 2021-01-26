@@ -6,15 +6,15 @@ read "imports/create_substitutions.mpl":
 
 substitutions := {a1=1}:
 sigma := [
-  diff(x1(t), t) = a1 * (x2(t) - x1(t)) - (ka * n * x1(t)) / (kc * ka + kc * x3(t) + ka * x1(t)),
   diff(x2(t), t) = a1 * (x1(t) - x2(t)),
+  diff(x1(t), t) = a1 * (x2(t) - x1(t)) - (ka * n * x1(t)) / (kc * ka + kc * x3(t) + ka * x1(t)),
   diff(x3(t), t) = b1 * (x4(t) - x3(t)) - (kc * n * x3(t)) / (kc * ka + kc * x3(t) + ka * x1(t)),
   diff(x4(t), t) = b2 * (x3(t) - x4(t)),
   y1(t) = x1(t)
 ]:
-sigma := subs(substitutions, sigma):
+# sigma := subs(substitutions, sigma):
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-substitutions := table([z_aux=2]): # x4=2,  x2=2, z_aux=1, a1=1]):#:]):#
+substitutions := table([x4=2,  x2=2, z_aux=2, x3=2]):#:]):#
 # substitutions[x1]:=2:
 # substitutions[ka]:=2:
 print(substitutions):
@@ -31,11 +31,12 @@ for each in system_vars[2] do
     fi:
 od:
 printf("%a\n", all_subs):
-char:=2^29-3:
+char:=0:
 final_times := []:
 final_memory_used:=[]:
 start_global := time():
 attempts:=1:
+print(system_vars[2]):
 for attempt from 1 to attempts do 
   
   finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']): 
