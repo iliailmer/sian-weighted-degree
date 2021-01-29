@@ -49,29 +49,19 @@ sigma := subs(known_data, [
 ]):
 
 output_, preprocessing_memory := CodeTools[Usage](GetSubsTable(sigma, exponent=2,  min_level=1, strict=true), output=['output','bytesused']):
-#GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
+
 substitutions, system_vars[1], system_vars[2] := op(output_):
-# c5, ,  
-substitutions:=table([c5=2, k2=2, x8 = 2, x14 = 2, x5 = 2, x10 = 2, x7 = 2, x11 = 2, x4 = 2, x6 = 2]):
-#x4 = 2, x5 = 2, x8=2]): 
+
+substitutions:=table([x8=2]):#c5=2, k2=2, t1=2, x4=2, x8 = 2, x5 = 2]):
+
 print(substitutions):
 
-# k2 => improvement
-# 
-
-# x3_ = 0, x12_ = 0, x10_ = 0, x5_ = 2, x14_ = 1, x7_ = 0, x8_ = 2, x1_ = 0, x2_ = 0, x11_ = 1, x4_ = 2, x9_ = 0, x13_ = 0, x6_ = 2
-
-# printf(`%a\n`, system_vars[2]);
-# substitutions:= table([x4=2, x5=2, x14=1, x6=1, x11=1, x8=2, x15=1]): # 2091.446 with x4 sub, 2259.593 with x5 sub, 1422.357 when used together
-# x1_ = 0, x2_ = 0, x3_ = 0, x7_ = 0, x9_ = 0, x10_ = 0, x12_ = 0, x13_ = 0
-# x4_ = 1, x5_ = 1, x8_ = 1
-# x11_ = 2, x6_ = 2, x14_ = 2
 
 # x8=2       => 326.428
 # x5=2, x8=2 => 260.077
 # x8=2, x11=2 => 374.220
 # x6=2, x11=2 => 335.361
-# 
+
 all_subs := {}:
 for each in system_vars[2] do
     if "aux" in StringTools[Split](convert(each, string), "_") then

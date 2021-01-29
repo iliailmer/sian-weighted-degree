@@ -52,7 +52,7 @@ GetMinLevelBFS := proc(sigma)
   
   # construct a hash table of "visibility"
   visibility_table := table([seq(each=current_level, each in visible_x_functions)]):
-  
+  visibility_table_constants := table([]):
   # this is a flag array: if i-th position == 1 then we must differentiat i-th y(t) function 
   differentiate_ := [seq(1, i=1..nops(y_eqs))]: 
 
@@ -81,9 +81,9 @@ GetMinLevelBFS := proc(sigma)
 
         # get rhs candidates that are x_vars
         candidates := map(x->parse(cat(StringTools[Split](convert(x, string), "_")[1], "_")), indets(subs(x_eqs, -(poly_d - separant * leader) / separant))) intersect {op(x_vars)}:
-        
-        # # get candidate constants (i.e. when do we start seeing constants?)
-        # map(x->parse(cat(StringTools[Split](convert(x, string), "_")[1], "_")), indets(subs(x_eqs, -(poly_d - separant * leader) / separant))) intersect {op(x_vars)}:
+
+        # # get candidate constants (i.e. when do we start seeing constants?) 
+        candidate_constants := indets(subs(x_eqs, -(poly_d - separant * leader) / separant)) intersect {op(mu)}:
 
         # if found at least one new rhs element then we will diff that function again
         # else we will skip this in the future
@@ -105,6 +105,11 @@ GetMinLevelBFS := proc(sigma)
             visibility_table[each] := current_level:
           fi:
         od;
+        for each in candidate_constants do 
+          if not assigned(visibility_table_constants[each]) then 
+            visibility_table_constants[each] := current_level:
+          fi:
+        od:
       fi:
     od:
     # check if this needs to be repeated
@@ -112,7 +117,7 @@ GetMinLevelBFS := proc(sigma)
         break:
     fi:
   od:
-  return visibility_table:
+  return visibility_table, visibility_table_constants:
 end proc:
 
 

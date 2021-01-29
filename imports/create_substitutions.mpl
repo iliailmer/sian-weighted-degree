@@ -27,7 +27,8 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
   system_vars := GetPolySystem(sigma, GetParameters(sigma)):
 
   # get visibility table in BFS-fashion, see imports/bfs_deriv.mpl
-  vt := GetMinLevelBFS(sigma):
+  vt, vtc := GetMinLevelBFS(sigma):
+  
   # [function_name=1 i=0,...]
   # get right hand side terms from the ODEs. 
   # example input: 
