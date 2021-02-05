@@ -16,7 +16,8 @@ sigma := [
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
 # print(system_vars[1]): 1808.908
-substitutions := table([w=2]): #, bi=2, g=2, k=2, bw=2,mu=2]): # bi=2, g=2, k=2
+print(map(expand,system_vars[1])):
+substitutions := table([w=2, s=2, bi=2,k=2, g=2, mu=2]): #, bi=2, g=2, k=2, bw=2,mu=2]): # bi=2, g=2, k=2
 # bi, bw, mu, al, g, dz, k
 # mu, dz
 all_subs := {}:
