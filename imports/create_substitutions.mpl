@@ -19,6 +19,49 @@ rename := f-> if is_function(f) then get_function_name(f) else f; end if:
 # check if is derivative
 is_diff := f->type(int(f, t), function(name)):
 
+GetSubsTableFreq := proc(sigma, {exponent:=2, min_level:=1})
+
+  local system_vars, vt, rhs_terms, opposites, i, j, substitutions, new_subs, each, elem:
+  
+  # get polynomial system, basically fisrt step of SIAN, see imports/generate_poly_system.mpl
+  system_vars := GetPolySystem(sigma, GetParameters(sigma)):
+
+  # get visibility table in BFS-fashion, see imports/bfs_deriv.mpl
+  vt, vtc := GetMinLevelBFS(sigma):
+  
+  # [function_name=1 i=0,...]
+  # get right hand side terms from the ODEs. 
+  # example input: 
+  # x1'(t) = a*x1(t)+b*x2(t) -> {a*x1(t), b*x2(t)}
+  # x2'(t) = -a*x1(t)+c*x2(t) -> {-a*x1(t), c*x2(t)}
+  rhs_terms := map(f->op(rhs(f)), select(f->is_diff(lhs(f)), sigma)):
+  counting_table_fun := table([seq(fun=0, fun in system_vars[-1])]):
+  counting_table_const:=table([seq(const_=0, const_ in system_vars[-2])]):
+  min_count:=10^6:
+  print(counting_table_fun):
+  for rhs_term in rhs_terms do
+    indets_ := convert(indets(rhs_term) minus {t}, list):
+    for term in indets_ do
+      if is_function(term) then
+        if vt[FunctionToVariable(term)]>min_level and assigned(vt[FunctionToVariable(term)]) then
+          counting_table_fun[FunctionToVariable(term)] := 1+counting_table_fun[FunctionToVariable(term)]:
+        end if;
+      else
+        counting_table_const[term] := 1+counting_table_const[term]:
+      end if:
+    end do;
+  end do:
+  for each in entries(counting_table_fun, `pairs`) do                                                                                         
+    if rhs(each)<min_count then                                                                                                                 
+      min_count:=rhs(each);                                                                                                                       
+    fi:                                                                                                                                         
+  od: 
+
+  substitutions := table(map(f->parse(StringTools[Split](convert(lhs(f), string), "_")[1])=exponent, select(f->evalb(rhs(f)=min_level), [entries(vt, `pairs`)]))):
+
+  return substitutions, system_vars[1], system_vars[2]:
+end proc:
+
 GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_functions_only:=true})
 
   local system_vars, vt, rhs_terms, opposites, i, j, substitutions, new_subs, each, elem:
@@ -73,7 +116,7 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
   od:
 
   # this technically only colects functions, but i expect to check time-independent parameters as well in the future
-  # i default use_functions_only to true always.
+  # i default use_functions_only to true.
   if use_functions_only then
     new_subs := map(rename, select(f->is_function(f), new_subs)): #select(f->vt[FunctionToVariable(f)]!=0, )):
   else:
