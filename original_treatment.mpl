@@ -1,4 +1,4 @@
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
@@ -13,7 +13,9 @@ sigma := [
   y2(t) = N(t)
 ]:
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
-# substitutions := table([S=2, In=1, Tr=1, N=1]):
+# substitutions, system_vars[1], system_vars[2], counting_table_const :=GetSubsTableFreq(sigma, exponent=2,  min_level=1):
+
+# substitutions := table([]): #S=2, In=2, N=2, nu=2, z_aux=2]):
 print(substitutions);
 
 

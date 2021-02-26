@@ -1,5 +1,5 @@
 # baseline 492
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
@@ -18,9 +18,12 @@ sigma := [
 # runtime, memory_used := CodeTools[Usage](MainProgram(sigma), output=['cputime', 'bytesused']):
 
 
+
+# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
 
-substitutions := table([ x5=2, x6=2, z_aux=2]): # 
+# substitutions := table([]):# z_aux = 2, x6 = 2]):#x5=2, x6=2, z_aux=2]): # 
 print(substitutions):
 all_subs := {}:
 for each in system_vars[2] do
@@ -40,8 +43,12 @@ char:=0:
 final_times := []:
 final_memory_used:=[]:
 start_global := time():
+suggested_variable_ordering:=system_vars[2]: #[Groebner[SuggestVariableOrder](system_vars[1], system_vars[2])]:#system_vars[2]
+
+print(suggested_variable_ordering):
+
 for attempt from 1 to 10 do 
-  finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']): 
+  finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(suggested_variable_ordering)), characteristic=char), output=['cputime','bytesused']): 
   print(mem_used, finish_local);
   # Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char):
   if attempt = 1 then
@@ -59,9 +66,8 @@ finish_global:= time() - start_global:
 if char>0 then
   printf("First reported memory usage: \t%.3f bytes\n", first_memory_report):
   printf("Median time: \t%.3f\n", Statistics[Median](final_times)):
-  printf("Median memory: \t%.3f\n", Statistics[Median](final_memory_used)):
   printf("Total Time dt: \t%.3f,\nTime per iteration: \t%.3f\n", finish_global, finish_global/10): 
 else
-  printf("Time: \t%.3f, Memory: \t%.3f", finish_local, mem_used);
+  printf("Time: \t%.3f\n", finish_local, mem_used);
 fi:
 quit:

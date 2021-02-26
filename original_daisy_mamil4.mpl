@@ -1,4 +1,4 @@
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
@@ -14,7 +14,11 @@ sigma := [
 ]:
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-substitutions:= table([x2=2, x3=2, x4=2]): # 
+
+# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+
+# substitutions:= table([]): #x2 = 2, x3 = 2, x4 = 2, z_aux = 2, k01=2]): # x2=2, x3=2, x4=2]): # 
+
 print(substitutions):
 
 
@@ -35,9 +39,12 @@ char:=0:
 final_times := []:
 final_memory_used:=[]:
 start_global := time():
+
+suggested_variable_ordering:=system_vars[2];
+
+print(suggested_variable_ordering):
 for attempt from 1 to 10 do 
-  
-  finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']): 
+  finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(suggested_variable_ordering)), characteristic=char), output=['cputime','bytesused']): 
   print(mem_used):
   if attempt = 1 then
     first_memory_report:=mem_used:

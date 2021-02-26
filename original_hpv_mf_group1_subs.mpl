@@ -1,4 +1,4 @@
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
@@ -14,15 +14,19 @@ sigma := [diff(SM(t),t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
     diff(IOGF(t),t) = IOGM(t) * IOF(t) * betaGGMF + IOGM(t) * IOF(t) * betaOGMF + IOGM(t) * IGF(t) * betaGOMF + IOGM(t) * IGF(t) * betaOOMF + IGM(t) * IOF(t) * betaGGMF + IGM(t) * IGF(t) * betaGOMF + IOM(t) * IOF(t) * betaOGMF + IOM(t) * IGF(t) * betaOOMF + IOF(t) * nuOGF - gammaGF * IOGF(t) - gammaOF * IOGF(t) - IOGF(t) * mu + IGF(t) * nuGOF,
     y1(t) = IGM(t) + IOGM(t),
     y2(t) = IOM(t) + IOGM(t),
-    y3(t) = IOGM(t)];
+    y3(t) = IOGM(t)
+    ];
 
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-substitutions := table([betaGGFM=2,betaGOFM=2, betaOOFM=2, gammaOM=2, gammaGM=2, gammaGF=2, IOM = 2, SF = 2, IGM = 2, IGF = 2, SM = 2, IOGM = 2, IOF = 2, IOGF = 2]): # gammaGF=2, gammaGM=1, gammaOM=1, SM=2, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=2]): 
+
+# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+
+# substitutions := table([betaGGFM=2,betaGOFM=2, betaOOFM=2, gammaOM=2, gammaGM=2, gammaGF=2, IOM = 2, SF = 2, IGM = 2, IGF = 2, SM = 2, IOGM = 2, IOF = 2, IOGF = 2]): # gammaGF=2, gammaGM=1, gammaOM=1, SM=2, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=2]): 
 # substitutions[gammaGF]:=2:
 print(substitutions):
 
 all_subs := {}:
-char:=2^29-3: # 1918928, 615.857
+char:=0:#2^29-3: # 1918928, 615.857
 for each in system_vars[2] do
   if "aux" in StringTools[Split](convert(each, string), "_") then
     name_ := each:
@@ -36,5 +40,6 @@ for each in system_vars[2] do
 od:
 print(all_subs);
 finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime', 'bytesused']): 
-print(mem_used, finish_local):
+# print(mem_used, finish_local):
+printf("Time: \t%.3f seconds, Memory: \t%.3f bytes\n", finish_local, mem_used);
 quit:

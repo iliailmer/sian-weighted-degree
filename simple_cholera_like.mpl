@@ -1,5 +1,5 @@
 #baseline 31 on omega
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "generate_poly_system.mpl":
 sigma := [

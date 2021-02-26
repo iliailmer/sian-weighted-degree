@@ -8,13 +8,18 @@
 # after 1 differentiation, y1'(t) = x2'(t)= x1(t) + x2(t) => x1 occured on 1st derivative, 
 # hence it is on level 1. We are interested in all function with level >= 1.
 
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 
 GetMinLevelBFS := proc(sigma)
   # this part is copied from original SIAN code
-  local x_functions, y_functions, all_functions, all_symbols_rhs, xy_ders, u_functions, mu, x_vars, y_vars, u_vars, subst_first_order, subst_zero_order, x_eqs, y_eqs, n, m, s, x_zero_vars, all_vars, current_level, visible_x_functions, visibility_table, i, j, continue, poly_d, leader, separant, candidates, each, differentiate_:
+  local x_functions, visibility_table_constants, y_functions, candidate_constants,
+  all_functions, all_symbols_rhs, xy_ders, u_functions, mu, x_vars,
+  y_vars, u_vars, subst_first_order, subst_zero_order, x_eqs, y_eqs, 
+  n, m, s, x_zero_vars, all_vars, current_level, visible_x_functions, 
+  visibility_table, i, j, continue, poly_d, leader, separant, candidates,
+  each, differentiate_:
 
   x_functions := map(f -> int(f, t), select( f -> type(int(f, t), function(name)), map(lhs, sigma) )):
   

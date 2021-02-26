@@ -1,4 +1,4 @@
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
@@ -10,7 +10,6 @@ known_data := [
   a2 = 1 / 5,
   a3 = 1,
   c_1a = 5 / 10^(7),
-  c_2a = 0,
   c_5a = 1 / 10^(4),
   c_6a = 2 / 10^(5),
   c1 = 5 / 10^(7),
@@ -48,11 +47,11 @@ sigma := subs(known_data, [
   y5(t) = x7(t)
 ]):
 
-output_, preprocessing_memory := CodeTools[Usage](GetSubsTable(sigma, exponent=2,  min_level=1, strict=true), output=['output','bytesused']):
+substitutions, system_vars[1], system_vars[2], counting_table_const :=GetSubsTableFreq(sigma, exponent=2,  min_level=1):
+# substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict="max_possible"):
 
-substitutions, system_vars[1], system_vars[2] := op(output_):
-
-substitutions:=table([x8=2]):#c5=2, k2=2, t1=2, x4=2, x8 = 2, x5 = 2]):
+substitutions:=table([k_deg = 2, x4 = 2, x6 = 2, x7 = 2, x10 = 2, x14 = 2, c_3a = 2, x5 = 2, x11 = 2, k3 = 2, x8 = 2, z_aux = 2]): 
+#[x4=2, x14=2, k_deg=2, c_3a=2, t1=2, t2=2]):#c5=2, k2=2, t1=2, x4=2, x8 = 2, x5 = 2]):
 
 print(substitutions):
 
@@ -74,19 +73,20 @@ for each in system_vars[2] do
       all_subs:= all_subs union {each = each^substitutions[name_]}:
     fi:
 od:
+
+writeto("original_nfkb.out"):
+print(system_vars[1], system_vars[2]):
+writeto(terminal):
+
 printf("%a\n", all_subs):
 char:=0:
 final_times := []:
 final_memory_used:=[]:
 start_global := time():
 for attempt from 1 to 10 do 
-  
-  finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']): 
-  print(mem_used):
-  if attempt = 1 then
-    first_memory_report:=mem_used:
-  end if:
-  final_memory_used:=[op(final_memory_used), mem_used]:
+  start_local:=time():
+  gb:= Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char): 
+  finish_local := time() - start_local:
   final_times := [op(final_times), finish_local]:
   if char >0 then 
     char := prevprime(char):
@@ -97,7 +97,6 @@ od:
 finish_global:= time() - start_global:
 if char>0 then
   printf("\n==========================================================\n"):
-  printf("Preprocessing memory usage: \t%.3f bytes\n", preprocessing_memory):
   printf("First reported memory usage: \t%.3f bytes\n", first_memory_report):
   printf("Median time: \t%.3f seconds\n", Statistics[Median](final_times)):
   printf("Median memory: \t%.3f bytes\n", Statistics[Median](final_memory_used)):
@@ -105,8 +104,7 @@ if char>0 then
   printf("==========================================================\n"):
 else
   printf("\n==========================================================\n"):
-  printf("Preprocessing memory usage: \t%.3f bytes\n", preprocessing_memory):
-  printf("Time: \t%.3f seconds,\nMemory: \t%.3f bytes\n", finish_local, mem_used);
+  printf("Time: \t%.3f seconds\n", finish_local);
   printf("==========================================================\n"):
 fi:
 quit:

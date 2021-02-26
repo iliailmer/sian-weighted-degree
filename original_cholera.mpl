@@ -1,10 +1,10 @@
 # baseline 492
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
 read "imports/create_substitutions.mpl":
-
+# infolevel[GroebnerBasis]:=4:
 sigma := [
   diff(s(t), t) = mu - bi * s(t) * i(t) - bw * s(t) * w(t) - mu * s(t) + al * r(t),
   diff(i(t), t) = bw * s(t) * w(t) + bi * s(t) * i(t) - g * i(t) - mu * i(t),
@@ -14,12 +14,16 @@ sigma := [
   y2(t) = i(t) + r(t) + s(t)
 ]:
 
-substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
-# print(system_vars[1]): 1808.908
-print(map(expand,system_vars[1])):
-substitutions := table([w=2, s=2, bi=2,k=2, g=2, mu=2]): #, bi=2, g=2, k=2, bw=2,mu=2]): # bi=2, g=2, k=2
+
+# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2,  min_level=1): #, strict=true):
+substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
+
+# substitutions := table([s = 2, w=2, k=2, bi=2, mu=2, g=2]):#w=2, al=2, mu=2, k=2, g=2]): #, bi=2, g=2, k=2, bw=2,mu=2]): # bi=2, g=2, k=2
+print(substitutions): #k = 1, bw = 1, bi = 1, al = 2, dz = 2, mu = 1, g = 1
 # bi, bw, mu, al, g, dz, k
 # mu, dz
+
+# infolevel[GroebnerBasis] := 13:
 all_subs := {}:
 for each in system_vars[2] do
   if "aux" in StringTools[Split](convert(each, string), "_") then
@@ -32,15 +36,21 @@ for each in system_vars[2] do
     all_subs:= all_subs union {each = each^substitutions[name_]}:
   fi:
 od:
-
+writeto("original_cholera.out"):
+# printf("%a",map(expand, system_vars[2])): # 1808.908
+printf("%a", map(expand, system_vars[1])): # 1808.908
+writeto(terminal):
 printf("%a\n", all_subs):
 char:=0:
 final_times := []:
 final_memory_used:=[]:
 start_global := time():
+suggested_variable_ordering:=system_vars[2]: #Groebner[SuggestVariableOrder](system_vars[1], system_vars[2])]:
+printf("%a\n", suggested_variable_ordering):
 for attempt from 1 to 10 do 
-  
-  finish_local, mem_used, gb := CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused', 'output']):
+  # writeto("cholera_gb_w_const.out"):
+  finish_local, mem_used, gb := CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(suggested_variable_ordering)), characteristic=char), output=['cputime','bytesused', 'output']):
+  # writeto(terminal): 
   if attempt = 1 then
     first_memory_report:=mem_used:
   end if:
@@ -49,7 +59,7 @@ for attempt from 1 to 10 do
   if char >0 then 
     char := prevprime(char):
   else:
-    printf("%a", gb):
+    # printf("%a", gb):
     break:
   fi:
 od:

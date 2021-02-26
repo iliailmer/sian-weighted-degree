@@ -49,7 +49,6 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {p := 0.99, infolevel := 1,
     printf("The probability of success cannot exceed 1 - #params_to_assess 10^{-18}. We reset it to 0.99");
     p_local := 0.99:
   end if:
-
   if infolevel > 0 then
     printf("\n=== Input info ===\n"):
     printf("%s %a\n", `State variables:         `, x_functions):

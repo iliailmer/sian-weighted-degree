@@ -1,22 +1,21 @@
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
 read "imports/create_substitutions.mpl":
 
-substitutions := {a1=1}:
+# substitutions := {a1=1}:
 sigma := [
-  diff(x1(t), t) = a1 * (x2(t) - x1(t)) - (ka * n * x1(t)) / (kc * ka + kc * x3(t) + ka * x1(t)),
-  diff(x2(t), t) = a2 * (x1(t) - x2(t)),
-  diff(x3(t), t) = b1 * (x4(t) - x3(t)) - (kc * n * x3(t)) / (kc * ka + kc * x3(t) + ka * x1(t)),
-  diff(x4(t), t) = b2 * (x3(t) - x4(t)),
+  diff(x1(t), t) = expand(a1 * (x2(t) - x1(t))) - (ka * n * x1(t)) / (kc * ka + kc * x3(t) + ka * x1(t)),
+  diff(x2(t), t) = expand(a1 * (x1(t) - x2(t))),
+  diff(x3(t), t) = expand(b1 * (x4(t) - x3(t))) - (kc * n * x3(t)) / (kc * ka + kc * x3(t) + ka * x1(t)),
+  diff(x4(t), t) = expand(b2 * (x3(t) - x4(t))),
   y1(t) = x1(t)
 ]:
 # sigma := subs(substitutions, sigma):
-substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-substitutions := table([x4=2, z_aux=2]):#, a1=2, b1=2]):
-# substitutions[x1]:=2:
-# substitutions[ka]:=2:
+substitutions, system_vars[1], system_vars[2], counting_table_const :=GetSubsTableFreq(sigma, exponent=2,  min_level=1):
+# substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
+substitutions := table([]):#x4=2,  x2=2, z_aux=2, x3=2]):#:]):#
 print(substitutions):
 all_subs := {}:
 for each in system_vars[2] do
@@ -31,15 +30,17 @@ for each in system_vars[2] do
     fi:
 od:
 printf("%a\n", all_subs):
-char:=2^29-3:
+char:=0:
 final_times := []:
 final_memory_used:=[]:
 start_global := time():
 attempts:=1:
+
 for attempt from 1 to attempts do 
   
-  finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused']): 
-  print(mem_used):
+  finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused', 'output']): 
+  # print(mem_used):
+  ASSERT(gb<>[1], "GB=[1]");
   if attempt = 1 then
     first_memory_report:=mem_used:
   end if:

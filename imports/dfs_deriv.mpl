@@ -11,7 +11,7 @@
 # the difference here is that we differentiate i-th function until no new x-functions occur
 # this is very order-dependent and probably needs more work, have not used it much.
 
-kernelopts(printbytes=false):
+kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 
