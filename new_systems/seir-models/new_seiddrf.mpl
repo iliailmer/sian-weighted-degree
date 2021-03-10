@@ -1,4 +1,4 @@
-# Ex 16 from  https://arxiv.org/abs/2006.14295
+# Ex 51 from  https://arxiv.org/abs/2006.14295
 kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
@@ -14,14 +14,14 @@ diff(Di(t), t) = theta_i * phi_i * i(t) - sgm_d * De(t) - g_d * Di(t) - mu_d * D
 diff(r(t), t) = g * i(t) + g_d * Di(t) - mu0 * r(t),
 diff(f(t), t) = mu_i * i(t) + mu_d * Di(t),
 y1(t) = De(t),
-y2(t) = Di(t),
-y3(t) = f(t)#rho*i(t) - tau0
+y2(t) = Di(t)
+# y3(t) = f(t)
 ]: 
 
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
-substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=2, strict=false):
+substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
 
-# substitutions := table([]):
+# substitutions := table([mu0 = 2, sgm_d = 2, z_aux = 2]):
 
 print(substitutions):
 all_subs := {}:

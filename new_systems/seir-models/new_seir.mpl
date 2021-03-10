@@ -16,7 +16,7 @@ y1(t) = k * i(t)
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
 
-# substitutions := table([]):
+# substitutions := table([e = 2, k = 2, g = 2, z_aux = 2, mu = 2, s = 2]):
 
 print(substitutions):
 all_subs := {}:
