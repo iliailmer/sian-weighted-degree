@@ -249,6 +249,11 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {p := 0.99, infolevel := 1,
 
   # (d) ------------
   Et_hat := map(e -> subs([op(y_hat), op(u_hat)], e), Et):
+  vars_def_order := { op(mu) }:
+  for poly in Et_hat do
+    vars_def_order := vars_def_order union { op(GetVars(poly, x_vars)) }:
+  end do:
+
   Et_x_vars := {}:
   for poly in Et_hat do
     Et_x_vars := Et_x_vars union { op(GetVars(poly, x_vars)) }:
@@ -257,7 +262,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {p := 0.99, infolevel := 1,
     printf("%s %a %s %a %s\n", `The polynomial system \widehat{E^t} contains `, nops(Et_hat), `equations in `, nops(Et_x_vars) + nops(mu), ` variables`);
   end if:
   Q_hat := subs(u_hat, Q):
-
+  
   vars := [
     op(sort([op(Et_x_vars)], (a, b) -> CompareDiffVar(a, b, x_vars))),
     z_aux, w_aux,
@@ -267,7 +272,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {p := 0.99, infolevel := 1,
     printf("Variable ordering to be used for Groebner basis computation %a\n", vars);
   end if:
  
-  return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
+  return [[op(Et_hat), z_aux*Q_hat-1], vars, vars_def_order, Et_x_vars, [z_aux, w_aux,
     op(sort(mu))], x_vars]:
 end proc:
 
