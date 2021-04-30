@@ -17,16 +17,16 @@ sigma := [diff(SM(t),t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
     y3(t) = IOGM(t)
     ];
 
-substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
+substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 
-# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
-
-# substitutions := table([betaGGFM=2,betaGOFM=2, betaOOFM=2, gammaOM=2, gammaGM=2, gammaGF=2, IOM = 2, SF = 2, IGM = 2, IGF = 2, SM = 2, IOGM = 2, IOF = 2, IOGF = 2]): # gammaGF=2, gammaGM=1, gammaOM=1, SM=2, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=2]): 
-# substitutions[gammaGF]:=2:
-print(substitutions):
+writeto(cat("../magma_scripts/", PATH, "/hpv_group1.m"));
+printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
+printf("time GroebnerBasis(G);\nquit;");
+writeto(terminal);
 
 all_subs := {}:
-char:=0:#2^29-3: # 1918928, 615.857
 for each in system_vars[2] do
   if "aux" in StringTools[Split](convert(each, string), "_") then
     name_ := each:
@@ -38,8 +38,59 @@ for each in system_vars[2] do
     all_subs:= all_subs union {each = each^substitutions[name_]}:
   fi:
 od:
-print(all_subs);
-finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime', 'bytesused']): 
-# print(mem_used, finish_local):
-printf("Time: \t%.3f seconds, Memory: \t%.3f bytes\n", finish_local, mem_used);
-quit:
+writeto(cat("../magma_scripts/", PATH, "/hpv_group1_subs_1.m"));
+printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
+printf("// %a\n", [entries(substitutions, 'pairs')]);
+printf("time GroebnerBasis(G);\nquit;");
+writeto(terminal);
+
+substitutions2, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
+all_subs := {}:
+for each in system_vars[2] do
+  if "aux" in StringTools[Split](convert(each, string), "_") then
+    name_ := each:
+  else
+    name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
+  fi:
+  if assigned(substitutions2[name_]) then
+    system_vars[1] := subs({each = each^substitutions2[name_]}, system_vars[1]):
+    all_subs:= all_subs union {each = each^substitutions2[name_]}:
+  fi:
+od:
+writeto(cat("../magma_scripts/", PATH, "/hpv_group1_subs_2.m"));
+printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
+printf("// %a\n", [entries(substitutions2, 'pairs')]);
+printf("time GroebnerBasis(G);\nquit;");
+writeto(terminal);
+
+
+# substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
+
+# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+
+# substitutions := table([betaGGFM=2,betaGOFM=2, betaOOFM=2, gammaOM=2, gammaGM=2, gammaGF=2, IOM = 2, SF = 2, IGM = 2, IGF = 2, SM = 2, IOGM = 2, IOF = 2, IOGF = 2]): # gammaGF=2, gammaGM=1, gammaOM=1, SM=2, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=2]): 
+# substitutions[gammaGF]:=2:
+# print(substitutions):
+
+# all_subs := {}:
+# char:=0:#2^29-3: # 1918928, 615.857
+# for each in system_vars[2] do
+#   if "aux" in StringTools[Split](convert(each, string), "_") then
+#     name_ := each:
+#   else
+#     name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
+#   fi:
+#   if assigned(substitutions[name_]) then
+#     system_vars[1] := subs({each = each^substitutions[name_]}, system_vars[1]):
+#     all_subs:= all_subs union {each = each^substitutions[name_]}:
+#   fi:
+# od:
+# print(all_subs);
+# finish_local, mem_used:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime', 'bytesused']): 
+# # print(mem_used, finish_local):
+# printf("Time: \t%.3f seconds, Memory: \t%.3f bytes\n", finish_local, mem_used);
+# quit:

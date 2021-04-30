@@ -47,65 +47,116 @@ sigma := subs(known_data, [
   y5(t) = x7(t)
 ]):
 
-substitutions, system_vars[1], system_vars[2], counting_table_const :=GetSubsTableFreq(sigma, exponent=2,  min_level=1):
-# substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict="max_possible"):
 
-substitutions:=table([k_deg = 2, x4 = 2, x6 = 2, x7 = 2, x10 = 2, x14 = 2, c_3a = 2, x5 = 2, x11 = 2, k3 = 2, x8 = 2, z_aux = 2]): 
-#[x4=2, x14=2, k_deg=2, c_3a=2, t1=2, t2=2]):#c5=2, k2=2, t1=2, x4=2, x8 = 2, x5 = 2]):
+substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 
-print(substitutions):
-
-
-# x8=2       => 326.428
-# x5=2, x8=2 => 260.077
-# x8=2, x11=2 => 374.220
-# x6=2, x11=2 => 335.361
+writeto(cat("../magma_scripts/", PATH, "/nfkb.m"));
+printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
+printf("time GroebnerBasis(G);\nquit;");
+writeto(terminal);
 
 all_subs := {}:
 for each in system_vars[2] do
-    if "aux" in StringTools[Split](convert(each, string), "_") then
-      name_ := each:
-    else
-      name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
-    fi:
-    if assigned(substitutions[name_]) then
-      system_vars[1] := subs({each = each^substitutions[name_]}, system_vars[1]):
-      all_subs:= all_subs union {each = each^substitutions[name_]}:
-    fi:
-od:
-
-writeto("original_nfkb.out"):
-print(system_vars[1], system_vars[2]):
-writeto(terminal):
-
-printf("%a\n", all_subs):
-char:=0:
-final_times := []:
-final_memory_used:=[]:
-start_global := time():
-for attempt from 1 to 10 do 
-  start_local:=time():
-  gb:= Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char): 
-  finish_local := time() - start_local:
-  final_times := [op(final_times), finish_local]:
-  if char >0 then 
-    char := prevprime(char):
-  else:
-    break:
+  if "aux" in StringTools[Split](convert(each, string), "_") then
+    name_ := each:
+  else
+    name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
+  fi:
+  if assigned(substitutions[name_]) then
+    system_vars[1] := subs({each = each^substitutions[name_]}, system_vars[1]):
+    all_subs:= all_subs union {each = each^substitutions[name_]}:
   fi:
 od:
-finish_global:= time() - start_global:
-if char>0 then
-  printf("\n==========================================================\n"):
-  printf("First reported memory usage: \t%.3f bytes\n", first_memory_report):
-  printf("Median time: \t%.3f seconds\n", Statistics[Median](final_times)):
-  printf("Median memory: \t%.3f bytes\n", Statistics[Median](final_memory_used)):
-  printf("Total Time dt: \t%.3f bytes,\nTime per iteration: \t%.3f seconds\n", finish_global, finish_global/10): 
-  printf("==========================================================\n"):
-else
-  printf("\n==========================================================\n"):
-  printf("Time: \t%.3f seconds\n", finish_local);
-  printf("==========================================================\n"):
-fi:
-quit:
+writeto(cat("../magma_scripts/", PATH, "/nfkb_subs_1.m"));
+printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
+printf("// %a\n", [entries(substitutions, 'pairs')]);
+printf("time GroebnerBasis(G);\nquit;");
+writeto(terminal);
+substitutions2, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
+all_subs := {}:
+for each in system_vars[2] do
+  if "aux" in StringTools[Split](convert(each, string), "_") then
+    name_ := each:
+  else
+    name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
+  fi:
+  if assigned(substitutions2[name_]) then
+    system_vars[1] := subs({each = each^substitutions2[name_]}, system_vars[1]):
+    all_subs:= all_subs union {each = each^substitutions2[name_]}:
+  fi:
+od:
+writeto(cat("../magma_scripts/", PATH, "/nfkb_subs_2.m"));
+printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
+printf("// %a\n", [entries(substitutions2, 'pairs')]);
+printf("time GroebnerBasis(G);\nquit;");
+writeto(terminal);
+
+
+# substitutions, system_vars[1], system_vars[2], counting_table_const :=GetSubsTableFreq(sigma, exponent=2,  min_level=1):
+# # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict="max_possible"):
+
+# substitutions:=table([k_deg = 2, x4 = 2, x6 = 2, x7 = 2, x10 = 2, x14 = 2, c_3a = 2, x5 = 2, x11 = 2, k3 = 2, x8 = 2, z_aux = 2]): 
+# #[x4=2, x14=2, k_deg=2, c_3a=2, t1=2, t2=2]):#c5=2, k2=2, t1=2, x4=2, x8 = 2, x5 = 2]):
+
+# print(substitutions):
+
+
+# # x8=2       => 326.428
+# # x5=2, x8=2 => 260.077
+# # x8=2, x11=2 => 374.220
+# # x6=2, x11=2 => 335.361
+
+# all_subs := {}:
+# for each in system_vars[2] do
+#     if "aux" in StringTools[Split](convert(each, string), "_") then
+#       name_ := each:
+#     else
+#       name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
+#     fi:
+#     if assigned(substitutions[name_]) then
+#       system_vars[1] := subs({each = each^substitutions[name_]}, system_vars[1]):
+#       all_subs:= all_subs union {each = each^substitutions[name_]}:
+#     fi:
+# od:
+
+# writeto("original_nfkb.out"):
+# print(system_vars[1], system_vars[2]):
+# writeto(terminal):
+
+# printf("%a\n", all_subs):
+# char:=0:
+# final_times := []:
+# final_memory_used:=[]:
+# start_global := time():
+# for attempt from 1 to 10 do 
+#   start_local:=time():
+#   gb:= Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char): 
+#   finish_local := time() - start_local:
+#   final_times := [op(final_times), finish_local]:
+#   if char >0 then 
+#     char := prevprime(char):
+#   else:
+#     break:
+#   fi:
+# od:
+# finish_global:= time() - start_global:
+# if char>0 then
+#   printf("\n==========================================================\n"):
+#   printf("First reported memory usage: \t%.3f bytes\n", first_memory_report):
+#   printf("Median time: \t%.3f seconds\n", Statistics[Median](final_times)):
+#   printf("Median memory: \t%.3f bytes\n", Statistics[Median](final_memory_used)):
+#   printf("Total Time dt: \t%.3f bytes,\nTime per iteration: \t%.3f seconds\n", finish_global, finish_global/10): 
+#   printf("==========================================================\n"):
+# else
+#   printf("\n==========================================================\n"):
+#   printf("Time: \t%.3f seconds\n", finish_local);
+#   printf("==========================================================\n"):
+# fi:
+# quit:
 
