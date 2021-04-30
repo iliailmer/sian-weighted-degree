@@ -10,13 +10,14 @@ diff(s(t), t) = Lam - r0 * b * s(t) * i(t) / n - mu * s(t),
 diff(e(t), t) = b * s(t) * i(t) / n - eps * e(t) - mu * e(t),
 diff(i(t), t) = eps * e(t) - g * i(t) - mu * i(t),
 diff(r(t), t) = g * i(t) - mu * r(t),
-y1(t) = k * i(t)
+y1(t) = i(t)
 ]: 
 
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
 
 # substitutions := table([e = 2, k = 2, g = 2, z_aux = 2, mu = 2, s = 2]):
+substitutions := table([]);
 
 print(substitutions):
 all_subs := {}:
@@ -38,7 +39,7 @@ final_times := []:
 final_memory_used:=[]:
 start_global := time(): 
 
-for attempt from 1 to 10 do 
+for attempt from 1 to 1 do 
   finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused', 'output']): 
   ASSERT(gb<>[1], "GB=[1]");
   if attempt = 1 then
