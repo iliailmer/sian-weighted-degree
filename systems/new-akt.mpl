@@ -71,7 +71,7 @@ y3(t) = pS6(t)*a3
 # writeto(terminal);
 
 
-substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
 
 # substitutions := table([]):
@@ -93,33 +93,33 @@ for each in system_vars[2] do
     all_subs:= all_subs union {each = each^substitutions[each]}:
   fi:
 od:
-# # print(system_vars[1]);
-# printf("%a\n", all_subs);
-# char:=0:
-# final_times := []:
-# final_memory_used:=[]:
-# start_global := time(): 
+# print(system_vars[1]);
+printf("%a\n", all_subs);
+char:=0:
+final_times := []:
+final_memory_used:=[]:
+start_global := time(): 
 
-# for attempt from 1 to 1 do 
-#   finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused', 'output']): 
-#   ASSERT(gb<>[1], "GB=[1]");
-#   if attempt = 1 then
-#     first_memory_report:=mem_used:
-#   end if:
-#   final_times := [op(final_times), finish_local]:
-#   final_memory_used:=[op(final_memory_used), mem_used]:
-#   if char >0 then 
-#     char := prevprime(char):
-#   else:
-#     break:
-#   fi:
-# od:
-# finish_global:= time() - start_global:
-# if char>0 then
-#   printf("First reported memory usage: \t%.3f bytes\n", first_memory_report):
-#   printf("Median time: \t%.3f\n", Statistics[Median](final_times)):
-#   printf("Total Time dt: \t%.3f,\nTime per iteration: \t%.3f\n", finish_global, finish_global/10): 
-# else
-#   printf("Time: \t%.3f\n", finish_local, mem_used);
-# fi:
+for attempt from 1 to 1 do 
+  finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused', 'output']): 
+  ASSERT(gb<>[1], "GB=[1]");
+  if attempt = 1 then
+    first_memory_report:=mem_used:
+  end if:
+  final_times := [op(final_times), finish_local]:
+  final_memory_used:=[op(final_memory_used), mem_used]:
+  if char >0 then 
+    char := prevprime(char):
+  else:
+    break:
+  fi:
+od:
+finish_global:= time() - start_global:
+if char>0 then
+  printf("First reported memory usage: \t%.3f bytes\n", first_memory_report):
+  printf("Median time: \t%.3f\n", Statistics[Median](final_times)):
+  printf("Total Time dt: \t%.3f,\nTime per iteration: \t%.3f\n", finish_global, finish_global/10): 
+else
+  printf("Time: \t%.3f\n", finish_local, mem_used);
+fi:
 quit:

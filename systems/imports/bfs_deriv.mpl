@@ -85,8 +85,7 @@ GetMinLevelBFS := proc(sigma)
         y_eqs[i]:= leader = subs(x_eqs, -(poly_d - separant * leader) / separant):
 
         # get rhs candidates that are x_vars
-        candidates := map(x->parse(cat(StringTools[Split](convert(x, string), "_")[1], "_")), indets(subs(x_eqs, -(poly_d - separant * leader) / separant))) intersect {op(x_vars)}:
-
+        candidates := map(x->parse(cat(StringTools[Join](StringTools[Split](convert(x, string), "_")[..-2], "_"), "_")), indets(subs(x_eqs, -(poly_d - separant * leader) / separant))) intersect {op(x_vars)}:
         # # get candidate constants (i.e. when do we start seeing constants?) 
         candidate_constants := indets(subs(x_eqs, -(poly_d - separant * leader) / separant)) intersect {op(mu)}:
 

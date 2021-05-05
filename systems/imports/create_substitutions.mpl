@@ -30,7 +30,7 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
 
   # get visibility table in BFS-fashion, see imports/bfs_deriv.mpl
   vt, vtc := GetMinLevelBFS(sigma):
-  
+  print(vt);
   # [function_name=1 i=0,...]
   # get right hand side terms from the ODEs. 
   # example input: 
@@ -42,10 +42,8 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
   y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(expand(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set)));
 
   # get constants C from terms of the form C*f(t)
-  # get pairs (lhs, rhs) for state variables
   lhs_rhs := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(expand(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)):
   lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs);
-  # get all terms of the form Const*function(t) or C*f(t) for short
   monoms := map(f->op(f), lhs_rhs);
    
   printf("MONOMS: %a, %a\n", monoms, y_functions_rhs):

@@ -34,7 +34,7 @@ final_times := []:
 final_memory_used:=[]:
 start_global := time():
 for attempt from 1 to 10 do 
-  finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused', 'output']): 
+  finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=0), output=['cputime','bytesused', 'output']): 
   print(mem_used):
   if attempt = 1 then
     first_memory_report:=mem_used:
