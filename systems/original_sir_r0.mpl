@@ -69,14 +69,14 @@ for each in system_vars[2] do
     all_subs:= all_subs union {each = each^substitutions2[name_]}:
   fi:
 od:
-writeto(cat("../magma_scripts/", PATH, "/sir_r0_sub_1.m"));
+writeto(cat("../magma_scripts/", PATH, "/sir_r0_sub_2.m"));
 printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 printf("// %a\n", [entries(substitutions2, 'pairs')]);
 printf("time GroebnerBasis(G);\nquit;");
 
-writeto(cat("../maple_scripts/", PATH, "/sir_r0_sub_1.mpl"));
+writeto(cat("../maple_scripts/", PATH, "/sir_r0_sub_2.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
 printf("et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
