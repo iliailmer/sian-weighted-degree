@@ -42,8 +42,8 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
   y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(expand(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set)));
 
   # get constants C from terms of the form C*f(t)
-  lhs_rhs := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(expand(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)):
-  lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs);
+  lhs_rhs_full := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(expand(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)):
+  lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs_full);
   monoms := map(f->op(f), lhs_rhs);
    
   printf("MONOMS: %a, %a\n", monoms, y_functions_rhs):
@@ -78,7 +78,7 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
       min_count:=rhs(each);                                                                                                                       
     fi:                                                                                                                                         
   od: 
-  # print(counting_table_fun, min_count):
+  print(counting_table_fun, min_count):
   substitutions := table(map(f->parse(convert(lhs(f), string)[..-2])=exponent, select(f->evalb(rhs(f)<=min_count), [entries(counting_table_fun, `pairs`)]))):
   substitutions[z_aux]:=2:
   constants_to_sub := select(x-> not (x in non_id), constants_to_sub);

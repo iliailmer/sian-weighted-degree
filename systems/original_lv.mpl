@@ -8,7 +8,7 @@ read "imports/create_substitutions.mpl":
 sigma := [
   diff(x1(t), t) = a * x1(t) - b * x1(t) * x2(t),
   diff(x2(t), t) = -c * x2(t) + d * x1(t) * x2(t),
-  y(t) = x1(t) + u(t)
+  y(t) = x1(t)
 ]:
 
 substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
