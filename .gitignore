@@ -2,3 +2,4 @@
 .DS*
 visualizations/*
 IdentifiabilityODE.mpl
+.ipynb_checkpoints
