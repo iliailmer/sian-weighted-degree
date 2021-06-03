@@ -6,23 +6,23 @@ read "imports/bfs_deriv.mpl":
 read "imports/create_substitutions.mpl":
 
 sigma := [
-  diff(S(t), t) = -a * (In(t) + Jj(t)) * S(t),
-  diff(In(t), t) = a * ksi * S(t) * (In(t) + Jj(t)),
-  diff(Jj(t), t) = a * (1 - ksi) * S(t) * (In(t) + Jj(t)) - eta * Jj(t),
-  diff(R(t), t) = b * In(t),
-  diff(U(t), t) = eta * Jj(t),
-  y1(t) = R(t)
+  diff(S(t), t) = -b * S(t) * i(t) / N - p* S(t) +q * C(t),
+  diff(i(t), t) = b * S(t) * i(t) / N - (r - mu) * i(t),
+  diff(R(t), t) = r * i(t),
+  diff(Cc(t), t) = p*S(t) - q*Cc(t),
+  diff(D(t), t) = mu * i(t),
+  y1(t) = i(t)
 ]:
 sigma := map(x->lhs(x) = expand(rhs(x)), sigma);
-char := 0:
+char := 11863279:
 substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
-writeto(cat("../magma_scripts/", PATH, "/saird.m"));
-printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+writeto(cat("../magma_scripts/", PATH, "/sircd.m"));
+printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 printf("time GroebnerBasis(G);\nquit;");
 
-writeto(cat("../maple_scripts/", PATH, "/saird.mpl"));
+writeto(cat("../maple_scripts/", PATH, "/sircd.mpl"));
 printf("infolevel[Groebner]:=10;\n");
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
 printf("et_hat:=%s;\n", convert(system_vars[1], string));
@@ -43,14 +43,14 @@ for each in system_vars[2] do
     all_subs:= all_subs union {each = each^substitutions[name_]}:
   fi:
 od:
-writeto(cat("../magma_scripts/", PATH, "/saird_subs_1.m"));
-printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+writeto(cat("../magma_scripts/", PATH, "/sircd_subs_1.m"));
+printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 printf("// %a\n", [entries(substitutions, 'pairs')]);
 printf("time GroebnerBasis(G);\nquit;");
 
-writeto(cat("../maple_scripts/", PATH, "/saird_subs_1.mpl"));
+writeto(cat("../maple_scripts/", PATH, "/sircd_subs_1.mpl"));
 printf("infolevel[Groebner]:=10;\n");
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
 printf("et_hat:=%s;\n", convert(system_vars[1], string));
@@ -74,8 +74,8 @@ for each in system_vars[2] do
     all_subs:= all_subs union {each = each^substitutions2[name_]}:
   fi:
 od:
-writeto(cat("../magma_scripts/", PATH, "/saird_subs_2.m"));
-printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+writeto(cat("../magma_scripts/", PATH, "/sircd_subs_2.m"));
+printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 printf("// %a\n", [entries(substitutions2, 'pairs')]);
