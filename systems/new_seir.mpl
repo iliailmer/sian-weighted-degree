@@ -57,7 +57,7 @@ printf("et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
 printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=%s);\n", convert(char, string));
 printf("# %a;\n", [entries(substitutions, 'pairs')]);
-printf("// %a\n", all_subs);
+printf("# %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
 
@@ -90,7 +90,7 @@ printf("et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
 printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=%s);\n", convert(char, string));
 printf("# %a;\n", [entries(substitutions2, 'pairs')]);
-printf("// %a\n", all_subs);
+printf("# %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
 
@@ -121,7 +121,7 @@ writeto(terminal);
 # start_global := time(): 
 
 # for attempt from 1 to 1 do 
-#   finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime','bytesused', 'output']): 
+#   finish_local, mem_used, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=0), output=['cputime','bytesused', 'output']): 
 #   ASSERT(gb<>[1], "GB=[1]");
 #   if attempt = 1 then
 #     first_memory_report:=mem_used:

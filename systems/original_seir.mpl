@@ -55,6 +55,7 @@ printf("et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
 printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=%s);\n", convert(char, string));
 printf("# %a\n", [entries(substitutions, 'pairs')]);
+printf("# %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
 
@@ -85,6 +86,7 @@ printf("et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
 printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=%s);\n", convert(char, string));
 printf("# %a\n", [entries(substitutions2, 'pairs')]);
+printf("# %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
 
