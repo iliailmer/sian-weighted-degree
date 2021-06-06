@@ -40,7 +40,7 @@ for each in system_vars[2] do
   else
     # split the name to get the function name.  !! just realized that this may break for constants like c_3a
     # should not be a problem as long as we do not use constants
-    name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
+    name_ := parse(StringTools[RegSplit]("\_[0-9]+$", convert(each, string))[1]):
   fi:
   if assigned(substitutions[name_]) then
     # if current name as an entry in the substitutions table, then substitute

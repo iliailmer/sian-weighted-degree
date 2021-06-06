@@ -43,7 +43,7 @@ for each in system_vars[2] do
   if "aux" in StringTools[Split](convert(each, string), "_") then
     name_ := each:
   else
-    name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
+    name_ := parse(StringTools[RegSplit]("\_[0-9]+$", convert(each, string))[1]):
   fi:
   if assigned(substitutions[name_]) then
     system_vars[1] := subs({each = each^substitutions[name_]}, system_vars[1]):
@@ -55,6 +55,7 @@ printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Fau
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 printf("// %a\n", [entries(substitutions, 'pairs')]);
+printf("// %a\n", all_subs);
 printf("time GroebnerBasis(G);\nquit;");
 
 writeto(cat("../maple_scripts/", PATH, "/seirahd_subs_1.mpl"));
@@ -64,6 +65,7 @@ printf("et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
 printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=%s);\n", convert(char, string));
 printf("# %a;\n", [entries(substitutions, 'pairs')]);
+printf("// %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
 
@@ -74,7 +76,7 @@ for each in system_vars[2] do
   if "aux" in StringTools[Split](convert(each, string), "_") then
     name_ := each:
   else
-    name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
+    name_ := parse(StringTools[RegSplit]("\_[0-9]+$", convert(each, string))[1]):
   fi:
   if assigned(substitutions2[name_]) then
     system_vars[1] := subs({each = each^substitutions2[name_]}, system_vars[1]):
@@ -86,6 +88,7 @@ printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Fau
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 printf("// %a\n", [entries(substitutions2, 'pairs')]);
+printf("// %a\n", all_subs);
 printf("time GroebnerBasis(G);\nquit;");
 
 writeto(cat("../maple_scripts/", PATH, "/seirahd_subs_2.mpl"));
@@ -95,6 +98,7 @@ printf("et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
 printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=%s);\n", convert(char, string));
 printf("# %a;\n", [entries(substitutions2, 'pairs')]);
+printf("// %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
@@ -108,7 +112,7 @@ writeto(terminal);
 #   if "aux" in StringTools[Split](convert(each, string), "_") then
 #     name_ := each:
 #   else
-#     name_ := parse(StringTools[Split](convert(each, string), "_")[1]):
+#     name_ := parse(StringTools[RegSplit]("\_[0-9]+$", convert(each, string))[1]):
 #   fi:
 #   if assigned(substitutions[name_]) then
 #     system_vars[1] := subs({each = each^substitutions[name_]}, system_vars[1]):
