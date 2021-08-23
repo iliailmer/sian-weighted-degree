@@ -1,7 +1,7 @@
 # This is the main code used in all the examples
 
 kernelopts(printbytes=false, assertlevel=1):
-interface(echo=0, prettyprint=0):
+interface(echo=0, prettyprint=1):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
 

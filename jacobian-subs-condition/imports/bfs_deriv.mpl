@@ -9,7 +9,7 @@
 # hence it is on level 1. We are interested in all function with level >= 1.
 
 kernelopts(printbytes=false, assertlevel=1):
-interface(echo=0, prettyprint=0):
+interface(echo=0, prettyprint=1):
 read "imports/generate_poly_system.mpl":
 
 GetMinLevelBFS := proc(sigma)

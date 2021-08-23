@@ -1,7 +1,7 @@
 # this is all the code i used for every example, combined in a single function
 
 kernelopts(printbytes=false, assertlevel=1):
-interface(echo=0, prettyprint=0):
+interface(echo=0, prettyprint=1):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
 read "imports/create_substitutions.mpl":

@@ -7,17 +7,19 @@ read "../../SIAN/IdentifiabilityODE.mpl":
 sigma := [
  diff(x1(t),t) = a*x1(t),
  diff(x2(t),t) = b*x2(t) + c*x1(t),
- y1(t) = a+b^2+c^2,
+ y1(t) = a+b^2+c^2+d,
  y2(t) = a^4
 ]:
 
-IdentifiabilityODE(sigma, GetParameters(sigma));
-y_functions_rhs :=  map(x->expand(rhs(x)), select(f->not is_diff(lhs(f)), sigma));
+res := IdentifiabilityODE(sigma, GetParameters(sigma));
+y_functions_rhs :=  map(x->expand(rhs(x)), select(f->not is_diff(lhs(f)), sigma)):
 y_indets_set := GetParameters(sigma, initial_conditions=false):
-rj := LinearAlgebra[ReducedRowEchelonForm](VectorCalculus[Jacobian](y_functions_rhs, y_indets_set));
+rj := LinearAlgebra[GaussianElimination](VectorCalculus[Jacobian](y_functions_rhs, y_indets_set)):
 
-num_rows:= nops(y_functions_rhs);
-sub_candidates := DEQueue();
+print("RJ", rj, LinearAlgebra[Rank](rj));
+
+num_rows:= nops(y_functions_rhs):
+sub_candidates := DEQueue():
 forbidden := []:
 for i from 1 to num_rows do
     count_nonzero := 0:
@@ -26,7 +28,7 @@ for i from 1 to num_rows do
         if r[j] <> 0 then
             count_nonzero := count_nonzero + 1:
             if not y_indets_set[j] in sub_candidates then
-                push_back(sub_candidates, y_indets_set[j]);
+                push_back(sub_candidates, y_indets_set[j]):
             end if:
         end if;
     end do;
@@ -40,3 +42,5 @@ for each in y_indets_set do
         push_back(sub_candidates, each);
     end if;
 end do;
+
+print(sub_candidates);
