@@ -6,15 +6,15 @@ read "imports/create_substitutions.mpl":
 read "../../SIAN/IdentifiabilityODE.mpl":
 sigma := [
  diff(x1(t),t) = a*x1(t),
- diff(x2(t),t) = b*x2(t) + c*x1(t),
- y1(t) = a+b^2+c^2+d,
- y2(t) = a^4
+ diff(x2(t),t) = b*x2(t) + x1(t),
+ y1(t) = a+b,
+ y2(t) =a
 ]:
 
 res := IdentifiabilityODE(sigma, GetParameters(sigma));
 y_functions_rhs :=  map(x->expand(rhs(x)), select(f->not is_diff(lhs(f)), sigma)):
 y_indets_set := GetParameters(sigma, initial_conditions=false):
-rj := LinearAlgebra[GaussianElimination](VectorCalculus[Jacobian](y_functions_rhs, y_indets_set)):
+rj := LinearAlgebra[ReducedRowEchelonForm](VectorCalculus[Jacobian](y_functions_rhs, y_indets_set)):
 
 print("RJ", rj, LinearAlgebra[Rank](rj));
 
@@ -36,11 +36,19 @@ for i from 1 to num_rows do
         forbidden := [op(forbidden), pop_back(sub_candidates)]:
     end if:
 end do;
-
+print(forbidden);
 for each in y_indets_set do
     if not (each in forbidden) and not (each in sub_candidates) then
+        printf("each: %a", each);
         push_back(sub_candidates, each);
     end if;
 end do;
 
-print(sub_candidates);
+print(sub_candidates, forbidden);
+
+(*
+ y1(t) = a+b,
+ y2(t) = a
+
+
+*)
