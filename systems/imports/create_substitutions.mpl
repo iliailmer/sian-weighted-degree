@@ -37,13 +37,13 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
   # x1'(t) = a*x1(t)+b*x2(t) -> {a*x1(t), b*x2(t)}
   # x2'(t) = -a*x1(t)+c*x2(t) -> {-a*x1(t), c*x2(t)}
   
-  rhs_terms := map(f->op(expand(rhs(f))), select(f->is_diff(lhs(f)), sigma)):
-  rhs_terms_full := map(f->op(expand(rhs(f))), sigma):
-  y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(expand(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set)));
+  rhs_terms := map(f->op(expand(rhs(f))), select(f->is_diff(lhs(f)), sigma)): # rhs of differential equations
+  rhs_terms_full := map(f->op(expand(rhs(f))), sigma): # rhs of everything
+  y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(expand(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set))); # rhs of only y-equations
 
   # get constants C from terms of the form C*f(t)
-  lhs_rhs_full := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(expand(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)):
-  lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs_full);
+  lhs_rhs_full := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(expand(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)): # hash table: lhs => rhs terms of differential equations
+  lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs_full); # terms from lhs_rhs_full that have 2 elements in them (A*B), one comes from y-func rhs
   monoms := map(f->op(f), lhs_rhs);
    
   printf("MONOMS: %a, %a\n", monoms, y_functions_rhs):
@@ -80,7 +80,7 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
   od: 
   print(counting_table_fun, min_count):
   substitutions := table(map(f->parse(convert(lhs(f), string)[..-2])=exponent, select(f->evalb(rhs(f)<=min_count), [entries(counting_table_fun, `pairs`)]))):
-  substitutions[z_aux]:=2:
+  substitutions[z_aux]:=exponent:
   constants_to_sub := select(x-> not (x in non_id), constants_to_sub);
   for each in constants_to_sub do
     substitutions[each]:= exponent:
@@ -139,10 +139,10 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
   end do:
 
   # first we find subs using the BFS rule
-  if strict=true then
-    # if we only want level=min_level functions
-    substitutions := table(map(f->parse(convert(lhs(f), string)[..-2])=exponent, select(f->evalb(rhs(f)=min_level), [entries(vt, `pairs`)]))):
-  fi:
+  # if strict=true then
+  #   # if we only want level=min_level functions
+  #   substitutions := table(map(f->parse(convert(lhs(f), string)[..-2])=exponent, select(f->evalb(rhs(f)=min_level), [entries(vt, `pairs`)]))):
+  # fi:
   if strict = false then
     # if we want level>=min_level functions (this works best most of the time)
     substitutions := table(map(f->parse(convert(lhs(f), string)[..-2])=exponent, select(f->evalb(rhs(f)>=min_level), [entries(vt, `pairs`)]))):
@@ -258,3 +258,9 @@ GetSubsTableOnly := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_f
   return substitutions:
 end proc:
 
+MAD := proc(arr)
+  local m, mad;
+  m := Statistics[Mean](arr);
+  mad := Statistics[Mean]([seq(abs(e - m), e in arr)]):
+  return mad
+end proc:
