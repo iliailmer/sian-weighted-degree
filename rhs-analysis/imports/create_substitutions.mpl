@@ -19,7 +19,7 @@ rename := f-> if is_function(f) then get_function_name(f) else f; end if:
 # check if is derivative
 is_diff := f->type(int(f, t), function(name)):
 
-GetSubsTableFreq := proc(sigma, {exponent:=2})
+GetSubsTableFreq := proc(sigma, {exponent:=2, tfm:=expand})
 
   local system_vars, vt, rhs_terms, vtc, max_possible, y_functions_rhs, counting_table_fun,
   rhs_terms_full,monoms,constants_to_sub, counting_table_const, min_count, non_id,
@@ -37,12 +37,12 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
   # x1'(t) = a*x1(t)+b*x2(t) -> {a*x1(t), b*x2(t)}
   # x2'(t) = -a*x1(t)+c*x2(t) -> {-a*x1(t), c*x2(t)}
   
-  rhs_terms := map(f->op(expand(rhs(f))), select(f->is_diff(lhs(f)), sigma)): # rhs of differential equations
-  rhs_terms_full := map(f->op(expand(rhs(f))), sigma): # rhs of everything
-  y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(expand(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set))); # rhs of only y-equations
+  rhs_terms := map(f->op(tfm(rhs(f))), select(f->is_diff(lhs(f)), sigma)): # rhs of differential equations
+  rhs_terms_full := map(f->op(tfm(rhs(f))), sigma): # rhs of everything
+  y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(tfm(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set))); # rhs of only y-equations
 
   # get constants C from terms of the form C*f(t)
-  lhs_rhs_full := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(expand(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)): # hash table: lhs => rhs terms of differential equations
+  lhs_rhs_full := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(tfm(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)): # hash table: lhs => rhs terms of differential equations
   lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs_full); # terms from lhs_rhs_full that have 2 elements in them (A*B), one comes from y-func rhs
   monoms := map(f->op(f), lhs_rhs);
    
@@ -88,7 +88,7 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
   return substitutions, system_vars[1], system_vars[2], counting_table_const:
 end proc:
 
-GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_functions_only:=true})
+GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_functions_only:=true, tfm:=expand})
 
   local system_vars, vt, vtc, max_possible, rhs_terms, rhs_terms_full, 
   opposites, i, j, substitutions, new_subs, each, elem, y_functions_rhs,
@@ -105,13 +105,13 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
   # example input: 
   # x1'(t) = a*x1(t)+b*x2(t) -> {a*x1(t), b*x2(t)}
   # x2'(t) = -a*x1(t)+c*x2(t) -> {-a*x1(t), c*x2(t)}
-  rhs_terms := map(f->op(expand(rhs(f))), select(f->is_diff(lhs(f)), sigma)):
-  rhs_terms_full := map(f->op(expand(rhs(f))), sigma):
+  rhs_terms := map(f->op(tfm(rhs(f))), select(f->is_diff(lhs(f)), sigma)):
+  rhs_terms_full := map(f->op(tfm(rhs(f))), sigma):
   # get y-equations
-  y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(expand(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set)));
+  y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(tfm(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set)));
   
   # get pairs (lhs, rhs) for state variables
-  lhs_rhs := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(expand(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)):
+  lhs_rhs := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(tfm(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)):
   lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs);
   # get all terms of the form Const*function(t) or C*f(t) for short
   monoms := map(f->op(f), lhs_rhs);

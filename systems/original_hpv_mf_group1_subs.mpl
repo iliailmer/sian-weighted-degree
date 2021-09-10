@@ -3,8 +3,9 @@ interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
 read "imports/create_substitutions.mpl":
-# betaGOFM, betaOOFM, betaOGFM, betaGGFM, gammaGM, gammaOM, gammaGF, gammaOG, 
-sigma := [diff(SM(t),t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t) * mu - SM(t) * IOF(t) * betaOOFM - SM(t) * IOGF(t) * betaGOFM - SM(t) * IOGF(t) * betaOOFM - SM(t) * IGF(t) * betaGOFM - SM(t) * IOF(t) * betaOGFM - SM(t) * IOGF(t) * betaGGFM - SM(t) * IOGF(t) * betaOGFM - SM(t) * IGF(t) * betaGGFM,
+# betaGOFM, betaOOFM, betaOGFM, betaGGFM, gammaGM, gammaOM, gammaGF, gammaOF, 
+sigma := [
+    diff(SM(t),t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t) * mu - SM(t) * IOF(t) * betaOOFM - SM(t) * IOGF(t) * betaGOFM - SM(t) * IOGF(t) * betaOOFM - SM(t) * IGF(t) * betaGOFM - SM(t) * IOF(t) * betaOGFM - SM(t) * IOGF(t) * betaGGFM - SM(t) * IOGF(t) * betaOGFM - SM(t) * IGF(t) * betaGGFM,
     diff(IOM(t),t) = - IOM(t) * IOF(t) * betaOGFM - IOM(t) * IOGF(t) * betaGGFM - IOM(t) * IOGF(t) * betaOGFM - IOM(t) * IGF(t) * betaGGFM + SM(t) * IOF(t) * betaOOFM + SM(t) * IOGF(t) * betaGOFM + SM(t) * IOGF(t) * betaOOFM + SM(t) * IGF(t) * betaGOFM + gammaGM * IOGM(t) - gammaOM * IOM(t) - IOM(t) * mu - IOM(t) * nuOGM,
     diff(IGM(t),t) = - IGM(t) * IOF(t) * betaOOFM - IGM(t) * IOGF(t) * betaGOFM - IGM(t) * IOGF(t) * betaOOFM - IGM(t) * IGF(t) * betaGOFM + SM(t) * IOF(t) * betaOGFM + SM(t) * IOGF(t) * betaGGFM + SM(t) * IOGF(t) * betaOGFM + SM(t) * IGF(t) * betaGGFM + gammaOM * IOGM(t) - gammaGM * IGM(t) - IGM(t) * mu - IGM(t) * nuGOM,
     diff(IOGM(t),t) = IGM(t) * IOF(t) * betaOOFM + IGM(t) * IOGF(t) * betaGOFM + IGM(t) * IOGF(t) * betaOOFM + IGM(t) * IGF(t) * betaGOFM + IOM(t) * IOF(t) * betaOGFM + IOM(t) * IOGF(t) * betaGGFM + IOM(t) * IOGF(t) * betaOGFM + IOM(t) * IGF(t) * betaGGFM - gammaGM * IOGM(t) - gammaOM * IOGM(t) - IOGM(t) * mu + IGM(t) * nuGOM + IOM(t) * nuOGM,
@@ -15,7 +16,7 @@ sigma := [diff(SM(t),t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
     y1(t) = IGM(t) + IOGM(t),
     y2(t) = IOM(t) + IOGM(t),
     y3(t) = IOGM(t)
-    ];
+]:
 
 substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 writeto(cat("../magma_scripts/", PATH, "/hpv_mf_group1.m"));

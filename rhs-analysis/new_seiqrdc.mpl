@@ -16,9 +16,10 @@ diff(c(t), t) = a * s(t) - mu * c(t) - tau0 * c(t),
 y1(t) = c(t)#,
 # y2(t) = q(t)#,
 # y3(t) = d0(t)
-]: 
+]:
 
-
+# expand => tau0 = 2, e = 2, z_aux = 2, mu = 2
+# simplify => tau0 = 2, e = 2, z_aux = 2, mu = 2
 char := 11863279:
 substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 writeto(cat("../magma_scripts/", PATH, "/seiqrdc.m"));
