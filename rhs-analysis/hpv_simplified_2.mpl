@@ -1,6 +1,8 @@
 kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
-read "imports/main.mpl":
+read "imports/generate_poly_system.mpl":
+read "imports/bfs_deriv.mpl":
+read "imports/create_substitutions.mpl":
 
 sigma := [
     diff(IO(t),t) = (1-IO(t)-IOG(t)-IG(t))*(betaOO*(IO(t) + IOG(t)) + betaGO*(IG(t) + IOG(t))) + gammaG*IOG(t) - IO(t)*(nuOG + gammaO + mu +betaOG*(IO(t) + IOG(t)) + betaGG*(IG(t) + IOG(t))),

@@ -9,7 +9,7 @@ read "imports/bfs_deriv.mpl":
 
 # get rid of unerscore, e.g. x1(t) -> x1_ -> x1
 get_function_name := f -> parse(convert(FunctionToVariable(f), string)[..-2]): 
-
+idtfm := x->x;
 # check if depends on (t)
 is_function:= f->StringTools[Has](convert(f, string), "(t)"):
 

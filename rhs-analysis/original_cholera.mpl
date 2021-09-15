@@ -8,7 +8,7 @@ read "imports/create_substitutions.mpl":
 sigma := [
   diff(s(t), t) = mu - bi * s(t) * i(t) - bw * s(t) * w(t) - mu * s(t) + al * r(t),
   diff(i(t), t) = bw * s(t) * w(t) + bi * s(t) * i(t) - g * i(t) - mu * i(t),
-  diff(w(t), t) = dz * (i(t) - w(t)), # this one works: w=2. also the combination w*s is seen only twice, so combining w and s subs works well too
+  diff(w(t), t) = dz * (i(t) - w(t)),
   diff(r(t), t) = g * i(t) - mu * r(t) - al * r(t),
   y1(t) = k*i(t),
   y2(t) = i(t) + r(t) + s(t)
