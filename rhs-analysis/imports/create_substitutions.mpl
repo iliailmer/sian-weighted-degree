@@ -42,11 +42,13 @@ GetSubsTableFreq := proc(sigma, {exponent:=2, tfm:=expand})
   y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(tfm(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set))); # rhs of only y-equations
 
   # get constants C from terms of the form C*f(t)
-  lhs_rhs_full := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(tfm(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)): # hash table: lhs => rhs terms of differential equations
-  lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs_full); # terms from lhs_rhs_full that have 2 elements in them (A*B), one comes from y-func rhs
-  monoms := map(f->op(f), lhs_rhs);
+  # lhs_rhs_full := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(tfm(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)): # hash table: lhs => rhs terms of differential equations
+  rhs_full := map(f-> map(x->indets(x) minus {t}, [op(tfm(rhs(f)))]), select(f->is_diff(lhs(f)), sigma)): # returs terms of rhs of ODEs in sigma
+  rhs_with_output_states := map(each -> select(ee->nops(ee intersect y_functions_rhs)>0, each), rhs_full):
+  # lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs_full); # terms from lhs_rhs_full that have 2 elements in them (A*B), one comes from y-func rhs
+  monoms := map(f->op(f), rhs_with_output_states):#lhs_rhs);
    
-  printf("MONOMS: %a, %a\n", monoms, y_functions_rhs):
+  # printf("MONOMS: %a, %a\n", monoms, y_functions_rhs):
   if nops(monoms)>0 then
     constants_to_sub:=convert(select(x->not(is_function(x)), foldl(`union`, op(monoms))), set) union select(x-> not is_function(x), y_functions_rhs) :
   else
@@ -111,11 +113,15 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
   y_functions_rhs :=  foldl(`union`, op(convert(map(x->indets(tfm(rhs(x))) minus {t}, select(f->not is_diff(lhs(f)), sigma)), set)));
   
   # get pairs (lhs, rhs) for state variables
-  lhs_rhs := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(tfm(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)):
-  lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs);
+  # lhs_rhs := map(f->[{op(lhs(f))} minus {t}, map(x->indets(x) minus {t}, [op(tfm(rhs(f)))])], select(f->is_diff(lhs(f)), sigma)):
+  # lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs);
   # get all terms of the form Const*function(t) or C*f(t) for short
-  monoms := map(f->op(f), lhs_rhs);
-  
+  # monoms := map(f->op(f), lhs_rhs);
+  rhs_full := map(f-> map(x->indets(x) minus {t}, [op(tfm(rhs(f)))]), select(f->is_diff(lhs(f)), sigma)): # returs terms of rhs of ODEs in sigma
+  rhs_with_output_states := map(each -> select(ee->nops(ee intersect y_functions_rhs)>0, each), rhs_full):
+  # lhs_rhs := map(f->select(g->nops(g)=2 and op(f[1]) in g and op(f[1]) in y_functions_rhs, f[2]), lhs_rhs_full); # terms from lhs_rhs_full that have 2 elements in them (A*B), one comes from y-func rhs
+  monoms := map(f->op(f), rhs_with_output_states):#lhs_rhs);
+   
   printf("MONOMS: %a, %a\n", monoms, y_functions_rhs):
   # get all constants from the terms C*f(t)
   if nops(monoms)>0 then

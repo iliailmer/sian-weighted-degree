@@ -16,7 +16,8 @@ sigma := [diff(SM(t),t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
     y2(t) = IOM(t) + IOGM(t),
     y3(t) = IOGM(t)
     ];
-
+    # no expand: TABLE([SF = 2, mu = 2, gammaOM = 2, gammaGM = 2, z_aux = 2, nuGOM = 2, nuOGM = 2])
+# should we require constant parameters to be paired with states from output functions?
 substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 writeto(cat("../magma_scripts/", PATH, "/hpv_mf_group1.m"));
 printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");

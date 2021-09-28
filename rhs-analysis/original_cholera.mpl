@@ -9,11 +9,11 @@ sigma := [
   diff(s(t), t) = mu - bi * s(t) * i(t) - bw * s(t) * w(t) - mu * s(t) + al * r(t),
   diff(i(t), t) = bw * s(t) * w(t) + bi * s(t) * i(t) - g * i(t) - mu * i(t),
   diff(w(t), t) = dz * (i(t) - w(t)),
-  diff(r(t), t) = g * i(t) - mu * r(t) - al * r(t),
+  diff(r(t), t) = g * i(t) - mu * r(t) - al * r(t)];,
   y1(t) = k*i(t),
   y2(t) = i(t) + r(t) + s(t)
 ]:
-
+# expand: TABLE([al = 2, mu = 2, w = 2, z_aux = 2, g = 2, k = 2])
 substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 writeto(cat("../magma_scripts/", PATH, "/cholera.m"));
 printf("SetNthreads(64);\nQ:= RationalField(); //GF(11863279); //;\nSetVerbose(\"Faugere\", 2);\n");
