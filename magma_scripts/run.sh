@@ -9,6 +9,6 @@ for each in "${array[@]}"; do
         outname="${d::-2}.out"
         timename="${d::-2}_time.out"
         echo $outname
-        (/usr/bin/time -f "memory: %M000 KB;\n\tuser: %U,\n\tsystem: %S,\n\telapsed: %e\n" magma $d) >$outname 2>$timename
+        (/usr/bin/time -f "memory: %M000 KB;\n\tuser+sys: %U+%S,\n\telapsed: %e\n" magma $d) >$outname 2>$timename
     done
 done
