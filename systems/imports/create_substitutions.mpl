@@ -12,7 +12,7 @@ get_function_name := f -> parse(convert(FunctionToVariable(f), string)[..-2]):
 
 # check if depends on (t)
 is_function:= f->StringTools[Has](convert(f, string), "(t)"):
-
+idtfm := x->x;
 # basically a wrapper around get_function_name to skip non-functions
 rename := f-> if is_function(f) then get_function_name(f) else f; end if:
 
