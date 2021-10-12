@@ -59,7 +59,7 @@ SimpleSubstitutions := proc(sigma, exponent)
   substitutions := table(map(f->lhs_name(lhs(f))=exponent, select(f->evalb(rhs(f)<=min_count), [entries(counting_table_fun, `pairs`)]))):
   
   substitutions[z_aux]:=exponent:
-  return substitutions;
+  return substitutions, system_vars[1], system_vars[2];
 end proc:
 
 

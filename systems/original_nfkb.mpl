@@ -124,7 +124,7 @@ printf("# %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
 
-substitutions3, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, exponent=2):
+substitutions3, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 
 all_subs := {}:
 for each in system_vars[2] do
