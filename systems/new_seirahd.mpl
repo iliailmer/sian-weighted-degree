@@ -24,7 +24,7 @@ y1(t) = s(t) + e(t) # this output also runs faster without subs; also runs faste
 char := 11863279:
 substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 writeto(cat("../magma_scripts/", PATH, "/seirahd.m"));
-printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 printf("time GroebnerBasis(G);\nquit;");
@@ -51,7 +51,7 @@ for each in system_vars[2] do
   fi:
 od:
 writeto(cat("../magma_scripts/", PATH, "/seirahd_subs_1.m"));
-printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 printf("// %a\n", [entries(substitutions, 'pairs')]);
@@ -84,7 +84,7 @@ for each in system_vars[2] do
   fi:
 od:
 writeto(cat("../magma_scripts/", PATH, "/seirahd_subs_2.m"));
-printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 printf("// %a\n", [entries(substitutions2, 'pairs')]);
@@ -101,6 +101,41 @@ printf("# %a;\n", [entries(substitutions2, 'pairs')]);
 printf("// %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
+
+
+substitutions3, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, exponent=2):
+
+all_subs := {}:
+for each in system_vars[2] do
+  if "aux" in StringTools[Split](convert(each, string), "_") then
+    name_ := each:
+  else
+    name_ := parse(StringTools[RegSplit]("\_[0-9]+$", convert(each, string))[1]):
+  fi:
+  if assigned(substitutions3[name_]) then
+    system_vars[1] := subs({each = each^substitutions3[name_]}, system_vars[1]):
+    all_subs:= all_subs union {each = each^substitutions3[name_]}:
+  fi:
+od:
+writeto(cat("../magma_scripts/", PATH, "/subs_simple.m"));
+printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
+printf("// %a\n", [entries(substitutions3, 'pairs')]);
+printf("// %a\n", all_subs);
+printf("time GroebnerBasis(G);\nquit;");
+
+writeto(cat("../maple_scripts/", PATH, "/subs_simple.mpl"));
+printf("infolevel[Groebner]:=10;\n");
+printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
+printf("et_hat:=%s;\n", convert(system_vars[1], string));
+printf("vars:=%s;\n", convert(system_vars[2], string));
+printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=%s);\n", convert(char, string));
+printf("# %a;\n", [entries(substitutions3, 'pairs')]);
+printf("# %a\n", all_subs);
+printf("quit;");
+writeto(terminal);
+
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 # # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
 
