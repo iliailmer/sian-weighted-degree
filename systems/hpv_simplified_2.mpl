@@ -12,7 +12,7 @@ sigma := [
 substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
 
 print(system_vars[1]):
-char := 0;
+char := 0:
 all_subs := {}:
 for each in system_vars[2] do
   # if we have z_aux, or w_aux, don't split the name

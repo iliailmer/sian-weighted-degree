@@ -19,7 +19,7 @@ y1(t) = c(t)#,
 ]: 
 
 
-char := 11863279:
+char := 0:
 substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 writeto(cat("../magma_scripts/", PATH, "/seiqrdc.m"));
 printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");

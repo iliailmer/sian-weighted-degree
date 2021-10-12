@@ -13,7 +13,7 @@ sigma := [
  y(t) = p6*p3*x5(t)#(p2*x2(t)+)
 ]: 
 
-char := 11863279:
+char := 0:
 substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 writeto(cat("../magma_scripts/", PATH, "/bouwer.m"));
 printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
@@ -116,7 +116,7 @@ substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTa
 # od:
 # # print(system_vars[1]);
 # printf("%a\n", all_subs);
-# char:=0:
+# char := 0:
 # final_times := []:
 # final_memory_used:=[]:
 # start_global := time(): 
