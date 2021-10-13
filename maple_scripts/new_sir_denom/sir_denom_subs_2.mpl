@@ -5,5 +5,5 @@ et_hat:=[-In_0*k+304062689020373388790073742, -In_0*S_0^2*c*ph+In_0*S_0^2*g^2+In
 vars:=[In_6, In_5, S_5, In_4, S_4, In_3, S_3, In_2, S_2, In_1, S_1, In_0, S_0, z_aux, w_aux, Lam, c, g, k, mu, ph];
 gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0);
 # [g = 2, S = 2, mu = 2, z_aux = 2];
-// {S_0 = S_0^2, S_1 = S_1^2, S_2 = S_2^2, S_3 = S_3^2, S_4 = S_4^2, S_5 = S_5^2, g = g^2, mu = mu^2, z_aux = z_aux^2}
+# {S_0 = S_0^2, S_1 = S_1^2, S_2 = S_2^2, S_3 = S_3^2, S_4 = S_4^2, S_5 = S_5^2, g = g^2, mu = mu^2, z_aux = z_aux^2}
 quit;

@@ -5,5 +5,5 @@ et_hat:=[-In_0^2+12801119172441498, -In_0^2*S_0^2*a*ksi-Jj_0^2*S_0^2*a*ksi+In_0^
 vars:=[In_7, Jj_6, In_6, S_6, Jj_5, In_5, S_5, Jj_4, In_4, S_4, Jj_3, In_3, S_3, Jj_2, In_2, S_2, Jj_1, In_1, S_1, Jj_0, In_0, S_0, z_aux, w_aux, a, b, eta, ksi];
 gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0);
 # [z_aux = 2, b = 2, Jj = 2, In = 2, S = 2];
-// {In_0 = In_0^2, In_1 = In_1^2, In_2 = In_2^2, In_3 = In_3^2, In_4 = In_4^2, In_5 = In_5^2, In_6 = In_6^2, In_7 = In_7^2, Jj_0 = Jj_0^2, Jj_1 = Jj_1^2, Jj_2 = Jj_2^2, Jj_3 = Jj_3^2, Jj_4 = Jj_4^2, Jj_5 = Jj_5^2, Jj_6 = Jj_6^2, S_0 = S_0^2, S_1 = S_1^2, S_2 = S_2^2, S_3 = S_3^2, S_4 = S_4^2, S_5 = S_5^2, S_6 = S_6^2, b = b^2, z_aux = z_aux^2}
+# {In_0 = In_0^2, In_1 = In_1^2, In_2 = In_2^2, In_3 = In_3^2, In_4 = In_4^2, In_5 = In_5^2, In_6 = In_6^2, In_7 = In_7^2, Jj_0 = Jj_0^2, Jj_1 = Jj_1^2, Jj_2 = Jj_2^2, Jj_3 = Jj_3^2, Jj_4 = Jj_4^2, Jj_5 = Jj_5^2, Jj_6 = Jj_6^2, S_0 = S_0^2, S_1 = S_1^2, S_2 = S_2^2, S_3 = S_3^2, S_4 = S_4^2, S_5 = S_5^2, S_6 = S_6^2, b = b^2, z_aux = z_aux^2}
 quit;

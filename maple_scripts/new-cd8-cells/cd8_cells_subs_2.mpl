@@ -4,5 +4,5 @@ et_hat:=[-N_0^2+89902610889041159, N_0^2*P_0^2*delta_NE+N_0^2*mu_N^2+N_1^2, 1129
 vars:=[N_6, M_6, S_5, P_5, N_5, M_5, E_5, S_4, P_4, N_4, M_4, E_4, S_3, P_3, N_3, M_3, E_3, S_2, P_2, N_2, M_2, E_2, S_1, P_1, N_1, M_1, E_1, S_0, P_0, N_0, M_0, E_0, z_aux, w_aux, delta_EL, delta_LM, delta_NE, mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, rho_E, rho_P];
 gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0);
 # [mu_LL = 2, delta_LM = 2, P = 2, N = 2, mu_EE = 2, mu_N = 2, delta_EL = 2, z_aux = 2, mu_M = 2];
-// {N_0 = N_0^2, N_1 = N_1^2, N_2 = N_2^2, N_3 = N_3^2, N_4 = N_4^2, N_5 = N_5^2, N_6 = N_6^2, P_0 = P_0^2, P_1 = P_1^2, P_2 = P_2^2, P_3 = P_3^2, P_4 = P_4^2, P_5 = P_5^2, mu_EE = mu_EE^2, mu_LL = mu_LL^2, mu_M = mu_M^2, mu_N = mu_N^2, z_aux = z_aux^2, delta_EL = delta_EL^2, delta_LM = delta_LM^2}
+# {N_0 = N_0^2, N_1 = N_1^2, N_2 = N_2^2, N_3 = N_3^2, N_4 = N_4^2, N_5 = N_5^2, N_6 = N_6^2, P_0 = P_0^2, P_1 = P_1^2, P_2 = P_2^2, P_3 = P_3^2, P_4 = P_4^2, P_5 = P_5^2, mu_EE = mu_EE^2, mu_LL = mu_LL^2, mu_M = mu_M^2, mu_N = mu_N^2, z_aux = z_aux^2, delta_EL = delta_EL^2, delta_LM = delta_LM^2}
 quit;

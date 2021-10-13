@@ -5,5 +5,5 @@ et_hat:=[41766656007195-Q_0, Q_0*alpha2^2+Q_0*g^2-In_0*theta1+Q_1, 1349583179212
 vars:=[LL_6, Q_6, LL_5, In_5, S_5, Q_5, LL_4, In_4, S_4, Q_4, N_4, LL_3, In_3, S_3, Q_3, N_3, LL_2, In_2, S_2, Q_2, N_2, LL_1, In_1, S_1, Q_1, N_1, LL_0, In_0, S_0, Q_0, N_0, z_aux, w_aux, alpha1, alpha2, b, dlt, eta, g, mu, theta1];
 gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0);
 # [N = 2, z_aux = 2, dlt = 2, g = 2, alpha2 = 2];
-// {N_0 = N_0^2, N_1 = N_1^2, N_2 = N_2^2, N_3 = N_3^2, N_4 = N_4^2, alpha2 = alpha2^2, dlt = dlt^2, g = g^2, z_aux = z_aux^2}
+# {N_0 = N_0^2, N_1 = N_1^2, N_2 = N_2^2, N_3 = N_3^2, N_4 = N_4^2, alpha2 = alpha2^2, dlt = dlt^2, g = g^2, z_aux = z_aux^2}
 quit;
