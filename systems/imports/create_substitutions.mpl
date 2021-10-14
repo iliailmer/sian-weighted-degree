@@ -22,6 +22,8 @@ is_diff := f->type(int(f, t), function(name)):
 lhs_name := ff -> if convert(ff, string)[-1] = "_" then parse(convert(ff, string)[..-2]) else ff; end if:
 
 SimpleSubstitutions := proc(sigma, exponent)
+  local system_vars, non_id, counting_table_fun, min_count, vts, vtc, rhs_terms, max_possible,
+        rhs_term, indets_, term, substitutions;
   system_vars, non_id := GetPolySystem(sigma, GetParameters(sigma)):
   counting_table_fun := table([seq(fun=0, fun in [op(system_vars[-1]), op(system_vars[-2])])]):
   min_count:=10^6:
@@ -68,7 +70,7 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
 
   local system_vars, vt, rhs_terms, vtc, max_possible, y_functions_rhs, counting_table_fun,
   rhs_terms_full,monoms,constants_to_sub, counting_table_const, min_count, non_id,
-  rhs_term, opposites, i, j, substitutions, new_subs,indets_, term,  each, elem:
+  rhs_term, opposites, i, j, substitutions, new_subs,indets_, term,  each, elem, lhs_rhs, lhs_rhs_full:
   
   # get polynomial system, basically fisrt step of SIAN, see imports/generate_poly_system.mpl
   system_vars, non_id := GetPolySystem(sigma, GetParameters(sigma)):
@@ -137,7 +139,7 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
 
   local system_vars, vt, vtc, max_possible, rhs_terms, rhs_terms_full, 
   opposites, i, j, substitutions, new_subs, each, elem, y_functions_rhs,
-  monoms, constants_to_sub:
+  monoms, constants_to_sub, lhs_rhs, non_id:
 
   
   # get polynomial system, basically fisrt step of SIAN, see imports/generate_poly_system.mpl
