@@ -28,12 +28,12 @@ y5(t) = gamma_h(t)
 # y3(t) = i(t)
 # y2(t) = i(t) Phi, x_5
 ]:
-substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 y
 gb := Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])));
-# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 # char := 0:
-# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 # writeto(cat("../magma_scripts/", PATH, "/seirahd.m"));
 # printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
 # printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
@@ -147,7 +147,7 @@ gb := Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])));
 # printf("quit;");
 # writeto(terminal);
 
-# # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+# # substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 # # # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
 
 # # substitutions := table([s = 2, z_aux = 2, sgm = 2]):

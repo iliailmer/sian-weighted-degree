@@ -17,7 +17,7 @@ sigma := [
 
 # runtime, memory_used := CodeTools[Usage](MainProgram(sigma), output=['cputime', 'bytesused']):
 char := 0:
-substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 writeto(cat("../magma_scripts/", PATH, "/biohydrogenation.m"));
 printf("SetNthreads(64);\nQ:= RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));

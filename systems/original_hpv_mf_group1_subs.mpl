@@ -18,7 +18,7 @@ sigma := [
     y3(t) = IOGM(t)
 ]:
 
-substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 writeto(cat("../magma_scripts/", PATH, "/hpv_mf_group1.m"));
 printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
@@ -129,7 +129,7 @@ writeto(terminal);
 
 # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
 
-# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 
 # substitutions := table([betaGGFM=2,betaGOFM=2, betaOOFM=2, gammaOM=2, gammaGM=2, gammaGF=2, IOM = 2, SF = 2, IGM = 2, IGF = 2, SM = 2, IOGM = 2, IOF = 2, IOGF = 2]): # gammaGF=2, gammaGM=1, gammaOM=1, SM=2, IOM=1, IGM=1, IOGM=1, SF=1, IOF=1, IGF=1, IOGF=2]): 
 # substitutions[gammaGF]:=2:

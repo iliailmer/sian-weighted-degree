@@ -15,10 +15,10 @@ sigma := [
   y3(t) = x4(t)
 ]:
 # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 # substitutions := table([]):#x5=2, k3=2]):
 # print(substitutions):
-substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 writeto(cat("../magma_scripts/", PATH, "/lipolisys.m"));
 printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
@@ -128,7 +128,7 @@ printf("quit;");
 writeto(terminal);
 
 # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 # substitutions := table([]):#x5=2, k3=2]):
 # print(substitutions):
 

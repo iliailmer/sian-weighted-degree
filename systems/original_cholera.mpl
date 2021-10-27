@@ -14,7 +14,7 @@ sigma := [
   y2(t) = i(t) + r(t) + s(t)
 ]:
 
-substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 writeto(cat("../magma_scripts/", PATH, "/cholera.m"));
 printf("SetNthreads(64);\nQ:= RationalField(); //GF(11863279); //;\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
@@ -123,7 +123,7 @@ printf("# %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
 
-# substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
+# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 # # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
 # # substitutions := table([s = 2, w=2, k=2, bi=2, mu=2, g=2]):#w=2, al=2, mu=2, k=2, g=2]): #, bi=2, g=2, k=2, bw=2,mu=2]): # bi=2, g=2, k=2
 # print(substitutions): #k = 1, bw = 1, bi = 1, al = 2, dz = 2, mu = 1, g = 1
