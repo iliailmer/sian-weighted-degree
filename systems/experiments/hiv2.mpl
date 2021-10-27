@@ -19,9 +19,8 @@ sigma := [
 TABLE([y_ = 1, x_ = 2, v_ = 2, z_ = 0, w_ = 0])
 TABLE([d = 3, h = 1, b = 1, lm = 3, u = 3, a = 2, c = 1, beta = 2, k = 3, q = 1])
 *)
-substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
-# substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
+
+substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 # substitutions := table([]);
 print(substitutions);
 # vts := GetMinLevelBFS(sigma):

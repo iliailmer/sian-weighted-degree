@@ -12,6 +12,20 @@ kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 
+# the function below obtains the name of the state derivative (e.g. x_0) in the style of `x_vars`:
+# x_0 => x_
+# bb_18 => bb_, etc.
+get_state_name := proc(state, x_vars, mu)
+  local state_;
+  if state in mu then
+    return state;
+  end if;
+  state_ := parse(cat(StringTools[Join](StringTools[Split](convert(state, string), "_")[..-2], "_"), "_")):
+  if state_ in x_vars then
+    return state_;
+  end if:
+end proc:
+
 GetMinLevelBFS := proc(sigma)
   # this part is copied from original SIAN code
   local x_functions, y_functions, candidate_constants,
@@ -57,7 +71,7 @@ GetMinLevelBFS := proc(sigma)
   visible_states :=  foldl(`union`, op(map(x->indets(rhs(x)) minus {t}, y_eqs))); #select(f -> f in x_zero_vars, ); # map(x->parse(convert(x, string)[..-2]), select(f -> f in x_zero_vars, foldl(`union`, op(map(x->indets(rhs(x)), y_eqs))))):# cat(StringTools[Split](convert(x, string), "_")[1], "_")
 
   # construct a hash table of "visibility"
-  visibility_table := table([seq(each=current_level, each in visible_states)]):
+  visibility_table := table([seq(get_state_name(each, x_vars, mu)=current_level, each in visible_states)]):
   # this is a flag array: if i-th position == 1 then we must differentiat i-th y(t) function 
   differentiate_ := [seq(1, i=1..nops(y_eqs))]: 
 
@@ -89,8 +103,8 @@ GetMinLevelBFS := proc(sigma)
 
         # if found at least one new rhs element then we will diff that function again
         # else we will skip this in the future
-        if op(map(x->not assigned(visibility_table[x]), candidates)) <> NULL then
-          continue := foldl(`or`, op(map(x->not assigned(visibility_table[x]), candidates))):
+        if op(map(x->not assigned(visibility_table[get_state_name(x, x_vars, mu)]), candidates)) <> NULL then
+          continue := foldl(`or`, op(map(x->not assigned(visibility_table[get_state_name(x, x_vars, mu)]), candidates))):
         else
           continue := false;
         fi:
@@ -102,8 +116,8 @@ GetMinLevelBFS := proc(sigma)
         fi:
         # assign visibility
         for each in candidates do
-          if not assigned(visibility_table[each]) then 
-            visibility_table[each] := current_level:
+          if not assigned(visibility_table[get_state_name(each, x_vars, mu)]) then 
+            visibility_table[get_state_name(each, x_vars, mu)] := current_level:
           fi:
         od;
       fi:
