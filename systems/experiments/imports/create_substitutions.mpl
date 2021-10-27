@@ -21,15 +21,12 @@ lhs_name := ff -> if convert(ff, string)[-1] = "_" then parse(convert(ff, string
 
 SimpleSubstitutions := proc(sigma, exponent)
   local system_vars, non_id, counting_table_states, min_count, vts, rhs_terms, max_possible,
-        rhs_term, indets_, term, substitutions;
-  system_vars, non_id := GetPolySystem(sigma, GetParameters(sigma), sub_transc=true):
-  # counting_table_states := table([seq(fun=0, fun in [op(system_vars[-1]), op(system_vars[-2])])]):
-  # min_count:=10^6:
-
-  vts := GetMinLevelBFS(sigma):
+        rhs_term, indets_, term, substitutions, sigma_new;
+  system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=true):
+  vts := GetMinLevelBFS(sigma_new):
   printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);
   substitutions := {};
-  rhs_terms := map(f->op(expand(rhs(f))), select(f->is_diff(lhs(f)), sigma)):
+  rhs_terms := map(f->op(expand(rhs(f))), select(f->is_diff(lhs(f)), sigma_new)):
   max_possible := max(map(rhs, [entries(vts, `pairs`)]));
   for rhs_term in rhs_terms do
     indets_ := convert(indets(rhs_term) minus {t}, list):

@@ -256,14 +256,13 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     printf("%s %a\n", `Locally identifiable paramters: `, map(x -> ParamToOuter(x, all_vars), theta_l));
     printf("%s %a\n", `Nonidentifiable parameter: `, map(x -> ParamToOuter(x, all_vars), [op({op(theta)} minus {op(theta_l)})]));
   end if:
+  non_id := [op({op(theta)} minus {op(theta_l)})]:
+  sigma_new := system_ODEs;
   if sub_transc then
-    non_id := [op({op(theta)} minus {op(theta_l)})]:
+    PrintHeader("Substituting transcendence basis."):
     alg_indep := select(x-> x in non_id or x in {op(x_theta_vars)} minus {op(theta)}, alg_indep):
     printf("%s %a\n", `Algebraically independent parameters`, map(x-> ParamToOuter(x, all_vars), alg_indep)):
     
-    if sub_transc then 
-      PrintHeader("Substituting transcendence basis."):
-    end if:
     sigma_new := subs({seq(each=each(t), each in {op(alg_indep)} intersect {op(non_id)})}, system_ODEs);
     alg_indep_params := {op(alg_indep)} intersect {op(non_id)}:
     alg_indep_derivs := {op(alg_indep)} minus {op(non_id)}:
@@ -334,7 +333,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
   end if:
  
   return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
-    op(sort(mu))], x_vars], non_id:
+    op(sort(mu))], x_vars], non_id, sigma_new:
 end proc:
 
 #===============================================================================

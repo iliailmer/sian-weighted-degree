@@ -12,12 +12,26 @@ kernelopts(printbytes=false, assertlevel=1):
 interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 
+# the function below obtains the name of the state derivative (e.g. x_0) in the style of `x_vars`:
+# x_0 => x_
+# bb_18 => bb_, etc.
+get_state_name := proc(state, x_vars, mu)
+  local state_;
+  if state in mu then
+    return state;
+  end if;
+  state_ := parse(cat(StringTools[Join](StringTools[Split](convert(state, string), "_")[..-2], "_"), "_")):
+  if state_ in x_vars then
+    return state_;
+  end if:
+end proc:
+
 GetMinLevelBFS := proc(sigma)
   # this part is copied from original SIAN code
-  local x_functions, visibility_table_constants, y_functions, candidate_constants,
+  local x_functions, y_functions, candidate_constants,
   all_functions, all_symbols_rhs, xy_ders, u_functions, mu, x_vars,
   y_vars, u_vars, subst_first_order, subst_zero_order, x_eqs, y_eqs, 
-  n, m, s, x_zero_vars, all_vars, current_level, visible_x_functions, 
+  n, m, s, x_zero_vars, all_vars, current_level, visible_states, 
   visibility_table, i, j, continue, poly_d, leader, separant, candidates,
   each, differentiate_:
 
@@ -52,12 +66,12 @@ GetMinLevelBFS := proc(sigma)
 
   current_level := 0:
 
-  # get functions on level 0
-  visible_x_functions := map(x->parse(convert(x, string)[..-2]), select(f -> f in x_zero_vars, foldl(`union`, op(map(x->indets(rhs(x)), y_eqs))))):# cat(StringTools[Split](convert(x, string), "_")[1], "_")
+  # get functions on level 0, we consider parameters and states indistinguishable
+  # i.e. parameters are states with d/dt = 0
+  visible_states :=  foldl(`union`, op(map(x->indets(rhs(x)) minus {t}, y_eqs))); #select(f -> f in x_zero_vars, ); # map(x->parse(convert(x, string)[..-2]), select(f -> f in x_zero_vars, foldl(`union`, op(map(x->indets(rhs(x)), y_eqs))))):# cat(StringTools[Split](convert(x, string), "_")[1], "_")
 
   # construct a hash table of "visibility"
-  visibility_table := table([seq(each=current_level, each in visible_x_functions)]):
-  visibility_table_constants := table([]):
+  visibility_table := table([seq(get_state_name(each, x_vars, mu)=current_level, each in visible_states)]):
   # this is a flag array: if i-th position == 1 then we must differentiat i-th y(t) function 
   differentiate_ := [seq(1, i=1..nops(y_eqs))]: 
 
@@ -84,15 +98,13 @@ GetMinLevelBFS := proc(sigma)
         # save the new equation
         y_eqs[i]:= leader = subs(x_eqs, -(poly_d - separant * leader) / separant):
 
-        # get rhs candidates that are x_vars
-        candidates := map(x->parse(cat(StringTools[Join](StringTools[Split](convert(x, string), "_")[..-2], "_"), "_")), indets(subs(x_eqs, -(poly_d - separant * leader) / separant))) intersect {op(x_vars)}:
-        # # get candidate constants (i.e. when do we start seeing constants?) 
-        candidate_constants := indets(subs(x_eqs, -(poly_d - separant * leader) / separant)) intersect {op(mu)}:
+        # treat everything as states, retrieve all indets at current level
+        candidates := select(x-> not (GetOrderVar(x)[1]  in y_vars), indets(y_eqs[i])):
 
         # if found at least one new rhs element then we will diff that function again
         # else we will skip this in the future
-        if op(map(x->not assigned(visibility_table[x]), candidates)) <> NULL then
-          continue := foldl(`or`, op(map(x->not assigned(visibility_table[x]), candidates))):
+        if op(map(x->not assigned(visibility_table[get_state_name(x, x_vars, mu)]), candidates)) <> NULL then
+          continue := foldl(`or`, op(map(x->not assigned(visibility_table[get_state_name(x, x_vars, mu)]), candidates))):
         else
           continue := false;
         fi:
@@ -102,18 +114,12 @@ GetMinLevelBFS := proc(sigma)
         else
           differentiate_[i]:=0:
         fi:
-
         # assign visibility
         for each in candidates do
-          if not assigned(visibility_table[each]) then 
-            visibility_table[each] := current_level:
+          if not assigned(visibility_table[get_state_name(each, x_vars, mu)]) then 
+            visibility_table[get_state_name(each, x_vars, mu)] := current_level:
           fi:
         od;
-        for each in candidate_constants do 
-          if not assigned(visibility_table_constants[each]) then 
-            visibility_table_constants[each] := current_level:
-          fi:
-        od:
       fi:
     od:
     # check if this needs to be repeated
@@ -121,7 +127,7 @@ GetMinLevelBFS := proc(sigma)
         break:
     fi:
   od:
-  return visibility_table, visibility_table_constants:
+  return visibility_table;
 end proc:
 
 

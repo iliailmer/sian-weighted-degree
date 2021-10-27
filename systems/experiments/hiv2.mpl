@@ -21,7 +21,7 @@ TABLE([d = 3, h = 1, b = 1, lm = 3, u = 3, a = 2, c = 1, beta = 2, k = 3, q = 1]
 *)
 
 substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-# substitutions := table([]);
+substitutions := table([]);
 print(substitutions);
 # vts := GetMinLevelBFS(sigma):
 # substitutions := table([d = 3, k = 3, lm = 3, u = 3]); #x = 2, v = 2,  z_aux = 2, a = 2, u = 2, d = 2 ]): #v = 2, z_aux = 2, y=2]);
