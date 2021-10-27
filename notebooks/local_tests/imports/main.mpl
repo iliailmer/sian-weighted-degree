@@ -52,7 +52,7 @@ MainProgram := proc(sigma, {use_custom_subs:=[], exponent:= 2, strict:= false, m
   final_times := []:
   start_global := time():
   for attempt from 1 to reps do 
-    finish_local, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=char), output=['cputime', 'output']): 
+    finish_local, gb:= CodeTools[Usage](Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])), characteristic=0), output=['cputime', 'output']): 
     final_times := [op(final_times), finish_local]:
     if char >0 then 
       # if we use positive characteristic -> prevprime it

@@ -110,7 +110,7 @@ for perm in all_permutations do # [[x4_, x6_, x1_, x2_, x3_, x5_]] do
   start_global := time():
   for attempt from 1 to 10 do 
     start_local := time():
-    gb:= Groebner[Basis](system_vars[1], tdeg(op(vars)), characteristic=char):
+    gb:= Groebner[Basis](system_vars[1], tdeg(op(vars)), characteristic=0):
     finish_local:= time() - start_local:
     final_times := [op(final_times), finish_local]:
     if char >0 then 
@@ -150,7 +150,7 @@ end do:
 # start_global := time():
 # for attempt from 1 to 10 do 
 #   start_local := time():
-#   gb:= Groebner[Basis](system_vars[1], tdeg(op(vars)), characteristic=char):
+#   gb:= Groebner[Basis](system_vars[1], tdeg(op(vars)), characteristic=0):
 #   finish_local:= time() - start_local:
 #   final_times := [op(final_times), finish_local]:
 #   if char > 0 then 

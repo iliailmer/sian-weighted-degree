@@ -22,13 +22,13 @@ is_diff := f->type(int(f, t), function(name)):
 lhs_name := ff -> if convert(ff, string)[-1] = "_" then parse(convert(ff, string)[..-2]) else ff; end if:
 
 SimpleSubstitutions := proc(sigma, exponent)
-  local system_vars, non_id, counting_table_fun, min_count, vts, vtc, rhs_terms, max_possible,
+  local system_vars, non_id, counting_table_states, min_count, vts, vtc, rhs_terms, max_possible,
         rhs_term, indets_, term, substitutions;
   system_vars, non_id := GetPolySystem(sigma, GetParameters(sigma)):
-  counting_table_fun := table([seq(fun=0, fun in [op(system_vars[-1]), op(system_vars[-2])])]):
+  counting_table_states := table([seq(fun=0, fun in [op(system_vars[-1]), op(system_vars[-2])])]):
   min_count:=10^6:
 
-  vts, vtc := GetMinLevelBFS(sigma):
+  vts := GetMinLevelBFS(sigma):
 
   printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);
   printf("%s:\t%a\n", `Constants for substitution`, [entries(vtc, `pairs`)]);
@@ -40,25 +40,25 @@ SimpleSubstitutions := proc(sigma, exponent)
     for term in indets_ do
       if is_function(term) then
         if vts[FunctionToVariable(term)]>=max_possible and assigned(vts[FunctionToVariable(term)]) then
-          counting_table_fun[FunctionToVariable(term)] := 1+counting_table_fun[FunctionToVariable(term)]:
+          counting_table_states[FunctionToVariable(term)] := 1+counting_table_states[FunctionToVariable(term)]:
         end if;
       else
-        if not (term in non_id) and vtc[term]>=max_possible and assigned(vtc[term]) then
-          counting_table_fun[term] := 1+counting_table_fun[term]:
+        if not (term in non_id) and vts[term]>=max_possible and assigned(vts[term]) then
+          counting_table_states[term] := 1+counting_table_states[term]:
         end if;
       end if:
     end do;
   end do:
-  counting_table_fun := table(select(f->evalb(rhs(f)>0), [entries(counting_table_fun, `pairs`)])):
-  print(counting_table_fun):
+  counting_table_states := table(select(f->evalb(rhs(f)>0), [entries(counting_table_states, `pairs`)])):
+  print(counting_table_states):
   
-  # for each in entries(counting_table_fun, `pairs`) do                                                                                         
+  # for each in entries(counting_table_states, `pairs`) do                                                                                         
   #   if rhs(each)<min_count then                                                                                                                 
   #     min_count:=rhs(each);
   #   fi:                                                                                                                                         
   # od:
   
-  substitutions := table(map(f->lhs_name(lhs(f))=exponent, select(f->evalb(rhs(f)<=min_count), [entries(counting_table_fun, `pairs`)]))):
+  substitutions := table(map(f->lhs_name(lhs(f))=exponent, select(f->evalb(rhs(f)<=min_count), [entries(counting_table_states, `pairs`)]))):
   
   substitutions[z_aux]:=exponent:
   return substitutions, system_vars[1], system_vars[2];
@@ -68,7 +68,7 @@ end proc:
 
 GetSubsTableFreq := proc(sigma, {exponent:=2})
 
-  local system_vars, vt, rhs_terms, vtc, max_possible, y_functions_rhs, counting_table_fun,
+  local system_vars, vt, rhs_terms, vtc, max_possible, y_functions_rhs, counting_table_states,
   rhs_terms_full,monoms,constants_to_sub, counting_table_const, min_count, non_id,
   rhs_term, opposites, i, j, substitutions, new_subs,indets_, term,  each, elem, lhs_rhs, lhs_rhs_full:
   
@@ -76,7 +76,7 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
   system_vars, non_id := GetPolySystem(sigma, GetParameters(sigma)):
 
   # get visibility table in BFS-fashion, see imports/bfs_deriv.mpl
-  vt, vtc := GetMinLevelBFS(sigma):
+  vt:= GetMinLevelBFS(sigma):
   print(vt);
   # [function_name=1 i=0,...]
   # get right hand side terms from the ODEs. 
@@ -100,7 +100,7 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
     constants_to_sub:={}:
   fi:
 
-  counting_table_fun := table([seq(fun=0, fun in system_vars[-1])]):
+  counting_table_states := table([seq(fun=0, fun in system_vars[-1])]):
   counting_table_const:=table([seq(const_=0, const_ in system_vars[-2])]):
   min_count:=10^6:
   
@@ -110,7 +110,7 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
     for term in indets_ do
       if is_function(term) then
         if vt[FunctionToVariable(term)]>=max_possible and assigned(vt[FunctionToVariable(term)]) then
-          counting_table_fun[FunctionToVariable(term)] := 1+counting_table_fun[FunctionToVariable(term)]:
+          counting_table_states[FunctionToVariable(term)] := 1+counting_table_states[FunctionToVariable(term)]:
         end if;
       else
         if not (term in non_id) then
@@ -119,14 +119,14 @@ GetSubsTableFreq := proc(sigma, {exponent:=2})
       end if:
     end do;
   end do:
-  counting_table_fun:= table(select(f->evalb(rhs(f)>0), [entries(counting_table_fun, `pairs`)])):
-  for each in entries(counting_table_fun, `pairs`) do                                                                                         
+  counting_table_states:= table(select(f->evalb(rhs(f)>0), [entries(counting_table_states, `pairs`)])):
+  for each in entries(counting_table_states, `pairs`) do                                                                                         
     if rhs(each)<min_count then                                                                                                                 
       min_count:=rhs(each);
     fi:                                                                                                                                         
   od: 
-  print(counting_table_fun, min_count):
-  substitutions := table(map(f->parse(convert(lhs(f), string)[..-2])=exponent, select(f->evalb(rhs(f)<=min_count), [entries(counting_table_fun, `pairs`)]))):
+  print(counting_table_states, min_count):
+  substitutions := table(map(f->parse(convert(lhs(f), string)[..-2])=exponent, select(f->evalb(rhs(f)<=min_count), [entries(counting_table_states, `pairs`)]))):
   substitutions[z_aux]:=exponent:
   constants_to_sub := select(x-> not (x in non_id), constants_to_sub);
   for each in constants_to_sub do
@@ -146,7 +146,7 @@ GetSubsTable := proc(sigma, {exponent:=2, min_level:=1, strict:=false, use_funct
   system_vars, non_id := GetPolySystem(sigma, GetParameters(sigma)):
 
   # get visibility table in BFS-fashion, see imports/bfs_deriv.mpl
-  vt, vtc := GetMinLevelBFS(sigma):
+  vt:= GetMinLevelBFS(sigma):
   # [function_name=1 i=0,...]
   # get right hand side terms from the ODEs.
   # example input: 

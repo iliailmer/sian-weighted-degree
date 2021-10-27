@@ -5,5 +5,7 @@ et_hat:=[11520582543523666890775326-w_0, c*q*w_0*y_0-c*w_0*y_0*z_0+b*w_0+w_1, 53
 vars:=[w_9, z_8, y_8, w_8, z_7, y_7, x_7, w_7, v_7, z_6, y_6, x_6, w_6, v_6, z_5, y_5, x_5, w_5, v_5, z_4, y_4, x_4, w_4, v_4, z_3, y_3, x_3, w_3, v_3, z_2, y_2, x_2, w_2, v_2, z_1, y_1, x_1, w_1, v_1, z_0, y_0, x_0, w_0, v_0, z_aux, w_aux, a, b, beta, c, d, h, k, lm, q, u];
 gb:=Groebner[Basis](et_hat, tdeg(op(vars)),characteristic=0);
 # [v = 2, z_aux = 2, x = 2, a = 2, u = 2, d = 2];
+# [v = 2, z_aux = 2, x = 2, b = 2, h = 2] 
+# how to change the rule so that outputs are the "same" but parameters are equiv to states?
 # {a = a^2, d = d^2, u = u^2, v_0 = v_0^2, v_1 = v_1^2, v_2 = v_2^2, v_3 = v_3^2, v_4 = v_4^2, v_5 = v_5^2, v_6 = v_6^2, v_7 = v_7^2, x_0 = x_0^2, x_1 = x_1^2, x_2 = x_2^2, x_3 = x_3^2, x_4 = x_4^2, x_5 = x_5^2, x_6 = x_6^2, x_7 = x_7^2, z_aux = z_aux^2}
 quit;
