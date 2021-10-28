@@ -4,7 +4,7 @@ interface(echo=0, prettyprint=0):
 read "imports/generate_poly_system.mpl":
 read "imports/bfs_deriv.mpl":
 read "imports/create_substitutions.mpl":
-# read "imports/main.mpl"
+
 
 sigma := [
   diff(x4(t), t) = - k5 * x4(t) / (k6 + x4(t)),
@@ -15,7 +15,6 @@ sigma := [
   y2(t) = x5(t)
 ]:
 
-# runtime, memory_used := CodeTools[Usage](MainProgram(sigma), output=['cputime', 'bytesused']):
 char := 0:
 substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 writeto(cat("../magma_scripts/", PATH, "/biohydrogenation.m"));
