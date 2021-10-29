@@ -25,6 +25,7 @@ SimpleSubstitutions := proc(sigma, exponent)
   system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=true):
   vts := GetMinLevelBFS(sigma_new):
   printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);
+  printf("%s:\t%a\n", `NonID parameters`, non_id);
   substitutions := {};
   rhs_terms := map(f->op(expand(rhs(f))), select(f->is_diff(lhs(f)), sigma_new)):
   max_possible := max(map(rhs, [entries(vts, `pairs`)]));
@@ -33,7 +34,7 @@ SimpleSubstitutions := proc(sigma, exponent)
     for term in indets_ do
       if is_function(term) then
         if vts[FunctionToVariable(term)]=max_possible and assigned(vts[FunctionToVariable(term)]) then
-          substitutions := {op(substitutions), FunctionToVariable(term)}:
+          substitutions := {op(substitutions), parse(convert(FunctionToVariable(term), string)[..-2])}:
         end if;
       else
         if not term in non_id and vts[term]=max_possible and assigned(vts[term]) then

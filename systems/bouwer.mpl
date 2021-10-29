@@ -61,3 +61,19 @@ printf("# %a\n", all_subs);
 printf("quit;");
 writeto(terminal);
 
+# all_subs := {}:
+# for each in system_vars[2] do
+#   if "aux" in StringTools[Split](convert(each, string), "_") then
+#     name_ := each:
+#   else
+#     name_ := parse(StringTools[RegSplit]("\_[0-9]+$", convert(each, string))[1]):
+#   fi:
+#   if assigned(substitutions[name_]) then
+#     system_vars[1] := subs({each = each^substitutions[name_]}, system_vars[1]):
+#     all_subs:= all_subs union {each = each^substitutions[name_]}:
+#   else if assigned(substitutions[parse(cat(convert(name_, string), "_"))]) then
+#     system_vars[1] := subs({each = each^substitutions[parse(cat(convert(name_, string), "_"))]}, system_vars[1]):
+#     all_subs:= all_subs union {each = each^substitutions[parse(cat(convert(name_, string), "_"))]}:
+#   fi:
+#   fi:
+# od:

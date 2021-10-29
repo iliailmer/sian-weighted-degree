@@ -12,7 +12,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
         subst_zero_order, x_eqs, y_eqs, param, other_params, to_add, at_node,
         prime, max_rank, R, tr, e, p_local, xy_ders, polys_to_process, new_to_process, solutions_table,
         Et_x_vars, var, G, P, output, alg_indep, rrefJacX, pivots, row_idx, row, pivot_idx, non_id, faux_equations,
-        y_faux, sigma_new, each, alg_indep_derivs, alg_indep_params, faux_outputs, idx, faux_odes:
+        y_faux, alg_indep_derivs, alg_indep_params, faux_odes, faux_outputs:
   #----------------------------------------------
   # 0. Extract inputs, outputs, states, and parameters from the system
   #----------------------------------------------
@@ -157,7 +157,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
   x_theta_vars := all_params:
   prolongation_possible := [seq(1, i = 1..m)]:
   alg_indep := {}:
-  x_theta_vars := ListTools[Reverse](x_theta_vars):
+  # x_theta_vars := ListTools[Reverse](x_theta_vars):
   # (f) ------------------
   while foldl(`+`, op(prolongation_possible)) > 0 do
     for i from 1 to m do
@@ -165,7 +165,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
         eqs_i := [op(Et), Y[i][beta[i] + 1]]:
         JacX := VectorCalculus[Jacobian](subs({op(u_hat), op(y_hat)}, eqs_i), x_theta_vars = subs(all_subs, x_theta_vars)):
         if sub_transc then
-          rrefJacX := LinearAlgebra[ReducedRowEchelonForm](subs(all_subs, JacX)):
+          rrefJacX := LinearAlgebra[ReducedRowEchelonForm](JacX):
         end if:
         if LinearAlgebra[Rank](JacX) = nops(eqs_i) then
           Et := [op(Et), Y[i][beta[i] + 1]]:
@@ -191,20 +191,20 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
             polys_to_process := new_to_process:
           end do:
         else
-          if sub_transc then 
-            pivots := {}:
-            for row_idx from 1 to nops(eqs_i) do #nops(theta) do
-                row := rrefJacX[row_idx]:
-                pivot_idx := 1:
-                while row[pivot_idx]=0 and add(row)<>0 do
-                  pivot_idx := pivot_idx + 1:
-                end do:
-                if pivot_idx < numelems(row) then
-                  pivots := {op(pivots), x_theta_vars[pivot_idx]}:
-                end if:
-            end do:
-            alg_indep := {op(x_theta_vars)} minus pivots:
-          end:
+          # if sub_transc then 
+          #   pivots := {}:
+          #   for row_idx from 1 to nops(eqs_i) do #nops(theta) do
+          #       row := rrefJacX[row_idx]:
+          #       pivot_idx := 1:
+          #       while row[pivot_idx]=0 and add(row)<>0 do
+          #         pivot_idx := pivot_idx + 1:
+          #       end do:
+          #       if pivot_idx < numelems(row) then
+          #         pivots := {op(pivots), x_theta_vars[pivot_idx]}:
+          #       end if:
+          #   end do:
+          #   alg_indep := {op(x_theta_vars)} minus pivots:
+          # end if:
           prolongation_possible[i] := 0;
         end if:
       end if: 
@@ -241,6 +241,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
   end if:
  
   theta_l := []:
+  pivots := {}:
   for param in theta do
     other_params := subs(param = NULL, x_theta_vars):
     JacX := VectorCalculus[Jacobian]( 
@@ -251,42 +252,86 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       theta_l := [op(theta_l), param]:
     end if:
   end do:
- 
+  
+  x_theta_vars_ := ListTools[Reverse]([op({op(x_theta_vars)} minus {op(theta_l)})]);
+  x_theta_vars := [op(theta_l), op(x_theta_vars_)];
+  if sub_transc then 
+    JacX := VectorCalculus[Jacobian](subs({op(u_hat), op(y_hat)}, Et), x_theta_vars = subs(all_subs, x_theta_vars));
+    rrefJacX := LinearAlgebra[ReducedRowEchelonForm](JacX):
+    pivots := {}:
+    for row_idx from 1 to nops(eqs_i) do #nops(theta) do
+        row := rrefJacX[row_idx]:
+        pivot_idx := 1:
+        while row[pivot_idx]=0 and add(row)<>0 do
+          pivot_idx := pivot_idx + 1:
+        end do:
+        if pivot_idx <= numelems(row) then
+          pivots := {op(pivots), x_theta_vars[pivot_idx]}:
+        end if:
+    end do:
+    alg_indep := {op(x_theta_vars)} minus pivots:
+    print(alg_indep);
+  end if:
+
+
+
   if infolevel > 0 then
     printf("%s %a\n", `Locally identifiable paramters: `, map(x -> ParamToOuter(x, all_vars), theta_l));
     printf("%s %a\n", `Nonidentifiable parameter: `, map(x -> ParamToOuter(x, all_vars), [op({op(theta)} minus {op(theta_l)})]));
   end if:
-  non_id := [op({op(theta)} minus {op(theta_l)})]:
-  sigma_new := system_ODEs;
-  if sub_transc then
-    PrintHeader("Substituting transcendence basis."):
-    alg_indep := select(x-> x in non_id or x in {op(x_theta_vars)} minus {op(theta)}, alg_indep):
+  if sub_transc and numelems(alg_indep)<>0 then
+    non_id := [op({op(theta)} minus {op(theta_l)})]:
+    # alg_indep := select(x-> x in non_id or x in {op(x_theta_vars)} minus {op(theta)}, alg_indep):
     printf("%s %a\n", `Algebraically independent parameters`, map(x-> ParamToOuter(x, all_vars), alg_indep)):
-    
-    sigma_new := subs({seq(each=each(t), each in {op(alg_indep)} intersect {op(non_id)})}, system_ODEs);
-    alg_indep_params := {op(alg_indep)} intersect {op(non_id)}:
-    alg_indep_derivs := {op(alg_indep)} minus {op(non_id)}:
-    faux_outputs := [seq(parse(cat("y_faux", idx, "(t)"))=alg_indep_params[idx](t), idx in 1..numelems(alg_indep_params))]:
-    faux_odes := [seq(diff(alg_indep_params[idx](t), t)=0, idx in 1..numelems(alg_indep_params))]:
-    sigma_new := [op(faux_odes), op(sigma_new), op(faux_outputs)];
+
+    if sub_transc then 
+      PrintHeader("Substituting transcendence basis."):
+    end if:
+    alg_indep_params := map(each->GetStateName(each, x_vars, mu), {op(alg_indep)} intersect {op(non_id)}):
+    alg_indep_derivs := {op(alg_indep)} minus {op(non_id)}: 
+    faux_outputs := []: # seq(parse(cat("y_faux", idx, "(t)"))=alg_indep_params[idx](t), idx in 1..numelems(alg_indep_params))
+    faux_odes := []:
+    idx := 1:
+    sigma_new := system_ODEs:
+    for each in alg_indep_params do
+      if not (each in x_vars) then
+        sigma_new := subs({each=each(t)}, sigma_new):
+        faux_outputs := [op(faux_outputs), parse(cat("y_faux", idx, "(t)"))=each(t)]:
+        faux_odes := [op(faux_odes), diff(each(t), t)=0]:
+      else
+        faux_outputs := [op(faux_outputs), parse(cat("y_faux", idx, "(t)"))=parse(convert(each, string)[..-2])(t)]:
+      end if:
+      idx := idx+1:
+    end do:
+
+    sigma_new := [op(faux_odes), op(sigma_new), op(faux_outputs)]:
     
     if infolevel>0 then
       printf("%s %a\n", `Algebraically independent parameters among nonidentifiable:`, map(x-> ParamToOuter(x, all_vars), alg_indep_params)):
       printf("%s %a\n", `Algebraically independent parameters among derivatives:`, map(x-> ParamToOuter(x, all_vars), alg_indep_derivs)):
+    end if:
+    
+    if infolevel>1 then
       printf("\t%s %a\n", `Adding ODEs:`, faux_odes):
       printf("\t%s %a\n", `Adding output functions:`, faux_outputs):
       printf("\t%s %a\n", `New system:`, sigma_new):
     end if:
-
     X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
-    
+    # non_id := [op({op(theta)} minus {op(theta_l)})]: 
     if numelems(alg_indep_derivs)>0 then
       faux_equations := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_0"))=alg_indep_derivs[idx], idx in 1..numelems(alg_indep_derivs))]:
       y_faux := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_")), idx=1..numelems(alg_indep_derivs))]:
       Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:
       Y_eq := [op(Y_eq), op(faux_equations)]:
+      if infolevel>1 then
+        printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
+        printf("\t%s %a\n", `New system:`, Et):
+        printf("\t%s %a\n", `New system:`, Y_eq):
+      end if:
     end if;
-
+    
+  else
+    printf("%s\n", `No algebraically independent parameters found.`);
   end if:
   #----------------------------------------------
   # 3. Randomize.
@@ -327,7 +372,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     z_aux, w_aux,
     op(sort(mu))
   ]:
- 
+   
   if infolevel > 1 then
     printf("Variable ordering to be used for Groebner basis computation %a\n", vars);
   end if:
@@ -740,3 +785,15 @@ PreprocessODE := proc(system_ODEs, params_to_assess, {p := 0.99, infolevel := 1,
   end do:
  return X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0:
  end proc;
+ 
+get_function_name := f -> parse(convert(FunctionToVariable(f), string)[..-2]): 
+GetStateName := proc(state, x_vars, mu) # i.e. Xij_q => Xij
+  local state_;
+  if state in mu then
+    return state;
+  end if;
+  state_ := parse(cat(StringTools[Join](StringTools[Split](convert(state, string), "_")[..-2], "_"), "_")):
+  if state_ in x_vars then
+    return state_; #parse(convert(state_, string)[..-2]);
+  end if:
+end proc:

@@ -117,7 +117,7 @@ GetMinLevelBFS := proc(sigma)
         # assign visibility
         for each in candidates do
           if not assigned(visibility_table[get_state_name(each, x_vars, mu)]) then 
-            visibility_table[get_state_name(each, x_vars, mu)] := current_level:
+              visibility_table[get_state_name(each, x_vars, mu)] := current_level:
           fi:
         od;
       fi:
