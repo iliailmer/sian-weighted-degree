@@ -18,6 +18,16 @@ sigma:= [diff(SM(t), t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
 
 
 substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
+et_hat := system_vars[1]:
+writeto("hpv_group4_degrees_per_var.json"):
+printf(`{\n`):
+for each in system_vars[2] do
+  appendto("hpv_group4_degrees_per_var.json");
+  printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
+end do;
+printf(`}\n`):
+writeto(terminal);
+
 writeto(cat("../magma_scripts/", PATH, "/hpv_mf_group4.m"));
 printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
@@ -44,6 +54,16 @@ for each in system_vars[2] do
     all_subs:= all_subs union {each = each^substitutions[name_]}:
   fi:
 od:
+et_hat := system_vars[1]:
+writeto("hpv_group4_degrees_per_var_subs.json"):
+printf(`{\n`):
+for each in system_vars[2] do
+  appendto("hpv_group4_degrees_per_var_subs.json");
+  printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
+end do;
+printf(`}\n`):
+writeto(terminal);
+
 writeto(cat("../magma_scripts/", PATH, "/hpv_mf_group4_subs_1.m"));
 printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));

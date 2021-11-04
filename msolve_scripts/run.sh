@@ -15,6 +15,6 @@ done
 #         outname="${d::-4}.out"
 #         timename="${d::-4}_time.out"
 #         echo $outname
-#         (/usr/bin/time -f "memory: %M000 KB;\n\tuser: %U,\n\tsystem: %S,\n\telapsed: %e\n" /local/maple2020/bin/maple $d) >$outname 2>$timename
+#         (/usr/bin/time -f "memory: %M000 KB;\n\tuser: %U,\n\tsystem: %S,\n\telapsed: %e\n" /local/maple2021/bin/maple $d) >$outname 2>$timename
 #     done
 # done

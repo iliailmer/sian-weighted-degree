@@ -191,20 +191,6 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
             polys_to_process := new_to_process:
           end do:
         else
-          # if sub_transc then 
-          #   pivots := {}:
-          #   for row_idx from 1 to nops(eqs_i) do #nops(theta) do
-          #       row := rrefJacX[row_idx]:
-          #       pivot_idx := 1:
-          #       while row[pivot_idx]=0 and add(row)<>0 do
-          #         pivot_idx := pivot_idx + 1:
-          #       end do:
-          #       if pivot_idx < numelems(row) then
-          #         pivots := {op(pivots), x_theta_vars[pivot_idx]}:
-          #       end if:
-          #   end do:
-          #   alg_indep := {op(x_theta_vars)} minus pivots:
-          # end if:
           prolongation_possible[i] := 0;
         end if:
       end if: 
@@ -272,23 +258,24 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     alg_indep := {op(x_theta_vars)} minus pivots:
     print(alg_indep);
   end if:
-
-
-
+  derivs:={op(x_theta_vars)} minus {op(mu)};
+  sigma_new := system_ODEs:
+  non_id := [op({op(theta)} minus {op(theta_l)})]:
   if infolevel > 0 then
     printf("%s %a\n", `Locally identifiable paramters: `, map(x -> ParamToOuter(x, all_vars), theta_l));
     printf("%s %a\n", `Nonidentifiable parameter: `, map(x -> ParamToOuter(x, all_vars), [op({op(theta)} minus {op(theta_l)})]));
   end if:
   if sub_transc and numelems(alg_indep)<>0 then
-    non_id := [op({op(theta)} minus {op(theta_l)})]:
+ 
     # alg_indep := select(x-> x in non_id or x in {op(x_theta_vars)} minus {op(theta)}, alg_indep):
     printf("%s %a\n", `Algebraically independent parameters`, map(x-> ParamToOuter(x, all_vars), alg_indep)):
 
     if sub_transc then 
       PrintHeader("Substituting transcendence basis."):
     end if:
-    alg_indep_params := map(each->GetStateName(each, x_vars, mu), {op(alg_indep)} intersect {op(non_id)}):
-    alg_indep_derivs := {op(alg_indep)} minus {op(non_id)}: 
+
+    alg_indep_params := {op(alg_indep)} intersect {op(mu)}:
+    alg_indep_derivs := {op(alg_indep)} intersect derivs:
     faux_outputs := []: # seq(parse(cat("y_faux", idx, "(t)"))=alg_indep_params[idx](t), idx in 1..numelems(alg_indep_params))
     faux_odes := []:
     idx := 1:
@@ -316,8 +303,8 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       printf("\t%s %a\n", `Adding output functions:`, faux_outputs):
       printf("\t%s %a\n", `New system:`, sigma_new):
     end if:
-    X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
     # non_id := [op({op(theta)} minus {op(theta_l)})]: 
+    X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
     if numelems(alg_indep_derivs)>0 then
       faux_equations := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_0"))=alg_indep_derivs[idx], idx in 1..numelems(alg_indep_derivs))]:
       y_faux := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_")), idx=1..numelems(alg_indep_derivs))]:
@@ -372,7 +359,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     z_aux, w_aux,
     op(sort(mu))
   ]:
-   
+  
   if infolevel > 1 then
     printf("Variable ordering to be used for Groebner basis computation %a\n", vars);
   end if:
