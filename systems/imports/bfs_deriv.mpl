@@ -33,7 +33,7 @@ GetMinLevelBFS := proc(sigma)
   y_vars, u_vars, subst_first_order, subst_zero_order, x_eqs, y_eqs, 
   n, m, s, x_zero_vars, all_vars, current_level, visible_states, 
   visibility_table, i, j, continue, poly_d, leader, separant, candidates,
-  each, differentiate_:
+  each, differentiate_, k:
 
   x_functions := map(f -> int(f, t), select( f -> type(int(f, t), function(name)), map(lhs, sigma) )):
   

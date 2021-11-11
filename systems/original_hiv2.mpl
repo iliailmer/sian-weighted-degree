@@ -14,22 +14,26 @@ sigma := [
   y2(t) = z(t)
 ]:
 
+# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
+# system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=true):
 substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-et_hat := system_vars[1];
-writeto("hiv2_degrees_per_var.json"):
-printf(`{\n`):
-for each in system_vars[2] do
-  appendto("hiv2_degrees_per_var.json");
-  printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
-end do;
-printf(`}\n`):
-writeto(terminal);
+# print(substitutions):
+# substitutions := table([x = 2, h = 2, z_aux = 2, b = 2, v = 2]);
+# et_hat := system_vars[1];
+# writeto("hiv2_degrees_per_var.json"):
+# printf(`{\n`):
+# for each in system_vars[2] do
+#   appendto("hiv2_degrees_per_var.json");
+#   printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
+# end do;
+# printf(`}\n`):
+# writeto(terminal);
 
-writeto(cat("../magma_scripts/", PATH, "/hiv2.m"));
-printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
-printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
-printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
-printf("time GroebnerBasis(G);\nquit;");
+# writeto(cat("../magma_scripts/", PATH, "/hiv2.m"));
+# printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
+# printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+# printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
+# printf("time GroebnerBasis(G);\nquit;");
 
 writeto(cat("../maple_scripts/", PATH, "/hiv2.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
@@ -40,27 +44,24 @@ printf("quit;");
 writeto(terminal);
 
 all_subs := {}:
-for each in system_vars[2] do
-  if "aux" in StringTools[Split](convert(each, string), "_") then
-    name_ := each:
-  else
-    name_ := parse(StringTools[RegSplit]("\_[0-9]+$", convert(each, string))[1]):
-  fi:
-  if assigned(substitutions[name_]) then
-    system_vars[1] := subs({each = each^substitutions[name_]}, system_vars[1]):
-    all_subs:= all_subs union {each = each^substitutions[name_]}:
-  fi:
+names := [indices(substitutions, `nolist`)];
+for each in names do 
+  selection := select(sys_var->StringTools[IsPrefix](convert(each, string), sys_var), system_vars[2]);
+  for other in selection do
+      system_vars[1] := subs({other = other^substitutions[each]}, system_vars[1]):
+      all_subs := all_subs union {other = other^substitutions[each]}:
+  end do;
 od:
 
-et_hat := system_vars[1]:
-writeto("hiv2_degrees_per_var_subs.json"):
-printf(`{\n`):
-for each in system_vars[2] do
-  appendto("hiv2_degrees_per_var_subs.json");
-  printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
-end do;
-printf(`}\n`):
-writeto(terminal);
+# et_hat := system_vars[1]:
+# writeto("hiv2_degrees_per_var_subs.json"):
+# printf(`{\n`):
+# for each in system_vars[2] do
+#   appendto("hiv2_degrees_per_var_subs.json");
+#   printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
+# end do;
+# printf(`}\n`):
+# writeto(terminal);
 
 writeto(cat("../magma_scripts/", PATH, "/hiv2_subs_1.m"));
 printf("SetNthreads(64);\nQ := RationalField(); // GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");

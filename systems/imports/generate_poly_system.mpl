@@ -12,7 +12,8 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
         subst_zero_order, x_eqs, y_eqs, param, other_params, to_add, at_node,
         prime, max_rank, R, tr, e, p_local, xy_ders, polys_to_process, new_to_process, solutions_table,
         Et_x_vars, var, G, P, output, alg_indep, rrefJacX, pivots, row_idx, row, pivot_idx, non_id, faux_equations,
-        y_faux, alg_indep_derivs, alg_indep_params, faux_odes, faux_outputs:
+        y_faux, alg_indep_derivs, alg_indep_params, faux_odes, faux_outputs,
+        x_theta_vars_, derivs, sigma_new, idx, each:
   #----------------------------------------------
   # 0. Extract inputs, outputs, states, and parameters from the system
   #----------------------------------------------

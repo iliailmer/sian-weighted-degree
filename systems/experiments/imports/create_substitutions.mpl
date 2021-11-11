@@ -21,10 +21,13 @@ lhs_name := ff -> if convert(ff, string)[-1] = "_" then parse(convert(ff, string
 
 SimpleSubstitutions := proc(sigma, exponent)
   local system_vars, non_id, counting_table_states, min_count, vts, rhs_terms, max_possible,
-        rhs_term, indets_, term, substitutions, sigma_new;
-  system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=true):
+        rhs_term, indets_, term, substitutions, sigma_new, each;
+  
+  system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=false):
+  
   vts := GetMinLevelBFS(sigma_new):
   printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);
+  printf("%s:\t%a\n", `NonID parameters`, non_id);
   substitutions := {};
   rhs_terms := map(f->op(expand(rhs(f))), select(f->is_diff(lhs(f)), sigma_new)):
   max_possible := max(map(rhs, [entries(vts, `pairs`)]));
@@ -33,7 +36,7 @@ SimpleSubstitutions := proc(sigma, exponent)
     for term in indets_ do
       if is_function(term) then
         if vts[FunctionToVariable(term)]=max_possible and assigned(vts[FunctionToVariable(term)]) then
-          substitutions := {op(substitutions), FunctionToVariable(term)}:
+          substitutions := {op(substitutions), parse(convert(FunctionToVariable(term), string)[..-2])}:
         end if;
       else
         if not term in non_id and vts[term]=max_possible and assigned(vts[term]) then
@@ -47,4 +50,41 @@ SimpleSubstitutions := proc(sigma, exponent)
   return substitutions, system_vars[1], system_vars[2];
 end proc:
 
-
+SubsByDepth := proc(sigma, exponent)
+  local system_vars, non_id, counting_table_states, min_count, vts, rhs_terms, max_possible,
+        rhs_term, indets_, term, substitutions, sigma_new, each;
+  
+  system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=false):
+  
+  vts := GetMinLevelBFS(sigma_new):
+  printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);
+  printf("%s:\t%a\n", `NonID parameters`, non_id);
+  substitutions := table([]);
+  rhs_terms := map(f->op(expand(rhs(f))), select(f->is_diff(lhs(f)), sigma_new)):
+  max_possible := max(map(rhs, [entries(vts, `pairs`)]));
+  for rhs_term in rhs_terms do
+    indets_ := convert(indets(rhs_term) minus {t}, list):
+    for term in indets_ do
+      if is_function(term) then
+        if assigned(vts[FunctionToVariable(term)]) then
+          substitutions[FunctionToVariable(term)] := vts[FunctionToVariable(term)]+1:
+        end if;
+      else
+        if not term in non_id and vts[term]=max_possible and assigned(vts[term]) then
+          substitutions[term] := vts[term]+1:
+        end if;
+      end if:
+    end do;
+  end do:
+  substitutions[z_aux]:=max_possible:
+  all_subs := {}:
+  names := [indices(substitutions, `nolist`)];
+  for each in names do #system_vars[2] do
+    selection := select(sys_var->StringTools[IsPrefix](convert(each, string), sys_var), system_vars[2]);
+    for other in selection do
+        system_vars[1] := subs({other = other^substitutions[each]}, system_vars[1]):
+        all_subs := all_subs union {other = other^substitutions[each]}:
+    end do;
+  od:
+  return all_subs, system_vars[1], system_vars[2];
+end proc:
