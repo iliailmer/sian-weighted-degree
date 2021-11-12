@@ -275,8 +275,8 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       PrintHeader("Substituting transcendence basis."):
     end if:
 
-    alg_indep_params := {op(alg_indep)} intersect {op(mu)}:
     alg_indep_derivs := {op(alg_indep)} intersect derivs:
+    alg_indep_params := ({op(alg_indep)} intersect {op(non_id)}) minus {op(alg_indep_derivs)}
     faux_outputs := []: # seq(parse(cat("y_faux", idx, "(t)"))=alg_indep_params[idx](t), idx in 1..numelems(alg_indep_params))
     faux_odes := []:
     idx := 1:
