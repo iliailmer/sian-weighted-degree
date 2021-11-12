@@ -14,10 +14,9 @@ sigma := [
   y2(t) = z(t)
 ]:
 
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-# system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=true):
-substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-# print(substitutions):
+# system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), trdegsub=true):
+substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2, trdegsub=false):
+print(substitutions):
 # substitutions := table([x = 2, h = 2, z_aux = 2, b = 2, v = 2]);
 # et_hat := system_vars[1];
 # writeto("hiv2_degrees_per_var.json"):
