@@ -21,7 +21,8 @@ print(vts);
 # # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 # # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
 
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
+# # substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:= SubsByDepth(sigma, trdegsub=true):
 # # vts := GetMinLevelBFS(sigma):
 # # print(vts);
 # print(substitutions);

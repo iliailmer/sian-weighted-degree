@@ -18,18 +18,19 @@ sigma := [
 
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):
-substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
+# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:= SubsByDepth(sigma, trdegsub=true):
 print(substitutions);
 # substitutions := table([x6, x7]):
-all_subs := {}:
-names := [indices(substitutions, `nolist`)];
-for each in names do 
-  selection := select(sys_var->StringTools[IsPrefix](convert(each, string), sys_var), system_vars[2]);
-  for other in selection do
-      system_vars[1] := subs({other = other^substitutions[each]}, system_vars[1]):
-      all_subs := all_subs union {other = other^substitutions[each]}:
-  end do;
-od:
+# all_subs := {}:
+# names := [indices(substitutions, `nolist`)];
+# for each in names do 
+#   selection := select(sys_var->StringTools[IsPrefix](convert(each, string), sys_var), system_vars[2]);
+#   for other in selection do
+#       system_vars[1] := subs({other = other^substitutions[each]}, system_vars[1]):
+#       all_subs := all_subs union {other = other^substitutions[each]}:
+#   end do;
+# od:
 
 start := time():
 gb:=Groebner[Basis](system_vars[1], tdeg(op(system_vars[2]))):
