@@ -19,11 +19,11 @@ is_diff := f->type(int(f, t), function(name)):
 
 lhs_name := ff -> if convert(ff, string)[-1] = "_" then parse(convert(ff, string)[..-2]) else ff; end if:
 
-SimpleSubstitutions := proc(sigma, exponent, {trdegsub:=true})
+SimpleSubstitutions := proc(sigma, exponent)
   local system_vars, non_id, counting_table_states, min_count, vts, rhs_terms, max_possible,
         rhs_term, indets_, term, substitutions, sigma_new, each;
   
-  system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=trdegsub):
+  system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=false):
   
   vts := GetMinLevelBFS(sigma_new):
   printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);
@@ -50,11 +50,11 @@ SimpleSubstitutions := proc(sigma, exponent, {trdegsub:=true})
   return substitutions, system_vars[1], system_vars[2];
 end proc:
 
-SubsByDepth := proc(sigma, exponent, {trdegsub:=true})
+SubsByDepth := proc(sigma, exponent)
   local system_vars, non_id, counting_table_states, min_count, vts, rhs_terms, max_possible,
         rhs_term, indets_, term, substitutions, sigma_new, each;
   
-  system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=true):
+  system_vars, non_id, sigma_new := GetPolySystem(sigma, GetParameters(sigma), sub_transc=false):
   
   vts := GetMinLevelBFS(sigma_new):
   printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);

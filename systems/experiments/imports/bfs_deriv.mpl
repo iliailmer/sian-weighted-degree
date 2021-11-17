@@ -33,7 +33,7 @@ GetMinLevelBFS := proc(sigma)
   y_vars, u_vars, subst_first_order, subst_zero_order, x_eqs, y_eqs, 
   n, m, s, x_zero_vars, all_vars, current_level, visible_states, 
   visibility_table, i, j, continue, poly_d, leader, separant, candidates,
-  each, differentiate_, k:
+  each, differentiate_:
 
   x_functions := map(f -> int(f, t), select( f -> type(int(f, t), function(name)), map(lhs, sigma) )):
   
@@ -117,7 +117,7 @@ GetMinLevelBFS := proc(sigma)
         # assign visibility
         for each in candidates do
           if not assigned(visibility_table[get_state_name(each, x_vars, mu)]) then 
-              visibility_table[get_state_name(each, x_vars, mu)] := current_level:
+            visibility_table[get_state_name(each, x_vars, mu)] := current_level:
           fi:
         od;
       fi:

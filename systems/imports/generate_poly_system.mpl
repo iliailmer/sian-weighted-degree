@@ -307,17 +307,18 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     # non_id := [op({op(theta)} minus {op(theta_l)})]: 
     X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
     if numelems(alg_indep_derivs)>0 then
+      if infolevel>1 then
+        printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
+      end if:
       faux_equations := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_0"))=alg_indep_derivs[idx], idx in 1..numelems(alg_indep_derivs))]:
       y_faux := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_")), idx=1..numelems(alg_indep_derivs))]:
       Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:
       Y_eq := [op(Y_eq), op(faux_equations)]:
       if infolevel>1 then
-        printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
         printf("\t%s %a\n", `New system:`, Et):
         printf("\t%s %a\n", `New system:`, Y_eq):
       end if:
     end if;
-    
   else
     printf("%s\n", `No algebraically independent parameters found.`);
   end if:
@@ -366,7 +367,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
   end if:
  
   return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
-    op(sort(mu))], x_vars], non_id, sigma_new:
+    op(sort(mu))], x_vars], non_id, sigma_new, alg_indep:
 end proc:
 
 #===============================================================================
