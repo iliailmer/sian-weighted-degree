@@ -28,7 +28,7 @@ printf(`}\n`):
 writeto(terminal);
 
 writeto(cat("../magma_scripts/", PATH, "/cholera.m"));
-printf("SetNthreads(64);\nQ:= RationalField(); //GF(11863279); //;\nSetVerbose(\"Faugere\", 2);\n");
+printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();//;\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(original_et_hat, string)[2..-2]);
 printf("time GroebnerBasis(G);\nquit;");
@@ -37,7 +37,7 @@ writeto(cat("../maple_scripts/", PATH, "/cholera.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
 printf("et_hat:=%s;\n", convert(original_et_hat, string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
-printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)));\n", convert(char, string));
+printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279););\n", convert(char, string));
 printf("quit;");
 writeto(terminal);
 
@@ -61,7 +61,7 @@ printf(`}\n`):
 writeto(terminal);
 
 writeto(cat("../magma_scripts/", PATH, "/cholera_subs_1.m"));
-printf("SetNthreads(64);\nQ:= RationalField(); //GF(11863279); //;\nSetVerbose(\"Faugere\", 2);\n");
+printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();//;\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 # printf("// %a\n", [entries(substitutions, 'pairs')]);
@@ -72,7 +72,7 @@ writeto(cat("../maple_scripts/", PATH, "/cholera_subs_1.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
 printf("et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
-printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0);\n", convert(char, string));
+printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279);\n", convert(char, string));
 # printf("# %a\n", [entries(substitutions, 'pairs')]);
 printf("# %a\n", all_subs);
 printf("quit;");

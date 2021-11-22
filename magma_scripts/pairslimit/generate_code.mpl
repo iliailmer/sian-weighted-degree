@@ -23,7 +23,7 @@ for ii from 1 to nops(parameters) do
     sigma_rep := subs(repl, sigma):
     system_vars, _ := GetPolySystem(sigma_rep, GetParameters(sigma)):
     writeto(cat("./pairslimit_", convert(ii, string), ".m"));
-    printf("SetNthreads(64);\nQ:= RationalField(); //GF(11863279); //;\n//SetVerbose(\"Faugere\");\n");
+    printf("SetNthreads(64);\nQ:= GF(11863279); //RationalField();//;\n//SetVerbose(\"Faugere\");\n");
     printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(original_et_hat, string)[2..-2], nops(original_et_hat));
     printf("S := [%s];\n", convert(system_vars[1], string)[2..-2]):
     printf("for N in [1..1000] do\n\tprintf \"%s\", \"PairsLimit := \", N;\n\t", "\%o\\t\%o");
