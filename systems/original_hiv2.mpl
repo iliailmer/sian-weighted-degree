@@ -16,7 +16,7 @@ sigma := [
 
 
 # substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2, trdegsub=false):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDepth(sigma, trdegsub=false);
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDepth(sigma, trdegsub=true);
 
 # print(substitutions):
 # substitutions := table([x = 2, h = 2, z_aux = 2, b = 2, v = 2]);
@@ -73,7 +73,7 @@ printf("time GroebnerBasis(G);\nquit;");
 
 writeto(cat("../maple_scripts/", PATH, "/hiv2_subs_1.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
-printf("et_hat:=%s;\n", convert(original_et_hat, string));
+printf("et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
 printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0);\n", convert(char, string));
 # # printf("# %a\n", [entries(substitutions, 'pairs')]);
