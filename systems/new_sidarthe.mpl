@@ -20,9 +20,9 @@ sigma := [
 ]:
 sigma := map(x->lhs(x) = expand(rhs(x)), sigma);
 char := 0:
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_infolevel[Groebner]:=10;
-et_hat:= SubsByDepth(sigma, trdegsub=true):
+
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=true):
+
 writeto(cat("../magma_scripts/", PATH, "/sidarthe.m"));
 printf("SetNthreads(64);\nQ := GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));

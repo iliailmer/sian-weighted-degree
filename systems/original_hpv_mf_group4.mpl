@@ -17,9 +17,9 @@ sigma:= [diff(SM(t), t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
   y4(t) = IOF(t) + IOGF(t)]:
 
 
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_infolevel[Groebner]:=10;
-et_hat:= SubsByDepth(sigma, trdegsub=true):
+
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=true):
+
 et_hat := system_vars[1]:
 writeto("hpv_group4_degrees_per_var.json"):
 printf(`{\n`):

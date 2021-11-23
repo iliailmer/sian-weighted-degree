@@ -15,14 +15,14 @@ diff(r(t), t) = gamma_i * i(t) + gamma_a * a(t) + gamma_h * h(t),
 diff(d0(t), t) = dlt * h(t),
 y1(t) = s(t) + e(t) # this output also runs faster without subs; also runs faster with char =0,
 ]:
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_infolevel[Groebner]:=10;
-et_hat:= SubsByDepth(sigma, trdegsub=true):
+
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=true):
+
 
 char := 0:
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_infolevel[Groebner]:=10;
-et_hat:= SubsByDepth(sigma, trdegsub=true):
+
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=true):
+
 writeto(cat("../magma_scripts/", PATH, "/seirahd.m"));
 printf("SetNthreads(64);\nQ := GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));

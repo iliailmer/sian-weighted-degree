@@ -15,9 +15,9 @@ sigma := [
   y2(t) = i(t) + r(t) + s(t)
 ]:
 
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_infolevel[Groebner]:=10;
-et_hat:= SubsByDepth(sigma, trdegsub=true):
+
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=true):
+
 et_hat := system_vars[1]:
 writeto("cholera_degrees_per_var.json"):
 printf(`{\n`):

@@ -15,14 +15,14 @@ sigma := [
   y3(t) = x4(t)
 ]:
 # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=false):
-# # substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_infolevel[Groebner]:=10;
-et_hat:= SubsByDepth(sigma, trdegsub=true):
+# 
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=true):
+
 # substitutions := table([]):#x5=2, k3=2]):
 # print(substitutions):
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_infolevel[Groebner]:=10;
-et_hat:= SubsByDepth(sigma, trdegsub=true):
+
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=true):
+
 writeto(cat("../magma_scripts/", PATH, "/lipolisys.m"));
 printf("SetNthreads(64);\nQ := GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
