@@ -16,7 +16,8 @@ sigma := [
 ]:
 
 # substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:= SubsByDepth(sigma, trdegsub=true):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_infolevel[Groebner]:=10;
+et_hat:= SubsByDepth(sigma, trdegsub=true):
 writeto(cat("../magma_scripts/", PATH, "/oral_glucose.m"));
 printf("SetNthreads(64);\nQ := GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
@@ -25,7 +26,8 @@ printf("time GroebnerBasis(G);\nquit;");
 
 writeto(cat("../maple_scripts/", PATH, "/oral_glucose.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
-printf("et_hat:=%s;\n", convert(original_et_hat, string));
+printf("infolevel[Groebner]:=10;
+et_hat:=%s;\n", convert(original_et_hat, string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
 printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279);\n", convert(char, string));
 printf("quit;");
@@ -50,7 +52,8 @@ printf("time GroebnerBasis(G);\nquit;");
 
 writeto(cat("../maple_scripts/", PATH, "/oral_glucose_subs_1.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
-printf("et_hat:=%s;\n", convert(system_vars[1], string));
+printf("infolevel[Groebner]:=10;
+et_hat:=%s;\n", convert(system_vars[1], string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
 printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279);\n", convert(char, string));
 # printf("# %a\n", [entries(substitutions, 'pairs')]);
