@@ -18,7 +18,6 @@ y1(t) = s(t) + e(t) # this output also runs faster without subs; also runs faste
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
-
 char := 0:
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
@@ -28,6 +27,10 @@ printf("SetNthreads(64);\nQ := GF(11863279); //RationalField();\nSetVerbose(\"Fa
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(original_et_hat, string)[2..-2]);
 printf("time GroebnerBasis(G);\nquit;");
+
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("et_hat = [%s]\n", convert(original_et_hat, string)[2..-2]);
+printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
 
 writeto(cat("../maple_scripts/", PATH, "/seirahd.mpl"));
 printf("infolevel[Groebner]:=10;\n");

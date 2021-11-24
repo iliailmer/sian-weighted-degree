@@ -320,7 +320,11 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       end if:
     end if;
   else
-    printf("%s\n", `No algebraically independent parameters found.`);
+    if numelems(alg_indep)=0 then
+      printf("%s\n", `No algebraically independent parameters found.`);
+    else
+      printf("%s\n", `Transcendence basis substitution turned off.`);
+    end if:
   end if:
   #----------------------------------------------
   # 3. Randomize.
