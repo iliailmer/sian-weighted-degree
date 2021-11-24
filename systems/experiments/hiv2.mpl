@@ -28,7 +28,7 @@ print(substitutions);
 # vts := GetMinLevelBFS(sigma):
 # substitutions := table([d = 3, k = 3, lm = 3, u = 3]); #x = 2, v = 2,  z_aux = 2, a = 2, u = 2, d = 2 ]): #v = 2, z_aux = 2, y=2]);
 writeto(cat("../julia_scripts/", PATH, "/<NAME>_subs.jl"));
-printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),[%s])\n", convert(system_vars[2], string)[2..-2]);
 printf("et_hat = [%s]\n", convert(system_vars[1], string)[2..-2]);
 printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
 printf("#%a", all_subs);

@@ -26,7 +26,7 @@ printf("G := ideal< P | %s>;\n", convert(original_et_hat, string)[2..-2]);
 printf("time GroebnerBasis(G);\nquit;");
 
 writeto(cat("../julia_scripts/", PATH, "/new_sliqr.jl"));
-printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),[%s])\n", convert(system_vars[2], string)[2..-2]);
 printf("et_hat = [%s]\n", convert(original_et_hat, string)[2..-2]);
 printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
 
@@ -40,7 +40,7 @@ printf("quit;");
 writeto(terminal);
 
 writeto(cat("../julia_scripts/", PATH, "/new_sliqr_subs.jl"));
-printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),[%s])\n", convert(system_vars[2], string)[2..-2]);
 printf("et_hat = [%s]\n", convert(system_vars[1], string)[2..-2]);
 printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
 printf("#%a", all_subs);
