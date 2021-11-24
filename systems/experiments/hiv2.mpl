@@ -21,7 +21,7 @@ TABLE([d = 3, h = 1, b = 1, lm = 3, u = 3, a = 2, c = 1, beta = 2, k = 3, q = 1]
 *)
 
 
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=true):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
 substitutions := table([]);
 print(substitutions);

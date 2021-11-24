@@ -49,7 +49,7 @@ sigma := subs(known_data, [
 
 
 
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=true):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
 writeto(cat("../magma_scripts/", PATH, "/nfkb.m"));
 printf("SetNthreads(64);\nQ := GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
