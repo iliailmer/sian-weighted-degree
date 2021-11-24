@@ -23,15 +23,12 @@ all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDept
 
 print(substitutions);
 # substitutions := table([x6, x7]):
-# all_subs := {}:
-# names := [indices(substitutions, `nolist`)];
-# for each in names do 
-#   selection := select(sys_var->StringTools[IsPrefix](convert(each, string), sys_var), system_vars[2]);
-#   for other in selection do
-#       system_vars[1] := subs({other = other^substitutions[each]}, system_vars[1]):
-#       all_subs := all_subs union {other = other^substitutions[each]}:
-#   end do;
-# od:
+writeto(cat("../julia_scripts/", PATH, "/<NAME>_subs.jl"));
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("et_hat = [%s]\n", convert(system_vars[1], string)[2..-2]);
+printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
+printf("#%a", all_subs);
+
 
 start := time():
 gb:=Groebner[Basis](system_vars[1], tdeg(op(system_vars[2]))):

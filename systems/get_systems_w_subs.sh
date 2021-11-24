@@ -5,6 +5,7 @@ array=( "bouwer" "new-akt" "new-cd8-cells" "new-goodwin-osc" "new_saird" "new_se
 for each ("$array[@]") do
 mkdir -p ../magma_scripts/$each
 mkdir -p ../maple_scripts/$each
+mkdir -p ../julia_scripts/$each
 maple -c "PATH:=$each; char := 0:" $each.mpl
 done 
 

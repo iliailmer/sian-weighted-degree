@@ -29,6 +29,11 @@ printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], 
 printf("G := ideal< P | %s>;\n", convert(original_et_hat, string)[2..-2]);
 printf("time GroebnerBasis(G);\nquit;");
 
+writeto(cat("../julia_scripts/", PATH, "/original_lipolisys.jl"));
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("et_hat = [%s]\n", convert(original_et_hat, string)[2..-2]);
+printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
+
 writeto(cat("../maple_scripts/", PATH, "/lipolisys.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
 printf("infolevel[Groebner]:=10;et_hat:=%s;\n", convert(original_et_hat, string));
@@ -37,15 +42,12 @@ printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279);\n"
 printf("quit;");
 writeto(terminal);
 
-# all_subs := {}:
-# names := [indices(substitutions, `nolist`)];
-# for each in names do 
-#   selection := select(sys_var->StringTools[IsPrefix](convert(each, string), sys_var), system_vars[2]);
-#   for other in selection do
-#       system_vars[1] := subs({other = other^substitutions[each]}, system_vars[1]):
-#       all_subs := all_subs union {other = other^substitutions[each]}:
-#   end do;
-# od:
+writeto(cat("../julia_scripts/", PATH, "/original_lipolisys_subs.jl"));
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("et_hat = [%s]\n", convert(system_vars[1], string)[2..-2]);
+printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
+printf("#%a", all_subs);
+
 writeto(cat("../magma_scripts/", PATH, "/lipolisys_subs_1.m"));
 printf("SetNthreads(64);\nQ := GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));

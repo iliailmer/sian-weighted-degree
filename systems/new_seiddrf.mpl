@@ -29,6 +29,7 @@ printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], 
 printf("G := ideal< P | %s>;\n", convert(original_et_hat, string)[2..-2]);
 printf("time GroebnerBasis(G);\nquit;");
 
+writeto(cat("../julia_scripts/", PATH, "/new_seiddrf.jl"));
 printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
 printf("et_hat = [%s]\n", convert(original_et_hat, string)[2..-2]);
 printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
@@ -59,6 +60,12 @@ printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 # printf("// %a\n", [entries(substitutions, 'pairs')]);
 printf("// %a\n", all_subs);
 printf("time GroebnerBasis(G);\nquit;");
+
+writeto(cat("../julia_scripts/", PATH, "/new_seiddrf_subs.jl"));
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("et_hat = [%s]\n", convert(system_vars[1], string)[2..-2]);
+printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
+
 
 writeto(cat("../maple_scripts/", PATH, "/seiddrf_subs_1.mpl"));
 printf("infolevel[Groebner]:=10;\n");

@@ -36,6 +36,11 @@ all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDe
 # printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
 # printf("time GroebnerBasis(G);\nquit;");
 
+writeto(cat("../julia_scripts/", PATH, "/original_hiv2.jl"));
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("et_hat = [%s]\n", convert(original_et_hat, string)[2..-2]);
+printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
+
 writeto(cat("../maple_scripts/", PATH, "/hiv2.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
 printf("infolevel[Groebner]:=10;et_hat:=%s;\n", convert(original_et_hat, string));
@@ -44,15 +49,12 @@ printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279);\n"
 printf("quit;");
 writeto(terminal);
 
-# all_subs := {}:
-# names := [indices(substitutions, `nolist`)];
-# for each in names do 
-#   selection := select(sys_var->StringTools[IsPrefix](convert(each, string), sys_var), system_vars[2]);
-#   for other in selection do
-#       system_vars[1] := subs({other = other^substitutions[each]}, system_vars[1]):
-#       all_subs := all_subs union {other = other^substitutions[each]}:
-#   end do;
-# od:
+writeto(cat("../julia_scripts/", PATH, "/original_hiv2_subs.jl"));
+printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),\n[%d])\n", convert(system_vars[2], string)[2..-2]);
+printf("et_hat = [%s]\n", convert(system_vars[1], string)[2..-2]);
+printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
+printf("#%a", all_subs);
+
 # et_hat := system_vars[1]:
 # writeto("hiv2_degrees_per_var_subs.json"):
 # printf(`{\n`):
