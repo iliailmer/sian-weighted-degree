@@ -35,7 +35,15 @@ printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),[%s])\n", c
 printf("et_hat = [%s]\n", convert(original_et_hat, string)[2..-2]);
 printf("I = ideal(R, et_hat)\ngb = f4(I, info_level=10)");
 
-writeto(cat("../maple_scripts/", PATH, "/seir.mpl"));
+writeto(cat("../maple_scripts/", PATH, "/seir_pos_char.mpl"));
+printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
+printf("infolevel[Groebner]:=10;et_hat:=%s;\n", convert(original_et_hat, string));
+printf("vars:=%s;\n", convert(system_vars[2], string));
+printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279);\n", convert(char, string));
+printf("quit;");
+writeto(terminal);
+
+writeto(cat("../maple_scripts/", PATH, "/seir_zero_char.mpl"));
 printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
 printf("infolevel[Groebner]:=10;et_hat:=%s;\n", convert(original_et_hat, string));
 printf("vars:=%s;\n", convert(system_vars[2], string));
