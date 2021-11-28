@@ -89,3 +89,25 @@ SubsByDepth := proc(sigma, {trdegsub:=true})
   od:
   return all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat;
 end proc:
+
+WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
+  writeto(cat("../maple_scripts/", PATH, "/", script_name, "_pos_char.mpl"));
+  printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
+  printf("infolevel[Groebner]:=10;et_hat:=%s;\n", convert(et_hat, string));
+  printf("vars:=%s;\n", convert(vars, string));
+  printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279);\n", convert(char, string));
+  printf("# %a", all_subs);
+  printf("quit;");
+  writeto(terminal);
+
+  writeto(cat("../maple_scripts/", PATH, "/", script_name, "_zero_char.mpl"));
+  printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
+  printf("infolevel[Groebner]:=10;et_hat:=%s;\n", convert(et_hat, string));
+  printf("vars:=%s;\n", convert(vars, string));
+  printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0);\n", convert(char, string));
+  printf("# %a", all_subs);
+  printf("quit;");
+  writeto(terminal);
+
+  WriteScripts(original_et_hat, system_vars[2], "<NAME>_original", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "<NAME>_subs", all_subs, PATH);
