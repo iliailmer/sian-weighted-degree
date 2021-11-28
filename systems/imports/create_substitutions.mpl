@@ -108,6 +108,20 @@ WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
   printf("# %a", all_subs);
   printf("quit;");
   writeto(terminal);
-
-  WriteScripts(original_et_hat, system_vars[2], "<NAME>_original", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "<NAME>_subs", all_subs, PATH);
+  
+  writeto(cat("../magma_scripts/", PATH, "/", script_name, "_zero_char.m"));
+  printf("SetNthreads(64);\nQ := RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+  printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(vars, string)[2..-2], nops(vars));
+  printf("G := ideal< P | %s>;\n", convert(et_hat, string)[2..-2]);
+  printf("// %a\n", all_subs);
+  printf("time GroebnerBasis(G);\nquit;");
+  writeto(terminal);
+  
+  writeto(cat("../magma_scripts/", PATH, "/", script_name, "_pos_char.m"));
+  printf("SetNthreads(64);\nQ := GF(11863279);\nSetVerbose(\"Faugere\", 2);\n");
+  printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(vars, string)[2..-2], nops(vars));
+  printf("G := ideal< P | %s>;\n", convert(et_hat, string)[2..-2]);
+  printf("// %a\n", all_subs);
+  printf("time GroebnerBasis(G);\nquit;");
+  writeto(terminal);
+end proc:
