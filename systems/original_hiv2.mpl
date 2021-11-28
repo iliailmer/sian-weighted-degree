@@ -16,7 +16,7 @@ sigma := [
 
 
 # substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2, trdegsub=false):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDepth(sigma, trdegsub=true);
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDepth(sigma, trdegsub=false);
 
 # print(substitutions):
 # substitutions := table([x = 2, h = 2, z_aux = 2, b = 2, v = 2]);
@@ -30,11 +30,18 @@ all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDe
 # printf(`}\n`):
 # writeto(terminal);
 
-# writeto(cat("../magma_scripts/", PATH, "/hiv2.m"));
-# printf("SetNthreads(64);\nQ := GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
-# printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
-# printf("G := ideal< P | %s>;\n", convert(system_vars[1], string)[2..-2]);
-# printf("time GroebnerBasis(G);\nquit;");
+
+writeto(cat("../magma_scripts/", PATH, "/saird_pos_char.m"));
+printf("SetNthreads(64);\nQ := GF(11863279); \nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(original_et_hat, string)[2..-2]);
+printf("time GroebnerBasis(G);\nquit;");
+
+writeto(cat("../magma_scripts/", PATH, "/saird_zero_char.m"));
+printf("SetNthreads(64);\nQ := RationalField(); \nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(original_et_hat, string)[2..-2]);
+printf("time GroebnerBasis(G);\nquit;");
 
 writeto(cat("../julia_scripts/", PATH, "/original_hiv2.jl"));
 printf("using Oscar;\nR, vars = PolynomialRing(FiniteField(11863279),[%s])\n", convert(system_vars[2], string)[2..-2]);

@@ -18,8 +18,15 @@ char := 0:
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
-writeto(cat("../magma_scripts/", PATH, "/seirc.m"));
-printf("SetNthreads(64);\nQ := GF(11863279); //RationalField();\nSetVerbose(\"Faugere\", 2);\n");
+
+writeto(cat("../magma_scripts/", PATH, "/seirc_pos_char.m"));
+printf("SetNthreads(64);\nQ := GF(11863279); \nSetVerbose(\"Faugere\", 2);\n");
+printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
+printf("G := ideal< P | %s>;\n", convert(original_et_hat, string)[2..-2]);
+printf("time GroebnerBasis(G);\nquit;");
+
+writeto(cat("../magma_scripts/", PATH, "/seirc_zero_char.m"));
+printf("SetNthreads(64);\nQ := RationalField(); \nSetVerbose(\"Faugere\", 2);\n");
 printf("P<%s>:= PolynomialRing(Q, %d, \"grevlex\");\n", convert(system_vars[2], string)[2..-2], nops(system_vars[2]));
 printf("G := ideal< P | %s>;\n", convert(original_et_hat, string)[2..-2]);
 printf("time GroebnerBasis(G);\nquit;");

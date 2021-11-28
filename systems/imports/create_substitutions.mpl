@@ -67,16 +67,16 @@ SubsByDepth := proc(sigma, {trdegsub:=true})
     for term in indets_ do
       if is_function(term) then
         if assigned(vts[FunctionToVariable(term)]) then
-          substitutions[FunctionToVariable(term)] := vts[FunctionToVariable(term)]+1:
+          substitutions[FunctionToVariable(term)] := max(3, vts[FunctionToVariable(term)]+1):
         end if;
       else
         if not term in non_id and vts[term]=max_possible and assigned(vts[term]) then
-          substitutions[term] := vts[term]+1:
+          substitutions[term] := max(3, vts[term]+1):
         end if;
       end if:
     end do;
   end do:
-  substitutions[z_aux]:=max_possible:
+  substitutions[z_aux]:=max(3, max_possible):
   original_et_hat :=system_vars[1] :
   all_subs := {}:
   names := [indices(substitutions, `nolist`)];
