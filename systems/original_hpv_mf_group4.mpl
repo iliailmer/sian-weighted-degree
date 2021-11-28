@@ -31,5 +31,5 @@ printf(`}\n`):
 writeto(terminal);
 
 
-WriteScripts(original_et_hat, system_vars[2], "<NAME>_original", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "<NAME>_subs", all_subs, PATH);
+WriteScripts(original_et_hat, system_vars[2], "original_hpv_mf_group4_original", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "original_hpv_mf_group4_subs", all_subs, PATH);

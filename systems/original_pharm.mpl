@@ -17,5 +17,5 @@ sigma := [
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
 
-WriteScripts(original_et_hat, system_vars[2], "<NAME>_original", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "<NAME>_subs", all_subs, PATH);
+WriteScripts(original_et_hat, system_vars[2], "original_pharm_original", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "original_pharm_subs", all_subs, PATH);
