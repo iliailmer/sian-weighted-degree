@@ -12,7 +12,8 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
         subst_zero_order, x_eqs, y_eqs, param, other_params, to_add, at_node,
         prime, max_rank, R, tr, e, p_local, xy_ders, polys_to_process, new_to_process, solutions_table,
         Et_x_vars, var, G, P, output, alg_indep, rrefJacX, pivots, row_idx, row, pivot_idx, non_id, faux_equations,
-        y_faux, alg_indep_derivs, alg_indep_params, faux_odes, faux_outputs:
+        y_faux, alg_indep_derivs, alg_indep_params, faux_odes, faux_outputs,
+        x_theta_vars_, derivs, sigma_new, idx, each:
   #----------------------------------------------
   # 0. Extract inputs, outputs, states, and parameters from the system
   #----------------------------------------------
@@ -191,20 +192,6 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
             polys_to_process := new_to_process:
           end do:
         else
-          # if sub_transc then 
-          #   pivots := {}:
-          #   for row_idx from 1 to nops(eqs_i) do #nops(theta) do
-          #       row := rrefJacX[row_idx]:
-          #       pivot_idx := 1:
-          #       while row[pivot_idx]=0 and add(row)<>0 do
-          #         pivot_idx := pivot_idx + 1:
-          #       end do:
-          #       if pivot_idx < numelems(row) then
-          #         pivots := {op(pivots), x_theta_vars[pivot_idx]}:
-          #       end if:
-          #   end do:
-          #   alg_indep := {op(x_theta_vars)} minus pivots:
-          # end if:
           prolongation_possible[i] := 0;
         end if:
       end if: 
@@ -265,32 +252,33 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
         while row[pivot_idx]=0 and add(row)<>0 do
           pivot_idx := pivot_idx + 1:
         end do:
-        if pivot_idx < numelems(row) then
+        if pivot_idx <= numelems(row) then
           pivots := {op(pivots), x_theta_vars[pivot_idx]}:
         end if:
     end do:
     alg_indep := {op(x_theta_vars)} minus pivots:
     print(alg_indep);
   end if:
-
-
-
+  derivs:={op(x_theta_vars)} minus {op(mu)};
+  sigma_new := system_ODEs:
+  non_id := [op({op(theta)} minus {op(theta_l)})]:
   if infolevel > 0 then
     printf("%s %a\n", `Locally identifiable paramters: `, map(x -> ParamToOuter(x, all_vars), theta_l));
     printf("%s %a\n", `Nonidentifiable parameter: `, map(x -> ParamToOuter(x, all_vars), [op({op(theta)} minus {op(theta_l)})]));
   end if:
-  if sub_transc then
-    non_id := [op({op(theta)} minus {op(theta_l)})]:
+  if sub_transc and numelems(alg_indep)<>0 then
+ 
     # alg_indep := select(x-> x in non_id or x in {op(x_theta_vars)} minus {op(theta)}, alg_indep):
     printf("%s %a\n", `Algebraically independent parameters`, map(x-> ParamToOuter(x, all_vars), alg_indep)):
 
     if sub_transc then 
       PrintHeader("Substituting transcendence basis."):
     end if:
-    alg_indep_params := map(each->GetStateName(each, x_vars, mu), {op(alg_indep)} intersect {op(non_id)}):
-    alg_indep_derivs := {op(alg_indep)} minus {op(non_id)}: 
+
+    alg_indep_derivs := {op(alg_indep)} intersect derivs:
+    alg_indep_params := ({op(alg_indep)} intersect {op(non_id)}) minus {op(alg_indep_derivs)}:
     faux_outputs := []: # seq(parse(cat("y_faux", idx, "(t)"))=alg_indep_params[idx](t), idx in 1..numelems(alg_indep_params))
-    faux_odes := []: 
+    faux_odes := []:
     idx := 1:
     sigma_new := system_ODEs:
     for each in alg_indep_params do
@@ -316,22 +304,27 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       printf("\t%s %a\n", `Adding output functions:`, faux_outputs):
       printf("\t%s %a\n", `New system:`, sigma_new):
     end if:
-
+    # non_id := [op({op(theta)} minus {op(theta_l)})]: 
     X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
-    
     if numelems(alg_indep_derivs)>0 then
+      if infolevel>1 then
+        printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
+      end if:
       faux_equations := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_0"))=alg_indep_derivs[idx], idx in 1..numelems(alg_indep_derivs))]:
       y_faux := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_")), idx=1..numelems(alg_indep_derivs))]:
       Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:
       Y_eq := [op(Y_eq), op(faux_equations)]:
       if infolevel>1 then
-        printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
         printf("\t%s %a\n", `New system:`, Et):
         printf("\t%s %a\n", `New system:`, Y_eq):
       end if:
     end if;
-    
-
+  else
+    if numelems(alg_indep)=0 then
+      printf("%s\n", `No algebraically independent parameters found.`);
+    else
+      printf("%s\n", `Transcendence basis substitution turned off.`);
+    end if:
   end if:
   #----------------------------------------------
   # 3. Randomize.
@@ -372,12 +365,13 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     z_aux, w_aux,
     op(sort(mu))
   ]:
+  
   if infolevel > 1 then
     printf("Variable ordering to be used for Groebner basis computation %a\n", vars);
   end if:
  
   return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
-    op(sort(mu))], x_vars], non_id, sigma_new:
+    op(sort(mu))], x_vars], non_id, sigma_new, alg_indep:
 end proc:
 
 #===============================================================================
@@ -784,3 +778,15 @@ PreprocessODE := proc(system_ODEs, params_to_assess, {p := 0.99, infolevel := 1,
   end do:
  return X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0:
  end proc;
+ 
+get_function_name := f -> parse(convert(FunctionToVariable(f), string)[..-2]): 
+GetStateName := proc(state, x_vars, mu) # i.e. Xij_q => Xij
+  local state_;
+  if state in mu then
+    return state;
+  end if;
+  state_ := parse(cat(StringTools[Join](StringTools[Split](convert(state, string), "_")[..-2], "_"), "_")):
+  if state_ in x_vars then
+    return state_; #parse(convert(state_, string)[..-2]);
+  end if:
+end proc:
