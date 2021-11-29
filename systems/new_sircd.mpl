@@ -11,12 +11,11 @@ sigma := [
   diff(R(t), t) = r * i(t),
   diff(Cc(t), t) = p*S(t) - q*Cc(t),
   diff(D(t), t) = mu * i(t),
-  y1(t) = i(t)
+  y1(t) = i(t) + R(t) + D(t)
 ]:
 char := 0:
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
-
 
 WriteScripts(original_et_hat, system_vars[2], "new_sircd_original", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "new_sircd_subs", all_subs, PATH);

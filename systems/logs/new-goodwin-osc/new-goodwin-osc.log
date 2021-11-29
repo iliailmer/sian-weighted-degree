@@ -1,0 +1,75 @@
+    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+Warning, extra characters at end of parsed string
+> kernelopts(printbytes=false, assertlevel=1):
+> interface(echo=0, prettyprint=0):
+Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:22|
+Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
+|imports/create_substitutions.mpl:81|
+Warning, (in SubsByDepth) `all_subs` is implicitly declared local
+|imports/create_substitutions.mpl:82|
+Warning, (in SubsByDepth) `names` is implicitly declared local
+|imports/create_substitutions.mpl:83|
+Warning, (in SubsByDepth) `selection` is implicitly declared local
+|imports/create_substitutions.mpl:85|
+Warning, (in SubsByDepth) `other` is implicitly declared local
+|imports/create_substitutions.mpl:86|
+sigma := [diff(x2(t),t) = alpha*x1(t)-beta*x2(t), diff(x4(t),t) = (gama*sgm*x2(
+t)*x4(t)-delta*sgm*x3(t)*x4(t))/x3(t), diff(x1(t),t) = (-b*c*x1(t)-b*x1(t)*x4(t
+)+1)/(c+x4(t)), diff(x3(t),t) = gama*x2(t)-delta*x3(t), y(t) = x1(t)]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x2(t), x4(t), x1(t), x3(t)]
+Output variables:         [y(t)]
+Input variables:          []
+Parameters in equations:  [alpha, b, beta, c, delta, gama, sgm]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+{alpha, gama}
+Locally identifiable paramters:  [b, beta, c, delta, sgm, x4(0), x1(0)]
+Nonidentifiable parameter:  [alpha, gama, x2(0), x3(0)]
+Algebraically independent parameters {alpha, gama}
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters among nonidentifiable: {alpha, gama}
+Algebraically independent parameters among derivatives: {}
+
+=== Input info ===
+State variables:          [alpha(t), gama(t), x2(t), x4(t), x1(t), x3(t)]
+Output variables:         [y(t), y_faux1(t), y_faux2(t)]
+Input variables:          []
+Parameters in equations:  [b, beta, c, delta, sgm]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[alpha_ = 0, x4_ = 1, sgm = 2, beta = 3, b = 1, delta = 2, c = 1, x2_ = 2, x1_ = 0, x3_ = 2, gama_ = 0]
+NonID parameters:	[alpha, gama, x2_0, x3_0]
+Substitutions:	[alpha_ = 1, x4_ = 2, sgm = 3, beta = 4, b = 2, delta = 3, z_aux = 3, c = 2, x2_ = 3, x1_ = 1, x3_ = 3, gama_ = 1]
+memory used=1065.1MB, alloc=148.3MB, time=6.21

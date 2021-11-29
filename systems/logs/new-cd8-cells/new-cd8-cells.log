@@ -1,0 +1,77 @@
+    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+Warning, extra characters at end of parsed string
+> kernelopts(printbytes=false, assertlevel=1):
+> interface(echo=0, prettyprint=0):
+Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:22|
+Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
+|imports/create_substitutions.mpl:81|
+Warning, (in SubsByDepth) `all_subs` is implicitly declared local
+|imports/create_substitutions.mpl:82|
+Warning, (in SubsByDepth) `names` is implicitly declared local
+|imports/create_substitutions.mpl:83|
+Warning, (in SubsByDepth) `selection` is implicitly declared local
+|imports/create_substitutions.mpl:85|
+Warning, (in SubsByDepth) `other` is implicitly declared local
+|imports/create_substitutions.mpl:86|
+sigma := [diff(N(t),t) = -delta_NE*N(t)*P(t)-mu_N*N(t), diff(S(t),t) = -mu_LE*S
+(t)*E(t)+delta_EL*S(t)-S(t)^2*mu_LL-S(t)*delta_LM, diff(M(t),t) = S(t)*delta_LM
+-M(t)*mu_M, diff(P(t),t) = rho_P*P(t)^2-S(t)*P(t)*mu_PL-E(t)*mu_PE*P(t)-P(t)*
+mu_P, diff(E(t),t) = -mu_EE*E(t)^2+delta_NE*N(t)*P(t)-delta_EL*E(t)+E(t)*P(t)*
+rho_E, y1(t) = N(t), y3(t) = M(t), y2(t) = S(t)+E(t)]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [N(t), S(t), M(t), P(t), E(t)]
+Output variables:         [y1(t), y3(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, rho_E, rho_P, delta_EL, delta_LM, delta_NE]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+{P_0}
+Locally identifiable paramters:  [mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, delta_EL, delta_LM, N(0), S(0), M(0), E(0)]
+Nonidentifiable parameter:  [P(0), rho_E, rho_P, delta_NE]
+Algebraically independent parameters {P(0)}
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters among nonidentifiable: {}
+Algebraically independent parameters among derivatives: {P(0)}
+
+=== Input info ===
+State variables:          [N(t), S(t), M(t), P(t), E(t)]
+Output variables:         [y1(t), y3(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, rho_E, rho_P, delta_EL, delta_LM, delta_NE]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[mu_PL = 2, P_ = 1, delta_LM = 1, mu_PE = 2, mu_N = 1, delta_EL = 1, mu_M = 1, E_ = 0, rho_P = 2, rho_E = 1, mu_LL = 1, M_ = 0, mu_P = 2, delta_NE = 1, S_ = 0, mu_EE = 1, N_ = 0, mu_LE = 1]
+NonID parameters:	[P_0, rho_E, rho_P, delta_NE]
+Substitutions:	[z_aux = 2, mu_PL = 3, P_ = 2, delta_LM = 2, mu_PE = 3, mu_N = 2, delta_EL = 2, mu_M = 2, E_ = 1, mu_LL = 2, M_ = 1, mu_P = 3, S_ = 1, mu_EE = 2, N_ = 1, mu_LE = 2]
+memory used=629.9MB, alloc=176.1MB, time=3.92

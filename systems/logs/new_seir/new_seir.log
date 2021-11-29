@@ -1,0 +1,73 @@
+    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+Warning, extra characters at end of parsed string
+# Ex 34 from  https://arxiv.org/abs/2006.14295
+> kernelopts(printbytes=false, assertlevel=1):
+> interface(echo=0, prettyprint=0):
+Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:22|
+Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
+|imports/create_substitutions.mpl:81|
+Warning, (in SubsByDepth) `all_subs` is implicitly declared local
+|imports/create_substitutions.mpl:82|
+Warning, (in SubsByDepth) `names` is implicitly declared local
+|imports/create_substitutions.mpl:83|
+Warning, (in SubsByDepth) `selection` is implicitly declared local
+|imports/create_substitutions.mpl:85|
+Warning, (in SubsByDepth) `other` is implicitly declared local
+|imports/create_substitutions.mpl:86|
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), r(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [Lam, b, eps, g, mu, n, r0]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+{Lam, b}
+Locally identifiable paramters:  [eps, g, mu, e(0), i(0), r(0)]
+Nonidentifiable parameter:  [Lam, b, n, r0, s(0)]
+Algebraically independent parameters {Lam, b}
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters among nonidentifiable: {Lam, b}
+Algebraically independent parameters among derivatives: {}
+
+=== Input info ===
+State variables:          [Lam(t), b(t), s(t), e(t), i(t), r(t)]
+Output variables:         [y1(t), y_faux1(t), y_faux2(t)]
+Input variables:          []
+Parameters in equations:  [eps, g, mu, n, r0]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[r_ = 0, Lam_ = 0, n = 2, eps = 1, e_ = 1, mu = 1, b_ = 0, r0 = 3, s_ = 2, g = 3, i_ = 0]
+NonID parameters:	[Lam, b, n, r0, s_0]
+Substitutions:	[r_ = 1, Lam_ = 1, eps = 2, z_aux = 3, e_ = 2, mu = 2, b_ = 1, s_ = 3, g = 4, i_ = 1]
+memory used=981.7MB, alloc=116.3MB, time=5.12

@@ -12,8 +12,7 @@ sigma := [
   diff(Q(t), t) = theta1 * In(t) - (g + alpha2) * Q(t),
   diff(R(t), t) = alpha1 * In(t) + alpha2 * Q(t) - g * R(t),
   diff(N(t), t) = 0,
-  y1(t) = Q(t),
-  y2(t) = LL(t)
+  y1(t) = Q(t) + LL(t)
 ]: 
 char := 0:
 

@@ -1,0 +1,88 @@
+    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+Warning, extra characters at end of parsed string
+# ~90 => ~60
+> kernelopts(printbytes=false, assertlevel=1):
+> interface(echo=0, prettyprint=0):
+Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:22|
+Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
+|imports/create_substitutions.mpl:81|
+Warning, (in SubsByDepth) `all_subs` is implicitly declared local
+|imports/create_substitutions.mpl:82|
+Warning, (in SubsByDepth) `names` is implicitly declared local
+|imports/create_substitutions.mpl:83|
+Warning, (in SubsByDepth) `selection` is implicitly declared local
+|imports/create_substitutions.mpl:85|
+Warning, (in SubsByDepth) `other` is implicitly declared local
+|imports/create_substitutions.mpl:86|
+sigma := [diff(EGF_EGFR(t),t) = reaction_1_k1*EGF_EGFR(t)-reaction_9_k1*
+EGF_EGFR(t)-reaction_1_k2*EGF_EGFR(t), diff(EGFR(t),t) = -reaction_1_k1*
+EGF_EGFR(t)+reaction_1_k2*EGF_EGFR(t)-EGFR(t)*EGFR_turnover+EGFR_turnover*
+pro_EGFR(t), diff(pEGFR(t),t) = -reaction_4_k1*pEGFR(t)+reaction_9_k1*EGF_EGFR(
+t)-pEGFR(t)*Akt(t)*reaction_2_k1+reaction_3_k1*pEGFR_Akt(t)+pEGFR_Akt(t)*
+reaction_2_k2, diff(pAkt_S6(t),t) = pAkt(t)*reaction_5_k1*S6(t)-reaction_6_k1*
+pAkt_S6(t)-pAkt_S6(t)*reaction_5_k2, diff(pEGFR_Akt(t),t) = pEGFR(t)*Akt(t)*
+reaction_2_k1-reaction_3_k1*pEGFR_Akt(t)-pEGFR_Akt(t)*reaction_2_k2, diff(pAkt(
+t),t) = -pAkt(t)*reaction_7_k1-pAkt(t)*reaction_5_k1*S6(t)+reaction_6_k1*
+pAkt_S6(t)+reaction_3_k1*pEGFR_Akt(t)+pAkt_S6(t)*reaction_5_k2, diff(S6(t),t) =
+pS6(t)*reaction_8_k1-pAkt(t)*reaction_5_k1*S6(t)+pAkt_S6(t)*reaction_5_k2, diff
+(pS6(t),t) = -pS6(t)*reaction_8_k1+reaction_6_k1*pAkt_S6(t), diff(Akt(t),t) = 
+pAkt(t)*reaction_7_k1-pEGFR(t)*Akt(t)*reaction_2_k1+pEGFR_Akt(t)*reaction_2_k2,
+y1(t) = pEGFR(t)*a1+a1*pEGFR_Akt(t), y2(t) = a2*pAkt(t)+a2*pAkt_S6(t), y3(t) =
+pS6(t)*a3]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [EGF_EGFR(t), EGFR(t), pEGFR(t), pAkt_S6(t), pEGFR_Akt(t), pAkt(t), S6(t), pS6(t), Akt(t)]
+Output variables:         [y1(t), y2(t), y3(t)]
+Input variables:          [pro_EGFR(t)]
+Parameters in equations:  [a1, a2, a3, EGFR_turnover, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1, reaction_9_k1]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+{Akt_0, EGFR_0, EGFR_turnover, EGF_EGFR_0, reaction_1_k1}
+Locally identifiable paramters:  [reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1]
+Nonidentifiable parameter:  [Akt(0), EGFR(0), S6(0), a1, a2, a3, pAkt(0), pEGFR(0), pS6(0), EGFR_turnover, EGF_EGFR(0), pAkt_S6(0), pEGFR_Akt(0), reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
+Algebraically independent parameters {EGFR_turnover, reaction_1_k1, Akt(0), EGFR(0), EGF_EGFR(0)}
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters among nonidentifiable: {EGFR_turnover, reaction_1_k1}
+Algebraically independent parameters among derivatives: {Akt(0), EGFR(0), EGF_EGFR(0)}
+
+=== Input info ===
+State variables:          [EGFR_turnover(t), reaction_1_k1(t), EGF_EGFR(t), EGFR(t), pEGFR(t), pAkt_S6(t), pEGFR_Akt(t), pAkt(t), S6(t), pS6(t), Akt(t)]
+Output variables:         [y1(t), y2(t), y3(t), y_faux1(t), y_faux2(t)]
+Input variables:          [pro_EGFR(t)]
+Parameters in equations:  [a1, a2, a3, reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1, reaction_9_k1]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[reaction_6_k1 = 1, pEGFR_Akt_ = 0, Akt_ = 2, a3 = 0, reaction_2_k1 = 2, reaction_1_k1_ = 0, reaction_7_k1 = 1, S6_ = 2, a2 = 0, reaction_3_k1 = 1, pS6_ = 0, reaction_8_k1 = 1, a1 = 0, reaction_1_k2 = 2, reaction_4_k1 = 1, EGF_EGFR_ = 1, pAkt_ = 0, reaction_9_k1 = 1, reaction_5_k2 = 2, reaction_5_k1 = 2, pEGFR_ = 0, pAkt_S6_ = 0, EGFR_turnover_ = 0, reaction_2_k2 = 2]
+NonID parameters:	[Akt_0, EGFR_0, S6_0, a1, a2, a3, pAkt_0, pEGFR_0, pS6_0, EGFR_turnover, EGF_EGFR_0, pAkt_S6_0, pEGFR_Akt_0, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
+Substitutions:	[z_aux = 2, reaction_6_k1 = 2, pEGFR_Akt_ = 1, Akt_ = 3, reaction_1_k1_ = 1, reaction_7_k1 = 2, S6_ = 3, reaction_3_k1 = 2, pS6_ = 1, reaction_8_k1 = 2, reaction_4_k1 = 2, EGF_EGFR_ = 2, pAkt_ = 1, reaction_5_k2 = 3, pEGFR_ = 1, pAkt_S6_ = 1, EGFR_turnover_ = 1, reaction_2_k2 = 3]
+memory used=2045.2MB, alloc=183.8MB, time=12.74

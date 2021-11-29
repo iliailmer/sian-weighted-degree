@@ -1,0 +1,72 @@
+    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+Warning, extra characters at end of parsed string
+> kernelopts(printbytes=false, assertlevel=1):
+> interface(echo=0, prettyprint=0):
+Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:22|
+Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
+|imports/create_substitutions.mpl:81|
+Warning, (in SubsByDepth) `all_subs` is implicitly declared local
+|imports/create_substitutions.mpl:82|
+Warning, (in SubsByDepth) `names` is implicitly declared local
+|imports/create_substitutions.mpl:83|
+Warning, (in SubsByDepth) `selection` is implicitly declared local
+|imports/create_substitutions.mpl:85|
+Warning, (in SubsByDepth) `other` is implicitly declared local
+|imports/create_substitutions.mpl:86|
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [G(t), X(t), R(t), Ib(t), Gb(t)]
+Output variables:         [y1(t), y2(t), y3(t)]
+Input variables:          [u(t)]
+Parameters in equations:  [k, p1, p2, p3, v]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+{R_0}
+Locally identifiable paramters:  [p1, p2, p3, G(0), X(0), Ib(0), Gb(0)]
+Nonidentifiable parameter:  [R(0), k, v]
+Algebraically independent parameters {R(0)}
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters among nonidentifiable: {}
+Algebraically independent parameters among derivatives: {R(0)}
+
+=== Input info ===
+State variables:          [G(t), X(t), R(t), Ib(t), Gb(t)]
+Output variables:         [y1(t), y2(t), y3(t)]
+Input variables:          [u(t)]
+Parameters in equations:  [k, p1, p2, p3, v]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[R_ = 1, X_ = 1, G_ = 0, Ib_ = 0, v = 1, Gb_ = 0, p1 = 1, k = 2, p2 = 2, (NULL) = 2, p3 = 2]
+NonID parameters:	[R_0, k, v]
+Substitutions:	[R_ = 2, X_ = 2, G_ = 1, Ib_ = 1, Gb_ = 1, z_aux = 2, p1 = 2, p2 = 3, p3 = 3]
+memory used=178.7MB, alloc=89.9MB, time=1.02
