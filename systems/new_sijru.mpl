@@ -22,9 +22,10 @@ Groebner[Basis](original_et_hat, tdeg(op(system_vars[2])));
 
 
 WriteScripts(original_et_hat, system_vars[2], "new_sijru_original_no_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "new_sijru_subs_no_trb", all_subs, PATH);
+WriteScripts(system_vars[1], system_vars[2], "new_sijru_weights_no_trb", all_subs, PATH);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
 WriteScripts(original_et_hat, system_vars[2], "new_sijru_original_with_trb", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "new_sijru_weights_with_trb", all_subs, PATH);
+quit;

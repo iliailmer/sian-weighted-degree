@@ -32,7 +32,7 @@ all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDe
 
 
 WriteScripts(original_et_hat, system_vars[2], "original_hiv2_original_no_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "original_hiv2_subs_no_trb", all_subs, PATH);
+WriteScripts(system_vars[1], system_vars[2], "original_hiv2_weights_no_trb", all_subs, PATH);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 

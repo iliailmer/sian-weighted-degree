@@ -67,7 +67,41 @@ Parameters in equations:  [alpha, eta, gamma_a, gamma_i, n, sgm]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[i_ = 0, gamma_i = 1, a_ = 1, e_ = 1, sgm = 1, eta = 1, Phi_ = 0, n = 1, dlt_ = 0, gamma_a = 2, (NULL) = 1, s_ = 0, alpha = 1, gamma_h_ = 0]
+States for substitution:	[dlt_ = 0, sgm = 1, eta = 1, gamma_h_ = 0, gamma_i = 1, (NULL) = 1, n = 1, alpha = 1, s_ = 0, e_ = 1, a_ = 1, i_ = 0, gamma_a = 2, Phi_ = 0]
 NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
-Substitutions:	[i_ = 1, z_aux = 2, a_ = 2, e_ = 2, sgm = 2, eta = 2, Phi_ = 1, n = 2, dlt_ = 1, gamma_a = 3, s_ = 1, alpha = 2, gamma_h_ = 1]
-memory used=2682.6MB, alloc=120.3MB, time=12.99
+Substitutions:	[dlt_ = 1, gamma_h_ = 1, s_ = 1, e_ = 2, a_ = 2, z_aux = 2, i_ = 1, gamma_a = 3, Phi_ = 1]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), a(t), h(t), r(t), d0(t)]
+Output variables:         [y1(t)]
+Input variables:          [b(t)]
+Parameters in equations:  [Phi, alpha, dlt, eta, gamma_a, gamma_h, gamma_i, n, sgm]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [alpha, eta, gamma_a, n, sgm, s(0), e(0), i(0), a(0)]
+Nonidentifiable parameter:  [Phi, d0(0), dlt, gamma_h, gamma_i, h(0), r(0)]
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[sgm = 1, eta = 1, gamma_i = 1, (NULL) = 1, n = 1, alpha = 1, Phi = 1, s_ = 0, e_ = 1, a_ = 1, i_ = 0, gamma_a = 2]
+NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
+Substitutions:	[s_ = 1, e_ = 2, a_ = 2, z_aux = 2, i_ = 1, gamma_a = 3]
+memory used=3608.4MB, alloc=120.3MB, time=17.16

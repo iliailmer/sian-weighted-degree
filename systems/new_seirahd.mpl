@@ -19,7 +19,7 @@ y1(t) = s(t) + i(t) # this output also runs faster without subs; also runs faste
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
 WriteScripts(original_et_hat, system_vars[2], "new_seirahd_original_no_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "new_seirahd_subs_no_trb", all_subs, PATH);
+WriteScripts(system_vars[1], system_vars[2], "new_seirahd_weights_no_trb", all_subs, PATH);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 

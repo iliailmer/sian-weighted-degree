@@ -35,7 +35,7 @@ gb := Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])));
 # char := 0:
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 # WriteScripts(original_et_hat, system_vars[2], "<NAME>_original_no_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "<NAME>_subs_no_trb", all_subs, PATH);
+WriteScripts(system_vars[1], system_vars[2], "<NAME>_weights_no_trb", all_subs, PATH);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 

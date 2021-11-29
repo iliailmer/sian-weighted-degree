@@ -66,7 +66,41 @@ Parameters in equations:  [p1, p2, p3, p4, p5, p6]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[p6 = 0, (NULL) = 2, p2 = 0, x5_ = 0, x3_ = 1, p3 = 0, x2_ = 0, x1_ = 1, p4 = 1, p1 = 1, p5 = 1]
+States for substitution:	[p6 = 0, (NULL) = 2, p3 = 0, x5_ = 0, p2 = 0, x3_ = 1, p4 = 1, x2_ = 0, x1_ = 1, p1 = 1, p5 = 1]
 NonID parameters:	[x4_0]
-Substitutions:	[p2 = 1, x5_ = 1, x3_ = 2, p3 = 1, x2_ = 1, x1_ = 2, p4 = 2, z_aux = 2, p1 = 2, p5 = 2]
-memory used=306.9MB, alloc=121.9MB, time=2.68
+Substitutions:	[x5_ = 1, x3_ = 2, x2_ = 1, x1_ = 2, z_aux = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t), x4(t), x5(t)]
+Output variables:         [y(t)]
+Input variables:          [u(t)]
+Parameters in equations:  [p1, p2, p3, p4, p5, p6]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [p1, p2, p3, p4, p5, p6, x1(0), x2(0), x3(0), x5(0)]
+Nonidentifiable parameter:  [x4(0)]
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[p6 = 0, (NULL) = 2, p3 = 0, x5_ = 0, p2 = 0, x3_ = 1, p4 = 1, x2_ = 0, x1_ = 1, p1 = 1, p5 = 1]
+NonID parameters:	[x4_0]
+Substitutions:	[x5_ = 1, x3_ = 2, x2_ = 1, x1_ = 2, z_aux = 2]
+memory used=417.0MB, alloc=122.0MB, time=2.14

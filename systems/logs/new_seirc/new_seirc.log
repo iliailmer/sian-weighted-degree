@@ -67,7 +67,41 @@ Parameters in equations:  [g, k, n]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[e_ = 1, c_ = 0, g = 1, s_ = 0, i_ = 1, b_ = 0, k = 1, r_ = 0, n = 1]
+States for substitution:	[k = 1, n = 1, r_ = 0, b_ = 0, c_ = 0, i_ = 1, s_ = 0, e_ = 1, g = 1]
 NonID parameters:	[b, c_0, n, r_0]
-Substitutions:	[z_aux = 1, e_ = 2, g = 2, s_ = 1, i_ = 2, b_ = 1, k = 2]
-memory used=478.9MB, alloc=84.3MB, time=2.52
+Substitutions:	[k = 2, b_ = 1, i_ = 2, s_ = 1, z_aux = 1, e_ = 2, g = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), r(t), c(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [b, g, k, n]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [g, k, s(0), e(0), i(0)]
+Nonidentifiable parameter:  [b, c(0), n, r(0)]
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[k = 1, b = 1, n = 1, r_ = 0, c_ = 0, i_ = 1, s_ = 0, e_ = 1, g = 1]
+NonID parameters:	[b, c_0, n, r_0]
+Substitutions:	[k = 2, i_ = 2, s_ = 1, z_aux = 1, e_ = 2, g = 2]
+memory used=632.1MB, alloc=80.3MB, time=3.33

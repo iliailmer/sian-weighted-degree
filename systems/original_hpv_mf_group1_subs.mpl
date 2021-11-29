@@ -23,9 +23,9 @@ all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDept
 
 
 WriteScripts(original_et_hat, system_vars[2], "original_hpv_mf_group1_weights_original_no_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "original_hpv_mf_group1_weights_subs_no_trb", all_subs, PATH);
+WriteScripts(system_vars[1], system_vars[2], "original_hpv_mf_group1_weights_weights_no_trb", all_subs, PATH);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
 WriteScripts(original_et_hat, system_vars[2], "original_hpv_mf_group1_weights_original_with_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "original_hpv_mf_group1_weights_subs_with_trb", all_subs, PATH);
+WriteScripts(system_vars[1], system_vars[2], "original_hpv_mf_group1_weights_weights_with_trb", all_subs, PATH);

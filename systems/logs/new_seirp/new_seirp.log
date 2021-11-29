@@ -67,7 +67,41 @@ Parameters in equations:  [a_e, a_i, k, mu, rho]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[mu = 1, b_ = 0, e_ = 1, a_e = 1, a_i = 1, i_ = 0, k = 1, s_ = 0, rho = 2]
+States for substitution:	[k = 1, b_ = 0, rho = 2, e_ = 1, mu = 1, a_i = 1, a_e = 1, s_ = 0, i_ = 0]
 NonID parameters:	[b, mu, p_0, r_0]
-Substitutions:	[z_aux = 2, b_ = 1, e_ = 2, a_e = 2, a_i = 2, i_ = 1, k = 2, s_ = 1, rho = 3]
-memory used=218.9MB, alloc=120.4MB, time=1.43
+Substitutions:	[b_ = 1, rho = 3, z_aux = 2, e_ = 2, s_ = 1, i_ = 1]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), r(t), p(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [a_e, a_i, b, k, mu, rho]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [a_e, a_i, k, rho, s(0), e(0), i(0)]
+Nonidentifiable parameter:  [b, mu, p(0), r(0)]
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[b = 1, k = 1, rho = 2, e_ = 1, mu = 1, a_i = 1, a_e = 1, s_ = 0, i_ = 0]
+NonID parameters:	[b, mu, p_0, r_0]
+Substitutions:	[rho = 3, z_aux = 2, e_ = 2, s_ = 1, i_ = 1]
+memory used=293.0MB, alloc=120.4MB, time=1.81

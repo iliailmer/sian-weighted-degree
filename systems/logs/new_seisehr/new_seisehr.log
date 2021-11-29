@@ -53,7 +53,41 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b = 2, sq_ = 3, alpha = 1, i_ = 0, (NULL) = 1, g_i = 2, dlt_i = 1, e_ = 1, g_h = 1, theta0 = 2, s_ = 2, h_ = 1, dlt_q = 2, lmb = 3, c = 2, r_ = 0, q = 2, eq_ = 2]
+States for substitution:	[c = 2, q = 2, s_ = 2, g_h = 1, alpha = 1, theta0 = 2, sq_ = 3, b = 2, dlt_q = 2, lmb = 3, eq_ = 2, r_ = 0, h_ = 1, (NULL) = 1, g_i = 2, i_ = 0, e_ = 1, dlt_i = 1]
 NonID parameters:	[]
-Substitutions:	[b = 3, sq_ = 4, alpha = 2, i_ = 1, g_i = 3, dlt_i = 2, e_ = 2, g_h = 2, theta0 = 3, s_ = 3, h_ = 2, dlt_q = 3, lmb = 4, z_aux = 3, c = 3, q = 3, eq_ = 3]
-memory used=3478.4MB, alloc=171.8MB, time=24.71
+Substitutions:	[s_ = 3, sq_ = 4, lmb = 4, eq_ = 3, h_ = 2, i_ = 1, e_ = 2, z_aux = 3]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), sq(t), eq(t), h(t), r(t)]
+Output variables:         [y1(t)]
+Input variables:          [sgm(t)]
+Parameters in equations:  [alpha, b, c, dlt_i, dlt_q, g_h, g_i, lmb, q, theta0]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [alpha, b, c, dlt_i, dlt_q, g_h, g_i, lmb, q, theta0, s(0), e(0), i(0), sq(0), eq(0), h(0), r(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[c = 2, q = 2, s_ = 2, g_h = 1, alpha = 1, theta0 = 2, sq_ = 3, b = 2, dlt_q = 2, lmb = 3, eq_ = 2, r_ = 0, h_ = 1, (NULL) = 1, g_i = 2, i_ = 0, e_ = 1, dlt_i = 1]
+NonID parameters:	[]
+Substitutions:	[s_ = 3, sq_ = 4, lmb = 4, eq_ = 3, h_ = 2, i_ = 1, e_ = 2, z_aux = 3]
+memory used=4971.4MB, alloc=187.8MB, time=29.47

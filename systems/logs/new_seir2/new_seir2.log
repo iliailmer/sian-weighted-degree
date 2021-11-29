@@ -53,7 +53,41 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[mu = 1, d0 = 1, i_ = 0, r_ = 0, eps = 1, rho = 2, s_ = 2, e_ = 1, b = 2]
+States for substitution:	[d0 = 1, mu = 1, i_ = 0, r_ = 0, rho = 2, eps = 1, s_ = 2, e_ = 1, b = 2]
 NonID parameters:	[]
-Substitutions:	[mu = 2, d0 = 2, i_ = 1, r_ = 1, z_aux = 2, eps = 2, rho = 3, s_ = 3, e_ = 2, b = 3]
-memory used=116.4MB, alloc=78.0MB, time=0.74
+Substitutions:	[z_aux = 2, i_ = 1, r_ = 1, rho = 3, s_ = 3, e_ = 2, b = 3]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), r(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [b, d0, eps, mu, rho]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [b, d0, eps, mu, rho, s(0), e(0), i(0), r(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[d0 = 1, mu = 1, i_ = 0, r_ = 0, rho = 2, eps = 1, s_ = 2, e_ = 1, b = 2]
+NonID parameters:	[]
+Substitutions:	[z_aux = 2, i_ = 1, r_ = 1, rho = 3, s_ = 3, e_ = 2, b = 3]
+memory used=190.6MB, alloc=88.1MB, time=1.05
