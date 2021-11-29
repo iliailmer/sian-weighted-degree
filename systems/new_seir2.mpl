@@ -19,5 +19,10 @@ char := 0:
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
-WriteScripts(original_et_hat, system_vars[2], "new_seir2_original", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "new_seir2_subs", all_subs, PATH);
+WriteScripts(original_et_hat, system_vars[2], "new_seir2_original_no_trb", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "new_seir2_subs_no_trb", all_subs, PATH);
+
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
+
+WriteScripts(original_et_hat, system_vars[2], "new_seir2_original_with_trb", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "new_seir2_weights_with_trb", all_subs, PATH);
