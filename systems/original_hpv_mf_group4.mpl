@@ -20,15 +20,15 @@ sigma:= [diff(SM(t), t) = 1/2 * mu + gammaGM * IGM(t) + gammaOM * IOM(t) - SM(t)
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
-et_hat := system_vars[1]:
-writeto("hpv_group4_degrees_per_var.json"):
-printf(`{\n`):
-for each in system_vars[2] do
-  appendto("hpv_group4_degrees_per_var.json");
-  printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
-end do;
-printf(`}\n`):
-writeto(terminal);
+# et_hat := system_vars[1]:
+# writeto("hpv_group4_degrees_per_var.json"):
+# printf(`{\n`):
+# for each in system_vars[2] do
+#   appendto("hpv_group4_degrees_per_var.json");
+#   printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
+# end do;
+# printf(`}\n`):
+# writeto(terminal);
 
 
 WriteScripts(original_et_hat, system_vars[2], "original_hpv_mf_group4_original_no_trb", {}, PATH);

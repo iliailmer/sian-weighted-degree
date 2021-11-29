@@ -18,15 +18,15 @@ sigma := [
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
-et_hat := system_vars[1]:
-writeto("cholera_degrees_per_var.json"):
-printf(`{\n`):
-for each in system_vars[2] do
-  appendto("cholera_degrees_per_var.json");
-  printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
-end do;
-printf(`}\n`):
-writeto(terminal);
+# et_hat := system_vars[1]:
+# writeto("cholera_degrees_per_var.json"):
+# printf(`{\n`):
+# for each in system_vars[2] do
+#   appendto("cholera_degrees_per_var.json");
+#   printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
+# end do;
+# printf(`}\n`):
+# writeto(terminal);
 
 WriteScripts(original_et_hat, system_vars[2], "original_cholera_original_no_trb", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "original_cholera_subs_no_trb", all_subs, PATH);
