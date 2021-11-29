@@ -93,7 +93,8 @@ end proc:
 WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
   writeto(cat("../maple_scripts/", PATH, "/", script_name, "_pos_char.mpl"));
   printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
-  printf("infolevel[Groebner]:=10;et_hat:=%s;\n", convert(et_hat, string));
+  printf("infolevel[Groebner]:=10;
+et_hat:=%s;\n", convert(et_hat, string));
   printf("vars:=%s;\n", convert(vars, string));
   printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279);\n", convert(char, string));
   printf("# %a", all_subs);
@@ -102,7 +103,8 @@ WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
 
   writeto(cat("../maple_scripts/", PATH, "/", script_name, "_zero_char.mpl"));
   printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
-  printf("infolevel[Groebner]:=10;et_hat:=%s;\n", convert(et_hat, string));
+  printf("infolevel[Groebner]:=10;
+et_hat:=%s;\n", convert(et_hat, string));
   printf("vars:=%s;\n", convert(vars, string));
   printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0);\n", convert(char, string));
   printf("# %a", all_subs);

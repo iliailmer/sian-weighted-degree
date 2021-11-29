@@ -10,12 +10,12 @@ diff(s(t), t) = Lam - r0 * b * s(t) * i(t) / n - mu * s(t),
 diff(e(t), t) = b * s(t) * i(t) / n - eps * e(t) - mu * e(t),
 diff(i(t), t) = eps * e(t) - g * i(t) - mu * i(t),
 diff(r(t), t) = g * i(t) - mu * r(t),
-y1(t) = i(t)
+y1(t) = i(t) + r(t)
 ]: 
 
 char := 0:
 
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
 WriteScripts(original_et_hat, system_vars[2], "new_seir_original", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "new_seir_subs", all_subs, PATH);

@@ -7,6 +7,4 @@ mkdir -p ../magma_scripts/$each
 mkdir -p ../maple_scripts/$each
 mkdir -p ../julia_scripts/$each
 maple -c "PATH:=$each; char := 0:" $each.mpl
-done 
-
-
+done

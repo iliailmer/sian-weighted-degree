@@ -16,12 +16,12 @@ sigma := [
   diff(E(t), t) = ta * Tt(t),
   y1(t) = Dd(t) + R(t) +Tt(t)
   # y2(t) = R(t),
-  # y3(t) =Tt(t) 
+  # y3(t) =Tt(t)
 ]:
 sigma := map(x->lhs(x) = expand(rhs(x)), sigma);
 char := 0:
 
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
 
 WriteScripts(original_et_hat, system_vars[2], "new_sidarthe_original", {}, PATH);

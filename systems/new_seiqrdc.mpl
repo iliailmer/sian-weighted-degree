@@ -21,7 +21,7 @@ y1(t) = c(t)#,
 
 char := 0:
 
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
 WriteScripts(original_et_hat, system_vars[2], "new_seiqrdc_original", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "new_seiqrdc_subs", all_subs, PATH);

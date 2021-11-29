@@ -17,7 +17,7 @@ y1(t) = i(t) + r(t) # this output alone causes maple to finish faster with subs 
 
 char := 0:
 
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
 WriteScripts(original_et_hat, system_vars[2], "new_seir2_original", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "new_seir2_subs", all_subs, PATH);

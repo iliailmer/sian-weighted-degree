@@ -15,7 +15,7 @@ sigma := [
 ]:
 
 
-# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2, trdegsub=false):
+# substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDepth(sigma, trdegsub=false);
 
 # print(substitutions):

@@ -19,10 +19,7 @@ y1(t) = pEGFR(t)*a1 + a1*pEGFR_Akt(t),
 y2(t) = a2*pAkt(t) + a2*pAkt_S6(t),
 y3(t) = pS6(t)*a3
 ];
-
-char := 0:
-
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
 
 WriteScripts(original_et_hat, system_vars[2], "new-akt_original", {}, PATH);
