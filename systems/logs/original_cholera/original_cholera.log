@@ -3,24 +3,9 @@
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
-Warning, extra characters at end of parsed string
 # baseline 492
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:22|
-Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:53|
-Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
-|imports/create_substitutions.mpl:81|
-Warning, (in SubsByDepth) `all_subs` is implicitly declared local
-|imports/create_substitutions.mpl:82|
-Warning, (in SubsByDepth) `names` is implicitly declared local
-|imports/create_substitutions.mpl:83|
-Warning, (in SubsByDepth) `selection` is implicitly declared local
-|imports/create_substitutions.mpl:85|
-Warning, (in SubsByDepth) `other` is implicitly declared local
-|imports/create_substitutions.mpl:86|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -53,9 +38,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[bi = 1, bw = 1, r_ = 0, g = 1, s_ = 0, al = 2, mu = 1, w_ = 1, i_ = 0, k = 0, dz = 2]
+States for substitution:	[w_ = 1, g = 1, al = 2, mu = 1, dz = 2, bw = 1, k = 0, s_ = 0, bi = 1, r_ = 0, i_ = 0]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, r_ = 1, s_ = 1, al = 3, w_ = 2, i_ = 1, dz = 3]
+Substitutions:	[z_aux = 2, w_ = 2, al = 3, dz = 3, s_ = 1, r_ = 1, i_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -87,7 +72,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[bi = 1, bw = 1, r_ = 0, g = 1, s_ = 0, al = 2, mu = 1, w_ = 1, i_ = 0, k = 0, dz = 2]
+States for substitution:	[w_ = 1, g = 1, al = 2, mu = 1, dz = 2, bw = 1, k = 0, s_ = 0, bi = 1, r_ = 0, i_ = 0]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, r_ = 1, s_ = 1, al = 3, w_ = 2, i_ = 1, dz = 3]
-memory used=292.0MB, alloc=119.4MB, time=1.79
+Substitutions:	[z_aux = 2, w_ = 2, al = 3, dz = 3, s_ = 1, r_ = 1, i_ = 1]
+memory used=293.5MB, alloc=119.1MB, time=1.78

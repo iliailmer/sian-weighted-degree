@@ -3,23 +3,8 @@
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
-Warning, extra characters at end of parsed string
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:22|
-Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:53|
-Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
-|imports/create_substitutions.mpl:81|
-Warning, (in SubsByDepth) `all_subs` is implicitly declared local
-|imports/create_substitutions.mpl:82|
-Warning, (in SubsByDepth) `names` is implicitly declared local
-|imports/create_substitutions.mpl:83|
-Warning, (in SubsByDepth) `selection` is implicitly declared local
-|imports/create_substitutions.mpl:85|
-Warning, (in SubsByDepth) `other` is implicitly declared local
-|imports/create_substitutions.mpl:86|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -52,9 +37,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[In_ = 2, E_ = 1, nu = 1, Cu_ = 0, a = 3, b = 2, N_ = 0, S_ = 2]
+States for substitution:	[E_ = 1, S_ = 2, In_ = 2, nu = 1, b = 2, a = 3, Cu_ = 0, N_ = 0]
 NonID parameters:	[]
-Substitutions:	[In_ = 3, z_aux = 3, E_ = 2, a = 4, N_ = 1, S_ = 3]
+Substitutions:	[E_ = 2, S_ = 3, z_aux = 3, In_ = 3, a = 4, N_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -86,7 +71,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[In_ = 2, E_ = 1, nu = 1, Cu_ = 0, a = 3, b = 2, N_ = 0, S_ = 2]
+States for substitution:	[E_ = 1, S_ = 2, In_ = 2, nu = 1, b = 2, a = 3, Cu_ = 0, N_ = 0]
 NonID parameters:	[]
-Substitutions:	[In_ = 3, z_aux = 3, E_ = 2, a = 4, N_ = 1, S_ = 3]
-memory used=273.4MB, alloc=116.3MB, time=1.54
+Substitutions:	[E_ = 2, S_ = 3, z_aux = 3, In_ = 3, a = 4, N_ = 1]
+memory used=271.0MB, alloc=116.3MB, time=1.51

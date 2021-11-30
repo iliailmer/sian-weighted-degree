@@ -1,0 +1,84 @@
+    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> kernelopts(printbytes=false, assertlevel=1):
+> interface(echo=0, prettyprint=0):
+sigma := [diff(IO(t),t) = (1-IO(t)-IOG(t)-IG(t))*(betaOO*(IO(t)+IOG(t))+betaGO*
+(IG(t)+IOG(t)))+gammaG*IOG(t)-IO(t)*(nuOG+gammaO+mu+betaOG*(IO(t)+IOG(t))+
+betaGG*(IG(t)+IOG(t))), diff(IG(t),t) = (1-IO(t)-IOG(t)-IG(t))*(betaOG*(IO(t)+
+IOG(t))+betaGG*(IG(t)+IOG(t)))+gammaO*IOG(t)-IG(t)*(nuGO+gammaG+mu+betaOO*(IO(t
+)+IOG(t))+betaGO*(IG(t)+IOG(t))), diff(IOG(t),t) = IO(t)*(nuOG+betaOG*(IO(t)+
+IOG(t))+betaGG*(IG(t)+IOG(t)))+IG(t)*(nuGO+betaOO*(IO(t)+IOG(t))+betaGO*(IG(t)+
+IOG(t)))-IOG(t)*(gammaO+gammaG+mu), y(t) = IO(t)+IOG(t)]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [IO(t), IG(t), IOG(t)]
+Output variables:         [y(t)]
+Input variables:          []
+Parameters in equations:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, nuGO, nuOG]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+{}
+Locally identifiable paramters:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, nuGO, nuOG, IO(0), IG(0), IOG(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[betaGO = 1, betaOO = 1, nuOG = 2, IG_ = 1, gammaG = 2, IOG_ = 0, mu = 1, betaGG = 2, nuGO = 1, IO_ = 0, gammaO = 1, betaOG = 2]
+NonID parameters:	[]
+Substitutions:	[nuOG = 3, IG_ = 2, gammaG = 3, IOG_ = 1, betaGG = 3, IO_ = 1, z_aux = 2, betaOG = 3]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [IO(t), IG(t), IOG(t)]
+Output variables:         [y(t)]
+Input variables:          []
+Parameters in equations:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, nuGO, nuOG]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, nuGO, nuOG, IO(0), IG(0), IOG(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[betaGO = 1, betaOO = 1, nuOG = 2, IG_ = 1, gammaG = 2, IOG_ = 0, mu = 1, betaGG = 2, nuGO = 1, IO_ = 0, gammaO = 1, betaOG = 2]
+NonID parameters:	[]
+Substitutions:	[nuOG = 3, IG_ = 2, gammaG = 3, IOG_ = 1, betaGG = 3, IO_ = 1, z_aux = 2, betaOG = 3]
+memory used=739.3MB, alloc=170.4MB, time=4.90

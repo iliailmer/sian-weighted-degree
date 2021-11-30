@@ -3,24 +3,9 @@
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
-Warning, extra characters at end of parsed string
 
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:22|
-Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:53|
-Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
-|imports/create_substitutions.mpl:81|
-Warning, (in SubsByDepth) `all_subs` is implicitly declared local
-|imports/create_substitutions.mpl:82|
-Warning, (in SubsByDepth) `names` is implicitly declared local
-|imports/create_substitutions.mpl:83|
-Warning, (in SubsByDepth) `selection` is implicitly declared local
-|imports/create_substitutions.mpl:85|
-Warning, (in SubsByDepth) `other` is implicitly declared local
-|imports/create_substitutions.mpl:86|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -53,9 +38,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[p6 = 3, x2_ = 1, x3_ = 2, p4 = 2, p3 = 2, p1 = 1, x1_ = 0, u0_ = 0, p7 = 3]
+States for substitution:	[p3 = 2, p4 = 2, x3_ = 2, x2_ = 1, x1_ = 0, u0_ = 0, p7 = 3, p6 = 3, p1 = 1]
 NonID parameters:	[]
-Substitutions:	[p6 = 4, x2_ = 2, x3_ = 3, z_aux = 3, x1_ = 1, u0_ = 1, p7 = 4]
+Substitutions:	[x3_ = 3, x2_ = 2, x1_ = 1, u0_ = 1, p7 = 4, p6 = 4, z_aux = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -87,7 +72,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[p6 = 3, x2_ = 1, x3_ = 2, p4 = 2, p3 = 2, p1 = 1, x1_ = 0, u0_ = 0, p7 = 3]
+States for substitution:	[p3 = 2, p4 = 2, x3_ = 2, x2_ = 1, x1_ = 0, u0_ = 0, p7 = 3, p6 = 3, p1 = 1]
 NonID parameters:	[]
-Substitutions:	[p6 = 4, x2_ = 2, x3_ = 3, z_aux = 3, x1_ = 1, u0_ = 1, p7 = 4]
-memory used=144.0MB, alloc=84.7MB, time=0.79
+Substitutions:	[x3_ = 3, x2_ = 2, x1_ = 1, u0_ = 1, p7 = 4, p6 = 4, z_aux = 3]
+memory used=144.4MB, alloc=88.6MB, time=0.78

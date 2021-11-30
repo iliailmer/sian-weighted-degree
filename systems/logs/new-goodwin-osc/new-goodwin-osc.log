@@ -3,23 +3,8 @@
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
-Warning, extra characters at end of parsed string
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:22|
-Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:53|
-Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
-|imports/create_substitutions.mpl:81|
-Warning, (in SubsByDepth) `all_subs` is implicitly declared local
-|imports/create_substitutions.mpl:82|
-Warning, (in SubsByDepth) `names` is implicitly declared local
-|imports/create_substitutions.mpl:83|
-Warning, (in SubsByDepth) `selection` is implicitly declared local
-|imports/create_substitutions.mpl:85|
-Warning, (in SubsByDepth) `other` is implicitly declared local
-|imports/create_substitutions.mpl:86|
 sigma := [diff(x2(t),t) = alpha*x1(t)-beta*x2(t), diff(x4(t),t) = (gama*sgm*x2(
 t)*x4(t)-delta*sgm*x3(t)*x4(t))/x3(t), diff(x1(t),t) = (-b*c*x1(t)-b*x1(t)*x4(t
 )+1)/(c+x4(t)), diff(x3(t),t) = gama*x2(t)-delta*x3(t), y(t) = x1(t)]
@@ -69,9 +54,9 @@ Parameters in equations:  [b, beta, c, delta, sgm]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x4_ = 1, x1_ = 0, c = 1, alpha_ = 0, gama_ = 0, x2_ = 2, x3_ = 2, sgm = 2, b = 1, delta = 2, beta = 3]
+States for substitution:	[x2_ = 2, alpha_ = 0, x1_ = 0, x4_ = 1, b = 1, c = 1, beta = 3, sgm = 2, delta = 2, gama_ = 0, x3_ = 2]
 NonID parameters:	[alpha, gama, x2_0, x3_0]
-Substitutions:	[z_aux = 3, x4_ = 2, x1_ = 1, alpha_ = 1, gama_ = 1, x2_ = 3, x3_ = 3, beta = 4]
+Substitutions:	[x2_ = 3, alpha_ = 1, x1_ = 1, x4_ = 2, beta = 4, z_aux = 3, gama_ = 1, x3_ = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -103,7 +88,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x4_ = 1, x1_ = 0, c = 1, x2_ = 2, gama = 2, x3_ = 2, sgm = 2, b = 1, delta = 2, beta = 3, alpha = 3]
+States for substitution:	[x2_ = 2, x1_ = 0, alpha = 3, x4_ = 1, b = 1, c = 1, beta = 3, sgm = 2, delta = 2, x3_ = 2, gama = 2]
 NonID parameters:	[alpha, gama, x2_0, x3_0]
-Substitutions:	[z_aux = 3, x4_ = 2, x1_ = 1, x2_ = 3, x3_ = 3, beta = 4]
-memory used=1371.4MB, alloc=160.3MB, time=7.51
+Substitutions:	[x2_ = 3, x1_ = 1, x4_ = 2, beta = 4, z_aux = 3, x3_ = 3]
+memory used=1375.5MB, alloc=160.3MB, time=7.86

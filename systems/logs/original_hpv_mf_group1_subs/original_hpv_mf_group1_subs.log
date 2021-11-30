@@ -3,23 +3,8 @@
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
-Warning, extra characters at end of parsed string
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:22|
-Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:53|
-Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
-|imports/create_substitutions.mpl:81|
-Warning, (in SubsByDepth) `all_subs` is implicitly declared local
-|imports/create_substitutions.mpl:82|
-Warning, (in SubsByDepth) `names` is implicitly declared local
-|imports/create_substitutions.mpl:83|
-Warning, (in SubsByDepth) `selection` is implicitly declared local
-|imports/create_substitutions.mpl:85|
-Warning, (in SubsByDepth) `other` is implicitly declared local
-|imports/create_substitutions.mpl:86|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -52,9 +37,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[gammaOM = 1, SM_ = 1, betaOOMF = 2, betaOOFM = 1, nuOGM = 1, IOGF_ = 1, mu = 1, nuGOM = 1, betaGGMF = 2, gammaGM = 1, IGF_ = 1, IOF_ = 1, betaOGMF = 2, SF_ = 2, gammaOF = 2, IOGM_ = 0, gammaGF = 2, betaGGFM = 1, betaOGFM = 1, nuGOF = 2, IGM_ = 0, betaGOMF = 2, betaGOFM = 1, nuOGF = 2, IOM_ = 0]
+States for substitution:	[betaOOFM = 1, betaOGMF = 2, SM_ = 1, betaGGMF = 2, gammaGF = 2, gammaOM = 1, IOGF_ = 1, gammaOF = 2, IGF_ = 1, betaOGFM = 1, nuOGF = 2, mu = 1, betaGOFM = 1, IOF_ = 1, SF_ = 2, IOGM_ = 0, betaGGFM = 1, betaGOMF = 2, IGM_ = 0, nuOGM = 1, betaOOMF = 2, nuGOM = 1, IOM_ = 0, gammaGM = 1, nuGOF = 2]
 NonID parameters:	[]
-Substitutions:	[SM_ = 2, betaOOMF = 3, z_aux = 2, IOGF_ = 2, betaGGMF = 3, IGF_ = 2, IOF_ = 2, betaOGMF = 3, SF_ = 3, gammaOF = 3, IOGM_ = 1, gammaGF = 3, nuGOF = 3, IGM_ = 1, betaGOMF = 3, nuOGF = 3, IOM_ = 1]
+Substitutions:	[betaOGMF = 3, SM_ = 2, z_aux = 2, betaGGMF = 3, gammaGF = 3, IOGF_ = 2, gammaOF = 3, IGF_ = 2, nuOGF = 3, IOF_ = 2, SF_ = 3, IOGM_ = 1, betaGOMF = 3, IGM_ = 1, betaOOMF = 3, IOM_ = 1, nuGOF = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -86,7 +71,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[gammaOM = 1, SM_ = 1, betaOOMF = 2, betaOOFM = 1, nuOGM = 1, IOGF_ = 1, mu = 1, nuGOM = 1, betaGGMF = 2, gammaGM = 1, IGF_ = 1, IOF_ = 1, betaOGMF = 2, SF_ = 2, gammaOF = 2, IOGM_ = 0, gammaGF = 2, betaGGFM = 1, betaOGFM = 1, nuGOF = 2, IGM_ = 0, betaGOMF = 2, betaGOFM = 1, nuOGF = 2, IOM_ = 0]
+States for substitution:	[betaOOFM = 1, betaOGMF = 2, SM_ = 1, betaGGMF = 2, gammaGF = 2, gammaOM = 1, IOGF_ = 1, gammaOF = 2, IGF_ = 1, betaOGFM = 1, nuOGF = 2, mu = 1, betaGOFM = 1, IOF_ = 1, SF_ = 2, IOGM_ = 0, betaGGFM = 1, betaGOMF = 2, IGM_ = 0, nuOGM = 1, betaOOMF = 2, nuGOM = 1, IOM_ = 0, gammaGM = 1, nuGOF = 2]
 NonID parameters:	[]
-Substitutions:	[SM_ = 2, betaOOMF = 3, z_aux = 2, IOGF_ = 2, betaGGMF = 3, IGF_ = 2, IOF_ = 2, betaOGMF = 3, SF_ = 3, gammaOF = 3, IOGM_ = 1, gammaGF = 3, nuGOF = 3, IGM_ = 1, betaGOMF = 3, nuOGF = 3, IOM_ = 1]
-memory used=14600.4MB, alloc=211.8MB, time=62.57
+Substitutions:	[betaOGMF = 3, SM_ = 2, z_aux = 2, betaGGMF = 3, gammaGF = 3, IOGF_ = 2, gammaOF = 3, IGF_ = 2, nuOGF = 3, IOF_ = 2, SF_ = 3, IOGM_ = 1, betaGOMF = 3, IGM_ = 1, betaOOMF = 3, IOM_ = 1, nuGOF = 3]
+memory used=22267.9MB, alloc=184.3MB, time=87.30

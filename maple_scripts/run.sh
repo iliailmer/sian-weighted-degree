@@ -6,7 +6,7 @@ declare -A map
 for s in "${shortscripts[@]}"; do
     map[$s]=1
 done
-# "original_hpv_mf_group1_subs" "original_hpv_mf_group4" "original_pharm"
+
 for each in "${array[@]}"; do
     for d in $each/*_pos_char.mpl; do
         outname="${d::-4}.out"

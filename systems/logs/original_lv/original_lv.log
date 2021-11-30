@@ -3,23 +3,8 @@
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
-Warning, extra characters at end of parsed string
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:22|
-Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:53|
-Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
-|imports/create_substitutions.mpl:81|
-Warning, (in SubsByDepth) `all_subs` is implicitly declared local
-|imports/create_substitutions.mpl:82|
-Warning, (in SubsByDepth) `names` is implicitly declared local
-|imports/create_substitutions.mpl:83|
-Warning, (in SubsByDepth) `selection` is implicitly declared local
-|imports/create_substitutions.mpl:85|
-Warning, (in SubsByDepth) `other` is implicitly declared local
-|imports/create_substitutions.mpl:86|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -66,9 +51,9 @@ Parameters in equations:  [a, c, d]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[d = 2, a = 1, x1_ = 0, x2_ = 1, b_ = 0, c = 2]
+States for substitution:	[d = 2, c = 2, x2_ = 1, a = 1, x1_ = 0, b_ = 0]
 NonID parameters:	[b, x2_0]
-Substitutions:	[d = 3, x1_ = 1, x2_ = 2, b_ = 1, z_aux = 2, c = 3]
+Substitutions:	[d = 3, c = 3, x2_ = 2, x1_ = 1, b_ = 1, z_aux = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -100,7 +85,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[d = 2, a = 1, b = 1, x1_ = 0, x2_ = 1, c = 2]
+States for substitution:	[d = 2, c = 2, b = 1, x2_ = 1, a = 1, x1_ = 0]
 NonID parameters:	[b, x2_0]
-Substitutions:	[d = 3, x1_ = 1, x2_ = 2, z_aux = 2, c = 3]
-memory used=68.5MB, alloc=44.3MB, time=0.67
+Substitutions:	[d = 3, c = 3, x2_ = 2, x1_ = 1, z_aux = 2]
+memory used=68.6MB, alloc=44.3MB, time=0.67

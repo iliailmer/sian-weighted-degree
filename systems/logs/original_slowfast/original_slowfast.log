@@ -3,23 +3,8 @@
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
-Warning, extra characters at end of parsed string
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:22|
-Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:53|
-Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
-|imports/create_substitutions.mpl:81|
-Warning, (in SubsByDepth) `all_subs` is implicitly declared local
-|imports/create_substitutions.mpl:82|
-Warning, (in SubsByDepth) `names` is implicitly declared local
-|imports/create_substitutions.mpl:83|
-Warning, (in SubsByDepth) `selection` is implicitly declared local
-|imports/create_substitutions.mpl:85|
-Warning, (in SubsByDepth) `other` is implicitly declared local
-|imports/create_substitutions.mpl:86|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -52,9 +37,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[xA_ = 0, eA_ = 0, k1 = 1, eC_ = 0, eB = 0, xB_ = 0, k2 = 1, xC_ = 0]
+States for substitution:	[xA_ = 0, k2 = 1, eC_ = 0, k1 = 1, eA_ = 0, eB = 0, xC_ = 0, xB_ = 0]
 NonID parameters:	[]
-Substitutions:	[xA_ = 1, z_aux = 1, k1 = 2, xB_ = 1, k2 = 2]
+Substitutions:	[xA_ = 1, z_aux = 1, k2 = 2, k1 = 2, xB_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -86,7 +71,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[xA_ = 0, eA_ = 0, k1 = 1, eC_ = 0, eB = 0, xB_ = 0, k2 = 1, xC_ = 0]
+States for substitution:	[xA_ = 0, k2 = 1, eC_ = 0, k1 = 1, eA_ = 0, eB = 0, xC_ = 0, xB_ = 0]
 NonID parameters:	[]
-Substitutions:	[xA_ = 1, z_aux = 1, k1 = 2, xB_ = 1, k2 = 2]
-memory used=86.8MB, alloc=108.3MB, time=0.58
+Substitutions:	[xA_ = 1, z_aux = 1, k2 = 2, k1 = 2, xB_ = 1]
+memory used=87.0MB, alloc=108.3MB, time=0.58

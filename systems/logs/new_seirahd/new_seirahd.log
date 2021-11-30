@@ -3,24 +3,9 @@
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
-Warning, extra characters at end of parsed string
 # Ex 8 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:22|
-Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:53|
-Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
-|imports/create_substitutions.mpl:81|
-Warning, (in SubsByDepth) `all_subs` is implicitly declared local
-|imports/create_substitutions.mpl:82|
-Warning, (in SubsByDepth) `names` is implicitly declared local
-|imports/create_substitutions.mpl:83|
-Warning, (in SubsByDepth) `selection` is implicitly declared local
-|imports/create_substitutions.mpl:85|
-Warning, (in SubsByDepth) `other` is implicitly declared local
-|imports/create_substitutions.mpl:86|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -67,9 +52,9 @@ Parameters in equations:  [alpha, eta, gamma_a, gamma_i, n, sgm]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[n = 1, gamma_a = 2, (NULL) = 1, i_ = 0, Phi_ = 0, alpha = 1, e_ = 1, a_ = 1, gamma_h_ = 0, s_ = 0, gamma_i = 1, sgm = 1, dlt_ = 0, eta = 1]
+States for substitution:	[Phi_ = 0, sgm = 1, alpha = 1, (NULL) = 1, n = 1, a_ = 1, s_ = 0, gamma_h_ = 0, dlt_ = 0, i_ = 0, eta = 1, e_ = 1, gamma_i = 1, gamma_a = 2]
 NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
-Substitutions:	[gamma_a = 3, i_ = 1, Phi_ = 1, e_ = 2, a_ = 2, gamma_h_ = 1, s_ = 1, z_aux = 2, dlt_ = 1]
+Substitutions:	[Phi_ = 1, a_ = 2, s_ = 1, gamma_h_ = 1, dlt_ = 1, i_ = 1, e_ = 2, z_aux = 2, gamma_a = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -101,7 +86,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[n = 1, gamma_a = 2, (NULL) = 1, i_ = 0, alpha = 1, e_ = 1, a_ = 1, s_ = 0, gamma_i = 1, Phi = 1, sgm = 1, eta = 1]
+States for substitution:	[sgm = 1, alpha = 1, (NULL) = 1, n = 1, Phi = 1, a_ = 1, s_ = 0, i_ = 0, eta = 1, e_ = 1, gamma_i = 1, gamma_a = 2]
 NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
-Substitutions:	[gamma_a = 3, i_ = 1, e_ = 2, a_ = 2, s_ = 1, z_aux = 2]
-memory used=3592.8MB, alloc=120.3MB, time=17.79
+Substitutions:	[a_ = 2, s_ = 1, i_ = 1, e_ = 2, z_aux = 2, gamma_a = 3]
+memory used=3621.8MB, alloc=120.3MB, time=16.67

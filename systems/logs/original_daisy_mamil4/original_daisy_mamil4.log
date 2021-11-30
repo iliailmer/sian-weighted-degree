@@ -3,23 +3,8 @@
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
-Warning, extra characters at end of parsed string
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in SimpleSubstitutions) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:22|
-Warning, (in SubsByDepth) `alg_indep` is implicitly declared local
-|imports/create_substitutions.mpl:53|
-Warning, (in SubsByDepth) `original_et_hat` is implicitly declared local
-|imports/create_substitutions.mpl:81|
-Warning, (in SubsByDepth) `all_subs` is implicitly declared local
-|imports/create_substitutions.mpl:82|
-Warning, (in SubsByDepth) `names` is implicitly declared local
-|imports/create_substitutions.mpl:83|
-Warning, (in SubsByDepth) `selection` is implicitly declared local
-|imports/create_substitutions.mpl:85|
-Warning, (in SubsByDepth) `other` is implicitly declared local
-|imports/create_substitutions.mpl:86|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -52,9 +37,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k12 = 1, x3_ = 1, k31 = 1, x1_ = 0, k21 = 1, x4_ = 1, k41 = 1, k01 = 1, k13 = 1, (NULL) = 1, x2_ = 1, k14 = 1]
+States for substitution:	[k13 = 1, x2_ = 1, k14 = 1, x1_ = 0, (NULL) = 1, k21 = 1, k31 = 1, k12 = 1, x3_ = 1, x4_ = 1, k01 = 1, k41 = 1]
 NonID parameters:	[]
-Substitutions:	[k12 = 2, x3_ = 2, k31 = 2, x1_ = 1, k21 = 2, x4_ = 2, z_aux = 1, k41 = 2, k01 = 2, k13 = 2, x2_ = 2, k14 = 2]
+Substitutions:	[k13 = 2, x2_ = 2, k14 = 2, x1_ = 1, k21 = 2, k31 = 2, k12 = 2, x3_ = 2, x4_ = 2, z_aux = 1, k01 = 2, k41 = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -86,7 +71,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k12 = 1, x3_ = 1, k31 = 1, x1_ = 0, k21 = 1, x4_ = 1, k41 = 1, k01 = 1, k13 = 1, (NULL) = 1, x2_ = 1, k14 = 1]
+States for substitution:	[k13 = 1, x2_ = 1, k14 = 1, x1_ = 0, (NULL) = 1, k21 = 1, k31 = 1, k12 = 1, x3_ = 1, x4_ = 1, k01 = 1, k41 = 1]
 NonID parameters:	[]
-Substitutions:	[k12 = 2, x3_ = 2, k31 = 2, x1_ = 1, k21 = 2, x4_ = 2, z_aux = 1, k41 = 2, k01 = 2, k13 = 2, x2_ = 2, k14 = 2]
-memory used=293.0MB, alloc=127.8MB, time=1.59
+Substitutions:	[k13 = 2, x2_ = 2, k14 = 2, x1_ = 1, k21 = 2, k31 = 2, k12 = 2, x3_ = 2, x4_ = 2, z_aux = 1, k01 = 2, k41 = 2]
+memory used=285.9MB, alloc=48.9MB, time=1.47
