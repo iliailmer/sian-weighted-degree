@@ -16,7 +16,7 @@ sigma := [
   y2(t) = R(t)
 ]: 
 
-char := 0:
+
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 

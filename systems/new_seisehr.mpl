@@ -15,7 +15,7 @@ diff(h(t), t) = dlt_i * i(t) + dlt_q * eq(t) - (alpha + g_h) * h(t),
 diff(r(t), t) = g_i * i(t) + g_h * h(t),
 y1(t) = i(t) + r(t)
 ]: 
-char := 0:
+
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 

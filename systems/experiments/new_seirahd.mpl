@@ -32,7 +32,7 @@ substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, expo
 
 gb := Groebner[Basis](system_vars[1], tdeg(op(system_vars[2])));
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
-# char := 0:
+# 
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 # WriteScripts(original_et_hat, system_vars[2], "<NAME>_original_no_trb", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "<NAME>_weights_no_trb", all_subs, PATH);

@@ -13,7 +13,7 @@ sigma := [
  y(t) = p2*x2(t)+p6*p3*x5(t)
 ]: 
 
-char := 0:
+
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 

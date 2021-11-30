@@ -15,7 +15,7 @@ diff(r(t), t) = rho * i(t) - d0 * r(t),
 y1(t) = i(t) + r(t) # this output alone causes maple to finish faster with subs than without, but this won't work in magma
 ]:
 
-char := 0:
+
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 

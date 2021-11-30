@@ -14,7 +14,7 @@ diff(p(t), t) = mu * i(t),
 y1(t) = i(t) + s(t)
 ]: 
 
-char := 0:
+
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 

@@ -15,7 +15,7 @@ sigma := [
 ]:
 # sigma := map(x->lhs(x) = expand(rhs(x)), sigma);
 
-char := 0:
+
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 

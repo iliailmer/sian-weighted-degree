@@ -13,7 +13,7 @@ diff(r(t), t) = g * i(t) - mu * r(t),
 y1(t) = i(t) + r(t)
 ]: 
 
-char := 0:
+
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
