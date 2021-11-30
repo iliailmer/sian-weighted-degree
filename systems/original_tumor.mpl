@@ -30,3 +30,4 @@ all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDept
 
 WriteScripts(original_et_hat, system_vars[2], "original_tumor_original_with_trb", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "original_tumor_weights_with_trb", all_subs, PATH);
+quit;

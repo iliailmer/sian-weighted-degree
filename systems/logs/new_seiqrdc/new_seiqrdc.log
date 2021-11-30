@@ -67,9 +67,9 @@ Parameters in equations:  [a, b, dlt, g, mu, n, tau0]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[i_ = 2, dlt = 3, b = 2, a = 1, n = 2, mu = 1, g = 3, s_ = 1, tau0 = 1, e_ = 3, c_ = 0]
+States for substitution:	[dlt = 3, i_ = 2, b = 2, n = 2, a = 1, mu = 1, g = 3, c_ = 0, s_ = 1, tau0 = 1, e_ = 3]
 NonID parameters:	[d0_0, q_0, r_0]
-Substitutions:	[i_ = 3, dlt = 4, g = 4, z_aux = 3, s_ = 2, e_ = 4, c_ = 1]
+Substitutions:	[dlt = 4, i_ = 3, g = 4, c_ = 1, z_aux = 3, s_ = 2, e_ = 4]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -101,7 +101,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[i_ = 2, dlt = 3, b = 2, a = 1, n = 2, mu = 1, g = 3, s_ = 1, tau0 = 1, e_ = 3, c_ = 0]
+States for substitution:	[dlt = 3, i_ = 2, b = 2, n = 2, a = 1, mu = 1, g = 3, c_ = 0, s_ = 1, tau0 = 1, e_ = 3]
 NonID parameters:	[d0_0, q_0, r_0]
-Substitutions:	[i_ = 3, dlt = 4, g = 4, z_aux = 3, s_ = 2, e_ = 4, c_ = 1]
-memory used=645.4MB, alloc=122.5MB, time=3.74
+Substitutions:	[dlt = 4, i_ = 3, g = 4, c_ = 1, z_aux = 3, s_ = 2, e_ = 4]
+memory used=634.3MB, alloc=123.0MB, time=3.45

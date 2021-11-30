@@ -67,7 +67,41 @@ Parameters in equations:  [k10, k5, k6, k7, k8, k9]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k5 = 1, x6_ = 1, x5_ = 0, k10 = 2, k6 = 1, x4_ = 0, k9 = 2, k7 = 1, k8 = 1]
+States for substitution:	[k6 = 1, x6_ = 1, x4_ = 0, k10 = 2, x5_ = 0, k5 = 1, k8 = 1, k7 = 1, k9 = 2]
 NonID parameters:	[x7_0]
-Substitutions:	[k5 = 2, x6_ = 2, x5_ = 1, k10 = 3, k6 = 2, x4_ = 1, k9 = 3, z_aux = 2, k7 = 2, k8 = 2]
-memory used=379.9MB, alloc=112.3MB, time=2.34
+Substitutions:	[x6_ = 2, x4_ = 1, k10 = 3, x5_ = 1, z_aux = 2, k9 = 3]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x4(t), x5(t), x6(t), x7(t)]
+Output variables:         [y1(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [k10, k5, k6, k7, k8, k9]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [k10, k5, k6, k7, k8, k9, x4(0), x5(0), x6(0)]
+Nonidentifiable parameter:  [x7(0)]
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[k6 = 1, x6_ = 1, x4_ = 0, k10 = 2, x5_ = 0, k5 = 1, k8 = 1, k7 = 1, k9 = 2]
+NonID parameters:	[x7_0]
+Substitutions:	[x6_ = 2, x4_ = 1, k10 = 3, x5_ = 1, z_aux = 2, k9 = 3]
+memory used=571.9MB, alloc=112.3MB, time=3.37

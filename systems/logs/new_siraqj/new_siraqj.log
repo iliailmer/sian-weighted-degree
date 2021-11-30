@@ -67,7 +67,41 @@ Parameters in equations:  [b, d1, d4, d5, eps_a, eps_j, eps_q, g1, g2, k1, k2, l
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[g1 = 2, k2 = 1, d5 = 1, k1 = 2, d6_ = 0, d1 = 3, mu1 = 1, lam = 2, d4 = 2, N_ = 3, In_ = 1, A_ = 1, eps_j = 2, g2 = 1, S_ = 2, b = 3, d2_ = 0, Q_ = 0, eps_q = 2, mu2 = 1, Jj_ = 0, d3_ = 0, eps_a = 2]
+States for substitution:	[lam = 2, d4 = 2, d3_ = 0, d6_ = 0, mu1 = 1, d1 = 3, In_ = 1, N_ = 3, k1 = 2, d5 = 1, k2 = 1, g1 = 2, eps_a = 2, mu2 = 1, S_ = 2, eps_q = 2, b = 3, A_ = 1, Jj_ = 0, d2_ = 0, g2 = 1, eps_j = 2, Q_ = 0]
 NonID parameters:	[A_0, In_0, N_0, R_0, S_0, b, d2, d3, d4, d6, eps_a, eps_j, eps_q, g1, g2, k1, lam, mu1, mu2]
-Substitutions:	[k2 = 2, z_aux = 3, d5 = 2, d6_ = 1, d1 = 4, N_ = 4, In_ = 2, A_ = 2, S_ = 3, d2_ = 1, Q_ = 1, Jj_ = 1, d3_ = 1]
-memory used=2376.8MB, alloc=187.8MB, time=11.13
+Substitutions:	[z_aux = 3, d3_ = 1, d6_ = 1, d1 = 4, In_ = 2, N_ = 4, S_ = 3, A_ = 2, Jj_ = 1, d2_ = 1, Q_ = 1]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [S(t), In(t), R(t), A(t), Q(t), Jj(t), N(t)]
+Output variables:         [y1(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [b, d1, d2, d3, d4, d5, d6, eps_a, eps_j, eps_q, g1, g2, k1, k2, lam, mu1, mu2]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [d1, d5, k2, Q(0), Jj(0)]
+Nonidentifiable parameter:  [A(0), In(0), N(0), R(0), S(0), b, d2, d3, d4, d6, eps_a, eps_j, eps_q, g1, g2, k1, lam, mu1, mu2]
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[lam = 2, d4 = 2, mu1 = 1, d1 = 3, In_ = 1, d6 = 1, N_ = 3, k1 = 2, d5 = 1, k2 = 1, g1 = 2, eps_a = 2, d2 = 2, mu2 = 1, S_ = 2, eps_q = 2, b = 3, A_ = 1, Jj_ = 0, g2 = 1, eps_j = 2, Q_ = 0]
+NonID parameters:	[A_0, In_0, N_0, R_0, S_0, b, d2, d3, d4, d6, eps_a, eps_j, eps_q, g1, g2, k1, lam, mu1, mu2]
+Substitutions:	[z_aux = 3, d1 = 4, In_ = 2, N_ = 4, S_ = 3, A_ = 2, Jj_ = 1, Q_ = 1]
+memory used=3179.3MB, alloc=179.8MB, time=14.74

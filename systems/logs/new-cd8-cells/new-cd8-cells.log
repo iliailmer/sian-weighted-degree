@@ -71,9 +71,9 @@ Parameters in equations:  [mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[S_ = 0, mu_PE = 2, mu_N = 1, delta_NE = 1, mu_PL = 2, rho_P = 2, M_ = 0, mu_M = 1, E_ = 0, mu_LL = 1, N_ = 0, P_ = 1, rho_E = 1, delta_EL = 1, mu_EE = 1, mu_LE = 1, delta_LM = 1, mu_P = 2]
+States for substitution:	[mu_EE = 1, mu_LE = 1, mu_P = 2, M_ = 0, mu_LL = 1, delta_NE = 1, S_ = 0, rho_E = 1, N_ = 0, delta_LM = 1, rho_P = 2, mu_M = 1, P_ = 1, mu_PE = 2, mu_N = 1, mu_PL = 2, delta_EL = 1, E_ = 0]
 NonID parameters:	[P_0, rho_E, rho_P, delta_NE]
-Substitutions:	[S_ = 1, mu_PE = 3, mu_PL = 3, M_ = 1, E_ = 1, N_ = 1, P_ = 2, z_aux = 2, mu_P = 3]
+Substitutions:	[mu_P = 3, M_ = 1, S_ = 1, N_ = 1, z_aux = 2, P_ = 2, mu_PE = 3, mu_PL = 3, E_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -105,7 +105,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[S_ = 0, mu_PE = 2, mu_N = 1, delta_NE = 1, mu_PL = 2, rho_P = 2, M_ = 0, mu_M = 1, E_ = 0, mu_LL = 1, N_ = 0, P_ = 1, rho_E = 1, delta_EL = 1, mu_EE = 1, mu_LE = 1, delta_LM = 1, mu_P = 2]
+States for substitution:	[mu_EE = 1, mu_LE = 1, mu_P = 2, M_ = 0, mu_LL = 1, delta_NE = 1, S_ = 0, rho_E = 1, N_ = 0, delta_LM = 1, rho_P = 2, mu_M = 1, P_ = 1, mu_PE = 2, mu_N = 1, mu_PL = 2, delta_EL = 1, E_ = 0]
 NonID parameters:	[P_0, rho_E, rho_P, delta_NE]
-Substitutions:	[S_ = 1, mu_PE = 3, mu_PL = 3, M_ = 1, E_ = 1, N_ = 1, P_ = 2, z_aux = 2, mu_P = 3]
-memory used=886.6MB, alloc=163.8MB, time=5.31
+Substitutions:	[mu_P = 3, M_ = 1, S_ = 1, N_ = 1, z_aux = 2, P_ = 2, mu_PE = 3, mu_PL = 3, E_ = 1]
+memory used=881.4MB, alloc=165.2MB, time=4.96

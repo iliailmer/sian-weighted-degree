@@ -53,7 +53,41 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[p4 = 2, p3 = 2, p6 = 3, x2_ = 1, x3_ = 2, u0_ = 0, p7 = 3, x1_ = 0, p1 = 1]
+States for substitution:	[p6 = 3, x2_ = 1, x3_ = 2, p4 = 2, p3 = 2, p1 = 1, x1_ = 0, u0_ = 0, p7 = 3]
 NonID parameters:	[]
-Substitutions:	[p4 = 3, p3 = 3, p6 = 4, x2_ = 2, x3_ = 3, u0_ = 1, z_aux = 3, p7 = 4, x1_ = 1, p1 = 2]
-memory used=93.3MB, alloc=87.2MB, time=0.55
+Substitutions:	[p6 = 4, x2_ = 2, x3_ = 3, z_aux = 3, x1_ = 1, u0_ = 1, p7 = 4]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t), u0(t)]
+Output variables:         [y(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [p1, p3, p4, p6, p7]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [p1, p3, p4, p6, p7, x1(0), x2(0), x3(0), u0(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[p6 = 3, x2_ = 1, x3_ = 2, p4 = 2, p3 = 2, p1 = 1, x1_ = 0, u0_ = 0, p7 = 3]
+NonID parameters:	[]
+Substitutions:	[p6 = 4, x2_ = 2, x3_ = 3, z_aux = 3, x1_ = 1, u0_ = 1, p7 = 4]
+memory used=144.0MB, alloc=84.7MB, time=0.79

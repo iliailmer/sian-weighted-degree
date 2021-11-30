@@ -66,7 +66,41 @@ Parameters in equations:  [a, c, d]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[c = 2, x2_ = 1, b_ = 0, d = 2, a = 1, x1_ = 0]
+States for substitution:	[d = 2, a = 1, x1_ = 0, x2_ = 1, b_ = 0, c = 2]
 NonID parameters:	[b, x2_0]
-Substitutions:	[c = 3, z_aux = 2, x2_ = 2, b_ = 1, d = 3, a = 2, x1_ = 1]
-memory used=54.1MB, alloc=44.3MB, time=0.39
+Substitutions:	[d = 3, x1_ = 1, x2_ = 2, b_ = 1, z_aux = 2, c = 3]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t)]
+Output variables:         [y(t)]
+Input variables:          []
+Parameters in equations:  [a, b, c, d]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [a, c, d, x1(0)]
+Nonidentifiable parameter:  [b, x2(0)]
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[d = 2, a = 1, b = 1, x1_ = 0, x2_ = 1, c = 2]
+NonID parameters:	[b, x2_0]
+Substitutions:	[d = 3, x1_ = 1, x2_ = 2, z_aux = 2, c = 3]
+memory used=68.5MB, alloc=44.3MB, time=0.67

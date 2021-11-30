@@ -52,7 +52,8 @@ end proc:
 
 SubsByDepth := proc(sigma, {trdegsub:=true})
   local system_vars, non_id, counting_table_states, min_count, vts, rhs_terms, max_possible,
-        rhs_term, indets_, term, substitutions, sigma_new, each;
+        rhs_term, indets_, term, substitutions, sigma_new, each, alg_indep, original_et_hat,
+        all_subs, names, selection, other;
   
   system_vars, non_id, sigma_new, alg_indep:= GetPolySystem(sigma, GetParameters(sigma), sub_transc=trdegsub):
   

@@ -52,7 +52,41 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b2 = 3, ka = 1, x1_ = 0, x2_ = 1, a1 = 1, kc = 1, n = 1, x3_ = 1, x4_ = 2, b1 = 2]
+States for substitution:	[ka = 1, b2 = 3, x3_ = 1, a1 = 1, x1_ = 0, kc = 1, n = 1, b1 = 2, x2_ = 1, x4_ = 2]
 NonID parameters:	[]
-Substitutions:	[b2 = 4, z_aux = 3, ka = 2, x1_ = 1, x2_ = 2, a1 = 2, kc = 2, n = 2, x3_ = 2, x4_ = 3, b1 = 3]
-memory used=664.0MB, alloc=112.3MB, time=3.89
+Substitutions:	[b2 = 4, x3_ = 2, z_aux = 3, x1_ = 1, x2_ = 2, x4_ = 3]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t), x4(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [a1, b1, b2, ka, kc, n]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [a1, b1, b2, ka, kc, n, x1(0), x2(0), x3(0), x4(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[ka = 1, b2 = 3, x3_ = 1, a1 = 1, x1_ = 0, kc = 1, n = 1, b1 = 2, x2_ = 1, x4_ = 2]
+NonID parameters:	[]
+Substitutions:	[b2 = 4, x3_ = 2, z_aux = 3, x1_ = 1, x2_ = 2, x4_ = 3]
+memory used=1245.1MB, alloc=128.3MB, time=6.67

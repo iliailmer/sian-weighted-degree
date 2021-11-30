@@ -53,7 +53,41 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k = 0, dz = 2, i_ = 0, w_ = 1, al = 2, s_ = 0, bi = 1, r_ = 0, mu = 1, bw = 1, g = 1]
+States for substitution:	[bi = 1, bw = 1, r_ = 0, g = 1, s_ = 0, al = 2, mu = 1, w_ = 1, i_ = 0, k = 0, dz = 2]
 NonID parameters:	[]
-Substitutions:	[dz = 3, i_ = 1, w_ = 2, al = 3, z_aux = 2, s_ = 1, bi = 2, r_ = 1, mu = 2, bw = 2, g = 2]
-memory used=184.0MB, alloc=119.3MB, time=1.34
+Substitutions:	[z_aux = 2, r_ = 1, s_ = 1, al = 3, w_ = 2, i_ = 1, dz = 3]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), i(t), w(t), r(t)]
+Output variables:         [y1(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [al, bi, bw, dz, g, k, mu]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [al, bi, bw, dz, g, k, mu, s(0), i(0), w(0), r(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[bi = 1, bw = 1, r_ = 0, g = 1, s_ = 0, al = 2, mu = 1, w_ = 1, i_ = 0, k = 0, dz = 2]
+NonID parameters:	[]
+Substitutions:	[z_aux = 2, r_ = 1, s_ = 1, al = 3, w_ = 2, i_ = 1, dz = 3]
+memory used=292.0MB, alloc=119.4MB, time=1.79

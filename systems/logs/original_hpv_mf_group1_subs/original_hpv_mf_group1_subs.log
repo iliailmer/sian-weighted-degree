@@ -52,7 +52,41 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[betaGGFM = 1, IGM_ = 0, mu = 1, nuOGF = 2, IOM_ = 0, nuGOF = 2, SF_ = 2, gammaGF = 2, betaGOFM = 1, betaGOMF = 2, IOGM_ = 0, betaOGFM = 1, gammaOF = 2, IGF_ = 1, betaOOFM = 1, betaOOMF = 2, gammaGM = 1, nuGOM = 1, IOF_ = 1, betaOGMF = 2, nuOGM = 1, SM_ = 1, IOGF_ = 1, gammaOM = 1, betaGGMF = 2]
+States for substitution:	[gammaOM = 1, SM_ = 1, betaOOMF = 2, betaOOFM = 1, nuOGM = 1, IOGF_ = 1, mu = 1, nuGOM = 1, betaGGMF = 2, gammaGM = 1, IGF_ = 1, IOF_ = 1, betaOGMF = 2, SF_ = 2, gammaOF = 2, IOGM_ = 0, gammaGF = 2, betaGGFM = 1, betaOGFM = 1, nuGOF = 2, IGM_ = 0, betaGOMF = 2, betaGOFM = 1, nuOGF = 2, IOM_ = 0]
 NonID parameters:	[]
-Substitutions:	[betaGGFM = 2, IGM_ = 1, mu = 2, nuOGF = 3, IOM_ = 1, nuGOF = 3, SF_ = 3, gammaGF = 3, betaGOFM = 2, betaGOMF = 3, z_aux = 2, IOGM_ = 1, betaOGFM = 2, gammaOF = 3, IGF_ = 2, betaOOFM = 2, betaOOMF = 3, gammaGM = 2, nuGOM = 2, IOF_ = 2, betaOGMF = 3, nuOGM = 2, SM_ = 2, IOGF_ = 2, gammaOM = 2, betaGGMF = 3]
-memory used=11797.2MB, alloc=152.3MB, time=48.72
+Substitutions:	[SM_ = 2, betaOOMF = 3, z_aux = 2, IOGF_ = 2, betaGGMF = 3, IGF_ = 2, IOF_ = 2, betaOGMF = 3, SF_ = 3, gammaOF = 3, IOGM_ = 1, gammaGF = 3, nuGOF = 3, IGM_ = 1, betaGOMF = 3, nuOGF = 3, IOM_ = 1]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [SM(t), IOM(t), IGM(t), IOGM(t), SF(t), IOF(t), IGF(t), IOGF(t)]
+Output variables:         [y1(t), y2(t), y3(t)]
+Input variables:          []
+Parameters in equations:  [gammaGF, gammaGM, gammaOF, gammaOM, mu, nuGOF, nuGOM, nuOGF, nuOGM, betaGGFM, betaGGMF, betaGOFM, betaGOMF, betaOGFM, betaOGMF, betaOOFM, betaOOMF]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [gammaGF, gammaGM, gammaOF, gammaOM, mu, nuGOF, nuGOM, nuOGF, nuOGM, betaGGFM, betaGGMF, betaGOFM, betaGOMF, betaOGFM, betaOGMF, betaOOFM, betaOOMF, SM(0), IOM(0), IGM(0), IOGM(0), SF(0), IOF(0), IGF(0), IOGF(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[gammaOM = 1, SM_ = 1, betaOOMF = 2, betaOOFM = 1, nuOGM = 1, IOGF_ = 1, mu = 1, nuGOM = 1, betaGGMF = 2, gammaGM = 1, IGF_ = 1, IOF_ = 1, betaOGMF = 2, SF_ = 2, gammaOF = 2, IOGM_ = 0, gammaGF = 2, betaGGFM = 1, betaOGFM = 1, nuGOF = 2, IGM_ = 0, betaGOMF = 2, betaGOFM = 1, nuOGF = 2, IOM_ = 0]
+NonID parameters:	[]
+Substitutions:	[SM_ = 2, betaOOMF = 3, z_aux = 2, IOGF_ = 2, betaGGMF = 3, IGF_ = 2, IOF_ = 2, betaOGMF = 3, SF_ = 3, gammaOF = 3, IOGM_ = 1, gammaGF = 3, nuGOF = 3, IGM_ = 1, betaGOMF = 3, nuOGF = 3, IOM_ = 1]
+memory used=14600.4MB, alloc=211.8MB, time=62.57

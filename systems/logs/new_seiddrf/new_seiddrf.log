@@ -67,9 +67,9 @@ Parameters in equations:  [b, g, g_d, mu0, mu_d, mu_i, n, nu, q, sgm, sgm_d, the
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[mu_d = 1, sgm = 1, n = 1, phi_i_ = 0, theta_e = 1, g_d = 2, b = 1, Di_ = 1, mu_i = 1, mu0 = 1, i_ = 0, s_ = 0, theta_i = 1, De_ = 0, nu = 1, f_ = 0, e_ = 1, g = 1, sgm_d = 1, phi_e_ = 0, q = 1]
+States for substitution:	[mu_i = 1, Di_ = 1, g = 1, g_d = 2, theta_e = 1, phi_i_ = 0, sgm = 1, mu_d = 1, q = 1, sgm_d = 1, f_ = 0, phi_e_ = 0, e_ = 1, nu = 1, De_ = 0, b = 1, theta_i = 1, mu0 = 1, s_ = 0, n = 1, i_ = 0]
 NonID parameters:	[Di_0, b, g, mu_i, n, nu, phi_e, phi_i, q, r_0, theta_e, theta_i]
-Substitutions:	[phi_i_ = 1, g_d = 3, Di_ = 2, z_aux = 2, i_ = 1, s_ = 1, De_ = 1, e_ = 2, phi_e_ = 1]
+Substitutions:	[Di_ = 2, g_d = 3, phi_i_ = 1, z_aux = 2, phi_e_ = 1, e_ = 2, De_ = 1, s_ = 1, i_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -101,7 +101,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[mu_d = 1, sgm = 1, n = 1, theta_e = 1, g_d = 2, b = 1, phi_e = 1, Di_ = 1, mu_i = 1, mu0 = 1, i_ = 0, s_ = 0, theta_i = 1, De_ = 0, nu = 1, phi_i = 1, f_ = 0, e_ = 1, g = 1, sgm_d = 1, q = 1]
+States for substitution:	[mu_i = 1, Di_ = 1, phi_e = 1, g = 1, g_d = 2, theta_e = 1, sgm = 1, mu_d = 1, q = 1, sgm_d = 1, f_ = 0, e_ = 1, phi_i = 1, nu = 1, De_ = 0, b = 1, theta_i = 1, mu0 = 1, s_ = 0, n = 1, i_ = 0]
 NonID parameters:	[Di_0, b, g, mu_i, n, nu, phi_e, phi_i, q, r_0, theta_e, theta_i]
-Substitutions:	[g_d = 3, Di_ = 2, z_aux = 2, i_ = 1, s_ = 1, De_ = 1, e_ = 2]
-memory used=3733.4MB, alloc=152.3MB, time=17.70
+Substitutions:	[Di_ = 2, g_d = 3, z_aux = 2, e_ = 2, De_ = 1, s_ = 1, i_ = 1]
+memory used=3727.5MB, alloc=152.3MB, time=17.30

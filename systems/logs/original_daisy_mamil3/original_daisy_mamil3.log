@@ -53,7 +53,41 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a31 = 1, a01 = 1, x1_ = 0, a21 = 1, x2_ = 1, x3_ = 1, a12 = 1, (NULL) = 1, a13 = 1]
+States for substitution:	[a13 = 1, a12 = 1, x3_ = 1, x2_ = 1, x1_ = 0, a21 = 1, a31 = 1, a01 = 1, (NULL) = 1]
 NonID parameters:	[]
-Substitutions:	[a31 = 2, z_aux = 1, a01 = 2, x1_ = 1, a21 = 2, x2_ = 2, x3_ = 2, a12 = 2, a13 = 2]
-memory used=60.4MB, alloc=44.3MB, time=0.42
+Substitutions:	[a13 = 2, z_aux = 1, a12 = 2, x3_ = 2, x2_ = 2, x1_ = 1, a21 = 2, a31 = 2, a01 = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t)]
+Output variables:         [y(t)]
+Input variables:          [u(t)]
+Parameters in equations:  [a01, a12, a13, a21, a31]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [a01, a12, a13, a21, a31, x1(0), x2(0), x3(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[a13 = 1, a12 = 1, x3_ = 1, x2_ = 1, x1_ = 0, a21 = 1, a31 = 1, a01 = 1, (NULL) = 1]
+NonID parameters:	[]
+Substitutions:	[a13 = 2, z_aux = 1, a12 = 2, x3_ = 2, x2_ = 2, x1_ = 1, a21 = 2, a31 = 2, a01 = 2]
+memory used=93.1MB, alloc=44.3MB, time=0.58

@@ -52,7 +52,41 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[eA_ = 0, k2 = 1, xC_ = 0, eB = 0, k1 = 1, eC_ = 0, xB_ = 0, xA_ = 0]
+States for substitution:	[xA_ = 0, eA_ = 0, k1 = 1, eC_ = 0, eB = 0, xB_ = 0, k2 = 1, xC_ = 0]
 NonID parameters:	[]
-Substitutions:	[z_aux = 1, k2 = 2, k1 = 2, xB_ = 1, xA_ = 1]
-memory used=59.2MB, alloc=78.3MB, time=0.44
+Substitutions:	[xA_ = 1, z_aux = 1, k1 = 2, xB_ = 1, k2 = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [xA(t), xB(t), xC(t), eA(t), eC(t)]
+Output variables:         [y1(t), y2(t), y3(t), y4(t)]
+Input variables:          []
+Parameters in equations:  [eB, k1, k2]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [eB, k1, k2, xA(0), xB(0), xC(0), eA(0), eC(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[xA_ = 0, eA_ = 0, k1 = 1, eC_ = 0, eB = 0, xB_ = 0, k2 = 1, xC_ = 0]
+NonID parameters:	[]
+Substitutions:	[xA_ = 1, z_aux = 1, k1 = 2, xB_ = 1, k2 = 2]
+memory used=86.8MB, alloc=108.3MB, time=0.58

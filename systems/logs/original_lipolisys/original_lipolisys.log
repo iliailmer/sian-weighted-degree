@@ -52,9 +52,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x3_ = 0, k2 = 1, x5_ = 1, k4 = 1, x4_ = 0, x1_ = 0, x2_ = 0, k3 = 2]
+States for substitution:	[x5_ = 1, x4_ = 0, x3_ = 0, x1_ = 0, k2 = 1, k3 = 2, k4 = 1, x2_ = 0]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, x3_ = 1, k2 = 2, x5_ = 2, k4 = 2, x1_ = 1, x2_ = 1, k3 = 3]
+Substitutions:	[x5_ = 2, x3_ = 1, x1_ = 1, k3 = 3, x2_ = 1, z_aux = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -87,7 +87,41 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x3_ = 0, k2 = 1, x5_ = 1, k4 = 1, x4_ = 0, x1_ = 0, x2_ = 0, k3 = 2]
+States for substitution:	[x5_ = 1, x4_ = 0, x3_ = 0, x1_ = 0, k2 = 1, k3 = 2, k4 = 1, x2_ = 0]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, x3_ = 1, k2 = 2, x5_ = 2, k4 = 2, x1_ = 1, x2_ = 1, k3 = 3]
-memory used=150.4MB, alloc=112.3MB, time=1.19
+Substitutions:	[x5_ = 2, x3_ = 1, x1_ = 1, k3 = 3, x2_ = 1, z_aux = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t), x4(t), x5(t)]
+Output variables:         [y1(t), y2(t), y3(t)]
+Input variables:          []
+Parameters in equations:  [k2, k3, k4]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [k2, k3, k4, x1(0), x2(0), x3(0), x4(0), x5(0)]
+Nonidentifiable parameter:  []
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[x5_ = 1, x4_ = 0, x3_ = 0, x1_ = 0, k2 = 1, k3 = 2, k4 = 1, x2_ = 0]
+NonID parameters:	[]
+Substitutions:	[x5_ = 2, x3_ = 1, x1_ = 1, k3 = 3, x2_ = 1, z_aux = 2]
+memory used=198.7MB, alloc=112.3MB, time=1.46

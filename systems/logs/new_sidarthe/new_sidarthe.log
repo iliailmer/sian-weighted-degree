@@ -74,9 +74,9 @@ Parameters in equations:  [a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho,
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[kappa = 2, In_ = 1, th = 1, g = 2, rho = 1, ta = 1, Dd_ = 0, mu = 1, Tt_ = 0, eta = 2, a = 2, lam = 2, b = 2, zeta = 2, S_ = 2, eps = 1, nu = 2, R_ = 0, A_ = 1, sgm_ = 0, ksi = 1, dlt = 2]
+States for substitution:	[zeta = 2, S_ = 2, g = 2, lam = 2, mu = 1, R_ = 0, A_ = 1, dlt = 2, ksi = 1, sgm_ = 0, nu = 2, eps = 1, th = 1, Dd_ = 0, kappa = 2, Tt_ = 0, In_ = 1, a = 2, eta = 2, b = 2, ta = 1, rho = 1]
 NonID parameters:	[A_0, E_0, Hh_0, In_0, R_0, S_0, Tt_0, a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho, sgm, ta, th, zeta]
-Substitutions:	[In_ = 2, z_aux = 2, Dd_ = 1, Tt_ = 1, S_ = 3, R_ = 1, A_ = 2, sgm_ = 1]
+Substitutions:	[S_ = 3, R_ = 1, A_ = 2, z_aux = 2, sgm_ = 1, Dd_ = 1, Tt_ = 1, In_ = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -108,7 +108,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[kappa = 2, In_ = 1, th = 1, g = 2, rho = 1, ta = 1, Dd_ = 0, mu = 1, Tt_ = 0, eta = 2, a = 2, lam = 2, b = 2, sgm = 1, zeta = 2, S_ = 2, eps = 1, nu = 2, R_ = 0, A_ = 1, ksi = 1, dlt = 2]
+States for substitution:	[zeta = 2, sgm = 1, S_ = 2, g = 2, lam = 2, mu = 1, R_ = 0, A_ = 1, dlt = 2, ksi = 1, nu = 2, eps = 1, th = 1, Dd_ = 0, kappa = 2, Tt_ = 0, In_ = 1, a = 2, eta = 2, b = 2, ta = 1, rho = 1]
 NonID parameters:	[A_0, E_0, Hh_0, In_0, R_0, S_0, Tt_0, a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho, sgm, ta, th, zeta]
-Substitutions:	[In_ = 2, z_aux = 2, Dd_ = 1, Tt_ = 1, S_ = 3, R_ = 1, A_ = 2]
-memory used=8256.8MB, alloc=179.8MB, time=41.30
+Substitutions:	[S_ = 3, R_ = 1, A_ = 2, z_aux = 2, Dd_ = 1, Tt_ = 1, In_ = 2]
+memory used=8244.5MB, alloc=179.8MB, time=40.84

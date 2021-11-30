@@ -67,9 +67,9 @@ Parameters in equations:  [alpha, eta, gamma_a, gamma_i, n, sgm]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[dlt_ = 0, sgm = 1, eta = 1, gamma_h_ = 0, gamma_i = 1, (NULL) = 1, n = 1, alpha = 1, s_ = 0, e_ = 1, a_ = 1, i_ = 0, gamma_a = 2, Phi_ = 0]
+States for substitution:	[n = 1, gamma_a = 2, (NULL) = 1, i_ = 0, Phi_ = 0, alpha = 1, e_ = 1, a_ = 1, gamma_h_ = 0, s_ = 0, gamma_i = 1, sgm = 1, dlt_ = 0, eta = 1]
 NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
-Substitutions:	[dlt_ = 1, gamma_h_ = 1, s_ = 1, e_ = 2, a_ = 2, z_aux = 2, i_ = 1, gamma_a = 3, Phi_ = 1]
+Substitutions:	[gamma_a = 3, i_ = 1, Phi_ = 1, e_ = 2, a_ = 2, gamma_h_ = 1, s_ = 1, z_aux = 2, dlt_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -101,7 +101,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[sgm = 1, eta = 1, gamma_i = 1, (NULL) = 1, n = 1, alpha = 1, Phi = 1, s_ = 0, e_ = 1, a_ = 1, i_ = 0, gamma_a = 2]
+States for substitution:	[n = 1, gamma_a = 2, (NULL) = 1, i_ = 0, alpha = 1, e_ = 1, a_ = 1, s_ = 0, gamma_i = 1, Phi = 1, sgm = 1, eta = 1]
 NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
-Substitutions:	[s_ = 1, e_ = 2, a_ = 2, z_aux = 2, i_ = 1, gamma_a = 3]
-memory used=3608.4MB, alloc=120.3MB, time=17.16
+Substitutions:	[gamma_a = 3, i_ = 1, e_ = 2, a_ = 2, s_ = 1, z_aux = 2]
+memory used=3592.8MB, alloc=120.3MB, time=17.79

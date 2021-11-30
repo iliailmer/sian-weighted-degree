@@ -66,7 +66,41 @@ Parameters in equations:  [beta, c, d, mu1, mu2, q1, q2, s]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[s = 1, mu1 = 3, x4_ = 0, q1 = 3, x2_ = 2, beta = 1, c = 1, d = 1, mu2 = 2, k1_ = 0, x1_ = 0, k2_ = 0, x3_ = 1, q2 = 2]
+States for substitution:	[q1 = 3, x4_ = 0, mu1 = 3, beta = 1, k2_ = 0, k1_ = 0, q2 = 2, x2_ = 2, d = 1, mu2 = 2, c = 1, s = 1, x1_ = 0, x3_ = 1]
 NonID parameters:	[k1, k2, mu1, q1, q2, x2_0, x3_0]
-Substitutions:	[s = 2, x4_ = 1, z_aux = 3, x2_ = 3, beta = 2, c = 2, d = 2, mu2 = 3, x1_ = 1, k1_ = 1, k2_ = 1, x3_ = 2]
-memory used=396.4MB, alloc=130.9MB, time=2.15
+Substitutions:	[x4_ = 1, z_aux = 3, k2_ = 1, k1_ = 1, x2_ = 3, x1_ = 1, x3_ = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t), x4(t)]
+Output variables:         [y1(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [beta, c, d, k1, k2, mu1, mu2, q1, q2, s]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [beta, c, d, mu2, s, x1(0), x4(0)]
+Nonidentifiable parameter:  [k1, k2, mu1, q1, q2, x2(0), x3(0)]
+No algebraically independent parameters found.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[q1 = 3, k1 = 2, x4_ = 0, mu1 = 3, beta = 1, q2 = 2, x2_ = 2, d = 1, mu2 = 2, c = 1, s = 1, x1_ = 0, k2 = 1, x3_ = 1]
+NonID parameters:	[k1, k2, mu1, q1, q2, x2_0, x3_0]
+Substitutions:	[x4_ = 1, z_aux = 3, x2_ = 3, x1_ = 1, x3_ = 2]
+memory used=515.0MB, alloc=130.8MB, time=2.71
