@@ -9,14 +9,49 @@ for s in "${shortscripts[@]}"; do
 done
 
 for each in "${array[@]}"; do
-    for d in $each/*_pos_char.m; do
-        outname="${d::-2}.out"
-        timename="${d::-2}_time.out"
-        echo $outname
-        (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" magma $d) >$outname 2>$timename
-        if [[ map[$each] ]]; then
+    mkdir -p $each/runtimes
+    mkdir -p $each/outputs
+    for d in $each/*_original_with_trb_pos_char.m; do
+        outname="original_with_trb_pos_char.out"
+        timename="original_with_trb_pos_char_time.out"
+        echo $d
+        (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" magma $d) >$each/outputs/$outname 2>$each/runtimes/$timename
+        if [[ ${map["$each"]} ]]; then
             for iter in {1..10}; do
-                (/usr/bin/time -f "\n%e,=%U+%S,%M000" magma $d) >>$outname 2>>$timename
+                (/usr/bin/time -f "\n%e,=%U+%S,%M000" magma $d) >>$each/outputs/$outname 2>>$each/runtimes/$timename
+            done
+        fi
+    done
+    for d in $each/*_original_no_trb_pos_char.m; do
+        outname="original_no_trb_pos_char.out"
+        timename="original_no_trb_pos_char_time.out"
+        echo $d
+        (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" magma $d) >$each/outputs/$outname 2>$each/runtimes/$timename
+        if [[ ${map["$each"]} ]]; then
+            for iter in {1..10}; do
+                (/usr/bin/time -f "\n%e,=%U+%S,%M000" magma $d) >>$each/outputs/$outname 2>>$each/runtimes/$timename
+            done
+        fi
+    done
+    for d in $each/*_weights_with_trb_pos_char.m; do
+        outname="weights_with_trb_pos_char.out"
+        timename="weights_with_trb_pos_char_time.out"
+        echo $d
+        (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" magma $d) >$each/outputs/$outname 2>$each/runtimes/$timename
+        if [[ ${map["$each"]} ]]; then
+            for iter in {1..10}; do
+                (/usr/bin/time -f "\n%e,=%U+%S,%M000" magma $d) >>$each/outputs/$outname 2>>$each/runtimes/$timename
+            done
+        fi
+    done
+    for d in $each/*_weights_no_trb_pos_char.m; do
+        outname="weights_no_trb_pos_char.out"
+        timename="weights_no_trb_pos_char_time.out"
+        echo $d
+        (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" magma $d) >$each/outputs/$outname 2>$each/runtimes/$timename
+        if [[ ${map["$each"]} ]]; then
+            for iter in {1..10}; do
+                (/usr/bin/time -f "\n%e,=%U+%S,%M000" magma $d) >>$each/outputs/$outname 2>>$each/runtimes/$timename
             done
         fi
     done
