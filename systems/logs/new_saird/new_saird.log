@@ -12,10 +12,10 @@
 =======================================================
 
 === Input info ===
-State variables:          [S(t), A(t), In(t), R(t), Dd(t), N(t)]
-Output variables:         [y1(t), y2(t)]
+State variables:          [S(t), A(t), In(t), R(t), Dd(t)]
+Output variables:         [y1(t)]
 Input variables:          []
-Parameters in equations:  [b0, dlt, g, gam, k, zeta0]
+Parameters in equations:  [N, b0, dlt, g, gam, k, zeta0]
 ===================
 
 
@@ -30,20 +30,20 @@ Parameters in equations:  [b0, dlt, g, gam, k, zeta0]
 =======================================================
 3. Assessing local identifiability
 =======================================================
-{Dd_0, N_0, b0}
+{Dd_0, N, b0}
 Locally identifiable paramters:  [dlt, gam, k, S(0), A(0), In(0), R(0)]
-Nonidentifiable parameter:  [Dd(0), N(0), b0, g, zeta0]
-Algebraically independent parameters {b0, Dd(0), N(0)}
+Nonidentifiable parameter:  [Dd(0), N, b0, g, zeta0]
+Algebraically independent parameters {N, b0, Dd(0)}
 
 =======================================================
 Substituting transcendence basis.
 =======================================================
-Algebraically independent parameters among nonidentifiable: {b0}
-Algebraically independent parameters among derivatives: {Dd(0), N(0)}
+Algebraically independent parameters among nonidentifiable: {N, b0}
+Algebraically independent parameters among derivatives: {Dd(0)}
 
 === Input info ===
-State variables:          [b0(t), S(t), A(t), In(t), R(t), Dd(t), N(t)]
-Output variables:         [y1(t), y2(t), y_faux1(t)]
+State variables:          [N(t), b0(t), S(t), A(t), In(t), R(t), Dd(t)]
+Output variables:         [y1(t), y_faux1(t), y_faux2(t)]
 Input variables:          []
 Parameters in equations:  [dlt, g, gam, k, zeta0]
 ===================
@@ -52,19 +52,19 @@ Parameters in equations:  [dlt, g, gam, k, zeta0]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k = 1, In_ = 0, R_ = 0, dlt = 1, A_ = 1, S_ = 2, N_ = 2, gam = 1, g = 2, zeta0 = 2, b0_ = 0]
-NonID parameters:	[Dd_0, N_0, b0, g, zeta0]
-Substitutions:	[In_ = 1, A_ = 2, z_aux = 2, S_ = 3, N_ = 3, b0_ = 1]
+States for substitution:	[In_ = 0, g = 2, R_ = 0, A_ = 1, dlt = 1, S_ = 2, b0_ = 0, N_ = 0, zeta0 = 2, gam = 2, k = 1]
+NonID parameters:	[Dd_0, N, b0, g, zeta0]
+Substitutions:	[In_ = 1, A_ = 2, z_aux = 2, S_ = 3, b0_ = 1, N_ = 1, gam = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
 =======================================================
 
 === Input info ===
-State variables:          [S(t), A(t), In(t), R(t), Dd(t), N(t)]
-Output variables:         [y1(t), y2(t)]
+State variables:          [S(t), A(t), In(t), R(t), Dd(t)]
+Output variables:         [y1(t)]
 Input variables:          []
-Parameters in equations:  [b0, dlt, g, gam, k, zeta0]
+Parameters in equations:  [N, b0, dlt, g, gam, k, zeta0]
 ===================
 
 
@@ -80,13 +80,13 @@ Parameters in equations:  [b0, dlt, g, gam, k, zeta0]
 3. Assessing local identifiability
 =======================================================
 Locally identifiable paramters:  [dlt, gam, k, S(0), A(0), In(0), R(0)]
-Nonidentifiable parameter:  [Dd(0), N(0), b0, g, zeta0]
+Nonidentifiable parameter:  [Dd(0), N, b0, g, zeta0]
 No algebraically independent parameters found.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b0 = 2, k = 1, In_ = 0, R_ = 0, dlt = 1, A_ = 1, S_ = 2, N_ = 2, gam = 1, g = 2, zeta0 = 2]
-NonID parameters:	[Dd_0, N_0, b0, g, zeta0]
-Substitutions:	[In_ = 1, A_ = 2, z_aux = 2, S_ = 3, N_ = 3]
-memory used=790.1MB, alloc=152.3MB, time=3.98
+States for substitution:	[In_ = 0, g = 2, R_ = 0, A_ = 1, dlt = 1, b0 = 2, S_ = 2, N = 2, zeta0 = 2, gam = 2, k = 1]
+NonID parameters:	[Dd_0, N, b0, g, zeta0]
+Substitutions:	[In_ = 1, A_ = 2, z_aux = 2, S_ = 3, gam = 3]
+memory used=1556.6MB, alloc=112.3MB, time=7.65

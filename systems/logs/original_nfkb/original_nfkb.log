@@ -54,9 +54,9 @@ Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_d
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x13_ = 0, c_4a = 1, k2 = 1, x9_ = 0, x14_ = 1, k3 = 1, x12_ = 0, x10_ = 0, x8_ = 1, x5_ = 1, x6_ = 1, x3_ = 0, c5 = 2, x4_ = 1, x1_ = 0, x2_ = 0, x11_ = 1, e_2a = 1, x7_ = 0, c_3a = 1, k_prod = 1, t1 = 1, t2 = 1, k_deg = 1, c_2a = 1, k1 = 1, (NULL) = 1, i1 = 1, i_1a = 1]
+States for substitution:	[k_deg = 1, t2 = 1, c_2a = 1, x13_ = 0, k1 = 1, i_1a = 1, i1 = 1, x5_ = 1, e_2a = 1, x6_ = 1, x3_ = 0, x4_ = 1, x9_ = 0, x10_ = 0, x7_ = 0, x8_ = 1, c_3a = 1, x14_ = 1, t1 = 1, x12_ = 0, k_prod = 1, x1_ = 0, k3 = 1, (NULL) = 1, x11_ = 1, x2_ = 0, c5 = 2, c_4a = 1, k2 = 1]
 NonID parameters:	[x15_0]
-Substitutions:	[x13_ = 1, x9_ = 1, x14_ = 2, x12_ = 1, x10_ = 1, x8_ = 2, x5_ = 2, x6_ = 2, x3_ = 1, c5 = 3, x4_ = 2, x1_ = 1, z_aux = 2, x2_ = 1, x11_ = 2, x7_ = 1]
+Substitutions:	[z_aux = 2, x13_ = 1, x5_ = 2, x6_ = 2, x3_ = 1, x4_ = 2, x9_ = 1, x10_ = 1, x7_ = 1, x8_ = 2, x14_ = 2, x12_ = 1, x1_ = 1, x11_ = 2, x2_ = 1, c5 = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -88,7 +88,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x13_ = 0, c_4a = 1, k2 = 1, x9_ = 0, x14_ = 1, k3 = 1, x12_ = 0, x10_ = 0, x8_ = 1, x5_ = 1, x6_ = 1, x3_ = 0, c5 = 2, x4_ = 1, x1_ = 0, x2_ = 0, x11_ = 1, e_2a = 1, x7_ = 0, c_3a = 1, k_prod = 1, t1 = 1, t2 = 1, k_deg = 1, c_2a = 1, k1 = 1, (NULL) = 1, i1 = 1, i_1a = 1]
+States for substitution:	[k_deg = 1, t2 = 1, c_2a = 1, x13_ = 0, k1 = 1, i_1a = 1, i1 = 1, x5_ = 1, e_2a = 1, x6_ = 1, x3_ = 0, x4_ = 1, x9_ = 0, x10_ = 0, x7_ = 0, x8_ = 1, c_3a = 1, x14_ = 1, t1 = 1, x12_ = 0, k_prod = 1, x1_ = 0, k3 = 1, (NULL) = 1, x11_ = 1, x2_ = 0, c5 = 2, c_4a = 1, k2 = 1]
 NonID parameters:	[x15_0]
-Substitutions:	[x13_ = 1, x9_ = 1, x14_ = 2, x12_ = 1, x10_ = 1, x8_ = 2, x5_ = 2, x6_ = 2, x3_ = 1, c5 = 3, x4_ = 2, x1_ = 1, z_aux = 2, x2_ = 1, x11_ = 2, x7_ = 1]
-memory used=38333.1MB, alloc=185.4MB, time=166.03
+Substitutions:	[z_aux = 2, x13_ = 1, x5_ = 2, x6_ = 2, x3_ = 1, x4_ = 2, x9_ = 1, x10_ = 1, x7_ = 1, x8_ = 2, x14_ = 2, x12_ = 1, x1_ = 1, x11_ = 2, x2_ = 1, c5 = 3]
+memory used=37498.6MB, alloc=185.7MB, time=171.99

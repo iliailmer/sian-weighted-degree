@@ -44,9 +44,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[betaGO = 1, betaOO = 1, nuOG = 2, IG_ = 1, gammaG = 2, IOG_ = 0, mu = 1, betaGG = 2, nuGO = 1, IO_ = 0, gammaO = 1, betaOG = 2]
+States for substitution:	[IOG_ = 0, betaOG = 2, IG_ = 1, gammaO = 1, nuGO = 1, betaGG = 2, gammaG = 2, IO_ = 0, nuOG = 2, betaOO = 1, betaGO = 1, mu = 1]
 NonID parameters:	[]
-Substitutions:	[nuOG = 3, IG_ = 2, gammaG = 3, IOG_ = 1, betaGG = 3, IO_ = 1, z_aux = 2, betaOG = 3]
+Substitutions:	[IOG_ = 1, betaOG = 3, IG_ = 2, betaGG = 3, gammaG = 3, z_aux = 2, IO_ = 1, nuOG = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -78,7 +78,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[betaGO = 1, betaOO = 1, nuOG = 2, IG_ = 1, gammaG = 2, IOG_ = 0, mu = 1, betaGG = 2, nuGO = 1, IO_ = 0, gammaO = 1, betaOG = 2]
+States for substitution:	[IOG_ = 0, betaOG = 2, IG_ = 1, gammaO = 1, nuGO = 1, betaGG = 2, gammaG = 2, IO_ = 0, nuOG = 2, betaOO = 1, betaGO = 1, mu = 1]
 NonID parameters:	[]
-Substitutions:	[nuOG = 3, IG_ = 2, gammaG = 3, IOG_ = 1, betaGG = 3, IO_ = 1, z_aux = 2, betaOG = 3]
-memory used=739.3MB, alloc=170.4MB, time=4.90
+Substitutions:	[IOG_ = 1, betaOG = 3, IG_ = 2, betaGG = 3, gammaG = 3, z_aux = 2, IO_ = 1, nuOG = 3]
+memory used=617.4MB, alloc=171.7MB, time=4.02

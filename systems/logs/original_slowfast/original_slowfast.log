@@ -37,9 +37,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[xA_ = 0, k2 = 1, eC_ = 0, k1 = 1, eA_ = 0, eB = 0, xC_ = 0, xB_ = 0]
+States for substitution:	[eB = 0, xA_ = 0, k1 = 1, eA_ = 0, eC_ = 0, xB_ = 0, xC_ = 0, k2 = 1]
 NonID parameters:	[]
-Substitutions:	[xA_ = 1, z_aux = 1, k2 = 2, k1 = 2, xB_ = 1]
+Substitutions:	[xA_ = 1, k1 = 2, xB_ = 1, z_aux = 1, k2 = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -71,7 +71,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[xA_ = 0, k2 = 1, eC_ = 0, k1 = 1, eA_ = 0, eB = 0, xC_ = 0, xB_ = 0]
+States for substitution:	[eB = 0, xA_ = 0, k1 = 1, eA_ = 0, eC_ = 0, xB_ = 0, xC_ = 0, k2 = 1]
 NonID parameters:	[]
-Substitutions:	[xA_ = 1, z_aux = 1, k2 = 2, k1 = 2, xB_ = 1]
-memory used=87.0MB, alloc=108.3MB, time=0.58
+Substitutions:	[xA_ = 1, k1 = 2, xB_ = 1, z_aux = 1, k2 = 2]
+memory used=98.9MB, alloc=116.3MB, time=0.63

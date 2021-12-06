@@ -52,9 +52,9 @@ Parameters in equations:  [a, b, eta, ksi]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b = 1, S_ = 1, a = 1, Jj_ = 1, U_ = 0, In_ = 0, eta = 1, ksi = 1]
+States for substitution:	[eta = 1, ksi = 1, S_ = 1, In_ = 0, U_ = 0, Jj_ = 1, a = 1, b = 1]
 NonID parameters:	[R_0]
-Substitutions:	[b = 2, S_ = 2, a = 2, Jj_ = 2, In_ = 1, z_aux = 1, eta = 2, ksi = 2]
+Substitutions:	[eta = 2, z_aux = 1, ksi = 2, S_ = 2, In_ = 1, Jj_ = 2, a = 2, b = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -86,7 +86,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b = 1, S_ = 1, a = 1, Jj_ = 1, U_ = 0, In_ = 0, eta = 1, ksi = 1]
+States for substitution:	[eta = 1, ksi = 1, S_ = 1, In_ = 0, U_ = 0, Jj_ = 1, a = 1, b = 1]
 NonID parameters:	[R_0]
-Substitutions:	[b = 2, S_ = 2, a = 2, Jj_ = 2, In_ = 1, z_aux = 1, eta = 2, ksi = 2]
-memory used=266.4MB, alloc=115.0MB, time=1.50
+Substitutions:	[eta = 2, z_aux = 1, ksi = 2, S_ = 2, In_ = 1, Jj_ = 2, a = 2, b = 2]
+memory used=248.3MB, alloc=117.4MB, time=1.43

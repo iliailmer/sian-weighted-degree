@@ -37,9 +37,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[betaOOFM = 1, betaOGMF = 2, SM_ = 1, betaGGMF = 2, gammaGF = 2, gammaOM = 1, IOGF_ = 1, gammaOF = 2, IGF_ = 1, betaOGFM = 1, nuOGF = 2, mu = 1, betaGOFM = 1, IOF_ = 1, SF_ = 2, IOGM_ = 0, betaGGFM = 1, betaGOMF = 2, IGM_ = 0, nuOGM = 1, betaOOMF = 2, nuGOM = 1, IOM_ = 0, gammaGM = 1, nuGOF = 2]
+States for substitution:	[IOF_ = 1, nuGOM = 1, gammaGM = 1, nuGOF = 2, SF_ = 2, nuOGM = 1, IOGM_ = 0, betaOOMF = 2, betaGOMF = 2, betaGGFM = 1, IGM_ = 0, nuOGF = 2, IOM_ = 0, betaGGMF = 2, gammaOF = 2, betaOGMF = 2, SM_ = 1, betaOOFM = 1, mu = 1, betaGOFM = 1, IOGF_ = 1, gammaGF = 2, gammaOM = 1, IGF_ = 1, betaOGFM = 1]
 NonID parameters:	[]
-Substitutions:	[betaOGMF = 3, SM_ = 2, z_aux = 2, betaGGMF = 3, gammaGF = 3, IOGF_ = 2, gammaOF = 3, IGF_ = 2, nuOGF = 3, IOF_ = 2, SF_ = 3, IOGM_ = 1, betaGOMF = 3, IGM_ = 1, betaOOMF = 3, IOM_ = 1, nuGOF = 3]
+Substitutions:	[IOF_ = 2, nuGOF = 3, SF_ = 3, IOGM_ = 1, betaOOMF = 3, betaGOMF = 3, IGM_ = 1, nuOGF = 3, IOM_ = 1, betaGGMF = 3, gammaOF = 3, betaOGMF = 3, SM_ = 2, z_aux = 2, IOGF_ = 2, gammaGF = 3, IGF_ = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -71,7 +71,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[betaOOFM = 1, betaOGMF = 2, SM_ = 1, betaGGMF = 2, gammaGF = 2, gammaOM = 1, IOGF_ = 1, gammaOF = 2, IGF_ = 1, betaOGFM = 1, nuOGF = 2, mu = 1, betaGOFM = 1, IOF_ = 1, SF_ = 2, IOGM_ = 0, betaGGFM = 1, betaGOMF = 2, IGM_ = 0, nuOGM = 1, betaOOMF = 2, nuGOM = 1, IOM_ = 0, gammaGM = 1, nuGOF = 2]
+States for substitution:	[IOF_ = 1, nuGOM = 1, gammaGM = 1, nuGOF = 2, SF_ = 2, nuOGM = 1, IOGM_ = 0, betaOOMF = 2, betaGOMF = 2, betaGGFM = 1, IGM_ = 0, nuOGF = 2, IOM_ = 0, betaGGMF = 2, gammaOF = 2, betaOGMF = 2, SM_ = 1, betaOOFM = 1, mu = 1, betaGOFM = 1, IOGF_ = 1, gammaGF = 2, gammaOM = 1, IGF_ = 1, betaOGFM = 1]
 NonID parameters:	[]
-Substitutions:	[betaOGMF = 3, SM_ = 2, z_aux = 2, betaGGMF = 3, gammaGF = 3, IOGF_ = 2, gammaOF = 3, IGF_ = 2, nuOGF = 3, IOF_ = 2, SF_ = 3, IOGM_ = 1, betaGOMF = 3, IGM_ = 1, betaOOMF = 3, IOM_ = 1, nuGOF = 3]
-memory used=22267.9MB, alloc=184.3MB, time=87.30
+Substitutions:	[IOF_ = 2, nuGOF = 3, SF_ = 3, IOGM_ = 1, betaOOMF = 3, betaGOMF = 3, IGM_ = 1, nuOGF = 3, IOM_ = 1, betaGGMF = 3, gammaOF = 3, betaOGMF = 3, SM_ = 2, z_aux = 2, IOGF_ = 2, gammaGF = 3, IGF_ = 2]
+memory used=13721.7MB, alloc=209.7MB, time=57.87

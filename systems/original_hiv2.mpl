@@ -16,19 +16,7 @@ sigma := [
 
 
 # substitutions, system_vars[1], system_vars[2] := SimpleSubstitutions(sigma, 2):
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDepth(sigma, trdegsub=false);
-
-# print(substitutions):
-# substitutions := table([x = 2, h = 2, z_aux = 2, b = 2, v = 2]);
-# et_hat := system_vars[1];
-# writeto("hiv2_degrees_per_var.json"):
-# printf(`{\n`):
-# for each in system_vars[2] do
-#   appendto("hiv2_degrees_per_var.json");
-#   printf(`\"%a\":\"%a\",\n`, each, map(x->degree(x, each), et_hat));
-# end do;
-# printf(`}\n`):
-# writeto(terminal);
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := SubsByDepth(sigma);
 
 
 WriteScripts(original_et_hat, system_vars[2], "original_hiv2_original_no_trb", {}, PATH);

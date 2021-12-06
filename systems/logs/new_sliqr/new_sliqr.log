@@ -52,9 +52,9 @@ Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, mu, theta1]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[Q_ = 0, N_ = 2, S_ = 1, LL_ = 0, alpha1 = 2, b = 2, alpha2 = 1, g = 1, theta1 = 1, mu = 2, dlt = 1, In_ = 1, eta = 1]
+States for substitution:	[LL_ = 0, dlt = 1, S_ = 1, eta = 1, b = 2, theta1 = 1, N_ = 2, In_ = 1, Q_ = 0, alpha1 = 2, mu = 2, alpha2 = 1, g = 1]
 NonID parameters:	[N_0, R_0, mu]
-Substitutions:	[Q_ = 1, N_ = 3, S_ = 2, LL_ = 1, alpha1 = 3, b = 3, z_aux = 2, In_ = 2]
+Substitutions:	[LL_ = 1, S_ = 2, b = 3, N_ = 3, In_ = 2, Q_ = 1, alpha1 = 3, z_aux = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -86,7 +86,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[Q_ = 0, N_ = 2, S_ = 1, LL_ = 0, alpha1 = 2, b = 2, alpha2 = 1, g = 1, theta1 = 1, mu = 2, dlt = 1, In_ = 1, eta = 1]
+States for substitution:	[LL_ = 0, dlt = 1, S_ = 1, eta = 1, b = 2, theta1 = 1, N_ = 2, In_ = 1, Q_ = 0, alpha1 = 2, mu = 2, alpha2 = 1, g = 1]
 NonID parameters:	[N_0, R_0, mu]
-Substitutions:	[Q_ = 1, N_ = 3, S_ = 2, LL_ = 1, alpha1 = 3, b = 3, z_aux = 2, In_ = 2]
-memory used=917.5MB, alloc=132.3MB, time=4.36
+Substitutions:	[LL_ = 1, S_ = 2, b = 3, N_ = 3, In_ = 2, Q_ = 1, alpha1 = 3, z_aux = 2]
+memory used=901.6MB, alloc=132.1MB, time=4.40

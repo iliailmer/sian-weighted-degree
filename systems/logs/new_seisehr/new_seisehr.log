@@ -38,9 +38,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[sq_ = 3, lmb = 3, eq_ = 2, alpha = 1, dlt_i = 1, b = 2, e_ = 1, i_ = 0, (NULL) = 1, s_ = 2, c = 2, g_i = 2, dlt_q = 2, h_ = 1, r_ = 0, theta0 = 2, g_h = 1, q = 2]
+States for substitution:	[sq_ = 3, lmb = 3, i_ = 0, alpha = 1, dlt_i = 1, b = 2, h_ = 1, eq_ = 2, r_ = 0, (NULL) = 1, g_i = 2, c = 2, e_ = 1, s_ = 2, dlt_q = 2, g_h = 1, theta0 = 2, q = 2]
 NonID parameters:	[]
-Substitutions:	[sq_ = 4, lmb = 4, eq_ = 3, e_ = 2, i_ = 1, s_ = 3, h_ = 2, z_aux = 3]
+Substitutions:	[sq_ = 4, lmb = 4, i_ = 1, h_ = 2, eq_ = 3, e_ = 2, s_ = 3, z_aux = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -72,7 +72,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[sq_ = 3, lmb = 3, eq_ = 2, alpha = 1, dlt_i = 1, b = 2, e_ = 1, i_ = 0, (NULL) = 1, s_ = 2, c = 2, g_i = 2, dlt_q = 2, h_ = 1, r_ = 0, theta0 = 2, g_h = 1, q = 2]
+States for substitution:	[sq_ = 3, lmb = 3, i_ = 0, alpha = 1, dlt_i = 1, b = 2, h_ = 1, eq_ = 2, r_ = 0, (NULL) = 1, g_i = 2, c = 2, e_ = 1, s_ = 2, dlt_q = 2, g_h = 1, theta0 = 2, q = 2]
 NonID parameters:	[]
-Substitutions:	[sq_ = 4, lmb = 4, eq_ = 3, e_ = 2, i_ = 1, s_ = 3, h_ = 2, z_aux = 3]
-memory used=4956.3MB, alloc=187.8MB, time=28.41
+Substitutions:	[sq_ = 4, lmb = 4, i_ = 1, h_ = 2, eq_ = 3, e_ = 2, s_ = 3, z_aux = 3]
+memory used=4808.9MB, alloc=187.8MB, time=27.87

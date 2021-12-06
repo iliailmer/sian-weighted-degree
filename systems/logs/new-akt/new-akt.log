@@ -67,9 +67,9 @@ Parameters in equations:  [a1, a2, a3, reaction_1_k2, reaction_2_k1, reaction_2_
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[S6_ = 2, a2 = 0, pAkt_S6_ = 0, pAkt_ = 0, Akt_ = 2, reaction_9_k1 = 1, reaction_5_k2 = 2, EGF_EGFR_ = 1, reaction_1_k1_ = 0, a1 = 0, pS6_ = 0, reaction_4_k1 = 1, reaction_2_k2 = 2, reaction_5_k1 = 2, a3 = 0, pEGFR_Akt_ = 0, reaction_7_k1 = 1, EGFR_turnover_ = 0, reaction_2_k1 = 2, reaction_3_k1 = 1, reaction_6_k1 = 1, reaction_8_k1 = 1, pEGFR_ = 0, reaction_1_k2 = 2]
+States for substitution:	[a1 = 0, pEGFR_ = 0, EGFR_turnover_ = 0, pEGFR_Akt_ = 0, reaction_2_k2 = 2, a2 = 0, reaction_4_k1 = 1, EGF_EGFR_ = 1, reaction_9_k1 = 1, reaction_5_k2 = 2, reaction_2_k1 = 2, pAkt_S6_ = 0, Akt_ = 2, reaction_7_k1 = 1, reaction_5_k1 = 2, pS6_ = 0, reaction_1_k1_ = 0, S6_ = 2, reaction_1_k2 = 2, reaction_8_k1 = 1, reaction_6_k1 = 1, a3 = 0, pAkt_ = 0, reaction_3_k1 = 1]
 NonID parameters:	[Akt_0, EGFR_0, S6_0, a1, a2, a3, pAkt_0, pEGFR_0, pS6_0, EGFR_turnover, EGF_EGFR_0, pAkt_S6_0, pEGFR_Akt_0, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
-Substitutions:	[S6_ = 3, pAkt_S6_ = 1, pAkt_ = 1, Akt_ = 3, reaction_5_k2 = 3, z_aux = 2, EGF_EGFR_ = 2, reaction_1_k1_ = 1, pS6_ = 1, reaction_2_k2 = 3, pEGFR_Akt_ = 1, EGFR_turnover_ = 1, pEGFR_ = 1]
+Substitutions:	[EGFR_turnover_ = 1, pEGFR_ = 1, pEGFR_Akt_ = 1, reaction_2_k2 = 3, EGF_EGFR_ = 2, reaction_5_k2 = 3, z_aux = 2, pAkt_S6_ = 1, Akt_ = 3, pS6_ = 1, reaction_1_k1_ = 1, S6_ = 3, pAkt_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -101,7 +101,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[S6_ = 2, a2 = 0, pAkt_S6_ = 0, pAkt_ = 0, Akt_ = 2, reaction_9_k1 = 1, reaction_5_k2 = 2, EGF_EGFR_ = 1, a1 = 0, pS6_ = 0, reaction_4_k1 = 1, reaction_2_k2 = 2, reaction_5_k1 = 2, reaction_1_k1 = 2, a3 = 0, pEGFR_Akt_ = 0, reaction_7_k1 = 1, reaction_2_k1 = 2, reaction_3_k1 = 1, reaction_6_k1 = 1, reaction_8_k1 = 1, pEGFR_ = 0, reaction_1_k2 = 2]
+States for substitution:	[a1 = 0, pEGFR_ = 0, pEGFR_Akt_ = 0, reaction_2_k2 = 2, a2 = 0, reaction_4_k1 = 1, EGF_EGFR_ = 1, reaction_9_k1 = 1, reaction_5_k2 = 2, reaction_2_k1 = 2, pAkt_S6_ = 0, Akt_ = 2, reaction_7_k1 = 1, reaction_1_k1 = 2, reaction_5_k1 = 2, pS6_ = 0, S6_ = 2, reaction_1_k2 = 2, reaction_8_k1 = 1, reaction_6_k1 = 1, a3 = 0, pAkt_ = 0, reaction_3_k1 = 1]
 NonID parameters:	[Akt_0, EGFR_0, S6_0, a1, a2, a3, pAkt_0, pEGFR_0, pS6_0, EGFR_turnover, EGF_EGFR_0, pAkt_S6_0, pEGFR_Akt_0, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
-Substitutions:	[S6_ = 3, pAkt_S6_ = 1, pAkt_ = 1, Akt_ = 3, reaction_5_k2 = 3, z_aux = 2, EGF_EGFR_ = 2, pS6_ = 1, reaction_2_k2 = 3, pEGFR_Akt_ = 1, pEGFR_ = 1]
-memory used=2749.0MB, alloc=179.8MB, time=14.72
+Substitutions:	[pEGFR_ = 1, pEGFR_Akt_ = 1, reaction_2_k2 = 3, EGF_EGFR_ = 2, reaction_5_k2 = 3, z_aux = 2, pAkt_S6_ = 1, Akt_ = 3, pS6_ = 1, S6_ = 3, pAkt_ = 1]
+memory used=2707.8MB, alloc=179.8MB, time=13.38

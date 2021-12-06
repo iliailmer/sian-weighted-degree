@@ -37,9 +37,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x4_ = 0, x5_ = 1, x1_ = 0, x2_ = 0, x3_ = 0, k3 = 2, k2 = 1, k4 = 1]
+States for substitution:	[k4 = 1, x3_ = 0, x4_ = 0, k3 = 2, x5_ = 1, k2 = 1, x1_ = 0, x2_ = 0]
 NonID parameters:	[]
-Substitutions:	[x5_ = 2, x1_ = 1, x2_ = 1, x3_ = 1, k3 = 3, z_aux = 2]
+Substitutions:	[x3_ = 1, k3 = 3, z_aux = 2, x5_ = 2, x1_ = 1, x2_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -72,9 +72,9 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x4_ = 0, x5_ = 1, x1_ = 0, x2_ = 0, x3_ = 0, k3 = 2, k2 = 1, k4 = 1]
+States for substitution:	[k4 = 1, x3_ = 0, x4_ = 0, k3 = 2, x5_ = 1, k2 = 1, x1_ = 0, x2_ = 0]
 NonID parameters:	[]
-Substitutions:	[x5_ = 2, x1_ = 1, x2_ = 1, x3_ = 1, k3 = 3, z_aux = 2]
+Substitutions:	[x3_ = 1, k3 = 3, z_aux = 2, x5_ = 2, x1_ = 1, x2_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -106,7 +106,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x4_ = 0, x5_ = 1, x1_ = 0, x2_ = 0, x3_ = 0, k3 = 2, k2 = 1, k4 = 1]
+States for substitution:	[k4 = 1, x3_ = 0, x4_ = 0, k3 = 2, x5_ = 1, k2 = 1, x1_ = 0, x2_ = 0]
 NonID parameters:	[]
-Substitutions:	[x5_ = 2, x1_ = 1, x2_ = 1, x3_ = 1, k3 = 3, z_aux = 2]
-memory used=199.4MB, alloc=112.3MB, time=1.45
+Substitutions:	[x3_ = 1, k3 = 3, z_aux = 2, x5_ = 2, x1_ = 1, x2_ = 1]
+memory used=178.1MB, alloc=112.3MB, time=1.29

@@ -51,9 +51,9 @@ Parameters in equations:  [b, g]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[AUX_ = 0, b = 0, S_ = 1, g = 0, In_ = 0]
+States for substitution:	[b = 0, S_ = 1, g = 0, In_ = 0, AUX_ = 0]
 NonID parameters:	[R_0]
-Substitutions:	[z_aux = 1, S_ = 2, In_ = 1]
+Substitutions:	[S_ = 2, In_ = 1, z_aux = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -85,7 +85,7 @@ No algebraically independent parameters found.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[AUX_ = 0, b = 0, S_ = 1, g = 0, In_ = 0]
+States for substitution:	[b = 0, S_ = 1, g = 0, In_ = 0, AUX_ = 0]
 NonID parameters:	[R_0]
-Substitutions:	[z_aux = 1, S_ = 2, In_ = 1]
-memory used=45.6MB, alloc=47.3MB, time=0.34
+Substitutions:	[S_ = 2, In_ = 1, z_aux = 1]
+memory used=51.5MB, alloc=47.3MB, time=0.36

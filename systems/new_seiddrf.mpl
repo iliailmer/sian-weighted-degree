@@ -13,15 +13,16 @@ sigma := [
   diff(Di(t), t) = theta_i * phi_i * i(t) - sgm_d * De(t) - g_d * Di(t) - mu_d * Di(t) - mu0 * Di(t),
   diff(r(t), t) = g * i(t) + g_d * Di(t) - mu0 * r(t),
   diff(f(t), t) = mu_i * i(t) + mu_d * Di(t),
-  y1(t) = s(t),
-  y2(t) = i(t),#
-  y3(t) = f(t),
+  # y1(t) = s(t),
+  # y2(t) = i(t),#
+  # y3(t) = f(t),
   y4(t) = De(t)
 ]: 
 
 
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
+
 
 WriteScripts(original_et_hat, system_vars[2], "new_seiddrf_original_no_trb", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "new_seiddrf_weights_no_trb", all_subs, PATH);
