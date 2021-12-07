@@ -5,73 +5,32 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [x1(t), x2(t), x3(t), x4(t), x5(t), x6(t)]
-Output variables:         [y1(t), y2(t)]
-Input variables:          []
-Parameters in equations:  [k1, k2, k3, k4, k5, k6]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{}
-Locally identifiable paramters:  [k1, k2, k3, k4, k5, k6, x1(0), x2(0), x3(0), x4(0), x5(0), x6(0)]
-Nonidentifiable parameter:  []
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[x4_ = 1, k3 = 1, x6_ = 1, x1_ = 1, k6 = 1, k1 = 1, x5_ = 1, k5 = 1, k2 = 1, x2_ = 0, x3_ = 0, k4 = 2]
-NonID parameters:	[]
-Substitutions:	[x4_ = 2, x6_ = 2, z_aux = 2, x1_ = 2, x5_ = 2, x2_ = 1, x3_ = 1, k4 = 3]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [x1(t), x2(t), x3(t), x4(t), x5(t), x6(t)]
-Output variables:         [y1(t), y2(t)]
-Input variables:          []
-Parameters in equations:  [k1, k2, k3, k4, k5, k6]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [k1, k2, k3, k4, k5, k6, x1(0), x2(0), x3(0), x4(0), x5(0), x6(0)]
-Nonidentifiable parameter:  []
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[x4_ = 1, k3 = 1, x6_ = 1, x1_ = 1, k6 = 1, k1 = 1, x5_ = 1, k5 = 1, k2 = 1, x2_ = 0, x3_ = 0, k4 = 2]
-NonID parameters:	[]
-Substitutions:	[x4_ = 2, x6_ = 2, z_aux = 2, x1_ = 2, x5_ = 2, x2_ = 1, x3_ = 1, k4 = 3]
-memory used=330.7MB, alloc=121.2MB, time=1.99
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],
+"original_chem_reac_network_original_no_trb",{},original_chem_reac_network)
+WriteScripts(system_vars[1],system_vars[2],
+"original_chem_reac_network_weights_no_trb",all_subs,original_chem_reac_network
+)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],
+"original_chem_reac_network_original_with_trb",{},original_chem_reac_network)
+WriteScripts(system_vars[1],system_vars[2],
+"original_chem_reac_network_weights_with_trb",all_subs,
+original_chem_reac_network)
+memory used=1.6MB, alloc=8.3MB, time=0.05

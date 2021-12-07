@@ -5,87 +5,30 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [G(t), X(t), R(t), Ib(t), Gb(t)]
-Output variables:         [y1(t), y2(t), y3(t)]
-Input variables:          [u(t)]
-Parameters in equations:  [k, p1, p2, p3, v]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{R_0}
-Locally identifiable paramters:  [p1, p2, p3, G(0), X(0), Ib(0), Gb(0)]
-Nonidentifiable parameter:  [R(0), k, v]
-Algebraically independent parameters {R(0)}
-
-=======================================================
-Substituting transcendence basis.
-=======================================================
-Algebraically independent parameters among nonidentifiable: {}
-Algebraically independent parameters among derivatives: {R(0)}
-
-=== Input info ===
-State variables:          [G(t), X(t), R(t), Ib(t), Gb(t)]
-Output variables:         [y1(t), y2(t), y3(t)]
-Input variables:          [u(t)]
-Parameters in equations:  [k, p1, p2, p3, v]
-===================
-
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[Ib_ = 0, X_ = 1, Gb_ = 0, p1 = 1, v = 1, R_ = 1, p2 = 2, p3 = 2, k = 2, G_ = 0, (NULL) = 2]
-NonID parameters:	[R_0, k, v]
-Substitutions:	[Ib_ = 1, X_ = 2, Gb_ = 1, R_ = 2, z_aux = 2, p2 = 3, p3 = 3, G_ = 1]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [G(t), X(t), R(t), Ib(t), Gb(t)]
-Output variables:         [y1(t), y2(t), y3(t)]
-Input variables:          [u(t)]
-Parameters in equations:  [k, p1, p2, p3, v]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [p1, p2, p3, G(0), X(0), Ib(0), Gb(0)]
-Nonidentifiable parameter:  [R(0), k, v]
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[Ib_ = 0, X_ = 1, Gb_ = 0, p1 = 1, v = 1, R_ = 1, p2 = 2, p3 = 2, k = 2, G_ = 0, (NULL) = 2]
-NonID parameters:	[R_0, k, v]
-Substitutions:	[Ib_ = 1, X_ = 2, Gb_ = 1, R_ = 2, z_aux = 2, p2 = 3, p3 = 3, G_ = 1]
-memory used=244.1MB, alloc=90.1MB, time=1.32
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],
+"original_oral_glucose_original_no_trb",{},original_oral_glucose)
+WriteScripts(system_vars[1],system_vars[2],
+"original_oral_glucose_weights_no_trb",all_subs,original_oral_glucose)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],
+"original_oral_glucose_original_with_trb",{},original_oral_glucose)
+WriteScripts(system_vars[1],system_vars[2],
+"original_oral_glucose_weights_with_trb",all_subs,original_oral_glucose)
+memory used=1.6MB, alloc=8.3MB, time=0.05

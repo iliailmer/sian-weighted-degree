@@ -6,73 +6,30 @@
 # Ex 16 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), r(t)]
-Output variables:         [y1(t)]
-Input variables:          []
-Parameters in equations:  [b, d0, eps, mu, rho]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{}
-Locally identifiable paramters:  [b, d0, eps, mu, rho, s(0), e(0), i(0), r(0)]
-Nonidentifiable parameter:  []
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[d0 = 1, i_ = 0, s_ = 2, eps = 1, mu = 1, e_ = 1, rho = 2, b = 2, r_ = 0]
-NonID parameters:	[]
-Substitutions:	[i_ = 1, s_ = 3, e_ = 2, rho = 3, z_aux = 2, b = 3, r_ = 1]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), r(t)]
-Output variables:         [y1(t)]
-Input variables:          []
-Parameters in equations:  [b, d0, eps, mu, rho]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [b, d0, eps, mu, rho, s(0), e(0), i(0), r(0)]
-Nonidentifiable parameter:  []
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[d0 = 1, i_ = 0, s_ = 2, eps = 1, mu = 1, e_ = 1, rho = 2, b = 2, r_ = 0]
-NonID parameters:	[]
-Substitutions:	[i_ = 1, s_ = 3, e_ = 2, rho = 3, z_aux = 2, b = 3, r_ = 1]
-memory used=193.4MB, alloc=89.4MB, time=1.01
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seir2_original_no_trb",{},
+new_seir2)
+WriteScripts(system_vars[1],system_vars[2],"new_seir2_weights_no_trb",all_subs,
+new_seir2)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seir2_original_with_trb",{},
+new_seir2)
+WriteScripts(system_vars[1],system_vars[2],"new_seir2_weights_with_trb",
+all_subs,new_seir2)
+memory used=1.6MB, alloc=8.3MB, time=0.05

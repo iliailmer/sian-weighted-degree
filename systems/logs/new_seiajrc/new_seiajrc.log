@@ -1,0 +1,39 @@
+    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> kernelopts(printbytes=false, assertlevel=1):
+> interface(echo=0, prettyprint=0):
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+sigma := [diff(S(t),t) = -b*S(t)*Ninv*A(t)*q-b*S(t)*Ninv*II(t)-b*S(t)*Ninv*J(t)
+, diff(A(t),t) = -E(t)*k*r+E(t)*k-A(t)*g1, diff(E(t),t) = b*S(t)*Ninv*A(t)*q+b*
+S(t)*Ninv*II(t)+b*S(t)*Ninv*J(t)-E(t)*k, diff(C(t),t) = alpha*II(t), diff(J(t),
+t) = alpha*II(t)-g2*J(t), diff(II(t),t) = -alpha*II(t)+E(t)*k*r-g1*II(t), y2(t)
+= Ninv, y(t) = C(t)]
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seiajrc_original_no_trb",{},
+new_seiajrc)
+WriteScripts(system_vars[1],system_vars[2],"new_seiajrc_weights_no_trb",
+all_subs,new_seiajrc)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seiajrc_original_with_trb",{},
+new_seiajrc)
+WriteScripts(system_vars[1],system_vars[2],"new_seiajrc_weights_with_trb",
+all_subs,new_seiajrc)
+memory used=18.5MB, alloc=79.3MB, time=0.14

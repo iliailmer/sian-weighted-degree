@@ -6,52 +6,30 @@
 # Ex 51 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), De(t), Di(t), r(t), f(t)]
-Output variables:         [y4(t)]
-Input variables:          []
-Parameters in equations:  [b, g, g_d, mu0, mu_d, mu_i, n, nu, phi_e, phi_i, q, sgm, sgm_d, theta_e, theta_i]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{Di_0, b, e_0, f_0, g, g_d, phi_e, phi_i, r_0}
-Locally identifiable paramters:  [mu0, sgm_d, De(0)]
-Nonidentifiable parameter:  [Di(0), b, e(0), f(0), g, g_d, i(0), mu_d, mu_i, n, nu, phi_e, phi_i, q, r(0), s(0), sgm, theta_e, theta_i]
-Algebraically independent parameters {b, g, g_d, phi_e, phi_i, Di(0), e(0), f(0), r(0)}
-
-=======================================================
-Substituting transcendence basis.
-=======================================================
-Algebraically independent parameters among nonidentifiable: {b, g, g_d, phi_e, phi_i}
-Algebraically independent parameters among derivatives: {Di(0), e(0), f(0), r(0)}
-
-=== Input info ===
-State variables:          [b(t), g(t), g_d(t), phi_e(t), phi_i(t), s(t), e(t), i(t), De(t), Di(t), r(t), f(t)]
-Output variables:         [y4(t), y_faux1(t), y_faux2(t), y_faux3(t), y_faux4(t), y_faux5(t)]
-Input variables:          []
-Parameters in equations:  [mu0, mu_d, mu_i, n, nu, q, sgm, sgm_d, theta_e, theta_i]
-===================
-
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[mu0 = 1, phi_e_ = 0, sgm_d = 1, g_ = 0, sgm = 2, i_ = 2, n = 2, theta_e = 1, g_d_ = 0, mu_d = 3, Di_ = 2, theta_i = 3, mu_i = 3, De_ = 0, q = 2, e_ = 1, s_ = 2, phi_i_ = 0, b_ = 0, nu = 3]
-NonID parameters:	[Di_0, b, e_0, f_0, g, g_d, i_0, mu_d, mu_i, n, nu, phi_e, phi_i, q, r_0, s_0, sgm, theta_e, theta_i]
-Substitutions:	[phi_e_ = 1, g_ = 1, i_ = 3, g_d_ = 1, Di_ = 3, De_ = 1, e_ = 2, s_ = 3, phi_i_ = 1, z_aux = 3, b_ = 1]
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seiddrf_original_no_trb",{},
+new_seiddrf)
+WriteScripts(system_vars[1],system_vars[2],"new_seiddrf_weights_no_trb",
+all_subs,new_seiddrf)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seiddrf_original_with_trb",{},
+new_seiddrf)
+WriteScripts(system_vars[1],system_vars[2],"new_seiddrf_weights_with_trb",
+all_subs,new_seiddrf)
+memory used=1.6MB, alloc=8.3MB, time=0.05

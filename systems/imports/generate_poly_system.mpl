@@ -1,7 +1,7 @@
 # Code to take a system of ode's and generate a polynomial system for SIAN
 
 #===============================================================================
-GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_solutions:=true, p := 0.99, infolevel := 1, method := 2, num_nodes := 6}) 
+GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_solutions:=true, p := 0.99, infolevel := 1, method := 2, num_nodes := 6, max_comb:=500}) 
 #===============================================================================
  local i, j, k, n, m, s, all_params, all_vars, eqs, Q, X, Y, poly, d0, D1, 
         sample, all_subs,alpha, beta, Et, x_theta_vars, prolongation_possible, 
@@ -13,7 +13,9 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
         prime, max_rank, R, tr, e, p_local, xy_ders, polys_to_process, new_to_process, solutions_table,
         Et_x_vars, var, G, P, output, alg_indep, rrefJacX, pivots, row_idx, row, pivot_idx, non_id, faux_equations,
         y_faux, alg_indep_derivs, alg_indep_params, faux_odes, faux_outputs,
-        x_theta_vars_, derivs, sigma_new, idx, each:
+        x_theta_vars_, derivs, sigma_new, idx, each, identifiable_states, x_theta_vars_to_be_removed, x_theta_vars_filtered, number_of_choices, choices,
+        current_choice, global_table, Et_hat_old, et_hat_monomials, degree_table, rhs_cols, idxs, parameter, A, solution, 
+        choice_idx, sum_degrees_new, occurrence_table, val, perm:
   #----------------------------------------------
   # 0. Extract inputs, outputs, states, and parameters from the system
   #----------------------------------------------
@@ -257,30 +259,82 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
         end if:
     end do:
     alg_indep := {op(x_theta_vars)} minus pivots:
-    print(alg_indep);
+    identifiable_states := map(each->GetOrderVar(each)[1], {op(select(each->GetOrderVar(each)[1] <>"", theta_l))}); # pick names of states whose IC is identifiable
+    x_theta_vars_to_be_removed := select(each-> GetOrderVar(each)[1] in identifiable_states, x_theta_vars_);
+    x_theta_vars_filtered := [op({op(x_theta_vars_)} minus {op(x_theta_vars_to_be_removed)})];
+    number_of_choices:= binomial(numelems(x_theta_vars_filtered), numelems(alg_indep));
+    if number_of_choices < max_comb then
+      choices := combinat[choose](x_theta_vars_filtered, numelems(alg_indep));
+    else
+      current_choice := [op(alg_indep)];
+      choices := {current_choice};
+      while numelems(choices) < max_comb do
+        choices := {op(choices), combinat[randperm](x_theta_vars_filtered)[..numelems(alg_indep)]};
+      end do;
+    end if; 
   end if:
   derivs:={op(x_theta_vars)} minus {op(mu)};
-  sigma_new := system_ODEs:
   non_id := [op({op(theta)} minus {op(theta_l)})]:
   if infolevel > 0 then
     printf("%s %a\n", `Locally identifiable paramters: `, map(x -> ParamToOuter(x, all_vars), theta_l));
     printf("%s %a\n", `Nonidentifiable parameter: `, map(x -> ParamToOuter(x, all_vars), [op({op(theta)} minus {op(theta_l)})]));
   end if:
+
+  global_table := table([]);
+  sigma_new := system_ODEs:
   if sub_transc and numelems(alg_indep)<>0 then
- 
-    # alg_indep := select(x-> x in non_id or x in {op(x_theta_vars)} minus {op(theta)}, alg_indep):
+    PrintHeader("Substituting transcendence basis."):
     printf("%s %a\n", `Algebraically independent parameters`, map(x-> ParamToOuter(x, all_vars), alg_indep)):
+    printf("%s %a\n", `Number of possible combinations`, number_of_choices):
 
-    if sub_transc then 
-      PrintHeader("Substituting transcendence basis."):
-    end if:
+    Et_hat_old := GenerateEtHatOld(Et, theta_l, d0, beta, p_local, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q, infolevel):
+    
+    et_hat_monomials := map(each->op(expand(each)), Et_hat_old):
+    degree_table := table([]);
+    for alg_indep in choices do  
+      rhs_cols := []:
+      idxs := []:
+      for parameter in alg_indep do
+        idx := ListTools[Search](parameter, x_theta_vars):
+        idxs := [op(idxs), idx]:
+        rhs_cols := [op(rhs_cols), JacX[..,idx]]:
+      end do:
+      rhs_cols := Matrix(rhs_cols):
+      A := LinearAlgebra[DeleteColumn](JacX, idxs):
+      try
+        solution := LinearAlgebra[LinearSolve](A, rhs_cols):
+      catch :
+        printf("%s %a %s\n", "Collection", alg_indep, "is not transcendence basis" ):
+        choice_idx:=choice_idx+1:
+        next
+      end try;
 
+      sum_degrees_new := 0;
+      occurrence_table := table([seq(param = 0, param in alg_indep)]):
+      for param in alg_indep do # {beta_, q}
+        degree_table[param] := [];
+        for each in et_hat_monomials do
+          if param in {op(each)} then
+            sum_degrees_new := sum_degrees_new+degree(each);
+            occurrence_table[param] += 1;
+            degree_table[param] := [op(degree_table[param]), degree(each)];
+          end if:
+        end do:
+        degree_table[param] := [seq(convert(val/add(degree_table[param]), float), val in degree_table[param])];
+        degree_table[param] := add([seq(convert(- val * log(val), float), val in degree_table[param])]);
+      end do:
+    global_table[alg_indep] := [entries(degree_table, 'nolist')];
+    degree_table := table([]);
+    end do:  
+    perm:=sort([entries(global_table, 'nolist')], 'output=permutation'):
+    alg_indep := lhs([entries(global_table, 'pairs')][perm[-1]]):
+
+    printf("%s %a %s\n", `Picked the best choice`, alg_indep, `based on heuristic:`, rhs([entries(global_table, 'pairs')][perm[-1]])):
     alg_indep_derivs := {op(alg_indep)} intersect derivs:
     alg_indep_params := ({op(alg_indep)} intersect {op(non_id)}) minus {op(alg_indep_derivs)}:
-    faux_outputs := []: # seq(parse(cat("y_faux", idx, "(t)"))=alg_indep_params[idx](t), idx in 1..numelems(alg_indep_params))
+    faux_outputs := []:
     faux_odes := []:
     idx := 1:
-    sigma_new := system_ODEs:
     for each in alg_indep_params do
       if not (each in x_vars) then
         sigma_new := subs({each=each(t)}, sigma_new):
@@ -291,20 +345,18 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       end if:
       idx := idx+1:
     end do:
-
     sigma_new := [op(faux_odes), op(sigma_new), op(faux_outputs)]:
-    
     if infolevel>0 then
       printf("%s %a\n", `Algebraically independent parameters among nonidentifiable:`, map(x-> ParamToOuter(x, all_vars), alg_indep_params)):
       printf("%s %a\n", `Algebraically independent parameters among derivatives:`, map(x-> ParamToOuter(x, all_vars), alg_indep_derivs)):
     end if:
-    
+
     if infolevel>1 then
       printf("\t%s %a\n", `Adding ODEs:`, faux_odes):
       printf("\t%s %a\n", `Adding output functions:`, faux_outputs):
       printf("\t%s %a\n", `New system:`, sigma_new):
     end if:
-    # non_id := [op({op(theta)} minus {op(theta_l)})]: 
+
     X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
     if numelems(alg_indep_derivs)>0 then
       if infolevel>1 then
@@ -315,63 +367,110 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:
       Y_eq := [op(Y_eq), op(faux_equations)]:
       if infolevel>1 then
+        printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
         printf("\t%s %a\n", `New system:`, Et):
         printf("\t%s %a\n", `New system:`, Y_eq):
       end if:
-    end if;
-  else
-    if numelems(alg_indep)=0 then
-      printf("%s\n", `No algebraically independent parameters found.`);
     else
-      printf("%s\n", `Transcendence basis substitution turned off.`);
+      if numelems(alg_indep)=0 then
+        printf("%s\n", `No algebraically independent parameters found.`);
+      else
+        printf("%s\n", `Transcendence basis substitution turned off.`);
+      end if:
     end if:
   end if:
-  #----------------------------------------------
-  # 3. Randomize.
-  #----------------------------------------------
+    #----------------------------------------------
+    # 3. Randomize.
+    #----------------------------------------------
 
-  if infolevel > 0 then
-    PrintHeader("4. Randomizing the truncated system"):
-  end if:
+    if infolevel > 0 then
+      PrintHeader("4. Randomizing the truncated system"):
+    end if:
 
-  # (a) ------------
-  deg_variety := foldl(`*`, op( map(e -> degree(e), Et) )):
-  D2 := floor( 6 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ):
-  if infolevel > 1 then
-    printf("%s %a\n", `Bound D_2 for assessing global identifiability: `, D2):
-  end if:
-  # (b, c) ---------
-  sample := SamplePoint(D2, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q):
-  y_hat := sample[1]:
-  u_hat := sample[2]:
-  theta_hat := sample[3]:  
-  if infolevel > 1 then
-    printf("%s %a\n", `Random sample for the outputs and inputs is generated from `, theta_hat):
-  end if:
-  # (d) ------------
-  Et_hat := map(e -> subs([op(y_hat), op(u_hat)], e), Et):
+    # (a) ------------
+    deg_variety := foldl(`*`, op( map(e -> degree(e), Et) )):
+    D2 := floor( 6 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ):
+    if infolevel > 1 then
+      printf("%s %a\n", `Bound D_2 for assessing global identifiability: `, D2):
+    end if:
+    # (b, c) ---------
+    sample := SamplePoint(D2, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q):
+    y_hat := sample[1]:
+    u_hat := sample[2]:
+    theta_hat := sample[3]:  
+    if infolevel > 1 then
+      printf("%s %a\n", `Random sample for the outputs and inputs is generated from `, theta_hat):
+    end if:
+    # (d) ------------
+    Et_hat := map(e -> subs([op(y_hat), op(u_hat)], e), Et):
 
-  Et_x_vars := {}:
-  for poly in Et_hat do
-    Et_x_vars := Et_x_vars union { op(GetVars(poly, x_vars)) }:
-  end do:
-  if infolevel > 1 then
-    printf("%s %a %s %a %s\n", `The polynomial system \widehat{E^t} contains `, nops(Et_hat), `equations in `, nops(Et_x_vars) + nops(mu), ` variables`);
-  end if:
-  Q_hat := subs(u_hat, Q):
+    Et_x_vars := {}:
+    for poly in Et_hat do
+      Et_x_vars := Et_x_vars union { op(GetVars(poly, x_vars)) }:
+    end do:
+    if infolevel > 1 then
+      printf("%s %a %s %a %s\n", `The polynomial system \widehat{E^t} contains `, nops(Et_hat), `equations in `, nops(Et_x_vars) + nops(mu), ` variables`);
+    end if:
+    Q_hat := subs(u_hat, Q):
 
-  vars := [
-    op(sort([op(Et_x_vars)], (a, b) -> CompareDiffVar(a, b, x_vars))),
-    z_aux, w_aux,
-    op(sort(mu))
-  ]:
-  
-  if infolevel > 1 then
-    printf("Variable ordering to be used for Groebner basis computation %a\n", vars);
-  end if:
- 
-  return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
+    vars := [
+      op(sort([op(Et_x_vars)], (a, b) -> CompareDiffVar(a, b, x_vars))),
+      z_aux, w_aux,
+      op(sort(mu))
+    ]:
+    
+    if infolevel > 1 then
+      printf("Variable ordering to be used for Groebner basis computation %a\n", vars);
+    end if:
+  if sub_transc then
+    return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
     op(sort(mu))], x_vars], non_id, sigma_new, alg_indep:
+  else
+    return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
+    op(sort(mu))], x_vars], non_id, sigma_new, []: 
+  end if:
+end proc:
+
+GenerateEtHatOld := proc(Et, theta_l, d0, beta, p_local, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q, infolevel)
+    local Et_x_vars, Q_hat, deg_variety, D2, sample, y_hat, u_hat, theta_hat, Et_hat, poly, vars_old, Et_hat_old;
+    if infolevel > 0 then
+      PrintHeader("Creating Truncated system (old)"):
+    end if:
+
+    # (a) ------------
+    deg_variety := foldl(`*`, op( map(e -> degree(e), Et) )):
+    D2 := floor( 6 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ):
+    if infolevel > 1 then
+      printf("%s %a\n", `Bound D_2 for assessing global identifiability: `, D2):
+    end if:
+    # (b, c) ---------
+    sample := SamplePoint(D2, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q):
+    y_hat := sample[1]:
+    u_hat := sample[2]:
+    theta_hat := sample[3]:  
+    if infolevel > 1 then
+      printf("%s %a\n", `Random sample for the outputs and inputs is generated from `, theta_hat):
+    end if:
+    # (d) ------------
+    Et_hat := map(e -> subs([op(y_hat), op(u_hat)], e), Et):
+
+    Et_x_vars := {}:
+    for poly in Et_hat do
+      Et_x_vars := Et_x_vars union { op(GetVars(poly, x_vars)) }:
+    end do:
+    if infolevel > 1 then
+      printf("%s %a %s %a %s\n", `The polynomial system \widehat{E^t} contains `, nops(Et_hat), `equations in `, nops(Et_x_vars) + nops(mu), ` variables`);
+    end if:
+    Q_hat := subs(u_hat, Q):
+
+    vars_old := [
+      op(sort([op(Et_x_vars)], (a, b) -> CompareDiffVar(a, b, x_vars))),
+      z_aux, w_aux,
+      op(sort(mu))
+    ]:
+
+    Et_hat_old := [op(Et_hat), z_aux*Q_hat - 1]:
+    return Et_hat_old:
 end proc:
 
 #===============================================================================

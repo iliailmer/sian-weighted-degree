@@ -6,87 +6,30 @@
 # Ex 14 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), q(t), r(t), d0(t), c(t)]
-Output variables:         [y1(t)]
-Input variables:          [k(t), l(t)]
-Parameters in equations:  [a, b, dlt, g, mu, n, tau0]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{d0_0, q_0, r_0}
-Locally identifiable paramters:  [a, b, dlt, g, mu, n, tau0, s(0), e(0), i(0), c(0)]
-Nonidentifiable parameter:  [d0(0), q(0), r(0)]
-Algebraically independent parameters {d0(0), q(0), r(0)}
-
-=======================================================
-Substituting transcendence basis.
-=======================================================
-Algebraically independent parameters among nonidentifiable: {}
-Algebraically independent parameters among derivatives: {d0(0), q(0), r(0)}
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), q(t), r(t), d0(t), c(t)]
-Output variables:         [y1(t)]
-Input variables:          [k(t), l(t)]
-Parameters in equations:  [a, b, dlt, g, mu, n, tau0]
-===================
-
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[b = 2, e_ = 3, i_ = 2, a = 1, s_ = 1, n = 2, c_ = 0, dlt = 3, mu = 1, tau0 = 1, g = 3]
-NonID parameters:	[d0_0, q_0, r_0]
-Substitutions:	[e_ = 4, i_ = 3, s_ = 2, c_ = 1, dlt = 4, z_aux = 3, g = 4]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), q(t), r(t), d0(t), c(t)]
-Output variables:         [y1(t)]
-Input variables:          [k(t), l(t)]
-Parameters in equations:  [a, b, dlt, g, mu, n, tau0]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [a, b, dlt, g, mu, n, tau0, s(0), e(0), i(0), c(0)]
-Nonidentifiable parameter:  [d0(0), q(0), r(0)]
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[b = 2, e_ = 3, i_ = 2, a = 1, s_ = 1, n = 2, c_ = 0, dlt = 3, mu = 1, tau0 = 1, g = 3]
-NonID parameters:	[d0_0, q_0, r_0]
-Substitutions:	[e_ = 4, i_ = 3, s_ = 2, c_ = 1, dlt = 4, z_aux = 3, g = 4]
-memory used=590.8MB, alloc=123.1MB, time=3.11
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seiqrdc_original_no_trb",{},
+new_seiqrdc)
+WriteScripts(system_vars[1],system_vars[2],"new_seiqrdc_weights_no_trb",
+all_subs,new_seiqrdc)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seiqrdc_original_with_trb",{},
+new_seiqrdc)
+WriteScripts(system_vars[1],system_vars[2],"new_seiqrdc_weights_with_trb",
+all_subs,new_seiqrdc)
+memory used=1.6MB, alloc=8.3MB, time=0.05

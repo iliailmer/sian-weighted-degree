@@ -5,6 +5,20 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
 sigma := [diff(E(t),t) = -alphaEIs*E(t)+betaIa*Ia(t)*S(t)*Ninv+Is(t)*S(t)*Ninv*
 betaIs+betaT*S(t)*Ninv*T(t)+S(t)*Ninv*betaH*H(t)-E(t)*alphaEIa, diff(H(t),t) =
 -alphaHT*H(t)+Ia(t)*xi+Is(t)*alphaIsH-alphaHRd*H(t), diff(Is(t),t) = alphaEIs*E
@@ -15,87 +29,16 @@ Ia(t)*S(t)*Ninv-Is(t)*S(t)*Ninv*betaIs-betaT*S(t)*Ninv*T(t)-S(t)*Ninv*betaH*H(t
 diff(Rd(t),t) = alphaTRd*T(t)+alphaHRd*H(t), diff(T(t),t) = alphaHT*H(t)+Is(t)*
 alphaIsT-alphaTRd*T(t)-T(t)*alphaTD, y4(t) = D(t), y2(t) = T(t), y3(t) = Rd(t),
 y5(t) = Ninv, y1(t) = H(t)]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [E(t), H(t), Is(t), D(t), S(t), Ia(t), Rd(t), T(t)]
-Output variables:         [y4(t), y2(t), y3(t), y5(t), y1(t)]
-Input variables:          []
-Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT, xi, alphaEIa, alphaEIs, alphaHRd, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTRd]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{E_0, Ia_0}
-Locally identifiable paramters:  [Ninv, alphaHT, alphaTD, betaH, betaT, alphaHRd, alphaTRd, H(0), D(0), Rd(0), T(0)]
-Nonidentifiable parameter:  [E(0), Ia(0), Is(0), S(0), betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-Algebraically independent parameters {E(0), Ia(0)}
-
-=======================================================
-Substituting transcendence basis.
-=======================================================
-Algebraically independent parameters among nonidentifiable: {}
-Algebraically independent parameters among derivatives: {E(0), Ia(0)}
-
-=== Input info ===
-State variables:          [E(t), H(t), Is(t), D(t), S(t), Ia(t), Rd(t), T(t)]
-Output variables:         [y4(t), y2(t), y3(t), y5(t), y1(t)]
-Input variables:          []
-Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT, xi, alphaEIa, alphaEIs, alphaHRd, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTRd]
-===================
-
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[betaIs = 3, alphaIsT = 1, alphaEIa = 2, S_ = 3, alphaHRd = 1, alphaTD = 1, H_ = 0, Ia_ = 1, alphaHT = 1, Ninv = 0, alphaIaIs = 2, E_ = 2, alphaIsRu = 2, xi = 1, alphaIsH = 1, betaH = 3, D_ = 0, betaIa = 3, alphaIaRu = 2, alphaTRd = 1, Is_ = 1, T_ = 0, betaT = 3, Rd_ = 0, alphaEIs = 2, alphaIsD = 1]
-NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-Substitutions:	[S_ = 4, H_ = 1, Ia_ = 2, z_aux = 3, E_ = 3, betaH = 4, Is_ = 2, T_ = 1, betaT = 4]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [E(t), H(t), Is(t), D(t), S(t), Ia(t), Rd(t), T(t)]
-Output variables:         [y4(t), y2(t), y3(t), y5(t), y1(t)]
-Input variables:          []
-Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT, xi, alphaEIa, alphaEIs, alphaHRd, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTRd]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [Ninv, alphaHT, alphaTD, betaH, betaT, alphaHRd, alphaTRd, H(0), D(0), Rd(0), T(0)]
-Nonidentifiable parameter:  [E(0), Ia(0), Is(0), S(0), betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[betaIs = 3, alphaIsT = 1, alphaEIa = 2, S_ = 3, alphaHRd = 1, alphaTD = 1, H_ = 0, Ia_ = 1, alphaHT = 1, Ninv = 0, alphaIaIs = 2, E_ = 2, alphaIsRu = 2, xi = 1, alphaIsH = 1, betaH = 3, D_ = 0, betaIa = 3, alphaIaRu = 2, alphaTRd = 1, Is_ = 1, T_ = 0, betaT = 3, Rd_ = 0, alphaEIs = 2, alphaIsD = 1]
-NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-Substitutions:	[S_ = 4, H_ = 1, Ia_ = 2, z_aux = 3, E_ = 3, betaH = 4, Is_ = 2, T_ = 1, betaT = 4]
-memory used=5024.8MB, alloc=179.8MB, time=23.29
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_siar_original_no_trb",{},
+new_siar)
+WriteScripts(system_vars[1],system_vars[2],"new_siar_weights_no_trb",all_subs,
+new_siar)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_siar_original_with_trb",{},
+new_siar)
+WriteScripts(system_vars[1],system_vars[2],"new_siar_weights_with_trb",all_subs
+,new_siar)
+memory used=19.3MB, alloc=79.3MB, time=0.15

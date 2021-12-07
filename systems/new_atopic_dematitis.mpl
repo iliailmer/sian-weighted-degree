@@ -1,4 +1,4 @@
-# atopic dermatitis https://doi.org/10.1111/all. Miyano et al. mean and SD estimated for all params
+# atopic dematitis https://doi.org/10.1111/all. Miyano et al. mean and SD estimated for all params
 # eqs: 14, params: 51
 
 kernelopts(printbytes=false, assertlevel=1):
@@ -48,11 +48,11 @@ sigma := subs(substitutions, sigma);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
-WriteScripts(original_et_hat, system_vars[2], "new_atopic_dermatitis_original_no_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "new_atopic_dermatitis_weights_no_trb", all_subs, PATH);
+WriteScripts(original_et_hat, system_vars[2], "new_atopic_dematitis_original_no_trb", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "new_atopic_dematitis_weights_no_trb", all_subs, PATH);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
-WriteScripts(original_et_hat, system_vars[2], "new_atopic_dermatitis_original_with_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "new_atopic_dermatitis_weights_with_trb", all_subs, PATH);
+WriteScripts(original_et_hat, system_vars[2], "new_atopic_dematitis_original_with_trb", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "new_atopic_dematitis_weights_with_trb", all_subs, PATH);
 quit;

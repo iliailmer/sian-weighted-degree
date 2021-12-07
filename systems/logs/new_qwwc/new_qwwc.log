@@ -5,90 +5,33 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
 sigma := [diff(x(t),t) = -x(t)*a+z(t)*y(t)+a*y(t), diff(w(t),t) = e*z(t)-w(t)*f
 +x(t)*y(t), diff(z(t),t) = -c*z(t)-w(t)*d+x(t)*y(t), diff(y(t),t) = b*x(t)+b*y(
 t)-x(t)*z(t), g(t) = x(t)]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [x(t), w(t), z(t), y(t)]
-Output variables:         [g(t)]
-Input variables:          []
-Parameters in equations:  [a, b, c, d, e, f]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{c}
-Locally identifiable paramters:  [a, b, x(0), z(0), y(0)]
-Nonidentifiable parameter:  [c, d, e, f, w(0)]
-Algebraically independent parameters {c}
-
-=======================================================
-Substituting transcendence basis.
-=======================================================
-Algebraically independent parameters among nonidentifiable: {c}
-Algebraically independent parameters among derivatives: {}
-
-=== Input info ===
-State variables:          [c(t), x(t), w(t), z(t), y(t)]
-Output variables:         [g(t), y_faux1(t)]
-Input variables:          []
-Parameters in equations:  [a, b, d, e, f]
-===================
-
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[d = 2, z_ = 1, x_ = 0, f = 3, b = 2, y_ = 1, a = 1, c_ = 0, w_ = 2, e = 3]
-NonID parameters:	[c, d, e, f, w_0]
-Substitutions:	[z_ = 2, x_ = 1, y_ = 2, c_ = 1, w_ = 3, z_aux = 3]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [x(t), w(t), z(t), y(t)]
-Output variables:         [g(t)]
-Input variables:          []
-Parameters in equations:  [a, b, c, d, e, f]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [a, b, x(0), z(0), y(0)]
-Nonidentifiable parameter:  [c, d, e, f, w(0)]
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[d = 2, z_ = 1, c = 2, x_ = 0, f = 3, b = 2, y_ = 1, a = 1, w_ = 2, e = 3]
-NonID parameters:	[c, d, e, f, w_0]
-Substitutions:	[z_ = 2, x_ = 1, y_ = 2, w_ = 3, z_aux = 3]
-memory used=348.3MB, alloc=137.8MB, time=2.39
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_qwwc_original_no_trb",{},
+new_qwwc)
+WriteScripts(system_vars[1],system_vars[2],"new_qwwc_weights_no_trb",all_subs,
+new_qwwc)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_qwwc_original_with_trb",{},
+new_qwwc)
+WriteScripts(system_vars[1],system_vars[2],"new_qwwc_weights_with_trb",all_subs
+,new_qwwc)
+memory used=18.5MB, alloc=79.3MB, time=0.13

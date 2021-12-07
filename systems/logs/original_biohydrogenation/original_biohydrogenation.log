@@ -6,87 +6,31 @@
 # baseline 492
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [x4(t), x5(t), x6(t), x7(t)]
-Output variables:         [y1(t), y2(t)]
-Input variables:          []
-Parameters in equations:  [k10, k5, k6, k7, k8, k9]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{x7_0}
-Locally identifiable paramters:  [k10, k5, k6, k7, k8, k9, x4(0), x5(0), x6(0)]
-Nonidentifiable parameter:  [x7(0)]
-Algebraically independent parameters {x7(0)}
-
-=======================================================
-Substituting transcendence basis.
-=======================================================
-Algebraically independent parameters among nonidentifiable: {}
-Algebraically independent parameters among derivatives: {x7(0)}
-
-=== Input info ===
-State variables:          [x4(t), x5(t), x6(t), x7(t)]
-Output variables:         [y1(t), y2(t)]
-Input variables:          []
-Parameters in equations:  [k10, k5, k6, k7, k8, k9]
-===================
-
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[x6_ = 1, x5_ = 0, k8 = 1, k7 = 1, x4_ = 0, k5 = 1, k6 = 1, k10 = 2, k9 = 2]
-NonID parameters:	[x7_0]
-Substitutions:	[x6_ = 2, x5_ = 1, z_aux = 2, x4_ = 1, k10 = 3, k9 = 3]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [x4(t), x5(t), x6(t), x7(t)]
-Output variables:         [y1(t), y2(t)]
-Input variables:          []
-Parameters in equations:  [k10, k5, k6, k7, k8, k9]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [k10, k5, k6, k7, k8, k9, x4(0), x5(0), x6(0)]
-Nonidentifiable parameter:  [x7(0)]
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[x6_ = 1, x5_ = 0, k8 = 1, k7 = 1, x4_ = 0, k5 = 1, k6 = 1, k10 = 2, k9 = 2]
-NonID parameters:	[x7_0]
-Substitutions:	[x6_ = 2, x5_ = 1, z_aux = 2, x4_ = 1, k10 = 3, k9 = 3]
-memory used=431.5MB, alloc=112.3MB, time=2.50
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],
+"original_biohydrogenation_original_no_trb",{},original_biohydrogenation)
+WriteScripts(system_vars[1],system_vars[2],
+"original_biohydrogenation_weights_no_trb",all_subs,original_biohydrogenation)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],
+"original_biohydrogenation_original_with_trb",{},original_biohydrogenation)
+WriteScripts(system_vars[1],system_vars[2],
+"original_biohydrogenation_weights_with_trb",all_subs,original_biohydrogenation
+)
+memory used=1.6MB, alloc=8.3MB, time=0.05

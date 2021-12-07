@@ -6,87 +6,30 @@
 # Ex 8 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), a(t), h(t), r(t), d0(t)]
-Output variables:         [y1(t)]
-Input variables:          [b(t)]
-Parameters in equations:  [Phi, alpha, dlt, eta, gamma_a, gamma_h, gamma_i, n, sgm]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{Phi, d0_0, dlt, gamma_h, h_0, r_0}
-Locally identifiable paramters:  [alpha, eta, gamma_a, n, sgm, s(0), e(0), i(0), a(0)]
-Nonidentifiable parameter:  [Phi, d0(0), dlt, gamma_h, gamma_i, h(0), r(0)]
-Algebraically independent parameters {Phi, dlt, gamma_h, d0(0), h(0), r(0)}
-
-=======================================================
-Substituting transcendence basis.
-=======================================================
-Algebraically independent parameters among nonidentifiable: {Phi, dlt, gamma_h}
-Algebraically independent parameters among derivatives: {d0(0), h(0), r(0)}
-
-=== Input info ===
-State variables:          [Phi(t), dlt(t), gamma_h(t), s(t), e(t), i(t), a(t), h(t), r(t), d0(t)]
-Output variables:         [y1(t), y_faux1(t), y_faux2(t), y_faux3(t)]
-Input variables:          [b(t)]
-Parameters in equations:  [alpha, eta, gamma_a, gamma_i, n, sgm]
-===================
-
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[a_ = 1, dlt_ = 0, Phi_ = 0, i_ = 0, gamma_i = 1, gamma_a = 2, n = 1, sgm = 1, (NULL) = 1, s_ = 0, e_ = 1, alpha = 1, gamma_h_ = 0, eta = 1]
-NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
-Substitutions:	[a_ = 2, z_aux = 2, dlt_ = 1, Phi_ = 1, i_ = 1, gamma_a = 3, s_ = 1, e_ = 2, gamma_h_ = 1]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), a(t), h(t), r(t), d0(t)]
-Output variables:         [y1(t)]
-Input variables:          [b(t)]
-Parameters in equations:  [Phi, alpha, dlt, eta, gamma_a, gamma_h, gamma_i, n, sgm]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [alpha, eta, gamma_a, n, sgm, s(0), e(0), i(0), a(0)]
-Nonidentifiable parameter:  [Phi, d0(0), dlt, gamma_h, gamma_i, h(0), r(0)]
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[a_ = 1, i_ = 0, gamma_i = 1, gamma_a = 2, n = 1, sgm = 1, (NULL) = 1, Phi = 1, s_ = 0, e_ = 1, alpha = 1, eta = 1]
-NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
-Substitutions:	[a_ = 2, z_aux = 2, i_ = 1, gamma_a = 3, s_ = 1, e_ = 2]
-memory used=3224.7MB, alloc=120.3MB, time=14.27
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seirahd_original_no_trb",{},
+new_seirahd)
+WriteScripts(system_vars[1],system_vars[2],"new_seirahd_weights_no_trb",
+all_subs,new_seirahd)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seirahd_original_with_trb",{},
+new_seirahd)
+WriteScripts(system_vars[1],system_vars[2],"new_seirahd_weights_with_trb",
+all_subs,new_seirahd)
+memory used=1.6MB, alloc=8.3MB, time=0.05

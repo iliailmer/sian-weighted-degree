@@ -9,7 +9,6 @@ substitutions := [
     c = 1/2 * ((Atot(t) / V1 - Rtot(t) - Kss) + g(t))
 ];
 
-g(t) = sqrt((Atot(t) / Vtot))
 sigma := [
     diff(AD(t), t) = -ka * AD(t),
     diff(Atot(t), t) = ka * AD(t) - CLtot * c - Q * (c - AP(t)/V2),
@@ -21,11 +20,11 @@ sigma := [
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
-WriteScripts(original_et_hat, system_vars[2], "new_bone_model_full_original_no_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "new_bone_model_full_weights_no_trb", all_subs, PATH);
+WriteScripts(original_et_hat, system_vars[2], "new_bone_model_reduced_supp_original_no_trb", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "new_bone_model_reduced_supp_weights_no_trb", all_subs, PATH);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
-WriteScripts(original_et_hat, system_vars[2], "new_bone_model_full_original_with_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "new_bone_model_full_weights_with_trb", all_subs, PATH);
+WriteScripts(original_et_hat, system_vars[2], "new_bone_model_reduced_supp_original_with_trb", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "new_bone_model_reduced_supp_weights_with_trb", all_subs, PATH);
 quit;

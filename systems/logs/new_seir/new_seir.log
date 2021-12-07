@@ -6,87 +6,30 @@
 # Ex 34 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), r(t)]
-Output variables:         [y1(t)]
-Input variables:          []
-Parameters in equations:  [Lam, b, eps, g, mu, n, r0]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{Lam, b}
-Locally identifiable paramters:  [eps, g, mu, e(0), i(0), r(0)]
-Nonidentifiable parameter:  [Lam, b, n, r0, s(0)]
-Algebraically independent parameters {Lam, b}
-
-=======================================================
-Substituting transcendence basis.
-=======================================================
-Algebraically independent parameters among nonidentifiable: {Lam, b}
-Algebraically independent parameters among derivatives: {}
-
-=== Input info ===
-State variables:          [Lam(t), b(t), s(t), e(t), i(t), r(t)]
-Output variables:         [y1(t), y_faux1(t), y_faux2(t)]
-Input variables:          []
-Parameters in equations:  [eps, g, mu, n, r0]
-===================
-
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[mu = 1, g = 3, r0 = 3, r_ = 0, eps = 1, s_ = 2, Lam_ = 0, i_ = 0, e_ = 1, b_ = 0, n = 2]
-NonID parameters:	[Lam, b, n, r0, s_0]
-Substitutions:	[g = 4, r_ = 1, z_aux = 3, s_ = 3, Lam_ = 1, i_ = 1, e_ = 2, b_ = 1]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [s(t), e(t), i(t), r(t)]
-Output variables:         [y1(t)]
-Input variables:          []
-Parameters in equations:  [Lam, b, eps, g, mu, n, r0]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [eps, g, mu, e(0), i(0), r(0)]
-Nonidentifiable parameter:  [Lam, b, n, r0, s(0)]
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[mu = 1, g = 3, Lam = 3, r0 = 3, r_ = 0, eps = 1, s_ = 2, i_ = 0, b = 2, e_ = 1, n = 2]
-NonID parameters:	[Lam, b, n, r0, s_0]
-Substitutions:	[g = 4, r_ = 1, z_aux = 3, s_ = 3, i_ = 1, e_ = 2]
-memory used=1250.6MB, alloc=112.3MB, time=6.17
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seir_original_no_trb",{},
+new_seir)
+WriteScripts(system_vars[1],system_vars[2],"new_seir_weights_no_trb",all_subs,
+new_seir)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],"new_seir_original_with_trb",{},
+new_seir)
+WriteScripts(system_vars[1],system_vars[2],"new_seir_weights_with_trb",all_subs
+,new_seir)
+memory used=1.6MB, alloc=8.3MB, time=0.05

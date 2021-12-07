@@ -5,73 +5,30 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [x1(t), x2(t), x3(t), x4(t)]
-Output variables:         [y1(t)]
-Input variables:          [u(t)]
-Parameters in equations:  [k01, k12, k13, k14, k21, k31, k41]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-{}
-Locally identifiable paramters:  [k01, k12, k13, k14, k21, k31, k41, x1(0), x2(0), x3(0), x4(0)]
-Nonidentifiable parameter:  []
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[k14 = 1, k13 = 1, x1_ = 0, x2_ = 1, k12 = 1, k31 = 1, k41 = 1, k01 = 1, (NULL) = 1, x3_ = 1, x4_ = 1, k21 = 1]
-NonID parameters:	[]
-Substitutions:	[k14 = 2, k13 = 2, z_aux = 1, x1_ = 1, x2_ = 2, k12 = 2, k31 = 2, k41 = 2, k01 = 2, x3_ = 2, x4_ = 2, k21 = 2]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [x1(t), x2(t), x3(t), x4(t)]
-Output variables:         [y1(t)]
-Input variables:          [u(t)]
-Parameters in equations:  [k01, k12, k13, k14, k21, k31, k41]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [k01, k12, k13, k14, k21, k31, k41, x1(0), x2(0), x3(0), x4(0)]
-Nonidentifiable parameter:  []
-No algebraically independent parameters found.
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[k14 = 1, k13 = 1, x1_ = 0, x2_ = 1, k12 = 1, k31 = 1, k41 = 1, k01 = 1, (NULL) = 1, x3_ = 1, x4_ = 1, k21 = 1]
-NonID parameters:	[]
-Substitutions:	[k14 = 2, k13 = 2, z_aux = 1, x1_ = 1, x2_ = 2, k12 = 2, k31 = 2, k41 = 2, k01 = 2, x3_ = 2, x4_ = 2, k21 = 2]
-memory used=290.4MB, alloc=49.0MB, time=1.48
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/bfs_deriv.mpl`
+on line 429, syntax error, reserved word `proc` unexpected:
+end proc:
+       ^
+Error, while reading `imports/generate_poly_system.mpl`
+Error, while reading `imports/create_substitutions.mpl`
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],
+"original_daisy_mamil4_original_no_trb",{},original_daisy_mamil4)
+WriteScripts(system_vars[1],system_vars[2],
+"original_daisy_mamil4_weights_no_trb",all_subs,original_daisy_mamil4)
+Error, mismatched multiple assignment of 5 variables on the left side and 1
+value on the right side
+WriteScripts(original_et_hat,system_vars[2],
+"original_daisy_mamil4_original_with_trb",{},original_daisy_mamil4)
+WriteScripts(system_vars[1],system_vars[2],
+"original_daisy_mamil4_weights_with_trb",all_subs,original_daisy_mamil4)
+memory used=1.6MB, alloc=8.3MB, time=0.05
