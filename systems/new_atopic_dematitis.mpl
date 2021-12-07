@@ -41,7 +41,8 @@ sigma := [
     y12(t) = ct1(t),
     y13(t) = ct2(t),
     y14(t) = ct17(t),
-    y15(t) = ct22(t)
+    y15(t) = ct22(t),
+    ye(t) = 72 * (2*p(t) + 2*(1 - s(t))) / 4
 ];
 sigma := subs(substitutions, sigma);
 
