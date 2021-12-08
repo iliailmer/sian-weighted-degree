@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -29,14 +29,19 @@ Parameters in equations:  [b, g]
 =======================================================
 3. Assessing local identifiability
 =======================================================
-{R_0}
 Locally identifiable paramters:  [b, g, S(0), In(0), AUX(0)]
 Nonidentifiable parameter:  [R(0)]
-Algebraically independent parameters {R(0)}
 
 =======================================================
 Substituting transcendence basis.
 =======================================================
+Algebraically independent parameters {R(0)}
+Number of possible combinations 1
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Picked the best choice [R_0] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {}
 Algebraically independent parameters among derivatives: {R(0)}
 
@@ -51,9 +56,9 @@ Parameters in equations:  [b, g]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b = 0, S_ = 1, g = 0, In_ = 0, AUX_ = 0]
+States for substitution:	[b = 0, In_ = 0, AUX_ = 0, S_ = 1, g = 0]
 NonID parameters:	[R_0]
-Substitutions:	[S_ = 2, In_ = 1, z_aux = 1]
+Substitutions:	[In_ = 1, z_aux = 1, S_ = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -80,12 +85,11 @@ Parameters in equations:  [b, g]
 =======================================================
 Locally identifiable paramters:  [b, g, S(0), In(0), AUX(0)]
 Nonidentifiable parameter:  [R(0)]
-No algebraically independent parameters found.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b = 0, S_ = 1, g = 0, In_ = 0, AUX_ = 0]
+States for substitution:	[b = 0, In_ = 0, AUX_ = 0, S_ = 1, g = 0]
 NonID parameters:	[R_0]
-Substitutions:	[S_ = 2, In_ = 1, z_aux = 1]
-memory used=51.5MB, alloc=47.3MB, time=0.36
+Substitutions:	[In_ = 1, z_aux = 1, S_ = 2]
+memory used=48.0MB, alloc=44.3MB, time=0.60

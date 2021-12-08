@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -6,30 +6,167 @@
 # Ex 35 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_sliqr_original_no_trb",{},
-new_sliqr)
-WriteScripts(system_vars[1],system_vars[2],"new_sliqr_weights_no_trb",all_subs,
-new_sliqr)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_sliqr_original_with_trb",{},
-new_sliqr)
-WriteScripts(system_vars[1],system_vars[2],"new_sliqr_weights_with_trb",
-all_subs,new_sliqr)
-memory used=1.6MB, alloc=8.3MB, time=0.05
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [S(t), LL(t), In(t), Q(t), R(t), N(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, mu, theta1]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [alpha1, alpha2, b, dlt, eta, g, theta1, S(0), LL(0), In(0), Q(0)]
+Nonidentifiable parameter:  [N(0), R(0), mu]
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters {N(0), R(0)}
+Number of possible combinations 78
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Collection [N_0, N_1] is not transcendence basis
+Collection [N_0, N_10] is not transcendence basis
+Collection [N_0, N_2] is not transcendence basis
+Collection [N_0, N_3] is not transcendence basis
+Collection [N_0, N_4] is not transcendence basis
+Collection [N_0, N_5] is not transcendence basis
+Collection [N_0, N_6] is not transcendence basis
+Collection [N_0, N_7] is not transcendence basis
+Collection [N_0, N_8] is not transcendence basis
+Collection [N_0, N_9] is not transcendence basis
+Collection [N_0, mu] is not transcendence basis
+Collection [N_1, N_10] is not transcendence basis
+Collection [N_1, N_2] is not transcendence basis
+Collection [N_1, N_3] is not transcendence basis
+Collection [N_1, N_4] is not transcendence basis
+Collection [N_1, N_5] is not transcendence basis
+Collection [N_1, N_6] is not transcendence basis
+Collection [N_1, N_7] is not transcendence basis
+Collection [N_1, N_8] is not transcendence basis
+Collection [N_1, N_9] is not transcendence basis
+Collection [N_1, R_0] is not transcendence basis
+Collection [N_1, mu] is not transcendence basis
+Collection [N_10, N_2] is not transcendence basis
+Collection [N_10, N_3] is not transcendence basis
+Collection [N_10, N_4] is not transcendence basis
+Collection [N_10, N_5] is not transcendence basis
+Collection [N_10, N_6] is not transcendence basis
+Collection [N_10, N_7] is not transcendence basis
+Collection [N_10, N_8] is not transcendence basis
+Collection [N_10, N_9] is not transcendence basis
+Collection [N_10, R_0] is not transcendence basis
+Collection [N_10, mu] is not transcendence basis
+Collection [N_2, N_3] is not transcendence basis
+Collection [N_2, N_4] is not transcendence basis
+Collection [N_2, N_5] is not transcendence basis
+Collection [N_2, N_6] is not transcendence basis
+Collection [N_2, N_7] is not transcendence basis
+Collection [N_2, N_8] is not transcendence basis
+Collection [N_2, N_9] is not transcendence basis
+Collection [N_2, R_0] is not transcendence basis
+Collection [N_2, mu] is not transcendence basis
+Collection [N_3, N_4] is not transcendence basis
+Collection [N_3, N_5] is not transcendence basis
+Collection [N_3, N_6] is not transcendence basis
+Collection [N_3, N_7] is not transcendence basis
+Collection [N_3, N_8] is not transcendence basis
+Collection [N_3, N_9] is not transcendence basis
+Collection [N_3, R_0] is not transcendence basis
+Collection [N_3, mu] is not transcendence basis
+Collection [N_4, N_5] is not transcendence basis
+Collection [N_4, N_6] is not transcendence basis
+Collection [N_4, N_7] is not transcendence basis
+Collection [N_4, N_8] is not transcendence basis
+Collection [N_4, N_9] is not transcendence basis
+Collection [N_4, R_0] is not transcendence basis
+Collection [N_4, mu] is not transcendence basis
+Collection [N_5, N_6] is not transcendence basis
+Collection [N_5, N_7] is not transcendence basis
+Collection [N_5, N_8] is not transcendence basis
+Collection [N_5, N_9] is not transcendence basis
+Collection [N_5, R_0] is not transcendence basis
+Collection [N_5, mu] is not transcendence basis
+Collection [N_6, N_7] is not transcendence basis
+Collection [N_6, N_8] is not transcendence basis
+Collection [N_6, N_9] is not transcendence basis
+Collection [N_6, R_0] is not transcendence basis
+Collection [N_6, mu] is not transcendence basis
+Collection [N_7, N_8] is not transcendence basis
+Collection [N_7, N_9] is not transcendence basis
+Collection [N_7, R_0] is not transcendence basis
+Collection [N_7, mu] is not transcendence basis
+Collection [N_8, N_9] is not transcendence basis
+Collection [N_8, R_0] is not transcendence basis
+Collection [N_8, mu] is not transcendence basis
+Collection [N_9, R_0] is not transcendence basis
+Collection [N_9, mu] is not transcendence basis
+Picked the best choice [R_0, mu] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {mu}
+Algebraically independent parameters among derivatives: {R(0)}
+
+=== Input info ===
+State variables:          [mu(t), S(t), LL(t), In(t), Q(t), R(t), N(t)]
+Output variables:         [y1(t), y_faux1(t)]
+Input variables:          []
+Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, theta1]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[N_ = 2, Q_ = 0, b = 2, eta = 1, S_ = 1, alpha2 = 1, mu_ = 0, theta1 = 1, In_ = 1, g = 1, dlt = 1, alpha1 = 2, LL_ = 0]
+NonID parameters:	[N_0, R_0, mu]
+Substitutions:	[N_ = 3, Q_ = 1, b = 3, S_ = 2, z_aux = 2, mu_ = 1, In_ = 2, alpha1 = 3, LL_ = 1]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [S(t), LL(t), In(t), Q(t), R(t), N(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, mu, theta1]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [alpha1, alpha2, b, dlt, eta, g, theta1, S(0), LL(0), In(0), Q(0)]
+Nonidentifiable parameter:  [N(0), R(0), mu]
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[N_ = 2, Q_ = 0, mu = 2, b = 2, eta = 1, S_ = 1, alpha2 = 1, theta1 = 1, In_ = 1, g = 1, dlt = 1, alpha1 = 2, LL_ = 0]
+NonID parameters:	[N_0, R_0, mu]
+Substitutions:	[N_ = 3, Q_ = 1, b = 3, S_ = 2, z_aux = 2, In_ = 2, alpha1 = 3, LL_ = 1]
+memory used=3155.4MB, alloc=155.8MB, time=29.15

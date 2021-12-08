@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -29,17 +29,15 @@ Parameters in equations:  [a, b, nu]
 =======================================================
 3. Assessing local identifiability
 =======================================================
-{}
 Locally identifiable paramters:  [a, b, nu, S(0), E(0), In(0), N(0), Cu(0)]
 Nonidentifiable parameter:  []
-No algebraically independent parameters found.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[E_ = 1, a = 3, b = 2, S_ = 2, Cu_ = 0, In_ = 2, N_ = 0, nu = 1]
+States for substitution:	[b = 2, a = 3, E_ = 1, N_ = 0, nu = 1, In_ = 2, S_ = 2, Cu_ = 0]
 NonID parameters:	[]
-Substitutions:	[E_ = 2, a = 4, S_ = 3, z_aux = 3, In_ = 3, N_ = 1]
+Substitutions:	[a = 4, E_ = 2, N_ = 1, In_ = 3, S_ = 3, z_aux = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -66,12 +64,11 @@ Parameters in equations:  [a, b, nu]
 =======================================================
 Locally identifiable paramters:  [a, b, nu, S(0), E(0), In(0), N(0), Cu(0)]
 Nonidentifiable parameter:  []
-No algebraically independent parameters found.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[E_ = 1, a = 3, b = 2, S_ = 2, Cu_ = 0, In_ = 2, N_ = 0, nu = 1]
+States for substitution:	[b = 2, a = 3, E_ = 1, N_ = 0, nu = 1, In_ = 2, S_ = 2, Cu_ = 0]
 NonID parameters:	[]
-Substitutions:	[E_ = 2, a = 4, S_ = 3, z_aux = 3, In_ = 3, N_ = 1]
-memory used=268.5MB, alloc=116.3MB, time=1.55
+Substitutions:	[a = 4, E_ = 2, N_ = 1, In_ = 3, S_ = 3, z_aux = 3]
+memory used=273.0MB, alloc=116.3MB, time=2.71

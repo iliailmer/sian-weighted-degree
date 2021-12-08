@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -29,16 +29,21 @@ Parameters in equations:  [k3, k4, k5, k6, k7]
 =======================================================
 3. Assessing local identifiability
 =======================================================
-{x3_0}
 Locally identifiable paramters:  [k3, k4, k5, k6, k7, x1(0), x2(0), x5(0), a(0), b(0), d(0)]
 Nonidentifiable parameter:  [x3(0), x4(0)]
-Algebraically independent parameters {x3(0)}
 
 =======================================================
 Substituting transcendence basis.
 =======================================================
+Algebraically independent parameters {x3(0)}
+Number of possible combinations 14
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Picked the best choice [x4_0] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {}
-Algebraically independent parameters among derivatives: {x3(0)}
+Algebraically independent parameters among derivatives: {x4(0)}
 
 === Input info ===
 State variables:          [x1(t), x2(t), x3(t), x4(t), x5(t), a(t), b(t), d(t)]
@@ -51,9 +56,9 @@ Parameters in equations:  [k3, k4, k5, k6, k7]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k4 = 2, d_ = 0, k5 = 3, k6 = 3, b_ = 0, a_ = 0, x5_ = 0, x4_ = 3, k3 = 2, x3_ = 3, x2_ = 2, x1_ = 1, k7 = 1]
+States for substitution:	[k6 = 3, k5 = 3, a_ = 0, k7 = 1, k4 = 2, k3 = 2, d_ = 0, x2_ = 2, x3_ = 3, x4_ = 3, x5_ = 0, x1_ = 1, b_ = 0]
 NonID parameters:	[x3_0, x4_0]
-Substitutions:	[d_ = 1, k5 = 4, k6 = 4, b_ = 1, a_ = 1, x4_ = 4, x3_ = 4, x2_ = 3, x1_ = 2, z_aux = 3]
+Substitutions:	[k6 = 4, k5 = 4, a_ = 1, z_aux = 3, d_ = 1, x2_ = 3, x3_ = 4, x4_ = 4, x1_ = 2, b_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -80,12 +85,11 @@ Parameters in equations:  [k3, k4, k5, k6, k7]
 =======================================================
 Locally identifiable paramters:  [k3, k4, k5, k6, k7, x1(0), x2(0), x5(0), a(0), b(0), d(0)]
 Nonidentifiable parameter:  [x3(0), x4(0)]
-No algebraically independent parameters found.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k4 = 2, d_ = 0, k5 = 3, k6 = 3, b_ = 0, a_ = 0, x5_ = 0, x4_ = 3, k3 = 2, x3_ = 3, x2_ = 2, x1_ = 1, k7 = 1]
+States for substitution:	[k6 = 3, k5 = 3, a_ = 0, k7 = 1, k4 = 2, k3 = 2, d_ = 0, x2_ = 2, x3_ = 3, x4_ = 3, x5_ = 0, x1_ = 1, b_ = 0]
 NonID parameters:	[x3_0, x4_0]
-Substitutions:	[d_ = 1, k5 = 4, k6 = 4, b_ = 1, a_ = 1, x4_ = 4, x3_ = 4, x2_ = 3, x1_ = 2, z_aux = 3]
-memory used=955.0MB, alloc=135.8MB, time=5.37
+Substitutions:	[k6 = 4, k5 = 4, a_ = 1, z_aux = 3, d_ = 1, x2_ = 3, x3_ = 4, x4_ = 4, x1_ = 2, b_ = 1]
+memory used=1422.2MB, alloc=152.3MB, time=13.55

@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -6,30 +6,91 @@
 # Ex 19 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_sijru_original_no_trb",{},
-new_sijru)
-WriteScripts(system_vars[1],system_vars[2],"new_sijru_weights_no_trb",all_subs,
-new_sijru)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_sijru_original_with_trb",{},
-new_sijru)
-WriteScripts(system_vars[1],system_vars[2],"new_sijru_weights_with_trb",
-all_subs,new_sijru)
-memory used=1.6MB, alloc=8.3MB, time=0.05
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [S(t), In(t), Jj(t), R(t), U(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [a, b, eta, ksi]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [a, b, eta, ksi, S(0), In(0), Jj(0), U(0)]
+Nonidentifiable parameter:  [R(0)]
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters {R(0)}
+Number of possible combinations 1
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Picked the best choice [R_0] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {}
+Algebraically independent parameters among derivatives: {R(0)}
+
+=== Input info ===
+State variables:          [S(t), In(t), Jj(t), R(t), U(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [a, b, eta, ksi]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[S_ = 1, In_ = 0, eta = 1, ksi = 1, b = 1, Jj_ = 1, U_ = 0, a = 1]
+NonID parameters:	[R_0]
+Substitutions:	[S_ = 2, In_ = 1, eta = 2, z_aux = 1, ksi = 2, b = 2, Jj_ = 2, a = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [S(t), In(t), Jj(t), R(t), U(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [a, b, eta, ksi]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [a, b, eta, ksi, S(0), In(0), Jj(0), U(0)]
+Nonidentifiable parameter:  [R(0)]
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[S_ = 1, In_ = 0, eta = 1, ksi = 1, b = 1, Jj_ = 1, U_ = 0, a = 1]
+NonID parameters:	[R_0]
+Substitutions:	[S_ = 2, In_ = 1, eta = 2, z_aux = 1, ksi = 2, b = 2, Jj_ = 2, a = 2]
+memory used=269.1MB, alloc=115.0MB, time=2.72

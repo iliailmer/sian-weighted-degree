@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -8,20 +8,6 @@
 
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
 sigma := [diff(Cp(t),t) = ((QT-LT)*CTv(t)+(Qb-Lb)*CBv(t)+(LT+Lb)*CL(t)-QT*Cp(t)
 -Qb*Cp(t))/VP, diff(CTv(t),t) = (QT*Cp(t)-(QT-LT)*CTv(t)-(1-sigmaTv)*LT*CTv(t)-
 CLupt*CTv(t)-CLupt*FR*CTeb(t))/Vtv, diff(CTeu(t),t) = (CLupt*(CTv(t)+CTl(t))-
@@ -48,16 +34,27 @@ CTeu(t)*CTFcRnU(t)+KoffFcRn*CTeb(t))+CLupt*CTeb(t))/VTe, diff(CbbbbFcRnu(t),t)
 CBebbbb(t))/VBebbb, diff(CBbcsfbFcRnu(t),t) = (Vbebcsfb*(-KonFcRn*CBebcsfbu(t)*
 CBbcsfbFcRnu(t)+KoffFcRn*CBebcsfbb(t))+CLupbcsfb*CBebcsfbb(t))/Vbebcsfb, y1(t)
 = Cp(t), y2(t) = CBebcsfbu(t), y3(t) = CBebcsfbb(t), y4(t) = CBbcsfbFcRnu(t)]
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_brain_reduced_original_no_trb"
-,{},new_brain_reduced)
-WriteScripts(system_vars[1],system_vars[2],"new_brain_reduced_weights_no_trb",
-all_subs,new_brain_reduced)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],
-"new_brain_reduced_original_with_trb",{},new_brain_reduced)
-WriteScripts(system_vars[1],system_vars[2],"new_brain_reduced_weights_with_trb"
-,all_subs,new_brain_reduced)
-memory used=18.5MB, alloc=79.3MB, time=0.14
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [Cp(t), CTv(t), CTeu(t), CTeb(t), CTl(t), CBv(t), CBebbbu(t), CBebbbb(t), CBl(t), CBebcsfbu(t), CBebcsfbb(t), CBcsf(t), CL(t), CTFcRnU(t), CbbbbFcRnu(t), CBbcsfbFcRnu(t)]
+Output variables:         [y1(t), y2(t), y3(t), y4(t)]
+Input variables:          []
+Parameters in equations:  [CLupb, CLupbbb, CLupt, FR, FRb, KonFcRn, LB, LT, Lb, QBcsf, QBecf, QT, Qb, Qbecf, VBebbb, VBl, VBv, VL, VP, VTe, VTl, Vcsf, Vtv, kdeg, sigmaTL, sigmaTv, CLupbcsfb, KoffFcRn, Vbebcsfb, sigmaBBB, sigmaBCSFB, sigmaBISF, sigmaBlsf]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================

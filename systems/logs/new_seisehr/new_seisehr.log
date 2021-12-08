@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -6,30 +6,70 @@
 # Ex 38 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_seisehr_original_no_trb",{},
-new_seisehr)
-WriteScripts(system_vars[1],system_vars[2],"new_seisehr_weights_no_trb",
-all_subs,new_seisehr)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_seisehr_original_with_trb",{},
-new_seisehr)
-WriteScripts(system_vars[1],system_vars[2],"new_seisehr_weights_with_trb",
-all_subs,new_seisehr)
-memory used=1.6MB, alloc=8.3MB, time=0.05
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), sq(t), eq(t), h(t), r(t)]
+Output variables:         [y1(t)]
+Input variables:          [sgm(t)]
+Parameters in equations:  [alpha, b, c, dlt_i, dlt_q, g_h, g_i, lmb, q, theta0]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [alpha, b, c, dlt_i, dlt_q, g_h, g_i, lmb, q, theta0, s(0), e(0), i(0), sq(0), eq(0), h(0), r(0)]
+Nonidentifiable parameter:  []
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[alpha = 1, eq_ = 2, g_i = 2, sq_ = 3, (NULL) = 1, dlt_i = 1, theta0 = 2, g_h = 1, lmb = 3, dlt_q = 2, c = 2, b = 2, r_ = 0, q = 2, i_ = 0, e_ = 1, s_ = 2, h_ = 1]
+NonID parameters:	[]
+Substitutions:	[eq_ = 3, sq_ = 4, lmb = 4, z_aux = 3, i_ = 1, e_ = 2, s_ = 3, h_ = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), sq(t), eq(t), h(t), r(t)]
+Output variables:         [y1(t)]
+Input variables:          [sgm(t)]
+Parameters in equations:  [alpha, b, c, dlt_i, dlt_q, g_h, g_i, lmb, q, theta0]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [alpha, b, c, dlt_i, dlt_q, g_h, g_i, lmb, q, theta0, s(0), e(0), i(0), sq(0), eq(0), h(0), r(0)]
+Nonidentifiable parameter:  []
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[alpha = 1, eq_ = 2, g_i = 2, sq_ = 3, (NULL) = 1, dlt_i = 1, theta0 = 2, g_h = 1, lmb = 3, dlt_q = 2, c = 2, b = 2, r_ = 0, q = 2, i_ = 0, e_ = 1, s_ = 2, h_ = 1]
+NonID parameters:	[]
+Substitutions:	[eq_ = 3, sq_ = 4, lmb = 4, z_aux = 3, i_ = 1, e_ = 2, s_ = 3, h_ = 2]
+memory used=4914.0MB, alloc=187.8MB, time=38.82

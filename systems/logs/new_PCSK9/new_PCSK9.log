@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -7,20 +7,6 @@
 
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
 sigma := [diff(hepCh(t),t) = f_diet_abs*S_diet+f_hepCh_statin*S_hepCh_loss-
 k_hepCh_loss*hepCh(t)-k_LDL_syn*Ch_LDLpart*V*hepCh(t)+f_LDLchep_clr*k_LDLc_clr1
 *V*LDLc(t)*LDLr+f_LDLchep_clr*k_LDLc_clr2*V*LDLc(t)+f_LDLchep_clr*k_HDLc_clr*V*
@@ -32,16 +18,590 @@ Ccom(t), diff(Cp(t),t) = Q*(Cc(t)-Cp(t))/Vp, diff(PCSK9(t),t) = k_PCSK9_syn*
 f_SREBP2_reg_PCSK9-k_PCSK9_deg*PCSK9(t)-k_on*Cc(t)*PCSK9(t)+k_off*Ccom(t), diff
 (Ccom(t),t) = k_on*Cc(t)*PCSK9(t)-k_off*Ccom(t)-k_complex_deg*Ccom(t), y1(t) =
 LDLc(t), y2(t) = PCSK9(t)]
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_pcsk9_original_no_trb",{},
-new_PCSK9)
-WriteScripts(system_vars[1],system_vars[2],"new_pcsk9_weights_no_trb",all_subs,
-new_PCSK9)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_pcsk9_original_with_trb",{},
-new_PCSK9)
-WriteScripts(system_vars[1],system_vars[2],"new_pcsk9_weights_with_trb",
-all_subs,new_PCSK9)
-memory used=18.5MB, alloc=79.3MB, time=0.13
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [hepCh(t), LDLc(t), LDLR(t), Ad(t), Cc(t), Cp(t), PCSK9(t), Ccom(t)]
+Output variables:         [y1(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [Cl, HDLc, LDLr, Q, S_diet, V, Vc, Vp, f, k_abs, k_off, k_on, Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_HDLc_clr, k_LDLR_deg, k_LDLR_syn, k_LDL_syn, k_LDLc_clr1, k_LDLc_clr2, k_PCSK9_deg, k_PCSK9_syn, k_complex_deg, k_hepCh_loss, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [k_abs, k_off, k_on, k_PCSK9_deg, k_complex_deg, LDLc(0), Cc(0), Cp(0), PCSK9(0), Ccom(0)]
+Nonidentifiable parameter:  [Ad(0), Cl, HDLc, LDLR(0), LDLr, Q, S_diet, V, Vc, Vp, f, hepCh(0), Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_HDLc_clr, k_LDLR_deg, k_LDLR_syn, k_LDL_syn, k_LDLc_clr1, k_LDLc_clr2, k_PCSK9_syn, k_hepCh_loss, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9]
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters {Cl, HDLc, LDLr, S_diet, V, hepCh_1, Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_LDLR_deg, k_LDLR_syn, k_PCSK9_syn, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR, Ad(0), LDLR(0), hepCh(0)}
+Number of possible combinations 3169870830126
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Collection [Ad_0, Ad_1, Cl, Ad_7, Q, Ad_3, HDLc, hepCh_2, hepCh_3, hepCh_1, Vp, f_diet_abs, k_LDLc_clr2, f_hepCh_statin, Ad_12, LDLR_0, Ad_6, Ad_5, Ad_9, Ch_LDLpart] is not transcendence basis
+Collection [Ad_0, Ad_5, Ad_1, Ad_11, S_diet, k_LDLc_clr1, Ch_LDL_particle, Vp, hepCh_0, Ad_10, HDLc, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9, hepCh_1, Ad_3, hepCh_3, Ch_LDLpart, Ad_12, k_LDL_syn, f] is not transcendence basis
+Collection [Ad_0, Ad_8, k_HDLc_clr, k_PCSK9_syn, Cl, f_PCSK9_deg_LDLR, HDLc, Vc, Ad_10, Ad_9, S_hepCh_loss, Ch_LDL_particle, f_SREBP2_reg_PCSK9, Ad_5, hepCh_3, Ad_7, Ad_2, Vp, k_LDL_syn, hepCh_0] is not transcendence basis
+Collection [Ad_0, Ad_8, k_LDLc_clr1, hepCh_0, Ad_6, Ad_11, Ad_12, f_SREBP2_reg_PCSK9, f_SREBP2_reg_LDLR, hepCh_1, Vc, LDLr, S_hepCh_loss, Ad_4, Ad_10, k_LDLc_clr2, Cl, LDLR_0, k_hepCh_loss, Ad_1] is not transcendence basis
+Collection [Ad_0, Cl, V, f_LDLchep_clr, k_PCSK9_syn, Ad_5, hepCh_4, k_LDLR_deg, Ad_9, f, Ad_1, hepCh_3, f_PCSK9_deg_LDLR, f_diet_abs, k_LDLc_clr2, Ch_LDL_particle, f_SREBP2_reg_LDLR, k_LDLc_clr1, Ad_2, k_hepCh_loss] is not transcendence basis
+Collection [Ad_0, Ch_LDL_particle, V, hepCh_3, Ad_4, Ch_LDLpart, hepCh_1, Ad_9, Ad_11, f_hepCh_statin, S_hepCh_loss, f_SREBP2_reg_PCSK9, Ad_8, f_SREBP2_reg_LDLR, Ad_12, k_LDLR_syn, k_LDLR_deg, f_diet_abs, k_LDL_syn, k_HDLc_clr] is not transcendence basis
+Collection [Ad_0, f_LDLchep_clr, Ad_10, f_diet_abs, k_hepCh_loss, S_hepCh_loss, hepCh_4, Cl, k_HDLc_clr, Ad_5, Vc, k_LDLc_clr2, Vp, hepCh_3, LDLR_0, k_LDLR_syn, hepCh_1, Ad_7, f_SREBP2_reg_LDLR, S_diet] is not transcendence basis
+Collection [Ad_0, f_diet_abs, hepCh_0, hepCh_4, Ad_9, HDLc, Vp, k_PCSK9_syn, Ad_4, Ad_2, f_hepCh_statin, k_hepCh_loss, hepCh_1, k_LDLR_syn, hepCh_3, S_hepCh_loss, k_HDLc_clr, Ad_7, LDLR_0, f] is not transcendence basis
+Collection [Ad_0, f_diet_abs, hepCh_2, f_SREBP2_reg_PCSK9, Ad_2, Ad_3, Ad_4, LDLR_0, f_LDLchep_clr, Ad_1, S_hepCh_loss, Cl, HDLc, Vp, Q, hepCh_4, k_LDLc_clr2, k_hepCh_loss, f_hepCh_statin, Ad_5] is not transcendence basis
+Collection [Ad_1, Ad_11, hepCh_1, hepCh_0, k_hepCh_loss, k_PCSK9_syn, hepCh_4, Vp, f, Ad_12, k_LDLR_syn, Ad_0, k_LDLc_clr1, Ad_6, Ad_4, S_diet, k_LDLc_clr2, Ch_LDLpart, f_LDLchep_clr, Ad_9] is not transcendence basis
+Collection [Ad_1, Ad_9, hepCh_1, hepCh_2, Ad_6, hepCh_4, S_hepCh_loss, Ad_12, f_SREBP2_reg_LDLR, Ad_2, f_LDLchep_clr, Vc, hepCh_0, S_diet, LDLR_0, Ad_4, Cl, Ch_LDLpart, k_LDL_syn, Ad_5] is not transcendence basis
+Collection [Ad_1, LDLr, hepCh_1, Ad_4, k_PCSK9_syn, k_LDLR_syn, k_hepCh_loss, Ad_3, S_diet, f_hepCh_statin, hepCh_2, Ch_LDL_particle, Ad_11, hepCh_4, hepCh_3, k_HDLc_clr, hepCh_0, k_LDL_syn, k_LDLc_clr1, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [Ad_1, Vc, k_LDLc_clr2, k_LDL_syn, f_LDLchep_clr, Cl, k_HDLc_clr, Q, Ad_9, k_hepCh_loss, Ad_11, Ch_LDLpart, Ad_5, f, Ch_LDL_particle, S_hepCh_loss, k_LDLR_syn, f_PCSK9_deg_LDLR, k_LDLc_clr1, hepCh_4] is not transcendence basis
+Collection [Ad_1, hepCh_2, Ad_5, hepCh_0, LDLR_0, Ad_7, Ad_4, Ad_0, LDLr, Cl, Ad_8, Vc, Ad_11, f_hepCh_statin, Ad_2, k_LDLc_clr1, f_SREBP2_reg_PCSK9, Ch_LDL_particle, f_PCSK9_deg_LDLR, hepCh_3] is not transcendence basis
+Collection [Ad_1, k_LDLR_deg, S_diet, hepCh_0, Ch_LDLpart, Ch_LDL_particle, Ad_10, Q, Ad_2, hepCh_1, f_PCSK9_deg_LDLR, HDLc, Ad_4, Ad_5, f, f_LDLchep_clr, k_LDLR_syn, Ad_12, f_hepCh_statin, k_HDLc_clr] is not transcendence basis
+Collection [Ad_1, k_hepCh_loss, LDLR_0, Ad_9, k_HDLc_clr, Ad_7, f_SREBP2_reg_PCSK9, f_SREBP2_reg_LDLR, Q, hepCh_0, Vp, Ch_LDL_particle, Ad_0, Vc, Ad_2, k_LDLR_syn, Ad_3, k_LDL_syn, k_LDLR_deg, Ad_12] is not transcendence basis
+Collection [Ad_10, LDLr, Ad_7, hepCh_4, Ad_1, Ad_8, f, Ad_11, f_hepCh_statin, Ad_2, k_LDLc_clr1, Ad_4, Ad_5, f_SREBP2_reg_LDLR, f_LDLchep_clr, f_PCSK9_deg_LDLR, k_LDLc_clr2, hepCh_1, LDLR_0, Ch_LDLpart] is not transcendence basis
+Collection [Ad_10, LDLr, Vp, k_LDLc_clr1, f_SREBP2_reg_PCSK9, k_LDLc_clr2, HDLc, hepCh_2, f_hepCh_statin, S_hepCh_loss, k_HDLc_clr, Ad_7, k_LDL_syn, k_LDLR_deg, Ch_LDLpart, k_hepCh_loss, Ad_4, Q, f_diet_abs, Ad_0] is not transcendence basis
+Collection [Ad_10, S_diet, Ad_6, k_LDLc_clr1, Ad_1, k_LDLR_syn, Cl, k_hepCh_loss, V, hepCh_1, k_LDLR_deg, HDLc, hepCh_4, Ch_LDLpart, Ad_11, f_diet_abs, Ad_7, LDLR_0, Vc, Ch_LDL_particle] is not transcendence basis
+Collection [Ad_10, hepCh_0, V, Cl, HDLc, f_PCSK9_deg_LDLR, S_hepCh_loss, Ad_2, k_PCSK9_syn, Ad_6, LDLR_0, Vp, Ad_7, Ad_5, Ad_11, k_LDLR_syn, Ad_8, Vc, k_HDLc_clr, Ad_12] is not transcendence basis
+Collection [Ad_10, hepCh_0, k_LDLR_syn, Ad_3, Ad_5, f_hepCh_statin, f, k_LDLc_clr1, Ad_9, k_HDLc_clr, Ad_8, f_LDLchep_clr, HDLc, Ad_7, f_SREBP2_reg_LDLR, Ad_1, V, Ad_2, Ch_LDLpart, k_hepCh_loss] is not transcendence basis
+Collection [Ad_10, hepCh_3, hepCh_1, S_diet, f_LDLchep_clr, k_LDLR_deg, k_hepCh_loss, k_LDLc_clr2, LDLR_0, Ad_1, k_LDL_syn, Ad_9, k_LDLR_syn, S_hepCh_loss, Ad_6, HDLc, Ad_7, LDLr, Q, f_SREBP2_reg_LDLR] is not transcendence basis
+Collection [Ad_10, Ch_LDLpart, f_SREBP2_reg_LDLR, Vp, f_diet_abs, k_LDLR_syn, hepCh_0, Ad_3, hepCh_3, Ad_0, Ad_11, k_PCSK9_syn, Vc, Ad_7, k_hepCh_loss, Ad_4, k_LDL_syn, Ch_LDL_particle, f_LDLchep_clr, Cl] is not transcendence basis
+Collection [Ad_10, Ch_LDLpart, f_SREBP2_reg_LDLR, hepCh_2, Cl, k_PCSK9_syn, hepCh_4, k_LDLc_clr2, Ad_1, f_PCSK9_deg_LDLR, k_LDL_syn, Vp, LDLr, Ad_5, Ch_LDL_particle, Ad_8, Ad_12, f_hepCh_statin, Vc, hepCh_3] is not transcendence basis
+Collection [Ad_10, f_LDLchep_clr, f_hepCh_statin, Ad_2, k_PCSK9_syn, Ch_LDL_particle, k_LDLc_clr1, Ad_9, LDLR_0, Ad_1, Cl, f, Ad_3, k_hepCh_loss, f_PCSK9_deg_LDLR, Vc, f_SREBP2_reg_LDLR, Ad_4, Ad_12, hepCh_3] is not transcendence basis
+Collection [Ad_10, f_SREBP2_reg_LDLR, Ad_0, Ad_12, f_hepCh_statin, hepCh_2, Ad_1, f, f_diet_abs, hepCh_0, Ad_5, LDLr, Ad_11, S_hepCh_loss, k_LDL_syn, hepCh_3, k_LDLc_clr1, k_LDLc_clr2, Ad_4, Ch_LDLpart] is not transcendence basis
+Collection [Ad_10, f_SREBP2_reg_PCSK9, k_LDL_syn, V, k_hepCh_loss, Ch_LDLpart, hepCh_1, Ad_1, LDLr, S_hepCh_loss, Vc, hepCh_2, hepCh_0, k_LDLR_syn, f, k_PCSK9_syn, Ad_3, Ad_7, Ad_5, k_LDLR_deg] is not transcendence basis
+Collection [Ad_11, Ad_6, HDLc, Ch_LDL_particle, f_hepCh_statin, k_LDLR_syn, f_SREBP2_reg_LDLR, hepCh_1, f_LDLchep_clr, f_diet_abs, k_LDLR_deg, Ad_1, k_PCSK9_syn, Ad_0, Cl, k_hepCh_loss, Vp, Ad_8, k_LDLc_clr2, V] is not transcendence basis
+Collection [Ad_11, S_diet, Ad_4, Ad_8, Ad_1, f_PCSK9_deg_LDLR, Ad_9, LDLR_0, f_LDLchep_clr, k_PCSK9_syn, k_LDL_syn, f_SREBP2_reg_LDLR, Ad_0, S_hepCh_loss, LDLr, Ad_7, Ch_LDLpart, Ad_3, Ad_10, f_diet_abs] is not transcendence basis
+Collection [Ad_11, hepCh_1, k_LDLc_clr1, Ad_7, Ad_12, Ch_LDLpart, Vc, Ad_10, HDLc, Ad_2, k_LDLc_clr2, hepCh_3, k_HDLc_clr, S_diet, hepCh_4, Ad_6, Vp, f, LDLr, f_LDLchep_clr] is not transcendence basis
+Collection [Ad_11, hepCh_4, Cl, f_SREBP2_reg_PCSK9, k_LDLc_clr1, HDLc, Vp, f_diet_abs, Ch_LDL_particle, f_SREBP2_reg_LDLR, Q, Vc, Ad_7, f_PCSK9_deg_LDLR, LDLr, Ad_1, hepCh_1, S_diet, k_LDLc_clr2, k_HDLc_clr] is not transcendence basis
+Collection [Ad_11, Ch_LDL_particle, f_diet_abs, LDLR_0, Ad_6, Ad_7, f, hepCh_4, V, Ad_0, Ad_4, k_LDLR_deg, Ad_3, k_LDLc_clr2, S_hepCh_loss, Ad_2, HDLc, f_SREBP2_reg_LDLR, Ch_LDLpart, Cl] is not transcendence basis
+Collection [Ad_11, Ch_LDLpart, hepCh_4, f, Ad_0, HDLc, Vc, Ad_12, k_LDLR_syn, Cl, Vp, Ad_8, k_LDLc_clr2, hepCh_0, Ch_LDL_particle, Ad_4, f_SREBP2_reg_LDLR, k_HDLc_clr, Ad_1, Q] is not transcendence basis
+Collection [Ad_11, k_HDLc_clr, Vc, hepCh_1, LDLR_0, Ad_6, f_diet_abs, hepCh_4, Ad_3, Ad_0, Ad_9, Ad_12, f_LDLchep_clr, LDLr, f_SREBP2_reg_LDLR, S_hepCh_loss, S_diet, V, Ad_2, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [Ad_11, k_hepCh_loss, LDLR_0, Ad_8, Ad_7, hepCh_0, S_hepCh_loss, Ad_5, f_SREBP2_reg_LDLR, Ad_1, Ad_12, Ch_LDLpart, k_LDLc_clr1, k_LDLc_clr2, Ch_LDL_particle, k_LDLR_syn, f_hepCh_statin, Ad_4, hepCh_4, Ad_3] is not transcendence basis
+Collection [Ad_12, Ad_4, f_PCSK9_deg_LDLR, hepCh_0, hepCh_3, Cl, hepCh_1, Ad_9, Ad_2, Ad_7, k_HDLc_clr, HDLc, Ad_8, V, LDLR_0, Q, Ad_1, Ad_6, LDLr, Ch_LDLpart] is not transcendence basis
+Collection [Ad_12, Ad_5, Ad_1, f_hepCh_statin, hepCh_1, V, k_HDLc_clr, hepCh_2, k_LDLc_clr1, k_hepCh_loss, Ad_4, Ad_0, HDLc, S_hepCh_loss, S_diet, k_LDLR_syn, Ad_8, Ch_LDLpart, k_LDLR_deg, Ch_LDL_particle] is not transcendence basis
+Collection [Ad_12, HDLc, S_diet, Vp, k_LDLR_deg, k_hepCh_loss, Ad_11, Ad_5, k_PCSK9_syn, hepCh_2, Ad_7, f, hepCh_3, f_LDLchep_clr, f_hepCh_statin, Ad_6, Ch_LDL_particle, Q, hepCh_1, k_LDL_syn] is not transcendence basis
+Collection [Ad_12, HDLc, Vc, S_diet, Ad_7, k_hepCh_loss, Ad_5, k_LDL_syn, S_hepCh_loss, Ad_0, hepCh_2, k_LDLR_deg, Cl, hepCh_3, Ad_6, Ch_LDLpart, k_HDLc_clr, f_hepCh_statin, V, Ad_1] is not transcendence basis
+Collection [Ad_12, S_diet, k_LDLc_clr2, Ad_3, Ad_4, Ad_5, Ad_10, hepCh_4, k_LDLc_clr1, k_LDLR_syn, f_SREBP2_reg_PCSK9, Vp, f_diet_abs, Ad_2, Ad_9, hepCh_2, Ad_1, Ad_7, f, f_SREBP2_reg_LDLR] is not transcendence basis
+Collection [Ad_12, hepCh_1, f_PCSK9_deg_LDLR, Cl, Ad_6, f_hepCh_statin, Ad_11, k_PCSK9_syn, Ch_LDLpart, k_HDLc_clr, Ad_8, f_LDLchep_clr, Ad_1, k_LDLR_deg, Ad_9, hepCh_0, LDLR_0, f, Q, k_LDLc_clr2] is not transcendence basis
+Collection [Ad_12, hepCh_2, Ad_5, Ch_LDLpart, hepCh_0, V, S_diet, k_LDLR_deg, k_hepCh_loss, f_PCSK9_deg_LDLR, Ad_10, f_diet_abs, f_hepCh_statin, Ch_LDL_particle, k_LDLR_syn, k_LDL_syn, f_SREBP2_reg_LDLR, LDLr, k_PCSK9_syn, Ad_4] is not transcendence basis
+Collection [Ad_12, f_LDLchep_clr, k_LDLc_clr1, Ad_4, Ad_2, Ad_8, f, f_SREBP2_reg_LDLR, Ad_5, Ad_3, Ad_10, Vp, f_PCSK9_deg_LDLR, k_LDL_syn, hepCh_2, hepCh_1, k_LDLc_clr2, LDLR_0, f_SREBP2_reg_PCSK9, Ch_LDL_particle] is not transcendence basis
+Collection [Ad_12, f_hepCh_statin, Ad_10, f_SREBP2_reg_PCSK9, hepCh_3, hepCh_2, f_PCSK9_deg_LDLR, S_diet, f, Ad_0, V, Ad_1, Ad_2, Ad_9, Ad_7, Ad_4, f_SREBP2_reg_LDLR, f_diet_abs, HDLc, k_LDLc_clr2] is not transcendence basis
+Collection [Ad_12, k_HDLc_clr, hepCh_4, Ad_8, Vc, S_diet, LDLR_0, hepCh_1, f_LDLchep_clr, k_LDL_syn, f_diet_abs, hepCh_0, f_SREBP2_reg_LDLR, Ch_LDLpart, Cl, Ad_7, Ad_9, Ad_4, Ad_1, Ad_3] is not transcendence basis
+Collection [Ad_12, k_hepCh_loss, f_diet_abs, Q, Ad_8, Cl, Ch_LDLpart, k_LDL_syn, Ad_2, f_LDLchep_clr, hepCh_3, hepCh_0, Ad_9, f_SREBP2_reg_LDLR, k_HDLc_clr, Ad_6, k_LDLR_deg, Ad_10, Ad_0, k_PCSK9_syn] is not transcendence basis
+Collection [Ad_12, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9, S_diet, f, hepCh_0, V, Ad_10, k_HDLc_clr, Ad_2, Ch_LDL_particle, Ad_9, k_LDLR_deg, Ad_8, Q, Ad_11, Ad_4, Ad_0, Ad_3, hepCh_4] is not transcendence basis
+Collection [Ad_12, f_SREBP2_reg_PCSK9, f_SREBP2_reg_LDLR, Ad_10, k_LDLR_deg, Cl, S_diet, k_LDLc_clr2, Vc, k_HDLc_clr, Ad_4, k_PCSK9_syn, V, LDLR_0, Ad_2, Ad_0, f_diet_abs, f_hepCh_statin, k_LDL_syn, f_LDLchep_clr] is not transcendence basis
+Collection [Ad_2, Ad_12, f, Ad_3, k_LDLR_deg, f_SREBP2_reg_PCSK9, k_LDL_syn, k_PCSK9_syn, S_diet, Ad_1, Ad_9, Ad_8, Ad_4, Ad_10, f_hepCh_statin, Ad_6, f_diet_abs, Q, Ad_11, V] is not transcendence basis
+Collection [Ad_2, Ad_4, k_LDLc_clr1, Ad_12, f_SREBP2_reg_PCSK9, Vc, Cl, hepCh_3, hepCh_2, LDLR_0, Q, LDLr, Ad_7, k_HDLc_clr, HDLc, Vp, V, Ad_1, k_LDLR_deg, Ch_LDL_particle] is not transcendence basis
+Collection [Ad_2, Ad_5, Ad_9, k_LDLc_clr1, f_hepCh_statin, S_hepCh_loss, Q, Ad_7, HDLc, Ad_3, Ad_10, Ad_4, f_SREBP2_reg_PCSK9, f, Ch_LDL_particle, Vc, hepCh_0, V, k_PCSK9_syn, hepCh_3] is not transcendence basis
+Collection [Ad_2, Ad_6, Cl, Ch_LDLpart, S_hepCh_loss, Ad_11, hepCh_3, f_LDLchep_clr, Ad_0, f_hepCh_statin, f_SREBP2_reg_LDLR, Ad_1, hepCh_2, Ad_5, Q, Ad_10, f_PCSK9_deg_LDLR, Vp, Ch_LDL_particle, LDLR_0] is not transcendence basis
+Collection [Ad_2, Cl, f_PCSK9_deg_LDLR, Ad_12, f, hepCh_4, k_LDLR_syn, hepCh_2, k_hepCh_loss, Ad_6, f_LDLchep_clr, hepCh_0, S_hepCh_loss, Vc, Ad_0, k_PCSK9_syn, LDLR_0, Ad_1, Ad_5, f_diet_abs] is not transcendence basis
+Collection [Ad_2, LDLr, Ad_8, Ad_4, k_LDLR_syn, S_diet, Ch_LDL_particle, Cl, Vc, f_hepCh_statin, Ad_11, Ad_12, hepCh_4, hepCh_0, k_LDL_syn, Ad_10, Ad_1, hepCh_2, Ad_3, Ad_6] is not transcendence basis
+Collection [Ad_2, Vc, k_LDLR_syn, Ad_4, k_LDLc_clr1, k_hepCh_loss, Ad_9, S_hepCh_loss, Ad_10, LDLR_0, Ad_8, Ad_1, Ad_11, hepCh_4, f_SREBP2_reg_PCSK9, hepCh_3, f, f_PCSK9_deg_LDLR, k_PCSK9_syn, hepCh_2] is not transcendence basis
+Collection [Ad_2, Vc, k_PCSK9_syn, Ad_6, LDLR_0, f_SREBP2_reg_PCSK9, hepCh_3, k_hepCh_loss, k_LDLR_deg, hepCh_0, k_LDL_syn, Ad_11, k_LDLR_syn, Ad_5, Ad_9, k_LDLc_clr2, k_LDLc_clr1, HDLc, hepCh_1, Vp] is not transcendence basis
+Collection [Ad_2, Vp, S_hepCh_loss, Ad_3, Ad_6, f_diet_abs, k_LDLR_deg, Ch_LDL_particle, Ad_1, k_HDLc_clr, Ad_0, k_LDLc_clr1, Ad_5, hepCh_3, Ad_12, hepCh_1, Ad_9, k_LDL_syn, Vc, k_LDLR_syn] is not transcendence basis
+Collection [Ad_2, hepCh_4, Ad_9, S_diet, f_SREBP2_reg_LDLR, f_PCSK9_deg_LDLR, Ad_8, HDLc, k_LDL_syn, Vp, f_LDLchep_clr, Ad_11, Ad_10, V, hepCh_1, Ad_0, Vc, f_hepCh_statin, k_LDLR_syn, k_hepCh_loss] is not transcendence basis
+Collection [Ad_2, k_LDLR_deg, f_SREBP2_reg_LDLR, LDLr, k_hepCh_loss, f_LDLchep_clr, Ad_5, Ad_0, Cl, LDLR_0, k_PCSK9_syn, hepCh_1, Ad_12, Ad_8, k_LDL_syn, Vp, S_hepCh_loss, Ad_1, f_diet_abs, HDLc] is not transcendence basis
+Collection [Ad_2, k_PCSK9_syn, k_hepCh_loss, k_HDLc_clr, Q, LDLR_0, f_hepCh_statin, Ch_LDLpart, hepCh_1, k_LDLR_deg, S_hepCh_loss, hepCh_3, Cl, Ad_10, f_diet_abs, hepCh_2, Ad_3, hepCh_4, f, LDLr] is not transcendence basis
+Collection [Ad_2, k_hepCh_loss, Ad_3, Ch_LDLpart, k_LDL_syn, f_LDLchep_clr, S_diet, k_LDLR_deg, f_PCSK9_deg_LDLR, LDLr, f, Ad_1, Vp, Ad_8, Ad_4, Cl, hepCh_3, k_PCSK9_syn, hepCh_0, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [Ad_3, Ad_12, k_HDLc_clr, f_SREBP2_reg_LDLR, k_LDLR_syn, k_LDLc_clr1, Q, Ad_2, f_LDLchep_clr, hepCh_4, k_LDLc_clr2, Ch_LDL_particle, Ad_1, Vc, f_PCSK9_deg_LDLR, Ad_7, Cl, f, f_diet_abs, k_PCSK9_syn] is not transcendence basis
+Collection [Ad_3, Ad_6, Ch_LDLpart, k_LDLR_syn, Ad_11, Ad_0, Ch_LDL_particle, hepCh_1, f, S_diet, f_hepCh_statin, V, Cl, hepCh_3, f_diet_abs, S_hepCh_loss, Ad_1, Ad_4, k_LDLR_deg, Ad_9] is not transcendence basis
+Collection [Ad_3, Vc, Ch_LDLpart, Ch_LDL_particle, Ad_0, V, hepCh_4, f_SREBP2_reg_PCSK9, k_hepCh_loss, Ad_11, S_hepCh_loss, k_LDLR_syn, f_diet_abs, k_LDLc_clr2, f_LDLchep_clr, LDLR_0, k_HDLc_clr, Ad_4, Ad_8, hepCh_0] is not transcendence basis
+Collection [Ad_3, hepCh_0, Ad_2, k_HDLc_clr, hepCh_1, k_LDLc_clr1, Vp, Ad_10, Ad_9, hepCh_2, Ad_0, S_hepCh_loss, Ch_LDLpart, k_LDLR_deg, f_SREBP2_reg_LDLR, V, hepCh_3, f_SREBP2_reg_PCSK9, f_diet_abs, hepCh_4] is not transcendence basis
+Collection [Ad_3, hepCh_0, k_PCSK9_syn, Ad_4, Ad_8, f_diet_abs, Vp, k_LDLR_syn, Ad_11, S_diet, f_LDLchep_clr, Ad_2, hepCh_3, hepCh_1, Ad_12, LDLR_0, f_SREBP2_reg_LDLR, LDLr, f, k_hepCh_loss] is not transcendence basis
+Collection [Ad_3, hepCh_2, Ad_0, Ad_9, hepCh_4, Ad_5, Ad_10, k_LDLR_syn, Ch_LDLpart, Ch_LDL_particle, f_SREBP2_reg_LDLR, k_LDL_syn, Q, Ad_1, k_LDLc_clr2, Ad_11, V, Cl, f_LDLchep_clr, f_diet_abs] is not transcendence basis
+Collection [Ad_3, hepCh_4, k_HDLc_clr, f_SREBP2_reg_PCSK9, Ch_LDL_particle, Ad_4, k_hepCh_loss, Vc, hepCh_2, Ad_6, f_diet_abs, hepCh_1, k_LDLR_syn, Ad_5, k_LDLc_clr1, hepCh_3, HDLc, k_LDLc_clr2, f, Q] is not transcendence basis
+Collection [Ad_3, S_hepCh_loss, Ch_LDLpart, f_hepCh_statin, Ad_6, k_hepCh_loss, k_HDLc_clr, Vp, Ad_0, f, Vc, k_PCSK9_syn, Ad_4, hepCh_2, Ad_5, Ad_2, HDLc, S_diet, k_LDL_syn, Ad_12] is not transcendence basis
+Collection [Ad_3, f_LDLchep_clr, f_SREBP2_reg_PCSK9, k_LDLc_clr2, LDLR_0, Ad_2, k_LDLR_deg, f_PCSK9_deg_LDLR, Ad_7, Ad_6, hepCh_3, k_hepCh_loss, Q, HDLc, Ad_5, Cl, hepCh_2, k_HDLc_clr, f, hepCh_1] is not transcendence basis
+Collection [Ad_3, k_LDLR_syn, f_SREBP2_reg_PCSK9, LDLr, Cl, Ad_12, Q, Ad_4, Ch_LDLpart, V, S_hepCh_loss, Vc, f_diet_abs, k_LDLR_deg, k_LDLc_clr1, hepCh_2, Ad_5, Ad_10, Ad_6, Ch_LDL_particle] is not transcendence basis
+Collection [Ad_3, k_LDL_syn, Ad_11, Vc, Ad_5, f_PCSK9_deg_LDLR, Q, Vp, hepCh_3, k_LDLR_syn, Ad_6, Ch_LDL_particle, LDLr, k_LDLc_clr2, S_diet, f_diet_abs, f_hepCh_statin, Ad_1, Ad_8, k_hepCh_loss] is not transcendence basis
+Collection [Ad_3, k_LDLc_clr2, f_LDLchep_clr, hepCh_2, LDLR_0, Ad_9, Q, Ad_7, k_LDLc_clr1, k_hepCh_loss, Ad_0, f, V, f_hepCh_statin, Ad_11, Cl, f_diet_abs, Ad_10, Ad_1, S_diet] is not transcendence basis
+Collection [Ad_3, k_PCSK9_syn, Ad_9, Q, k_hepCh_loss, f_diet_abs, LDLR_0, Ad_5, Ad_1, V, f, hepCh_2, hepCh_1, Ad_10, Ad_8, f_hepCh_statin, k_LDLc_clr1, Ad_11, k_LDLc_clr2, hepCh_3] is not transcendence basis
+Collection [Ad_3, f_SREBP2_reg_PCSK9, V, k_LDLc_clr1, Ad_0, Ad_5, Ad_8, k_LDLR_deg, hepCh_3, f_PCSK9_deg_LDLR, Ad_12, LDLr, k_LDL_syn, f, f_SREBP2_reg_LDLR, hepCh_2, f_LDLchep_clr, f_hepCh_statin, k_LDLc_clr2, f_diet_abs] is not transcendence basis
+Collection [Ad_4, Ad_0, S_hepCh_loss, V, Ad_10, k_PCSK9_syn, hepCh_3, hepCh_4, Vp, Ad_1, k_LDLc_clr2, S_diet, f, Ad_8, Ad_12, hepCh_1, Cl, LDLr, f_diet_abs, f_SREBP2_reg_LDLR] is not transcendence basis
+Collection [Ad_4, Ad_12, f_PCSK9_deg_LDLR, Ad_8, k_HDLc_clr, hepCh_4, V, Ad_6, Vc, Ad_9, Ad_10, hepCh_0, Ad_11, Ad_2, Q, f_hepCh_statin, hepCh_1, hepCh_2, Ad_0, k_LDLc_clr2] is not transcendence basis
+Collection [Ad_4, Ad_2, f, Vc, k_LDLc_clr2, HDLc, k_LDLR_deg, k_LDLR_syn, Ch_LDL_particle, f_hepCh_statin, k_LDLc_clr1, Ad_9, V, Ad_5, Ad_0, LDLR_0, hepCh_3, k_LDL_syn, Ad_1, Ad_3] is not transcendence basis
+Collection [Ad_4, Ad_3, hepCh_4, HDLc, k_LDLR_syn, hepCh_2, hepCh_0, Vc, f_SREBP2_reg_LDLR, Ad_10, k_PCSK9_syn, k_HDLc_clr, S_diet, Ch_LDLpart, f_diet_abs, Ad_12, Ad_2, S_hepCh_loss, Cl, hepCh_3] is not transcendence basis
+Collection [Ad_4, Ad_9, V, Ch_LDLpart, Ad_3, f_PCSK9_deg_LDLR, Ad_11, f_LDLchep_clr, Ad_1, LDLr, Ad_0, k_LDLR_syn, f_SREBP2_reg_LDLR, Ad_5, hepCh_4, hepCh_2, hepCh_3, k_PCSK9_syn, Ad_7, f] is not transcendence basis
+Collection [Ad_4, Cl, hepCh_1, Vp, f_diet_abs, Ad_12, V, Ad_10, Q, k_LDLc_clr2, hepCh_3, Ad_3, k_LDLR_deg, Ch_LDL_particle, Ad_2, k_LDL_syn, f_hepCh_statin, HDLc, S_hepCh_loss, k_LDLR_syn] is not transcendence basis
+Collection [Ad_4, Cl, f_SREBP2_reg_LDLR, k_hepCh_loss, k_LDLc_clr1, hepCh_4, Ad_5, Ch_LDLpart, Ad_7, Vp, Ad_9, S_hepCh_loss, Ad_3, Q, Ad_6, k_LDL_syn, f, HDLc, k_LDLc_clr2, hepCh_0] is not transcendence basis
+Collection [Ad_4, HDLc, Ad_10, k_LDLR_syn, Ad_5, Ad_1, Ad_0, S_hepCh_loss, S_diet, k_LDLc_clr2, hepCh_1, Ad_11, Ad_6, LDLr, f, Ad_7, Ch_LDLpart, hepCh_4, Vp, k_LDLc_clr1] is not transcendence basis
+Collection [Ad_4, Q, f_SREBP2_reg_LDLR, k_HDLc_clr, Ad_9, k_LDLc_clr2, Vp, k_LDLR_deg, Cl, hepCh_1, Ad_3, k_PCSK9_syn, Ad_7, S_diet, Ad_1, f_PCSK9_deg_LDLR, Ad_11, Ad_0, Ad_6, k_LDL_syn] is not transcendence basis
+Collection [Ad_4, f, Ad_6, Cl, f_SREBP2_reg_LDLR, Vc, Ad_3, Ad_2, Vp, V, hepCh_1, Ad_8, Ad_12, S_diet, f_LDLchep_clr, Ad_0, f_diet_abs, f_SREBP2_reg_PCSK9, Ad_1, k_LDLc_clr1] is not transcendence basis
+Collection [Ad_4, hepCh_0, k_LDL_syn, S_diet, k_LDLR_deg, f, Ch_LDLpart, Ad_9, S_hepCh_loss, HDLc, hepCh_3, k_LDLR_syn, Cl, hepCh_2, Vc, Ad_8, Ad_5, Q, f_PCSK9_deg_LDLR, Ad_0] is not transcendence basis
+Collection [Ad_4, hepCh_1, f_diet_abs, Ad_12, f_SREBP2_reg_LDLR, f_LDLchep_clr, f, Cl, Ad_0, f_hepCh_statin, k_LDLR_syn, k_LDLR_deg, V, Ad_11, hepCh_0, Vp, f_SREBP2_reg_PCSK9, Ch_LDL_particle, Vc, k_hepCh_loss] is not transcendence basis
+Collection [Ad_4, f_LDLchep_clr, hepCh_4, HDLc, Ad_8, k_LDLc_clr1, Ad_11, k_hepCh_loss, Ad_1, Ad_2, Ad_9, Ad_6, Ad_0, V, hepCh_0, Cl, hepCh_2, Ad_7, f, Ad_12] is not transcendence basis
+Collection [Ad_4, k_LDLc_clr2, Ch_LDL_particle, k_hepCh_loss, hepCh_4, Ad_5, Ad_12, Ch_LDLpart, hepCh_3, Ad_11, f_PCSK9_deg_LDLR, LDLr, k_LDL_syn, Ad_10, Vp, S_hepCh_loss, Ad_8, k_LDLc_clr1, Q, Ad_3] is not transcendence basis
+Collection [Ad_4, f_PCSK9_deg_LDLR, Ad_2, Ad_1, Ad_12, hepCh_4, k_LDLc_clr2, Ch_LDL_particle, k_LDL_syn, f_SREBP2_reg_LDLR, k_hepCh_loss, k_LDLc_clr1, hepCh_1, k_HDLc_clr, Ad_7, Ad_10, Cl, Ad_0, Ad_8, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [Ad_5, Ad_11, f_diet_abs, Ad_3, f_SREBP2_reg_PCSK9, Vp, Ad_2, k_LDLc_clr2, k_hepCh_loss, Vc, k_LDL_syn, S_diet, Ad_0, LDLR_0, k_LDLc_clr1, k_PCSK9_syn, Ad_7, Ad_6, Ad_9, f] is not transcendence basis
+Collection [Ad_5, Ad_12, Ad_1, k_LDLc_clr2, k_hepCh_loss, Ad_10, S_hepCh_loss, Ad_2, hepCh_3, hepCh_2, S_diet, hepCh_4, Cl, k_LDLR_syn, Ad_3, k_LDLc_clr1, LDLR_0, f_diet_abs, Q, k_PCSK9_syn] is not transcendence basis
+Collection [Ad_5, Cl, S_diet, Ch_LDLpart, f_hepCh_statin, hepCh_0, Ad_1, Ch_LDL_particle, Ad_10, hepCh_2, Vp, f_SREBP2_reg_PCSK9, LDLR_0, Ad_2, Q, Vc, Ad_11, Ad_3, hepCh_1, LDLr] is not transcendence basis
+Collection [Ad_5, LDLR_0, Ad_4, hepCh_1, f_hepCh_statin, HDLc, Q, Vp, k_LDLc_clr1, k_HDLc_clr, Vc, S_hepCh_loss, Ad_8, hepCh_4, hepCh_0, f_SREBP2_reg_PCSK9, Ch_LDL_particle, k_PCSK9_syn, Ch_LDLpart, Ad_11] is not transcendence basis
+Collection [Ad_5, LDLR_0, Ad_9, Vp, k_LDL_syn, Ad_7, k_PCSK9_syn, k_HDLc_clr, k_hepCh_loss, f_LDLchep_clr, Ad_11, V, Cl, hepCh_2, LDLr, Ad_10, f_SREBP2_reg_LDLR, Ad_4, f_hepCh_statin, k_LDLR_deg] is not transcendence basis
+Collection [Ad_5, f_hepCh_statin, Vp, Ad_10, k_hepCh_loss, k_LDLR_syn, Ad_8, Ch_LDLpart, k_LDLc_clr2, Ad_11, k_HDLc_clr, Vc, f, HDLc, Ad_3, hepCh_4, f_SREBP2_reg_LDLR, Ad_7, hepCh_3, Cl] is not transcendence basis
+Collection [Ad_5, f_SREBP2_reg_LDLR, Ad_7, Vc, Ad_4, Vp, f_PCSK9_deg_LDLR, f, Ch_LDL_particle, hepCh_3, k_hepCh_loss, k_LDLR_deg, Ad_11, Ad_0, Ad_2, Ad_10, LDLr, hepCh_4, hepCh_1, LDLR_0] is not transcendence basis
+Collection [Ad_6, Ad_3, f_LDLchep_clr, k_hepCh_loss, Ad_8, Ad_7, Q, k_LDLR_deg, Ch_LDLpart, f_SREBP2_reg_LDLR, Vp, Ad_1, HDLc, k_LDLR_syn, k_LDLc_clr2, Ch_LDL_particle, V, hepCh_4, k_HDLc_clr, Ad_9] is not transcendence basis
+Collection [Ad_6, Ad_4, f_diet_abs, Ad_12, V, f_LDLchep_clr, Ad_3, Ch_LDL_particle, Ad_5, Cl, k_LDLR_syn, Ad_9, hepCh_4, S_hepCh_loss, k_LDL_syn, hepCh_3, Ad_1, hepCh_1, f_SREBP2_reg_LDLR, S_diet] is not transcendence basis
+Collection [Ad_6, Ad_7, Ad_4, f_LDLchep_clr, k_LDLc_clr1, k_LDLR_syn, HDLc, Ad_3, LDLR_0, S_hepCh_loss, f, Vp, f_SREBP2_reg_LDLR, k_LDL_syn, Ad_9, Ad_12, Ad_1, f_SREBP2_reg_PCSK9, f_PCSK9_deg_LDLR, Ch_LDLpart] is not transcendence basis
+Collection [Ad_6, Ad_7, Ad_9, S_diet, Cl, Ch_LDL_particle, S_hepCh_loss, k_PCSK9_syn, hepCh_4, hepCh_1, f_LDLchep_clr, Vc, f_hepCh_statin, k_hepCh_loss, f_PCSK9_deg_LDLR, Q, Ad_5, k_LDL_syn, k_LDLR_deg, k_LDLc_clr1] is not transcendence basis
+Collection [Ad_6, Cl, k_LDLR_deg, Vc, Q, Ad_5, Ad_12, Ad_1, hepCh_1, f_SREBP2_reg_LDLR, f, f_hepCh_statin, k_LDLc_clr1, f_LDLchep_clr, Ad_0, k_HDLc_clr, Ch_LDL_particle, k_LDLc_clr2, k_LDLR_syn, f_diet_abs] is not transcendence basis
+Collection [Ad_6, HDLc, hepCh_2, hepCh_1, k_LDLc_clr2, Ch_LDLpart, hepCh_4, f_diet_abs, f_SREBP2_reg_PCSK9, f_LDLchep_clr, V, Ad_1, Ad_12, k_PCSK9_syn, Ad_7, Ad_0, LDLr, Ad_4, hepCh_0, Ch_LDL_particle] is not transcendence basis
+Collection [Ad_6, Vc, Ad_1, f_diet_abs, f_SREBP2_reg_LDLR, k_hepCh_loss, HDLc, hepCh_2, S_diet, f_SREBP2_reg_PCSK9, hepCh_1, k_LDLR_deg, k_LDLR_syn, S_hepCh_loss, Ad_4, hepCh_3, Cl, k_HDLc_clr, Vp, LDLR_0] is not transcendence basis
+Collection [Ad_6, Vp, k_LDLR_deg, Ch_LDL_particle, f_LDLchep_clr, Ad_9, f_PCSK9_deg_LDLR, Ad_3, k_LDLR_syn, hepCh_0, Q, Vc, f_SREBP2_reg_LDLR, Ad_1, f, Ad_10, Ad_12, Ad_8, S_hepCh_loss, LDLr] is not transcendence basis
+Collection [Ad_6, f, k_HDLc_clr, f_LDLchep_clr, hepCh_3, Ch_LDL_particle, hepCh_2, hepCh_4, k_LDLR_syn, Ch_LDLpart, f_PCSK9_deg_LDLR, LDLr, Vc, Ad_9, Ad_10, Ad_11, hepCh_1, f_diet_abs, k_LDLR_deg, k_PCSK9_syn] is not transcendence basis
+Collection [Ad_6, hepCh_0, S_diet, Ad_10, k_PCSK9_syn, f, hepCh_4, hepCh_1, Ad_7, Ch_LDL_particle, Ad_11, S_hepCh_loss, k_HDLc_clr, k_LDLc_clr1, f_hepCh_statin, Ad_3, k_LDLc_clr2, LDLR_0, f_diet_abs, k_hepCh_loss] is not transcendence basis
+Collection [Ad_6, hepCh_1, Ad_10, f, k_LDL_syn, Ad_9, hepCh_3, HDLc, Vp, Ad_0, Ad_7, Ad_4, hepCh_4, Ad_1, f_diet_abs, Ad_3, Ad_5, V, f_LDLchep_clr, f_hepCh_statin] is not transcendence basis
+Collection [Ad_6, hepCh_2, hepCh_0, Ad_10, Cl, HDLc, k_LDLR_syn, Ad_4, f_PCSK9_deg_LDLR, f_hepCh_statin, Q, f_SREBP2_reg_PCSK9, Vp, k_PCSK9_syn, Ad_0, V, Ad_2, LDLr, f_LDLchep_clr, Vc] is not transcendence basis
+Collection [Ad_6, hepCh_4, Ad_2, S_diet, k_LDLc_clr1, hepCh_3, Ad_7, f_PCSK9_deg_LDLR, f_SREBP2_reg_PCSK9, k_HDLc_clr, Ad_4, Ad_12, Ad_3, Vc, Cl, k_hepCh_loss, S_hepCh_loss, Ch_LDL_particle, Ad_9, k_LDLR_deg] is not transcendence basis
+Collection [Ad_6, hepCh_4, Cl, Ad_10, k_HDLc_clr, Ad_4, V, f_SREBP2_reg_PCSK9, S_hepCh_loss, f_SREBP2_reg_LDLR, LDLr, hepCh_2, k_LDLc_clr1, Ad_0, Ad_7, k_LDLc_clr2, f_LDLchep_clr, LDLR_0, Ch_LDL_particle, k_hepCh_loss] is not transcendence basis
+Collection [Ad_6, S_hepCh_loss, Ch_LDL_particle, Q, Ad_9, k_LDLR_syn, Ad_5, k_HDLc_clr, Vc, Cl, hepCh_1, Ad_1, LDLR_0, hepCh_2, f_SREBP2_reg_PCSK9, Ch_LDLpart, f_SREBP2_reg_LDLR, k_hepCh_loss, k_LDLc_clr1, Ad_0] is not transcendence basis
+Collection [Ad_6, k_LDL_syn, LDLr, hepCh_1, Ad_8, k_HDLc_clr, Ad_1, Ad_0, S_hepCh_loss, Ad_10, Ad_2, f_diet_abs, Ad_4, hepCh_0, k_LDLR_syn, Cl, k_LDLc_clr2, Vp, Ad_3, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [Ad_6, k_hepCh_loss, S_hepCh_loss, k_LDLR_syn, hepCh_1, Q, Ad_1, Ch_LDLpart, Ad_7, k_LDLR_deg, Vc, Cl, hepCh_4, Ad_9, HDLc, hepCh_0, Ad_3, k_LDL_syn, f_hepCh_statin, k_HDLc_clr] is not transcendence basis
+Collection [Ad_6, f_SREBP2_reg_LDLR, HDLc, k_HDLc_clr, Ad_0, f_diet_abs, hepCh_0, Ad_10, Ad_9, S_hepCh_loss, f_LDLchep_clr, Ad_5, Cl, k_hepCh_loss, Ad_12, k_LDLR_deg, hepCh_2, Ch_LDLpart, k_LDLc_clr2, f_hepCh_statin] is not transcendence basis
+Collection [Ad_7, Ad_0, S_diet, k_HDLc_clr, hepCh_1, k_LDL_syn, Ad_8, f_diet_abs, Ad_9, hepCh_2, Ad_12, Ad_2, S_hepCh_loss, f_hepCh_statin, k_LDLc_clr1, Ad_4, Ad_3, f_SREBP2_reg_PCSK9, k_LDLR_syn, hepCh_4] is not transcendence basis
+Collection [Ad_7, Ad_0, k_LDLR_deg, V, Ad_4, S_diet, Q, Ad_3, k_hepCh_loss, f_SREBP2_reg_PCSK9, HDLc, k_LDL_syn, Vc, Ad_8, k_PCSK9_syn, hepCh_3, Ad_5, Ad_10, Cl, f_SREBP2_reg_LDLR] is not transcendence basis
+Collection [Ad_7, Ad_10, Ad_2, Ad_11, hepCh_0, k_HDLc_clr, Ad_9, Ad_8, Ch_LDLpart, Vp, Vc, k_PCSK9_syn, Ad_5, k_hepCh_loss, Ad_4, f_hepCh_statin, hepCh_3, Q, f, k_LDLc_clr1] is not transcendence basis
+Collection [Ad_7, Ad_12, Vc, f_PCSK9_deg_LDLR, Vp, hepCh_2, HDLc, hepCh_4, k_PCSK9_syn, Ad_1, hepCh_1, S_diet, f_SREBP2_reg_PCSK9, V, Cl, Ad_5, hepCh_3, Ad_4, Ad_8, LDLr] is not transcendence basis
+Collection [Ad_7, Ad_3, k_LDLR_deg, Ad_8, hepCh_3, Vc, Ch_LDLpart, Ad_2, Ad_11, f_hepCh_statin, Ad_12, f_SREBP2_reg_PCSK9, f_SREBP2_reg_LDLR, LDLR_0, LDLr, hepCh_4, Ad_6, k_PCSK9_syn, Vp, Q] is not transcendence basis
+Collection [Ad_7, LDLr, Ad_1, k_HDLc_clr, Ad_0, Vp, f, Q, Ad_3, Vc, S_hepCh_loss, f_SREBP2_reg_PCSK9, hepCh_2, Ch_LDL_particle, Cl, k_LDLc_clr1, k_PCSK9_syn, Ad_12, Ad_4, Ad_10] is not transcendence basis
+Collection [Ad_7, V, HDLc, hepCh_3, Ad_10, LDLR_0, f_LDLchep_clr, k_LDLR_deg, Ad_9, LDLr, hepCh_0, f_SREBP2_reg_PCSK9, Ad_12, k_PCSK9_syn, f_diet_abs, Cl, Ad_2, k_LDLc_clr1, hepCh_4, S_diet] is not transcendence basis
+Collection [Ad_7, hepCh_3, Ad_10, S_hepCh_loss, k_hepCh_loss, k_HDLc_clr, Vc, Ad_6, hepCh_1, Ad_4, S_diet, k_LDLR_deg, Ch_LDLpart, hepCh_2, Ad_8, Ad_11, Vp, k_LDLc_clr1, f_PCSK9_deg_LDLR, Ad_3] is not transcendence basis
+Collection [Ad_7, f_LDLchep_clr, LDLR_0, f_SREBP2_reg_PCSK9, k_LDLR_syn, S_diet, f_diet_abs, Ad_2, V, hepCh_1, k_LDLR_deg, f_SREBP2_reg_LDLR, hepCh_2, hepCh_0, LDLr, k_hepCh_loss, Ad_12, Ad_11, Ad_6, f_hepCh_statin] is not transcendence basis
+Collection [Ad_8, HDLc, k_LDLc_clr2, hepCh_3, LDLR_0, Cl, hepCh_4, Ch_LDL_particle, S_diet, k_HDLc_clr, Ad_3, Vp, f_LDLchep_clr, f_hepCh_statin, f, k_LDL_syn, Ad_10, Ad_2, f_PCSK9_deg_LDLR, Q] is not transcendence basis
+Collection [Ad_8, LDLR_0, LDLr, Ad_9, Ad_1, f_PCSK9_deg_LDLR, Ad_5, f, Q, HDLc, Ad_4, Ad_2, Ad_6, S_hepCh_loss, f_SREBP2_reg_LDLR, Ad_7, Cl, S_diet, f_diet_abs, k_LDLc_clr1] is not transcendence basis
+Collection [Ad_8, Vc, S_hepCh_loss, f_diet_abs, Ad_1, HDLc, k_LDL_syn, LDLR_0, Ad_4, f_LDLchep_clr, V, Ch_LDLpart, k_PCSK9_syn, Ad_3, Ad_2, Vp, k_LDLc_clr2, Ad_11, k_HDLc_clr, hepCh_0] is not transcendence basis
+Collection [Ad_8, Vp, Ad_0, k_HDLc_clr, k_hepCh_loss, Ad_12, Cl, f_PCSK9_deg_LDLR, hepCh_3, f_hepCh_statin, Ad_5, LDLR_0, Ad_11, Ad_4, LDLr, Ad_6, Ad_2, hepCh_0, f_LDLchep_clr, k_PCSK9_syn] is not transcendence basis
+Collection [Ad_8, hepCh_0, S_diet, Ad_0, f_SREBP2_reg_PCSK9, Ad_12, Ad_3, k_LDL_syn, hepCh_1, Ad_10, Ad_11, V, f_hepCh_statin, Ad_6, Ch_LDL_particle, k_PCSK9_syn, k_LDLc_clr1, LDLr, f_SREBP2_reg_LDLR, LDLR_0] is not transcendence basis
+Collection [Ad_8, hepCh_0, f_LDLchep_clr, k_LDLR_syn, k_LDL_syn, Ad_6, Ad_5, hepCh_3, Ad_12, k_HDLc_clr, hepCh_1, Ch_LDLpart, HDLc, Cl, LDLR_0, Ad_11, Q, hepCh_2, Ad_4, f_diet_abs] is not transcendence basis
+Collection [Ad_8, hepCh_3, f_SREBP2_reg_LDLR, Cl, k_LDLR_syn, LDLr, S_diet, f_SREBP2_reg_PCSK9, k_LDLc_clr2, LDLR_0, f_LDLchep_clr, Ad_0, hepCh_2, f_diet_abs, Ad_1, HDLc, Vc, hepCh_1, Ad_11, Ad_10] is not transcendence basis
+Collection [Ad_8, S_hepCh_loss, k_hepCh_loss, hepCh_2, Ad_1, f_SREBP2_reg_LDLR, f_LDLchep_clr, k_LDLc_clr1, hepCh_1, LDLr, LDLR_0, Ad_10, f_SREBP2_reg_PCSK9, hepCh_3, f_diet_abs, k_LDLc_clr2, Ad_6, Vp, Ad_4, Ad_2] is not transcendence basis
+Collection [Ad_8, f_LDLchep_clr, f_hepCh_statin, Ad_12, hepCh_3, Ad_2, V, Ad_10, k_LDL_syn, k_LDLR_deg, f_SREBP2_reg_PCSK9, Ad_3, Ad_5, Ad_1, S_hepCh_loss, k_HDLc_clr, Cl, HDLc, f_diet_abs, Ad_11] is not transcendence basis
+Collection [Ad_8, f_diet_abs, k_LDLR_syn, Ad_5, Cl, Ad_9, S_hepCh_loss, Ch_LDL_particle, k_PCSK9_syn, Vc, f_PCSK9_deg_LDLR, Ad_1, Ad_3, k_HDLc_clr, Ad_10, k_LDLc_clr2, f_SREBP2_reg_PCSK9, k_hepCh_loss, LDLR_0, f_LDLchep_clr] is not transcendence basis
+Collection [Ad_8, k_LDL_syn, f_PCSK9_deg_LDLR, Ad_7, Ad_4, Ad_5, k_LDLc_clr1, k_PCSK9_syn, hepCh_1, V, Ad_11, Ad_2, hepCh_3, k_hepCh_loss, hepCh_4, Ch_LDLpart, S_hepCh_loss, f_diet_abs, Ad_0, f_LDLchep_clr] is not transcendence basis
+Collection [Ad_8, f_SREBP2_reg_PCSK9, Q, k_LDLc_clr2, Ad_2, Vc, hepCh_1, f, Ad_12, k_LDLR_deg, Ad_6, Ad_3, Cl, Ad_11, Ad_5, k_LDLc_clr1, HDLc, f_diet_abs, hepCh_0, k_PCSK9_syn] is not transcendence basis
+Collection [Ad_9, Ad_0, Ad_8, Ad_10, k_HDLc_clr, HDLc, S_diet, f_PCSK9_deg_LDLR, Ad_4, LDLr, S_hepCh_loss, hepCh_0, f_SREBP2_reg_LDLR, hepCh_1, f_LDLchep_clr, k_LDL_syn, Ad_12, hepCh_2, Ch_LDLpart, Ad_1] is not transcendence basis
+Collection [Ad_9, Cl, hepCh_0, Ad_11, hepCh_4, Ad_4, LDLR_0, k_HDLc_clr, HDLc, f, f_diet_abs, Ch_LDL_particle, f_SREBP2_reg_PCSK9, Ad_3, k_LDLc_clr2, Ad_0, Q, k_LDLc_clr1, Ad_8, Ad_6] is not transcendence basis
+Collection [Ad_9, Q, f_diet_abs, hepCh_1, hepCh_3, Ad_2, f_SREBP2_reg_PCSK9, Ad_8, f_LDLchep_clr, Ad_3, hepCh_0, Ad_7, hepCh_2, Vp, Vc, k_HDLc_clr, k_LDLR_syn, Ch_LDLpart, Ch_LDL_particle, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [Ad_9, f, hepCh_0, Vc, Ch_LDLpart, HDLc, k_LDLc_clr1, f_PCSK9_deg_LDLR, k_hepCh_loss, Cl, Ad_11, LDLr, Ad_2, f_LDLchep_clr, k_LDL_syn, Q, Ad_6, hepCh_1, Ch_LDL_particle, hepCh_2] is not transcendence basis
+Collection [Ad_9, f_LDLchep_clr, k_LDL_syn, Q, Ch_LDL_particle, Ad_11, Vp, LDLr, Ad_5, f_SREBP2_reg_LDLR, Ad_2, hepCh_3, V, Ad_4, hepCh_1, Ad_6, f_PCSK9_deg_LDLR, LDLR_0, S_hepCh_loss, Ad_3] is not transcendence basis
+Collection [Ad_9, f_hepCh_statin, Ad_4, Q, f_PCSK9_deg_LDLR, Ad_0, V, Cl, k_PCSK9_syn, f, Ad_1, S_diet, HDLc, hepCh_2, Ad_12, hepCh_3, Ad_5, LDLR_0, Ch_LDLpart, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [Ad_9, k_LDL_syn, Ad_7, f_LDLchep_clr, Ad_5, LDLr, k_hepCh_loss, Ad_0, k_LDLc_clr1, HDLc, Ad_3, k_LDLR_deg, hepCh_4, Ad_2, Ad_8, f_SREBP2_reg_LDLR, f_diet_abs, hepCh_0, hepCh_2, S_diet] is not transcendence basis
+Collection [Ad_9, k_hepCh_loss, hepCh_3, LDLR_0, f_LDLchep_clr, f_diet_abs, Ad_4, k_LDLc_clr1, Vp, Q, f, Ad_5, Ad_2, k_LDLR_deg, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9, k_LDLc_clr2, hepCh_4, Ad_8, LDLr] is not transcendence basis
+Collection [Cl, Ad_12, f_hepCh_statin, Ad_10, k_LDL_syn, Ad_6, Ad_4, LDLr, S_hepCh_loss, Ch_LDLpart, LDLR_0, Vc, Ad_2, f_PCSK9_deg_LDLR, Ad_3, S_diet, hepCh_2, Vp, hepCh_0, k_HDLc_clr] is not transcendence basis
+Collection [Cl, Ad_5, Ad_10, Ad_1, k_hepCh_loss, f_SREBP2_reg_LDLR, Ad_11, LDLR_0, Ad_8, V, k_LDLc_clr2, S_hepCh_loss, hepCh_3, k_LDLc_clr1, Vp, Ad_3, f_hepCh_statin, Ch_LDLpart, f_SREBP2_reg_PCSK9, hepCh_2] is not transcendence basis
+Collection [Cl, S_diet, Ad_7, Ad_3, LDLr, f_PCSK9_deg_LDLR, Ad_12, Vp, hepCh_1, V, hepCh_2, k_PCSK9_syn, f_hepCh_statin, Ch_LDLpart, Vc, k_LDLc_clr1, S_hepCh_loss, Ad_1, k_HDLc_clr, k_hepCh_loss] is not transcendence basis
+Collection [Cl, hepCh_2, hepCh_0, f_diet_abs, Ch_LDL_particle, Ad_7, Ad_5, Vp, hepCh_1, Ad_4, S_hepCh_loss, k_LDL_syn, LDLr, Ad_8, k_HDLc_clr, k_hepCh_loss, Vc, Ad_6, LDLR_0, HDLc] is not transcendence basis
+Collection [Cl, k_LDLR_deg, Ad_4, f_diet_abs, k_LDLR_syn, f_hepCh_statin, Ad_1, Ad_8, f_SREBP2_reg_LDLR, Vp, k_hepCh_loss, LDLR_0, Ad_5, Ad_0, Q, f_SREBP2_reg_PCSK9, HDLc, S_diet, k_LDLc_clr2, Ad_6] is not transcendence basis
+Collection [Cl, k_LDLR_deg, k_LDL_syn, f_hepCh_statin, Ad_6, k_LDLc_clr1, Ad_0, Ch_LDL_particle, Vp, f_diet_abs, k_HDLc_clr, Ad_8, Ad_4, k_LDLc_clr2, k_PCSK9_syn, Ad_9, k_hepCh_loss, f_LDLchep_clr, k_LDLR_syn, f] is not transcendence basis
+Collection [Cl, k_LDLc_clr1, Ch_LDL_particle, f, Ad_9, Ad_8, hepCh_2, Vp, Ad_1, V, S_diet, k_LDLR_deg, k_PCSK9_syn, f_SREBP2_reg_PCSK9, k_LDL_syn, k_HDLc_clr, hepCh_3, Ad_2, Ad_0, k_hepCh_loss] is not transcendence basis
+Collection [HDLc, Ad_1, Ad_2, k_LDLc_clr1, S_hepCh_loss, V, f_LDLchep_clr, Ad_4, f, k_LDLR_syn, hepCh_3, k_LDLR_deg, Ch_LDL_particle, hepCh_4, f_diet_abs, Ad_11, LDLr, k_LDLc_clr2, f_hepCh_statin, Vc] is not transcendence basis
+Collection [HDLc, Ad_11, f_SREBP2_reg_PCSK9, hepCh_1, Ad_5, Ad_6, k_LDLc_clr1, S_hepCh_loss, Ad_4, f_hepCh_statin, k_LDL_syn, Ad_9, f_LDLchep_clr, hepCh_0, Vc, Ad_2, hepCh_3, Ad_10, Ch_LDLpart, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [HDLc, Ad_3, k_hepCh_loss, Ad_1, k_PCSK9_syn, k_LDLR_syn, LDLR_0, hepCh_3, Vc, f_LDLchep_clr, S_diet, hepCh_4, Ad_0, hepCh_0, Cl, k_LDLc_clr2, f_SREBP2_reg_LDLR, f, Ad_4, S_hepCh_loss] is not transcendence basis
+Collection [HDLc, LDLR_0, hepCh_3, V, f_PCSK9_deg_LDLR, k_LDLc_clr2, Cl, f_SREBP2_reg_LDLR, f_diet_abs, Ch_LDLpart, hepCh_2, f, Ch_LDL_particle, hepCh_4, Vc, k_LDLR_syn, Ad_12, hepCh_1, S_diet, Ad_1] is not transcendence basis
+Collection [HDLc, Q, Ch_LDLpart, f_hepCh_statin, Ad_11, k_LDLc_clr2, Ad_12, hepCh_2, Ad_9, Ad_10, Cl, k_LDLR_deg, Ad_1, f, Ad_2, hepCh_3, Ad_4, Ad_5, Vp, hepCh_4] is not transcendence basis
+Collection [HDLc, Vc, Ad_4, Ad_12, f_PCSK9_deg_LDLR, hepCh_3, hepCh_4, k_LDLR_syn, k_hepCh_loss, Ad_3, f_hepCh_statin, hepCh_0, k_LDL_syn, k_LDLR_deg, Ch_LDL_particle, S_hepCh_loss, Cl, Ad_2, f_SREBP2_reg_LDLR, Ad_5] is not transcendence basis
+Collection [HDLc, Vc, k_HDLc_clr, Ad_12, f_PCSK9_deg_LDLR, k_LDLR_deg, k_LDLc_clr1, V, Ad_6, f_LDLchep_clr, Q, f_hepCh_statin, Ad_4, f_SREBP2_reg_LDLR, Ad_7, Ch_LDL_particle, Ad_10, Ad_2, Ch_LDLpart, Ad_1] is not transcendence basis
+Collection [HDLc, hepCh_1, f_diet_abs, f_SREBP2_reg_LDLR, f_PCSK9_deg_LDLR, k_LDLc_clr2, Ad_1, Ad_4, Ad_6, f, Ad_2, Ad_0, k_PCSK9_syn, f_SREBP2_reg_PCSK9, Ad_7, Ad_3, LDLR_0, hepCh_4, S_hepCh_loss, k_HDLc_clr] is not transcendence basis
+Collection [HDLc, hepCh_3, Ad_1, hepCh_2, k_HDLc_clr, Ad_4, Ad_2, Q, Ad_8, Vc, f_LDLchep_clr, Ad_12, Ch_LDLpart, f_PCSK9_deg_LDLR, k_PCSK9_syn, Ad_0, hepCh_0, Ad_10, Ad_11, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [HDLc, Ch_LDL_particle, f_hepCh_statin, f_PCSK9_deg_LDLR, k_LDL_syn, f_diet_abs, Ad_1, Ad_0, Ad_8, LDLr, f_LDLchep_clr, k_LDLc_clr1, hepCh_4, Ch_LDLpart, Ad_6, Vc, k_PCSK9_syn, f_SREBP2_reg_PCSK9, Ad_3, Ad_10] is not transcendence basis
+Collection [LDLR_0, Ad_11, k_LDL_syn, Ad_0, Ad_3, V, f_PCSK9_deg_LDLR, Ch_LDL_particle, k_HDLc_clr, Ad_10, hepCh_2, Q, hepCh_1, k_LDLR_syn, f_SREBP2_reg_PCSK9, Ch_LDLpart, S_hepCh_loss, k_LDLc_clr1, Ad_4, k_PCSK9_syn] is not transcendence basis
+Collection [LDLR_0, Ad_4, k_PCSK9_syn, hepCh_0, Ad_12, k_LDLc_clr1, Q, LDLr, Ch_LDLpart, k_LDLR_deg, Ad_7, f_diet_abs, Ad_9, Ad_8, f_SREBP2_reg_PCSK9, Ad_2, k_LDLR_syn, f, Vp, hepCh_2] is not transcendence basis
+Collection [LDLR_0, f_LDLchep_clr, k_hepCh_loss, f_diet_abs, Ad_0, k_LDL_syn, Ad_2, f_SREBP2_reg_PCSK9, Ad_10, Ad_4, k_LDLc_clr2, S_hepCh_loss, f_hepCh_statin, k_HDLc_clr, hepCh_3, hepCh_4, Ch_LDL_particle, Vp, Ad_9, Vc] is not transcendence basis
+Collection [LDLR_0, f_diet_abs, Ad_1, f_LDLchep_clr, Ad_11, Ad_3, hepCh_0, f_PCSK9_deg_LDLR, k_LDL_syn, f_SREBP2_reg_PCSK9, Ad_5, k_LDLR_deg, f_SREBP2_reg_LDLR, Ch_LDL_particle, S_hepCh_loss, Vc, S_diet, Ad_2, Ad_6, k_LDLc_clr2] is not transcendence basis
+Collection [LDLR_0, f_hepCh_statin, Ad_7, LDLr, Ad_8, k_LDLc_clr1, f_diet_abs, k_HDLc_clr, Vc, f_SREBP2_reg_LDLR, Ad_12, Vp, HDLc, f_PCSK9_deg_LDLR, k_LDLR_syn, hepCh_2, Ad_6, Q, f, Cl] is not transcendence basis
+Collection [LDLR_0, f_hepCh_statin, f_PCSK9_deg_LDLR, f, k_LDLR_syn, Ad_10, Ad_9, k_PCSK9_syn, S_diet, HDLc, hepCh_3, LDLr, Ad_3, f_SREBP2_reg_LDLR, Vc, Ad_2, Ch_LDL_particle, Ad_4, Cl, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [LDLR_0, k_LDLc_clr2, hepCh_4, f_LDLchep_clr, Ad_0, hepCh_1, k_HDLc_clr, f, Ad_9, S_hepCh_loss, Ch_LDL_particle, f_diet_abs, k_LDLR_syn, Ad_12, Ad_2, k_hepCh_loss, hepCh_3, HDLc, Ad_4, Q] is not transcendence basis
+Collection [LDLR_0, f_SREBP2_reg_LDLR, Ad_9, hepCh_3, k_LDL_syn, f, Cl, f_PCSK9_deg_LDLR, V, S_diet, HDLc, Ad_11, S_hepCh_loss, hepCh_0, hepCh_2, f_SREBP2_reg_PCSK9, Ad_6, f_LDLchep_clr, Ad_0, Ad_8] is not transcendence basis
+Collection [LDLr, Ad_1, HDLc, f_PCSK9_deg_LDLR, Ad_6, f, k_LDL_syn, Vc, V, hepCh_3, f_hepCh_statin, f_SREBP2_reg_LDLR, f_LDLchep_clr, Q, hepCh_0, Ad_0, Ad_7, k_LDLR_syn, k_LDLc_clr1, Ad_9] is not transcendence basis
+Collection [LDLr, Ad_5, Cl, k_LDLc_clr1, Ad_11, f, k_LDL_syn, Ad_0, Ad_3, f_PCSK9_deg_LDLR, hepCh_0, Ad_8, hepCh_1, f_diet_abs, hepCh_2, k_LDLR_syn, Vp, Ad_1, Ch_LDL_particle, f_SREBP2_reg_LDLR] is not transcendence basis
+Collection [LDLr, Ad_7, HDLc, hepCh_3, Ad_12, LDLR_0, Vp, Ad_0, Ad_4, f_LDLchep_clr, f_SREBP2_reg_LDLR, f_hepCh_statin, hepCh_2, S_hepCh_loss, k_LDL_syn, Ch_LDLpart, hepCh_1, k_hepCh_loss, k_HDLc_clr, hepCh_0] is not transcendence basis
+Collection [LDLr, Ad_7, f, f_hepCh_statin, f_SREBP2_reg_LDLR, Ad_5, HDLc, Ad_12, V, Cl, Vp, Ch_LDLpart, Vc, hepCh_3, S_hepCh_loss, Ad_6, k_LDLR_syn, k_PCSK9_syn, Ad_2, hepCh_4] is not transcendence basis
+Collection [LDLr, Cl, Ch_LDLpart, hepCh_0, f_diet_abs, Ad_2, hepCh_4, Ad_11, Ad_12, k_LDLR_syn, Ad_6, S_diet, k_LDLc_clr2, f_SREBP2_reg_PCSK9, f_LDLchep_clr, Ad_1, f_SREBP2_reg_LDLR, Ch_LDL_particle, f_PCSK9_deg_LDLR, HDLc] is not transcendence basis
+Collection [LDLr, Vc, Ad_10, Ad_3, k_LDLc_clr1, Ad_7, hepCh_2, S_hepCh_loss, V, Ad_6, Ad_0, f_PCSK9_deg_LDLR, Ad_2, Ad_9, Ad_5, f_SREBP2_reg_LDLR, Ad_12, hepCh_1, k_hepCh_loss, Ad_4] is not transcendence basis
+Collection [LDLr, hepCh_4, hepCh_1, k_HDLc_clr, Ad_9, k_LDLc_clr1, k_LDLR_deg, k_LDLc_clr2, Ad_1, Ad_4, f_LDLchep_clr, f, f_SREBP2_reg_LDLR, LDLR_0, f_hepCh_statin, V, Ad_11, Vc, f_diet_abs, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [LDLr, f_diet_abs, Ad_1, Ad_7, k_LDL_syn, Ch_LDL_particle, Vc, hepCh_2, hepCh_4, V, f, Vp, f_SREBP2_reg_PCSK9, Ad_2, k_hepCh_loss, S_hepCh_loss, Ad_9, Ad_3, Cl, Ad_12] is not transcendence basis
+Collection [LDLr, f_hepCh_statin, f_PCSK9_deg_LDLR, f_diet_abs, S_diet, k_LDLR_syn, k_LDL_syn, Ch_LDLpart, f_LDLchep_clr, HDLc, hepCh_3, Ad_8, Ad_7, V, k_PCSK9_syn, hepCh_2, Cl, hepCh_4, k_LDLc_clr2, k_hepCh_loss] is not transcendence basis
+Collection [LDLr, k_PCSK9_syn, Ad_5, Vp, Ad_1, k_LDLR_syn, k_hepCh_loss, Ad_10, hepCh_2, k_LDL_syn, Ad_11, k_LDLc_clr1, f, Ch_LDL_particle, f_SREBP2_reg_LDLR, Ad_3, LDLR_0, f_SREBP2_reg_PCSK9, hepCh_4, Ad_4] is not transcendence basis
+Collection [LDLr, f_SREBP2_reg_LDLR, k_LDL_syn, Ad_0, Ch_LDL_particle, HDLc, Ad_8, Ad_12, hepCh_4, S_hepCh_loss, hepCh_1, f_PCSK9_deg_LDLR, Ad_11, Ad_6, Ad_2, Q, k_PCSK9_syn, V, f_SREBP2_reg_PCSK9, f_hepCh_statin] is not transcendence basis
+Collection [Q, Ad_10, f_SREBP2_reg_PCSK9, f_diet_abs, Ad_1, hepCh_3, Ad_7, k_hepCh_loss, Ad_6, S_diet, Ad_4, f_hepCh_statin, Ad_5, Ch_LDL_particle, Ad_9, hepCh_2, S_hepCh_loss, Ad_2, Ch_LDLpart, k_LDLR_deg] is not transcendence basis
+Collection [Q, Ad_6, Ad_4, Ad_0, Ad_2, Ad_10, LDLr, Ad_12, f_SREBP2_reg_PCSK9, LDLR_0, Ad_1, HDLc, k_PCSK9_syn, Ad_8, Ad_11, S_diet, k_HDLc_clr, Ch_LDL_particle, k_LDL_syn, f_SREBP2_reg_LDLR] is not transcendence basis
+Collection [Q, S_diet, f_LDLchep_clr, hepCh_4, LDLr, Ch_LDLpart, Vp, S_hepCh_loss, Ad_8, Ad_1, k_hepCh_loss, Ad_12, Ad_7, f_SREBP2_reg_PCSK9, k_HDLc_clr, V, Vc, Ad_3, f_SREBP2_reg_LDLR, Cl] is not transcendence basis
+Collection [Q, S_diet, k_LDLR_deg, HDLc, LDLr, hepCh_1, Ad_5, V, Ad_11, Vp, Cl, k_LDLc_clr2, f_SREBP2_reg_LDLR, Ad_3, k_PCSK9_syn, Ad_7, hepCh_4, k_hepCh_loss, k_LDLR_syn, f_LDLchep_clr] is not transcendence basis
+Collection [Q, f, k_LDL_syn, LDLR_0, Vp, k_LDLc_clr1, f_LDLchep_clr, Ad_7, hepCh_2, Ad_5, hepCh_4, Ad_12, k_PCSK9_syn, Cl, Ad_8, Ad_1, Ad_11, f_hepCh_statin, Ad_0, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [Q, hepCh_2, Ad_12, Ch_LDLpart, hepCh_3, Vc, Ad_5, hepCh_4, Cl, Ad_9, Ad_8, HDLc, Ad_6, k_LDL_syn, Ad_7, LDLR_0, hepCh_0, f_SREBP2_reg_LDLR, LDLr, f_diet_abs] is not transcendence basis
+Collection [Q, hepCh_4, hepCh_0, S_diet, Ad_6, Ad_10, f_SREBP2_reg_PCSK9, k_PCSK9_syn, f_diet_abs, Ad_7, Ch_LDLpart, Ad_11, hepCh_1, hepCh_2, f_SREBP2_reg_LDLR, Ad_1, LDLr, k_LDLR_deg, hepCh_3, Vc] is not transcendence basis
+Collection [Q, Ch_LDL_particle, LDLR_0, hepCh_1, f_PCSK9_deg_LDLR, Vp, hepCh_4, Ch_LDLpart, k_HDLc_clr, LDLr, f_LDLchep_clr, Ad_8, Cl, Ad_9, HDLc, S_hepCh_loss, Ad_10, k_PCSK9_syn, hepCh_0, Ad_0] is not transcendence basis
+Collection [Q, f_diet_abs, Ad_3, Ad_2, k_LDLR_syn, V, Ch_LDLpart, LDLR_0, Ad_0, Ch_LDL_particle, S_hepCh_loss, k_LDLc_clr1, f, Ad_9, Ad_12, LDLr, Ad_1, Ad_8, f_SREBP2_reg_LDLR, Ad_4] is not transcendence basis
+Collection [Q, f_hepCh_statin, Ad_0, Cl, V, k_LDLc_clr1, Vp, Ad_12, hepCh_2, Ad_3, hepCh_0, k_HDLc_clr, f_diet_abs, hepCh_4, LDLr, f_SREBP2_reg_PCSK9, Ad_9, S_hepCh_loss, k_LDLc_clr2, S_diet] is not transcendence basis
+Collection [Q, k_hepCh_loss, f_SREBP2_reg_LDLR, Ad_10, Ad_1, f_diet_abs, HDLc, V, LDLR_0, k_PCSK9_syn, Ad_2, k_LDL_syn, Ch_LDLpart, f, k_LDLc_clr1, Ad_11, f_SREBP2_reg_PCSK9, hepCh_0, Ad_0, LDLr] is not transcendence basis
+Collection [S_diet, Ad_10, Vp, hepCh_4, f_LDLchep_clr, Ad_3, Ch_LDLpart, Ad_8, k_hepCh_loss, Ad_12, Ad_11, Ch_LDL_particle, Cl, k_LDLR_syn, k_LDL_syn, hepCh_1, Ad_7, Ad_4, k_LDLc_clr2, f_diet_abs] is not transcendence basis
+Collection [S_diet, Ad_2, LDLR_0, HDLc, Vp, LDLr, hepCh_3, Ad_11, Ad_1, S_hepCh_loss, Ad_12, Ad_0, f_LDLchep_clr, k_LDLR_deg, f_SREBP2_reg_PCSK9, k_PCSK9_syn, f, f_SREBP2_reg_LDLR, f_PCSK9_deg_LDLR, Ad_9] is not transcendence basis
+Collection [S_diet, Ad_9, Ad_0, hepCh_4, Ad_12, Ad_1, hepCh_0, k_HDLc_clr, k_hepCh_loss, Ad_8, Vc, Cl, f_SREBP2_reg_LDLR, Ad_4, hepCh_2, k_LDL_syn, S_hepCh_loss, Ad_3, k_LDLR_deg, Ad_10] is not transcendence basis
+Collection [S_diet, Cl, k_LDLc_clr2, f_SREBP2_reg_PCSK9, f_diet_abs, Ad_4, k_LDL_syn, Ch_LDL_particle, Ad_3, k_HDLc_clr, Ad_7, Ad_10, hepCh_2, Ad_8, Ad_9, hepCh_0, f, hepCh_3, Ad_0, f_LDLchep_clr] is not transcendence basis
+Collection [S_diet, HDLc, f, f_diet_abs, hepCh_0, LDLR_0, hepCh_1, f_hepCh_statin, f_PCSK9_deg_LDLR, Ad_0, k_LDL_syn, k_LDLR_deg, Ad_4, Ad_10, k_PCSK9_syn, Ch_LDL_particle, hepCh_4, Ad_2, f_LDLchep_clr, hepCh_2] is not transcendence basis
+Collection [S_diet, hepCh_1, k_LDLc_clr2, Ch_LDL_particle, Ad_3, Ad_12, f_hepCh_statin, k_LDLR_syn, Q, HDLc, S_hepCh_loss, k_LDL_syn, V, Ad_6, LDLR_0, f, Cl, Vc, LDLr, Ad_8] is not transcendence basis
+Collection [S_diet, Ch_LDLpart, LDLr, Ad_5, Q, k_LDLc_clr1, k_PCSK9_syn, LDLR_0, f_SREBP2_reg_LDLR, k_hepCh_loss, k_HDLc_clr, hepCh_4, Ad_12, f_SREBP2_reg_PCSK9, f_hepCh_statin, HDLc, k_LDLR_deg, Ad_4, Vc, f_diet_abs] is not transcendence basis
+Collection [S_diet, k_LDL_syn, Ad_1, f_hepCh_statin, Ad_12, Vp, Ad_11, k_PCSK9_syn, S_hepCh_loss, hepCh_4, HDLc, Ad_6, Ad_7, Ch_LDL_particle, Q, k_LDLR_deg, Ad_8, V, Ad_10, hepCh_2] is not transcendence basis
+Collection [S_diet, f_SREBP2_reg_PCSK9, LDLr, k_LDLc_clr2, Ad_8, hepCh_2, k_LDLR_syn, hepCh_0, Vc, S_hepCh_loss, hepCh_3, HDLc, Ad_1, k_hepCh_loss, f_LDLchep_clr, Ad_0, k_LDLR_deg, LDLR_0, Ad_5, k_LDL_syn] is not transcendence basis
+Collection [V, Ad_5, LDLr, Ch_LDL_particle, Ad_3, hepCh_0, f_hepCh_statin, Ad_8, S_diet, k_LDL_syn, Ad_7, hepCh_4, Ad_1, f_diet_abs, k_LDLc_clr1, Ad_9, hepCh_3, f, Ad_10, Ad_2] is not transcendence basis
+Collection [V, Ad_7, Ad_2, Ad_4, Ad_9, Ch_LDLpart, Ad_12, hepCh_2, f_hepCh_statin, Ad_3, hepCh_4, k_PCSK9_syn, S_hepCh_loss, hepCh_0, Q, f, hepCh_1, f_PCSK9_deg_LDLR, HDLc, Ad_11] is not transcendence basis
+Collection [V, Ad_8, k_HDLc_clr, f_hepCh_statin, hepCh_2, LDLr, Ad_0, k_LDLR_syn, k_LDL_syn, Cl, k_PCSK9_syn, k_LDLc_clr2, Q, Ad_3, f, Ad_9, f_SREBP2_reg_LDLR, k_LDLc_clr1, f_diet_abs, hepCh_3] is not transcendence basis
+Collection [V, Cl, f_PCSK9_deg_LDLR, Ad_0, hepCh_2, Ch_LDLpart, f_SREBP2_reg_PCSK9, f, Ad_7, Ad_2, Ad_12, k_LDLc_clr1, Ad_10, f_diet_abs, k_HDLc_clr, S_diet, k_LDLR_deg, hepCh_4, k_LDL_syn, Q] is not transcendence basis
+Collection [V, LDLr, Q, k_HDLc_clr, Vc, k_hepCh_loss, Ad_2, Ch_LDLpart, Ad_3, Ad_5, Ad_1, f_PCSK9_deg_LDLR, k_LDL_syn, hepCh_1, f_diet_abs, hepCh_3, f_SREBP2_reg_LDLR, LDLR_0, f_SREBP2_reg_PCSK9, Cl] is not transcendence basis
+Collection [V, Vc, f_SREBP2_reg_PCSK9, Ad_2, f_PCSK9_deg_LDLR, k_LDLc_clr1, f_hepCh_statin, k_LDLR_syn, hepCh_3, hepCh_1, Ad_12, hepCh_2, f_SREBP2_reg_LDLR, Ch_LDLpart, Ad_7, Ad_11, f_diet_abs, Ad_4, Q, Ad_8] is not transcendence basis
+Collection [V, hepCh_3, hepCh_4, Vc, Ad_2, Ad_11, Ad_7, k_LDL_syn, Ad_12, f_PCSK9_deg_LDLR, S_hepCh_loss, f_diet_abs, k_LDLR_syn, Q, f, Ad_10, Ad_1, f_hepCh_statin, LDLr, k_LDLc_clr1] is not transcendence basis
+Collection [V, f_hepCh_statin, Ad_0, Q, Cl, f_SREBP2_reg_LDLR, f_LDLchep_clr, k_LDLR_syn, Ad_12, hepCh_1, k_HDLc_clr, hepCh_4, Ad_11, hepCh_2, Ad_3, k_LDLc_clr1, Ad_1, Ad_4, Ad_2, k_LDL_syn] is not transcendence basis
+Collection [Vc, Ad_6, k_LDLR_syn, Ad_1, Cl, f_SREBP2_reg_PCSK9, k_LDLR_deg, Ad_11, Q, k_PCSK9_syn, f_hepCh_statin, Ad_5, Ch_LDL_particle, f_LDLchep_clr, Ad_0, S_diet, f_diet_abs, Ad_2, Ad_10, S_hepCh_loss] is not transcendence basis
+Collection [Vc, Ad_7, LDLR_0, f_PCSK9_deg_LDLR, Ad_4, V, Q, Ad_1, Ad_0, S_diet, f_SREBP2_reg_LDLR, hepCh_1, f_SREBP2_reg_PCSK9, hepCh_0, k_HDLc_clr, Vp, Ad_6, HDLc, f_LDLchep_clr, hepCh_4] is not transcendence basis
+Collection [Vc, Ad_7, hepCh_3, Ad_10, Cl, k_PCSK9_syn, f_diet_abs, hepCh_2, Q, k_LDLR_deg, Ch_LDL_particle, S_diet, Vp, Ad_9, f, V, k_LDLR_syn, Ch_LDLpart, Ad_4, Ad_8] is not transcendence basis
+Collection [Vc, Q, LDLR_0, S_diet, Ad_6, S_hepCh_loss, k_PCSK9_syn, k_LDLc_clr1, f_LDLchep_clr, Ad_3, Ad_2, k_hepCh_loss, Ad_11, Cl, Ad_9, Ch_LDLpart, Ch_LDL_particle, Ad_12, Ad_8, hepCh_3] is not transcendence basis
+Collection [Vc, Vp, Ad_5, Ch_LDL_particle, Ad_12, k_PCSK9_syn, k_LDLR_deg, k_hepCh_loss, Ad_9, Ad_8, hepCh_1, f_PCSK9_deg_LDLR, hepCh_3, Ch_LDLpart, f_diet_abs, Ad_0, LDLr, k_HDLc_clr, f_LDLchep_clr, S_diet] is not transcendence basis
+Collection [Vc, hepCh_1, S_hepCh_loss, Ad_6, k_PCSK9_syn, k_hepCh_loss, HDLc, f_SREBP2_reg_PCSK9, f, Ad_5, Ad_11, Q, f_LDLchep_clr, Ad_12, Ad_7, LDLr, k_LDLR_syn, f_PCSK9_deg_LDLR, Ch_LDL_particle, S_diet] is not transcendence basis
+Collection [Vc, hepCh_2, f_diet_abs, LDLR_0, Vp, k_hepCh_loss, Ad_4, Ad_2, Ch_LDL_particle, S_diet, k_PCSK9_syn, hepCh_4, k_LDLR_deg, S_hepCh_loss, f_SREBP2_reg_LDLR, k_HDLc_clr, f_SREBP2_reg_PCSK9, LDLr, Ad_12, Ad_8] is not transcendence basis
+Collection [Vc, Ch_LDLpart, k_LDLR_deg, hepCh_4, Ch_LDL_particle, Ad_7, Ad_5, Ad_4, hepCh_1, Ad_3, hepCh_2, V, Ad_12, Ad_9, k_PCSK9_syn, k_LDLc_clr2, S_hepCh_loss, Ad_2, f_diet_abs, f_LDLchep_clr] is not transcendence basis
+Collection [Vc, f_diet_abs, f_SREBP2_reg_PCSK9, Ad_10, S_hepCh_loss, Cl, hepCh_3, f_PCSK9_deg_LDLR, Ad_6, HDLc, LDLr, k_LDLR_deg, hepCh_1, k_PCSK9_syn, Ch_LDLpart, Ad_3, Q, LDLR_0, Ch_LDL_particle, hepCh_4] is not transcendence basis
+Collection [Vp, Ad_0, HDLc, Ad_2, Ad_3, k_HDLc_clr, Ad_10, hepCh_2, S_diet, Ch_LDL_particle, Ad_8, k_hepCh_loss, Q, k_LDL_syn, Vc, Ad_5, k_LDLR_deg, k_PCSK9_syn, f_PCSK9_deg_LDLR, V] is not transcendence basis
+Collection [Vp, Ad_0, V, LDLr, Ad_7, hepCh_1, Ad_10, Ad_11, S_diet, hepCh_4, k_PCSK9_syn, k_HDLc_clr, Ad_2, Ad_9, f_SREBP2_reg_PCSK9, S_hepCh_loss, Ad_6, Ad_3, Cl, k_LDL_syn] is not transcendence basis
+Collection [Vp, Ad_0, V, k_LDLR_syn, k_HDLc_clr, hepCh_2, f_LDLchep_clr, hepCh_3, f_SREBP2_reg_PCSK9, Ad_1, Ad_7, f_SREBP2_reg_LDLR, Ad_5, S_hepCh_loss, k_LDLR_deg, hepCh_4, Vc, Ad_12, k_PCSK9_syn, f_hepCh_statin] is not transcendence basis
+Collection [Vp, Ad_11, f_SREBP2_reg_PCSK9, f_diet_abs, Ad_9, Ad_5, hepCh_4, hepCh_1, Ad_7, Ad_8, k_LDLR_deg, k_LDLR_syn, Q, LDLr, Ad_0, Ch_LDL_particle, hepCh_3, f_LDLchep_clr, Ad_6, Ad_3] is not transcendence basis
+Collection [Vp, Ad_3, V, Ad_8, Vc, S_hepCh_loss, f_LDLchep_clr, f_SREBP2_reg_LDLR, hepCh_1, f_hepCh_statin, Ad_10, f_diet_abs, f_PCSK9_deg_LDLR, k_PCSK9_syn, HDLc, Ad_5, f, Cl, Ad_12, hepCh_0] is not transcendence basis
+Collection [Vp, Ad_3, hepCh_4, Ad_6, Ad_11, k_HDLc_clr, Ch_LDLpart, k_LDLc_clr1, Ad_1, k_PCSK9_syn, HDLc, k_LDL_syn, f_hepCh_statin, k_hepCh_loss, S_hepCh_loss, f_PCSK9_deg_LDLR, V, hepCh_2, Ad_2, Ad_5] is not transcendence basis
+Collection [Vp, Cl, Ad_11, Ch_LDLpart, HDLc, hepCh_4, f_SREBP2_reg_LDLR, S_hepCh_loss, k_LDLR_syn, k_HDLc_clr, f_hepCh_statin, Ad_2, Vc, f_PCSK9_deg_LDLR, Ad_5, k_LDL_syn, k_PCSK9_syn, Ad_0, Ch_LDL_particle, f_diet_abs] is not transcendence basis
+Collection [Vp, Cl, Ad_9, k_hepCh_loss, Ch_LDL_particle, Ad_7, Ad_0, hepCh_1, k_PCSK9_syn, Vc, f, Ad_10, k_LDLc_clr2, HDLc, k_HDLc_clr, Ad_1, f_PCSK9_deg_LDLR, V, Ad_12, hepCh_4] is not transcendence basis
+Collection [Vp, S_diet, Ad_1, Ad_9, hepCh_2, Ad_7, k_LDLc_clr1, k_LDLR_syn, hepCh_4, Vc, HDLc, Ad_10, k_PCSK9_syn, Ad_6, Q, f_LDLchep_clr, LDLR_0, Ad_0, Ad_3, f] is not transcendence basis
+Collection [Vp, hepCh_1, LDLR_0, hepCh_4, k_HDLc_clr, Ad_1, f, LDLr, V, hepCh_0, f_diet_abs, k_hepCh_loss, Ad_0, Vc, f_SREBP2_reg_LDLR, HDLc, hepCh_2, Ad_9, Ad_6, S_hepCh_loss] is not transcendence basis
+Collection [Vp, hepCh_4, LDLR_0, f_SREBP2_reg_LDLR, f, Cl, Vc, Ad_2, Ad_10, Ad_9, f_PCSK9_deg_LDLR, Ch_LDLpart, HDLc, k_LDLc_clr1, Q, k_HDLc_clr, hepCh_0, LDLr, hepCh_3, Ad_3] is not transcendence basis
+Collection [Vp, S_hepCh_loss, f_PCSK9_deg_LDLR, Vc, Cl, k_HDLc_clr, k_PCSK9_syn, hepCh_4, Ad_11, k_LDL_syn, f_hepCh_statin, Ad_10, Ad_12, k_LDLR_deg, Ad_1, f_SREBP2_reg_PCSK9, Ch_LDL_particle, Ad_5, hepCh_1, Ad_2] is not transcendence basis
+Collection [Vp, f_diet_abs, f_SREBP2_reg_PCSK9, Ad_5, Ad_2, k_PCSK9_syn, hepCh_2, LDLR_0, hepCh_3, Ch_LDLpart, k_hepCh_loss, f_hepCh_statin, Ad_12, k_HDLc_clr, Ad_11, Vc, hepCh_4, hepCh_1, Ad_7, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [Vp, k_hepCh_loss, Ad_12, LDLr, Ad_4, Ad_11, hepCh_3, k_LDLc_clr2, Ad_5, k_PCSK9_syn, Ad_1, f_SREBP2_reg_LDLR, k_LDLR_syn, f, Q, V, HDLc, k_LDLR_deg, Ad_7, S_diet] is not transcendence basis
+Collection [Vp, f_SREBP2_reg_PCSK9, Ch_LDLpart, Ad_10, hepCh_3, Ad_0, k_LDLR_deg, hepCh_2, S_hepCh_loss, V, Ch_LDL_particle, Cl, Ad_3, k_LDLc_clr2, k_PCSK9_syn, Ad_9, k_hepCh_loss, k_LDLR_syn, Ad_7, hepCh_4] is not transcendence basis
+Collection [Vp, f_SREBP2_reg_PCSK9, k_LDL_syn, LDLr, k_LDLR_deg, f, Ch_LDL_particle, f_hepCh_statin, hepCh_3, k_PCSK9_syn, Ad_8, hepCh_1, S_hepCh_loss, Q, Ad_9, LDLR_0, k_LDLR_syn, f_LDLchep_clr, Cl, Ad_10] is not transcendence basis
+Collection [Vp, f_SREBP2_reg_PCSK9, k_LDLc_clr1, Ad_1, hepCh_2, k_LDLc_clr2, f_PCSK9_deg_LDLR, Ad_12, k_PCSK9_syn, Ch_LDLpart, hepCh_0, S_hepCh_loss, Ad_11, Ad_8, Ad_0, V, hepCh_4, k_LDL_syn, hepCh_1, Ad_7] is not transcendence basis
+Collection [f, Ad_3, Vp, f_SREBP2_reg_PCSK9, Ad_1, f_hepCh_statin, f_SREBP2_reg_LDLR, hepCh_1, Ad_0, f_LDLchep_clr, k_LDLR_deg, LDLr, Q, hepCh_4, Ad_8, k_hepCh_loss, hepCh_0, Ad_11, Ch_LDL_particle, Ad_10] is not transcendence basis
+Collection [f, HDLc, Ad_3, f_LDLchep_clr, Ad_6, Ch_LDL_particle, k_LDL_syn, hepCh_3, Cl, Ad_11, hepCh_0, Ad_10, Ad_12, hepCh_1, f_hepCh_statin, hepCh_4, k_LDLc_clr2, k_LDLR_deg, f_diet_abs, S_diet] is not transcendence basis
+Collection [f, hepCh_2, Ad_11, Ad_1, f_SREBP2_reg_LDLR, Vc, Ad_5, Ad_8, Ad_6, S_diet, Ad_7, LDLr, k_LDL_syn, Cl, Ad_12, k_LDLR_deg, k_LDLR_syn, Ad_9, hepCh_3, k_hepCh_loss] is not transcendence basis
+Collection [f, hepCh_4, Ad_6, k_LDLc_clr1, k_PCSK9_syn, S_diet, Ad_7, HDLc, Cl, Ad_12, hepCh_3, Ad_5, k_LDL_syn, hepCh_1, k_hepCh_loss, Ad_2, Vc, Ad_1, Ad_3, hepCh_2] is not transcendence basis
+Collection [f, Ch_LDL_particle, Ad_6, k_hepCh_loss, hepCh_3, f_SREBP2_reg_PCSK9, f_LDLchep_clr, k_LDLc_clr1, hepCh_0, hepCh_1, Q, Ch_LDLpart, Ad_2, Ad_0, HDLc, Cl, k_LDLR_deg, k_HDLc_clr, Ad_4, Ad_1] is not transcendence basis
+Collection [f, k_HDLc_clr, k_hepCh_loss, Ad_11, Ad_4, k_LDL_syn, f_PCSK9_deg_LDLR, LDLr, hepCh_1, Vp, Cl, Ad_3, f_LDLchep_clr, k_LDLR_deg, V, LDLR_0, f_hepCh_statin, Ch_LDL_particle, Ad_2, Ad_1] is not transcendence basis
+Collection [f, k_LDLR_syn, Ad_8, Ad_10, Q, S_diet, hepCh_4, Cl, Ad_2, f_hepCh_statin, hepCh_3, f_SREBP2_reg_LDLR, V, k_LDLc_clr1, Vp, Ad_12, k_LDL_syn, Ad_0, LDLR_0, hepCh_0] is not transcendence basis
+Collection [f, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9, f_diet_abs, hepCh_1, LDLr, k_HDLc_clr, Vc, Ad_3, S_diet, k_PCSK9_syn, S_hepCh_loss, k_LDLc_clr1, k_LDLR_syn, k_hepCh_loss, hepCh_4, hepCh_3, Ad_12, k_LDLc_clr2, HDLc] is not transcendence basis
+Collection [hepCh_0, Ad_1, hepCh_1, hepCh_3, Ad_3, S_hepCh_loss, Ad_12, f_PCSK9_deg_LDLR, f_diet_abs, Ad_5, Vc, Ch_LDLpart, k_LDLR_syn, Vp, f_LDLchep_clr, f_SREBP2_reg_LDLR, Ad_8, k_LDLc_clr2, Ad_0, HDLc] is not transcendence basis
+Collection [hepCh_0, Ad_11, Ad_12, Vp, k_LDLR_deg, Cl, f_PCSK9_deg_LDLR, Vc, hepCh_1, k_LDLc_clr2, Ad_9, k_HDLc_clr, k_hepCh_loss, Ad_1, Ch_LDLpart, LDLR_0, k_LDL_syn, Ad_7, k_LDLR_syn, Ad_8] is not transcendence basis
+Collection [hepCh_0, Ad_12, Vc, f_PCSK9_deg_LDLR, Ad_2, Ad_10, f_hepCh_statin, f_LDLchep_clr, f, k_LDLc_clr2, Ad_9, hepCh_1, f_SREBP2_reg_LDLR, k_LDLc_clr1, k_LDLR_deg, f_diet_abs, Ad_3, k_HDLc_clr, Ad_0, hepCh_2] is not transcendence basis
+Collection [hepCh_0, Ad_2, k_LDLR_syn, Ch_LDL_particle, Ad_10, Ad_9, Ch_LDLpart, k_PCSK9_syn, V, Cl, f_SREBP2_reg_LDLR, k_LDLc_clr1, k_LDLc_clr2, Ad_1, hepCh_2, Ad_6, hepCh_4, Q, Ad_11, hepCh_1] is not transcendence basis
+Collection [hepCh_0, Ad_3, Ad_12, f_SREBP2_reg_PCSK9, f_PCSK9_deg_LDLR, k_LDL_syn, Ch_LDL_particle, Ad_4, hepCh_4, f, V, S_hepCh_loss, Ad_8, LDLr, Q, Ad_10, f_LDLchep_clr, f_SREBP2_reg_LDLR, S_diet, Ad_6] is not transcendence basis
+Collection [hepCh_0, Ad_4, k_hepCh_loss, f_PCSK9_deg_LDLR, HDLc, hepCh_2, f_hepCh_statin, Ad_0, f_LDLchep_clr, Ad_3, hepCh_4, f_SREBP2_reg_LDLR, Ad_2, k_LDLR_deg, Ad_12, S_hepCh_loss, f, Vc, Ad_5, Ad_1] is not transcendence basis
+Collection [hepCh_0, Ad_6, f_SREBP2_reg_PCSK9, k_LDLc_clr2, Vc, hepCh_2, Vp, f_LDLchep_clr, hepCh_3, Ad_3, Ad_1, S_hepCh_loss, Ad_2, Ad_5, Ad_10, f_diet_abs, HDLc, f_PCSK9_deg_LDLR, Ad_7, Ch_LDL_particle] is not transcendence basis
+Collection [hepCh_0, Ad_8, k_LDLc_clr2, f_diet_abs, Ad_11, f, hepCh_3, hepCh_2, Ch_LDLpart, Ad_7, hepCh_1, k_LDLR_deg, LDLR_0, Ad_6, k_HDLc_clr, Ad_2, Ad_4, Q, Ad_1, k_hepCh_loss] is not transcendence basis
+Collection [hepCh_0, Ad_9, Vc, f_SREBP2_reg_LDLR, Ad_2, f_SREBP2_reg_PCSK9, Ad_1, Ad_0, S_diet, k_LDLR_deg, Ad_8, Ad_10, Ad_12, k_hepCh_loss, k_LDLc_clr2, LDLR_0, Cl, k_LDL_syn, k_HDLc_clr, k_PCSK9_syn] is not transcendence basis
+Collection [hepCh_0, HDLc, k_LDLR_deg, Ad_5, f_SREBP2_reg_PCSK9, k_LDLc_clr2, Ad_6, LDLR_0, LDLr, hepCh_1, Ad_2, Ad_10, V, Ad_0, k_HDLc_clr, k_LDL_syn, Vp, hepCh_3, f_LDLchep_clr, k_LDLc_clr1] is not transcendence basis
+Collection [hepCh_0, S_diet, Ad_10, f_hepCh_statin, f_diet_abs, k_LDLR_syn, LDLR_0, k_LDLc_clr2, hepCh_1, V, Vc, Ch_LDLpart, LDLr, Ad_0, Ad_1, Ch_LDL_particle, hepCh_4, k_LDL_syn, Ad_6, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [hepCh_0, V, f_hepCh_statin, LDLR_0, k_LDLc_clr2, k_LDL_syn, hepCh_4, Ad_11, Vc, Ad_7, S_hepCh_loss, Ad_0, f_PCSK9_deg_LDLR, f, hepCh_3, k_LDLR_deg, f_SREBP2_reg_LDLR, Ch_LDL_particle, Ch_LDLpart, f_LDLchep_clr] is not transcendence basis
+Collection [hepCh_0, Vc, Ad_6, S_diet, f_hepCh_statin, V, k_LDLc_clr1, k_HDLc_clr, hepCh_1, Ch_LDL_particle, Ad_7, Ad_8, Ch_LDLpart, Ad_1, k_LDL_syn, Ad_3, Ad_0, Ad_10, k_hepCh_loss, Ad_4] is not transcendence basis
+Collection [hepCh_0, hepCh_3, hepCh_4, Ad_8, Cl, k_LDLR_deg, f_SREBP2_reg_PCSK9, LDLR_0, Ad_5, Ad_0, Ad_6, f, k_hepCh_loss, hepCh_1, f_hepCh_statin, f_SREBP2_reg_LDLR, Ad_9, k_LDLR_syn, Ad_3, f_LDLchep_clr] is not transcendence basis
+Collection [hepCh_0, hepCh_4, Ad_11, f_PCSK9_deg_LDLR, Ad_12, LDLR_0, HDLc, Ch_LDL_particle, Ad_1, Ad_6, f, Ad_4, f_diet_abs, Ad_0, hepCh_1, k_LDLR_deg, LDLr, hepCh_3, S_hepCh_loss, Ad_7] is not transcendence basis
+Collection [hepCh_0, f_hepCh_statin, f_LDLchep_clr, hepCh_1, k_LDLc_clr1, hepCh_4, Ch_LDLpart, f, V, Ad_7, LDLR_0, Vp, Ad_0, Ad_6, S_diet, Ad_3, k_LDL_syn, Ad_8, k_hepCh_loss, Ad_1] is not transcendence basis
+Collection [hepCh_0, k_LDLR_syn, f_SREBP2_reg_LDLR, Ad_2, Ad_10, f_hepCh_statin, k_PCSK9_syn, hepCh_3, LDLR_0, Vp, hepCh_2, hepCh_1, Ad_3, k_LDLc_clr2, Ad_6, k_LDL_syn, Ad_8, k_HDLc_clr, f, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [hepCh_0, k_LDLc_clr1, Vc, k_LDLR_syn, Ad_11, LDLr, hepCh_2, f_SREBP2_reg_PCSK9, LDLR_0, Ad_2, Vp, Ch_LDLpart, k_HDLc_clr, hepCh_3, k_LDLc_clr2, hepCh_4, Ad_5, Ad_8, Ad_7, f_diet_abs] is not transcendence basis
+Collection [hepCh_0, k_LDLc_clr2, S_diet, f_diet_abs, Ad_6, Ad_8, Ch_LDLpart, k_LDLR_syn, HDLc, Ad_2, k_PCSK9_syn, Q, Ad_5, Ad_10, f_hepCh_statin, hepCh_1, hepCh_3, k_HDLc_clr, Cl, hepCh_4] is not transcendence basis
+Collection [hepCh_0, f_SREBP2_reg_LDLR, f_hepCh_statin, S_diet, Ad_3, Ch_LDL_particle, Ad_7, Ad_6, Ad_2, HDLc, hepCh_1, f_SREBP2_reg_PCSK9, Ad_11, Q, Ch_LDLpart, Ad_10, Vc, f_PCSK9_deg_LDLR, f_LDLchep_clr, k_LDL_syn] is not transcendence basis
+Collection [hepCh_0, f_SREBP2_reg_LDLR, k_LDLR_syn, Ch_LDLpart, Ad_0, f_hepCh_statin, LDLR_0, Ad_11, Ad_9, S_hepCh_loss, f_diet_abs, k_LDLc_clr2, LDLr, Vc, Ad_12, HDLc, Cl, Ch_LDL_particle, V, hepCh_1] is not transcendence basis
+Collection [hepCh_1, HDLc, Ad_8, k_LDL_syn, Ad_11, Ch_LDL_particle, f, Vp, hepCh_2, f_SREBP2_reg_LDLR, k_LDLR_deg, f_SREBP2_reg_PCSK9, Ad_2, Ad_3, Ad_9, f_PCSK9_deg_LDLR, k_HDLc_clr, k_PCSK9_syn, Ad_5, f_diet_abs] is not transcendence basis
+Collection [hepCh_1, LDLR_0, k_LDLR_syn, Ch_LDLpart, Ad_7, f_SREBP2_reg_PCSK9, f, f_PCSK9_deg_LDLR, Ad_8, k_LDLc_clr2, Ad_3, LDLr, f_hepCh_statin, Ch_LDL_particle, Ad_12, hepCh_2, Ad_1, k_HDLc_clr, V, Ad_4] is not transcendence basis
+Collection [hepCh_1, Q, Ad_3, hepCh_4, k_LDL_syn, Ad_12, S_hepCh_loss, hepCh_0, LDLR_0, V, f_hepCh_statin, Vc, HDLc, S_diet, k_LDLR_syn, k_LDLR_deg, k_PCSK9_syn, hepCh_3, f_PCSK9_deg_LDLR, LDLr] is not transcendence basis
+Collection [hepCh_1, k_LDLc_clr1, hepCh_3, V, Ad_9, Ad_4, S_diet, Ad_5, Q, Ad_2, Ad_3, k_PCSK9_syn, Ch_LDL_particle, hepCh_4, f_PCSK9_deg_LDLR, f, Ad_0, Ch_LDLpart, k_LDLR_deg, f_diet_abs] is not transcendence basis
+Collection [hepCh_1, k_PCSK9_syn, Ad_0, f_hepCh_statin, Vp, Vc, Ad_11, Ad_6, hepCh_0, k_LDLR_syn, HDLc, f_SREBP2_reg_LDLR, f_LDLchep_clr, Ad_8, k_LDLc_clr1, hepCh_4, k_hepCh_loss, Ad_1, Ad_12, Ad_2] is not transcendence basis
+Collection [hepCh_2, Ad_10, hepCh_1, Cl, Ch_LDL_particle, Ad_5, hepCh_3, Ad_8, Ch_LDLpart, Ad_3, k_HDLc_clr, k_hepCh_loss, S_diet, k_LDLR_deg, HDLc, Vc, hepCh_4, k_LDLR_syn, Q, f] is not transcendence basis
+Collection [hepCh_2, LDLr, k_LDLR_deg, Ad_0, Ch_LDLpart, Ad_9, f_LDLchep_clr, Ad_7, LDLR_0, hepCh_0, f_hepCh_statin, Ch_LDL_particle, Ad_10, hepCh_4, S_hepCh_loss, k_PCSK9_syn, Ad_12, k_LDLc_clr2, f, S_diet] is not transcendence basis
+Collection [hepCh_2, Q, Ad_0, Ad_1, Ad_12, S_hepCh_loss, Ad_5, Ad_9, k_LDLR_syn, Ad_8, f, Ad_6, Ad_10, f_SREBP2_reg_PCSK9, S_diet, f_SREBP2_reg_LDLR, Ch_LDLpart, k_LDLc_clr2, HDLc, k_PCSK9_syn] is not transcendence basis
+Collection [hepCh_2, V, k_LDLc_clr2, f_hepCh_statin, S_hepCh_loss, hepCh_0, hepCh_4, Ad_7, Ch_LDLpart, Ad_8, Ad_3, HDLc, Ch_LDL_particle, f_PCSK9_deg_LDLR, Ad_4, Ad_10, k_LDLR_syn, Ad_6, k_PCSK9_syn, Ad_1] is not transcendence basis
+Collection [hepCh_2, Vp, Ad_7, k_PCSK9_syn, k_hepCh_loss, Ad_10, hepCh_1, Ad_8, HDLc, f_diet_abs, hepCh_0, S_hepCh_loss, Ad_4, Ad_0, Ad_6, hepCh_4, Ad_2, Vc, Ad_9, k_HDLc_clr] is not transcendence basis
+Collection [hepCh_2, Vp, V, k_LDLR_deg, Ad_8, k_LDLc_clr1, hepCh_4, f_diet_abs, f, Vc, f_LDLchep_clr, Ad_3, Ch_LDL_particle, Cl, Ad_0, Ad_4, Ad_12, f_hepCh_statin, Ad_11, f_SREBP2_reg_LDLR] is not transcendence basis
+Collection [hepCh_2, k_LDLR_deg, f, LDLR_0, Ad_9, f_PCSK9_deg_LDLR, hepCh_1, k_PCSK9_syn, f_SREBP2_reg_PCSK9, Q, hepCh_3, Ad_12, Vc, Ad_0, Ad_1, f_SREBP2_reg_LDLR, f_LDLchep_clr, k_LDLc_clr1, Cl, k_LDL_syn] is not transcendence basis
+Collection [hepCh_2, k_LDLR_syn, f_SREBP2_reg_LDLR, f_LDLchep_clr, k_PCSK9_syn, S_diet, Ad_1, LDLr, f_diet_abs, Ad_7, hepCh_1, Ad_5, k_LDL_syn, Ch_LDLpart, Ch_LDL_particle, k_LDLc_clr1, Vp, Ad_4, k_LDLc_clr2, S_hepCh_loss] is not transcendence basis
+Collection [hepCh_2, k_LDL_syn, hepCh_1, Q, hepCh_3, HDLc, k_LDLR_deg, f_SREBP2_reg_PCSK9, f_SREBP2_reg_LDLR, Ad_0, f_PCSK9_deg_LDLR, Ad_12, Ch_LDL_particle, Ad_1, f, Cl, Vp, k_HDLc_clr, Ad_4, Ad_3] is not transcendence basis
+Collection [hepCh_3, Ad_6, HDLc, Ad_11, f_SREBP2_reg_LDLR, f_diet_abs, hepCh_4, S_hepCh_loss, Ad_10, Ad_1, Ch_LDLpart, LDLr, Ad_12, f_SREBP2_reg_PCSK9, f_LDLchep_clr, Cl, f_PCSK9_deg_LDLR, Ad_0, Ad_2, k_LDL_syn] is not transcendence basis
+Collection [hepCh_3, Ad_6, LDLr, Ad_5, k_LDLR_deg, k_LDLc_clr2, k_LDLc_clr1, Ad_2, Ad_7, hepCh_4, Ad_12, k_LDL_syn, Ad_3, Ad_10, hepCh_2, hepCh_1, f_SREBP2_reg_LDLR, Ad_4, S_diet, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [hepCh_3, Cl, Vp, Ad_10, hepCh_0, k_hepCh_loss, Ad_7, LDLR_0, Ad_3, hepCh_4, k_HDLc_clr, Ad_5, HDLc, f, Ch_LDL_particle, Ad_0, Q, k_LDLc_clr1, Ad_8, S_hepCh_loss] is not transcendence basis
+Collection [hepCh_3, S_diet, Ch_LDLpart, LDLr, Ad_8, hepCh_1, Ad_9, f_SREBP2_reg_PCSK9, k_hepCh_loss, Cl, Q, hepCh_4, Ad_5, Ad_2, Ad_0, k_LDLR_syn, Vc, Ad_6, f, f_diet_abs] is not transcendence basis
+Collection [hepCh_3, Vc, k_LDLR_deg, Q, Ad_9, Ad_3, V, k_LDLc_clr2, HDLc, Ad_6, Ad_0, hepCh_0, hepCh_4, k_HDLc_clr, hepCh_1, Ad_4, Ad_10, Ad_12, Ad_11, k_hepCh_loss] is not transcendence basis
+Collection [hepCh_3, Vp, hepCh_4, Ad_1, f_diet_abs, Ad_11, k_LDL_syn, HDLc, f_PCSK9_deg_LDLR, k_LDLc_clr1, k_HDLc_clr, Ch_LDL_particle, Vc, k_hepCh_loss, k_LDLR_deg, k_LDLR_syn, Ad_5, Q, S_hepCh_loss, LDLr] is not transcendence basis
+Collection [hepCh_3, hepCh_1, k_HDLc_clr, f_SREBP2_reg_LDLR, k_LDL_syn, Q, Ad_12, Ad_2, Ad_11, hepCh_4, f, Ch_LDL_particle, Ad_4, f_diet_abs, Cl, f_LDLchep_clr, Ch_LDLpart, k_hepCh_loss, V, Ad_7] is not transcendence basis
+Collection [hepCh_3, hepCh_4, S_hepCh_loss, Ad_0, V, Cl, Vc, HDLc, Q, f_SREBP2_reg_PCSK9, f_SREBP2_reg_LDLR, f_PCSK9_deg_LDLR, LDLr, LDLR_0, k_LDLR_deg, Ad_5, Ad_8, k_HDLc_clr, S_diet, Ad_10] is not transcendence basis
+Collection [hepCh_3, f_LDLchep_clr, hepCh_4, Ad_0, Q, k_HDLc_clr, k_hepCh_loss, hepCh_0, Ad_5, HDLc, Ch_LDLpart, Ad_6, Vp, k_LDLc_clr2, f_hepCh_statin, LDLR_0, Ad_4, Ad_7, Ad_10, Ad_9] is not transcendence basis
+Collection [hepCh_3, k_LDLR_syn, Ad_10, Ad_5, V, LDLR_0, S_diet, f_diet_abs, k_LDLc_clr1, k_LDL_syn, Ad_6, Ch_LDL_particle, Ad_12, hepCh_2, Ad_8, f_SREBP2_reg_PCSK9, Ad_0, S_hepCh_loss, hepCh_4, Ad_4] is not transcendence basis
+Collection [hepCh_3, k_LDLR_syn, Ad_11, hepCh_0, k_LDL_syn, f_LDLchep_clr, Vc, Ad_9, hepCh_4, k_PCSK9_syn, Cl, f_hepCh_statin, Ad_3, Vp, LDLR_0, Ad_1, f_SREBP2_reg_LDLR, Ad_6, k_LDLc_clr2, Ch_LDL_particle] is not transcendence basis
+Collection [hepCh_3, k_LDLc_clr1, Ad_9, hepCh_0, Ad_2, Vp, Cl, k_LDLR_deg, Ad_5, Ad_3, Ad_0, f, hepCh_1, k_LDLc_clr2, HDLc, k_hepCh_loss, k_HDLc_clr, k_LDL_syn, f_SREBP2_reg_PCSK9, Ad_12] is not transcendence basis
+Collection [hepCh_3, k_PCSK9_syn, Ad_12, k_LDLc_clr1, Ad_3, k_hepCh_loss, Ad_2, k_LDLc_clr2, hepCh_2, Ad_6, LDLr, f_SREBP2_reg_PCSK9, S_diet, Ad_8, S_hepCh_loss, f, Ad_4, Ad_9, Ad_11, k_LDL_syn] is not transcendence basis
+Collection [hepCh_3, f_SREBP2_reg_LDLR, Vc, Ch_LDL_particle, k_HDLc_clr, k_LDLR_syn, k_PCSK9_syn, Ad_4, Ad_8, f_SREBP2_reg_PCSK9, S_diet, f_PCSK9_deg_LDLR, Ad_1, Ad_9, Vp, hepCh_1, Cl, k_LDL_syn, f_LDLchep_clr, f] is not transcendence basis
+Collection [hepCh_4, Ad_3, f, S_hepCh_loss, k_LDLc_clr2, V, Ch_LDLpart, k_LDLR_deg, hepCh_2, Ad_10, f_LDLchep_clr, f_diet_abs, k_hepCh_loss, Ad_4, Q, Ad_6, f_SREBP2_reg_PCSK9, k_HDLc_clr, Ad_0, k_LDLR_syn] is not transcendence basis
+Collection [hepCh_4, Ad_4, Ad_9, k_LDLR_syn, f_PCSK9_deg_LDLR, hepCh_1, Ad_5, Ch_LDLpart, k_PCSK9_syn, k_LDL_syn, f_hepCh_statin, Ad_10, Q, k_LDLR_deg, Ch_LDL_particle, S_hepCh_loss, S_diet, k_hepCh_loss, k_HDLc_clr, LDLR_0] is not transcendence basis
+Collection [hepCh_4, Cl, k_LDLR_deg, Ad_12, HDLc, Ad_9, f, k_LDLc_clr1, f_SREBP2_reg_LDLR, Ad_6, f_PCSK9_deg_LDLR, S_hepCh_loss, k_PCSK9_syn, f_diet_abs, hepCh_3, Ad_0, LDLR_0, Vc, hepCh_0, Ad_10] is not transcendence basis
+Collection [hepCh_4, HDLc, k_LDLc_clr2, V, LDLr, S_diet, hepCh_0, LDLR_0, f_diet_abs, Ad_5, k_PCSK9_syn, k_LDL_syn, f_LDLchep_clr, Ch_LDL_particle, hepCh_2, Cl, Ad_7, hepCh_3, k_LDLc_clr1, k_LDLR_syn] is not transcendence basis
+Collection [hepCh_4, V, f_hepCh_statin, Ch_LDL_particle, Ad_2, Ch_LDLpart, f, k_hepCh_loss, hepCh_0, k_LDL_syn, Ad_3, LDLR_0, Cl, Ad_12, f_diet_abs, k_LDLc_clr2, f_SREBP2_reg_LDLR, HDLc, Q, hepCh_2] is not transcendence basis
+Collection [hepCh_4, hepCh_3, Ad_12, k_LDLR_syn, hepCh_1, k_PCSK9_syn, k_HDLc_clr, Ad_0, f_diet_abs, f_SREBP2_reg_PCSK9, k_LDLc_clr2, hepCh_0, Q, Ad_10, Ad_2, Ad_3, Ad_8, f_hepCh_statin, V, k_LDLR_deg] is not transcendence basis
+Collection [hepCh_4, f_LDLchep_clr, hepCh_3, k_LDL_syn, f_PCSK9_deg_LDLR, Vc, Ad_7, f_hepCh_statin, Ad_6, Ad_3, Ad_0, k_PCSK9_syn, LDLr, f, k_LDLc_clr2, f_SREBP2_reg_PCSK9, HDLc, Ad_9, Ch_LDL_particle, k_HDLc_clr] is not transcendence basis
+Collection [hepCh_4, k_HDLc_clr, HDLc, Ad_4, Vp, Ad_6, Ad_3, Ad_11, k_LDLR_syn, hepCh_1, LDLr, Ad_0, Ad_2, k_PCSK9_syn, f_SREBP2_reg_PCSK9, hepCh_3, Ad_5, LDLR_0, S_hepCh_loss, Ad_10] is not transcendence basis
+Collection [hepCh_4, k_PCSK9_syn, Ch_LDLpart, Cl, k_LDL_syn, Ad_9, LDLR_0, Ad_1, hepCh_0, f_LDLchep_clr, Ad_0, f, k_LDLR_syn, Ad_6, hepCh_2, Vp, Q, Ad_5, Ad_10, Vc] is not transcendence basis
+Collection [Ch_LDL_particle, Ad_9, Vp, Ad_3, Ad_11, hepCh_3, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9, k_LDLc_clr2, Ad_1, V, S_hepCh_loss, HDLc, Cl, f_PCSK9_deg_LDLR, Vc, k_LDLR_deg, hepCh_4, Ch_LDLpart, k_PCSK9_syn] is not transcendence basis
+Collection [Ch_LDL_particle, LDLR_0, Ad_1, k_LDLR_syn, Q, Ad_0, S_diet, f_hepCh_statin, hepCh_3, Ad_7, hepCh_2, k_hepCh_loss, Ad_2, HDLc, k_LDL_syn, Cl, f_PCSK9_deg_LDLR, k_LDLc_clr1, hepCh_1, hepCh_0] is not transcendence basis
+Collection [Ch_LDL_particle, S_diet, Ad_7, k_LDL_syn, Ad_3, k_LDLR_syn, V, Cl, k_LDLc_clr2, Ad_8, Vp, f, hepCh_0, Ad_6, Ch_LDLpart, LDLr, Vc, Ad_5, hepCh_2, Ad_0] is not transcendence basis
+Collection [Ch_LDL_particle, V, Ad_4, k_LDLc_clr2, f_diet_abs, hepCh_2, Ad_11, hepCh_4, Ad_0, k_LDLR_deg, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9, k_LDL_syn, f, HDLc, k_LDLc_clr1, Ad_7, Ad_8, k_PCSK9_syn, Ad_9] is not transcendence basis
+Collection [Ch_LDL_particle, Vc, k_LDLR_syn, LDLR_0, S_hepCh_loss, Ad_8, Ad_1, V, k_PCSK9_syn, f_LDLchep_clr, Ad_3, k_hepCh_loss, hepCh_4, Ad_7, Ad_2, k_LDLR_deg, Ch_LDLpart, f_PCSK9_deg_LDLR, f, k_LDLc_clr1] is not transcendence basis
+Collection [Ch_LDL_particle, Vp, k_HDLc_clr, hepCh_1, LDLr, Ad_2, hepCh_3, k_hepCh_loss, Cl, Ad_9, Ad_11, Ad_12, k_LDLR_deg, hepCh_4, k_LDLc_clr1, Ad_4, HDLc, Ad_7, k_LDL_syn, LDLR_0] is not transcendence basis
+Collection [Ch_LDL_particle, f_diet_abs, f_PCSK9_deg_LDLR, Ad_10, Ad_9, k_LDLc_clr2, Ad_5, hepCh_2, Cl, k_PCSK9_syn, f_LDLchep_clr, Ad_4, k_LDLc_clr1, HDLc, Ad_12, S_diet, hepCh_0, V, S_hepCh_loss, Ad_3] is not transcendence basis
+Collection [Ch_LDL_particle, k_LDLc_clr1, S_hepCh_loss, k_LDLR_syn, Ad_4, Ad_1, V, f, hepCh_4, Ad_0, Ad_6, f_hepCh_statin, k_LDLR_deg, HDLc, Ad_10, Ad_9, Ad_7, hepCh_0, k_hepCh_loss, hepCh_1] is not transcendence basis
+Collection [Ch_LDL_particle, k_PCSK9_syn, k_LDLR_syn, Ad_2, Vp, hepCh_0, f_hepCh_statin, Vc, hepCh_1, V, S_diet, S_hepCh_loss, Ad_3, f_SREBP2_reg_LDLR, hepCh_2, Ad_8, k_LDLR_deg, k_hepCh_loss, k_LDLc_clr2, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [Ch_LDLpart, Ad_6, Ad_10, Ad_0, hepCh_3, LDLR_0, f_PCSK9_deg_LDLR, Vc, HDLc, Ad_7, f_LDLchep_clr, f_SREBP2_reg_PCSK9, Ad_9, LDLr, S_diet, Cl, Ad_11, Ad_5, f, k_LDLR_deg] is not transcendence basis
+Collection [Ch_LDLpart, Ad_7, Ad_5, Ad_0, k_LDLR_deg, Ad_11, k_HDLc_clr, Ad_2, hepCh_2, Ch_LDL_particle, Ad_12, S_diet, Ad_4, LDLr, Ad_6, Ad_9, k_hepCh_loss, hepCh_3, Ad_1, f_hepCh_statin] is not transcendence basis
+Collection [Ch_LDLpart, Ad_8, f_LDLchep_clr, Ad_7, k_HDLc_clr, Ad_12, Ad_4, Ad_6, S_diet, k_LDL_syn, Ch_LDL_particle, HDLc, Cl, Vp, Ad_3, hepCh_1, S_hepCh_loss, k_LDLR_syn, V, k_hepCh_loss] is not transcendence basis
+Collection [Ch_LDLpart, Cl, Ad_1, f_LDLchep_clr, Vc, Ad_11, k_HDLc_clr, Ad_5, k_LDLc_clr2, Ad_6, Ch_LDL_particle, Ad_10, f_hepCh_statin, Ad_7, hepCh_1, LDLr, HDLc, f_SREBP2_reg_LDLR, hepCh_4, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [Ch_LDLpart, LDLr, f_diet_abs, hepCh_0, Cl, HDLc, f_PCSK9_deg_LDLR, k_HDLc_clr, k_LDLc_clr1, Ad_4, Ad_10, Vp, S_hepCh_loss, LDLR_0, k_LDLc_clr2, k_hepCh_loss, Vc, Ad_2, Ad_0, Ad_11] is not transcendence basis
+Collection [Ch_LDLpart, Vp, hepCh_3, Ad_2, hepCh_2, S_hepCh_loss, Ad_6, Ad_10, Ad_7, hepCh_0, Ad_1, Vc, f_PCSK9_deg_LDLR, k_LDLc_clr1, Cl, hepCh_4, Q, k_LDLc_clr2, Ad_8, f_SREBP2_reg_LDLR] is not transcendence basis
+Collection [Ch_LDLpart, k_HDLc_clr, k_PCSK9_syn, Ad_1, Ad_0, f_LDLchep_clr, Ad_5, hepCh_1, hepCh_3, Ad_8, Ad_2, Ad_4, S_diet, Ad_7, f_SREBP2_reg_PCSK9, Vc, k_LDLR_syn, V, Ad_9, Ad_6] is not transcendence basis
+Collection [Ch_LDLpart, k_LDLR_syn, Ad_4, Ch_LDL_particle, Ad_6, Ad_11, f, hepCh_2, S_hepCh_loss, S_diet, Ad_10, f_SREBP2_reg_PCSK9, k_LDL_syn, Vp, Ad_1, Ad_5, f_diet_abs, k_LDLR_deg, hepCh_3, k_HDLc_clr] is not transcendence basis
+Collection [Ch_LDLpart, k_LDLc_clr2, k_HDLc_clr, k_LDL_syn, Ad_10, k_LDLR_deg, f_hepCh_statin, Ad_4, f_SREBP2_reg_LDLR, Ad_9, f_diet_abs, Ad_3, Ad_6, S_diet, hepCh_2, k_PCSK9_syn, k_hepCh_loss, Cl, Ad_0, V] is not transcendence basis
+Collection [S_hepCh_loss, Ad_0, Ad_11, k_PCSK9_syn, hepCh_3, Cl, Ad_3, Ad_2, V, LDLr, Ad_6, f_SREBP2_reg_LDLR, Ad_4, k_LDLR_syn, f_LDLchep_clr, Ch_LDLpart, f, Ad_1, k_LDLc_clr1, Ad_8] is not transcendence basis
+Collection [S_hepCh_loss, Ad_1, hepCh_2, Ad_10, Ad_3, Ch_LDLpart, Ad_6, f, hepCh_1, V, Ad_0, f_SREBP2_reg_PCSK9, Ch_LDL_particle, HDLc, Vp, k_LDLc_clr2, k_LDLR_deg, k_LDLR_syn, Ad_2, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [S_hepCh_loss, Ad_2, Vc, Ad_9, Ad_3, LDLr, Vp, Ch_LDL_particle, Q, f_PCSK9_deg_LDLR, Ad_8, hepCh_0, Ad_0, k_LDLR_syn, Ad_7, f_hepCh_statin, V, Ad_5, Ad_1, f] is not transcendence basis
+Collection [S_hepCh_loss, Ad_7, k_LDLc_clr2, k_LDLc_clr1, k_LDLR_syn, Ad_8, Ad_4, Ad_2, Q, S_diet, Ad_11, LDLr, V, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR, Ad_10, Ad_3, k_LDLR_deg, Vc, hepCh_2] is not transcendence basis
+Collection [S_hepCh_loss, Ad_8, Vc, k_LDLR_deg, f, Ad_9, Vp, k_LDLc_clr2, Ch_LDL_particle, Ad_6, hepCh_4, hepCh_1, Cl, Ad_0, k_HDLc_clr, Q, k_LDLR_syn, f_LDLchep_clr, hepCh_0, Ad_4] is not transcendence basis
+Collection [S_hepCh_loss, Cl, Ad_11, Ad_10, f_diet_abs, k_LDLc_clr2, k_LDLR_deg, Ad_2, f_SREBP2_reg_PCSK9, Ad_8, S_diet, f_SREBP2_reg_LDLR, Ad_5, Vc, Ad_4, k_LDL_syn, f_hepCh_statin, Ad_7, LDLR_0, LDLr] is not transcendence basis
+Collection [S_hepCh_loss, LDLr, Ad_11, k_LDL_syn, Ad_2, Ad_6, Ad_8, V, hepCh_2, Ad_1, Ad_10, Ch_LDLpart, Ch_LDL_particle, HDLc, f_diet_abs, hepCh_4, f, k_HDLc_clr, f_PCSK9_deg_LDLR, k_LDLR_syn] is not transcendence basis
+Collection [S_hepCh_loss, Q, Vp, Ad_3, hepCh_2, LDLr, hepCh_3, Ad_0, Ad_1, Cl, Ad_5, HDLc, V, S_diet, f_LDLchep_clr, f, Ad_6, hepCh_0, k_hepCh_loss, k_LDLR_deg] is not transcendence basis
+Collection [S_hepCh_loss, hepCh_3, f_LDLchep_clr, Ad_7, Vc, k_hepCh_loss, HDLc, LDLR_0, k_LDLR_syn, f_SREBP2_reg_PCSK9, Vp, Cl, hepCh_1, k_PCSK9_syn, f_diet_abs, Q, f_hepCh_statin, hepCh_4, Ad_12, k_LDL_syn] is not transcendence basis
+Collection [S_hepCh_loss, f_LDLchep_clr, k_LDLR_syn, f_hepCh_statin, k_hepCh_loss, hepCh_0, Ad_0, Ad_11, k_PCSK9_syn, Ad_5, Q, f_diet_abs, Ad_1, Ad_6, hepCh_1, Ad_3, hepCh_4, Ad_8, Vp, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [S_hepCh_loss, k_LDL_syn, k_HDLc_clr, Cl, Vc, Ad_0, Ad_5, hepCh_2, Ad_6, f_diet_abs, S_diet, Ad_12, k_PCSK9_syn, hepCh_3, Ad_11, Ad_2, f_SREBP2_reg_LDLR, V, k_hepCh_loss, LDLR_0] is not transcendence basis
+Collection [f_LDLchep_clr, Ad_10, Ad_6, hepCh_3, f_hepCh_statin, Ad_0, k_LDL_syn, Ad_4, Ad_3, k_LDLR_deg, S_hepCh_loss, hepCh_0, k_PCSK9_syn, LDLR_0, k_LDLR_syn, LDLr, Ad_2, S_diet, f_diet_abs, Ad_7] is not transcendence basis
+Collection [f_LDLchep_clr, Ad_3, LDLr, Ad_8, HDLc, f_diet_abs, k_HDLc_clr, f_SREBP2_reg_LDLR, f_hepCh_statin, hepCh_4, k_LDL_syn, k_LDLR_syn, hepCh_2, k_LDLR_deg, k_LDLc_clr1, V, Vp, hepCh_0, k_PCSK9_syn, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [f_LDLchep_clr, LDLr, Vc, S_hepCh_loss, hepCh_0, hepCh_1, f, k_LDL_syn, Ch_LDLpart, Ad_4, Ad_10, f_SREBP2_reg_LDLR, k_HDLc_clr, Ad_6, Q, Ad_8, Ad_7, k_LDLR_syn, f_SREBP2_reg_PCSK9, LDLR_0] is not transcendence basis
+Collection [f_LDLchep_clr, S_diet, Vc, LDLr, f_PCSK9_deg_LDLR, k_LDLc_clr1, Ch_LDLpart, LDLR_0, hepCh_0, Ch_LDL_particle, k_hepCh_loss, HDLc, V, Ad_7, Cl, Ad_0, hepCh_4, f_SREBP2_reg_LDLR, k_LDLR_deg, f] is not transcendence basis
+Collection [f_LDLchep_clr, Vc, Ad_10, S_hepCh_loss, S_diet, Ad_7, f_hepCh_statin, hepCh_1, Ad_3, Ad_1, f_SREBP2_reg_PCSK9, Q, Ad_0, Ad_12, k_LDLR_deg, hepCh_0, f, Ch_LDLpart, Ad_9, Ad_5] is not transcendence basis
+Collection [f_LDLchep_clr, Vc, f_PCSK9_deg_LDLR, Cl, Ad_5, f_hepCh_statin, V, k_HDLc_clr, Ad_2, S_diet, Vp, k_LDLc_clr2, f_SREBP2_reg_LDLR, Ad_9, Ch_LDL_particle, Ad_3, hepCh_2, Ad_6, k_LDL_syn, k_LDLR_deg] is not transcendence basis
+Collection [f_LDLchep_clr, hepCh_3, Ad_9, Ad_5, S_diet, hepCh_2, Vp, Ad_8, k_LDL_syn, Ad_6, k_PCSK9_syn, Ch_LDLpart, hepCh_1, S_hepCh_loss, k_LDLc_clr1, f, hepCh_0, Ch_LDL_particle, f_SREBP2_reg_LDLR, hepCh_4] is not transcendence basis
+Collection [f_LDLchep_clr, S_hepCh_loss, hepCh_3, Ad_11, Vp, k_LDLR_deg, f, k_HDLc_clr, Ch_LDL_particle, hepCh_4, f_hepCh_statin, V, Ad_4, HDLc, k_LDLc_clr2, S_diet, hepCh_2, Ad_5, k_LDLc_clr1, k_LDL_syn] is not transcendence basis
+Collection [f_LDLchep_clr, f_diet_abs, Ad_7, Ad_10, f_SREBP2_reg_LDLR, LDLr, Ad_8, S_diet, hepCh_1, LDLR_0, Ad_11, f, f_hepCh_statin, hepCh_0, Ad_4, Ch_LDL_particle, S_hepCh_loss, k_LDLc_clr2, Q, Ad_2] is not transcendence basis
+Collection [f_LDLchep_clr, k_LDLR_deg, Ad_0, Ad_5, k_PCSK9_syn, f_SREBP2_reg_PCSK9, Ad_6, V, hepCh_2, HDLc, S_hepCh_loss, f_hepCh_statin, Ad_2, k_LDLc_clr1, Ad_12, Ad_4, Ad_1, Ad_10, Cl, f] is not transcendence basis
+Collection [f_LDLchep_clr, k_LDLc_clr1, Ch_LDLpart, Ad_2, Vp, hepCh_4, S_hepCh_loss, f_SREBP2_reg_PCSK9, HDLc, Cl, hepCh_1, Ad_11, k_hepCh_loss, k_PCSK9_syn, Vc, Ad_1, hepCh_2, LDLR_0, k_LDLR_syn, Ad_12] is not transcendence basis
+Collection [f_LDLchep_clr, k_LDLc_clr2, hepCh_1, k_hepCh_loss, f, f_SREBP2_reg_LDLR, LDLR_0, Ad_9, Ch_LDLpart, f_PCSK9_deg_LDLR, Ad_4, Ch_LDL_particle, Ad_2, Ad_12, V, k_HDLc_clr, f_diet_abs, k_LDLR_deg, Q, Ad_7] is not transcendence basis
+Collection [f_LDLchep_clr, k_hepCh_loss, k_LDLc_clr2, k_LDLc_clr1, Cl, LDLR_0, Ad_8, S_diet, Ad_1, f_PCSK9_deg_LDLR, k_PCSK9_syn, Ad_4, k_LDLR_deg, f_hepCh_statin, Q, Ad_6, Ad_5, Ad_10, V, hepCh_3] is not transcendence basis
+Collection [f_LDLchep_clr, k_hepCh_loss, k_PCSK9_syn, Ad_4, f_PCSK9_deg_LDLR, k_LDLR_syn, f_SREBP2_reg_LDLR, Ch_LDL_particle, HDLc, f, Ad_11, k_HDLc_clr, Ad_8, V, Q, hepCh_2, Ad_12, hepCh_1, Vc, hepCh_0] is not transcendence basis
+Collection [f_LDLchep_clr, f_SREBP2_reg_LDLR, Ch_LDL_particle, Ad_0, Ch_LDLpart, hepCh_3, hepCh_1, k_LDL_syn, Ad_3, k_hepCh_loss, Q, S_hepCh_loss, k_LDLc_clr1, Cl, Vc, Ad_2, f, hepCh_2, f_hepCh_statin, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [f_LDLchep_clr, f_SREBP2_reg_PCSK9, hepCh_1, Ad_7, k_LDL_syn, Ad_12, Cl, hepCh_3, Ad_9, Ad_0, k_HDLc_clr, f_diet_abs, Ad_3, Ch_LDL_particle, k_LDLc_clr1, Ad_5, Ad_11, hepCh_0, LDLR_0, Q] is not transcendence basis
+Collection [f_diet_abs, Ad_3, Ch_LDLpart, k_PCSK9_syn, Ad_2, f, Ad_12, hepCh_0, f_hepCh_statin, Ad_0, f_PCSK9_deg_LDLR, Ad_7, LDLR_0, f_LDLchep_clr, Ad_1, S_diet, hepCh_4, Ch_LDL_particle, Vp, Ad_11] is not transcendence basis
+Collection [f_diet_abs, LDLR_0, Cl, Ad_6, k_LDL_syn, Vc, LDLr, hepCh_0, Ad_2, Ad_7, Vp, k_PCSK9_syn, k_HDLc_clr, Ad_12, k_LDLc_clr1, hepCh_2, k_LDLc_clr2, Q, Ad_4, k_LDLR_syn] is not transcendence basis
+Collection [f_diet_abs, Vp, Ad_0, Ad_4, f_PCSK9_deg_LDLR, k_LDLc_clr1, k_HDLc_clr, HDLc, Ad_11, Q, Ch_LDL_particle, k_LDLc_clr2, hepCh_3, f, hepCh_2, Ad_7, f_hepCh_statin, hepCh_4, Ad_5, LDLr] is not transcendence basis
+Collection [f_diet_abs, hepCh_2, hepCh_3, f_PCSK9_deg_LDLR, Ad_1, f, k_HDLc_clr, LDLr, hepCh_1, Vp, f_hepCh_statin, Ad_10, Ch_LDLpart, LDLR_0, Ad_8, Ad_11, Q, Ad_9, Ad_6, S_diet] is not transcendence basis
+Collection [f_diet_abs, hepCh_3, Ch_LDLpart, Ad_4, Ad_9, k_LDLc_clr1, Vp, hepCh_4, k_LDL_syn, k_LDLc_clr2, LDLR_0, Ad_6, S_hepCh_loss, f, f_hepCh_statin, k_LDLR_deg, k_LDLR_syn, Ad_10, Cl, Ch_LDL_particle] is not transcendence basis
+Collection [f_diet_abs, Ch_LDLpart, HDLc, k_hepCh_loss, Ad_0, Ad_2, Ad_7, hepCh_1, f_hepCh_statin, Ad_4, Ad_1, S_diet, hepCh_3, f_SREBP2_reg_PCSK9, LDLR_0, f, Vp, Ad_8, LDLr, Vc] is not transcendence basis
+Collection [f_diet_abs, k_hepCh_loss, V, Ad_9, f_LDLchep_clr, Ad_10, f, hepCh_3, k_LDLR_syn, LDLr, hepCh_1, Cl, HDLc, k_LDL_syn, k_LDLR_deg, Ad_8, f_SREBP2_reg_LDLR, Ad_0, f_PCSK9_deg_LDLR, Q] is not transcendence basis
+Collection [f_hepCh_statin, Ad_10, Ad_1, Ad_0, Ad_4, k_LDL_syn, Ad_12, k_hepCh_loss, f_SREBP2_reg_LDLR, LDLr, f_SREBP2_reg_PCSK9, k_PCSK9_syn, hepCh_1, Ad_8, Vp, hepCh_0, HDLc, hepCh_2, k_LDLc_clr2, Ad_6] is not transcendence basis
+Collection [f_hepCh_statin, Ad_12, Ad_9, Ad_2, f_PCSK9_deg_LDLR, Ad_5, Ad_11, Ad_8, Vp, f_diet_abs, f_SREBP2_reg_LDLR, LDLr, k_PCSK9_syn, f_LDLchep_clr, Vc, Ad_1, S_hepCh_loss, Ad_0, k_LDLR_deg, k_LDL_syn] is not transcendence basis
+Collection [f_hepCh_statin, Cl, f_SREBP2_reg_PCSK9, f_PCSK9_deg_LDLR, Ad_4, Ad_1, Ad_11, k_LDL_syn, f_LDLchep_clr, Ad_12, hepCh_0, Q, Ad_8, Ad_3, hepCh_3, Ad_0, f, k_LDLR_syn, Ad_6, k_HDLc_clr] is not transcendence basis
+Collection [f_hepCh_statin, HDLc, k_PCSK9_syn, Ch_LDLpart, Ad_8, Ad_7, Ad_10, V, k_LDL_syn, f_LDLchep_clr, f_SREBP2_reg_LDLR, S_diet, Ad_11, f_PCSK9_deg_LDLR, k_LDLc_clr2, Ad_12, k_HDLc_clr, Ad_5, hepCh_2, Cl] is not transcendence basis
+Collection [f_hepCh_statin, LDLr, k_PCSK9_syn, Ad_9, Ad_0, f_SREBP2_reg_PCSK9, k_LDL_syn, HDLc, Ad_4, LDLR_0, Ad_1, k_LDLR_deg, Q, k_LDLc_clr2, f_SREBP2_reg_LDLR, Ad_11, Ad_6, Ad_10, k_hepCh_loss, Ad_7] is not transcendence basis
+Collection [f_hepCh_statin, f, hepCh_4, k_LDLc_clr2, S_diet, f_SREBP2_reg_LDLR, Ad_10, f_diet_abs, Ad_0, LDLR_0, Ad_7, Ad_11, k_PCSK9_syn, k_LDL_syn, hepCh_2, Ch_LDLpart, HDLc, Ad_8, Cl, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [f_hepCh_statin, hepCh_1, HDLc, V, f_SREBP2_reg_LDLR, k_LDLc_clr2, Ch_LDLpart, hepCh_3, hepCh_2, Ad_5, S_hepCh_loss, k_LDLR_deg, k_LDLc_clr1, f_SREBP2_reg_PCSK9, Cl, k_PCSK9_syn, Ad_0, f_diet_abs, Ad_4, LDLR_0] is not transcendence basis
+Collection [f_hepCh_statin, hepCh_2, Ad_9, hepCh_0, Ad_12, hepCh_1, Vp, S_hepCh_loss, hepCh_4, k_HDLc_clr, LDLR_0, Vc, f_SREBP2_reg_LDLR, Ad_4, Ad_8, k_LDLR_syn, k_LDLc_clr1, Ad_2, Ad_5, f_diet_abs] is not transcendence basis
+Collection [f_hepCh_statin, hepCh_2, S_hepCh_loss, k_LDLc_clr1, Ad_3, hepCh_4, S_diet, k_HDLc_clr, HDLc, f_SREBP2_reg_LDLR, Ad_9, k_LDLR_deg, Ad_11, Q, f_diet_abs, LDLr, Ch_LDLpart, Vc, V, f_LDLchep_clr] is not transcendence basis
+Collection [f_hepCh_statin, Ch_LDL_particle, HDLc, k_HDLc_clr, LDLR_0, S_hepCh_loss, Ad_11, Ch_LDLpart, Q, Vp, Vc, Ad_12, k_LDLc_clr2, LDLr, Ad_6, Ad_10, Ad_4, Cl, Ad_5, k_LDL_syn] is not transcendence basis
+Collection [f_hepCh_statin, Ch_LDL_particle, hepCh_1, f, hepCh_3, Ad_7, Ch_LDLpart, f_SREBP2_reg_PCSK9, k_LDLc_clr2, hepCh_0, hepCh_2, Q, k_LDL_syn, f_SREBP2_reg_LDLR, Ad_2, Vc, Ad_11, Ad_6, k_LDLR_deg, Ad_0] is not transcendence basis
+Collection [f_hepCh_statin, S_hepCh_loss, Ad_0, HDLc, f_LDLchep_clr, k_LDLR_deg, f_SREBP2_reg_PCSK9, k_HDLc_clr, LDLr, k_LDLc_clr1, k_PCSK9_syn, k_LDLR_syn, Ad_2, Ad_11, hepCh_3, Ch_LDL_particle, f, f_SREBP2_reg_LDLR, Q, Ad_12] is not transcendence basis
+Collection [f_hepCh_statin, S_hepCh_loss, Ad_2, f_diet_abs, Ad_5, hepCh_1, Ad_6, k_hepCh_loss, f_SREBP2_reg_LDLR, Vc, Ad_9, Ad_11, hepCh_0, k_LDL_syn, Ad_7, f, HDLc, k_LDLR_deg, Ch_LDL_particle, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [f_hepCh_statin, f_LDLchep_clr, f_SREBP2_reg_PCSK9, V, k_HDLc_clr, Ad_2, Ad_11, Cl, Ad_5, k_LDLc_clr2, Ch_LDL_particle, Q, Ad_1, Ad_4, Ad_8, hepCh_4, Ad_9, hepCh_2, Ad_6, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [f_hepCh_statin, f_diet_abs, Cl, HDLc, Ad_5, Ad_11, Ad_4, Vc, hepCh_3, f_PCSK9_deg_LDLR, Ad_8, k_LDLc_clr2, Ad_6, f_SREBP2_reg_PCSK9, Ad_3, k_hepCh_loss, Ad_2, k_LDLR_deg, V, Q] is not transcendence basis
+Collection [f_hepCh_statin, k_LDL_syn, HDLc, f_SREBP2_reg_LDLR, k_HDLc_clr, Ad_2, hepCh_2, k_PCSK9_syn, f_SREBP2_reg_PCSK9, Ad_6, Ch_LDLpart, k_LDLR_syn, Ch_LDL_particle, f_diet_abs, Ad_12, k_LDLc_clr1, S_diet, Ad_11, f, Vp] is not transcendence basis
+Collection [f_hepCh_statin, k_LDLc_clr1, hepCh_1, Vp, LDLR_0, Cl, k_LDL_syn, hepCh_3, k_hepCh_loss, Ad_4, f_diet_abs, Ad_6, V, Ch_LDLpart, Ad_5, Ad_3, f_PCSK9_deg_LDLR, k_LDLc_clr2, hepCh_4, hepCh_2] is not transcendence basis
+Collection [f_hepCh_statin, f_PCSK9_deg_LDLR, Ad_1, Ad_5, V, k_LDLc_clr2, Ad_0, k_hepCh_loss, Ad_2, f, Ch_LDLpart, LDLR_0, Ad_10, HDLc, f_diet_abs, k_HDLc_clr, hepCh_0, LDLr, k_LDL_syn, Q] is not transcendence basis
+Collection [k_HDLc_clr, Ad_6, f_hepCh_statin, Ad_4, Ad_11, Vc, Ch_LDLpart, k_LDLR_deg, k_LDLc_clr1, f_LDLchep_clr, Ad_3, Cl, Ad_12, Ad_7, Ad_2, HDLc, Ad_9, S_hepCh_loss, hepCh_2, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [k_HDLc_clr, Ad_9, k_PCSK9_syn, hepCh_4, LDLr, k_LDLR_syn, k_LDLc_clr1, V, Ad_12, hepCh_2, f_PCSK9_deg_LDLR, Ad_6, k_LDL_syn, f_LDLchep_clr, f_SREBP2_reg_PCSK9, Vp, LDLR_0, Cl, Vc, Ad_0] is not transcendence basis
+Collection [k_HDLc_clr, Ad_9, k_hepCh_loss, LDLR_0, f_PCSK9_deg_LDLR, Ad_12, S_hepCh_loss, Ad_10, Ad_4, k_LDLc_clr2, Ch_LDL_particle, hepCh_0, k_LDLR_syn, HDLc, Ad_6, Ad_2, f_hepCh_statin, LDLr, Ad_11, hepCh_2] is not transcendence basis
+Collection [k_HDLc_clr, LDLR_0, hepCh_0, k_LDLc_clr1, hepCh_3, Vp, Ad_4, k_LDLR_syn, hepCh_1, V, Ad_1, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, Ad_0, Ad_10, Q, k_PCSK9_syn, f, HDLc] is not transcendence basis
+Collection [k_HDLc_clr, Vc, Ad_6, Q, f_PCSK9_deg_LDLR, V, Vp, k_LDLR_deg, f_LDLchep_clr, k_hepCh_loss, f, Ch_LDL_particle, Ad_3, Ad_5, LDLr, Ad_4, k_LDLR_syn, f_diet_abs, f_hepCh_statin, LDLR_0] is not transcendence basis
+Collection [k_HDLc_clr, hepCh_1, Ad_11, hepCh_4, f_diet_abs, Vp, k_LDLR_deg, hepCh_2, Ad_4, Vc, Ad_12, Ch_LDLpart, Ad_5, f_LDLchep_clr, Ad_7, LDLr, k_hepCh_loss, k_LDL_syn, Ad_3, f] is not transcendence basis
+Collection [k_HDLc_clr, Ch_LDL_particle, Ad_12, f_hepCh_statin, k_hepCh_loss, f_SREBP2_reg_LDLR, Ad_3, k_PCSK9_syn, f_PCSK9_deg_LDLR, k_LDLc_clr1, HDLc, V, Q, k_LDL_syn, Ad_10, f_diet_abs, Ad_9, hepCh_3, f, f_LDLchep_clr] is not transcendence basis
+Collection [k_HDLc_clr, k_LDL_syn, V, Ad_9, Q, S_hepCh_loss, Ch_LDL_particle, k_LDLR_syn, f_LDLchep_clr, Vp, HDLc, f_PCSK9_deg_LDLR, k_LDLc_clr1, k_hepCh_loss, k_LDLc_clr2, Ad_12, Ch_LDLpart, Ad_0, hepCh_1, hepCh_0] is not transcendence basis
+Collection [k_HDLc_clr, k_LDLc_clr1, Ad_3, k_LDL_syn, f, Ch_LDL_particle, HDLc, Ad_10, hepCh_1, f_hepCh_statin, V, k_LDLR_deg, Ad_9, k_LDLR_syn, hepCh_0, S_hepCh_loss, Q, Ad_12, Vc, LDLR_0] is not transcendence basis
+Collection [k_HDLc_clr, k_LDLc_clr2, Q, hepCh_4, Ad_6, Ad_12, Vc, LDLr, hepCh_0, k_hepCh_loss, Ad_7, Ch_LDLpart, Ad_10, Vp, f_LDLchep_clr, f_hepCh_statin, hepCh_1, Ad_0, f_SREBP2_reg_LDLR, f_diet_abs] is not transcendence basis
+Collection [k_HDLc_clr, k_PCSK9_syn, V, f_LDLchep_clr, Ad_9, Ad_8, Vc, Ad_4, k_LDL_syn, k_LDLR_deg, Vp, Ad_3, hepCh_1, f_diet_abs, Ad_5, Ad_10, k_LDLc_clr2, k_hepCh_loss, Ad_1, Q] is not transcendence basis
+Collection [k_LDLR_deg, Ad_2, k_PCSK9_syn, Vp, f_SREBP2_reg_PCSK9, f_SREBP2_reg_LDLR, Ch_LDL_particle, Ad_5, f_diet_abs, Ad_1, Ad_3, k_LDLc_clr2, Ad_11, HDLc, Ch_LDLpart, S_hepCh_loss, Q, hepCh_0, Ad_10, k_LDLR_syn] is not transcendence basis
+Collection [k_LDLR_deg, Ad_6, k_PCSK9_syn, Cl, LDLr, Ad_11, k_hepCh_loss, HDLc, Ad_5, hepCh_1, V, Ad_1, hepCh_2, Ad_12, f, Ad_0, f_hepCh_statin, f_SREBP2_reg_PCSK9, Ch_LDL_particle, Vp] is not transcendence basis
+Collection [k_LDLR_deg, Q, hepCh_0, f_SREBP2_reg_LDLR, f_LDLchep_clr, hepCh_4, HDLc, f_hepCh_statin, Cl, Ch_LDL_particle, Ad_3, Ad_12, Ad_6, Ad_7, f_diet_abs, k_LDL_syn, k_LDLc_clr2, Vc, LDLR_0, S_hepCh_loss] is not transcendence basis
+Collection [k_LDLR_deg, Vp, Ad_0, Q, Ad_10, f_PCSK9_deg_LDLR, LDLR_0, hepCh_1, Cl, Vc, k_hepCh_loss, f_SREBP2_reg_LDLR, k_HDLc_clr, Ch_LDLpart, hepCh_3, HDLc, f_diet_abs, S_hepCh_loss, Ad_12, Ad_2] is not transcendence basis
+Collection [k_LDLR_deg, Vp, Ad_5, Ad_0, k_PCSK9_syn, Ch_LDLpart, Ad_8, Ad_7, k_LDLR_syn, hepCh_4, hepCh_2, Vc, f_hepCh_statin, Ad_3, f_PCSK9_deg_LDLR, Q, Ad_12, Ad_11, Cl, hepCh_0] is not transcendence basis
+Collection [k_LDLR_deg, hepCh_2, f_SREBP2_reg_PCSK9, f, Ad_0, Ad_9, Q, k_LDL_syn, Vc, Ad_3, Ad_6, hepCh_1, f_diet_abs, f_SREBP2_reg_LDLR, Ch_LDL_particle, k_hepCh_loss, k_LDLc_clr2, f_hepCh_statin, Cl, k_PCSK9_syn] is not transcendence basis
+Collection [k_LDLR_deg, Ch_LDL_particle, f_diet_abs, Ad_3, Ad_2, k_LDL_syn, k_HDLc_clr, LDLr, f_hepCh_statin, k_PCSK9_syn, hepCh_2, k_LDLc_clr2, Cl, Ad_11, f, f_PCSK9_deg_LDLR, Ad_4, Ad_6, Ad_12, k_LDLc_clr1] is not transcendence basis
+Collection [k_LDLR_deg, f_LDLchep_clr, k_LDLR_syn, Ad_9, S_diet, Vp, Ad_4, f_diet_abs, Q, k_LDLc_clr2, hepCh_1, hepCh_4, f, Ad_10, k_PCSK9_syn, f_SREBP2_reg_LDLR, LDLr, Ad_1, hepCh_3, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [k_LDLR_deg, k_LDLR_syn, Ad_7, Vc, hepCh_1, Ad_0, k_HDLc_clr, Ad_2, S_diet, Ad_10, Ad_11, HDLc, hepCh_2, k_LDLc_clr2, hepCh_4, Ad_12, Vp, f_hepCh_statin, Ad_6, Ad_9] is not transcendence basis
+Collection [k_LDLR_deg, k_LDL_syn, V, f_SREBP2_reg_PCSK9, Q, S_diet, k_PCSK9_syn, LDLr, k_LDLR_syn, hepCh_3, Ch_LDLpart, f_hepCh_statin, hepCh_4, f_diet_abs, Ad_2, Ad_1, S_hepCh_loss, Ad_4, Ad_8, Ad_9] is not transcendence basis
+Collection [k_LDLR_deg, k_LDLc_clr1, Ch_LDLpart, k_HDLc_clr, Ad_3, f_hepCh_statin, Ad_9, Ad_12, f_SREBP2_reg_PCSK9, f_diet_abs, Ad_4, S_diet, LDLR_0, Ad_2, hepCh_4, f_LDLchep_clr, Ad_5, Ad_0, Ad_1, k_PCSK9_syn] is not transcendence basis
+Collection [k_LDLR_deg, f_PCSK9_deg_LDLR, Ad_9, LDLR_0, Ad_10, Ad_3, Ad_6, f_LDLchep_clr, k_LDL_syn, LDLr, Vp, k_LDLc_clr2, S_diet, hepCh_1, f_diet_abs, Vc, Ad_7, Ch_LDLpart, k_HDLc_clr, Ad_2] is not transcendence basis
+Collection [k_LDLR_syn, Ad_0, f_SREBP2_reg_LDLR, Vc, Q, V, Ad_10, k_PCSK9_syn, k_LDLc_clr1, Ch_LDLpart, Ad_7, f_LDLchep_clr, k_HDLc_clr, Vp, Ad_3, S_diet, f_SREBP2_reg_PCSK9, Ad_1, k_LDLR_deg, S_hepCh_loss] is not transcendence basis
+Collection [k_LDLR_syn, Ad_11, hepCh_1, Ad_2, Ad_8, f_SREBP2_reg_PCSK9, Ad_9, LDLr, k_LDL_syn, f, Q, k_LDLR_deg, k_LDLc_clr1, k_hepCh_loss, hepCh_4, Ad_7, Ad_3, Cl, Ad_6, k_PCSK9_syn] is not transcendence basis
+Collection [k_LDLR_syn, Ad_12, f, k_PCSK9_syn, HDLc, f_diet_abs, Ad_6, hepCh_0, Ad_7, Ad_9, k_LDLc_clr1, k_LDLR_deg, S_hepCh_loss, k_hepCh_loss, S_diet, Ad_5, k_HDLc_clr, Ch_LDL_particle, V, Ad_3] is not transcendence basis
+Collection [k_LDLR_syn, Ad_3, k_LDLR_deg, Ad_9, k_LDL_syn, Ad_8, Ad_2, LDLr, S_diet, hepCh_0, Ad_7, Ch_LDLpart, Ad_12, hepCh_3, V, f_SREBP2_reg_PCSK9, Ad_4, f_SREBP2_reg_LDLR, hepCh_4, Q] is not transcendence basis
+Collection [k_LDLR_syn, LDLR_0, Q, k_LDLc_clr1, Ad_0, V, hepCh_2, f_PCSK9_deg_LDLR, f_diet_abs, Ad_4, f_SREBP2_reg_PCSK9, Ad_5, k_LDLR_deg, f_SREBP2_reg_LDLR, Ad_8, Ch_LDLpart, Ad_10, f, Ad_3, k_LDL_syn] is not transcendence basis
+Collection [k_LDLR_syn, hepCh_1, k_PCSK9_syn, f, f_LDLchep_clr, f_SREBP2_reg_PCSK9, Ad_7, hepCh_0, Vc, Vp, k_LDL_syn, Ad_8, Ad_9, f_diet_abs, Ad_5, Ad_0, hepCh_4, Ad_10, f_PCSK9_deg_LDLR, Ad_1] is not transcendence basis
+Collection [k_LDLR_syn, Ch_LDL_particle, S_hepCh_loss, k_LDLc_clr1, Ad_4, f, Ad_6, Ad_9, Ad_11, LDLr, hepCh_4, HDLc, f_SREBP2_reg_PCSK9, LDLR_0, Cl, f_LDLchep_clr, Ad_0, Ad_2, Ad_1, Ch_LDLpart] is not transcendence basis
+Collection [k_LDLR_syn, Ch_LDLpart, S_diet, Ad_3, Ad_0, Ad_5, f_LDLchep_clr, hepCh_0, Ad_11, k_LDL_syn, f_SREBP2_reg_LDLR, k_LDLc_clr1, hepCh_2, Ad_10, Ad_1, k_hepCh_loss, Ad_6, k_HDLc_clr, Ad_12, Ad_8] is not transcendence basis
+Collection [k_LDLR_syn, k_HDLc_clr, Ad_10, k_LDLc_clr1, Ad_9, Ad_0, Ch_LDL_particle, k_LDL_syn, Ad_12, hepCh_2, f_SREBP2_reg_LDLR, Vp, f_SREBP2_reg_PCSK9, k_LDLR_deg, LDLr, Ad_3, Ad_8, Q, f_LDLchep_clr, Ad_7] is not transcendence basis
+Collection [k_LDLR_syn, f_SREBP2_reg_LDLR, k_LDLc_clr1, Ad_0, k_LDLc_clr2, S_diet, Ad_9, Ad_1, hepCh_4, f_SREBP2_reg_PCSK9, hepCh_2, Ad_4, Ch_LDLpart, hepCh_3, Ad_12, S_hepCh_loss, k_LDL_syn, Ad_10, f_PCSK9_deg_LDLR, Ad_2] is not transcendence basis
+Collection [k_LDL_syn, Ad_10, f, Ch_LDL_particle, k_LDLc_clr2, S_diet, Ad_9, k_LDLc_clr1, Ad_12, Ad_2, V, hepCh_2, LDLr, Q, Ad_6, hepCh_0, k_hepCh_loss, Ch_LDLpart, Ad_8, hepCh_4] is not transcendence basis
+Collection [k_LDL_syn, Ad_5, Ch_LDL_particle, hepCh_1, V, Ad_9, HDLc, Ad_0, k_HDLc_clr, LDLR_0, Ad_7, S_hepCh_loss, Ad_4, hepCh_0, f_SREBP2_reg_PCSK9, Ad_12, Q, Vc, Ad_1, Ad_2] is not transcendence basis
+Collection [k_LDL_syn, Ad_9, Ad_7, Cl, f_SREBP2_reg_LDLR, k_hepCh_loss, Ad_12, Ch_LDL_particle, S_hepCh_loss, k_PCSK9_syn, f_SREBP2_reg_PCSK9, Vc, k_HDLc_clr, V, f_hepCh_statin, hepCh_2, Ad_5, f, hepCh_0, LDLR_0] is not transcendence basis
+Collection [k_LDL_syn, Cl, HDLc, hepCh_0, k_LDLR_syn, Ad_12, S_hepCh_loss, Ad_10, Ad_1, k_LDLc_clr2, f_SREBP2_reg_LDLR, Q, k_HDLc_clr, k_hepCh_loss, f_PCSK9_deg_LDLR, Ad_6, Ad_11, Ad_0, Vc, k_LDLc_clr1] is not transcendence basis
+Collection [k_LDL_syn, LDLR_0, Ch_LDLpart, hepCh_3, HDLc, Ad_6, k_LDLR_syn, f_hepCh_statin, hepCh_2, Ad_0, f_diet_abs, f_PCSK9_deg_LDLR, S_diet, Ad_4, Ad_2, k_LDLR_deg, Ad_11, Vc, hepCh_1, S_hepCh_loss] is not transcendence basis
+Collection [k_LDL_syn, Ch_LDL_particle, Vp, LDLR_0, Ad_7, hepCh_4, Ad_5, Ad_6, hepCh_1, Ad_4, Ad_1, f_SREBP2_reg_LDLR, f_PCSK9_deg_LDLR, Cl, f, Ch_LDLpart, Q, Vc, HDLc, k_LDLR_deg] is not transcendence basis
+Collection [k_LDL_syn, k_LDLc_clr2, V, hepCh_1, hepCh_4, k_LDLR_syn, hepCh_0, LDLR_0, Ch_LDL_particle, Ad_0, k_PCSK9_syn, Cl, Vc, Ad_9, f_hepCh_statin, f_PCSK9_deg_LDLR, Ad_8, hepCh_3, Ad_11, Q] is not transcendence basis
+Collection [k_LDL_syn, k_PCSK9_syn, f_LDLchep_clr, f_diet_abs, Vp, f_SREBP2_reg_LDLR, Ch_LDLpart, Ad_6, f, HDLc, f_PCSK9_deg_LDLR, Ad_0, hepCh_0, f_hepCh_statin, k_hepCh_loss, k_HDLc_clr, LDLR_0, Vc, Ad_12, Ad_7] is not transcendence basis
+Collection [k_LDL_syn, k_PCSK9_syn, k_LDLR_syn, Ad_4, Cl, hepCh_2, f_LDLchep_clr, Ch_LDL_particle, k_LDLc_clr2, Ad_10, hepCh_1, hepCh_3, k_HDLc_clr, Ch_LDLpart, hepCh_4, Ad_6, f_hepCh_statin, Vp, HDLc, S_hepCh_loss] is not transcendence basis
+Collection [k_LDL_syn, f_SREBP2_reg_LDLR, Ad_5, Ad_11, f_PCSK9_deg_LDLR, k_hepCh_loss, k_LDLR_deg, hepCh_2, LDLR_0, Ch_LDLpart, f, f_hepCh_statin, k_LDLc_clr2, Ad_10, Ad_6, Ad_9, k_PCSK9_syn, S_diet, Ad_0, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [k_LDL_syn, f_SREBP2_reg_LDLR, HDLc, k_LDLc_clr2, V, hepCh_3, Vc, Cl, Ad_9, Ad_11, f_LDLchep_clr, f_SREBP2_reg_PCSK9, Ad_12, hepCh_0, S_diet, k_LDLR_deg, Ad_5, hepCh_4, k_PCSK9_syn, Ch_LDLpart] is not transcendence basis
+Collection [k_LDL_syn, f_SREBP2_reg_LDLR, V, Ad_1, f, f_hepCh_statin, f_diet_abs, k_hepCh_loss, hepCh_0, k_LDLc_clr2, Ad_7, Ad_8, S_diet, Ad_10, LDLr, f_SREBP2_reg_PCSK9, Cl, Ch_LDL_particle, k_LDLR_syn, hepCh_3] is not transcendence basis
+Collection [k_LDLc_clr1, Ad_1, LDLr, S_hepCh_loss, k_PCSK9_syn, V, Ad_3, k_HDLc_clr, Ad_5, f_diet_abs, Ad_0, S_diet, hepCh_1, k_LDL_syn, LDLR_0, Ad_12, Vc, Ad_9, Ad_2, f] is not transcendence basis
+Collection [k_LDLc_clr1, Ad_1, f_diet_abs, k_PCSK9_syn, Ad_5, k_LDLc_clr2, hepCh_0, Q, HDLc, k_LDLR_syn, Vc, f_LDLchep_clr, Ad_11, f_SREBP2_reg_PCSK9, Ch_LDLpart, k_HDLc_clr, Ad_4, Ad_10, k_LDL_syn, Ad_7] is not transcendence basis
+Collection [k_LDLc_clr1, LDLr, f_SREBP2_reg_LDLR, k_LDLc_clr2, k_HDLc_clr, f_diet_abs, Vp, f_LDLchep_clr, Ch_LDL_particle, Ad_8, hepCh_0, Cl, Ad_12, HDLc, S_hepCh_loss, f, Ad_4, f_SREBP2_reg_PCSK9, V, LDLR_0] is not transcendence basis
+Collection [k_LDLc_clr1, hepCh_3, k_LDL_syn, LDLr, k_HDLc_clr, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, S_diet, Ad_6, Ad_11, Ad_0, hepCh_4, Ad_1, Vc, f, Ch_LDL_particle, Ad_2, HDLc, Ad_4] is not transcendence basis
+Collection [k_LDLc_clr1, f_diet_abs, Vp, HDLc, f_SREBP2_reg_PCSK9, f, Ad_12, Ad_6, Q, Ad_1, Ad_2, Cl, V, k_PCSK9_syn, f_hepCh_statin, f_LDLchep_clr, hepCh_2, hepCh_4, k_LDLR_syn, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [k_LDLc_clr1, k_LDLc_clr2, k_PCSK9_syn, Ad_2, Ad_9, Ad_6, f_PCSK9_deg_LDLR, Ch_LDL_particle, Ad_1, Ad_12, k_LDLR_deg, Q, f_hepCh_statin, LDLr, Ad_4, LDLR_0, S_hepCh_loss, k_LDLR_syn, hepCh_4, Vp] is not transcendence basis
+Collection [k_LDLc_clr1, f_SREBP2_reg_LDLR, Vp, Ad_2, Cl, S_hepCh_loss, Ad_10, LDLR_0, hepCh_3, Ad_1, S_diet, Ad_6, Ad_11, Ad_9, k_LDLc_clr2, LDLr, Ad_7, k_HDLc_clr, hepCh_1, k_LDLR_syn] is not transcendence basis
+Collection [k_LDLc_clr2, Ad_1, Ch_LDLpart, k_LDLR_deg, f_SREBP2_reg_LDLR, Vc, Vp, k_PCSK9_syn, Ch_LDL_particle, Ad_8, f_PCSK9_deg_LDLR, Ad_11, S_hepCh_loss, k_LDLc_clr1, Ad_3, Ad_0, hepCh_3, k_LDL_syn, f_LDLchep_clr, S_diet] is not transcendence basis
+Collection [k_LDLc_clr2, Ad_10, k_LDLR_syn, hepCh_1, Ad_2, Ad_4, HDLc, hepCh_3, f, Cl, Ad_3, f_PCSK9_deg_LDLR, Ad_0, Ad_9, Ch_LDL_particle, k_LDLR_deg, Ad_1, Ch_LDLpart, Q, k_HDLc_clr] is not transcendence basis
+Collection [k_LDLc_clr2, Ad_12, Ad_7, Ad_9, f_hepCh_statin, Ad_1, f_PCSK9_deg_LDLR, k_PCSK9_syn, k_LDL_syn, k_LDLR_syn, hepCh_1, f_SREBP2_reg_PCSK9, Ad_8, hepCh_2, V, hepCh_0, f_SREBP2_reg_LDLR, Ad_6, Ch_LDLpart, Ad_0] is not transcendence basis
+Collection [k_LDLc_clr2, Ad_8, Vc, f, Ad_11, Ch_LDLpart, k_HDLc_clr, Ad_2, Ad_12, k_hepCh_loss, k_LDL_syn, hepCh_3, Ad_3, k_LDLR_syn, Ad_4, Ad_6, f_SREBP2_reg_PCSK9, hepCh_2, Q, f_PCSK9_deg_LDLR] is not transcendence basis
+Collection [k_LDLc_clr2, Ad_8, hepCh_0, k_LDLR_syn, Vc, Ch_LDL_particle, f_SREBP2_reg_LDLR, k_hepCh_loss, Ad_2, Ad_1, V, f, hepCh_3, k_LDLR_deg, Ad_6, LDLr, Ad_4, Ad_0, Cl, S_hepCh_loss] is not transcendence basis
+Collection [k_LDLc_clr2, Vc, Vp, Ad_7, LDLr, f_LDLchep_clr, f_SREBP2_reg_LDLR, hepCh_2, Ad_0, Ad_12, k_PCSK9_syn, Ad_2, hepCh_3, f, hepCh_0, Ad_9, Ad_8, Q, LDLR_0, f_diet_abs] is not transcendence basis
+Collection [k_LDLc_clr2, f, Ad_1, Vc, f_SREBP2_reg_LDLR, V, f_SREBP2_reg_PCSK9, k_hepCh_loss, Ad_12, hepCh_4, f_PCSK9_deg_LDLR, Ad_7, Ad_2, hepCh_0, Ad_10, f_LDLchep_clr, LDLR_0, LDLr, k_LDLR_deg, f_hepCh_statin] is not transcendence basis
+Collection [k_LDLc_clr2, Ch_LDLpart, Ch_LDL_particle, hepCh_3, hepCh_4, Ad_1, V, HDLc, k_LDLR_syn, Cl, Ad_11, Ad_5, Ad_10, hepCh_2, S_diet, LDLR_0, k_PCSK9_syn, k_LDLR_deg, Ad_2, Ad_3] is not transcendence basis
+Collection [k_LDLc_clr2, f_diet_abs, k_hepCh_loss, Ad_7, S_diet, f_SREBP2_reg_LDLR, Ad_11, Ad_5, k_LDLR_deg, HDLc, V, Ad_4, Vc, Cl, hepCh_3, hepCh_2, Ad_8, LDLr, hepCh_1, k_LDLc_clr1] is not transcendence basis
+Collection [k_LDLc_clr2, f_hepCh_statin, S_diet, Ad_6, k_LDLc_clr1, Ad_10, f_diet_abs, k_hepCh_loss, Ad_0, k_LDLR_deg, HDLc, Ad_2, LDLR_0, hepCh_2, f, f_SREBP2_reg_LDLR, Ad_12, Ad_1, k_LDL_syn, Ad_7] is not transcendence basis
+Collection [k_LDLc_clr2, k_PCSK9_syn, Ad_4, Ad_10, f_SREBP2_reg_LDLR, k_LDLR_syn, Vc, k_HDLc_clr, hepCh_2, f, hepCh_4, hepCh_1, Ch_LDL_particle, Q, Ad_8, hepCh_3, f_hepCh_statin, HDLc, f_LDLchep_clr, Ad_11] is not transcendence basis
+Collection [k_LDLc_clr2, k_PCSK9_syn, hepCh_0, f_hepCh_statin, f_LDLchep_clr, Q, hepCh_2, V, Ad_2, k_LDLc_clr1, Vp, k_LDL_syn, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9, f_diet_abs, hepCh_4, S_hepCh_loss, Ch_LDLpart, Ad_9, hepCh_3] is not transcendence basis
+Collection [k_LDLc_clr2, k_hepCh_loss, hepCh_1, Q, Ad_4, Ad_5, hepCh_4, f_PCSK9_deg_LDLR, Vp, Ad_11, LDLR_0, Ad_1, hepCh_0, LDLr, k_HDLc_clr, f_hepCh_statin, Ad_2, V, S_diet, k_LDL_syn] is not transcendence basis
+Collection [k_PCSK9_syn, Ad_11, Ad_4, hepCh_3, Ad_12, Ad_6, f_SREBP2_reg_LDLR, hepCh_1, LDLR_0, Q, LDLr, k_HDLc_clr, hepCh_0, hepCh_2, f_LDLchep_clr, f_PCSK9_deg_LDLR, k_LDLc_clr1, k_LDLR_deg, Ad_7, f_SREBP2_reg_PCSK9] is not transcendence basis
+Collection [k_PCSK9_syn, Ad_11, Ch_LDLpart, Ad_4, Ad_0, V, Ch_LDL_particle, Ad_8, k_LDL_syn, Ad_7, Ad_5, f_PCSK9_deg_LDLR, Ad_10, f_LDLchep_clr, Cl, S_diet, k_hepCh_loss, LDLR_0, k_LDLc_clr2, hepCh_4] is not transcendence basis
+Collection [k_PCSK9_syn, Ad_3, Ad_0, f_LDLchep_clr, Ad_2, Ad_11, S_diet, Vp, Vc, k_hepCh_loss, f_hepCh_statin, hepCh_0, Ad_4, Ch_LDL_particle, hepCh_4, f_diet_abs, k_LDLc_clr1, Ch_LDLpart, Ad_6, Ad_10] is not transcendence basis
+Collection [k_PCSK9_syn, Ad_4, S_hepCh_loss, k_LDLc_clr2, Ad_10, Q, Ad_7, HDLc, Vc, k_LDL_syn, hepCh_2, k_hepCh_loss, LDLR_0, f_PCSK9_deg_LDLR, Ad_9, k_LDLR_syn, LDLr, f_SREBP2_reg_LDLR, V, Ad_0] is not transcendence basis
+Collection [k_PCSK9_syn, Ad_5, HDLc, k_LDL_syn, k_hepCh_loss, Ad_4, S_hepCh_loss, Ch_LDL_particle, Ad_1, k_LDLc_clr2, k_LDLc_clr1, LDLr, Ad_2, k_LDLR_syn, hepCh_2, k_HDLc_clr, V, Ad_6, Ad_8, Q] is not transcendence basis
+Collection [k_PCSK9_syn, Ad_6, Ad_3, Ad_12, hepCh_2, f_SREBP2_reg_PCSK9, Cl, Vc, Vp, k_LDL_syn, Ad_11, S_diet, f_hepCh_statin, LDLR_0, V, hepCh_1, HDLc, f_PCSK9_deg_LDLR, k_LDLR_deg, Ad_4] is not transcendence basis
+Collection [k_PCSK9_syn, Ad_9, LDLR_0, k_LDLR_deg, hepCh_3, f, Ad_2, Ad_0, Ad_1, f_PCSK9_deg_LDLR, LDLr, Vc, f_diet_abs, Ad_5, k_LDLc_clr1, Ad_12, k_hepCh_loss, Ch_LDLpart, S_hepCh_loss, V] is not transcendence basis
+Collection [k_PCSK9_syn, LDLr, Q, Cl, k_LDLR_syn, k_hepCh_loss, Ad_5, Ad_10, k_LDLc_clr1, Vp, Vc, Ad_9, hepCh_2, Ad_7, f_LDLchep_clr, S_diet, HDLc, S_hepCh_loss, f_hepCh_statin, k_LDL_syn] is not transcendence basis
+Collection [k_PCSK9_syn, LDLr, k_hepCh_loss, Cl, LDLR_0, Ad_8, k_LDL_syn, f_LDLchep_clr, k_LDLR_syn, S_hepCh_loss, Ad_12, f_PCSK9_deg_LDLR, Ad_0, Ch_LDL_particle, hepCh_2, k_LDLc_clr2, Vc, S_diet, Ch_LDLpart, k_LDLR_deg] is not transcendence basis
+Collection [k_PCSK9_syn, S_diet, Ch_LDL_particle, k_LDLc_clr2, Ad_12, Vp, V, f_SREBP2_reg_LDLR, k_LDL_syn, k_LDLR_deg, Ad_10, Ad_5, Cl, Ad_7, Q, hepCh_2, Vc, f, Ad_11, S_hepCh_loss] is not transcendence basis
+Collection [k_PCSK9_syn, S_diet, k_HDLc_clr, Ad_10, Ad_3, Vc, f_hepCh_statin, Vp, hepCh_4, k_LDL_syn, hepCh_2, f_diet_abs, f, Q, Ad_4, Ch_LDL_particle, Ad_9, Ch_LDLpart, Ad_6, hepCh_1] is not transcendence basis
+Collection [k_PCSK9_syn, f, hepCh_0, Ad_12, f_SREBP2_reg_LDLR, Ad_10, Ad_1, Vc, f_SREBP2_reg_PCSK9, k_LDLc_clr1, Ad_5, LDLr, Ad_3, Ad_7, k_LDLc_clr2, HDLc, Q, f_PCSK9_deg_LDLR, Ad_0, k_HDLc_clr] is not transcendence basis
+Collection [k_PCSK9_syn, hepCh_2, k_LDL_syn, S_diet, Ad_3, k_LDLc_clr1, Vc, hepCh_0, Ad_1, f_hepCh_statin, k_LDLR_syn, Ad_7, f_diet_abs, f_SREBP2_reg_LDLR, f, Ad_11, k_HDLc_clr, LDLr, V, hepCh_1] is not transcendence basis
+Collection [k_PCSK9_syn, Ch_LDL_particle, Ad_9, HDLc, f, hepCh_0, hepCh_1, V, Ad_1, f_SREBP2_reg_LDLR, hepCh_2, f_diet_abs, f_PCSK9_deg_LDLR, k_hepCh_loss, k_LDLR_deg, k_LDLR_syn, Ad_5, Cl, Ad_0, k_LDLc_clr1] is not transcendence basis
+Collection [k_PCSK9_syn, Ch_LDLpart, Ad_0, hepCh_1, S_hepCh_loss, Ad_4, k_LDL_syn, Ad_10, Ad_3, Vc, Ad_5, f_diet_abs, Ad_8, hepCh_4, f_SREBP2_reg_PCSK9, Vp, k_HDLc_clr, f_hepCh_statin, hepCh_2, k_LDLc_clr1] is not transcendence basis
+Collection [k_PCSK9_syn, Ch_LDLpart, Ad_6, f_hepCh_statin, Ad_11, hepCh_0, LDLR_0, Cl, Ad_8, Ad_9, k_LDLc_clr1, Q, Ad_1, f_PCSK9_deg_LDLR, HDLc, k_LDLR_deg, Vc, S_hepCh_loss, hepCh_2, k_LDLR_syn] is not transcendence basis
+Collection [k_PCSK9_syn, S_hepCh_loss, Vp, Ch_LDL_particle, Cl, f_SREBP2_reg_PCSK9, Ad_9, HDLc, hepCh_2, Ad_11, k_hepCh_loss, Ad_12, f_PCSK9_deg_LDLR, hepCh_1, Ad_10, Ad_8, Ad_0, hepCh_3, k_LDLc_clr1, f_hepCh_statin] is not transcendence basis
+Collection [k_PCSK9_syn, f_diet_abs, Ad_4, hepCh_1, k_LDLc_clr1, k_HDLc_clr, k_LDLc_clr2, Ad_8, Ad_2, Ad_9, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9, Ad_12, f_PCSK9_deg_LDLR, f, Q, S_diet, hepCh_4, hepCh_0, HDLc] is not transcendence basis
+Collection [k_hepCh_loss, Ad_0, Ch_LDLpart, f_SREBP2_reg_PCSK9, hepCh_3, Ad_3, S_diet, k_LDLR_syn, Ad_9, f_diet_abs, LDLr, k_LDLc_clr2, Ad_1, Ad_4, Ad_6, LDLR_0, hepCh_2, Ad_8, S_hepCh_loss, f_hepCh_statin] is not transcendence basis
+Collection [k_hepCh_loss, Ad_1, k_LDLR_deg, HDLc, k_LDLc_clr1, k_LDL_syn, V, S_hepCh_loss, Ad_8, hepCh_1, Ad_5, f_diet_abs, f_PCSK9_deg_LDLR, Ad_0, k_HDLc_clr, f_SREBP2_reg_LDLR, k_PCSK9_syn, Ad_11, Ad_9, k_LDLR_syn] is not transcendence basis
+Collection [k_hepCh_loss, Ad_8, f_SREBP2_reg_PCSK9, LDLR_0, Ad_10, f_PCSK9_deg_LDLR, f_hepCh_statin, S_hepCh_loss, V, Vc, k_LDLc_clr1, Ad_6, Cl, Q, Ad_12, f_SREBP2_reg_LDLR, Ad_9, hepCh_4, S_diet, k_LDLR_deg] is not transcendence basis
+Collection [k_hepCh_loss, LDLr, Ad_8, k_PCSK9_syn, LDLR_0, hepCh_0, Ad_11, Ad_6, Ad_12, f_diet_abs, f_SREBP2_reg_LDLR, Ad_3, hepCh_1, Ch_LDLpart, Ad_7, k_LDL_syn, HDLc, Ad_2, hepCh_3, Ad_9] is not transcendence basis
+Collection [k_hepCh_loss, V, f_LDLchep_clr, Ch_LDL_particle, Q, k_LDLc_clr1, k_HDLc_clr, Ad_7, k_LDLR_syn, Ad_1, hepCh_1, k_LDL_syn, LDLR_0, hepCh_0, S_diet, f_diet_abs, LDLr, Ch_LDLpart, f_hepCh_statin, Cl] is not transcendence basis
+Collection [k_hepCh_loss, k_LDLR_deg, Ad_12, LDLr, k_HDLc_clr, hepCh_0, Cl, f_PCSK9_deg_LDLR, Vp, Ad_6, Ad_7, Ad_9, Ad_5, Ad_11, hepCh_2, Ad_0, k_LDLc_clr1, f_LDLchep_clr, V, Ch_LDLpart] is not transcendence basis
+Collection [k_hepCh_loss, f_PCSK9_deg_LDLR, hepCh_3, Ch_LDLpart, Ad_9, Ad_1, hepCh_4, k_PCSK9_syn, Ad_8, LDLr, Ad_3, k_LDLR_syn, f_SREBP2_reg_PCSK9, k_LDLc_clr1, S_hepCh_loss, f_diet_abs, Q, Ad_0, f_hepCh_statin, Cl] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, Ad_1, V, Ad_5, S_hepCh_loss, Ad_8, Ad_4, Ad_9, Ad_3, Ad_7, hepCh_4, f_hepCh_statin, f_diet_abs, k_LDLR_syn, Ad_2, Q, LDLr, Ad_10, Cl, hepCh_0] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, Ad_10, Ad_11, Ad_9, Ad_12, f_SREBP2_reg_PCSK9, k_LDL_syn, Vc, Ad_2, f_hepCh_statin, hepCh_2, hepCh_4, f_LDLchep_clr, Ad_0, Ad_1, S_hepCh_loss, S_diet, LDLR_0, k_LDLc_clr1, hepCh_3] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, Ad_2, S_diet, Vp, k_LDLc_clr2, Ad_12, hepCh_3, hepCh_1, k_hepCh_loss, f_hepCh_statin, Ch_LDLpart, Ch_LDL_particle, hepCh_0, hepCh_4, k_LDLc_clr1, Cl, Ad_4, k_PCSK9_syn, Ad_7, Ad_5] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, Ad_9, Ad_0, LDLr, k_LDLR_deg, Ad_7, f_LDLchep_clr, Ad_6, f_hepCh_statin, Ad_5, f_SREBP2_reg_PCSK9, Vp, Ad_12, k_HDLc_clr, V, LDLR_0, Ad_4, Q, k_LDLc_clr1, Ad_2] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, Q, hepCh_4, Ad_3, f_LDLchep_clr, Ad_2, Ad_0, Ad_5, Ad_12, Ad_6, k_LDLR_syn, k_LDLc_clr2, k_LDL_syn, Ad_11, f_diet_abs, HDLc, f_SREBP2_reg_LDLR, k_LDLc_clr1, Ad_8, f] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, Vc, f_SREBP2_reg_LDLR, k_HDLc_clr, f_hepCh_statin, f_SREBP2_reg_PCSK9, Ad_12, k_hepCh_loss, Cl, k_LDLc_clr1, Ad_7, k_PCSK9_syn, Ad_3, S_hepCh_loss, LDLr, hepCh_3, HDLc, Ch_LDLpart, hepCh_2, Ad_8] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, f, LDLR_0, f_SREBP2_reg_PCSK9, HDLc, Vc, Ad_3, S_diet, Ad_1, S_hepCh_loss, k_LDLR_syn, Q, Vp, Ad_4, Cl, Ad_12, f_diet_abs, Ad_2, hepCh_2, Ad_8] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, hepCh_0, hepCh_3, Ad_8, Ad_4, S_diet, Vp, f_diet_abs, k_LDLR_deg, Ad_1, Ad_2, hepCh_1, Vc, f, Ad_0, Cl, LDLr, HDLc, f_LDLchep_clr, V] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, hepCh_2, Ad_12, k_LDL_syn, Ad_3, Cl, f, LDLR_0, f_SREBP2_reg_LDLR, Ad_11, Q, Ad_1, Ad_6, f_diet_abs, Ad_7, k_LDLR_syn, hepCh_4, Ad_5, k_LDLc_clr1, hepCh_1] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, hepCh_4, f, hepCh_1, k_LDL_syn, f_SREBP2_reg_PCSK9, Ad_6, k_LDLR_deg, HDLc, Ad_9, LDLR_0, k_PCSK9_syn, LDLr, Vp, k_HDLc_clr, Ad_3, k_LDLR_syn, S_hepCh_loss, Ad_8, hepCh_0] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, hepCh_4, f_LDLchep_clr, S_diet, f_SREBP2_reg_LDLR, Ad_8, Ad_10, Cl, Q, Ad_11, Vc, f_diet_abs, k_LDLc_clr2, hepCh_1, S_hepCh_loss, Ad_9, LDLR_0, Ad_0, k_PCSK9_syn, V] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, S_hepCh_loss, Ad_10, HDLc, Cl, f, LDLR_0, hepCh_4, hepCh_1, V, Ad_0, Ad_1, Ad_11, Ad_12, f_LDLchep_clr, k_LDLc_clr1, f_SREBP2_reg_LDLR, Vp, k_LDLc_clr2, Ad_6] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, k_LDLR_syn, Ad_9, LDLR_0, Q, V, S_diet, f, Ad_6, hepCh_0, Ad_4, hepCh_3, k_HDLc_clr, Ad_2, Ad_7, hepCh_4, Ch_LDL_particle, Ad_1, k_LDLc_clr1, hepCh_1] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, k_LDLR_syn, LDLr, Ad_12, Ch_LDL_particle, Vp, hepCh_3, Ad_8, k_hepCh_loss, S_diet, Ad_10, f_SREBP2_reg_PCSK9, k_LDLc_clr1, f_SREBP2_reg_LDLR, k_PCSK9_syn, k_HDLc_clr, Ch_LDLpart, HDLc, LDLR_0, k_LDLR_deg] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, k_LDL_syn, LDLr, k_hepCh_loss, S_hepCh_loss, hepCh_3, Ad_11, Ad_7, Ch_LDLpart, f_SREBP2_reg_LDLR, f_hepCh_statin, k_PCSK9_syn, Q, Ad_10, Ad_12, HDLc, k_HDLc_clr, Cl, Ad_9, k_LDLR_syn] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, k_LDLc_clr1, Ad_8, f_SREBP2_reg_PCSK9, Ad_7, S_hepCh_loss, Vp, Ad_5, k_HDLc_clr, Ad_9, Ad_0, Q, f, f_diet_abs, HDLc, Ad_12, Vc, Ad_2, k_LDLR_syn, hepCh_4] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, k_LDLc_clr1, k_LDLR_deg, Ad_0, hepCh_0, k_LDL_syn, HDLc, V, f_hepCh_statin, Ad_11, k_HDLc_clr, Ad_7, Vp, Ad_9, LDLr, Ad_5, hepCh_4, hepCh_2, Q, hepCh_3] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, k_LDLc_clr2, Ad_0, Ad_8, Ch_LDL_particle, f_LDLchep_clr, k_hepCh_loss, Ad_4, f_diet_abs, f, f_SREBP2_reg_PCSK9, Vp, Ad_5, Ad_3, hepCh_0, S_diet, LDLR_0, k_LDLR_deg, k_LDL_syn, Vc] is not transcendence basis
+Collection [f_PCSK9_deg_LDLR, k_PCSK9_syn, Cl, Ad_1, HDLc, Vc, k_LDLR_deg, Ad_8, k_LDL_syn, f_SREBP2_reg_LDLR, k_LDLc_clr1, k_LDLc_clr2, Ad_2, f, Ch_LDLpart, Ad_5, hepCh_1, V, Ad_6, k_hepCh_loss] is not transcendence basis
+Collection [f_SREBP2_reg_LDLR, S_diet, Ch_LDLpart, Ad_3, hepCh_1, f, Cl, f_SREBP2_reg_PCSK9, Vp, Ad_8, LDLR_0, k_PCSK9_syn, hepCh_4, Ad_0, f_LDLchep_clr, V, k_hepCh_loss, Vc, k_LDLR_deg, Ad_2] is not transcendence basis
+Collection [f_SREBP2_reg_LDLR, V, k_PCSK9_syn, Q, hepCh_3, Vc, Ch_LDL_particle, Cl, Ad_1, f_LDLchep_clr, hepCh_4, S_hepCh_loss, f_PCSK9_deg_LDLR, HDLc, Ad_8, hepCh_2, Ad_5, Ad_7, f, LDLr] is not transcendence basis
+Collection [f_SREBP2_reg_LDLR, Vc, k_HDLc_clr, k_LDLc_clr2, Ad_9, Ch_LDLpart, LDLR_0, Vp, f_PCSK9_deg_LDLR, Ch_LDL_particle, Ad_1, hepCh_2, hepCh_4, f, hepCh_0, Q, Ad_10, S_diet, LDLr, S_hepCh_loss] is not transcendence basis
+Collection [f_SREBP2_reg_LDLR, f, k_hepCh_loss, Ch_LDL_particle, k_LDLc_clr1, Ad_6, k_PCSK9_syn, k_LDLR_syn, Ad_10, Vc, hepCh_3, Ad_5, Vp, Ad_12, hepCh_2, Ad_11, Ad_9, f_diet_abs, k_LDL_syn, Cl] is not transcendence basis
+Collection [f_SREBP2_reg_LDLR, Ch_LDLpart, Ad_0, LDLr, Q, hepCh_2, Ad_5, Ad_12, f_LDLchep_clr, k_PCSK9_syn, k_hepCh_loss, Ad_7, Ad_3, LDLR_0, Ad_10, k_LDLc_clr1, Ad_6, Ad_4, Vp, Ad_2] is not transcendence basis
+Collection [f_SREBP2_reg_LDLR, f_PCSK9_deg_LDLR, LDLr, Vc, V, f_LDLchep_clr, Ad_10, k_PCSK9_syn, S_diet, hepCh_3, f_hepCh_statin, Ad_0, f_diet_abs, k_HDLc_clr, k_LDLR_deg, k_LDLc_clr2, Ad_4, Vp, hepCh_0, LDLR_0] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, Ad_0, Ad_11, f_diet_abs, Vp, Q, Ad_1, k_LDLR_syn, k_PCSK9_syn, Ad_4, f_PCSK9_deg_LDLR, Ad_7, Ad_5, hepCh_1, Ad_8, k_LDL_syn, Cl, Ad_3, Vc, hepCh_0] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, Ad_12, hepCh_1, Ad_10, HDLc, f_SREBP2_reg_LDLR, Ad_2, Cl, S_diet, Ad_0, hepCh_2, k_LDL_syn, V, Q, k_HDLc_clr, Ad_3, k_LDLR_deg, Ad_6, f_hepCh_statin, k_LDLc_clr2] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, Ad_7, Ad_12, k_LDLR_deg, hepCh_0, Ch_LDL_particle, Q, hepCh_2, Ad_5, LDLR_0, Ad_2, HDLc, k_LDLc_clr2, k_HDLc_clr, Vc, k_LDL_syn, f_LDLchep_clr, hepCh_3, S_diet, Cl] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, Ad_9, HDLc, Ad_5, f, k_LDL_syn, Ad_2, k_HDLc_clr, Ad_6, k_LDLR_deg, hepCh_3, k_hepCh_loss, S_hepCh_loss, k_LDLc_clr2, Ad_12, Ad_7, Ad_11, hepCh_2, Ch_LDL_particle, Q] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, Cl, k_hepCh_loss, f_SREBP2_reg_LDLR, k_LDLc_clr2, Ad_12, Ad_8, Ad_10, Ch_LDLpart, Ad_1, V, Ad_11, hepCh_3, f, HDLc, Q, Ad_5, Ch_LDL_particle, Ad_0, LDLR_0] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, LDLR_0, k_LDLR_deg, k_LDLc_clr2, k_LDLc_clr1, S_diet, f, Ad_6, Ad_3, Ch_LDLpart, hepCh_3, Ad_4, Ad_1, Ad_9, LDLr, hepCh_0, k_hepCh_loss, k_LDL_syn, Q, hepCh_1] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, LDLr, V, k_LDLR_syn, Ad_3, Ad_11, hepCh_1, k_LDLc_clr2, Ad_2, f_PCSK9_deg_LDLR, LDLR_0, HDLc, Ad_8, Vc, Ad_5, S_hepCh_loss, hepCh_2, f, Ch_LDLpart, hepCh_0] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, S_diet, f_LDLchep_clr, Ad_8, k_hepCh_loss, hepCh_0, k_LDLR_syn, Ad_4, f_PCSK9_deg_LDLR, S_hepCh_loss, k_PCSK9_syn, f, k_LDLc_clr2, f_diet_abs, k_LDLR_deg, Ad_5, Ad_3, k_LDL_syn, LDLR_0, hepCh_2] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, Vc, k_LDL_syn, Cl, Ad_8, f_SREBP2_reg_LDLR, Ad_10, LDLR_0, f_PCSK9_deg_LDLR, k_LDLc_clr1, k_LDLc_clr2, V, Ch_LDL_particle, hepCh_4, Ad_3, S_hepCh_loss, Vp, k_PCSK9_syn, f_LDLchep_clr, LDLr] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, hepCh_0, k_LDLc_clr2, k_hepCh_loss, Ad_8, k_PCSK9_syn, f_PCSK9_deg_LDLR, LDLR_0, Cl, k_LDLc_clr1, Ad_11, Ad_7, f_hepCh_statin, Ch_LDL_particle, k_HDLc_clr, V, Ad_1, LDLr, hepCh_2, Ad_5] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, k_LDLR_deg, hepCh_4, S_hepCh_loss, Ch_LDLpart, LDLR_0, f_SREBP2_reg_LDLR, Ad_1, Ad_12, Ad_6, Cl, Ad_3, Ad_8, Ad_5, hepCh_2, Ch_LDL_particle, LDLr, Ad_7, hepCh_3, k_LDL_syn] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, f_PCSK9_deg_LDLR, Ad_11, Ad_7, k_PCSK9_syn, f, hepCh_3, f_SREBP2_reg_LDLR, Ad_10, Ad_2, k_LDLc_clr2, k_HDLc_clr, hepCh_0, Ch_LDL_particle, Ad_4, LDLr, k_LDLR_syn, HDLc, Ad_9, Ad_0] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, f_PCSK9_deg_LDLR, Ad_6, HDLc, k_hepCh_loss, hepCh_0, Ad_2, hepCh_4, Ad_8, Vc, hepCh_3, f_hepCh_statin, k_LDL_syn, Ad_5, hepCh_2, k_LDLR_syn, Ch_LDLpart, Q, Ad_3, Vp] is not transcendence basis
+Collection [f_SREBP2_reg_PCSK9, f_SREBP2_reg_LDLR, k_LDLR_syn, f, k_hepCh_loss, f_diet_abs, Cl, hepCh_0, LDLR_0, f_PCSK9_deg_LDLR, Q, hepCh_3, Ad_9, S_hepCh_loss, Vc, Ad_5, Ad_10, k_LDLc_clr1, k_PCSK9_syn, Ad_1] is not transcendence basis
+Picked the best choice [Ad_0, Cl, HDLc, LDLR_0, LDLr, S_diet, V, hepCh_0, hepCh_1, Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_LDLR_deg, k_LDLR_syn, k_PCSK9_syn, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {Cl, HDLc, LDLr, S_diet, V, Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_LDLR_deg, k_LDLR_syn, k_PCSK9_syn, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR}
+Algebraically independent parameters among derivatives: {hepCh_1, Ad(0), LDLR(0), hepCh(0)}
+
+=== Input info ===
+State variables:          [Cl(t), HDLc(t), LDLr(t), S_diet(t), V(t), Ch_LDL_particle(t), Ch_LDLpart(t), S_hepCh_loss(t), f_LDLchep_clr(t), f_diet_abs(t), f_hepCh_statin(t), k_LDLR_deg(t), k_LDLR_syn(t), k_PCSK9_syn(t), f_PCSK9_deg_LDLR(t), f_SREBP2_reg_LDLR(t), hepCh(t), LDLc(t), LDLR(t), Ad(t), Cc(t), Cp(t), PCSK9(t), Ccom(t)]
+Output variables:         [y1(t), y2(t), y_faux1(t), y_faux2(t), y_faux3(t), y_faux4(t), y_faux5(t), y_faux6(t), y_faux7(t), y_faux8(t), y_faux9(t), y_faux10(t), y_faux11(t), y_faux12(t), y_faux13(t), y_faux14(t), y_faux15(t), y_faux16(t)]
+Input variables:          []
+Parameters in equations:  [Q, Vc, Vp, f, k_abs, k_off, k_on, k_HDLc_clr, k_LDL_syn, k_LDLc_clr1, k_LDLc_clr2, k_PCSK9_deg, k_complex_deg, k_hepCh_loss, f_SREBP2_reg_PCSK9]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[Cc_ = 1, k_LDLc_clr2 = 1, HDLc_ = 0, Q = 2, S_hepCh_loss_ = 0, Cp_ = 2, f_hepCh_statin_ = 0, Vc = 2, f = 2, S_diet_ = 0, Ccom_ = 1, k_hepCh_loss = 2, f_diet_abs_ = 0, LDLr_ = 0, f_SREBP2_reg_LDLR_ = 0, k_on = 1, Ch_LDL_particle_ = 0, k_LDLR_deg_ = 0, PCSK9_ = 0, f_SREBP2_reg_PCSK9 = 1, k_HDLc_clr = 2, k_PCSK9_deg = 1, k_LDL_syn = 1, hepCh_ = 1, k_PCSK9_syn_ = 0, k_complex_deg = 2, k_off = 1, LDLc_ = 0, Ch_LDLpart_ = 0, V_ = 0, f_LDLchep_clr_ = 0, Cl_ = 0, f_PCSK9_deg_LDLR_ = 0, Ad_ = 2, k_abs = 2, Vp = 3, k_LDLc_clr1 = 1, k_LDLR_syn_ = 0]
+NonID parameters:	[Ad_0, Cl, HDLc, LDLR_0, LDLr, Q, S_diet, V, Vc, Vp, f, hepCh_0, Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_HDLc_clr, k_LDLR_deg, k_LDLR_syn, k_LDL_syn, k_LDLc_clr1, k_LDLc_clr2, k_PCSK9_syn, k_hepCh_loss, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9]
+Substitutions:	[Cc_ = 2, HDLc_ = 1, S_hepCh_loss_ = 1, Cp_ = 3, f_hepCh_statin_ = 1, S_diet_ = 1, Ccom_ = 2, f_diet_abs_ = 1, LDLr_ = 1, f_SREBP2_reg_LDLR_ = 1, Ch_LDL_particle_ = 1, k_LDLR_deg_ = 1, PCSK9_ = 1, hepCh_ = 2, k_PCSK9_syn_ = 1, LDLc_ = 1, Ch_LDLpart_ = 1, V_ = 1, f_LDLchep_clr_ = 1, Cl_ = 1, z_aux = 3, f_PCSK9_deg_LDLR_ = 1, Ad_ = 3, k_LDLR_syn_ = 1]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [hepCh(t), LDLc(t), LDLR(t), Ad(t), Cc(t), Cp(t), PCSK9(t), Ccom(t)]
+Output variables:         [y1(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [Cl, HDLc, LDLr, Q, S_diet, V, Vc, Vp, f, k_abs, k_off, k_on, Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_HDLc_clr, k_LDLR_deg, k_LDLR_syn, k_LDL_syn, k_LDLc_clr1, k_LDLc_clr2, k_PCSK9_deg, k_PCSK9_syn, k_complex_deg, k_hepCh_loss, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [k_abs, k_off, k_on, k_PCSK9_deg, k_complex_deg, LDLc(0), Cc(0), Cp(0), PCSK9(0), Ccom(0)]
+Nonidentifiable parameter:  [Ad(0), Cl, HDLc, LDLR(0), LDLr, Q, S_diet, V, Vc, Vp, f, hepCh(0), Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_HDLc_clr, k_LDLR_deg, k_LDLR_syn, k_LDL_syn, k_LDLc_clr1, k_LDLc_clr2, k_PCSK9_syn, k_hepCh_loss, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9]
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[Cc_ = 1, k_LDLc_clr2 = 1, Cl = 2, S_hepCh_loss = 2, Q = 2, Cp_ = 2, S_diet = 2, Vc = 2, f = 2, Ccom_ = 1, k_hepCh_loss = 2, Ch_LDL_particle = 1, k_on = 1, PCSK9_ = 0, f_SREBP2_reg_PCSK9 = 1, k_HDLc_clr = 2, k_PCSK9_deg = 1, k_LDL_syn = 1, hepCh_ = 1, f_hepCh_statin = 2, k_complex_deg = 2, LDLr = 1, k_off = 1, LDLc_ = 0, Ch_LDLpart = 2, HDLc = 2, V = 2, k_PCSK9_syn = 1, f_LDLchep_clr = 2, Ad_ = 2, k_abs = 2, Vp = 3, k_LDLc_clr1 = 1, f_diet_abs = 2]
+NonID parameters:	[Ad_0, Cl, HDLc, LDLR_0, LDLr, Q, S_diet, V, Vc, Vp, f, hepCh_0, Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_HDLc_clr, k_LDLR_deg, k_LDLR_syn, k_LDL_syn, k_LDLc_clr1, k_LDLc_clr2, k_PCSK9_syn, k_hepCh_loss, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9]
+Substitutions:	[Cc_ = 2, Cp_ = 3, Ccom_ = 2, PCSK9_ = 1, hepCh_ = 2, LDLc_ = 1, z_aux = 3, Ad_ = 3]
+memory used=157278.4MB, alloc=419.8MB, time=1404.70

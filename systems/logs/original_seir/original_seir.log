@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -29,17 +29,15 @@ Parameters in equations:  [a, b, nu]
 =======================================================
 3. Assessing local identifiability
 =======================================================
-{}
 Locally identifiable paramters:  [a, b, nu, S(0), E(0), In(0), N(0)]
 Nonidentifiable parameter:  []
-No algebraically independent parameters found.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[nu = 1, N_ = 0, E_ = 1, b = 2, In_ = 0, a = 1, S_ = 2]
+States for substitution:	[N_ = 0, a = 1, b = 2, In_ = 0, S_ = 2, E_ = 1, nu = 1]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, N_ = 1, E_ = 2, b = 3, In_ = 1, S_ = 3]
+Substitutions:	[N_ = 1, b = 3, In_ = 1, z_aux = 2, S_ = 3, E_ = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -66,12 +64,11 @@ Parameters in equations:  [a, b, nu]
 =======================================================
 Locally identifiable paramters:  [a, b, nu, S(0), E(0), In(0), N(0)]
 Nonidentifiable parameter:  []
-No algebraically independent parameters found.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[nu = 1, N_ = 0, E_ = 1, b = 2, In_ = 0, a = 1, S_ = 2]
+States for substitution:	[N_ = 0, a = 1, b = 2, In_ = 0, S_ = 2, E_ = 1, nu = 1]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, N_ = 1, E_ = 2, b = 3, In_ = 1, S_ = 3]
-memory used=126.9MB, alloc=108.3MB, time=0.82
+Substitutions:	[N_ = 1, b = 3, In_ = 1, z_aux = 2, S_ = 3, E_ = 2]
+memory used=131.7MB, alloc=108.3MB, time=1.61

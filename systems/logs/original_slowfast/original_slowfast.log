@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -29,17 +29,15 @@ Parameters in equations:  [eB, k1, k2]
 =======================================================
 3. Assessing local identifiability
 =======================================================
-{}
 Locally identifiable paramters:  [eB, k1, k2, xA(0), xB(0), xC(0), eA(0), eC(0)]
 Nonidentifiable parameter:  []
-No algebraically independent parameters found.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[eB = 0, xA_ = 0, k1 = 1, eA_ = 0, eC_ = 0, xB_ = 0, xC_ = 0, k2 = 1]
+States for substitution:	[eC_ = 0, k1 = 1, xB_ = 0, xA_ = 0, eA_ = 0, eB = 0, xC_ = 0, k2 = 1]
 NonID parameters:	[]
-Substitutions:	[xA_ = 1, k1 = 2, xB_ = 1, z_aux = 1, k2 = 2]
+Substitutions:	[k1 = 2, xB_ = 1, xA_ = 1, z_aux = 1, k2 = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -66,12 +64,11 @@ Parameters in equations:  [eB, k1, k2]
 =======================================================
 Locally identifiable paramters:  [eB, k1, k2, xA(0), xB(0), xC(0), eA(0), eC(0)]
 Nonidentifiable parameter:  []
-No algebraically independent parameters found.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[eB = 0, xA_ = 0, k1 = 1, eA_ = 0, eC_ = 0, xB_ = 0, xC_ = 0, k2 = 1]
+States for substitution:	[eC_ = 0, k1 = 1, xB_ = 0, xA_ = 0, eA_ = 0, eB = 0, xC_ = 0, k2 = 1]
 NonID parameters:	[]
-Substitutions:	[xA_ = 1, k1 = 2, xB_ = 1, z_aux = 1, k2 = 2]
-memory used=98.9MB, alloc=116.3MB, time=0.63
+Substitutions:	[k1 = 2, xB_ = 1, xA_ = 1, z_aux = 1, k2 = 2]
+memory used=95.9MB, alloc=116.3MB, time=1.09

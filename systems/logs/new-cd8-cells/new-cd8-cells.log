@@ -1,250 +1,10 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-Warning, (in GetPolySystem) `identifiable_states` is implicitly declared local
-|imports/generate_poly_system.mpl:260|
-Warning, (in GetPolySystem) `x_theta_vars_to_be_removed` is implicitly declared
-local |imports/generate_poly_system.mpl:261|
-Warning, (in GetPolySystem) `x_theta_vars_filtered` is implicitly declared local
-|imports/generate_poly_system.mpl:262|
-Warning, (in GetPolySystem) `number_of_choices` is implicitly declared local
-|imports/generate_poly_system.mpl:263|
-Warning, (in GetPolySystem) `choices` is implicitly declared local
-|imports/generate_poly_system.mpl:265|
-Warning, (in GetPolySystem) `current_choice` is implicitly declared local
-|imports/generate_poly_system.mpl:267|
-Warning, (in GetPolySystem) `global_table` is implicitly declared local
-|imports/generate_poly_system.mpl:281|
-Warning, (in GetPolySystem) `Et_hat_old` is implicitly declared local
-|imports/generate_poly_system.mpl:288|
-Warning, (in GetPolySystem) `et_hat_monomials` is implicitly declared local
-|imports/generate_poly_system.mpl:290|
-Warning, (in GetPolySystem) `degree_table` is implicitly declared local
-|imports/generate_poly_system.mpl:291|
-Warning, (in GetPolySystem) `rhs_cols` is implicitly declared local
-|imports/generate_poly_system.mpl:293|
-Warning, (in GetPolySystem) `idxs` is implicitly declared local
-|imports/generate_poly_system.mpl:294|
-Warning, (in GetPolySystem) `parameter` is implicitly declared local
-|imports/generate_poly_system.mpl:295|
-Warning, (in GetPolySystem) `A` is implicitly declared local
-|imports/generate_poly_system.mpl:301|
-Warning, (in GetPolySystem) `solution` is implicitly declared local
-|imports/generate_poly_system.mpl:303|
-Warning, (in GetPolySystem) `choice_idx` is implicitly declared local
-|imports/generate_poly_system.mpl:306|
-Warning, (in GetPolySystem) `sum_degrees_new` is implicitly declared local
-|imports/generate_poly_system.mpl:310|
-Warning, (in GetPolySystem) `occurrence_table` is implicitly declared local
-|imports/generate_poly_system.mpl:311|
-Warning, (in GetPolySystem) `val` is implicitly declared local
-|imports/generate_poly_system.mpl:321|
-Warning, (in GetPolySystem) `perm` is implicitly declared local
-|imports/generate_poly_system.mpl:327|
-Warning, (in GenerateEtHatOld) `deg_variety` is implicitly declared local
-|imports/generate_poly_system.mpl:439|
-Warning, (in GenerateEtHatOld) `D2` is implicitly declared local
-|imports/generate_poly_system.mpl:440|
-Warning, (in GenerateEtHatOld) `sample` is implicitly declared local
-|imports/generate_poly_system.mpl:445|
-Warning, (in GenerateEtHatOld) `y_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:446|
-Warning, (in GenerateEtHatOld) `u_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:447|
-Warning, (in GenerateEtHatOld) `theta_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:448|
-Warning, (in GenerateEtHatOld) `Et_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:453|
-Warning, (in GenerateEtHatOld) `poly` is implicitly declared local
-|imports/generate_poly_system.mpl:456|
-Warning, (in GenerateEtHatOld) `vars_old` is implicitly declared local
-|imports/generate_poly_system.mpl:464|
-Warning, (in GenerateEtHatOld) `Et_hat_old` is implicitly declared local
-|imports/generate_poly_system.mpl:470|
-Warning, (in GetPolySystem) `identifiable_states` is implicitly declared local
-|imports/generate_poly_system.mpl:260|
-Warning, (in GetPolySystem) `x_theta_vars_to_be_removed` is implicitly declared
-local |imports/generate_poly_system.mpl:261|
-Warning, (in GetPolySystem) `x_theta_vars_filtered` is implicitly declared local
-|imports/generate_poly_system.mpl:262|
-Warning, (in GetPolySystem) `number_of_choices` is implicitly declared local
-|imports/generate_poly_system.mpl:263|
-Warning, (in GetPolySystem) `choices` is implicitly declared local
-|imports/generate_poly_system.mpl:265|
-Warning, (in GetPolySystem) `current_choice` is implicitly declared local
-|imports/generate_poly_system.mpl:267|
-Warning, (in GetPolySystem) `global_table` is implicitly declared local
-|imports/generate_poly_system.mpl:281|
-Warning, (in GetPolySystem) `Et_hat_old` is implicitly declared local
-|imports/generate_poly_system.mpl:288|
-Warning, (in GetPolySystem) `et_hat_monomials` is implicitly declared local
-|imports/generate_poly_system.mpl:290|
-Warning, (in GetPolySystem) `degree_table` is implicitly declared local
-|imports/generate_poly_system.mpl:291|
-Warning, (in GetPolySystem) `rhs_cols` is implicitly declared local
-|imports/generate_poly_system.mpl:293|
-Warning, (in GetPolySystem) `idxs` is implicitly declared local
-|imports/generate_poly_system.mpl:294|
-Warning, (in GetPolySystem) `parameter` is implicitly declared local
-|imports/generate_poly_system.mpl:295|
-Warning, (in GetPolySystem) `A` is implicitly declared local
-|imports/generate_poly_system.mpl:301|
-Warning, (in GetPolySystem) `solution` is implicitly declared local
-|imports/generate_poly_system.mpl:303|
-Warning, (in GetPolySystem) `choice_idx` is implicitly declared local
-|imports/generate_poly_system.mpl:306|
-Warning, (in GetPolySystem) `sum_degrees_new` is implicitly declared local
-|imports/generate_poly_system.mpl:310|
-Warning, (in GetPolySystem) `occurrence_table` is implicitly declared local
-|imports/generate_poly_system.mpl:311|
-Warning, (in GetPolySystem) `val` is implicitly declared local
-|imports/generate_poly_system.mpl:321|
-Warning, (in GetPolySystem) `perm` is implicitly declared local
-|imports/generate_poly_system.mpl:327|
-Warning, (in GenerateEtHatOld) `deg_variety` is implicitly declared local
-|imports/generate_poly_system.mpl:439|
-Warning, (in GenerateEtHatOld) `D2` is implicitly declared local
-|imports/generate_poly_system.mpl:440|
-Warning, (in GenerateEtHatOld) `sample` is implicitly declared local
-|imports/generate_poly_system.mpl:445|
-Warning, (in GenerateEtHatOld) `y_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:446|
-Warning, (in GenerateEtHatOld) `u_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:447|
-Warning, (in GenerateEtHatOld) `theta_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:448|
-Warning, (in GenerateEtHatOld) `Et_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:453|
-Warning, (in GenerateEtHatOld) `poly` is implicitly declared local
-|imports/generate_poly_system.mpl:456|
-Warning, (in GenerateEtHatOld) `vars_old` is implicitly declared local
-|imports/generate_poly_system.mpl:464|
-Warning, (in GenerateEtHatOld) `Et_hat_old` is implicitly declared local
-|imports/generate_poly_system.mpl:470|
-Warning, (in GetPolySystem) `identifiable_states` is implicitly declared local
-|imports/generate_poly_system.mpl:260|
-Warning, (in GetPolySystem) `x_theta_vars_to_be_removed` is implicitly declared
-local |imports/generate_poly_system.mpl:261|
-Warning, (in GetPolySystem) `x_theta_vars_filtered` is implicitly declared local
-|imports/generate_poly_system.mpl:262|
-Warning, (in GetPolySystem) `number_of_choices` is implicitly declared local
-|imports/generate_poly_system.mpl:263|
-Warning, (in GetPolySystem) `choices` is implicitly declared local
-|imports/generate_poly_system.mpl:265|
-Warning, (in GetPolySystem) `current_choice` is implicitly declared local
-|imports/generate_poly_system.mpl:267|
-Warning, (in GetPolySystem) `global_table` is implicitly declared local
-|imports/generate_poly_system.mpl:281|
-Warning, (in GetPolySystem) `Et_hat_old` is implicitly declared local
-|imports/generate_poly_system.mpl:288|
-Warning, (in GetPolySystem) `et_hat_monomials` is implicitly declared local
-|imports/generate_poly_system.mpl:290|
-Warning, (in GetPolySystem) `degree_table` is implicitly declared local
-|imports/generate_poly_system.mpl:291|
-Warning, (in GetPolySystem) `rhs_cols` is implicitly declared local
-|imports/generate_poly_system.mpl:293|
-Warning, (in GetPolySystem) `idxs` is implicitly declared local
-|imports/generate_poly_system.mpl:294|
-Warning, (in GetPolySystem) `parameter` is implicitly declared local
-|imports/generate_poly_system.mpl:295|
-Warning, (in GetPolySystem) `A` is implicitly declared local
-|imports/generate_poly_system.mpl:301|
-Warning, (in GetPolySystem) `solution` is implicitly declared local
-|imports/generate_poly_system.mpl:303|
-Warning, (in GetPolySystem) `choice_idx` is implicitly declared local
-|imports/generate_poly_system.mpl:306|
-Warning, (in GetPolySystem) `sum_degrees_new` is implicitly declared local
-|imports/generate_poly_system.mpl:310|
-Warning, (in GetPolySystem) `occurrence_table` is implicitly declared local
-|imports/generate_poly_system.mpl:311|
-Warning, (in GetPolySystem) `val` is implicitly declared local
-|imports/generate_poly_system.mpl:321|
-Warning, (in GetPolySystem) `perm` is implicitly declared local
-|imports/generate_poly_system.mpl:327|
-Warning, (in GenerateEtHatOld) `deg_variety` is implicitly declared local
-|imports/generate_poly_system.mpl:439|
-Warning, (in GenerateEtHatOld) `D2` is implicitly declared local
-|imports/generate_poly_system.mpl:440|
-Warning, (in GenerateEtHatOld) `sample` is implicitly declared local
-|imports/generate_poly_system.mpl:445|
-Warning, (in GenerateEtHatOld) `y_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:446|
-Warning, (in GenerateEtHatOld) `u_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:447|
-Warning, (in GenerateEtHatOld) `theta_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:448|
-Warning, (in GenerateEtHatOld) `Et_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:453|
-Warning, (in GenerateEtHatOld) `poly` is implicitly declared local
-|imports/generate_poly_system.mpl:456|
-Warning, (in GenerateEtHatOld) `vars_old` is implicitly declared local
-|imports/generate_poly_system.mpl:464|
-Warning, (in GenerateEtHatOld) `Et_hat_old` is implicitly declared local
-|imports/generate_poly_system.mpl:470|
-Warning, (in GetPolySystem) `identifiable_states` is implicitly declared local
-|imports/generate_poly_system.mpl:260|
-Warning, (in GetPolySystem) `x_theta_vars_to_be_removed` is implicitly declared
-local |imports/generate_poly_system.mpl:261|
-Warning, (in GetPolySystem) `x_theta_vars_filtered` is implicitly declared local
-|imports/generate_poly_system.mpl:262|
-Warning, (in GetPolySystem) `number_of_choices` is implicitly declared local
-|imports/generate_poly_system.mpl:263|
-Warning, (in GetPolySystem) `choices` is implicitly declared local
-|imports/generate_poly_system.mpl:265|
-Warning, (in GetPolySystem) `current_choice` is implicitly declared local
-|imports/generate_poly_system.mpl:267|
-Warning, (in GetPolySystem) `global_table` is implicitly declared local
-|imports/generate_poly_system.mpl:281|
-Warning, (in GetPolySystem) `Et_hat_old` is implicitly declared local
-|imports/generate_poly_system.mpl:288|
-Warning, (in GetPolySystem) `et_hat_monomials` is implicitly declared local
-|imports/generate_poly_system.mpl:290|
-Warning, (in GetPolySystem) `degree_table` is implicitly declared local
-|imports/generate_poly_system.mpl:291|
-Warning, (in GetPolySystem) `rhs_cols` is implicitly declared local
-|imports/generate_poly_system.mpl:293|
-Warning, (in GetPolySystem) `idxs` is implicitly declared local
-|imports/generate_poly_system.mpl:294|
-Warning, (in GetPolySystem) `parameter` is implicitly declared local
-|imports/generate_poly_system.mpl:295|
-Warning, (in GetPolySystem) `A` is implicitly declared local
-|imports/generate_poly_system.mpl:301|
-Warning, (in GetPolySystem) `solution` is implicitly declared local
-|imports/generate_poly_system.mpl:303|
-Warning, (in GetPolySystem) `choice_idx` is implicitly declared local
-|imports/generate_poly_system.mpl:306|
-Warning, (in GetPolySystem) `sum_degrees_new` is implicitly declared local
-|imports/generate_poly_system.mpl:310|
-Warning, (in GetPolySystem) `occurrence_table` is implicitly declared local
-|imports/generate_poly_system.mpl:311|
-Warning, (in GetPolySystem) `val` is implicitly declared local
-|imports/generate_poly_system.mpl:321|
-Warning, (in GetPolySystem) `perm` is implicitly declared local
-|imports/generate_poly_system.mpl:327|
-Warning, (in GenerateEtHatOld) `deg_variety` is implicitly declared local
-|imports/generate_poly_system.mpl:439|
-Warning, (in GenerateEtHatOld) `D2` is implicitly declared local
-|imports/generate_poly_system.mpl:440|
-Warning, (in GenerateEtHatOld) `sample` is implicitly declared local
-|imports/generate_poly_system.mpl:445|
-Warning, (in GenerateEtHatOld) `y_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:446|
-Warning, (in GenerateEtHatOld) `u_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:447|
-Warning, (in GenerateEtHatOld) `theta_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:448|
-Warning, (in GenerateEtHatOld) `Et_hat` is implicitly declared local
-|imports/generate_poly_system.mpl:453|
-Warning, (in GenerateEtHatOld) `poly` is implicitly declared local
-|imports/generate_poly_system.mpl:456|
-Warning, (in GenerateEtHatOld) `vars_old` is implicitly declared local
-|imports/generate_poly_system.mpl:464|
-Warning, (in GenerateEtHatOld) `Et_hat_old` is implicitly declared local
-|imports/generate_poly_system.mpl:470|
 sigma := [diff(N(t),t) = -delta_NE*N(t)*P(t)-mu_N*N(t), diff(S(t),t) = -mu_LE*S
 (t)*E(t)+delta_EL*S(t)-S(t)^2*mu_LL-S(t)*delta_LM, diff(M(t),t) = S(t)*delta_LM
 -M(t)*mu_M, diff(P(t),t) = rho_P*P(t)^2-S(t)*P(t)*mu_PL-E(t)*mu_PE*P(t)-P(t)*
@@ -302,9 +62,9 @@ Transcendence basis substitution turned off.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[rho_P = 2, mu_N = 1, delta_LM = 1, delta_NE_ = 0, N_ = 0, mu_PL = 2, S_ = 0, P_ = 1, mu_M = 1, E_ = 0, mu_EE = 1, mu_LL = 1, M_ = 0, rho_E = 1, delta_EL = 1, mu_PE = 2, mu_LE = 1, mu_P = 2]
+States for substitution:	[rho_E = 1, N_ = 0, P_ = 1, mu_LL = 1, E_ = 0, mu_P = 2, delta_LM = 1, mu_EE = 1, mu_LE = 1, mu_PL = 2, delta_NE_ = 0, S_ = 0, M_ = 0, mu_PE = 2, mu_N = 1, mu_M = 1, rho_P = 2, delta_EL = 1]
 NonID parameters:	[P_0, rho_E, rho_P, delta_NE]
-Substitutions:	[delta_NE_ = 1, N_ = 1, mu_PL = 3, S_ = 1, P_ = 2, E_ = 1, M_ = 1, mu_PE = 3, z_aux = 2, mu_P = 3]
+Substitutions:	[N_ = 1, P_ = 2, E_ = 1, mu_P = 3, z_aux = 2, mu_PL = 3, delta_NE_ = 1, S_ = 1, M_ = 1, mu_PE = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -335,7 +95,7 @@ Nonidentifiable parameter:  [P(0), rho_E, rho_P, delta_NE]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[rho_P = 2, mu_N = 1, delta_LM = 1, N_ = 0, mu_PL = 2, delta_NE = 1, S_ = 0, P_ = 1, mu_M = 1, E_ = 0, mu_EE = 1, mu_LL = 1, M_ = 0, rho_E = 1, delta_EL = 1, mu_PE = 2, mu_LE = 1, mu_P = 2]
+States for substitution:	[rho_E = 1, N_ = 0, P_ = 1, mu_LL = 1, E_ = 0, mu_P = 2, delta_NE = 1, delta_LM = 1, mu_EE = 1, mu_LE = 1, mu_PL = 2, S_ = 0, M_ = 0, mu_PE = 2, mu_N = 1, mu_M = 1, rho_P = 2, delta_EL = 1]
 NonID parameters:	[P_0, rho_E, rho_P, delta_NE]
-Substitutions:	[N_ = 1, mu_PL = 3, S_ = 1, P_ = 2, E_ = 1, M_ = 1, mu_PE = 3, z_aux = 2, mu_P = 3]
-memory used=1054.1MB, alloc=175.1MB, time=6.30
+Substitutions:	[N_ = 1, P_ = 2, E_ = 1, mu_P = 3, z_aux = 2, mu_PL = 3, S_ = 1, M_ = 1, mu_PE = 3]
+memory used=1132.2MB, alloc=172.0MB, time=11.51

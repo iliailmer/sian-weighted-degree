@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -6,30 +6,240 @@
 # Ex 2 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_seirc_original_no_trb",{},
-new_seirc)
-WriteScripts(system_vars[1],system_vars[2],"new_seirc_weights_no_trb",all_subs,
-new_seirc)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_seirc_original_with_trb",{},
-new_seirc)
-WriteScripts(system_vars[1],system_vars[2],"new_seirc_weights_with_trb",
-all_subs,new_seirc)
-memory used=1.6MB, alloc=8.3MB, time=0.05
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), r(t), c(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [b, g, k, n]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [g, k, s(0), e(0), i(0)]
+Nonidentifiable parameter:  [b, c(0), n, r(0)]
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters {b, c(0)}
+Number of possible combinations 153
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Collection [b, c_1] is not transcendence basis
+Collection [b, c_2] is not transcendence basis
+Collection [b, c_3] is not transcendence basis
+Collection [b, c_4] is not transcendence basis
+Collection [b, c_5] is not transcendence basis
+Collection [b, c_6] is not transcendence basis
+Collection [b, c_7] is not transcendence basis
+Collection [b, n] is not transcendence basis
+Collection [b, r_1] is not transcendence basis
+Collection [b, r_2] is not transcendence basis
+Collection [b, r_3] is not transcendence basis
+Collection [b, r_4] is not transcendence basis
+Collection [b, r_5] is not transcendence basis
+Collection [b, r_6] is not transcendence basis
+Collection [b, r_7] is not transcendence basis
+Collection [c_0, c_1] is not transcendence basis
+Collection [c_0, c_2] is not transcendence basis
+Collection [c_0, c_3] is not transcendence basis
+Collection [c_0, c_4] is not transcendence basis
+Collection [c_0, c_5] is not transcendence basis
+Collection [c_0, c_6] is not transcendence basis
+Collection [c_0, c_7] is not transcendence basis
+Collection [c_0, r_0] is not transcendence basis
+Collection [c_0, r_1] is not transcendence basis
+Collection [c_0, r_2] is not transcendence basis
+Collection [c_0, r_3] is not transcendence basis
+Collection [c_0, r_4] is not transcendence basis
+Collection [c_0, r_5] is not transcendence basis
+Collection [c_0, r_6] is not transcendence basis
+Collection [c_0, r_7] is not transcendence basis
+Collection [c_1, c_2] is not transcendence basis
+Collection [c_1, c_3] is not transcendence basis
+Collection [c_1, c_4] is not transcendence basis
+Collection [c_1, c_5] is not transcendence basis
+Collection [c_1, c_6] is not transcendence basis
+Collection [c_1, c_7] is not transcendence basis
+Collection [c_1, n] is not transcendence basis
+Collection [c_1, r_0] is not transcendence basis
+Collection [c_1, r_1] is not transcendence basis
+Collection [c_1, r_2] is not transcendence basis
+Collection [c_1, r_3] is not transcendence basis
+Collection [c_1, r_4] is not transcendence basis
+Collection [c_1, r_5] is not transcendence basis
+Collection [c_1, r_6] is not transcendence basis
+Collection [c_1, r_7] is not transcendence basis
+Collection [c_2, c_3] is not transcendence basis
+Collection [c_2, c_4] is not transcendence basis
+Collection [c_2, c_5] is not transcendence basis
+Collection [c_2, c_6] is not transcendence basis
+Collection [c_2, c_7] is not transcendence basis
+Collection [c_2, n] is not transcendence basis
+Collection [c_2, r_0] is not transcendence basis
+Collection [c_2, r_1] is not transcendence basis
+Collection [c_2, r_2] is not transcendence basis
+Collection [c_2, r_3] is not transcendence basis
+Collection [c_2, r_4] is not transcendence basis
+Collection [c_2, r_5] is not transcendence basis
+Collection [c_2, r_6] is not transcendence basis
+Collection [c_2, r_7] is not transcendence basis
+Collection [c_3, c_4] is not transcendence basis
+Collection [c_3, c_5] is not transcendence basis
+Collection [c_3, c_6] is not transcendence basis
+Collection [c_3, c_7] is not transcendence basis
+Collection [c_3, n] is not transcendence basis
+Collection [c_3, r_0] is not transcendence basis
+Collection [c_3, r_1] is not transcendence basis
+Collection [c_3, r_2] is not transcendence basis
+Collection [c_3, r_3] is not transcendence basis
+Collection [c_3, r_4] is not transcendence basis
+Collection [c_3, r_5] is not transcendence basis
+Collection [c_3, r_6] is not transcendence basis
+Collection [c_3, r_7] is not transcendence basis
+Collection [c_4, c_5] is not transcendence basis
+Collection [c_4, c_6] is not transcendence basis
+Collection [c_4, c_7] is not transcendence basis
+Collection [c_4, n] is not transcendence basis
+Collection [c_4, r_0] is not transcendence basis
+Collection [c_4, r_1] is not transcendence basis
+Collection [c_4, r_2] is not transcendence basis
+Collection [c_4, r_3] is not transcendence basis
+Collection [c_4, r_4] is not transcendence basis
+Collection [c_4, r_5] is not transcendence basis
+Collection [c_4, r_6] is not transcendence basis
+Collection [c_4, r_7] is not transcendence basis
+Collection [c_5, c_6] is not transcendence basis
+Collection [c_5, c_7] is not transcendence basis
+Collection [c_5, n] is not transcendence basis
+Collection [c_5, r_0] is not transcendence basis
+Collection [c_5, r_1] is not transcendence basis
+Collection [c_5, r_2] is not transcendence basis
+Collection [c_5, r_3] is not transcendence basis
+Collection [c_5, r_4] is not transcendence basis
+Collection [c_5, r_5] is not transcendence basis
+Collection [c_5, r_6] is not transcendence basis
+Collection [c_5, r_7] is not transcendence basis
+Collection [c_6, c_7] is not transcendence basis
+Collection [c_6, n] is not transcendence basis
+Collection [c_6, r_0] is not transcendence basis
+Collection [c_6, r_1] is not transcendence basis
+Collection [c_6, r_2] is not transcendence basis
+Collection [c_6, r_3] is not transcendence basis
+Collection [c_6, r_4] is not transcendence basis
+Collection [c_6, r_5] is not transcendence basis
+Collection [c_6, r_6] is not transcendence basis
+Collection [c_6, r_7] is not transcendence basis
+Collection [c_7, n] is not transcendence basis
+Collection [c_7, r_0] is not transcendence basis
+Collection [c_7, r_1] is not transcendence basis
+Collection [c_7, r_2] is not transcendence basis
+Collection [c_7, r_3] is not transcendence basis
+Collection [c_7, r_4] is not transcendence basis
+Collection [c_7, r_5] is not transcendence basis
+Collection [c_7, r_6] is not transcendence basis
+Collection [c_7, r_7] is not transcendence basis
+Collection [n, r_1] is not transcendence basis
+Collection [n, r_2] is not transcendence basis
+Collection [n, r_3] is not transcendence basis
+Collection [n, r_4] is not transcendence basis
+Collection [n, r_5] is not transcendence basis
+Collection [n, r_6] is not transcendence basis
+Collection [n, r_7] is not transcendence basis
+Collection [r_0, r_1] is not transcendence basis
+Collection [r_0, r_2] is not transcendence basis
+Collection [r_0, r_3] is not transcendence basis
+Collection [r_0, r_4] is not transcendence basis
+Collection [r_0, r_5] is not transcendence basis
+Collection [r_0, r_6] is not transcendence basis
+Collection [r_0, r_7] is not transcendence basis
+Collection [r_1, r_2] is not transcendence basis
+Collection [r_1, r_3] is not transcendence basis
+Collection [r_1, r_4] is not transcendence basis
+Collection [r_1, r_5] is not transcendence basis
+Collection [r_1, r_6] is not transcendence basis
+Collection [r_1, r_7] is not transcendence basis
+Collection [r_2, r_3] is not transcendence basis
+Collection [r_2, r_4] is not transcendence basis
+Collection [r_2, r_5] is not transcendence basis
+Collection [r_2, r_6] is not transcendence basis
+Collection [r_2, r_7] is not transcendence basis
+Collection [r_3, r_4] is not transcendence basis
+Collection [r_3, r_5] is not transcendence basis
+Collection [r_3, r_6] is not transcendence basis
+Collection [r_3, r_7] is not transcendence basis
+Collection [r_4, r_5] is not transcendence basis
+Collection [r_4, r_6] is not transcendence basis
+Collection [r_4, r_7] is not transcendence basis
+Collection [r_5, r_6] is not transcendence basis
+Collection [r_5, r_7] is not transcendence basis
+Collection [r_6, r_7] is not transcendence basis
+Picked the best choice [c_0, n] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {n}
+Algebraically independent parameters among derivatives: {c(0)}
+
+=== Input info ===
+State variables:          [n(t), s(t), e(t), i(t), r(t), c(t)]
+Output variables:         [y1(t), y_faux1(t)]
+Input variables:          []
+Parameters in equations:  [b, g, k]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[i_ = 1, n_ = 0, g = 1, k = 1, b = 1, c_ = 0, s_ = 0, r_ = 0, e_ = 1]
+NonID parameters:	[b, c_0, n, r_0]
+Substitutions:	[i_ = 2, n_ = 1, g = 2, k = 2, z_aux = 1, s_ = 1, e_ = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), r(t), c(t)]
+Output variables:         [y1(t)]
+Input variables:          []
+Parameters in equations:  [b, g, k, n]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [g, k, s(0), e(0), i(0)]
+Nonidentifiable parameter:  [b, c(0), n, r(0)]
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[i_ = 1, n = 1, g = 1, k = 1, b = 1, c_ = 0, s_ = 0, r_ = 0, e_ = 1]
+NonID parameters:	[b, c_0, n, r_0]
+Substitutions:	[i_ = 2, g = 2, k = 2, z_aux = 1, s_ = 1, e_ = 2]
+memory used=1401.6MB, alloc=80.3MB, time=12.20

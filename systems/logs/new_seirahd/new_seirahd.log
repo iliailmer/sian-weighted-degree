@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -6,30 +6,96 @@
 # Ex 8 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_seirahd_original_no_trb",{},
-new_seirahd)
-WriteScripts(system_vars[1],system_vars[2],"new_seirahd_weights_no_trb",
-all_subs,new_seirahd)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_seirahd_original_with_trb",{},
-new_seirahd)
-WriteScripts(system_vars[1],system_vars[2],"new_seirahd_weights_with_trb",
-all_subs,new_seirahd)
-memory used=1.6MB, alloc=8.3MB, time=0.05
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), a(t), h(t), r(t), d0(t)]
+Output variables:         [y1(t)]
+Input variables:          [b(t)]
+Parameters in equations:  [Phi, alpha, dlt, eta, gamma_a, gamma_h, gamma_i, n, sgm]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [alpha, eta, gamma_a, n, sgm, s(0), e(0), i(0), a(0)]
+Nonidentifiable parameter:  [Phi, d0(0), dlt, gamma_h, gamma_i, h(0), r(0)]
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters {Phi, dlt, gamma_h, d0(0), h(0), r(0)}
+Number of possible combinations 7
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Collection [Phi, d0_0, dlt, gamma_h, gamma_i, h_0] is not transcendence basis
+Collection [Phi, d0_0, dlt, gamma_h, gamma_i, r_0] is not transcendence basis
+Collection [Phi, d0_0, dlt, gamma_i, h_0, r_0] is not transcendence basis
+Collection [Phi, d0_0, gamma_h, gamma_i, h_0, r_0] is not transcendence basis
+Collection [Phi, dlt, gamma_h, gamma_i, h_0, r_0] is not transcendence basis
+Picked the best choice [d0_0, dlt, gamma_h, gamma_i, h_0, r_0] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {dlt, gamma_h, gamma_i}
+Algebraically independent parameters among derivatives: {d0(0), h(0), r(0)}
+
+=== Input info ===
+State variables:          [dlt(t), gamma_h(t), gamma_i(t), s(t), e(t), i(t), a(t), h(t), r(t), d0(t)]
+Output variables:         [y1(t), y_faux1(t), y_faux2(t), y_faux3(t)]
+Input variables:          [b(t)]
+Parameters in equations:  [Phi, alpha, eta, gamma_a, n, sgm]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[sgm = 1, gamma_i_ = 0, eta = 1, dlt_ = 0, e_ = 1, s_ = 0, a_ = 1, i_ = 0, (NULL) = 1, n = 1, gamma_a = 2, alpha = 1, gamma_h_ = 0, Phi = 1]
+NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
+Substitutions:	[gamma_i_ = 1, dlt_ = 1, e_ = 2, s_ = 1, a_ = 2, i_ = 1, gamma_a = 3, gamma_h_ = 1, z_aux = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [s(t), e(t), i(t), a(t), h(t), r(t), d0(t)]
+Output variables:         [y1(t)]
+Input variables:          [b(t)]
+Parameters in equations:  [Phi, alpha, dlt, eta, gamma_a, gamma_h, gamma_i, n, sgm]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [alpha, eta, gamma_a, n, sgm, s(0), e(0), i(0), a(0)]
+Nonidentifiable parameter:  [Phi, d0(0), dlt, gamma_h, gamma_i, h(0), r(0)]
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[sgm = 1, eta = 1, e_ = 1, s_ = 0, a_ = 1, i_ = 0, (NULL) = 1, n = 1, gamma_a = 2, alpha = 1, gamma_i = 1, Phi = 1]
+NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
+Substitutions:	[e_ = 2, s_ = 1, a_ = 2, i_ = 1, gamma_a = 3, z_aux = 2]
+memory used=3681.9MB, alloc=112.3MB, time=28.08

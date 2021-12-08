@@ -30,7 +30,6 @@ sigma:= [
     y4(t) = SOB(t)
 ];
 
-sigma := subs(gammas, sigma);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 

@@ -1,39 +1,101 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
 sigma := [diff(S(t),t) = -b*S(t)*Ninv*A(t)*q-b*S(t)*Ninv*II(t)-b*S(t)*Ninv*J(t)
 , diff(A(t),t) = -E(t)*k*r+E(t)*k-A(t)*g1, diff(E(t),t) = b*S(t)*Ninv*A(t)*q+b*
 S(t)*Ninv*II(t)+b*S(t)*Ninv*J(t)-E(t)*k, diff(C(t),t) = alpha*II(t), diff(J(t),
 t) = alpha*II(t)-g2*J(t), diff(II(t),t) = -alpha*II(t)+E(t)*k*r-g1*II(t), y2(t)
 = Ninv, y(t) = C(t)]
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_seiajrc_original_no_trb",{},
-new_seiajrc)
-WriteScripts(system_vars[1],system_vars[2],"new_seiajrc_weights_no_trb",
-all_subs,new_seiajrc)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],"new_seiajrc_original_with_trb",{},
-new_seiajrc)
-WriteScripts(system_vars[1],system_vars[2],"new_seiajrc_weights_with_trb",
-all_subs,new_seiajrc)
-memory used=18.5MB, alloc=79.3MB, time=0.14
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [S(t), A(t), E(t), C(t), J(t), II(t)]
+Output variables:         [y2(t), y(t)]
+Input variables:          []
+Parameters in equations:  [Ninv, alpha, b, g1, g2, k, q, r]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [Ninv, alpha, b, g1, g2, k, C(0), J(0), II(0)]
+Nonidentifiable parameter:  [A(0), E(0), S(0), q, r]
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters {A(0)}
+Number of possible combinations 33
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Picked the best choice [q] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {q}
+Algebraically independent parameters among derivatives: {}
+
+=== Input info ===
+State variables:          [q(t), S(t), A(t), E(t), C(t), J(t), II(t)]
+Output variables:         [y2(t), y(t), y_faux1(t)]
+Input variables:          []
+Parameters in equations:  [Ninv, alpha, b, g1, g2, k, r]
+===================
+
+Transcendence basis substitution turned off.
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[alpha = 1, q_ = 0, k = 2, g1 = 2, II_ = 1, J_ = 3, g2 = 4, S_ = 3, A_ = 3, Ninv = 0, b = 3, r = 2, E_ = 2, C_ = 0]
+NonID parameters:	[A_0, E_0, S_0, q, r]
+Substitutions:	[q_ = 1, II_ = 2, J_ = 4, g2 = 5, S_ = 4, A_ = 4, z_aux = 3, E_ = 3]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [S(t), A(t), E(t), C(t), J(t), II(t)]
+Output variables:         [y2(t), y(t)]
+Input variables:          []
+Parameters in equations:  [Ninv, alpha, b, g1, g2, k, q, r]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [Ninv, alpha, b, g1, g2, k, C(0), J(0), II(0)]
+Nonidentifiable parameter:  [A(0), E(0), S(0), q, r]
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[alpha = 1, k = 2, g1 = 2, II_ = 1, q = 3, J_ = 3, g2 = 4, S_ = 3, A_ = 3, Ninv = 0, b = 3, r = 2, E_ = 2, C_ = 0]
+NonID parameters:	[A_0, E_0, S_0, q, r]
+Substitutions:	[II_ = 2, J_ = 4, g2 = 5, S_ = 4, A_ = 4, z_aux = 3, E_ = 3]
+memory used=2804.7MB, alloc=179.8MB, time=27.22

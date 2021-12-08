@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -6,30 +6,70 @@
 
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],
-"original_daisy_mamil3_original_no_trb",{},original_daisy_mamil3)
-WriteScripts(system_vars[1],system_vars[2],
-"original_daisy_mamil3_weights_no_trb",all_subs,original_daisy_mamil3)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],
-"original_daisy_mamil3_original_with_trb",{},original_daisy_mamil3)
-WriteScripts(system_vars[1],system_vars[2],
-"original_daisy_mamil3_weights_with_trb",all_subs,original_daisy_mamil3)
-memory used=1.6MB, alloc=8.3MB, time=0.05
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t)]
+Output variables:         [y(t)]
+Input variables:          [u(t)]
+Parameters in equations:  [a01, a12, a13, a21, a31]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [a01, a12, a13, a21, a31, x1(0), x2(0), x3(0)]
+Nonidentifiable parameter:  []
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[a01 = 1, (NULL) = 1, a31 = 1, a13 = 1, a12 = 1, x2_ = 1, x1_ = 0, x3_ = 1, a21 = 1]
+NonID parameters:	[]
+Substitutions:	[a01 = 2, z_aux = 1, a31 = 2, a13 = 2, a12 = 2, x2_ = 2, x1_ = 1, x3_ = 2, a21 = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t)]
+Output variables:         [y(t)]
+Input variables:          [u(t)]
+Parameters in equations:  [a01, a12, a13, a21, a31]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [a01, a12, a13, a21, a31, x1(0), x2(0), x3(0)]
+Nonidentifiable parameter:  []
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[a01 = 1, (NULL) = 1, a31 = 1, a13 = 1, a12 = 1, x2_ = 1, x1_ = 0, x3_ = 1, a21 = 1]
+NonID parameters:	[]
+Substitutions:	[a01 = 2, z_aux = 1, a31 = 2, a13 = 2, a12 = 2, x2_ = 2, x1_ = 1, x3_ = 2, a21 = 2]
+memory used=94.6MB, alloc=44.3MB, time=1.01

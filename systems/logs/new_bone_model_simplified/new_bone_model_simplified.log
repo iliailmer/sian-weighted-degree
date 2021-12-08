@@ -1,4 +1,4 @@
-    |\^/|     Maple 2021 (APPLE UNIVERSAL OSX)
+    |\^/|     Maple 2021 (X86 64 LINUX)
 ._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
  \  MAPLE  /  All rights reserved. Maple is a trademark of
  <____ ____>  Waterloo Maple Inc.
@@ -11,20 +11,6 @@
 
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/bfs_deriv.mpl`
-on line 429, syntax error, reserved word `proc` unexpected:
-end proc:
-       ^
-Error, while reading `imports/generate_poly_system.mpl`
-Error, while reading `imports/create_substitutions.mpl`
 sigma := [diff(L1(t),t) = RL1+kOBL1*(FOB(t)+SOB(t))+kL2L1*L2(t)+kCMXL*CMX(t)-
 dL1*L1(t), diff(L2(t),t) = RL2+kOBRankL*(FOB(t)+SOB(t))+kCMXL*CMX(t)-(dL2+1/3*(
 -c*dRankl+kint)/(kSS+c))*L2(t), diff(CMX(t),t) = kL2CMX*L2(t)-kCMXL*CMX(t), 
@@ -38,17 +24,590 @@ FOB(t), diff(SOB(t),t) = kROBOB*f*ROB(t)-dSOB*SOB(t), y1(t) = OC(t), y2(t) =
 FOB(t), y3(t) = ROB(t), y4(t) = SOB(t)]
 Error, invalid input: subs received gammas, which is not valid for its 1st
 argument
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],
-"new_bone_model_simplified_original_no_trb",{},new_bone_model_simplified)
-WriteScripts(system_vars[1],system_vars[2],
-"new_bone_model_simplified_weights_no_trb",all_subs,new_bone_model_simplified)
-Error, mismatched multiple assignment of 5 variables on the left side and 1
-value on the right side
-WriteScripts(original_et_hat,system_vars[2],
-"new_bone_model_simplified_original_with_trb",{},new_bone_model_simplified)
-WriteScripts(system_vars[1],system_vars[2],
-"new_bone_model_simplified_weights_with_trb",all_subs,new_bone_model_simplified
-)
-memory used=18.5MB, alloc=79.3MB, time=0.14
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [L1(t), L2(t), CMX(t), OC(t), TGF(t), g1(t), g2(t), g3(t), ROB(t), FOB(t), SOB(t)]
+Output variables:         [y1(t), y2(t), y3(t), y4(t)]
+Input variables:          [TGD(t)]
+Parameters in equations:  [RL1, RL2, ROC, Rrob, a1, a2, a3, c, dFOB, dL1, dL2, dOC, dRankl, dSOB, dTGF, f, gamma1, gamma2, gamma3, kCMXL, kL2CMX, kL2L1, kOBL1, kOCTGF, kROBOB, kSS, kint, rho1, rho2, rho3, Delta2Gamma2, Delta3Gamma3, DeltaGamma2, kOBRankL]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [ROC, dFOB, dSOB, dTGF, f, gamma2, kROBOB, OC(0), ROB(0), FOB(0), SOB(0)]
+Nonidentifiable parameter:  [CMX(0), L1(0), L2(0), RL1, RL2, Rrob, TGF(0), a1, a2, a3, c, dL1, dL2, dOC, dRankl, g1(0), g2(0), g3(0), gamma1, gamma3, kCMXL, kL2CMX, kL2L1, kOBL1, kOCTGF, kSS, kint, rho1, rho2, rho3, Delta2Gamma2, Delta3Gamma3, DeltaGamma2, kOBRankL]
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters {RL1, Rrob, a1, a2, c, dL1, dL2, dRankl, kL2L1, kOBL1, kSS, CMX(0), L1(0), L2(0), TGF(0), g1(0), g2(0), g3(0)}
+Number of possible combinations 80135221427528667400
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Collection [CMX_0, L2_2, gamma1, TGF_1, a2, L2_6, CMX_6, g3_2, g1_11, Delta3Gamma3, g2_7, g2_4, g3_8, g1_13, dL2, kOCTGF, L2_0, g1_3] is not transcendence basis
+Collection [CMX_0, TGF_4, rho3, g2_10, a2, TGF_0, dL2, Rrob, g2_9, g1_11, L2_4, gamma3, g1_1, g2_12, g1_10, TGF_9, g3_3, g2_11] is not transcendence basis
+Collection [CMX_0, g2_11, kint, g1_1, TGF_3, TGF_6, kOBRankL, Delta2Gamma2, g1_5, dL1, g3_7, g2_3, CMX_11, g3_8, TGF_1, CMX_4, g1_8, a3] is not transcendence basis
+Collection [CMX_0, g2_4, Delta2Gamma2, g1_13, dRankl, g3_1, g2_5, L2_10, g2_9, kint, Delta3Gamma3, g1_1, g2_11, g2_13, TGF_5, L2_11, TGF_12, g1_3] is not transcendence basis
+Collection [CMX_0, kCMXL, g3_8, g1_8, rho2, L2_11, a3, g2_13, g1_3, Delta3Gamma3, TGF_2, g3_3, RL1, dRankl, g2_4, g1_2, g3_1, kL2CMX] is not transcendence basis
+Collection [CMX_0, Delta3Gamma3, g1_5, CMX_8, CMX_7, L2_9, g2_6, rho2, TGF_1, L2_6, TGF_11, TGF_12, g2_3, CMX_6, Rrob, kCMXL, g2_2, g1_12] is not transcendence basis
+Collection [CMX_1, g1_10, CMX_6, CMX_0, DeltaGamma2, L1_0, L2_5, g2_9, kCMXL, g2_13, L2_11, L2_2, TGF_9, g2_6, g3_1, g3_3, TGF_4, kSS] is not transcendence basis
+Collection [CMX_1, g2_4, g3_7, g1_0, g3_2, g1_6, g1_3, CMX_5, TGF_3, g1_12, kOBRankL, CMX_11, g2_9, L2_4, kint, DeltaGamma2, dL1, kSS] is not transcendence basis
+Collection [CMX_1, g3_7, kCMXL, RL1, g2_6, L2_3, rho2, g1_8, L1_0, g2_2, L2_6, g2_1, g3_0, dL2, TGF_5, kL2CMX, CMX_10, TGF_2] is not transcendence basis
+Collection [CMX_1, g3_8, g2_2, kOBL1, dL1, TGF_10, L2_11, g2_9, CMX_5, kL2CMX, L2_4, L2_7, rho1, TGF_12, L2_8, CMX_12, g1_11, g2_8] is not transcendence basis
+Collection [CMX_1, g3_9, L2_7, L2_6, g2_1, L2_4, L2_5, a1, CMX_12, g2_9, CMX_3, dL2, TGF_1, g2_8, g1_1, gamma1, dOC, L2_10] is not transcendence basis
+Collection [CMX_10, L2_1, dRankl, g1_7, g2_10, TGF_10, TGF_5, g3_7, dOC, CMX_9, g3_8, g3_9, g1_10, g1_8, CMX_7, TGF_3, CMX_3, g3_3] is not transcendence basis
+Collection [CMX_10, g2_2, TGF_2, a3, g3_0, TGF_8, DeltaGamma2, Rrob, g3_1, TGF_11, L2_1, kCMXL, TGF_7, TGF_4, CMX_1, g1_4, gamma1, g2_0] is not transcendence basis
+Collection [CMX_10, kOBRankL, g1_6, kSS, L2_6, c, TGF_11, g3_1, DeltaGamma2, TGF_4, dL2, TGF_1, TGF_10, L2_10, L2_7, CMX_6, g3_7, L2_4] is not transcendence basis
+Collection [CMX_11, TGF_6, TGF_4, g1_3, CMX_4, rho3, g1_0, TGF_0, kL2CMX, a2, g1_11, g2_7, L2_10, CMX_7, rho2, g1_5, c, gamma3] is not transcendence basis
+Collection [CMX_11, g1_2, g3_7, a1, gamma1, g3_0, TGF_3, g2_0, g3_8, L2_5, CMX_6, g1_0, g1_13, L2_11, RL2, CMX_1, g2_9, g1_1] is not transcendence basis
+Collection [CMX_11, g1_4, TGF_7, a3, g3_3, TGF_4, kL2L1, dL2, dOC, g2_12, g1_11, L2_1, TGF_12, DeltaGamma2, TGF_2, gamma1, L2_12, g1_13] is not transcendence basis
+Collection [CMX_12, CMX_3, g1_8, rho2, L2_2, TGF_0, g2_6, CMX_8, g1_0, g2_11, gamma1, dOC, L2_5, RL2, Rrob, g3_0, TGF_11, L2_4] is not transcendence basis
+Collection [CMX_12, CMX_8, g2_13, L2_1, TGF_5, g1_6, g2_9, L2_7, CMX_3, L2_0, g2_8, g3_1, g1_0, dL1, TGF_8, g3_8, a1, g2_10] is not transcendence basis
+Collection [CMX_12, L2_8, CMX_6, g2_2, TGF_5, CMX_10, L2_11, g1_10, L2_10, rho1, g3_5, TGF_2, g2_7, g2_5, g3_9, L2_3, CMX_9, g1_6] is not transcendence basis
+Collection [CMX_12, TGF_4, g2_2, g1_1, kCMXL, TGF_10, TGF_7, a3, L2_10, g2_9, c, g2_13, rho3, dL2, g1_11, g1_5, DeltaGamma2, kL2L1] is not transcendence basis
+Collection [CMX_2, CMX_3, g3_2, g1_4, g1_13, g1_2, CMX_7, Delta3Gamma3, kOBL1, CMX_4, L2_3, TGF_11, L2_2, g3_9, TGF_4, g3_7, g1_6, TGF_1] is not transcendence basis
+Collection [CMX_2, a2, g3_1, g1_13, TGF_2, g1_0, g3_3, g2_1, CMX_12, g2_3, kOBL1, TGF_11, L2_11, g3_4, TGF_8, L2_1, TGF_4, kSS] is not transcendence basis
+Collection [CMX_2, dOC, CMX_7, kOBL1, g2_0, rho1, TGF_10, CMX_12, g2_4, kOBRankL, g3_6, CMX_8, L2_9, g1_2, kint, rho2, RL1, dRankl] is not transcendence basis
+Collection [CMX_2, g1_0, g2_1, L2_2, L2_4, kL2CMX, L2_3, TGF_12, kSS, g1_11, L2_12, RL2, TGF_10, L2_11, TGF_3, kint, gamma3, kCMXL] is not transcendence basis
+Collection [CMX_2, g1_4, CMX_5, g2_12, g1_2, g2_6, g1_3, TGF_9, g3_1, CMX_4, kCMXL, L1_0, g2_0, CMX_8, L2_0, g1_0, rho1, kOBRankL] is not transcendence basis
+Collection [CMX_2, g2_11, g2_13, rho3, CMX_11, g3_5, CMX_6, g1_9, TGF_10, L2_12, TGF_6, CMX_9, c, kOCTGF, a1, g2_5, g2_12, a2] is not transcendence basis
+Collection [CMX_2, g3_0, TGF_9, a1, dOC, TGF_8, g1_13, rho1, g2_2, L2_3, g1_11, g2_12, g1_8, TGF_11, CMX_8, CMX_0, TGF_1, g1_9] is not transcendence basis
+Collection [CMX_2, kOBL1, L2_1, kint, L2_8, CMX_7, L2_11, dL2, g3_5, g3_3, g1_8, g1_9, g3_7, CMX_5, g1_11, CMX_1, dOC, g1_13] is not transcendence basis
+Collection [CMX_3, a1, CMX_0, kSS, L1_0, g2_6, TGF_0, g3_1, g1_7, g2_7, kOCTGF, kOBL1, g1_10, L2_10, L2_7, kL2CMX, g3_3, L2_8] is not transcendence basis
+Collection [CMX_3, a3, kint, rho2, CMX_8, g2_10, L2_7, g1_6, TGF_1, L2_11, g1_7, c, g3_2, TGF_6, g2_2, g3_5, g2_5, TGF_4] is not transcendence basis
+Collection [CMX_3, dL2, CMX_9, g3_6, g1_2, L2_8, kL2L1, a1, L2_5, RL2, TGF_2, g2_4, g3_2, g3_9, CMX_5, g1_7, g1_0, kOBL1] is not transcendence basis
+Collection [CMX_3, g1_12, g1_4, TGF_3, g1_11, kOBL1, CMX_9, g3_7, g3_3, g2_13, L2_3, TGF_2, a3, TGF_9, g3_6, g1_6, TGF_0, g2_11] is not transcendence basis
+Collection [CMX_3, g2_12, g3_0, g1_4, kCMXL, g3_3, c, g3_9, kSS, dRankl, TGF_2, TGF_4, g2_4, g1_9, g3_8, g3_6, g2_11, g1_13] is not transcendence basis
+Collection [CMX_4, L2_2, TGF_8, CMX_1, L2_5, DeltaGamma2, TGF_6, Delta3Gamma3, CMX_5, L2_3, Delta2Gamma2, L2_1, g3_7, L2_11, g1_8, Rrob, TGF_1, g2_0] is not transcendence basis
+Collection [CMX_4, L2_6, g3_3, g1_0, a1, kL2L1, TGF_11, g2_12, g2_9, L2_9, L2_8, g2_4, g1_11, g3_2, g2_2, g2_3, gamma3, g2_6] is not transcendence basis
+Collection [CMX_4, TGF_1, g3_8, g2_3, g2_13, L2_4, CMX_1, a2, g3_5, dRankl, TGF_4, dL1, g2_1, TGF_7, dL2, TGF_11, L2_9, L2_7] is not transcendence basis
+Collection [CMX_4, g1_7, RL2, g3_1, L2_5, TGF_9, g2_5, TGF_11, L2_4, DeltaGamma2, kL2L1, g3_7, dL1, g1_4, L2_11, dRankl, CMX_11, g2_12] is not transcendence basis
+Collection [CMX_4, g1_8, g3_0, gamma1, g2_7, DeltaGamma2, CMX_0, rho2, g2_1, g1_5, g3_5, kOCTGF, g3_7, g1_11, g2_12, g2_9, dL1, L2_8] is not transcendence basis
+Collection [CMX_4, Delta3Gamma3, TGF_12, g2_6, TGF_0, dL1, TGF_9, g2_7, g2_10, L2_8, g3_2, g3_7, TGF_1, RL1, g1_13, CMX_7, rho3, g3_4] is not transcendence basis
+Collection [CMX_4, kOBRankL, g3_4, Delta3Gamma3, L2_8, dL1, c, gamma3, g2_5, TGF_12, L2_11, g3_1, TGF_4, g2_11, g3_2, L2_0, TGF_10, g1_8] is not transcendence basis
+Collection [CMX_5, L1_0, TGF_6, kL2L1, g2_10, g1_4, g1_5, DeltaGamma2, CMX_3, dOC, a3, TGF_0, g1_1, g2_7, gamma3, g2_0, g1_11, TGF_2] is not transcendence basis
+Collection [CMX_5, L2_5, a1, g2_2, TGF_2, RL1, L2_3, TGF_0, Delta2Gamma2, CMX_3, L2_8, TGF_9, DeltaGamma2, kL2CMX, dL1, g2_12, kCMXL, g3_9] is not transcendence basis
+Collection [CMX_5, RL2, g3_4, L2_4, CMX_1, g2_10, g2_0, kSS, TGF_3, CMX_6, TGF_1, L2_6, L2_7, CMX_0, kCMXL, g2_9, TGF_7, CMX_9] is not transcendence basis
+Collection [CMX_5, TGF_7, CMX_1, L2_7, TGF_4, gamma1, CMX_6, g3_0, g1_2, a1, CMX_10, g1_11, g2_4, g1_13, Rrob, DeltaGamma2, g1_5, kL2CMX] is not transcendence basis
+Collection [CMX_5, TGF_7, kSS, g3_2, g3_8, g3_6, kOBL1, dOC, L2_11, L2_9, dL2, Delta2Gamma2, g3_9, g2_10, dRankl, a1, Delta3Gamma3, L2_7] is not transcendence basis
+Collection [CMX_5, dOC, L2_3, TGF_5, g1_7, CMX_3, g2_9, g2_11, g1_0, dRankl, CMX_8, rho2, g3_2, TGF_6, kint, rho1, kL2L1, g3_9] is not transcendence basis
+Collection [CMX_6, L1_0, CMX_4, Delta3Gamma3, L2_9, L2_8, TGF_2, g2_9, L2_4, a1, L2_0, g2_0, g3_3, TGF_12, g2_4, TGF_5, g2_13, CMX_8] is not transcendence basis
+Collection [CMX_6, kCMXL, TGF_0, TGF_5, TGF_8, gamma1, g3_7, CMX_9, rho3, CMX_12, g1_6, kOBL1, CMX_1, L1_0, g1_12, g2_3, dL2, L2_3] is not transcendence basis
+Collection [CMX_6, kOCTGF, L2_9, g1_8, CMX_10, g2_8, g1_11, Delta3Gamma3, CMX_1, g2_6, g3_8, L2_12, g2_4, Delta2Gamma2, TGF_12, g3_1, L2_5, g3_0] is not transcendence basis
+Collection [CMX_7, CMX_8, g2_2, L2_9, g2_13, dRankl, dOC, TGF_6, g2_0, rho1, g2_11, g2_10, g3_2, CMX_12, RL2, kL2L1, L2_7, CMX_0] is not transcendence basis
+Collection [CMX_7, L2_6, g2_4, CMX_0, L2_5, L2_10, dL1, L2_1, g2_1, g3_4, dRankl, g2_8, g3_3, kOBRankL, kL2L1, kSS, g1_2, L2_2] is not transcendence basis
+Collection [CMX_7, TGF_11, TGF_5, kSS, CMX_12, Rrob, g3_0, g1_10, g1_4, CMX_11, dOC, L2_3, g2_7, g1_2, CMX_1, TGF_9, TGF_12, Delta3Gamma3] is not transcendence basis
+Collection [CMX_7, TGF_2, gamma3, TGF_12, g3_6, g2_13, CMX_4, TGF_6, g1_2, TGF_8, g2_12, TGF_3, g1_10, CMX_2, g1_9, L2_7, L2_10, g3_4] is not transcendence basis
+Collection [CMX_7, g2_2, g2_11, L2_8, TGF_9, g3_4, g1_10, CMX_9, L2_3, Delta3Gamma3, dL2, Delta2Gamma2, TGF_8, g1_8, gamma3, g3_0, g3_1, g1_11] is not transcendence basis
+Collection [CMX_7, g2_2, g3_3, TGF_2, L1_0, g2_6, g2_10, a2, dL1, gamma1, TGF_10, TGF_6, g1_6, RL1, TGF_8, L2_12, rho2, L2_3] is not transcendence basis
+Collection [CMX_7, g2_5, g2_8, g1_12, g1_5, TGF_12, CMX_0, g1_8, CMX_1, Rrob, g2_4, g2_6, a3, g2_7, c, g2_9, kOBRankL, a2] is not transcendence basis
+Collection [CMX_7, g3_7, g2_12, g3_4, g2_1, TGF_9, L1_0, TGF_8, Delta3Gamma3, g1_4, TGF_4, g2_4, kL2L1, L2_5, dRankl, TGF_11, CMX_8, g3_3] is not transcendence basis
+Collection [CMX_8, TGF_1, kOBL1, g1_12, g1_2, g1_3, g3_5, g3_9, g2_12, TGF_11, g2_1, g2_9, c, L2_11, rho2, g2_7, CMX_4, g3_0] is not transcendence basis
+Collection [CMX_8, c, dL2, TGF_5, dRankl, RL1, g2_0, L2_11, g2_5, CMX_7, L2_12, TGF_6, TGF_12, kOCTGF, L2_3, g1_12, a3, g1_11] is not transcendence basis
+Collection [CMX_8, g2_5, kOBRankL, CMX_4, L2_2, g3_6, CMX_9, Delta3Gamma3, c, CMX_12, kL2L1, TGF_6, L2_8, g3_8, Delta2Gamma2, RL1, TGF_3, TGF_8] is not transcendence basis
+Collection [CMX_8, kOBRankL, a2, L2_4, CMX_9, g2_10, CMX_11, g2_0, kL2CMX, L1_0, TGF_3, kSS, dL1, RL2, L2_9, a3, TGF_1, CMX_5] is not transcendence basis
+Collection [CMX_9, L2_8, c, L2_2, g1_3, TGF_11, L2_11, g3_0, g1_2, CMX_11, rho1, g2_7, dL1, CMX_6, g3_7, g2_6, TGF_6, gamma3] is not transcendence basis
+Collection [CMX_9, L2_9, TGF_0, CMX_5, g1_6, g3_4, kOBRankL, g1_11, Rrob, g2_6, g2_4, TGF_5, L2_5, L2_3, g3_2, TGF_10, CMX_8, L2_8] is not transcendence basis
+Collection [CMX_9, dL2, g1_12, g1_6, L2_9, g2_4, g2_8, CMX_7, g3_9, TGF_3, g2_7, a3, dRankl, g2_11, CMX_12, g2_0, g2_5, g1_8] is not transcendence basis
+Collection [CMX_9, g2_1, L2_1, TGF_11, g2_5, L1_0, CMX_7, rho3, gamma3, TGF_10, L2_7, CMX_11, dL2, kL2L1, TGF_2, g1_2, CMX_4, g3_5] is not transcendence basis
+Collection [L1_0, L2_7, TGF_11, L2_1, g3_2, g2_0, g1_6, g2_11, g2_2, TGF_4, g3_6, L2_8, Rrob, dL1, rho3, g2_7, gamma3, L2_3] is not transcendence basis
+Collection [L1_0, g1_1, g2_13, g3_8, g3_7, g2_3, L2_3, g3_2, kL2CMX, g2_11, c, L2_2, a1, g2_2, g1_13, g2_0, g1_7, g3_6] is not transcendence basis
+Collection [L1_0, kSS, g1_7, TGF_9, DeltaGamma2, g1_2, g3_8, g2_1, rho2, L2_5, g1_1, g3_0, g2_11, rho3, g2_10, rho1, TGF_2, g3_9] is not transcendence basis
+Collection [L2_0, CMX_12, CMX_8, CMX_7, g3_9, L2_2, g2_7, L2_10, g2_12, a2, RL1, RL2, g1_5, TGF_4, g1_13, g3_0, TGF_9, CMX_0] is not transcendence basis
+Collection [L2_0, TGF_3, L2_12, gamma1, dL2, g2_0, RL2, Delta2Gamma2, kSS, TGF_1, a3, g3_5, g3_2, g1_3, TGF_0, g1_6, TGF_8, g2_10] is not transcendence basis
+Collection [L2_0, g2_11, CMX_9, g3_0, kOBRankL, rho1, kCMXL, TGF_5, L2_2, L2_11, dL1, kSS, g3_9, g1_2, RL2, dOC, g1_6, kL2CMX] is not transcendence basis
+Collection [L2_0, g2_9, g3_5, TGF_4, g2_5, g1_5, TGF_3, L2_4, g2_3, g2_2, kL2CMX, g2_11, L2_3, CMX_9, g2_1, g1_9, CMX_4, L2_6] is not transcendence basis
+Collection [L2_0, g3_7, L2_12, g3_5, CMX_9, g3_0, CMX_6, g2_12, g2_8, TGF_5, g2_0, g3_9, kL2L1, TGF_11, g1_4, g3_4, L2_3, CMX_2] is not transcendence basis
+Collection [L2_0, gamma3, c, DeltaGamma2, g2_4, g1_8, g2_8, g2_11, g2_0, L2_3, g2_5, L2_4, CMX_12, CMX_10, g3_1, g2_7, rho2, a3] is not transcendence basis
+Collection [L2_0, kCMXL, g1_12, g1_2, kOBRankL, TGF_12, L2_3, L2_8, L2_11, TGF_6, g3_1, g1_6, g2_3, CMX_9, kOBL1, rho1, dOC, g2_8] is not transcendence basis
+Collection [L2_1, L2_0, g2_2, L2_8, g1_1, g2_0, CMX_10, CMX_5, g2_7, CMX_3, kL2CMX, g3_4, TGF_4, RL2, g3_2, TGF_1, kint, dOC] is not transcendence basis
+Collection [L2_1, a2, TGF_3, g2_7, g1_3, g1_7, g2_11, g3_5, g3_0, CMX_6, g3_3, dL2, a1, g3_9, CMX_10, g1_9, g1_12, rho1] is not transcendence basis
+Collection [L2_10, CMX_0, a1, g2_4, L2_3, L2_8, g1_0, CMX_2, TGF_7, g1_12, L2_2, TGF_12, kOCTGF, L2_12, g3_2, g1_11, g1_3, rho3] is not transcendence basis
+Collection [L2_10, L2_11, g2_10, TGF_3, g2_2, g3_2, a3, gamma1, rho1, gamma3, g3_4, Delta2Gamma2, g2_4, g1_12, L2_0, L2_3, dL2, g2_0] is not transcendence basis
+Collection [L2_10, TGF_4, CMX_12, a1, a3, L2_9, L2_2, TGF_5, g1_9, CMX_4, g2_0, kL2L1, dL1, g2_8, CMX_11, g2_2, TGF_7, dRankl] is not transcendence basis
+Collection [L2_10, g1_4, g3_2, TGF_4, g1_3, g1_1, L2_6, g3_8, g3_5, RL1, CMX_1, kSS, TGF_6, CMX_0, dRankl, L2_1, g2_7, kOBL1] is not transcendence basis
+Collection [L2_10, g3_7, g2_11, RL2, rho3, g2_7, CMX_6, RL1, kL2CMX, g1_9, g3_9, TGF_4, g1_12, c, CMX_12, L2_4, CMX_0, TGF_5] is not transcendence basis
+Collection [L2_10, rho1, DeltaGamma2, CMX_3, L2_12, a3, g1_13, L2_11, g1_5, g3_4, L2_5, dRankl, L2_9, gamma1, kL2CMX, L2_6, g1_11, CMX_9] is not transcendence basis
+Collection [L2_11, g1_6, g2_0, g2_7, CMX_9, g1_13, g1_12, RL1, g3_5, kOBL1, Rrob, TGF_5, L2_2, TGF_3, CMX_5, CMX_3, kSS, Delta3Gamma3] is not transcendence basis
+Collection [L2_11, g2_0, g2_2, TGF_6, TGF_2, g1_9, L2_9, g2_13, dRankl, g3_2, L2_0, g3_1, TGF_0, a3, g2_6, RL2, rho3, dOC] is not transcendence basis
+Collection [L2_11, kint, TGF_12, TGF_5, g3_6, kOBRankL, TGF_8, L2_4, g3_4, L2_5, TGF_7, Delta3Gamma3, dRankl, g2_5, g1_8, g1_6, Delta2Gamma2, g2_6] is not transcendence basis
+Collection [L2_11, rho1, g1_12, g2_7, TGF_6, RL2, g3_2, L2_6, CMX_5, CMX_0, CMX_12, L1_0, g2_4, g2_5, TGF_9, TGF_11, g3_9, g1_8] is not transcendence basis
+Collection [L2_11, rho1, g3_8, L2_6, TGF_10, L2_0, CMX_1, dOC, TGF_0, dL2, kL2L1, g2_3, g1_8, g1_5, TGF_7, g1_11, CMX_6, g1_0] is not transcendence basis
+Collection [L2_12, L2_1, g3_4, a1, L2_10, g3_6, g3_5, g1_11, CMX_12, L2_6, kSS, dL2, TGF_3, g1_3, TGF_0, TGF_7, kL2L1, TGF_10] is not transcendence basis
+Collection [L2_12, TGF_3, TGF_12, CMX_9, RL2, kOBL1, g3_4, CMX_3, g3_8, g1_12, g1_2, kOCTGF, g3_5, TGF_2, Delta3Gamma3, dL2, rho3, kL2L1] is not transcendence basis
+Collection [L2_12, g2_13, g2_12, g3_7, g3_1, gamma3, kL2CMX, g1_7, L2_11, a1, L2_9, g2_7, c, g2_5, L2_2, g2_4, CMX_6, TGF_2] is not transcendence basis
+Collection [L2_12, g2_3, gamma3, L2_10, L2_1, CMX_8, RL1, TGF_2, g1_11, kOBRankL, L2_3, g3_1, rho1, a3, Delta2Gamma2, g2_6, L2_11, DeltaGamma2] is not transcendence basis
+Collection [L2_12, gamma3, L2_8, gamma1, CMX_8, RL1, TGF_0, g1_12, L2_3, g3_3, g3_1, g2_7, TGF_8, g1_3, L2_10, L2_2, L2_7, L1_0] is not transcendence basis
+Collection [L2_2, dL1, c, g2_13, g2_1, kCMXL, g3_5, g2_7, g1_4, g1_1, g1_10, kOCTGF, TGF_9, L2_3, g1_13, TGF_6, g1_9, g3_1] is not transcendence basis
+Collection [L2_2, g1_5, Delta2Gamma2, CMX_12, g1_8, TGF_4, TGF_3, kOCTGF, kL2L1, L2_12, g1_3, g2_11, g2_12, kOBRankL, c, CMX_3, a1, g3_7] is not transcendence basis
+Collection [L2_2, kint, a3, RL1, g2_7, TGF_8, g3_4, CMX_5, g2_5, g2_3, L2_7, CMX_4, g3_7, g3_8, TGF_5, RL2, g1_9, g3_2] is not transcendence basis
+Collection [L2_2, rho3, CMX_12, CMX_0, CMX_9, TGF_11, g1_0, dL1, a3, TGF_5, CMX_4, TGF_7, g2_2, CMX_3, a2, g3_1, gamma1, g1_7] is not transcendence basis
+Collection [L2_3, L2_2, g3_3, g2_13, CMX_8, Delta2Gamma2, TGF_12, CMX_1, rho1, RL2, TGF_4, g1_10, CMX_7, kOCTGF, g3_4, CMX_11, g2_4, gamma1] is not transcendence basis
+Collection [L2_3, RL1, gamma3, L2_9, L2_6, g1_4, a2, g2_5, g3_0, g2_0, kOCTGF, TGF_7, Delta3Gamma3, g1_9, L2_10, TGF_1, g1_7, g2_4] is not transcendence basis
+Collection [L2_3, TGF_8, kCMXL, g1_11, RL1, TGF_4, g1_10, g1_9, g3_0, rho3, gamma1, L2_10, g2_9, TGF_0, rho1, g2_3, CMX_1, RL2] is not transcendence basis
+Collection [L2_3, kint, L2_2, L1_0, kL2CMX, L2_11, CMX_8, CMX_4, TGF_11, L2_4, TGF_9, g3_6, g2_6, TGF_1, dL2, L2_10, g2_13, TGF_7] is not transcendence basis
+Collection [L2_4, TGF_4, g2_7, L1_0, L2_12, g1_10, CMX_0, g1_2, g3_1, TGF_10, Rrob, CMX_6, CMX_4, RL1, g2_11, TGF_11, CMX_3, g3_0] is not transcendence basis
+Collection [L2_4, TGF_4, kOCTGF, kint, g2_7, CMX_8, g1_5, TGF_5, a2, gamma1, CMX_6, g3_5, g3_8, g3_2, g2_6, g1_12, dL1, TGF_7] is not transcendence basis
+Collection [L2_5, L2_9, kL2CMX, L1_0, g2_3, kSS, CMX_5, g1_0, g2_13, dL1, rho1, g3_9, g1_11, rho3, g3_6, CMX_3, CMX_6, TGF_7] is not transcendence basis
+Collection [L2_5, TGF_4, g2_9, kOBL1, TGF_9, g1_13, g1_9, g3_9, TGF_1, CMX_10, g3_4, dOC, L2_0, TGF_6, L1_0, kL2CMX, TGF_0, Delta2Gamma2] is not transcendence basis
+Collection [L2_5, c, g1_5, L2_6, a1, g1_6, TGF_0, g1_3, g3_5, g3_1, g2_8, dL2, g1_13, g1_10, L2_10, kL2CMX, gamma3, TGF_7] is not transcendence basis
+Collection [L2_5, dL2, kint, CMX_0, g3_7, CMX_8, TGF_9, L2_4, g2_5, g1_5, g2_9, g2_8, TGF_2, g3_5, g1_11, TGF_5, c, g2_12] is not transcendence basis
+Collection [L2_5, g1_3, g2_5, g2_10, a1, TGF_7, TGF_1, g2_12, rho3, kL2L1, kint, L2_2, g2_0, g2_9, c, g2_7, TGF_4, CMX_3] is not transcendence basis
+Collection [L2_5, g3_9, g3_3, g1_5, CMX_12, g3_8, g2_2, CMX_0, g2_11, RL1, L2_1, L2_10, Delta3Gamma3, g1_2, dL1, g2_5, g1_10, DeltaGamma2] is not transcendence basis
+Collection [L2_6, CMX_5, CMX_11, g1_11, DeltaGamma2, g2_9, g1_6, L2_11, g2_13, g1_8, g3_9, TGF_5, L2_4, g3_1, c, g1_7, L2_8, g2_8] is not transcendence basis
+Collection [L2_6, TGF_12, g3_2, DeltaGamma2, rho2, c, g1_10, dOC, dL2, g2_12, a1, g2_4, g3_4, g1_7, L2_0, CMX_2, L2_1, TGF_6] is not transcendence basis
+Collection [L2_6, g1_7, TGF_8, dL1, TGF_12, L2_2, g1_2, g2_13, g1_12, g2_4, g2_3, L2_7, g3_5, g1_0, g3_0, CMX_4, DeltaGamma2, L2_0] is not transcendence basis
+Collection [L2_7, CMX_4, L2_6, kSS, CMX_1, g1_11, g1_9, g3_9, g1_4, dL2, kL2CMX, g3_2, g2_0, g1_8, Delta2Gamma2, CMX_5, L2_11, g2_6] is not transcendence basis
+Collection [L2_7, L2_8, RL1, g2_5, g1_0, L2_9, TGF_11, TGF_8, rho2, g1_4, Rrob, g1_13, g2_7, g1_6, TGF_12, g2_0, g2_1, TGF_10] is not transcendence basis
+Collection [L2_7, TGF_0, TGF_4, rho2, gamma1, g1_9, rho3, TGF_8, CMX_11, g1_4, Rrob, L2_10, CMX_4, dL2, gamma3, a1, g1_2, g1_10] is not transcendence basis
+Collection [L2_7, TGF_3, g3_5, CMX_7, g2_7, CMX_0, kL2CMX, g3_1, gamma1, g1_0, g2_5, TGF_12, g2_6, DeltaGamma2, g3_4, CMX_9, CMX_3, g3_9] is not transcendence basis
+Collection [L2_7, a1, g3_7, TGF_10, CMX_9, g1_6, gamma3, g1_3, g3_6, L2_2, TGF_0, CMX_2, L2_0, g1_5, dOC, g1_11, TGF_7, kL2L1] is not transcendence basis
+Collection [L2_7, kSS, a2, DeltaGamma2, TGF_10, TGF_9, L2_2, kCMXL, kOBL1, g1_8, g2_4, CMX_1, g1_7, gamma3, L2_3, CMX_10, Delta3Gamma3, Rrob] is not transcendence basis
+Collection [L2_8, CMX_7, CMX_11, g1_2, g2_12, L2_5, L2_4, c, L2_7, g3_7, g3_6, CMX_10, kL2CMX, TGF_9, g2_8, TGF_8, dL2, kL2L1] is not transcendence basis
+Collection [L2_8, L2_4, kint, TGF_7, CMX_2, a3, g1_1, kCMXL, TGF_2, kOBRankL, CMX_3, dL1, TGF_4, g3_3, gamma3, g1_10, g2_9, DeltaGamma2] is not transcendence basis
+Collection [L2_8, TGF_1, g3_9, g3_3, g1_8, RL2, L1_0, TGF_2, kL2CMX, L2_4, dOC, g3_6, g3_1, CMX_8, Rrob, g1_11, g1_5, kOCTGF] is not transcendence basis
+Collection [L2_8, TGF_12, CMX_2, g2_5, CMX_10, g2_12, g2_10, g1_1, g2_8, g1_10, g3_0, kCMXL, kOBRankL, g3_6, gamma3, dL2, Delta2Gamma2, L2_9] is not transcendence basis
+Collection [L2_9, CMX_1, dOC, CMX_10, g2_3, a3, CMX_7, rho2, dL2, L2_2, TGF_4, a2, L2_1, kOBRankL, g3_4, kL2CMX, g2_6, g1_9] is not transcendence basis
+Collection [L2_9, TGF_8, g3_0, L2_4, CMX_0, CMX_5, g2_13, g2_8, L2_1, kOBRankL, a1, g2_12, dL1, Rrob, CMX_11, g1_9, g1_10, kSS] is not transcendence basis
+Collection [L2_9, a2, Delta3Gamma3, g3_7, Delta2Gamma2, L1_0, gamma3, rho1, dL1, g2_9, kOBL1, g1_10, g2_2, g2_3, g2_6, g1_4, TGF_3, L2_5] is not transcendence basis
+Collection [L2_9, g2_1, TGF_2, CMX_5, g2_9, CMX_10, a3, L2_11, g2_10, TGF_3, g1_12, Rrob, TGF_10, g2_6, rho3, kCMXL, DeltaGamma2, g3_5] is not transcendence basis
+Collection [L2_9, g3_3, RL2, g2_0, kOBRankL, L2_11, g1_9, CMX_12, c, g2_1, g2_12, rho3, CMX_6, g2_3, g3_4, TGF_4, L2_6, L2_1] is not transcendence basis
+Collection [RL1, L2_9, CMX_4, L2_4, L2_0, c, g2_9, L2_8, TGF_2, kL2L1, g1_12, g2_3, rho2, L2_2, g3_5, g2_0, g1_4, g1_2] is not transcendence basis
+Collection [RL1, g2_11, g1_4, CMX_3, g1_3, L2_4, L2_1, a1, g2_0, CMX_7, g1_11, g2_7, kOBL1, L2_5, TGF_5, g2_4, CMX_0, g1_7] is not transcendence basis
+Collection [RL1, kOBL1, kCMXL, g3_7, rho1, g3_5, g3_8, TGF_2, g2_3, TGF_7, c, a3, g3_9, g3_6, TGF_11, L2_11, TGF_3, kOCTGF] is not transcendence basis
+Collection [RL2, L2_5, CMX_2, kOCTGF, c, rho2, dRankl, L2_0, TGF_5, g2_0, kOBRankL, a1, CMX_1, g1_4, g3_6, g2_8, CMX_7, L2_1] is not transcendence basis
+Collection [RL2, g1_7, g1_0, g1_8, DeltaGamma2, g1_1, rho2, CMX_9, g3_7, CMX_8, RL1, g2_7, Delta2Gamma2, L2_4, g2_9, g2_3, L2_5, TGF_0] is not transcendence basis
+Collection [RL2, g1_7, g1_2, dL2, CMX_3, g3_8, g3_0, TGF_1, g3_7, DeltaGamma2, g2_1, g2_2, g3_1, L2_4, g1_6, L2_12, c, dRankl] is not transcendence basis
+Collection [RL2, g2_7, Delta2Gamma2, CMX_11, g3_2, CMX_5, L2_0, TGF_1, g1_2, g1_10, g2_4, L2_3, kL2L1, TGF_4, L2_11, g1_1, kOCTGF, a3] is not transcendence basis
+Collection [RL2, g2_8, Delta3Gamma3, Rrob, L2_9, a2, g2_13, TGF_9, g2_12, g2_10, L2_0, g2_9, CMX_12, L2_1, g3_2, g3_4, g3_6, TGF_0] is not transcendence basis
+Collection [Rrob, TGF_7, g3_1, g3_7, TGF_6, g2_4, g2_7, CMX_2, c, g2_11, TGF_10, g1_4, CMX_12, L2_12, L2_6, g1_6, kCMXL, DeltaGamma2] is not transcendence basis
+Collection [Rrob, a2, g2_0, g1_8, g3_5, rho2, L2_7, g1_3, L2_1, Delta3Gamma3, g3_4, L2_4, g3_9, TGF_12, CMX_4, g2_13, g2_6, CMX_1] is not transcendence basis
+Collection [Rrob, g2_1, TGF_2, g2_11, kOBL1, TGF_4, L2_3, CMX_10, g2_13, g1_8, kOBRankL, TGF_0, L1_0, a3, g2_12, L2_11, g2_3, L2_9] is not transcendence basis
+Collection [Rrob, kOBRankL, gamma3, TGF_5, kSS, TGF_3, g3_5, TGF_12, g2_13, g1_12, a1, TGF_7, g2_12, g3_3, kOCTGF, RL2, g1_3, kL2L1] is not transcendence basis
+Collection [TGF_0, TGF_10, g1_8, TGF_5, CMX_12, g2_12, kL2CMX, g1_13, g1_11, TGF_1, g3_9, L2_11, Delta2Gamma2, CMX_8, CMX_9, CMX_2, gamma1, g3_1] is not transcendence basis
+Collection [TGF_0, dOC, g1_0, L2_11, g3_3, L2_7, a3, TGF_11, L2_4, kCMXL, RL1, CMX_3, CMX_0, kOCTGF, L2_2, CMX_6, gamma1, TGF_3] is not transcendence basis
+Collection [TGF_0, g1_5, g3_6, TGF_8, c, Delta3Gamma3, kL2L1, g2_5, rho3, CMX_6, CMX_11, a3, L2_4, g2_2, g3_8, dRankl, L2_9, g1_0] is not transcendence basis
+Collection [TGF_0, g2_10, L2_6, g2_5, g2_2, CMX_6, dL2, TGF_5, c, g1_7, TGF_8, g3_2, TGF_7, TGF_12, CMX_10, CMX_7, L2_4, g1_6] is not transcendence basis
+Collection [TGF_0, g2_8, rho1, CMX_8, g1_12, RL2, g1_11, TGF_4, CMX_4, dL2, g2_7, g3_8, g3_6, CMX_11, g1_6, rho2, TGF_3, L2_0] is not transcendence basis
+Collection [TGF_0, kOBRankL, g1_10, CMX_2, TGF_12, L2_9, L2_12, CMX_1, g2_8, Delta3Gamma3, g1_2, gamma1, g2_9, g3_7, L2_3, dOC, g1_6, CMX_7] is not transcendence basis
+Collection [TGF_1, CMX_10, CMX_1, RL2, dRankl, g2_2, L2_7, kL2CMX, a1, g2_0, g2_9, g1_9, g1_11, g2_6, a3, dL2, g3_1, kSS] is not transcendence basis
+Collection [TGF_1, L2_1, kCMXL, L2_0, L2_9, g2_9, g1_2, g3_2, TGF_3, a1, CMX_2, g3_8, TGF_0, TGF_9, CMX_0, TGF_6, Delta3Gamma3, g2_5] is not transcendence basis
+Collection [TGF_1, L2_6, c, L2_11, g3_3, g2_9, Delta2Gamma2, L2_7, gamma3, L2_12, g2_4, CMX_5, g2_10, g1_3, gamma1, RL2, L2_0, g1_8] is not transcendence basis
+Collection [TGF_1, RL1, g2_9, g2_3, CMX_0, TGF_0, dL2, L2_3, dL1, dOC, TGF_6, CMX_6, kOBRankL, g1_2, CMX_11, g3_4, g2_1, kL2CMX] is not transcendence basis
+Collection [TGF_1, Rrob, kL2CMX, RL2, g3_7, g3_6, g2_3, g2_10, a3, g2_5, g1_9, a2, g1_1, CMX_6, rho1, TGF_9, L1_0, g1_13] is not transcendence basis
+Collection [TGF_1, g2_10, Delta3Gamma3, g2_13, CMX_0, TGF_12, g3_6, TGF_7, g1_1, g2_5, TGF_0, CMX_5, TGF_8, L1_0, CMX_1, CMX_9, kL2L1, L2_1] is not transcendence basis
+Collection [TGF_10, CMX_0, g3_2, kOCTGF, g1_0, g3_1, g2_7, c, rho3, g1_9, L2_8, L2_9, g3_5, gamma3, g2_8, g3_4, L2_2, L1_0] is not transcendence basis
+Collection [TGF_10, L2_8, g2_11, CMX_3, g3_3, TGF_5, g2_2, g2_5, TGF_6, g2_7, g1_1, TGF_7, TGF_3, CMX_9, kint, g1_12, dOC, g3_7] is not transcendence basis
+Collection [TGF_10, Rrob, CMX_7, g2_0, TGF_0, g2_5, dRankl, DeltaGamma2, g2_8, g2_6, g1_9, g2_11, CMX_8, kL2L1, CMX_10, g1_5, rho3, g1_6] is not transcendence basis
+Collection [TGF_10, TGF_6, gamma1, CMX_6, g2_5, L2_2, g1_0, g1_12, g1_9, TGF_12, g2_11, g3_2, RL1, TGF_3, g2_8, g1_3, kOBL1, a2] is not transcendence basis
+Collection [TGF_10, DeltaGamma2, CMX_12, L2_11, TGF_11, TGF_9, gamma1, TGF_5, g1_12, g1_1, Rrob, RL1, CMX_2, g2_9, kint, g3_3, TGF_7, g2_4] is not transcendence basis
+Collection [TGF_11, RL1, CMX_6, gamma3, g1_13, kL2CMX, rho2, CMX_7, g3_6, CMX_2, L2_10, kCMXL, L2_6, Rrob, g3_0, CMX_10, g1_5, CMX_3] is not transcendence basis
+Collection [TGF_11, TGF_0, rho1, g2_5, gamma1, g2_6, kCMXL, TGF_9, TGF_3, rho2, TGF_4, g2_0, CMX_6, a3, TGF_7, L2_4, g1_10, TGF_5] is not transcendence basis
+Collection [TGF_11, TGF_2, rho3, g1_2, gamma3, g3_8, DeltaGamma2, dL2, g3_6, g2_1, g1_4, TGF_3, g2_11, g2_8, L2_7, g1_1, a2, TGF_4] is not transcendence basis
+Collection [TGF_11, dOC, CMX_7, g1_4, g3_1, RL2, L2_7, a2, kOCTGF, g1_10, Delta3Gamma3, dL2, CMX_1, L2_12, g2_7, L2_1, Rrob, L2_8] is not transcendence basis
+Collection [TGF_11, g2_11, rho1, TGF_10, g2_0, g3_2, TGF_12, L2_6, CMX_6, CMX_7, L2_7, L2_10, L2_2, g3_3, g3_1, c, L1_0, TGF_3] is not transcendence basis
+Collection [TGF_11, g2_13, g1_6, L2_2, L2_1, g2_5, L2_10, g1_0, g1_11, g3_5, TGF_1, CMX_9, kL2CMX, g1_12, rho2, g3_0, gamma1, TGF_8] is not transcendence basis
+Collection [TGF_11, kL2CMX, kCMXL, g3_8, kOBRankL, L2_12, L2_6, g2_6, dL2, g3_4, CMX_6, RL1, gamma1, CMX_12, TGF_3, kOBL1, g1_1, CMX_11] is not transcendence basis
+Collection [TGF_11, kint, CMX_5, g1_2, dOC, kOCTGF, g3_5, g1_7, TGF_1, g1_11, CMX_6, TGF_3, g3_4, g1_9, CMX_0, g1_10, Delta3Gamma3, kL2L1] is not transcendence basis
+Collection [TGF_12, CMX_12, CMX_8, RL2, L2_9, L2_1, g3_6, Delta3Gamma3, kOBL1, g2_11, g1_1, TGF_2, DeltaGamma2, L2_0, rho1, L2_12, gamma1, g2_12] is not transcendence basis
+Collection [TGF_12, L2_3, TGF_9, CMX_8, g2_2, TGF_4, L2_6, g2_5, a2, CMX_0, kL2CMX, TGF_2, g2_4, g2_6, g1_5, g2_10, g1_9, g1_6] is not transcendence basis
+Collection [TGF_12, dL1, g2_1, g3_7, g1_12, CMX_6, g1_6, CMX_5, g1_4, kOBL1, g2_7, g2_6, g2_13, CMX_8, L2_9, kint, a1, TGF_5] is not transcendence basis
+Collection [TGF_12, g1_10, kint, g3_1, g2_6, c, DeltaGamma2, g2_11, CMX_8, g1_3, g1_12, kCMXL, dRankl, L2_12, g3_7, CMX_11, CMX_12, g2_5] is not transcendence basis
+Collection [TGF_12, g2_2, L2_8, kOBL1, TGF_3, TGF_0, Delta3Gamma3, dL2, TGF_4, RL1, g3_4, g2_0, CMX_8, kint, L2_3, kOBRankL, kL2L1, TGF_8] is not transcendence basis
+Collection [TGF_12, g2_9, g1_2, TGF_8, g1_12, CMX_6, g3_1, TGF_11, g1_5, CMX_3, rho3, g3_6, dOC, L2_12, Rrob, L2_4, L2_5, TGF_4] is not transcendence basis
+Collection [TGF_12, Delta2Gamma2, g1_2, g1_4, dL2, L2_4, g1_13, CMX_5, rho1, TGF_3, TGF_1, L2_7, g2_12, CMX_4, Rrob, g1_7, g2_0, g3_9] is not transcendence basis
+Collection [TGF_2, CMX_11, g1_2, rho3, g2_2, CMX_6, TGF_9, L2_2, gamma3, L2_11, a1, dOC, rho1, g2_6, g2_12, L2_5, TGF_6, g3_3] is not transcendence basis
+Collection [TGF_2, TGF_4, L2_8, g1_0, g3_8, TGF_6, L2_6, kOBRankL, CMX_11, TGF_0, g2_3, L2_1, L2_12, g1_3, CMX_1, TGF_7, g1_9, TGF_11] is not transcendence basis
+Collection [TGF_2, TGF_7, CMX_1, g3_4, L2_0, g2_6, Rrob, L2_5, kOCTGF, g2_11, a3, CMX_8, RL1, gamma3, L2_7, dRankl, g2_3, g1_10] is not transcendence basis
+Collection [TGF_2, dL2, L2_9, RL2, L2_10, TGF_7, dRankl, CMX_3, g2_5, DeltaGamma2, CMX_10, Delta2Gamma2, g1_8, g2_1, g2_7, L2_8, L2_3, g3_9] is not transcendence basis
+Collection [TGF_2, dOC, CMX_9, TGF_11, CMX_5, TGF_10, CMX_0, g2_0, L2_5, CMX_2, DeltaGamma2, CMX_1, kL2CMX, dL1, L2_8, g1_1, g2_9, Delta2Gamma2] is not transcendence basis
+Collection [TGF_2, g1_4, g2_4, L2_12, CMX_6, g2_2, Rrob, L2_6, TGF_12, g2_3, Delta3Gamma3, kCMXL, TGF_1, L2_10, dRankl, g1_11, g1_5, CMX_4] is not transcendence basis
+Collection [TGF_2, g2_3, g1_0, kSS, g2_10, L2_6, rho2, CMX_2, g1_5, CMX_0, TGF_5, g1_2, g1_11, rho1, CMX_9, g1_13, g3_6, g2_8] is not transcendence basis
+Collection [TGF_2, kSS, g3_1, RL2, CMX_12, L2_5, dL1, g3_6, L2_12, dOC, kOCTGF, CMX_1, L2_9, g1_4, CMX_4, g1_6, kCMXL, g3_9] is not transcendence basis
+Collection [TGF_3, CMX_9, dRankl, L2_5, g1_8, g1_6, L1_0, CMX_2, L2_3, TGF_5, L2_9, g3_8, g1_7, L2_0, RL1, g1_1, rho2, L2_11] is not transcendence basis
+Collection [TGF_3, L2_5, L2_4, g2_12, CMX_0, L2_0, g2_0, kOBRankL, g3_2, CMX_4, g2_7, CMX_9, g2_9, g1_4, g1_3, CMX_2, g2_2, L2_9] is not transcendence basis
+Collection [TGF_3, g1_7, TGF_10, CMX_8, rho2, CMX_2, Delta2Gamma2, TGF_12, L2_0, TGF_11, g1_9, L2_10, c, g3_8, g1_3, g1_0, CMX_1, CMX_4] is not transcendence basis
+Collection [TGF_3, g2_7, g1_10, TGF_9, dOC, L2_5, g3_5, g1_3, CMX_3, g1_6, g3_6, g1_12, TGF_12, g3_3, gamma3, TGF_0, kL2CMX, TGF_4] is not transcendence basis
+Collection [TGF_4, CMX_12, CMX_5, g1_4, TGF_0, L2_11, g2_12, TGF_12, dL2, L2_0, g3_5, L2_2, g3_3, CMX_7, g1_2, CMX_2, g1_9, c] is not transcendence basis
+Collection [TGF_4, g2_1, g1_1, g2_5, g3_4, rho3, L2_3, g3_3, L2_2, g1_6, g1_2, TGF_5, a1, TGF_1, L2_4, L2_11, Rrob, TGF_9] is not transcendence basis
+Collection [TGF_5, g1_2, g1_8, g2_4, TGF_6, TGF_12, g1_10, TGF_11, TGF_9, L2_6, Rrob, g3_8, g3_0, L2_8, Delta3Gamma3, g2_10, CMX_0, L2_5] is not transcendence basis
+Collection [TGF_5, g2_6, kSS, g2_13, rho1, g1_7, g3_0, g2_2, a1, TGF_7, dRankl, RL1, g2_8, g3_4, L2_6, gamma3, DeltaGamma2, dL1] is not transcendence basis
+Collection [TGF_5, g3_5, TGF_12, L2_6, Rrob, TGF_2, Delta3Gamma3, TGF_4, kOBRankL, L2_1, rho2, g1_8, TGF_9, L2_4, CMX_1, g2_5, g1_1, g2_7] is not transcendence basis
+Collection [TGF_5, g3_8, TGF_6, Delta2Gamma2, TGF_0, CMX_12, dL2, g2_12, TGF_9, L2_4, rho3, g2_1, g1_9, g3_7, g2_8, L2_6, kSS, a2] is not transcendence basis
+Collection [TGF_6, CMX_3, dL1, Rrob, kOBRankL, g1_11, DeltaGamma2, rho1, g2_3, kL2CMX, g1_8, g3_9, CMX_6, TGF_11, TGF_1, L2_12, CMX_0, TGF_4] is not transcendence basis
+Collection [TGF_6, CMX_7, kL2L1, RL1, L2_6, g1_3, kint, CMX_10, L2_0, rho2, g3_5, g1_7, CMX_9, g2_3, dOC, kOBRankL, L2_12, L2_2] is not transcendence basis
+Collection [TGF_6, g1_6, g3_0, L2_9, L2_5, g1_11, g1_7, dL1, TGF_12, kOCTGF, kCMXL, CMX_0, g2_4, TGF_2, L2_1, kL2CMX, CMX_4, kSS] is not transcendence basis
+Collection [TGF_6, g2_10, kOBRankL, g2_2, g1_5, g1_1, g3_1, g2_7, g2_12, g1_7, g1_6, CMX_7, TGF_0, L2_0, g1_2, L2_2, L2_6, rho2] is not transcendence basis
+Collection [TGF_7, CMX_11, g2_5, dOC, TGF_5, Delta3Gamma3, rho3, g1_2, Rrob, TGF_12, CMX_5, g2_6, TGF_1, g3_3, g3_7, kSS, g3_6, L2_11] is not transcendence basis
+Collection [TGF_7, L2_10, a1, g1_9, TGF_2, CMX_3, g3_1, kSS, a3, g2_0, CMX_9, a2, L2_6, TGF_5, kOBRankL, CMX_1, g3_6, g1_12] is not transcendence basis
+Collection [TGF_7, L2_4, kint, TGF_1, L2_9, CMX_6, CMX_0, g1_0, a2, TGF_10, g3_6, L2_3, CMX_2, a1, g1_3, dL2, kL2CMX, kOBL1] is not transcendence basis
+Collection [TGF_7, dOC, g1_10, CMX_11, g2_5, rho1, CMX_2, CMX_6, CMX_7, g2_7, g2_9, TGF_0, Delta2Gamma2, g3_9, g2_12, L2_5, g2_8, a1] is not transcendence basis
+Collection [TGF_7, dRankl, TGF_0, dOC, g3_0, dL1, g3_6, L2_5, g2_0, CMX_3, g1_10, g3_5, g1_8, g1_11, g2_13, TGF_5, g1_5, g1_0] is not transcendence basis
+Collection [TGF_7, g1_7, CMX_11, g3_6, g1_13, TGF_0, TGF_2, g2_2, TGF_1, g2_4, g3_2, L2_7, g1_4, g1_12, Delta3Gamma3, rho1, g1_3, a1] is not transcendence basis
+Collection [TGF_7, g2_13, CMX_12, g1_10, g1_5, dL1, g1_3, L2_7, L2_11, g1_7, Delta2Gamma2, TGF_11, CMX_5, kL2L1, CMX_10, kint, TGF_6, L2_8] is not transcendence basis
+Collection [TGF_7, kL2CMX, g1_3, g1_8, TGF_0, g2_9, L2_11, TGF_4, RL2, L2_9, kL2L1, L2_4, g3_2, dL1, CMX_8, kOBRankL, g2_3, L1_0] is not transcendence basis
+Collection [TGF_8, TGF_11, TGF_2, Delta3Gamma3, g2_13, g2_12, TGF_5, L2_10, TGF_12, kint, c, CMX_4, g1_12, TGF_10, CMX_7, kOCTGF, L2_6, g3_4] is not transcendence basis
+Collection [TGF_8, g1_3, g1_12, CMX_10, gamma1, CMX_6, g3_8, dRankl, Delta3Gamma3, g3_1, CMX_8, CMX_11, L2_4, g2_12, TGF_9, g3_4, dL1, g1_0] is not transcendence basis
+Collection [TGF_8, g2_1, g3_3, kint, Rrob, CMX_12, L2_6, g1_3, g2_12, kCMXL, g1_10, gamma3, L2_5, CMX_0, g1_11, g2_6, g1_12, g2_13] is not transcendence basis
+Collection [TGF_8, g2_12, g2_13, dL1, CMX_12, g1_7, g1_13, g1_5, TGF_0, Delta3Gamma3, g1_8, g3_8, g2_5, g1_3, g1_11, a1, g2_7, g3_6] is not transcendence basis
+Collection [TGF_8, Delta2Gamma2, g1_3, kCMXL, Rrob, TGF_2, g3_5, CMX_9, kL2CMX, g2_1, g2_12, L2_1, CMX_4, g1_13, dL1, TGF_4, kOBL1, TGF_11] is not transcendence basis
+Collection [TGF_8, kOBRankL, CMX_1, kL2L1, g1_9, RL2, gamma3, L2_10, g1_7, kCMXL, Delta2Gamma2, CMX_0, g1_13, g1_11, CMX_4, L2_2, g3_7, TGF_11] is not transcendence basis
+Collection [TGF_9, CMX_10, L2_0, L2_2, TGF_3, CMX_2, g2_5, L2_3, g2_8, g1_4, L2_1, g2_11, dRankl, TGF_0, gamma1, rho3, g1_0, g1_2] is not transcendence basis
+Collection [TGF_9, TGF_2, g3_7, g2_3, g1_13, TGF_6, g2_4, g2_0, TGF_3, L2_7, TGF_5, g1_2, g3_9, a1, TGF_8, g1_7, RL1, g2_13] is not transcendence basis
+Collection [a1, CMX_12, CMX_3, g3_0, g3_3, kOBRankL, L2_11, TGF_2, kint, L2_3, L2_5, Delta2Gamma2, L2_2, g3_6, L2_10, TGF_9, dRankl, g1_11] is not transcendence basis
+Collection [a1, CMX_9, Rrob, L2_3, g2_12, g2_0, rho2, g1_10, g1_0, dOC, a2, g3_2, kL2CMX, TGF_1, TGF_6, g3_6, TGF_11, g2_2] is not transcendence basis
+Collection [a1, L2_3, TGF_9, g3_6, TGF_8, g3_2, dOC, g2_12, TGF_11, rho3, kOBL1, g2_4, L2_7, g3_8, g2_10, g1_8, CMX_1, gamma1] is not transcendence basis
+Collection [a1, g2_4, a2, RL1, L2_1, g1_1, g2_6, TGF_8, g1_7, g3_2, g1_2, Rrob, L2_8, Delta2Gamma2, dOC, CMX_1, TGF_7, TGF_9] is not transcendence basis
+Collection [a1, kOBL1, TGF_11, dRankl, g1_5, g1_0, g1_1, g1_3, RL2, CMX_10, L2_10, L2_1, L2_0, kCMXL, kL2CMX, TGF_12, g1_12, g1_9] is not transcendence basis
+Collection [a2, CMX_7, L2_0, TGF_5, g3_1, g3_0, Delta2Gamma2, dL1, RL1, rho2, DeltaGamma2, g2_11, g1_0, TGF_4, a1, TGF_1, L1_0, kint] is not transcendence basis
+Collection [a2, TGF_6, DeltaGamma2, g1_13, g1_1, L2_0, CMX_10, L2_9, TGF_5, RL2, g1_7, dRankl, L2_2, rho3, g2_0, g2_12, g1_8, TGF_3] is not transcendence basis
+Collection [a2, dOC, g2_2, g3_1, g2_4, CMX_5, g1_1, kOCTGF, g1_8, L2_3, kL2L1, L2_8, TGF_11, RL2, g1_9, a1, g1_2, DeltaGamma2] is not transcendence basis
+Collection [a2, g1_6, g3_1, L2_3, g2_5, a1, TGF_0, kL2L1, g1_7, kOBRankL, Delta3Gamma3, g3_5, g2_1, g1_13, g1_3, CMX_0, rho1, CMX_2] is not transcendence basis
+Collection [a2, g3_1, TGF_7, g2_12, g3_8, dRankl, g3_9, CMX_2, g1_10, CMX_10, g3_4, L2_7, Delta2Gamma2, g2_2, TGF_12, CMX_7, g1_4, CMX_12] is not transcendence basis
+Collection [a3, CMX_2, CMX_10, TGF_10, kOBL1, L2_1, CMX_5, g2_3, gamma1, Rrob, g2_8, TGF_1, TGF_6, L2_10, kOBRankL, g2_1, L1_0, g1_2] is not transcendence basis
+Collection [a3, L2_0, TGF_4, g2_6, g2_11, a1, kOBRankL, L2_4, RL1, g3_4, CMX_6, L2_11, g3_1, dOC, g2_5, kOCTGF, TGF_5, g2_10] is not transcendence basis
+Collection [a3, L2_9, rho3, dRankl, kCMXL, g1_1, TGF_3, CMX_12, TGF_12, RL1, g2_3, kL2L1, DeltaGamma2, g3_5, CMX_0, g2_12, TGF_1, g1_11] is not transcendence basis
+Collection [a3, g2_7, L2_0, TGF_1, kL2L1, TGF_3, g3_9, TGF_12, CMX_12, g2_1, g1_9, g1_10, CMX_9, CMX_7, g3_8, Delta2Gamma2, g3_2, rho3] is not transcendence basis
+Collection [c, L2_12, L2_5, g1_2, g2_10, DeltaGamma2, g2_8, g2_12, rho1, g2_6, g1_5, g3_8, L2_9, g2_7, g3_0, Delta3Gamma3, L2_4, CMX_2] is not transcendence basis
+Collection [c, L2_4, g2_1, L2_5, g1_6, gamma3, CMX_12, RL2, rho2, g2_9, g2_12, kint, L2_0, L2_9, TGF_0, L2_12, TGF_2, g1_13] is not transcendence basis
+Collection [c, TGF_3, g2_10, CMX_6, g1_12, g2_11, L2_6, TGF_0, kint, CMX_12, TGF_5, CMX_2, g2_1, g3_8, rho3, TGF_8, Delta2Gamma2, g2_8] is not transcendence basis
+Collection [c, TGF_7, L2_0, g1_10, a2, L2_7, TGF_4, TGF_6, g2_0, L2_2, a3, g2_1, L2_3, kL2L1, g1_11, g2_10, L2_12, TGF_10] is not transcendence basis
+Collection [c, dRankl, TGF_6, g2_12, L2_2, L2_6, CMX_8, g2_5, a2, dL1, CMX_11, CMX_1, g1_11, g1_13, g3_5, kOBL1, L2_8, RL1] is not transcendence basis
+Collection [c, g2_2, CMX_4, L2_4, g2_13, CMX_2, kOBL1, a2, g3_0, TGF_5, g2_3, g3_3, kL2L1, g2_10, L2_1, g1_2, g2_7, g1_10] is not transcendence basis
+Collection [c, kL2CMX, g2_9, g1_12, kOBL1, kCMXL, CMX_2, CMX_6, kOBRankL, Delta3Gamma3, TGF_1, kOCTGF, L2_9, g1_2, kint, L2_3, g1_5, g3_9] is not transcendence basis
+Collection [c, kSS, g2_11, Delta2Gamma2, g1_2, Delta3Gamma3, g3_9, g3_6, TGF_6, g2_1, TGF_10, TGF_3, g2_2, a1, L2_4, gamma1, dRankl, dL2] is not transcendence basis
+Collection [c, kint, g2_5, dL2, rho1, TGF_10, CMX_7, CMX_6, TGF_12, g2_13, TGF_2, g2_9, g2_7, L2_9, L2_4, g2_8, TGF_0, L2_7] is not transcendence basis
+Collection [dL1, L1_0, rho3, TGF_3, TGF_9, TGF_12, g2_9, c, g1_13, CMX_2, g2_2, L2_4, RL2, RL1, L2_10, TGF_4, g1_9, CMX_8] is not transcendence basis
+Collection [dL1, Rrob, L2_2, g1_12, rho1, TGF_1, L2_5, gamma1, g3_4, L2_8, g2_4, TGF_9, Delta2Gamma2, g3_0, rho2, L2_9, CMX_10, CMX_9] is not transcendence basis
+Collection [dL1, TGF_4, CMX_2, kSS, CMX_5, TGF_6, L2_10, L2_4, CMX_11, kOBRankL, L2_2, CMX_6, dOC, g1_1, g3_2, L2_11, g3_7, g2_7] is not transcendence basis
+Collection [dL1, a2, RL1, TGF_9, rho3, L2_9, g2_1, CMX_0, g2_8, g3_9, kOBRankL, g1_3, g1_8, L2_8, CMX_5, a1, g2_6, g1_4] is not transcendence basis
+Collection [dL1, g1_2, TGF_7, g2_2, kCMXL, TGF_6, g2_1, c, L2_5, g2_11, L2_4, g2_6, TGF_3, dL2, TGF_8, L2_9, L2_6, g2_9] is not transcendence basis
+Collection [dL1, g2_12, g1_9, CMX_10, g1_5, g3_2, TGF_5, TGF_9, g2_13, CMX_0, g3_0, a3, L2_1, kOCTGF, RL1, L2_2, g2_6, g3_9] is not transcendence basis
+Collection [dL1, kSS, TGF_3, g3_5, gamma3, c, CMX_5, dRankl, g3_6, g1_9, a3, g2_3, CMX_9, kCMXL, L2_6, g3_0, CMX_1, CMX_3] is not transcendence basis
+Collection [dL2, TGF_12, dRankl, CMX_4, L2_11, g3_6, g1_10, g2_4, g2_13, L2_1, a2, CMX_8, CMX_12, L2_0, rho3, TGF_3, g1_5, L2_10] is not transcendence basis
+Collection [dL2, a1, TGF_6, kOBL1, L2_0, g3_1, L2_2, dOC, DeltaGamma2, TGF_3, g1_4, a3, kL2L1, CMX_11, g3_6, CMX_2, L2_12, g3_4] is not transcendence basis
+Collection [dL2, g2_3, g3_2, g1_3, Rrob, CMX_0, L2_4, L2_5, g2_5, gamma3, g1_11, kSS, TGF_1, g1_12, g1_8, CMX_6, g3_4, CMX_11] is not transcendence basis
+Collection [dL2, g3_3, g3_5, CMX_6, CMX_8, CMX_3, a3, Delta3Gamma3, RL1, g3_9, CMX_4, g1_13, g3_7, CMX_9, g1_11, CMX_2, g1_4, CMX_10] is not transcendence basis
+Collection [dOC, Rrob, g2_12, g1_4, TGF_6, g3_5, kL2L1, Delta3Gamma3, L2_11, CMX_6, a2, CMX_7, L2_9, kL2CMX, g1_5, L2_12, CMX_10, CMX_9] is not transcendence basis
+Collection [dOC, TGF_0, kOCTGF, g1_7, L2_10, g2_12, DeltaGamma2, g1_4, TGF_12, g2_11, g2_9, g2_3, g1_11, dL1, g1_0, Rrob, L2_2, g3_8] is not transcendence basis
+Collection [dOC, g1_0, kSS, gamma3, L2_3, a2, g2_4, CMX_8, g2_10, g2_1, g1_7, TGF_12, g1_2, g2_2, g1_6, CMX_9, TGF_11, TGF_3] is not transcendence basis
+Collection [dOC, g2_8, TGF_5, L2_6, a3, CMX_8, rho2, g1_2, CMX_3, dRankl, g1_0, g3_4, g1_6, g2_12, g1_4, dL2, g2_7, TGF_12] is not transcendence basis
+Collection [dOC, g3_2, TGF_0, L2_10, TGF_11, g2_11, gamma3, RL2, TGF_8, dL2, CMX_10, g3_6, CMX_1, g1_13, a1, L2_9, L2_1, TGF_6] is not transcendence basis
+Collection [dRankl, L2_3, g3_2, L2_6, TGF_3, kL2CMX, g1_3, g2_10, g1_2, a2, g2_4, kSS, DeltaGamma2, TGF_8, L2_8, L2_7, Delta2Gamma2, CMX_12] is not transcendence basis
+Collection [dRankl, RL1, CMX_12, Rrob, L2_3, dOC, TGF_1, rho1, kL2L1, rho3, g1_7, TGF_6, TGF_2, CMX_1, kL2CMX, a3, g1_0, DeltaGamma2] is not transcendence basis
+Collection [dRankl, TGF_2, kOBL1, g2_0, g2_5, g2_7, g1_5, CMX_3, TGF_12, a3, TGF_6, g1_13, rho1, kint, g3_1, g3_3, g1_12, L2_0] is not transcendence basis
+Collection [dRankl, g3_3, CMX_11, L2_11, g3_1, L2_3, g1_0, L2_5, g2_1, g1_3, gamma1, a3, g1_5, CMX_4, g1_12, g2_8, g2_6, TGF_10] is not transcendence basis
+Collection [g1_0, L2_10, g2_3, g3_4, g2_9, CMX_8, g1_11, kL2CMX, CMX_3, TGF_7, Delta3Gamma3, rho2, kOCTGF, c, TGF_8, Delta2Gamma2, kSS, L2_12] is not transcendence basis
+Collection [g1_0, g2_12, dRankl, g1_6, TGF_3, kL2L1, g2_11, dOC, DeltaGamma2, CMX_8, Rrob, TGF_10, L2_6, g2_9, g3_4, g2_4, dL2, g1_10] is not transcendence basis
+Collection [g1_0, kL2L1, g3_3, L2_6, g2_2, TGF_9, g1_8, L2_0, TGF_8, dRankl, kCMXL, rho3, kOCTGF, gamma3, CMX_6, L2_8, a2, g3_6] is not transcendence basis
+Collection [g1_0, Delta3Gamma3, CMX_2, g2_8, g2_5, kOBL1, g1_7, TGF_5, L2_7, g1_12, dL2, TGF_11, TGF_2, Rrob, g1_11, DeltaGamma2, CMX_1, CMX_3] is not transcendence basis
+Collection [g1_1, a3, g1_9, TGF_3, TGF_2, g2_2, CMX_7, CMX_8, TGF_12, g3_8, CMX_12, dL2, g2_11, g3_5, c, CMX_10, CMX_0, Delta3Gamma3] is not transcendence basis
+Collection [g1_1, g3_7, CMX_2, g3_3, g1_2, g2_12, L2_10, g3_8, dOC, g2_13, L2_1, kCMXL, CMX_3, DeltaGamma2, rho3, g2_0, rho1, TGF_9] is not transcendence basis
+Collection [g1_10, CMX_7, g1_7, CMX_6, CMX_8, g3_1, kint, gamma1, g2_0, g2_6, g1_2, kSS, a3, g2_7, g3_6, CMX_2, kCMXL, TGF_10] is not transcendence basis
+Collection [g1_10, L2_12, CMX_7, gamma1, CMX_5, Rrob, g3_1, g1_1, TGF_4, g2_9, g3_3, kCMXL, TGF_7, Delta2Gamma2, TGF_9, L2_5, L2_6, dL2] is not transcendence basis
+Collection [g1_10, L2_5, g3_8, CMX_1, L2_7, CMX_3, rho1, CMX_7, g2_5, TGF_5, g1_0, kL2L1, gamma1, g3_6, g1_9, g1_5, kint, g2_12] is not transcendence basis
+Collection [g1_10, TGF_8, g1_12, g1_3, CMX_1, CMX_6, g3_3, kL2CMX, TGF_10, L2_0, TGF_5, dL2, TGF_6, dL1, g3_5, kOBRankL, g2_3, g3_7] is not transcendence basis
+Collection [g1_10, a1, rho1, g3_2, TGF_3, g1_5, g1_3, L2_12, kL2L1, DeltaGamma2, g1_0, TGF_1, kOBL1, CMX_10, kint, g1_13, g1_8, gamma1] is not transcendence basis
+Collection [g1_10, g2_3, L2_3, g1_7, L2_7, kL2CMX, g1_6, a2, dRankl, TGF_5, L2_9, rho2, g2_5, c, g2_7, g2_9, g1_4, g2_13] is not transcendence basis
+Collection [g1_11, CMX_9, L2_11, g2_3, g1_9, a3, L2_5, kOBL1, CMX_5, rho2, g3_8, Delta3Gamma3, g2_1, L2_12, g2_11, CMX_3, L2_0, L2_7] is not transcendence basis
+Collection [g1_11, g2_6, TGF_10, a2, a3, L2_8, L2_10, kL2CMX, dRankl, CMX_5, TGF_6, Delta3Gamma3, rho3, kOBRankL, g2_9, g3_1, TGF_9, L2_9] is not transcendence basis
+Collection [g1_12, L2_6, kL2CMX, g2_3, rho1, g2_13, g2_0, g3_7, TGF_2, kSS, CMX_1, g3_2, CMX_2, L2_10, gamma3, c, CMX_12, a1] is not transcendence basis
+Collection [g1_12, g1_7, g2_0, L2_3, a1, CMX_0, TGF_9, g1_2, g2_4, g1_13, rho2, CMX_6, TGF_11, g1_11, g2_11, gamma1, kSS, CMX_8] is not transcendence basis
+Collection [g1_12, kOBRankL, L2_1, g3_4, L2_5, g1_0, g1_10, dOC, RL2, CMX_11, g2_9, a2, g1_5, kOBL1, rho2, TGF_3, g3_9, g3_6] is not transcendence basis
+Collection [g1_13, CMX_2, g2_13, L2_11, a3, dRankl, TGF_3, L2_5, CMX_0, TGF_11, a1, L1_0, g3_0, TGF_5, CMX_5, RL2, g2_10, g1_4] is not transcendence basis
+Collection [g1_13, L2_2, TGF_7, g2_12, a1, rho3, g2_5, L2_3, g3_0, g1_10, g3_7, g2_7, TGF_10, CMX_3, a3, TGF_8, g3_4, L2_10] is not transcendence basis
+Collection [g1_13, L2_3, g3_2, g3_9, L2_2, g3_7, L2_12, rho3, g2_2, g2_1, CMX_11, g2_13, L2_7, rho1, kSS, DeltaGamma2, g2_7, g1_10] is not transcendence basis
+Collection [g1_13, TGF_0, g2_12, g3_7, CMX_3, g3_8, dRankl, gamma1, TGF_5, g2_5, Delta2Gamma2, L2_7, L2_3, L2_1, g1_2, g3_6, L2_11, CMX_1] is not transcendence basis
+Collection [g1_13, g2_9, TGF_0, TGF_7, L2_10, CMX_8, g2_12, rho1, L2_2, CMX_5, TGF_9, gamma1, g2_8, g1_3, g1_6, Delta3Gamma3, g2_4, a1] is not transcendence basis
+Collection [g1_2, CMX_5, a3, CMX_9, CMX_4, g2_11, g1_13, Delta2Gamma2, L2_12, TGF_5, g1_4, g2_10, DeltaGamma2, kint, dL2, gamma1, L2_11, TGF_0] is not transcendence basis
+Collection [g1_2, TGF_5, TGF_9, Rrob, L2_9, TGF_7, dOC, g3_9, L2_11, g2_10, g1_3, rho2, g3_4, g1_6, TGF_3, L2_4, kOBRankL, a2] is not transcendence basis
+Collection [g1_2, TGF_6, g3_4, g1_7, CMX_5, g1_3, gamma1, kL2CMX, a2, g2_4, g1_1, TGF_1, g2_9, g2_11, L2_7, kL2L1, TGF_7, g2_10] is not transcendence basis
+Collection [g1_2, g1_10, CMX_3, g1_8, g1_11, TGF_9, kL2L1, TGF_4, a2, g2_9, dL2, g2_1, TGF_11, a3, TGF_0, RL1, g1_0, g2_11] is not transcendence basis
+Collection [g1_2, g1_6, RL2, g2_5, kOBRankL, TGF_10, g2_9, g2_13, a3, g1_4, TGF_11, RL1, kOBL1, L2_3, g1_13, L2_0, CMX_12, L2_5] is not transcendence basis
+Collection [g1_2, g3_4, g2_2, g1_1, gamma1, rho2, DeltaGamma2, dL1, TGF_8, a1, g3_5, g1_12, g2_8, g1_5, L2_5, g2_9, CMX_0, L2_11] is not transcendence basis
+Collection [g1_2, g3_8, g3_3, TGF_3, L2_5, g2_7, TGF_12, g2_4, CMX_9, g2_0, kSS, g2_3, TGF_1, CMX_4, g2_8, g2_11, L2_3, kint] is not transcendence basis
+Collection [g1_2, kOBRankL, g2_13, dL2, L2_11, g3_5, g2_10, Delta3Gamma3, rho1, g2_3, g1_3, TGF_10, g1_11, TGF_6, g2_8, g3_0, g3_7, kL2L1] is not transcendence basis
+Collection [g1_2, kOBRankL, gamma1, g2_9, dL2, CMX_1, CMX_4, RL2, g2_7, L2_4, L1_0, g2_0, TGF_8, rho3, g3_8, g3_0, g1_3, DeltaGamma2] is not transcendence basis
+Collection [g1_3, L2_10, TGF_0, c, CMX_0, g2_7, dL1, L2_9, gamma1, CMX_11, CMX_4, CMX_6, L2_0, CMX_1, TGF_10, L2_5, g1_13, a1] is not transcendence basis
+Collection [g1_3, L2_5, TGF_1, CMX_3, DeltaGamma2, L2_6, c, g2_4, rho2, dL1, L2_9, L2_4, CMX_4, g1_10, L2_3, L2_1, L2_10, g2_7] is not transcendence basis
+Collection [g1_3, g3_5, dRankl, CMX_8, kOCTGF, g2_3, L2_10, TGF_0, g1_11, TGF_8, kint, CMX_1, gamma3, CMX_6, Delta3Gamma3, L2_12, g2_0, kL2CMX] is not transcendence basis
+Collection [g1_3, gamma3, CMX_1, g3_3, gamma1, a2, a1, kOCTGF, TGF_10, L2_10, g1_9, rho1, g1_4, L2_7, TGF_1, g2_10, g1_6, TGF_4] is not transcendence basis
+Collection [g1_4, L2_10, kint, kOCTGF, g1_0, gamma1, g2_8, TGF_3, L2_1, g1_1, TGF_4, CMX_1, L2_5, a3, g1_8, g2_4, g2_0, g3_7] is not transcendence basis
+Collection [g1_4, TGF_12, L2_0, CMX_0, kOBL1, L2_3, kOCTGF, dL1, g3_3, g1_2, L2_10, g3_4, g2_5, g2_3, g1_10, c, g2_6, g2_2] is not transcendence basis
+Collection [g1_4, TGF_2, L2_2, kOCTGF, g3_3, g2_6, CMX_7, kL2L1, DeltaGamma2, g3_7, CMX_4, Delta2Gamma2, g1_6, g2_12, a1, RL2, g2_5, TGF_8] is not transcendence basis
+Collection [g1_4, g1_5, Delta2Gamma2, g1_11, g1_6, g3_5, rho3, g2_6, g1_1, L2_10, TGF_2, L2_0, L2_5, kCMXL, g1_9, TGF_6, TGF_11, g3_4] is not transcendence basis
+Collection [g1_4, g3_0, TGF_7, TGF_9, g1_6, CMX_12, CMX_9, g3_2, CMX_4, g2_10, kL2L1, TGF_4, RL1, g3_4, Delta3Gamma3, CMX_8, g1_3, TGF_3] is not transcendence basis
+Collection [g1_5, CMX_11, g1_10, kSS, rho3, dL2, g2_11, g2_3, L2_11, TGF_2, CMX_8, kL2L1, g2_4, TGF_12, TGF_6, TGF_4, a2, g2_12] is not transcendence basis
+Collection [g1_5, CMX_6, g1_6, TGF_6, gamma1, L2_8, g3_7, g3_9, L2_12, CMX_7, TGF_5, g1_1, CMX_4, RL2, CMX_11, kOBL1, g1_2, CMX_5] is not transcendence basis
+Collection [g1_5, L2_10, dL2, gamma1, TGF_12, L2_7, TGF_8, TGF_5, L2_6, L2_3, g2_13, CMX_4, g1_12, kCMXL, g2_12, g1_0, kOBRankL, L2_8] is not transcendence basis
+Collection [g1_5, g1_2, g2_10, g2_0, dRankl, CMX_10, TGF_0, L2_10, RL1, a3, Rrob, CMX_0, g3_5, g2_1, c, g2_4, rho2, kL2CMX] is not transcendence basis
+Collection [g1_5, g1_4, g2_11, g1_2, rho2, g2_13, g3_5, kL2CMX, g2_12, g3_8, g1_10, g1_13, g3_7, g2_4, rho1, CMX_8, TGF_1, g2_0] is not transcendence basis
+Collection [g1_5, g3_9, CMX_10, g1_8, TGF_3, g2_7, kOBL1, TGF_7, CMX_8, TGF_6, CMX_2, TGF_12, g1_10, TGF_4, g2_4, rho2, c, g3_1] is not transcendence basis
+Collection [g1_5, Delta2Gamma2, dL2, CMX_9, a1, CMX_10, kSS, g1_9, a3, CMX_1, DeltaGamma2, L2_0, gamma1, kint, g2_12, CMX_8, L2_8, TGF_6] is not transcendence basis
+Collection [g1_5, kOBRankL, g3_3, g2_4, CMX_4, L2_9, g1_0, CMX_5, rho3, a3, CMX_2, g1_8, c, dL2, CMX_7, g3_2, g1_3, g2_0] is not transcendence basis
+Collection [g1_6, L2_9, g3_1, CMX_2, CMX_0, L2_1, TGF_0, g1_10, c, g3_2, kSS, L2_8, TGF_7, kL2CMX, CMX_9, kint, kCMXL, g2_5] is not transcendence basis
+Collection [g1_6, gamma1, CMX_2, kint, g2_5, TGF_8, g2_10, CMX_12, L2_2, rho3, TGF_10, TGF_0, rho2, L1_0, L2_3, kOBL1, kOCTGF, g1_10] is not transcendence basis
+Collection [g1_7, L2_7, g1_6, g3_7, TGF_10, TGF_4, TGF_1, CMX_12, CMX_9, RL2, kint, g2_0, c, DeltaGamma2, TGF_6, Delta2Gamma2, g3_5, L2_9] is not transcendence basis
+Collection [g1_7, g1_6, g1_5, CMX_0, g2_7, g1_11, g2_1, L2_6, CMX_3, g1_9, TGF_2, L2_5, TGF_6, TGF_4, CMX_1, CMX_5, L2_3, kSS] is not transcendence basis
+Collection [g1_7, g1_8, TGF_4, g2_7, TGF_8, L2_2, g3_7, L2_4, CMX_12, TGF_9, L2_8, g2_3, TGF_12, TGF_1, dL1, g1_11, g1_12, rho1] is not transcendence basis
+Collection [g1_7, g3_0, CMX_9, g2_9, g2_10, kOBL1, g3_4, TGF_2, CMX_11, g3_8, g3_3, L2_9, L2_8, g1_5, dL1, rho3, CMX_5, g1_9] is not transcendence basis
+Collection [g1_8, dRankl, g3_4, g3_8, g3_5, g2_6, TGF_3, kint, L2_10, kOBRankL, g1_10, TGF_10, CMX_0, g2_4, kSS, L2_8, CMX_1, TGF_0] is not transcendence basis
+Collection [g1_8, g1_10, CMX_5, g1_5, a3, c, g3_1, g1_13, g3_0, g2_11, CMX_10, kSS, g2_8, g2_3, TGF_6, TGF_2, rho2, DeltaGamma2] is not transcendence basis
+Collection [g1_8, g2_4, CMX_6, L2_2, g1_0, g3_2, TGF_6, c, g1_5, L2_3, L2_4, CMX_9, L2_6, Delta3Gamma3, g3_9, g1_7, CMX_4, CMX_8] is not transcendence basis
+Collection [g1_8, g2_8, dRankl, kOBL1, g2_0, TGF_0, TGF_7, L2_0, gamma3, g2_6, CMX_11, rho1, TGF_10, L2_4, L2_5, L2_8, g2_9, g3_3] is not transcendence basis
+Collection [g1_8, DeltaGamma2, L2_8, RL1, rho2, g3_3, CMX_11, gamma1, kSS, kint, L2_0, dOC, g1_9, g2_8, g2_5, CMX_2, g1_13, g2_6] is not transcendence basis
+Collection [g1_8, kOBRankL, g1_11, g1_10, L2_1, CMX_10, g3_4, TGF_7, g3_9, L2_9, kint, g3_7, g2_6, kSS, TGF_11, CMX_6, CMX_1, TGF_6] is not transcendence basis
+Collection [g1_9, L2_10, g3_0, kOCTGF, CMX_11, TGF_7, DeltaGamma2, g1_0, L2_8, CMX_1, g2_9, gamma1, g2_4, CMX_7, g1_13, dL2, g3_8, CMX_10] is not transcendence basis
+Collection [g1_9, dL2, gamma1, CMX_12, TGF_8, CMX_7, CMX_8, g2_7, DeltaGamma2, g3_9, TGF_2, g1_5, TGF_9, L2_9, g1_0, Rrob, L1_0, kOBRankL] is not transcendence basis
+Collection [g1_9, dOC, g1_5, g1_4, CMX_10, g2_4, CMX_6, L2_2, dRankl, RL1, g1_8, Delta3Gamma3, L2_11, g1_7, g1_6, g1_13, rho2, L2_6] is not transcendence basis
+Collection [g1_9, g1_7, TGF_4, TGF_9, g2_4, Rrob, RL1, CMX_4, CMX_6, g1_11, g3_3, L2_11, g3_1, TGF_2, L2_5, Delta2Gamma2, L2_3, g1_8] is not transcendence basis
+Collection [g1_9, g2_7, g2_10, TGF_4, g1_8, a2, g2_11, TGF_9, L2_7, rho2, g3_8, g1_6, CMX_11, g2_1, CMX_1, L2_3, kL2CMX, CMX_3] is not transcendence basis
+Collection [g1_9, g3_9, g2_2, g2_5, gamma3, g3_2, g2_12, a3, g1_10, g2_0, CMX_9, RL1, g2_8, g2_7, DeltaGamma2, g2_4, L2_11, kL2L1] is not transcendence basis
+Collection [g1_9, kL2L1, kL2CMX, g3_1, g2_10, TGF_4, CMX_9, g1_4, g3_4, kOBL1, g2_9, g3_8, TGF_12, CMX_5, RL2, TGF_1, CMX_12, kSS] is not transcendence basis
+Collection [g2_0, CMX_1, TGF_10, g2_7, TGF_4, g1_6, CMX_0, g1_7, Delta3Gamma3, g3_1, TGF_12, g1_12, g1_2, kL2L1, CMX_3, TGF_6, g3_5, L2_9] is not transcendence basis
+Collection [g2_0, CMX_9, CMX_8, L2_9, L2_3, c, g3_4, kSS, g2_6, gamma3, g2_13, CMX_4, g1_3, L2_11, g3_3, g3_6, L2_10, TGF_6] is not transcendence basis
+Collection [g2_0, L2_9, g3_9, Rrob, g2_5, L1_0, L2_12, CMX_3, g3_1, CMX_8, g2_4, g3_4, g1_9, kOBL1, g1_8, g2_2, g2_9, L2_8] is not transcendence basis
+Collection [g2_0, TGF_0, g2_7, CMX_2, CMX_9, L2_1, kL2L1, CMX_6, Rrob, g2_6, g2_10, L2_9, L2_4, g3_3, gamma1, CMX_11, g1_9, CMX_7] is not transcendence basis
+Collection [g2_0, TGF_6, CMX_1, g3_4, TGF_10, CMX_0, DeltaGamma2, dL1, g3_9, CMX_10, kCMXL, g1_12, kL2L1, CMX_7, TGF_2, CMX_3, TGF_8, Delta2Gamma2] is not transcendence basis
+Collection [g2_0, TGF_8, kOBRankL, L2_6, CMX_11, CMX_4, g3_3, g1_11, TGF_0, RL2, g1_0, kSS, L2_9, L2_5, g3_0, kL2CMX, a1, CMX_7] is not transcendence basis
+Collection [g2_0, g2_4, g3_2, kOCTGF, CMX_7, g2_10, TGF_1, L2_5, TGF_0, g1_7, RL2, RL1, c, kCMXL, Delta2Gamma2, TGF_12, CMX_1, g3_0] is not transcendence basis
+Collection [g2_0, g2_5, CMX_8, c, g1_0, a1, g3_2, L2_8, CMX_2, L2_3, L2_4, L2_12, CMX_4, kint, g1_2, L2_9, g3_5, CMX_5] is not transcendence basis
+Collection [g2_1, dOC, g2_9, TGF_0, RL2, L2_4, kint, CMX_10, Delta2Gamma2, CMX_4, CMX_0, g1_0, CMX_3, g1_9, TGF_5, dL1, L2_12, g3_7] is not transcendence basis
+Collection [g2_1, g3_2, Delta3Gamma3, L2_8, kOCTGF, g2_3, g2_2, g1_0, g2_8, L2_12, CMX_5, TGF_1, TGF_3, TGF_2, g3_6, g3_3, kL2CMX, g3_1] is not transcendence basis
+Collection [g2_10, CMX_10, L1_0, g2_2, g2_6, kCMXL, RL2, L2_0, g3_8, Delta3Gamma3, TGF_1, dOC, g1_0, g3_1, g1_11, L2_3, Rrob, g2_8] is not transcendence basis
+Collection [g2_10, L2_6, L2_5, TGF_9, g1_4, dL2, kOCTGF, TGF_6, g3_9, g2_5, L2_3, RL1, CMX_0, g3_0, kSS, g1_1, CMX_8, TGF_12] is not transcendence basis
+Collection [g2_10, L2_7, TGF_12, CMX_4, TGF_5, kL2L1, kint, TGF_4, L2_12, g1_1, TGF_3, kSS, L2_8, g1_4, dRankl, g1_2, L2_9, g2_2] is not transcendence basis
+Collection [g2_10, g1_11, g2_12, dL1, TGF_5, kCMXL, TGF_4, L2_10, a1, CMX_11, TGF_10, TGF_0, CMX_4, CMX_7, g1_9, c, CMX_12, Delta2Gamma2] is not transcendence basis
+Collection [g2_10, g2_6, CMX_6, CMX_1, TGF_1, kL2L1, RL2, a2, L1_0, g3_9, L2_1, CMX_8, g1_6, g1_7, CMX_10, Rrob, TGF_7, TGF_9] is not transcendence basis
+Collection [g2_11, g2_7, CMX_10, kL2L1, kL2CMX, a1, g3_0, CMX_9, CMX_1, g2_13, dL2, g3_1, g1_13, CMX_6, Delta2Gamma2, L2_8, TGF_0, rho2] is not transcendence basis
+Collection [g2_11, g3_1, RL1, RL2, g1_7, TGF_0, g1_0, g3_3, g2_0, a2, L2_7, rho2, g1_6, dRankl, g3_9, kCMXL, g2_4, L2_12] is not transcendence basis
+Collection [g2_12, L2_1, Rrob, CMX_4, kOCTGF, g1_0, g3_9, DeltaGamma2, g2_1, g2_3, g2_6, CMX_9, a1, CMX_1, kL2L1, kOBL1, g1_5, L2_12] is not transcendence basis
+Collection [g2_12, L2_5, rho1, CMX_9, g1_9, a3, TGF_1, TGF_8, g1_11, CMX_4, L2_4, g1_7, L2_7, g2_4, kL2L1, TGF_9, L2_1, dL1] is not transcendence basis
+Collection [g2_13, CMX_6, gamma3, kL2L1, TGF_9, TGF_7, g1_1, TGF_10, g1_9, g3_4, g2_11, L2_5, g2_0, kCMXL, g2_8, CMX_11, L2_4, TGF_5] is not transcendence basis
+Collection [g2_13, TGF_9, L2_12, L2_7, g1_11, TGF_6, g1_1, CMX_9, a2, CMX_5, CMX_3, kOCTGF, TGF_0, g1_0, rho3, TGF_11, CMX_0, L2_9] is not transcendence basis
+Collection [g2_13, g2_12, CMX_2, L2_11, CMX_10, g3_1, TGF_7, TGF_11, TGF_4, rho1, RL1, g1_9, TGF_9, kint, CMX_5, g2_8, g3_9, Rrob] is not transcendence basis
+Collection [g2_13, kCMXL, L2_1, g1_13, g3_6, CMX_6, g1_9, g2_9, RL2, TGF_11, TGF_7, Delta2Gamma2, g3_4, g1_4, CMX_9, RL1, dL1, CMX_12] is not transcendence basis
+Collection [g2_13, Delta3Gamma3, g1_3, CMX_9, g2_1, TGF_7, g3_8, g2_2, TGF_12, TGF_11, CMX_11, g2_4, TGF_1, g2_7, g1_6, L2_9, TGF_5, L2_8] is not transcendence basis
+Collection [g2_2, CMX_1, L2_5, TGF_7, kSS, L2_10, g2_13, rho2, g2_9, g2_4, a3, CMX_4, CMX_12, g1_5, RL2, g2_1, L1_0, g2_7] is not transcendence basis
+Collection [g2_2, L2_8, TGF_7, a1, CMX_9, TGF_5, CMX_5, g1_6, g3_8, L2_2, Delta3Gamma3, a3, rho3, g3_2, g2_3, CMX_8, kOBRankL, TGF_9] is not transcendence basis
+Collection [g2_2, RL2, TGF_8, g1_5, g2_9, g2_5, L2_2, kOBRankL, kSS, TGF_12, kOBL1, TGF_5, g1_0, L2_4, a3, g2_3, CMX_10, g2_11] is not transcendence basis
+Collection [g2_2, TGF_10, DeltaGamma2, RL2, CMX_0, g2_5, CMX_11, L2_1, dL1, g1_8, L2_3, g3_3, g1_7, kOBRankL, g1_4, L1_0, TGF_8, g2_3] is not transcendence basis
+Collection [g2_2, TGF_4, TGF_11, CMX_12, CMX_9, g2_11, L2_8, RL1, L2_11, gamma3, g2_12, a3, g1_7, kint, a2, g1_6, g2_1, CMX_4] is not transcendence basis
+Collection [g2_2, a2, g1_11, TGF_12, kOCTGF, rho1, g3_1, gamma3, g3_9, kint, kL2L1, Delta3Gamma3, CMX_7, L2_7, rho2, TGF_4, g1_12, g2_10] is not transcendence basis
+Collection [g2_3, g1_2, kint, CMX_7, L2_12, kSS, g1_9, RL1, TGF_11, L2_2, dL2, g1_0, CMX_2, g3_4, g1_8, dRankl, g3_1, dL1] is not transcendence basis
+Collection [g2_3, g1_9, g1_4, L2_4, g3_8, TGF_4, TGF_7, kint, g1_3, g2_12, CMX_4, CMX_10, g1_1, g2_8, L2_7, rho1, TGF_3, TGF_9] is not transcendence basis
+Collection [g2_3, g2_13, CMX_9, g1_1, Delta3Gamma3, CMX_4, a2, g3_8, g3_0, rho2, CMX_5, L2_8, g2_12, kOCTGF, gamma1, g3_7, gamma3, L2_11] is not transcendence basis
+Collection [g2_4, RL1, g1_1, kL2CMX, g1_11, TGF_8, g2_6, g1_9, CMX_7, DeltaGamma2, g1_4, L2_8, g3_9, L2_4, g2_12, L2_1, L2_12, g3_1] is not transcendence basis
+Collection [g2_4, kL2CMX, TGF_12, kint, TGF_8, CMX_11, g2_12, RL1, CMX_8, L2_11, a2, CMX_1, g1_13, L2_4, L2_2, rho2, TGF_4, g3_5] is not transcendence basis
+Collection [g2_5, L2_0, g2_13, c, g2_9, dL1, g2_0, kOBRankL, g1_4, L2_5, TGF_10, TGF_3, g3_2, L2_1, TGF_0, g2_12, kint, TGF_8] is not transcendence basis
+Collection [g2_5, L2_6, L2_1, CMX_6, g2_1, kint, g1_11, L2_11, g2_6, g2_13, dOC, dL2, g1_12, g3_0, g1_5, TGF_6, kCMXL, CMX_7] is not transcendence basis
+Collection [g2_5, a1, kL2CMX, a3, g2_13, g1_9, g2_9, g3_1, kOBL1, L2_4, RL2, g1_0, L2_1, CMX_3, g3_0, g2_8, TGF_2, g1_1] is not transcendence basis
+Collection [g2_6, L1_0, g2_10, L2_9, CMX_5, CMX_9, kOBRankL, kL2CMX, L2_10, L2_3, TGF_1, kSS, g1_0, RL1, g3_3, g3_7, g1_2, Rrob] is not transcendence basis
+Collection [g2_6, L2_0, dRankl, g2_4, L2_5, kSS, g1_0, g2_0, g1_5, TGF_12, g3_0, L1_0, CMX_10, CMX_8, Rrob, kint, Delta2Gamma2, g2_9] is not transcendence basis
+Collection [g2_6, TGF_1, TGF_5, g2_9, g1_4, g1_0, kL2CMX, g2_1, L2_3, CMX_12, g3_5, gamma3, kSS, L1_0, g1_12, dL2, CMX_11, TGF_2] is not transcendence basis
+Collection [g2_6, g3_3, g2_8, RL1, TGF_12, L2_1, g1_3, L2_5, g2_4, g1_9, g2_7, CMX_4, g3_4, c, g3_5, L2_12, CMX_11, rho3] is not transcendence basis
+Collection [g2_7, L2_9, dL1, kL2L1, RL1, a2, g2_5, g1_3, a1, g2_10, g1_9, TGF_3, CMX_1, g1_7, TGF_4, L2_8, CMX_4, g1_6] is not transcendence basis
+Collection [g2_7, g2_0, g1_3, g2_13, g1_10, CMX_0, g2_8, L2_5, g3_3, g1_0, g1_4, TGF_6, L2_4, kOBRankL, TGF_9, g3_9, g3_2, rho2] is not transcendence basis
+Collection [g2_7, g2_13, kOBRankL, kOBL1, a3, CMX_0, kL2L1, CMX_3, TGF_9, TGF_2, CMX_2, RL2, L2_12, g1_1, L2_1, L2_11, Delta2Gamma2, TGF_7] is not transcendence basis
+Collection [g2_7, g2_8, g2_10, g3_2, L2_3, kOBL1, Delta2Gamma2, g1_8, CMX_1, CMX_5, g2_5, CMX_3, g2_4, g1_4, dOC, L2_1, L2_4, TGF_6] is not transcendence basis
+Collection [g2_8, CMX_11, g2_13, kL2L1, g1_7, g2_2, kOCTGF, g1_9, RL2, g2_7, g2_0, kOBL1, kCMXL, L2_8, a2, CMX_12, g3_0, L2_1] is not transcendence basis
+Collection [g2_8, c, kL2CMX, dOC, g3_9, CMX_8, rho3, L2_6, L2_0, g3_1, CMX_11, TGF_0, g1_2, g3_3, g1_1, g1_3, L2_1, g2_11] is not transcendence basis
+Collection [g2_8, g2_2, L1_0, g3_1, L2_8, TGF_11, CMX_5, g1_3, TGF_4, a1, kOBRankL, CMX_3, g1_9, L2_6, c, g3_5, kSS, g2_3] is not transcendence basis
+Collection [g2_9, a3, kOCTGF, kCMXL, g1_11, Rrob, kL2CMX, g1_3, TGF_5, TGF_12, g1_4, CMX_9, gamma1, CMX_3, g2_7, L2_12, TGF_2, kOBRankL] is not transcendence basis
+Collection [g2_9, dL1, CMX_5, g1_6, CMX_2, g2_2, g2_8, g3_4, TGF_0, g2_6, g2_3, TGF_3, rho2, g3_7, TGF_11, DeltaGamma2, L2_12, g2_10] is not transcendence basis
+Collection [g2_9, dL2, TGF_12, g1_12, TGF_3, g1_8, TGF_1, CMX_11, g1_13, rho2, Rrob, Delta3Gamma3, a1, c, g1_2, g2_5, RL2, g2_0] is not transcendence basis
+Collection [g2_9, g3_7, gamma3, CMX_6, Rrob, g2_10, CMX_8, gamma1, g3_6, g2_7, g3_8, RL1, g3_5, L2_3, g2_13, g1_1, TGF_6, g1_3] is not transcendence basis
+Collection [g3_0, L2_1, CMX_11, rho2, TGF_8, c, kCMXL, L2_0, g3_7, L2_3, L2_9, g2_9, g2_8, dOC, g2_2, g3_2, rho3, g1_11] is not transcendence basis
+Collection [g3_0, L2_1, L2_3, CMX_4, TGF_8, g1_12, g2_3, g2_1, g1_5, g2_9, g2_8, kL2L1, a2, kOCTGF, CMX_6, g3_4, g1_9, TGF_11] is not transcendence basis
+Collection [g3_0, L2_5, gamma1, CMX_1, rho2, kint, L2_8, g3_1, kSS, c, TGF_5, TGF_10, TGF_2, g2_9, g1_0, TGF_11, RL2, CMX_3] is not transcendence basis
+Collection [g3_0, TGF_7, CMX_12, g1_4, kOCTGF, L1_0, g2_2, g3_7, g3_1, RL1, TGF_2, L2_0, Rrob, CMX_1, kL2CMX, g1_10, g3_3, g2_0] is not transcendence basis
+Collection [g3_0, a2, g2_4, g2_2, g1_6, g1_2, g2_10, L2_11, rho3, CMX_5, a3, CMX_6, L2_8, Delta3Gamma3, CMX_11, dOC, L2_10, gamma1] is not transcendence basis
+Collection [g3_0, g3_9, g1_8, g2_5, CMX_9, L2_9, g1_10, rho2, kCMXL, g2_6, L2_8, Rrob, g2_7, TGF_10, TGF_11, g2_3, L2_0, a2] is not transcendence basis
+Collection [g3_1, g3_2, CMX_12, g3_5, L2_12, TGF_5, g1_11, TGF_1, g2_9, dOC, g2_4, g2_12, Rrob, c, g1_9, g1_2, L2_11, g1_10] is not transcendence basis
+Collection [g3_1, g3_5, dRankl, CMX_4, CMX_6, g3_4, L2_6, g2_13, a1, g3_0, TGF_4, g1_13, rho3, rho1, CMX_0, L2_0, TGF_10, CMX_9] is not transcendence basis
+Collection [g3_2, g1_1, g1_0, kint, rho1, g3_8, g1_10, g3_1, Rrob, kOBRankL, TGF_12, g1_6, Delta3Gamma3, g2_8, g3_5, DeltaGamma2, g2_10, g3_7] is not transcendence basis
+Collection [g3_2, g1_11, L2_9, g1_0, g1_2, CMX_1, Delta2Gamma2, rho3, g1_10, g3_4, TGF_7, g3_8, g3_6, g2_9, CMX_11, g1_3, g3_0, CMX_3] is not transcendence basis
+Collection [g3_2, g1_4, kOCTGF, L1_0, g2_9, L2_8, CMX_7, CMX_2, g2_10, L2_5, L2_7, g2_11, TGF_1, DeltaGamma2, CMX_4, g3_3, g2_7, L2_4] is not transcendence basis
+Collection [g3_2, g1_9, CMX_7, L2_5, kSS, kOBL1, g1_0, TGF_11, dRankl, L1_0, g1_4, g2_9, kint, CMX_12, rho2, g2_5, g2_12, a1] is not transcendence basis
+Collection [g3_2, kOBL1, gamma1, CMX_9, kCMXL, g3_0, Delta2Gamma2, g2_9, g1_1, g1_13, TGF_11, CMX_5, g2_1, dRankl, TGF_2, L2_0, RL1, a1] is not transcendence basis
+Collection [g3_3, CMX_3, TGF_11, TGF_3, L2_6, g2_4, g1_10, CMX_10, g1_1, gamma3, g1_8, kSS, Delta2Gamma2, L2_11, CMX_1, L2_3, g1_11, TGF_2] is not transcendence basis
+Collection [g3_3, L2_12, g2_5, dRankl, TGF_4, L2_10, L2_4, kOCTGF, g1_3, g2_2, CMX_9, rho3, RL1, L2_2, L2_3, g1_8, a3, g2_3] is not transcendence basis
+Collection [g3_3, TGF_5, TGF_2, kSS, a2, g2_5, g2_12, kL2L1, g1_5, g3_4, RL2, dOC, TGF_4, g1_1, L2_8, gamma3, kOBRankL, TGF_8] is not transcendence basis
+Collection [g3_3, g3_8, CMX_11, RL1, rho3, g3_1, g2_6, g3_4, kCMXL, L2_9, g3_0, TGF_0, a3, g1_4, g1_12, g1_2, CMX_9, dL2] is not transcendence basis
+Collection [g3_3, g3_8, CMX_5, L2_10, gamma1, g3_6, L2_11, CMX_0, CMX_1, g2_7, TGF_8, TGF_5, kint, g1_2, kL2L1, g1_4, CMX_12, CMX_2] is not transcendence basis
+Collection [g3_4, L2_5, kOBL1, TGF_3, g2_12, g3_1, TGF_4, CMX_10, g2_4, TGF_12, TGF_7, TGF_0, g2_5, g2_11, a3, g3_6, g1_6, L2_8] is not transcendence basis
+Collection [g3_4, TGF_7, g2_5, g1_4, g1_8, L2_0, g3_1, CMX_8, g1_13, L2_12, g2_0, CMX_5, g1_9, g1_11, CMX_6, g3_2, L2_9, TGF_4] is not transcendence basis
+Collection [g3_4, dOC, L2_1, g1_0, g2_3, TGF_7, a1, g1_7, g2_1, g3_6, L1_0, g2_2, CMX_1, L2_6, L2_3, TGF_0, g1_13, TGF_10] is not transcendence basis
+Collection [g3_4, DeltaGamma2, g3_9, L1_0, TGF_8, L2_6, g1_9, L2_9, rho1, CMX_3, g1_3, kOBL1, CMX_4, CMX_7, g1_10, rho2, a1, a2] is not transcendence basis
+Collection [g3_5, CMX_10, dL2, g1_1, g2_3, a1, CMX_1, CMX_3, TGF_8, c, g1_13, g2_8, L2_7, RL2, rho1, kSS, RL1, gamma3] is not transcendence basis
+Collection [g3_5, a1, g2_8, g2_9, c, TGF_6, gamma3, L2_12, g3_4, RL2, gamma1, g3_9, g2_1, DeltaGamma2, g3_6, L2_5, CMX_11, kL2CMX] is not transcendence basis
+Collection [g3_5, g1_3, g1_2, CMX_7, Delta3Gamma3, L2_9, CMX_10, g1_12, L2_11, TGF_10, g2_4, g2_13, L2_0, g1_8, TGF_4, dRankl, g3_0, CMX_11] is not transcendence basis
+Collection [g3_5, g2_4, g3_2, CMX_0, CMX_11, L2_12, L2_8, TGF_0, g1_7, kL2CMX, TGF_3, g1_12, L2_0, g2_12, a1, g3_4, CMX_2, L2_4] is not transcendence basis
+Collection [g3_5, g3_7, L2_1, TGF_2, Rrob, Delta2Gamma2, kCMXL, g2_10, CMX_6, g2_9, g1_11, L2_2, a1, g2_1, L2_3, L2_4, CMX_4, kOBRankL] is not transcendence basis
+Collection [g3_6, CMX_7, L2_0, g1_4, kSS, TGF_8, g2_8, gamma1, CMX_4, L2_12, g3_4, kCMXL, g2_11, kL2CMX, g3_7, dOC, CMX_5, g2_13] is not transcendence basis
+Collection [g3_6, TGF_2, a1, CMX_7, g2_12, g1_4, TGF_0, TGF_12, g1_10, g3_9, gamma1, g3_8, L2_0, kOBL1, g3_0, dOC, L2_8, Delta2Gamma2] is not transcendence basis
+Collection [g3_6, g1_1, kSS, g3_8, CMX_1, L2_7, L2_11, L1_0, g3_9, c, TGF_10, g1_2, g1_4, g1_6, TGF_12, a1, rho3, CMX_9] is not transcendence basis
+Collection [g3_6, g3_9, L2_11, CMX_1, g3_5, g1_6, g2_2, g2_10, CMX_6, DeltaGamma2, L2_1, L2_6, rho3, g1_3, L2_3, L2_2, g2_13, g3_1] is not transcendence basis
+Collection [g3_6, gamma1, L2_7, CMX_12, TGF_2, g3_8, kOCTGF, g2_0, CMX_0, CMX_7, dOC, g2_10, g1_1, g2_4, TGF_9, CMX_6, kOBRankL, RL2] is not transcendence basis
+Collection [g3_7, CMX_5, g1_8, g3_1, dOC, kL2L1, TGF_1, L2_3, g1_0, TGF_5, TGF_10, g2_6, TGF_2, CMX_2, CMX_8, g2_12, a3, L2_8] is not transcendence basis
+Collection [g3_7, L2_4, TGF_9, g3_8, L2_8, dL1, kOBRankL, kL2CMX, g1_10, g2_0, gamma3, g3_2, g2_12, a1, dRankl, a3, TGF_3, TGF_2] is not transcendence basis
+Collection [g3_7, TGF_1, rho1, g3_0, g3_5, L2_12, g1_11, TGF_10, g1_7, CMX_4, CMX_11, CMX_12, CMX_6, TGF_12, L2_8, a3, g2_1, CMX_0] is not transcendence basis
+Collection [g3_7, TGF_11, CMX_10, g1_1, a2, CMX_9, rho1, RL2, CMX_1, g1_4, gamma1, g2_6, g1_3, TGF_8, kint, c, L2_5, g2_2] is not transcendence basis
+Collection [g3_7, g2_10, kCMXL, g1_3, a2, L2_5, kL2CMX, L2_0, g1_4, TGF_4, DeltaGamma2, g3_5, Delta2Gamma2, TGF_2, TGF_10, L2_6, Delta3Gamma3, kSS] is not transcendence basis
+Collection [g3_7, kSS, dRankl, rho1, CMX_9, TGF_6, g2_8, L2_8, CMX_11, dOC, kOBRankL, kCMXL, g1_9, g1_10, g1_3, L2_9, g1_0, kL2CMX] is not transcendence basis
+Collection [g3_8, TGF_4, TGF_10, RL2, CMX_3, g2_0, CMX_9, L2_2, dL1, Delta2Gamma2, g2_13, L2_1, g3_0, L2_3, g1_3, TGF_8, DeltaGamma2, g2_7] is not transcendence basis
+Collection [g3_8, rho1, CMX_12, L2_6, L2_1, TGF_1, g1_3, g2_13, g2_5, kCMXL, L2_10, CMX_10, TGF_3, g2_7, dL1, Rrob, g3_6, kOCTGF] is not transcendence basis
+Collection [g3_8, rho1, g1_5, g1_3, g1_4, g3_2, kL2L1, gamma3, L2_0, g3_6, g3_3, g2_12, dL1, g2_4, gamma1, L2_9, L2_1, g1_11] is not transcendence basis
+Collection [g3_9, L2_9, CMX_5, g2_9, TGF_6, kCMXL, RL1, TGF_0, g2_7, g2_0, CMX_7, dOC, L2_4, g2_10, TGF_3, g2_2, g3_0, CMX_11] is not transcendence basis
+Collection [g3_9, g1_11, g1_13, dL2, CMX_12, g3_8, kCMXL, L2_6, g3_4, TGF_5, TGF_6, g3_6, a3, RL2, CMX_8, g3_5, rho3, L1_0] is not transcendence basis
+Collection [gamma1, TGF_12, dOC, TGF_6, L2_12, rho3, TGF_7, g1_6, g2_13, g1_8, a2, CMX_12, L2_2, g1_13, g2_2, TGF_4, L2_9, CMX_8] is not transcendence basis
+Collection [gamma1, TGF_9, g1_11, g2_6, g3_3, Rrob, L2_6, DeltaGamma2, g1_4, g1_3, dL2, g2_11, TGF_1, g2_3, g1_1, g1_6, TGF_4, TGF_12] is not transcendence basis
+Collection [gamma1, dL1, L2_5, rho1, rho2, Delta2Gamma2, CMX_11, g2_4, CMX_6, TGF_0, CMX_7, g2_9, g2_3, RL2, CMX_1, gamma3, TGF_3, L2_0] is not transcendence basis
+Collection [gamma3, g1_13, g2_12, TGF_11, g3_5, g2_0, CMX_0, TGF_0, CMX_3, L2_6, g1_4, g2_5, kOCTGF, kSS, L2_4, g3_1, g1_7, CMX_5] is not transcendence basis
+Collection [gamma3, g2_0, g1_10, Delta2Gamma2, kL2L1, TGF_5, TGF_12, dL1, kOBRankL, CMX_2, TGF_1, g2_9, a3, g1_8, g2_10, g2_12, gamma1, TGF_0] is not transcendence basis
+Collection [gamma3, g3_7, dRankl, CMX_10, g1_7, g2_13, g2_8, rho3, g1_11, a2, RL2, g2_5, kint, TGF_8, g3_8, kOCTGF, g1_10, L2_1] is not transcendence basis
+Collection [gamma3, Delta2Gamma2, g1_12, dL2, g2_1, a1, CMX_0, CMX_5, c, TGF_5, TGF_1, g3_1, g2_6, kSS, L2_1, TGF_7, g3_7, kL2L1] is not transcendence basis
+Collection [kCMXL, L2_0, g3_7, CMX_5, kOBL1, TGF_3, g2_4, gamma1, TGF_8, g1_5, L2_3, g2_12, CMX_1, dRankl, g2_11, CMX_7, TGF_5, kOCTGF] is not transcendence basis
+Collection [kCMXL, L2_1, CMX_9, a1, kSS, CMX_8, g2_5, g1_4, TGF_12, TGF_2, CMX_5, Delta2Gamma2, L2_6, L2_7, g1_5, g2_1, TGF_1, g3_2] is not transcendence basis
+Collection [kCMXL, RL2, dOC, CMX_8, kint, CMX_6, g1_2, g3_0, CMX_4, g2_0, TGF_5, g3_4, TGF_12, a1, TGF_4, RL1, g2_1, CMX_5] is not transcendence basis
+Collection [kCMXL, TGF_5, kOCTGF, g3_8, dL2, L1_0, TGF_7, g1_10, g1_7, CMX_10, g3_4, g3_9, g3_0, L2_10, kL2L1, DeltaGamma2, kOBL1, TGF_10] is not transcendence basis
+Collection [kCMXL, g1_4, g2_0, CMX_12, gamma3, kint, TGF_8, Delta2Gamma2, g2_8, Rrob, g3_3, CMX_1, rho2, a3, CMX_11, g3_6, g2_12, L2_5] is not transcendence basis
+Collection [kL2CMX, L2_5, CMX_2, g2_10, g3_8, L2_9, kCMXL, g2_9, L2_11, TGF_2, Delta3Gamma3, RL2, g2_2, dOC, g2_3, rho3, CMX_12, gamma3] is not transcendence basis
+Collection [kL2CMX, TGF_10, CMX_5, g3_9, g2_3, CMX_12, g3_6, CMX_10, TGF_7, rho1, g1_7, L2_5, g3_8, g1_2, CMX_4, g2_0, CMX_1, g1_10] is not transcendence basis
+Collection [kL2CMX, TGF_10, g2_1, g2_12, L2_11, g1_4, rho3, c, TGF_11, CMX_4, CMX_1, g3_3, CMX_2, gamma1, L1_0, kL2L1, RL1, dRankl] is not transcendence basis
+Collection [kL2CMX, TGF_3, kOBRankL, CMX_2, g3_8, CMX_0, g1_12, g2_7, kSS, g2_5, g2_4, dL1, g1_8, TGF_10, L2_3, g1_7, g1_2, TGF_6] is not transcendence basis
+Collection [kL2CMX, g2_5, g2_2, kOBRankL, g2_6, CMX_1, dOC, g3_1, kint, CMX_11, g3_2, TGF_8, TGF_12, TGF_3, TGF_7, g1_3, TGF_1, CMX_5] is not transcendence basis
+Collection [kL2CMX, g3_4, g3_7, g2_0, g3_2, kOCTGF, kL2L1, CMX_9, TGF_0, L2_2, TGF_10, L2_0, L2_1, a1, g1_1, g3_0, kSS, rho3] is not transcendence basis
+Collection [kL2L1, L2_1, g2_10, g3_0, TGF_12, CMX_10, g3_1, rho2, L2_12, CMX_6, CMX_0, g1_5, g2_8, DeltaGamma2, dRankl, g3_4, g2_4, dL1] is not transcendence basis
+Collection [kL2L1, L2_5, g2_13, TGF_6, g1_12, Rrob, kCMXL, g2_0, CMX_0, L2_2, c, dL2, CMX_4, a3, TGF_11, g2_9, CMX_1, L2_12] is not transcendence basis
+Collection [kL2L1, TGF_0, CMX_6, CMX_0, dL1, g2_10, g1_8, CMX_12, L2_2, TGF_8, L2_7, L2_4, TGF_6, g1_6, g3_0, CMX_11, CMX_8, kOBRankL] is not transcendence basis
+Collection [kL2L1, g2_10, L2_5, L2_8, g1_7, CMX_2, CMX_8, TGF_7, TGF_0, L2_2, Rrob, kOBL1, L2_11, dRankl, CMX_9, c, CMX_1, kSS] is not transcendence basis
+Collection [kOBL1, L2_6, g1_4, g1_0, rho3, kCMXL, L2_3, kL2L1, TGF_1, Delta3Gamma3, g3_7, TGF_0, L2_0, g2_4, g1_13, g2_7, L2_8, dL2] is not transcendence basis
+Collection [kOBL1, g1_3, g1_5, TGF_7, g3_6, g2_12, g3_3, g2_3, CMX_8, L2_7, TGF_11, CMX_9, TGF_4, g1_1, L2_2, TGF_3, RL1, g3_9] is not transcendence basis
+Collection [kOBL1, g1_4, g3_8, g1_8, g2_7, g1_6, g1_5, rho3, TGF_1, kint, CMX_3, CMX_4, L2_5, g2_3, g3_7, L2_12, g3_2, CMX_12] is not transcendence basis
+Collection [kOBL1, g1_9, L2_2, g2_9, g3_5, TGF_2, CMX_9, TGF_6, g2_2, g2_10, RL1, g1_3, L2_9, TGF_7, g3_3, TGF_0, gamma1, L2_6] is not transcendence basis
+Collection [kOBL1, g2_10, CMX_2, g1_1, dL1, CMX_1, L2_10, dL2, g2_7, g1_7, TGF_12, kL2CMX, L2_0, g2_1, g3_3, g2_0, Delta3Gamma3, g1_8] is not transcendence basis
+Collection [kOBL1, g2_7, Delta2Gamma2, TGF_3, CMX_0, g3_1, TGF_4, g1_2, g2_1, a3, TGF_9, L2_3, TGF_12, CMX_12, g3_2, g1_10, dRankl, g2_9] is not transcendence basis
+Collection [kOCTGF, L2_8, g1_1, g1_5, kL2L1, gamma3, g3_3, kSS, L2_11, g3_2, g2_1, g1_9, g2_3, TGF_11, L2_12, Rrob, gamma1, g1_8] is not transcendence basis
+Collection [kOCTGF, a3, g2_12, g2_5, g1_1, CMX_4, g1_5, L2_4, gamma3, CMX_11, Delta3Gamma3, g1_8, g2_0, L2_3, g2_4, CMX_12, g2_6, g1_6] is not transcendence basis
+Collection [kOCTGF, g1_1, gamma1, g2_10, g3_1, TGF_8, g2_13, TGF_11, CMX_12, g1_9, g1_7, g2_1, kOBRankL, g1_13, CMX_6, g2_12, g3_0, L2_9] is not transcendence basis
+Collection [kOCTGF, g1_4, L2_11, g2_5, a3, g1_13, g2_7, RL2, kOBRankL, rho1, RL1, g2_8, g2_6, g3_4, kCMXL, g1_1, g2_12, g1_6] is not transcendence basis
+Collection [kSS, CMX_8, g3_1, g2_8, CMX_1, g3_7, TGF_11, kOBL1, TGF_10, kOCTGF, g1_13, g3_5, kCMXL, a3, g1_0, L2_4, TGF_9, gamma1] is not transcendence basis
+Collection [kSS, L2_7, CMX_4, L2_2, g2_2, L2_8, TGF_10, g2_12, CMX_12, CMX_1, TGF_1, L1_0, L2_11, a1, g2_6, dL1, g3_8, CMX_3] is not transcendence basis
+Collection [kSS, L2_7, g2_8, dOC, g2_5, g2_9, g2_0, c, g2_12, TGF_0, TGF_1, g3_3, g3_9, dL1, L2_3, g3_4, TGF_8, g1_4] is not transcendence basis
+Collection [kSS, g1_13, g2_8, c, g2_1, TGF_12, kOCTGF, L2_10, g2_3, TGF_3, CMX_1, TGF_11, TGF_1, DeltaGamma2, L2_8, dL2, g1_5, L2_0] is not transcendence basis
+Collection [kSS, g1_8, a3, CMX_9, c, g1_11, TGF_11, CMX_3, g2_0, g3_6, CMX_0, L2_5, g2_12, g2_6, L2_7, TGF_4, CMX_7, dRankl] is not transcendence basis
+Collection [kint, TGF_7, L2_3, L2_9, g1_7, g2_12, TGF_3, kSS, L2_0, CMX_8, g2_8, g1_3, dOC, Delta3Gamma3, g2_13, L2_4, TGF_9, kL2CMX] is not transcendence basis
+Collection [kint, TGF_8, TGF_4, g2_7, g2_5, TGF_10, gamma1, g1_4, g3_5, g1_13, CMX_5, g3_6, rho2, g3_7, CMX_8, DeltaGamma2, Delta3Gamma3, L2_7] is not transcendence basis
+Collection [kint, g1_10, CMX_12, g3_2, g1_4, CMX_4, g3_6, g1_12, TGF_0, g1_13, g3_3, g2_8, CMX_8, g1_2, L2_8, c, CMX_2, kOCTGF] is not transcendence basis
+Collection [kint, g3_3, g1_11, L2_2, RL2, CMX_5, g2_12, gamma1, g2_11, g3_5, DeltaGamma2, CMX_9, a2, TGF_10, g3_9, L2_10, kOBRankL, TGF_0] is not transcendence basis
+Collection [kint, Delta3Gamma3, DeltaGamma2, g2_10, g2_9, g3_0, g2_7, L1_0, g3_9, dOC, TGF_4, TGF_7, TGF_10, dRankl, g2_6, L2_11, g2_5, g2_4] is not transcendence basis
+Collection [rho1, CMX_0, Rrob, g3_5, dL2, Delta2Gamma2, kL2L1, kL2CMX, TGF_3, g2_3, dRankl, L2_12, CMX_10, g1_1, gamma3, g2_0, c, CMX_7] is not transcendence basis
+Collection [rho1, L2_6, g1_13, g1_9, gamma3, L2_12, g1_8, g2_13, kOCTGF, TGF_2, Delta2Gamma2, L2_10, L2_8, TGF_0, CMX_3, TGF_12, g1_6, g3_9] is not transcendence basis
+Collection [rho1, L2_8, g1_7, g1_10, L2_0, RL1, a2, g2_4, L2_5, g2_6, L2_6, L2_10, L2_11, g2_11, g2_9, g3_1, kint, g2_12] is not transcendence basis
+Collection [rho1, dRankl, L2_8, kL2CMX, g1_1, CMX_5, c, L2_7, rho2, g2_0, g2_13, Delta3Gamma3, L2_12, L2_6, L2_2, g1_13, g1_7, L2_10] is not transcendence basis
+Collection [rho1, g1_9, CMX_3, Rrob, g2_12, CMX_6, rho3, g2_1, g2_13, rho2, L1_0, g1_12, g1_13, Delta2Gamma2, g2_8, g3_1, DeltaGamma2, L2_9] is not transcendence basis
+Collection [rho1, g2_0, g3_4, RL1, g1_1, g1_2, CMX_0, g1_12, L2_11, a2, L2_8, c, RL2, g3_8, Delta3Gamma3, TGF_9, rho2, g2_10] is not transcendence basis
+Collection [rho1, g2_5, rho2, L2_0, a2, g2_8, CMX_8, L2_2, DeltaGamma2, g1_12, CMX_6, L2_4, L2_8, g1_5, CMX_1, g2_0, gamma3, g2_11] is not transcendence basis
+Collection [rho1, gamma1, g3_7, TGF_5, CMX_4, CMX_8, dOC, g1_7, a3, L2_0, g1_11, g3_6, g3_5, TGF_9, g3_9, L2_8, g3_8, CMX_12] is not transcendence basis
+Collection [rho1, gamma3, g2_10, g1_7, kOBL1, gamma1, kSS, CMX_9, g2_1, a3, RL1, CMX_0, TGF_1, g2_3, L2_7, dRankl, g3_3, g2_12] is not transcendence basis
+Collection [rho2, L2_9, dOC, CMX_3, L2_12, CMX_11, g1_13, dL1, L2_5, g2_13, g2_8, L1_0, c, g3_4, g1_12, dRankl, RL2, kSS] is not transcendence basis
+Collection [rho2, g1_10, CMX_12, c, g3_0, RL1, CMX_6, TGF_6, CMX_4, g2_4, dRankl, TGF_9, kL2CMX, TGF_4, gamma3, g3_1, a2, CMX_0] is not transcendence basis
+Collection [rho2, g1_3, CMX_10, g2_10, Delta2Gamma2, Rrob, L2_4, g1_1, kSS, TGF_6, g3_2, g2_5, CMX_1, TGF_12, rho3, kint, g2_11, c] is not transcendence basis
+Collection [rho3, L2_10, g2_4, TGF_11, Delta3Gamma3, kCMXL, g3_9, CMX_4, g1_10, kint, L2_8, dL2, dRankl, kSS, g2_10, L2_2, TGF_3, a2] is not transcendence basis
+Collection [rho3, g1_3, g3_1, TGF_12, g1_0, g2_11, gamma1, a3, CMX_4, g2_4, L2_4, g1_11, TGF_11, kOCTGF, L2_12, g1_12, g3_9, DeltaGamma2] is not transcendence basis
+Collection [rho3, g2_3, kSS, L2_11, dL1, L2_3, g1_7, kOCTGF, CMX_6, CMX_1, L2_12, c, L1_0, CMX_0, CMX_9, g3_1, gamma3, rho2] is not transcendence basis
+Collection [rho3, g3_0, g3_1, g2_7, g2_8, g1_6, DeltaGamma2, TGF_0, g1_1, RL2, TGF_1, g3_6, L2_8, CMX_7, L2_2, CMX_5, kOBRankL, dL1] is not transcendence basis
+Collection [rho3, gamma3, L2_10, g1_11, g2_11, g3_4, CMX_6, g1_10, g1_2, kSS, g2_4, g2_0, g1_3, TGF_12, g1_4, TGF_9, g1_12, CMX_3] is not transcendence basis
+Collection [rho3, kOBL1, g2_5, gamma3, L2_12, rho1, g3_6, g1_8, g2_8, RL1, dRankl, TGF_11, g2_1, RL2, g2_12, kL2L1, L2_1, L2_4] is not transcendence basis
+Collection [Delta2Gamma2, TGF_4, g2_10, kL2CMX, kSS, L2_11, g3_5, g3_3, g2_3, a1, g2_11, L2_8, L2_1, g3_8, TGF_9, g3_1, TGF_3, kOBRankL] is not transcendence basis
+Collection [Delta2Gamma2, TGF_7, CMX_0, g1_13, g3_9, TGF_8, g1_11, dRankl, CMX_11, DeltaGamma2, Delta3Gamma3, g2_4, g2_0, g1_3, g2_12, L2_9, gamma1, g3_4] is not transcendence basis
+Collection [Delta2Gamma2, dL1, kCMXL, g1_4, g1_13, CMX_6, g1_2, L2_6, TGF_11, g3_5, CMX_10, kOCTGF, g1_12, TGF_8, a1, g3_0, L2_0, L2_2] is not transcendence basis
+Collection [Delta2Gamma2, g1_7, Delta3Gamma3, TGF_8, g3_7, g3_9, TGF_9, a1, TGF_10, TGF_12, g2_12, TGF_1, g3_8, g2_6, g2_10, g1_0, kL2L1, RL2] is not transcendence basis
+Collection [Delta2Gamma2, gamma1, a3, g3_1, kOBL1, g1_2, L2_10, g3_6, CMX_11, TGF_8, g1_10, g1_4, L2_2, g2_12, g2_11, g2_8, L2_1, g1_3] is not transcendence basis
+Collection [Delta2Gamma2, gamma1, DeltaGamma2, CMX_10, g2_2, dRankl, CMX_2, L2_5, CMX_6, g1_3, CMX_0, g3_1, g2_6, kL2CMX, TGF_2, a2, g2_10, L2_10] is not transcendence basis
+Collection [Delta3Gamma3, CMX_0, L2_4, TGF_10, g3_2, L2_6, L1_0, g3_0, kL2L1, g2_11, DeltaGamma2, g2_2, kOBRankL, g2_12, TGF_9, c, CMX_3, g1_1] is not transcendence basis
+Collection [Delta3Gamma3, Rrob, g3_4, L2_6, TGF_1, L2_0, gamma1, g2_7, g2_4, g2_8, TGF_11, g2_1, kOCTGF, CMX_6, g1_1, CMX_11, g1_8, g2_13] is not transcendence basis
+Collection [Delta3Gamma3, g2_9, TGF_8, g1_6, g2_2, TGF_2, rho3, L2_9, CMX_11, CMX_10, g1_13, g1_10, g1_8, TGF_3, dL1, g1_7, TGF_6, kOCTGF] is not transcendence basis
+Collection [Delta3Gamma3, g3_1, DeltaGamma2, g3_5, a2, g2_8, g2_13, g1_0, CMX_9, g2_10, Delta2Gamma2, L2_5, g3_9, kOBRankL, L2_8, g3_3, g1_12, g3_0] is not transcendence basis
+Collection [Delta3Gamma3, kL2CMX, g3_1, L2_10, g1_3, L2_0, g1_9, kOBRankL, Rrob, CMX_12, L2_1, g3_8, L2_3, g3_6, TGF_4, g3_7, gamma3, a2] is not transcendence basis
+Collection [DeltaGamma2, CMX_8, g3_7, kOCTGF, g3_9, g2_11, rho3, g3_6, g1_13, TGF_12, g2_6, CMX_6, g1_4, TGF_0, TGF_3, a1, g2_9, g1_12] is not transcendence basis
+Collection [DeltaGamma2, CMX_9, L2_5, L2_4, g1_0, dOC, kL2CMX, c, kint, Delta2Gamma2, g3_7, g1_9, rho2, TGF_7, CMX_5, L2_11, rho1, g1_7] is not transcendence basis
+Collection [DeltaGamma2, kCMXL, a3, g3_6, L2_1, g2_10, L2_2, L2_7, dRankl, g1_12, L2_5, RL1, kL2CMX, rho2, g3_5, L2_4, TGF_7, CMX_5] is not transcendence basis
+Collection [DeltaGamma2, kOCTGF, g3_3, CMX_12, g3_0, g2_13, g3_2, g1_12, TGF_4, gamma3, CMX_5, g1_4, g2_10, TGF_12, CMX_11, g2_12, TGF_9, kL2L1] is not transcendence basis
+Collection [kOBRankL, L2_5, DeltaGamma2, g2_6, g1_4, TGF_2, CMX_2, g2_5, L2_2, g1_5, g1_6, kOBL1, kL2CMX, CMX_0, g2_3, Delta2Gamma2, L2_4, rho1] is not transcendence basis
+Collection [kOBRankL, L2_7, g2_12, L2_1, g3_7, g1_1, TGF_5, CMX_1, Delta2Gamma2, CMX_5, g2_0, g1_12, g1_7, kL2L1, TGF_2, kCMXL, CMX_9, g1_13] is not transcendence basis
+Collection [kOBRankL, RL1, RL2, gamma3, g2_0, g2_13, g2_7, g3_8, TGF_1, TGF_4, L2_7, TGF_6, rho1, g1_12, L2_10, L2_8, g1_8, TGF_11] is not transcendence basis
+Collection [kOBRankL, TGF_4, RL1, g3_6, kL2L1, TGF_0, g2_0, CMX_4, TGF_2, rho1, dOC, CMX_9, gamma1, CMX_8, kSS, g3_5, g2_2, g1_5] is not transcendence basis
+Collection [kOBRankL, dL2, L2_5, g2_9, g3_4, L2_12, TGF_10, g2_12, kSS, CMX_7, g2_1, gamma1, g1_7, g1_10, L2_9, L2_2, g1_13, dRankl] is not transcendence basis
+Collection [kOBRankL, g2_7, g2_3, L2_4, kOCTGF, kSS, g3_5, dOC, g1_7, CMX_8, CMX_12, g2_13, L2_11, g3_0, g1_2, g1_4, kCMXL, TGF_5] is not transcendence basis
+Collection [kOBRankL, rho1, dOC, g3_8, g3_5, L2_3, CMX_12, TGF_2, TGF_4, g1_1, TGF_6, g1_3, g1_0, a3, kOCTGF, CMX_9, kL2CMX, L2_1] is not transcendence basis
+Collection [kOBRankL, rho1, g3_9, g2_4, g3_4, kOCTGF, kL2CMX, g2_7, g1_3, g1_8, a3, g2_1, TGF_4, g1_7, kSS, a2, CMX_1, gamma1] is not transcendence basis
+Picked the best choice [CMX_0, L1_0, L2_0, RL1, Rrob, TGF_0, a1, a2, c, dL1, dL2, dRankl, g1_0, g2_0, g3_0, kL2L1, kOBL1, kSS] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {RL1, Rrob, a1, a2, c, dL1, dL2, dRankl, kL2L1, kOBL1, kSS}
+Algebraically independent parameters among derivatives: {CMX(0), L1(0), L2(0), TGF(0), g1(0), g2(0), g3(0)}
+
+=== Input info ===
+State variables:          [RL1(t), Rrob(t), a1(t), a2(t), c(t), dL1(t), dL2(t), dRankl(t), kL2L1(t), kOBL1(t), kSS(t), L1(t), L2(t), CMX(t), OC(t), TGF(t), g1(t), g2(t), g3(t), ROB(t), FOB(t), SOB(t)]
+Output variables:         [y1(t), y2(t), y3(t), y4(t), y_faux1(t), y_faux2(t), y_faux3(t), y_faux4(t), y_faux5(t), y_faux6(t), y_faux7(t), y_faux8(t), y_faux9(t), y_faux10(t), y_faux11(t)]
+Input variables:          [TGD(t)]
+Parameters in equations:  [RL2, ROC, a3, dFOB, dOC, dSOB, dTGF, f, gamma1, gamma2, gamma3, kCMXL, kL2CMX, kOCTGF, kROBOB, kint, rho1, rho2, rho3, Delta2Gamma2, Delta3Gamma3, DeltaGamma2, kOBRankL]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[ROC = 1, rho3 = 1, gamma1 = 2, dFOB = 1, OC_ = 0, RL2 = 3, Delta2Gamma2 = 1, dOC = 1, f = 1, dTGF = 2, a3 = 1, kOBL1_ = 0, kROBOB = 1, SOB_ = 0, CMX_ = 2, kOCTGF = 2, rho1 = 1, FOB_ = 0, L2_ = 2, kSS_ = 0, kint = 3, dL2_ = 0, Delta3Gamma3 = 1, dSOB = 1, ROB_ = 0, a2_ = 0, a1_ = 0, kOBRankL = 3, dL1_ = 0, c_ = 0, kCMXL = 2, DeltaGamma2 = 1, kL2L1_ = 0, g3_ = 1, Rrob_ = 0, RL1_ = 0, rho2 = 1, (NULL) = 2, g2_ = 1, gamma3 = 2, kL2CMX = 2, g1_ = 1, gamma2 = 2, TGF_ = 2, dRankl_ = 0]
+NonID parameters:	[CMX_0, L1_0, L2_0, RL1, RL2, Rrob, TGF_0, a1, a2, a3, c, dL1, dL2, dOC, dRankl, g1_0, g2_0, g3_0, gamma1, gamma3, kCMXL, kL2CMX, kL2L1, kOBL1, kOCTGF, kSS, kint, rho1, rho2, rho3, Delta2Gamma2, Delta3Gamma3, DeltaGamma2, kOBRankL]
+Substitutions:	[OC_ = 1, kOBL1_ = 1, SOB_ = 1, CMX_ = 3, FOB_ = 1, L2_ = 3, kSS_ = 1, dL2_ = 1, ROB_ = 1, a2_ = 1, a1_ = 1, dL1_ = 1, c_ = 1, kL2L1_ = 1, g3_ = 2, Rrob_ = 1, RL1_ = 1, g2_ = 2, g1_ = 2, z_aux = 3, TGF_ = 3, dRankl_ = 1]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [L1(t), L2(t), CMX(t), OC(t), TGF(t), g1(t), g2(t), g3(t), ROB(t), FOB(t), SOB(t)]
+Output variables:         [y1(t), y2(t), y3(t), y4(t)]
+Input variables:          [TGD(t)]
+Parameters in equations:  [RL1, RL2, ROC, Rrob, a1, a2, a3, c, dFOB, dL1, dL2, dOC, dRankl, dSOB, dTGF, f, gamma1, gamma2, gamma3, kCMXL, kL2CMX, kL2L1, kOBL1, kOCTGF, kROBOB, kSS, kint, rho1, rho2, rho3, Delta2Gamma2, Delta3Gamma3, DeltaGamma2, kOBRankL]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+Locally identifiable paramters:  [ROC, dFOB, dSOB, dTGF, f, gamma2, kROBOB, OC(0), ROB(0), FOB(0), SOB(0)]
+Nonidentifiable parameter:  [CMX(0), L1(0), L2(0), RL1, RL2, Rrob, TGF(0), a1, a2, a3, c, dL1, dL2, dOC, dRankl, g1(0), g2(0), g3(0), gamma1, gamma3, kCMXL, kL2CMX, kL2L1, kOBL1, kOCTGF, kSS, kint, rho1, rho2, rho3, Delta2Gamma2, Delta3Gamma3, DeltaGamma2, kOBRankL]
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[ROC = 1, dL2 = 3, rho3 = 1, gamma1 = 2, dFOB = 1, OC_ = 0, RL2 = 3, Delta2Gamma2 = 1, dOC = 1, f = 1, dTGF = 2, a3 = 1, kROBOB = 1, SOB_ = 0, CMX_ = 2, kOCTGF = 2, rho1 = 1, dRankl = 3, FOB_ = 0, L2_ = 2, Rrob = 1, kint = 3, a1 = 1, Delta3Gamma3 = 1, dSOB = 1, ROB_ = 0, kOBRankL = 3, c = 3, kCMXL = 2, DeltaGamma2 = 1, g3_ = 1, kSS = 3, rho2 = 1, (NULL) = 2, g2_ = 1, gamma3 = 2, a2 = 1, kL2CMX = 2, g1_ = 1, gamma2 = 2, TGF_ = 2]
+NonID parameters:	[CMX_0, L1_0, L2_0, RL1, RL2, Rrob, TGF_0, a1, a2, a3, c, dL1, dL2, dOC, dRankl, g1_0, g2_0, g3_0, gamma1, gamma3, kCMXL, kL2CMX, kL2L1, kOBL1, kOCTGF, kSS, kint, rho1, rho2, rho3, Delta2Gamma2, Delta3Gamma3, DeltaGamma2, kOBRankL]
+Substitutions:	[OC_ = 1, SOB_ = 1, CMX_ = 3, FOB_ = 1, L2_ = 3, ROB_ = 1, g3_ = 2, g2_ = 2, g1_ = 2, z_aux = 3, TGF_ = 3]
+memory used=1553583.8MB, alloc=1251.8MB, time=24212.15
