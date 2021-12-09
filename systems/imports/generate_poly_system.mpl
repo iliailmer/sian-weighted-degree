@@ -1,7 +1,7 @@
 # Code to take a system of ode's and generate a polynomial system for SIAN
 
 #===============================================================================
-GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_solutions:=true, p := 0.99, infolevel := 1, method := 2, num_nodes := 6, max_comb:=500}) 
+GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_solutions:=true, p := 0.99, infolevel := 1, method := 2, num_nodes := 6, max_comb:=200}) 
 #===============================================================================
  local i, j, k, n, m, s, all_params, all_vars, eqs, Q, X, Y, poly, d0, D1, 
         sample, all_subs,alpha, beta, Et, x_theta_vars, prolongation_possible, 
@@ -244,7 +244,6 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
   Et_hat_old := GenerateEtHatOld(Et, theta_l, d0, beta, p_local, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q, infolevel):
     
   et_hat_monomials := map(each->op(expand(each)), Et_hat_old):
-  print(et_hat_monomials);
   
   x_theta_vars_ := ListTools[Reverse]([op({op(x_theta_vars)} minus {op(theta_l)})]);
   x_theta_vars := [op(theta_l), op(x_theta_vars_)];
@@ -382,7 +381,6 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       end if:
     end if:
   end if:
-  return global_table;
     #----------------------------------------------
     # 3. Randomize.
     #----------------------------------------------

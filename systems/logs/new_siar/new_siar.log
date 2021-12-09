@@ -5,6 +5,14 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 sigma := [diff(E(t),t) = -alphaEIs*E(t)+betaIa*Ia(t)*S(t)*Ninv+Is(t)*S(t)*Ninv*
 betaIs+betaT*S(t)*Ninv*T(t)+S(t)*Ninv*betaH*H(t)-E(t)*alphaEIa, diff(H(t),t) =
 -alphaHT*H(t)+Ia(t)*xi+Is(t)*alphaIsH-alphaHRd*H(t), diff(Is(t),t) = alphaEIs*E
@@ -39,6 +47,10 @@ Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT,
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [Ninv, alphaHT, alphaTD, betaH, betaT, alphaHRd, alphaTRd, H(0), D(0), Rd(0), T(0)]
 Nonidentifiable parameter:  [E(0), Ia(0), Is(0), S(0), betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
 
@@ -47,158 +59,83 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {E(0), Ia(0)}
 Number of possible combinations 1275
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
-Collection [E_0, E_1] is not transcendence basis
-Collection [E_0, E_8] is not transcendence basis
+Collection [E_0, E_2] is not transcendence basis
+Collection [E_0, S_0] is not transcendence basis
 Collection [E_0, S_4] is not transcendence basis
-Collection [E_0, S_7] is not transcendence basis
-Collection [E_1, E_4] is not transcendence basis
-Collection [E_1, S_2] is not transcendence basis
-Collection [E_1, S_7] is not transcendence basis
-Collection [E_2, E_5] is not transcendence basis
-Collection [E_2, S_5] is not transcendence basis
-Collection [E_3, S_6] is not transcendence basis
-Collection [E_3, S_8] is not transcendence basis
-Collection [E_4, E_2] is not transcendence basis
-Collection [E_4, E_3] is not transcendence basis
-Collection [E_5, S_1] is not transcendence basis
-Collection [E_5, S_5] is not transcendence basis
-Collection [E_6, S_2] is not transcendence basis
-Collection [E_6, S_4] is not transcendence basis
-Collection [E_6, S_7] is not transcendence basis
+Collection [E_0, S_6] is not transcendence basis
+Collection [E_2, E_8] is not transcendence basis
+Collection [E_3, E_6] is not transcendence basis
+Collection [E_4, E_8] is not transcendence basis
+Collection [E_4, S_6] is not transcendence basis
+Collection [E_4, S_8] is not transcendence basis
+Collection [E_5, E_8] is not transcendence basis
+Collection [E_5, S_6] is not transcendence basis
+Collection [E_6, S_0] is not transcendence basis
+Collection [E_6, S_3] is not transcendence basis
+Collection [E_6, S_8] is not transcendence basis
 Collection [E_7, E_0] is not transcendence basis
-Collection [E_8, E_1] is not transcendence basis
-Collection [E_8, E_2] is not transcendence basis
-Collection [E_8, E_7] is not transcendence basis
-Collection [E_8, S_1] is not transcendence basis
-Collection [E_9, S_2] is not transcendence basis
+Collection [E_7, E_3] is not transcendence basis
+Collection [E_7, E_6] is not transcendence basis
 Collection [E_9, S_3] is not transcendence basis
-Collection [E_9, S_5] is not transcendence basis
-Collection [E_9, S_7] is not transcendence basis
-Collection [Ia_0, Ia_1] is not transcendence basis
-Collection [Ia_0, Ia_3] is not transcendence basis
-Collection [Ia_0, Ia_4] is not transcendence basis
+Collection [E_9, S_4] is not transcendence basis
 Collection [Ia_0, Ia_6] is not transcendence basis
-Collection [Ia_0, betaIa] is not transcendence basis
-Collection [Ia_1, Ia_9] is not transcendence basis
-Collection [Ia_2, Ia_0] is not transcendence basis
-Collection [Ia_3, Ia_7] is not transcendence basis
-Collection [Ia_3, betaIa] is not transcendence basis
-Collection [Ia_4, Ia_3] is not transcendence basis
-Collection [Ia_5, Ia_0] is not transcendence basis
-Collection [Ia_5, Ia_2] is not transcendence basis
-Collection [Ia_6, Ia_2] is not transcendence basis
-Collection [Ia_6, Ia_5] is not transcendence basis
-Collection [Ia_6, Ia_9] is not transcendence basis
-Collection [Ia_7, Ia_0] is not transcendence basis
+Collection [Ia_1, Ia_7] is not transcendence basis
+Collection [Ia_3, xi] is not transcendence basis
+Collection [Ia_5, Ia_8] is not transcendence basis
+Collection [Ia_6, betaIa] is not transcendence basis
+Collection [Ia_7, xi] is not transcendence basis
 Collection [Ia_8, Ia_7] is not transcendence basis
-Collection [Ia_9, Ia_7] is not transcendence basis
-Collection [Ia_9, Ia_8] is not transcendence basis
-Collection [Is_0, Is_4] is not transcendence basis
-Collection [Is_0, Is_5] is not transcendence basis
-Collection [Is_0, alphaIsH] is not transcendence basis
-Collection [Is_1, Is_3] is not transcendence basis
-Collection [Is_1, Is_8] is not transcendence basis
-Collection [Is_1, alphaIsH] is not transcendence basis
-Collection [Is_10, Is_1] is not transcendence basis
-Collection [Is_10, Is_4] is not transcendence basis
-Collection [Is_2, Is_1] is not transcendence basis
-Collection [Is_2, Is_6] is not transcendence basis
-Collection [Is_3, Is_0] is not transcendence basis
-Collection [Is_3, Is_10] is not transcendence basis
-Collection [Is_3, Is_4] is not transcendence basis
-Collection [Is_3, Is_8] is not transcendence basis
-Collection [Is_3, Is_9] is not transcendence basis
-Collection [Is_3, alphaIsD] is not transcendence basis
+Collection [Ia_8, xi] is not transcendence basis
+Collection [Is_0, alphaIsRu] is not transcendence basis
+Collection [Is_1, alphaIsT] is not transcendence basis
+Collection [Is_10, Is_2] is not transcendence basis
+Collection [Is_10, Is_5] is not transcendence basis
 Collection [Is_3, alphaIsT] is not transcendence basis
-Collection [Is_4, Is_1] is not transcendence basis
-Collection [Is_4, Is_10] is not transcendence basis
-Collection [Is_4, Is_2] is not transcendence basis
 Collection [Is_4, Is_3] is not transcendence basis
-Collection [Is_4, betaIs] is not transcendence basis
-Collection [Is_4, alphaIsH] is not transcendence basis
-Collection [Is_4, alphaIsRu] is not transcendence basis
-Collection [Is_5, Is_0] is not transcendence basis
-Collection [Is_5, Is_10] is not transcendence basis
-Collection [Is_5, Is_4] is not transcendence basis
-Collection [Is_5, betaIs] is not transcendence basis
-Collection [Is_6, Is_1] is not transcendence basis
-Collection [Is_6, Is_8] is not transcendence basis
-Collection [Is_6, alphaIsT] is not transcendence basis
-Collection [Is_7, Is_10] is not transcendence basis
-Collection [Is_7, Is_2] is not transcendence basis
-Collection [Is_7, Is_3] is not transcendence basis
-Collection [Is_7, Is_6] is not transcendence basis
+Collection [Is_5, alphaIsRu] is not transcendence basis
+Collection [Is_7, Is_0] is not transcendence basis
 Collection [Is_7, Is_8] is not transcendence basis
-Collection [Is_7, Is_9] is not transcendence basis
 Collection [Is_7, alphaIsRu] is not transcendence basis
-Collection [Is_7, alphaIsT] is not transcendence basis
-Collection [Is_8, Is_1] is not transcendence basis
-Collection [Is_8, Is_10] is not transcendence basis
-Collection [Is_8, Is_7] is not transcendence basis
-Collection [Is_8, betaIs] is not transcendence basis
+Collection [Is_8, Is_3] is not transcendence basis
+Collection [Is_8, alphaIsD] is not transcendence basis
 Collection [Is_8, alphaIsH] is not transcendence basis
-Collection [Is_9, Is_0] is not transcendence basis
-Collection [Is_9, Is_1] is not transcendence basis
-Collection [S_0, E_5] is not transcendence basis
-Collection [S_0, E_8] is not transcendence basis
-Collection [S_0, S_7] is not transcendence basis
-Collection [S_1, S_7] is not transcendence basis
-Collection [S_2, E_0] is not transcendence basis
-Collection [S_2, E_2] is not transcendence basis
-Collection [S_2, E_8] is not transcendence basis
+Collection [Is_9, Is_10] is not transcendence basis
+Collection [Is_9, alphaIsD] is not transcendence basis
+Collection [S_0, E_7] is not transcendence basis
 Collection [S_2, S_0] is not transcendence basis
-Collection [S_2, S_5] is not transcendence basis
-Collection [S_2, S_6] is not transcendence basis
-Collection [S_3, E_7] is not transcendence basis
-Collection [S_3, S_4] is not transcendence basis
-Collection [S_4, E_3] is not transcendence basis
-Collection [S_4, E_8] is not transcendence basis
-Collection [S_4, S_5] is not transcendence basis
-Collection [S_5, E_0] is not transcendence basis
-Collection [S_5, S_6] is not transcendence basis
-Collection [S_6, S_7] is not transcendence basis
-Collection [S_7, S_0] is not transcendence basis
-Collection [S_7, S_3] is not transcendence basis
-Collection [S_8, S_1] is not transcendence basis
-Collection [betaIa, Ia_1] is not transcendence basis
-Collection [betaIa, Ia_4] is not transcendence basis
-Collection [betaIs, Is_3] is not transcendence basis
-Collection [betaIs, Is_8] is not transcendence basis
+Collection [S_5, E_1] is not transcendence basis
+Collection [S_5, S_1] is not transcendence basis
+Collection [S_6, S_1] is not transcendence basis
+Collection [S_6, S_4] is not transcendence basis
+Collection [S_7, E_0] is not transcendence basis
+Collection [S_7, E_6] is not transcendence basis
+Collection [S_8, E_1] is not transcendence basis
+Collection [S_8, E_2] is not transcendence basis
+Collection [betaIa, Ia_0] is not transcendence basis
+Collection [betaIs, Is_4] is not transcendence basis
+Collection [betaIs, Is_5] is not transcendence basis
 Collection [betaIs, alphaIsD] is not transcendence basis
-Collection [betaIs, alphaIsRu] is not transcendence basis
-Collection [betaIs, alphaIsT] is not transcendence basis
-Collection [alphaEIs, alphaIaIs] is not transcendence basis
-Collection [alphaIsD, Is_1] is not transcendence basis
-Collection [alphaIsD, Is_10] is not transcendence basis
-Collection [alphaIsD, betaIs] is not transcendence basis
-Collection [alphaIsRu, Is_1] is not transcendence basis
-Collection [alphaIsRu, Is_10] is not transcendence basis
-Collection [alphaIsRu, Is_7] is not transcendence basis
-Collection [alphaIsT, Is_1] is not transcendence basis
-Collection [alphaIsT, Is_9] is not transcendence basis
-Picked the best choice [betaIa, betaIs] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {betaIa, betaIs}
-Algebraically independent parameters among derivatives: {}
+Collection [alphaIsD, Is_3] is not transcendence basis
+Collection [alphaIsD, Is_4] is not transcendence basis
+Collection [alphaIsT, Is_7] is not transcendence basis
+Picked the best choice [S_2, betaIa] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {betaIa}
+Algebraically independent parameters among derivatives: {S_2}
 
 === Input info ===
-State variables:          [betaIa(t), betaIs(t), E(t), H(t), Is(t), D(t), S(t), Ia(t), Rd(t), T(t)]
-Output variables:         [y4(t), y2(t), y3(t), y5(t), y1(t), y_faux1(t), y_faux2(t)]
+State variables:          [betaIa(t), E(t), H(t), Is(t), D(t), S(t), Ia(t), Rd(t), T(t)]
+Output variables:         [y4(t), y2(t), y3(t), y5(t), y1(t), y_faux1(t)]
 Input variables:          []
-Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaT, xi, alphaEIa, alphaEIs, alphaHRd, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTRd]
+Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIs, betaT, xi, alphaEIa, alphaEIs, alphaHRd, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTRd]
 ===================
 
-Transcendence basis substitution turned off.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[alphaHT = 1, alphaIsRu = 2, T_ = 0, betaIa_ = 0, alphaHRd = 1, alphaEIa = 2, Is_ = 1, xi = 1, alphaTD = 1, alphaIsT = 1, betaT = 3, Rd_ = 0, H_ = 0, Ninv = 0, alphaIsH = 1, alphaIsD = 1, Ia_ = 1, alphaTRd = 1, betaIs_ = 0, alphaIaRu = 2, S_ = 3, alphaEIs = 2, betaH = 3, E_ = 2, D_ = 0, alphaIaIs = 2]
+States for substitution:	[alphaHT = 1, Is_ = 1, alphaIsT = 1, alphaIsH = 1, alphaEIs = 2, alphaIaIs = 2, betaH = 3, alphaTRd = 1, alphaIsRu = 2, T_ = 0, alphaIaRu = 2, betaIa_ = 0, Ninv = 0, alphaEIa = 2, alphaTD = 1, S_ = 3, D_ = 0, alphaHRd = 1, betaIs = 3, Ia_ = 1, alphaIsD = 1, H_ = 0, E_ = 2, betaT = 3, xi = 1, Rd_ = 0]
 NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-Substitutions:	[betaIa_ = 1, T_ = 1, Is_ = 2, betaT = 4, H_ = 1, Ia_ = 2, betaIs_ = 1, S_ = 4, betaH = 4, E_ = 3, z_aux = 3]
+Substitutions:	[Is_ = 2, betaH = 4, T_ = 1, betaIa_ = 1, S_ = 4, Ia_ = 2, z_aux = 3, H_ = 1, E_ = 3, betaT = 4]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -223,13 +160,17 @@ Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT,
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [Ninv, alphaHT, alphaTD, betaH, betaT, alphaHRd, alphaTRd, H(0), D(0), Rd(0), T(0)]
 Nonidentifiable parameter:  [E(0), Ia(0), Is(0), S(0), betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[alphaHT = 1, betaIa = 3, alphaIsRu = 2, T_ = 0, alphaHRd = 1, alphaEIa = 2, Is_ = 1, xi = 1, alphaTD = 1, alphaIsT = 1, betaT = 3, Rd_ = 0, H_ = 0, Ninv = 0, alphaIsH = 1, betaIs = 3, alphaIsD = 1, Ia_ = 1, alphaTRd = 1, alphaIaRu = 2, S_ = 3, alphaEIs = 2, betaH = 3, E_ = 2, D_ = 0, alphaIaIs = 2]
+States for substitution:	[alphaHT = 1, Is_ = 1, alphaIsT = 1, alphaIsH = 1, betaIa = 3, alphaEIs = 2, alphaIaIs = 2, betaH = 3, alphaTRd = 1, alphaIsRu = 2, T_ = 0, alphaIaRu = 2, Ninv = 0, alphaEIa = 2, alphaTD = 1, S_ = 3, D_ = 0, alphaHRd = 1, betaIs = 3, Ia_ = 1, alphaIsD = 1, H_ = 0, E_ = 2, betaT = 3, xi = 1, Rd_ = 0]
 NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-Substitutions:	[T_ = 1, Is_ = 2, betaT = 4, H_ = 1, Ia_ = 2, S_ = 4, betaH = 4, E_ = 3, z_aux = 3]
-memory used=61071.7MB, alloc=211.8MB, time=605.52
+Substitutions:	[Is_ = 2, betaH = 4, T_ = 1, S_ = 4, Ia_ = 2, z_aux = 3, H_ = 1, E_ = 3, betaT = 4]
+memory used=27443.6MB, alloc=211.8MB, time=271.10

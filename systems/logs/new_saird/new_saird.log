@@ -6,6 +6,14 @@
 # Ex 27 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -29,6 +37,10 @@ Parameters in equations:  [N, b0, dlt, g, gam, k, zeta0]
 
 =======================================================
 3. Assessing local identifiability
+=======================================================
+
+=======================================================
+Creating Truncated system (old)
 =======================================================
 Locally identifiable paramters:  [dlt, gam, k, S(0), A(0), In(0), R(0)]
 Nonidentifiable parameter:  [Dd(0), N, b0, g, zeta0]
@@ -38,33 +50,29 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {N, b0, Dd(0)}
 Number of possible combinations 10
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
 Collection [Dd_0, b0, zeta0] is not transcendence basis
 Collection [N, b0, g] is not transcendence basis
 Collection [N, b0, zeta0] is not transcendence basis
 Collection [N, g, zeta0] is not transcendence basis
 Collection [b0, g, zeta0] is not transcendence basis
-Picked the best choice [Dd_0, N, g] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {N, g}
+Picked the best choice [Dd_0, b0, g] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {b0, g}
 Algebraically independent parameters among derivatives: {Dd(0)}
 
 === Input info ===
-State variables:          [N(t), g(t), S(t), A(t), In(t), R(t), Dd(t)]
+State variables:          [b0(t), g(t), S(t), A(t), In(t), R(t), Dd(t)]
 Output variables:         [y1(t), y_faux1(t), y_faux2(t)]
 Input variables:          []
-Parameters in equations:  [b0, dlt, gam, k, zeta0]
+Parameters in equations:  [N, dlt, gam, k, zeta0]
 ===================
 
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[A_ = 1, S_ = 2, k = 1, zeta0 = 2, dlt = 1, gam = 2, N_ = 0, R_ = 0, g_ = 0, b0 = 2, In_ = 0]
+States for substitution:	[N = 2, g_ = 0, k = 1, A_ = 1, In_ = 0, R_ = 0, S_ = 2, dlt = 1, gam = 2, b0_ = 0, zeta0 = 2]
 NonID parameters:	[Dd_0, N, b0, g, zeta0]
-Substitutions:	[A_ = 2, S_ = 3, z_aux = 2, gam = 3, N_ = 1, g_ = 1, In_ = 1]
+Substitutions:	[g_ = 1, A_ = 2, In_ = 1, S_ = 3, z_aux = 2, gam = 3, b0_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -89,13 +97,17 @@ Parameters in equations:  [N, b0, dlt, g, gam, k, zeta0]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [dlt, gam, k, S(0), A(0), In(0), R(0)]
 Nonidentifiable parameter:  [Dd(0), N, b0, g, zeta0]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[A_ = 1, S_ = 2, N = 2, k = 1, g = 2, zeta0 = 2, dlt = 1, gam = 2, R_ = 0, b0 = 2, In_ = 0]
+States for substitution:	[N = 2, b0 = 2, k = 1, A_ = 1, g = 2, In_ = 0, R_ = 0, S_ = 2, dlt = 1, gam = 2, zeta0 = 2]
 NonID parameters:	[Dd_0, N, b0, g, zeta0]
-Substitutions:	[A_ = 2, S_ = 3, z_aux = 2, gam = 3, In_ = 1]
-memory used=1692.4MB, alloc=144.3MB, time=13.10
+Substitutions:	[A_ = 2, In_ = 1, S_ = 3, z_aux = 2, gam = 3]
+memory used=1857.9MB, alloc=144.3MB, time=15.07

@@ -5,6 +5,14 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -29,6 +37,10 @@ Parameters in equations:  [a, b, c, d]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [a, c, d, x1(0)]
 Nonidentifiable parameter:  [b, x2(0)]
 
@@ -37,10 +49,6 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {b}
 Number of possible combinations 6
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
 Picked the best choice [b] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {b}
 Algebraically independent parameters among derivatives: {}
@@ -57,9 +65,9 @@ Transcendence basis substitution turned off.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a = 1, x2_ = 1, d = 2, b_ = 0, x1_ = 0, c = 2]
+States for substitution:	[d = 2, x2_ = 1, x1_ = 0, a = 1, b_ = 0, c = 2]
 NonID parameters:	[b, x2_0]
-Substitutions:	[x2_ = 2, d = 3, b_ = 1, x1_ = 1, c = 3, z_aux = 2]
+Substitutions:	[d = 3, z_aux = 2, x2_ = 2, x1_ = 1, b_ = 1, c = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -84,13 +92,17 @@ Parameters in equations:  [a, b, c, d]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [a, c, d, x1(0)]
 Nonidentifiable parameter:  [b, x2(0)]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b = 1, a = 1, x2_ = 1, d = 2, x1_ = 0, c = 2]
+States for substitution:	[d = 2, x2_ = 1, x1_ = 0, a = 1, c = 2, b = 1]
 NonID parameters:	[b, x2_0]
-Substitutions:	[x2_ = 2, d = 3, x1_ = 1, c = 3, z_aux = 2]
-memory used=73.4MB, alloc=44.3MB, time=0.87
+Substitutions:	[d = 3, z_aux = 2, x2_ = 2, x1_ = 1, c = 3]
+memory used=73.9MB, alloc=44.3MB, time=0.91

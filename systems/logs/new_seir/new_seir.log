@@ -6,6 +6,14 @@
 # Ex 34 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -30,6 +38,10 @@ Parameters in equations:  [Lam, b, eps, g, mu, n, r0]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [eps, g, mu, e(0), i(0), r(0)]
 Nonidentifiable parameter:  [Lam, b, n, r0, s(0)]
 
@@ -38,10 +50,6 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {Lam, b}
 Number of possible combinations 66
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
 Collection [Lam, r0] is not transcendence basis
 Collection [Lam, s_0] is not transcendence basis
 Collection [Lam, s_1] is not transcendence basis
@@ -87,15 +95,15 @@ Collection [s_4, s_7] is not transcendence basis
 Collection [s_5, s_6] is not transcendence basis
 Collection [s_5, s_7] is not transcendence basis
 Collection [s_6, s_7] is not transcendence basis
-Picked the best choice [b, r0] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {b, r0}
+Picked the best choice [b, n] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {b, n}
 Algebraically independent parameters among derivatives: {}
 
 === Input info ===
-State variables:          [b(t), r0(t), s(t), e(t), i(t), r(t)]
+State variables:          [b(t), n(t), s(t), e(t), i(t), r(t)]
 Output variables:         [y1(t), y_faux1(t), y_faux2(t)]
 Input variables:          []
-Parameters in equations:  [Lam, eps, g, mu, n]
+Parameters in equations:  [Lam, eps, g, mu, r0]
 ===================
 
 Transcendence basis substitution turned off.
@@ -103,9 +111,9 @@ Transcendence basis substitution turned off.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[eps = 1, s_ = 2, n = 2, e_ = 1, g = 3, r_ = 0, i_ = 0, b_ = 0, mu = 1, r0_ = 0, Lam = 3]
+States for substitution:	[n_ = 0, i_ = 0, mu = 1, g = 3, s_ = 2, b_ = 0, Lam = 3, r0 = 3, eps = 1, e_ = 1, r_ = 0]
 NonID parameters:	[Lam, b, n, r0, s_0]
-Substitutions:	[z_aux = 3, s_ = 3, e_ = 2, g = 4, r_ = 1, i_ = 1, b_ = 1, r0_ = 1]
+Substitutions:	[n_ = 1, i_ = 1, z_aux = 3, g = 4, s_ = 3, b_ = 1, e_ = 2, r_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -130,13 +138,17 @@ Parameters in equations:  [Lam, b, eps, g, mu, n, r0]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [eps, g, mu, e(0), i(0), r(0)]
 Nonidentifiable parameter:  [Lam, b, n, r0, s(0)]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[eps = 1, s_ = 2, n = 2, e_ = 1, g = 3, r_ = 0, i_ = 0, mu = 1, b = 2, r0 = 3, Lam = 3]
+States for substitution:	[i_ = 0, mu = 1, g = 3, s_ = 2, Lam = 3, n = 2, r0 = 3, eps = 1, e_ = 1, r_ = 0, b = 2]
 NonID parameters:	[Lam, b, n, r0, s_0]
-Substitutions:	[z_aux = 3, s_ = 3, e_ = 2, g = 4, r_ = 1, i_ = 1]
-memory used=1975.2MB, alloc=144.3MB, time=16.07
+Substitutions:	[i_ = 1, z_aux = 3, g = 4, s_ = 3, e_ = 2, r_ = 1]
+memory used=1923.0MB, alloc=144.3MB, time=14.83

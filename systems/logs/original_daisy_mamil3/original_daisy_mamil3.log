@@ -6,6 +6,14 @@
 
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -30,15 +38,19 @@ Parameters in equations:  [a01, a12, a13, a21, a31]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [a01, a12, a13, a21, a31, x1(0), x2(0), x3(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a01 = 1, (NULL) = 1, a31 = 1, a13 = 1, a12 = 1, x2_ = 1, x1_ = 0, x3_ = 1, a21 = 1]
+States for substitution:	[a13 = 1, x1_ = 0, a12 = 1, a31 = 1, a01 = 1, x2_ = 1, x3_ = 1, a21 = 1, (NULL) = 1]
 NonID parameters:	[]
-Substitutions:	[a01 = 2, z_aux = 1, a31 = 2, a13 = 2, a12 = 2, x2_ = 2, x1_ = 1, x3_ = 2, a21 = 2]
+Substitutions:	[z_aux = 1, a13 = 2, x1_ = 1, a12 = 2, a31 = 2, a01 = 2, x2_ = 2, x3_ = 2, a21 = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -63,13 +75,17 @@ Parameters in equations:  [a01, a12, a13, a21, a31]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [a01, a12, a13, a21, a31, x1(0), x2(0), x3(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a01 = 1, (NULL) = 1, a31 = 1, a13 = 1, a12 = 1, x2_ = 1, x1_ = 0, x3_ = 1, a21 = 1]
+States for substitution:	[a13 = 1, x1_ = 0, a12 = 1, a31 = 1, a01 = 1, x2_ = 1, x3_ = 1, a21 = 1, (NULL) = 1]
 NonID parameters:	[]
-Substitutions:	[a01 = 2, z_aux = 1, a31 = 2, a13 = 2, a12 = 2, x2_ = 2, x1_ = 1, x3_ = 2, a21 = 2]
-memory used=94.6MB, alloc=44.3MB, time=1.01
+Substitutions:	[z_aux = 1, a13 = 2, x1_ = 1, a12 = 2, a31 = 2, a01 = 2, x2_ = 2, x3_ = 2, a21 = 2]
+memory used=95.7MB, alloc=44.3MB, time=1.04

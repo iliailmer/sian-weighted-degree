@@ -5,6 +5,14 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 sigma := [diff(x(t),t) = -x(t)*a+z(t)*y(t)+a*y(t), diff(w(t),t) = e*z(t)-w(t)*f
 +x(t)*y(t), diff(z(t),t) = -c*z(t)-w(t)*d+x(t)*y(t), diff(y(t),t) = b*x(t)+b*y(
 t)-x(t)*z(t), g(t) = x(t)]
@@ -32,6 +40,10 @@ Parameters in equations:  [a, b, c, d, e, f]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [a, b, x(0), z(0), y(0)]
 Nonidentifiable parameter:  [c, d, e, f, w(0)]
 
@@ -40,19 +52,15 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {c}
 Number of possible combinations 12
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
-Picked the best choice [d] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {d}
+Picked the best choice [c] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {c}
 Algebraically independent parameters among derivatives: {}
 
 === Input info ===
-State variables:          [d(t), x(t), w(t), z(t), y(t)]
+State variables:          [c(t), x(t), w(t), z(t), y(t)]
 Output variables:         [g(t), y_faux1(t)]
 Input variables:          []
-Parameters in equations:  [a, b, c, e, f]
+Parameters in equations:  [a, b, d, e, f]
 ===================
 
 Transcendence basis substitution turned off.
@@ -60,9 +68,9 @@ Transcendence basis substitution turned off.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a = 1, b = 2, f = 3, e = 3, y_ = 1, c = 2, x_ = 0, z_ = 1, w_ = 2, d_ = 0]
+States for substitution:	[a = 1, b = 2, z_ = 1, y_ = 1, x_ = 0, w_ = 2, c_ = 0, d = 2, f = 3, e = 3]
 NonID parameters:	[c, d, e, f, w_0]
-Substitutions:	[y_ = 2, x_ = 1, z_ = 2, z_aux = 3, w_ = 3, d_ = 1]
+Substitutions:	[z_ = 2, y_ = 2, x_ = 1, w_ = 3, z_aux = 3, c_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -87,13 +95,17 @@ Parameters in equations:  [a, b, c, d, e, f]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [a, b, x(0), z(0), y(0)]
 Nonidentifiable parameter:  [c, d, e, f, w(0)]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a = 1, b = 2, f = 3, e = 3, y_ = 1, c = 2, x_ = 0, z_ = 1, w_ = 2, d = 2]
+States for substitution:	[a = 1, c = 2, b = 2, z_ = 1, y_ = 1, x_ = 0, w_ = 2, d = 2, f = 3, e = 3]
 NonID parameters:	[c, d, e, f, w_0]
-Substitutions:	[y_ = 2, x_ = 1, z_ = 2, z_aux = 3, w_ = 3]
-memory used=426.1MB, alloc=139.3MB, time=4.38
+Substitutions:	[z_ = 2, y_ = 2, x_ = 1, w_ = 3, z_aux = 3]
+memory used=412.0MB, alloc=118.2MB, time=4.75

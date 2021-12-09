@@ -6,6 +6,14 @@
 # Ex 24 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -29,6 +37,10 @@ Parameters in equations:  [Lam, c, g, mu, ph]
 
 =======================================================
 3. Assessing local identifiability
+=======================================================
+
+=======================================================
+Creating Truncated system (old)
 =======================================================
 Locally identifiable paramters:  [Lam, g, mu, S(0), In(0)]
 Nonidentifiable parameter:  [R(0), c, ph]
@@ -38,29 +50,25 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {c, R(0)}
 Number of possible combinations 3
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
 Collection [c, ph] is not transcendence basis
-Picked the best choice [R_0, c] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {c}
+Picked the best choice [R_0, ph] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {ph}
 Algebraically independent parameters among derivatives: {R(0)}
 
 === Input info ===
-State variables:          [c(t), S(t), In(t), R(t)]
+State variables:          [ph(t), S(t), In(t), R(t)]
 Output variables:         [y1(t), y_faux1(t)]
 Input variables:          [sgm(t)]
-Parameters in equations:  [Lam, g, mu, ph]
+Parameters in equations:  [Lam, c, g, mu]
 ===================
 
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[mu = 1, In_ = 0, S_ = 1, Lam = 2, ph = 1, g = 1, c_ = 0, (NULL) = 1]
+States for substitution:	[g = 1, (NULL) = 1, S_ = 1, Lam = 2, In_ = 0, ph_ = 0, c = 1, mu = 1]
 NonID parameters:	[R_0, c, ph]
-Substitutions:	[In_ = 1, S_ = 2, Lam = 3, z_aux = 2, c_ = 1]
+Substitutions:	[S_ = 2, Lam = 3, In_ = 1, ph_ = 1, z_aux = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -85,13 +93,17 @@ Parameters in equations:  [Lam, c, g, mu, ph]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [Lam, g, mu, S(0), In(0)]
 Nonidentifiable parameter:  [R(0), c, ph]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[mu = 1, In_ = 0, S_ = 1, Lam = 2, c = 1, ph = 1, g = 1, (NULL) = 1]
+States for substitution:	[g = 1, (NULL) = 1, S_ = 1, Lam = 2, In_ = 0, c = 1, ph = 1, mu = 1]
 NonID parameters:	[R_0, c, ph]
-Substitutions:	[In_ = 1, S_ = 2, Lam = 3, z_aux = 2]
-memory used=285.6MB, alloc=144.3MB, time=2.93
+Substitutions:	[S_ = 2, Lam = 3, In_ = 1, z_aux = 2]
+memory used=291.0MB, alloc=144.3MB, time=2.85

@@ -5,6 +5,14 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 sigma := [diff(x2(t),t) = alpha*x1(t)-beta*x2(t), diff(x4(t),t) = (gama*sgm*x2(
 t)*x4(t)-delta*sgm*x3(t)*x4(t))/x3(t), diff(x1(t),t) = (-b*c*x1(t)-b*x1(t)*x4(t
 )+1)/(c+x4(t)), diff(x3(t),t) = gama*x2(t)-delta*x3(t), y(t) = x1(t)]
@@ -32,6 +40,10 @@ Parameters in equations:  [alpha, b, beta, c, delta, gama, sgm]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [b, beta, c, delta, sgm, x4(0), x1(0)]
 Nonidentifiable parameter:  [alpha, gama, x2(0), x3(0)]
 
@@ -40,10 +52,6 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {alpha, gama}
 Number of possible combinations 153
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
 Collection [alpha, x2_0] is not transcendence basis
 Collection [alpha, x2_1] is not transcendence basis
 Collection [alpha, x2_2] is not transcendence basis
@@ -108,9 +116,9 @@ Collection [x3_4, x3_7] is not transcendence basis
 Collection [x3_5, x3_6] is not transcendence basis
 Collection [x3_5, x3_7] is not transcendence basis
 Collection [x3_6, x3_7] is not transcendence basis
-Picked the best choice [gama, x3_3] based on heuristic:
+Picked the best choice [gama, x3_0] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {gama}
-Algebraically independent parameters among derivatives: {x3_3}
+Algebraically independent parameters among derivatives: {x3(0)}
 
 === Input info ===
 State variables:          [gama(t), x2(t), x4(t), x1(t), x3(t)]
@@ -123,9 +131,9 @@ Parameters in equations:  [alpha, b, beta, c, delta, sgm]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b = 1, c = 1, x3_ = 2, x1_ = 0, x4_ = 1, x2_ = 2, sgm = 2, gama_ = 0, beta = 3, delta = 2, alpha = 3]
+States for substitution:	[x3_ = 2, x4_ = 1, sgm = 2, x2_ = 2, c = 1, gama_ = 0, b = 1, beta = 3, delta = 2, x1_ = 0, alpha = 3]
 NonID parameters:	[alpha, gama, x2_0, x3_0]
-Substitutions:	[x3_ = 3, x1_ = 1, x4_ = 2, x2_ = 3, z_aux = 3, gama_ = 1, beta = 4]
+Substitutions:	[x3_ = 3, x4_ = 2, x2_ = 3, z_aux = 3, gama_ = 1, beta = 4, x1_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -150,13 +158,17 @@ Parameters in equations:  [alpha, b, beta, c, delta, gama, sgm]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [b, beta, c, delta, sgm, x4(0), x1(0)]
 Nonidentifiable parameter:  [alpha, gama, x2(0), x3(0)]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b = 1, c = 1, x3_ = 2, x1_ = 0, gama = 2, x4_ = 1, x2_ = 2, sgm = 2, beta = 3, delta = 2, alpha = 3]
+States for substitution:	[gama = 2, x3_ = 2, x4_ = 1, sgm = 2, x2_ = 2, c = 1, b = 1, beta = 3, delta = 2, x1_ = 0, alpha = 3]
 NonID parameters:	[alpha, gama, x2_0, x3_0]
-Substitutions:	[x3_ = 3, x1_ = 1, x4_ = 2, x2_ = 3, z_aux = 3, beta = 4]
-memory used=2069.0MB, alloc=112.3MB, time=20.29
+Substitutions:	[x3_ = 3, x4_ = 2, x2_ = 3, z_aux = 3, beta = 4, x1_ = 1]
+memory used=2029.7MB, alloc=112.3MB, time=20.66

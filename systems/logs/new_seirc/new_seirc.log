@@ -6,6 +6,14 @@
 # Ex 2 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -30,6 +38,10 @@ Parameters in equations:  [b, g, k, n]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [g, k, s(0), e(0), i(0)]
 Nonidentifiable parameter:  [b, c(0), n, r(0)]
 
@@ -38,10 +50,6 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {b, c(0)}
 Number of possible combinations 153
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
 Collection [b, c_1] is not transcendence basis
 Collection [b, c_2] is not transcendence basis
 Collection [b, c_3] is not transcendence basis
@@ -191,24 +199,24 @@ Collection [r_4, r_7] is not transcendence basis
 Collection [r_5, r_6] is not transcendence basis
 Collection [r_5, r_7] is not transcendence basis
 Collection [r_6, r_7] is not transcendence basis
-Picked the best choice [c_0, n] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {n}
-Algebraically independent parameters among derivatives: {c(0)}
+Picked the best choice [b, r_0] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {b}
+Algebraically independent parameters among derivatives: {r(0)}
 
 === Input info ===
-State variables:          [n(t), s(t), e(t), i(t), r(t), c(t)]
+State variables:          [b(t), s(t), e(t), i(t), r(t), c(t)]
 Output variables:         [y1(t), y_faux1(t)]
 Input variables:          []
-Parameters in equations:  [b, g, k]
+Parameters in equations:  [g, k, n]
 ===================
 
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[i_ = 1, n_ = 0, g = 1, k = 1, b = 1, c_ = 0, s_ = 0, r_ = 0, e_ = 1]
+States for substitution:	[b_ = 0, n = 1, g = 1, k = 1, r_ = 0, c_ = 0, e_ = 1, i_ = 1, s_ = 0]
 NonID parameters:	[b, c_0, n, r_0]
-Substitutions:	[i_ = 2, n_ = 1, g = 2, k = 2, z_aux = 1, s_ = 1, e_ = 2]
+Substitutions:	[b_ = 1, g = 2, k = 2, z_aux = 1, e_ = 2, i_ = 2, s_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -233,13 +241,17 @@ Parameters in equations:  [b, g, k, n]
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [g, k, s(0), e(0), i(0)]
 Nonidentifiable parameter:  [b, c(0), n, r(0)]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[i_ = 1, n = 1, g = 1, k = 1, b = 1, c_ = 0, s_ = 0, r_ = 0, e_ = 1]
+States for substitution:	[b = 1, n = 1, g = 1, k = 1, r_ = 0, c_ = 0, e_ = 1, i_ = 1, s_ = 0]
 NonID parameters:	[b, c_0, n, r_0]
-Substitutions:	[i_ = 2, g = 2, k = 2, z_aux = 1, s_ = 1, e_ = 2]
-memory used=1401.6MB, alloc=80.3MB, time=12.20
+Substitutions:	[g = 2, k = 2, z_aux = 1, e_ = 2, i_ = 2, s_ = 1]
+memory used=1399.4MB, alloc=80.3MB, time=13.38
