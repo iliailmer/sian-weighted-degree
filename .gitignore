@@ -1,5 +1,6 @@
 *.out
 !*/maple_scripts/*/runtimes/*.out
+!*/magma_scripts/*/runtimes/*.out
 .DS*
 visualizations/*
 IdentifiabilityODE.mpl
