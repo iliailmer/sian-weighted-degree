@@ -1,4 +1,5 @@
 *.out
+!*/maple_scripts/*/runtimes/*.out
 .DS*
 visualizations/*
 IdentifiabilityODE.mpl
