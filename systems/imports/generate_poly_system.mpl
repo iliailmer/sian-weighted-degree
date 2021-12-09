@@ -241,6 +241,10 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       theta_l := [op(theta_l), param]:
     end if:
   end do:
+  Et_hat_old := GenerateEtHatOld(Et, theta_l, d0, beta, p_local, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q, infolevel):
+    
+  et_hat_monomials := map(each->op(expand(each)), Et_hat_old):
+  print(et_hat_monomials);
   
   x_theta_vars_ := ListTools[Reverse]([op({op(x_theta_vars)} minus {op(theta_l)})]);
   x_theta_vars := [op(theta_l), op(x_theta_vars_)];
@@ -287,10 +291,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     printf("%s %a\n", `Algebraically independent parameters`, map(x-> ParamToOuter(x, all_vars), alg_indep)):
     printf("%s %a\n", `Number of possible combinations`, number_of_choices):
 
-    Et_hat_old := GenerateEtHatOld(Et, theta_l, d0, beta, p_local, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q, infolevel):
     
-    et_hat_monomials := map(each->op(expand(each)), Et_hat_old):
-    degree_table := table([]);
     for alg_indep in choices do  
       rhs_cols := []:
       idxs := []:
@@ -311,24 +312,26 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
 
       sum_degrees_new := 0;
       occurrence_table := table([seq(param = 0, param in alg_indep)]):
-      for param in alg_indep do # {beta_, q}
-        degree_table[param] := [];
-        for each in et_hat_monomials do
-          if param in {op(each)} then
-            sum_degrees_new := sum_degrees_new+degree(each);
-            occurrence_table[param] += 1;
-            degree_table[param] := [op(degree_table[param]), degree(each)];
-          end if:
+      degree_table := table([seq(param = [], param in alg_indep)]):
+      for each in et_hat_monomials do
+        for param in alg_indep do # {beta_, q}
+            if param in {op(each)} then
+                sum_degrees_new := sum_degrees_new+degree(each);
+                occurrence_table[param] += 1;
+                degree_table[param] := [op(degree_table[param]), degree(each)];
+                break
+            end if:
         end do:
-        degree_table[param] := [seq(convert(val/add(degree_table[param]), float), val in degree_table[param])];
-        degree_table[param] := add([seq(convert(- val * log(val), float), val in degree_table[param])]);
       end do:
-    global_table[alg_indep] := [entries(degree_table, 'nolist')];
-    degree_table := table([]);
+      for param in alg_indep do
+        denom_:=add(degree_table[param]);
+        degree_table[param] := [seq(convert(val/denom_, float), val in degree_table[param])];
+        degree_table[param] := add([seq(convert(- val * log(val)/log(2), float), val in degree_table[param])]);
+      end do;
+      global_table[alg_indep] := sort([entries(degree_table, 'nolist')]);
     end do:  
-    perm:=sort([entries(global_table, 'nolist')], 'output=permutation'):
+    perm := sort([entries(global_table, 'nolist')], 'output=permutation'):
     alg_indep := lhs([entries(global_table, 'pairs')][perm[-1]]):
-
     printf("%s %a %s\n", `Picked the best choice`, alg_indep, `based on heuristic:`, rhs([entries(global_table, 'pairs')][perm[-1]])):
     alg_indep_derivs := {op(alg_indep)} intersect derivs:
     alg_indep_params := ({op(alg_indep)} intersect {op(non_id)}) minus {op(alg_indep_derivs)}:
@@ -379,6 +382,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       end if:
     end if:
   end if:
+  return global_table;
     #----------------------------------------------
     # 3. Randomize.
     #----------------------------------------------
