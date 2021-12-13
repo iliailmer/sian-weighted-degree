@@ -11,7 +11,6 @@ sigma := [
   diff(In(t), t) = k * A(t) - (gam + dlt) * In(t), 
   diff(R(t), t) = gam * In(t),
   diff(Dd(t), t) = dlt * In(t),
-  # diff(N(t), t) = 0,
   y1(t) = In(t)+R(t)
 ]: 
 

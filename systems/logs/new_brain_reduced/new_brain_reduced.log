@@ -8,6 +8,14 @@
 
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 sigma := [diff(Cp(t),t) = ((QT-LT)*CTv(t)+(Qb-Lb)*CBv(t)+(LT+Lb)*CL(t)-QT*Cp(t)
 -Qb*Cp(t))/VP, diff(CTv(t),t) = (QT*Cp(t)-(QT-LT)*CTv(t)-(1-sigmaTv)*LT*CTv(t)-
 CLupt*CTv(t)-CLupt*FR*CTeb(t))/Vtv, diff(CTeu(t),t) = (CLupt*(CTv(t)+CTl(t))-
@@ -50,11 +58,5 @@ Parameters in equations:  [CLupb, CLupbbb, CLupt, FR, FRb, KonFcRn, LB, LT, Lb, 
 =======================================================
 1. Constructing the maximal polynomial system
 =======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
+Interrupted
+memory used=137.1MB, alloc=144.3MB, time=2.02

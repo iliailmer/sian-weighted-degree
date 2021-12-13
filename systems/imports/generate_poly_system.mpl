@@ -276,7 +276,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       end do;
     end if; 
   end if:
-  derivs:={op(x_theta_vars)} minus {op(mu)};
+  derivs := {op(x_theta_vars)} minus {op(mu)};
   non_id := [op({op(theta)} minus {op(theta_l)})]:
   if infolevel > 0 then
     printf("%s %a\n", `Locally identifiable paramters: `, map(x -> ParamToOuter(x, all_vars), theta_l));
