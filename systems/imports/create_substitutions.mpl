@@ -89,7 +89,7 @@ SubsByDepth := proc(sigma, {trdegsub:=true})
   end do:
   substitutions[z_aux]:=min(3, max_possible):
   printf("%s:\t%a\n", `Substitutions`, [entries(substitutions, `pairs`)]);
-  original_et_hat :=system_vars[1] :
+  original_et_hat := system_vars[1] :
   all_subs := {}:
   names := [indices(substitutions, `nolist`)];
   for each in names do #system_vars[2] do

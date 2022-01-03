@@ -5,6 +5,14 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:326|
 substitutions := [CLtot = CLlin+kiny*V1*Rtot(t)/(1/2*Kss+1/2*Atot(t)/V1-1/2*
 Rtot(t)+1/2*g(t)), c = 1/2*Atot(t)/V1-1/2*Rtot(t)-1/2*Kss+1/2*g(t)]
 sigma := [diff(AD(t),t) = -ka*AD(t), diff(Atot(t),t) = ka*AD(t)-CLtot*c-Q*(c-AP
@@ -28,49 +36,7 @@ Parameters in equations:  [CLtot, Kss, Q, Rtot, V1, V2, a, c, ka, kdeg, kint, ks
 =======================================================
 1. Constructing the maximal polynomial system
 =======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [kdeg, Rtot(0)]
-Nonidentifiable parameter:  [AD(0), AP(0), Atot(0), CLtot, Kss, Q, Rtot, V1, V2, a, c, g(0), ka, kint, ksyn]
-
-=======================================================
-Substituting transcendence basis.
-=======================================================
-Algebraically independent parameters {CLtot, Kss, Q, Rtot, V1, V2, a, c, ka, kint, AD(0), AP(0), Atot(0), g(0)}
-Number of possible combinations 15
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
-Collection [AD_0, AP_0, Atot_0, CLtot, Kss, Q, Rtot, V1, V2, a, c, g_0, kint, ksyn] is not transcendence basis
-Collection [AD_0, AP_0, Atot_0, CLtot, Kss, Q, Rtot, V1, V2, a, c, ka, kint, ksyn] is not transcendence basis
-Collection [AD_0, AP_0, Atot_0, CLtot, Kss, Q, Rtot, V1, V2, c, g_0, ka, kint, ksyn] is not transcendence basis
-Collection [AD_0, AP_0, Atot_0, CLtot, Kss, Q, Rtot, V1, a, c, g_0, ka, kint, ksyn] is not transcendence basis
-Collection [AD_0, AP_0, Atot_0, CLtot, Kss, Q, Rtot, V2, a, c, g_0, ka, kint, ksyn] is not transcendence basis
-Collection [AD_0, AP_0, Atot_0, CLtot, Kss, Rtot, V1, V2, a, c, g_0, ka, kint, ksyn] is not transcendence basis
-Collection [AD_0, AP_0, Atot_0, Kss, Q, Rtot, V1, V2, a, c, g_0, ka, kint, ksyn] is not transcendence basis
-Collection [AD_0, AP_0, CLtot, Kss, Q, Rtot, V1, V2, a, c, g_0, ka, kint, ksyn] is not transcendence basis
-Collection [AD_0, Atot_0, CLtot, Kss, Q, Rtot, V1, V2, a, c, g_0, ka, kint, ksyn] is not transcendence basis
-Collection [AP_0, Atot_0, CLtot, Kss, Q, Rtot, V1, V2, a, c, g_0, ka, kint, ksyn] is not transcendence basis
-Picked the best choice [AD_0, AP_0, Atot_0, CLtot, Kss, Q, Rtot, V1, V2, a, c, g_0, ka, kint] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {CLtot, Kss, Q, Rtot, V1, V2, a, c, ka, kint}
-Algebraically independent parameters among derivatives: {AD(0), AP(0), Atot(0), g(0)}
-
-=== Input info ===
-State variables:          [CLtot(t), Kss(t), Q(t), Rtot(t), V1(t), V2(t), a(t), c(t), ka(t), kint(t), AD(t), Atot(t), AP(t), Rtot(t)(t), g(t)]
-Output variables:         [y1(t), y_faux1(t), y_faux2(t), y_faux3(t), y_faux4(t), y_faux5(t), y_faux6(t), y_faux7(t), y_faux8(t), y_faux9(t), y_faux10(t)]
-Input variables:          []
-Parameters in equations:  [kdeg, ksyn]
-===================
-
-Error, (in GetOrderVar) incorrect syntax in parse: missing operator or `;` (near
-8th character of parsed string) |imports/generate_poly_system.mpl:565|
+Interrupted
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -87,21 +53,5 @@ Parameters in equations:  [CLtot, Kss, Q, Rtot, V1, V2, a, c, ka, kdeg, kint, ks
 =======================================================
 1. Constructing the maximal polynomial system
 =======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-Locally identifiable paramters:  [kdeg, Rtot(0)]
-Nonidentifiable parameter:  [AD(0), AP(0), Atot(0), CLtot, Kss, Q, Rtot, V1, V2, a, c, g(0), ka, kint, ksyn]
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[kdeg = 1, c = 1, Rtot = 1, ksyn = 1, Kss = 1, Rtot_ = 0, kint = 1]
-NonID parameters:	[AD_0, AP_0, Atot_0, CLtot, Kss, Q, Rtot, V1, V2, a, c, g_0, ka, kint, ksyn]
-Substitutions:	[kdeg = 2, z_aux = 1, Rtot_ = 1]
-memory used=2833.8MB, alloc=185.3MB, time=29.99
+Interrupted
+memory used=77.7MB, alloc=116.3MB, time=0.95

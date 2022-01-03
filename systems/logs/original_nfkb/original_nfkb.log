@@ -36,3 +36,75 @@ Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_d
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Locally identifiable paramters:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_deg, k_prod, t1, t2, x1(0), x2(0), x3(0), x4(0), x5(0), x6(0), x7(0), x8(0), x9(0), x10(0), x11(0), x12(0), x13(0), x14(0)]
+Nonidentifiable parameter:  [x15(0)]
+
+=======================================================
+Substituting transcendence basis.
+=======================================================
+Algebraically independent parameters {x15(0)}
+Number of possible combinations 1
+Picked the best choice [x15_0] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {}
+Algebraically independent parameters among derivatives: {x15(0)}
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t), x4(t), x5(t), x6(t), x7(t), x8(t), x9(t), x10(t), x11(t), x12(t), x13(t), x14(t), x15(t)]
+Output variables:         [y1(t), y2(t), y3(t), y4(t), y6(t), y5(t)]
+Input variables:          [u(t)]
+Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_deg, k_prod, t1, t2]
+===================
+
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[k_prod = 1, x14_ = 1, x12_ = 0, x13_ = 0, x10_ = 0, x11_ = 1, x8_ = 1, k_deg = 1, t2 = 1, x6_ = 1, x4_ = 1, x2_ = 0, i1 = 1, k1 = 1, x7_ = 0, x3_ = 0, c_3a = 1, c_2a = 1, (NULL) = 1, k3 = 1, i_1a = 1, x1_ = 0, c5 = 2, x9_ = 0, e_2a = 1, k2 = 1, c_4a = 1, x5_ = 1, t1 = 1]
+NonID parameters:	[x15_0]
+Substitutions:	[x14_ = 2, x12_ = 1, x13_ = 1, x10_ = 1, x11_ = 2, x8_ = 2, x6_ = 2, x4_ = 2, x2_ = 1, z_aux = 2, x7_ = 1, x3_ = 1, x1_ = 1, c5 = 3, x9_ = 1, x5_ = 2]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [x1(t), x2(t), x3(t), x4(t), x5(t), x6(t), x7(t), x8(t), x9(t), x10(t), x11(t), x12(t), x13(t), x14(t), x15(t)]
+Output variables:         [y1(t), y2(t), y3(t), y4(t), y6(t), y5(t)]
+Input variables:          [u(t)]
+Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_deg, k_prod, t1, t2]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+
+=======================================================
+2. Truncating the polynomial system based on the Jacobian condition
+=======================================================
+
+=======================================================
+3. Assessing local identifiability
+=======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
+Locally identifiable paramters:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_deg, k_prod, t1, t2, x1(0), x2(0), x3(0), x4(0), x5(0), x6(0), x7(0), x8(0), x9(0), x10(0), x11(0), x12(0), x13(0), x14(0)]
+Nonidentifiable parameter:  [x15(0)]
+
+=======================================================
+4. Randomizing the truncated system
+=======================================================
+States for substitution:	[k_prod = 1, x14_ = 1, x12_ = 0, x13_ = 0, x10_ = 0, x11_ = 1, x8_ = 1, k_deg = 1, t2 = 1, x6_ = 1, x4_ = 1, x2_ = 0, i1 = 1, k1 = 1, x7_ = 0, x3_ = 0, c_3a = 1, c_2a = 1, (NULL) = 1, k3 = 1, i_1a = 1, x1_ = 0, c5 = 2, x9_ = 0, e_2a = 1, k2 = 1, c_4a = 1, x5_ = 1, t1 = 1]
+NonID parameters:	[x15_0]
+Substitutions:	[x14_ = 2, x12_ = 1, x13_ = 1, x10_ = 1, x11_ = 2, x8_ = 2, x6_ = 2, x4_ = 2, x2_ = 1, z_aux = 2, x7_ = 1, x3_ = 1, x1_ = 1, c5 = 3, x9_ = 1, x5_ = 2]
+memory used=38689.0MB, alloc=185.3MB, time=270.49

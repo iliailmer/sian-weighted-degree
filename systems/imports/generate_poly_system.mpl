@@ -1,12 +1,12 @@
 # Code to take a system of ode's and generate a polynomial system for SIAN
 
 #===============================================================================
-GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_solutions:=true, p := 0.99, infolevel := 1, method := 2, num_nodes := 6, max_comb:=200}) 
+GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_solutions:=true, p := 0.99, infolevel := 1, method := 2, num_nodes := 6, max_comb:=200})
 #===============================================================================
- local i, j, k, n, m, s, all_params, all_vars, eqs, Q, X, Y, poly, d0, D1, 
-        sample, all_subs,alpha, beta, Et, x_theta_vars, prolongation_possible, 
-        eqs_i, JacX, vars, vars_to_add, ord_var, var_index, deg_variety, D2, 
-        y_hat, u_hat, theta_hat, Et_hat, Q_hat, theta_l, theta_g, gb, v, X_eq, Y_eq, 
+ local i, j, k, n, m, s, all_params, all_vars, eqs, Q, X, Y, poly, d0, D1,
+        sample, all_subs,alpha, beta, Et, x_theta_vars, prolongation_possible,
+        eqs_i, JacX, vars, vars_to_add, ord_var, var_index, deg_variety, D2,
+        y_hat, u_hat, theta_hat, Et_hat, Q_hat, theta_l, theta_g, gb, v, X_eq, Y_eq,
         poly_d, separant, leader,vars_local, x_functions, y_functions, u_functions,
         all_symbols_rhs, mu, x_vars, y_vars, u_vars, theta, subst_first_order,
         subst_zero_order, x_eqs, y_eqs, param, other_params, to_add, at_node,
@@ -14,7 +14,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
         Et_x_vars, var, G, P, output, alg_indep, rrefJacX, pivots, row_idx, row, pivot_idx, non_id, faux_equations,
         y_faux, alg_indep_derivs, alg_indep_params, faux_odes, faux_outputs,
         x_theta_vars_, derivs, sigma_new, idx, each, identifiable_states, x_theta_vars_to_be_removed, x_theta_vars_filtered, number_of_choices, choices,
-        current_choice, global_table, Et_hat_old, et_hat_monomials, degree_table, rhs_cols, idxs, parameter, A, solution, 
+        current_choice, global_table, Et_hat_old, et_hat_monomials, degree_table, rhs_cols, idxs, parameter, A, solution,
         choice_idx, sum_degrees_new, occurrence_table, val, perm:
   #----------------------------------------------
   # 0. Extract inputs, outputs, states, and parameters from the system
@@ -93,7 +93,6 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
   all_vars := [ op(x_vars), op(y_vars), op(u_vars) ]:
   eqs := [op(x_eqs), op(y_eqs)]:
   Q := foldl( (f, g) -> lcm(f, g), op( map(f -> denom(rhs(f)), eqs) )):
-  
 
   # (b,c) ---------------
   X := []:
@@ -109,7 +108,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       poly_d := Differentiate(poly_d, all_vars):
     end do:
   end do:
-  
+
   # (d,e) ---------------
   Y := []:
   Y_eq := []:
@@ -217,18 +216,18 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       end if:
     end do:
   end do:
- 
+
   if infolevel > 1 then
     printf("%s %a\n", `Orders of prolongations of the outputs (beta) = `, beta):
     printf("%s %a\n", `Orders of prolongations of the state variables (alpha) = `, alpha):
   end if:
- 
+
   ##############################
 
   if infolevel > 0 then
     PrintHeader("3. Assessing local identifiability"):
   end if:
- 
+
   theta_l := []:
   pivots := {}:
   for param in theta do
@@ -242,9 +241,9 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     end if:
   end do:
   Et_hat_old := GenerateEtHatOld(Et, theta_l, d0, beta, p_local, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q, infolevel):
-    
+
   et_hat_monomials := map(each->op(expand(each)), Et_hat_old):
-  
+
   x_theta_vars_ := ListTools[Reverse]([op({op(x_theta_vars)} minus {op(theta_l)})]);
   x_theta_vars := [op(theta_l), op(x_theta_vars_)];
   if sub_transc then 
@@ -290,7 +289,6 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     printf("%s %a\n", `Algebraically independent parameters`, map(x-> ParamToOuter(x, all_vars), alg_indep)):
     printf("%s %a\n", `Number of possible combinations`, number_of_choices):
 
-    
     for alg_indep in choices do  
       rhs_cols := []:
       idxs := []:
@@ -420,10 +418,11 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       z_aux, w_aux,
       op(sort(mu))
     ]:
-    
+
     if infolevel > 1 then
       printf("Variable ordering to be used for Groebner basis computation %a\n", vars);
     end if:
+  # return Y_eq, X_eq, Et_hat_old, vars;
   if sub_transc then
     return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
     op(sort(mu))], x_vars], non_id, sigma_new, alg_indep:
@@ -473,6 +472,28 @@ GenerateEtHatOld := proc(Et, theta_l, d0, beta, p_local, x_vars, y_vars, u_vars,
 
     Et_hat_old := [op(Et_hat), z_aux*Q_hat - 1]:
     return Et_hat_old:
+end proc:
+
+generate_graph_from_eqs := proc(X_eq, Y_eq, Et_hat)
+  local verts, current_level, previous_level, adj_matrix, each_y_eq,
+        v1, v2, edgs;#, new_verts;
+  verts := indets(Et_hat);
+  previous_level := indets(rhs(subs(X_eq, Y_eq[1]))):
+  # new_verts := previous_level:
+  edgs := {};
+  for each_y_eq in Y_eq[2..] do
+    current_level := indets(rhs(subs(X_eq, each_y_eq))) minus previous_level:
+    for v1 in previous_level do
+      for v2 in current_level do
+        if v1 in verts and v2 in verts then
+          edgs := {op(edgs), {v1, v2}}:
+          new_verts := {op(new_verts), v2}:
+        end if:
+      end do:
+    end do:
+    previous_level := current_level;
+  end do:
+  return edgs:#, new_verts:
 end proc:
 
 #===============================================================================
