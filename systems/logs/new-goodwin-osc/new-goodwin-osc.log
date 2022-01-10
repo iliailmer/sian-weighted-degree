@@ -6,23 +6,39 @@
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
-sigma := [diff(x2(t),t) = alpha*x1(t)-beta*x2(t), diff(x4(t),t) = (gama*sgm*x2(
-t)*x4(t)-delta*sgm*x3(t)*x4(t))/x3(t), diff(x1(t),t) = (-b*c*x1(t)-b*x1(t)*x4(t
-)+1)/(c+x4(t)), diff(x3(t),t) = gama*x2(t)-delta*x3(t), y(t) = x1(t)]
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:107|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+sigma := [diff(x1(t),t) = (-b*c*x1(t)-b*x1(t)*x4(t)+1)/(c+x4(t)), diff(x2(t),t)
+= alpha*x1(t)-beta*x2(t), diff(x3(t),t) = gama*x2(t)-delta*x3(t), diff(x4(t),t)
+= (gama*sgm*x2(t)*x4(t)-delta*sgm*x3(t)*x4(t))/x3(t), y(t) = x1(t)]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
 =======================================================
 
 === Input info ===
-State variables:          [x2(t), x4(t), x1(t), x3(t)]
+State variables:          [x1(t), x2(t), x3(t), x4(t)]
 Output variables:         [y(t)]
 Input variables:          []
 Parameters in equations:  [alpha, b, beta, c, delta, gama, sgm]
@@ -44,7 +60,7 @@ Parameters in equations:  [alpha, b, beta, c, delta, gama, sgm]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Locally identifiable paramters:  [b, beta, c, delta, sgm, x4(0), x1(0)]
+Locally identifiable paramters:  [b, beta, c, delta, sgm, x1(0), x4(0)]
 Nonidentifiable parameter:  [alpha, gama, x2(0), x3(0)]
 
 =======================================================
@@ -121,7 +137,7 @@ Algebraically independent parameters among nonidentifiable: {gama}
 Algebraically independent parameters among derivatives: {x3(0)}
 
 === Input info ===
-State variables:          [gama(t), x2(t), x4(t), x1(t), x3(t)]
+State variables:          [gama(t), x1(t), x2(t), x3(t), x4(t)]
 Output variables:         [y(t), y_faux1(t)]
 Input variables:          []
 Parameters in equations:  [alpha, b, beta, c, delta, sgm]
@@ -131,16 +147,16 @@ Parameters in equations:  [alpha, b, beta, c, delta, sgm]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x3_ = 2, x4_ = 1, sgm = 2, x2_ = 2, c = 1, gama_ = 0, b = 1, beta = 3, delta = 2, x1_ = 0, alpha = 3]
+States for substitution:	[b = 1, beta = 3, alpha = 3, x3_ = 2, x2_ = 2, x4_ = 1, sgm = 2, c = 1, gama_ = 0, x1_ = 0, delta = 2]
 NonID parameters:	[alpha, gama, x2_0, x3_0]
-Substitutions:	[x3_ = 3, x4_ = 2, x2_ = 3, z_aux = 3, gama_ = 1, beta = 4, x1_ = 1]
+Substitutions:	[z_aux = 3, beta = 4, x3_ = 3, x2_ = 3, x4_ = 2, gama_ = 1, x1_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
 =======================================================
 
 === Input info ===
-State variables:          [x2(t), x4(t), x1(t), x3(t)]
+State variables:          [x1(t), x2(t), x3(t), x4(t)]
 Output variables:         [y(t)]
 Input variables:          []
 Parameters in equations:  [alpha, b, beta, c, delta, gama, sgm]
@@ -162,13 +178,13 @@ Parameters in equations:  [alpha, b, beta, c, delta, gama, sgm]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Locally identifiable paramters:  [b, beta, c, delta, sgm, x4(0), x1(0)]
+Locally identifiable paramters:  [b, beta, c, delta, sgm, x1(0), x4(0)]
 Nonidentifiable parameter:  [alpha, gama, x2(0), x3(0)]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[gama = 2, x3_ = 2, x4_ = 1, sgm = 2, x2_ = 2, c = 1, b = 1, beta = 3, delta = 2, x1_ = 0, alpha = 3]
+States for substitution:	[b = 1, beta = 3, alpha = 3, x3_ = 2, x2_ = 2, x4_ = 1, sgm = 2, c = 1, gama = 2, x1_ = 0, delta = 2]
 NonID parameters:	[alpha, gama, x2_0, x3_0]
-Substitutions:	[x3_ = 3, x4_ = 2, x2_ = 3, z_aux = 3, beta = 4, x1_ = 1]
-memory used=2029.7MB, alloc=112.3MB, time=20.66
+Substitutions:	[z_aux = 3, beta = 4, x3_ = 3, x2_ = 3, x4_ = 2, x1_ = 1]
+memory used=2080.8MB, alloc=152.3MB, time=19.06

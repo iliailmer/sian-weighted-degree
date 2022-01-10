@@ -6,13 +6,29 @@
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:107|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 known_data := [a1 = 1/2, a2 = 1/5, a3 = 1, c_1a = 1/2000000, c_5a = 1/10000, 
 c_6a = 1/50000, c1 = 1/2000000, c2 = 0, c3 = 1/2500, c4 = 1/2, kv = 5, e_1a = 1
 /2000, c_1c = 1/2000000, c_2c = 0, c_3c = 1/2500]
@@ -67,9 +83,9 @@ Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_d
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k_prod = 1, x14_ = 1, x12_ = 0, x13_ = 0, x10_ = 0, x11_ = 1, x8_ = 1, k_deg = 1, t2 = 1, x6_ = 1, x4_ = 1, x2_ = 0, i1 = 1, k1 = 1, x7_ = 0, x3_ = 0, c_3a = 1, c_2a = 1, (NULL) = 1, k3 = 1, i_1a = 1, x1_ = 0, c5 = 2, x9_ = 0, e_2a = 1, k2 = 1, c_4a = 1, x5_ = 1, t1 = 1]
+States for substitution:	[x14_ = 1, x10_ = 0, c5 = 2, t1 = 1, x13_ = 0, c_4a = 1, x9_ = 0, (NULL) = 1, x11_ = 1, x4_ = 1, k2 = 1, x5_ = 1, x6_ = 1, x7_ = 0, x1_ = 0, x2_ = 0, x3_ = 0, k_prod = 1, x12_ = 0, x8_ = 1, c_2a = 1, i1 = 1, k3 = 1, i_1a = 1, t2 = 1, k1 = 1, e_2a = 1, k_deg = 1, c_3a = 1]
 NonID parameters:	[x15_0]
-Substitutions:	[x14_ = 2, x12_ = 1, x13_ = 1, x10_ = 1, x11_ = 2, x8_ = 2, x6_ = 2, x4_ = 2, x2_ = 1, z_aux = 2, x7_ = 1, x3_ = 1, x1_ = 1, c5 = 3, x9_ = 1, x5_ = 2]
+Substitutions:	[x14_ = 2, x10_ = 1, c5 = 3, x13_ = 1, x9_ = 1, x11_ = 2, x4_ = 2, x5_ = 2, x6_ = 2, x7_ = 1, x1_ = 1, x2_ = 1, x3_ = 1, x12_ = 1, x8_ = 2, z_aux = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -104,7 +120,7 @@ Nonidentifiable parameter:  [x15(0)]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k_prod = 1, x14_ = 1, x12_ = 0, x13_ = 0, x10_ = 0, x11_ = 1, x8_ = 1, k_deg = 1, t2 = 1, x6_ = 1, x4_ = 1, x2_ = 0, i1 = 1, k1 = 1, x7_ = 0, x3_ = 0, c_3a = 1, c_2a = 1, (NULL) = 1, k3 = 1, i_1a = 1, x1_ = 0, c5 = 2, x9_ = 0, e_2a = 1, k2 = 1, c_4a = 1, x5_ = 1, t1 = 1]
+States for substitution:	[x14_ = 1, x10_ = 0, c5 = 2, t1 = 1, x13_ = 0, c_4a = 1, x9_ = 0, (NULL) = 1, x11_ = 1, x4_ = 1, k2 = 1, x5_ = 1, x6_ = 1, x7_ = 0, x1_ = 0, x2_ = 0, x3_ = 0, k_prod = 1, x12_ = 0, x8_ = 1, c_2a = 1, i1 = 1, k3 = 1, i_1a = 1, t2 = 1, k1 = 1, e_2a = 1, k_deg = 1, c_3a = 1]
 NonID parameters:	[x15_0]
-Substitutions:	[x14_ = 2, x12_ = 1, x13_ = 1, x10_ = 1, x11_ = 2, x8_ = 2, x6_ = 2, x4_ = 2, x2_ = 1, z_aux = 2, x7_ = 1, x3_ = 1, x1_ = 1, c5 = 3, x9_ = 1, x5_ = 2]
-memory used=38689.0MB, alloc=185.3MB, time=270.49
+Substitutions:	[x14_ = 2, x10_ = 1, c5 = 3, x13_ = 1, x9_ = 1, x11_ = 2, x4_ = 2, x5_ = 2, x6_ = 2, x7_ = 1, x1_ = 1, x2_ = 1, x3_ = 1, x12_ = 1, x8_ = 2, z_aux = 2]
+memory used=38779.7MB, alloc=249.3MB, time=261.26

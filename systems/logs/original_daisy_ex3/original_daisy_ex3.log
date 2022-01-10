@@ -7,13 +7,29 @@
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:107|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -48,9 +64,9 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[p1 = 1, x2_ = 1, p7 = 3, p3 = 2, u0_ = 0, x1_ = 0, p4 = 2, x3_ = 2, p6 = 3]
+States for substitution:	[x3_ = 2, p4 = 2, p3 = 2, x2_ = 1, u0_ = 0, x1_ = 0, p1 = 1, p7 = 3, p6 = 3]
 NonID parameters:	[]
-Substitutions:	[x2_ = 2, p7 = 4, u0_ = 1, x1_ = 1, x3_ = 3, z_aux = 3, p6 = 4]
+Substitutions:	[x3_ = 3, x2_ = 2, u0_ = 1, z_aux = 3, x1_ = 1, p7 = 4, p6 = 4]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -85,7 +101,7 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[p1 = 1, x2_ = 1, p7 = 3, p3 = 2, u0_ = 0, x1_ = 0, p4 = 2, x3_ = 2, p6 = 3]
+States for substitution:	[x3_ = 2, p4 = 2, p3 = 2, x2_ = 1, u0_ = 0, x1_ = 0, p1 = 1, p7 = 3, p6 = 3]
 NonID parameters:	[]
-Substitutions:	[x2_ = 2, p7 = 4, u0_ = 1, x1_ = 1, x3_ = 3, z_aux = 3, p6 = 4]
-memory used=146.4MB, alloc=88.5MB, time=1.39
+Substitutions:	[x3_ = 3, x2_ = 2, u0_ = 1, z_aux = 3, x1_ = 1, p7 = 4, p6 = 4]
+memory used=147.9MB, alloc=84.4MB, time=1.25

@@ -6,13 +6,29 @@
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:107|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 substitutions := [CLtot = CLlin+kiny*V1*Rtot(t)/(1/2*Kss+1/2*Atot(t)/V1-1/2*
 Rtot(t)+1/2*g(t)), c = 1/2*Atot(t)/V1-1/2*Rtot(t)-1/2*Kss+1/2*g(t)]
 sigma := [diff(AD(t),t) = -ka*AD(t), diff(Atot(t),t) = ka*AD(t)-CLtot*c-Q*(c-AP
@@ -37,21 +53,3 @@ Parameters in equations:  [CLtot, Kss, Q, Rtot, V1, V2, a, c, ka, kdeg, kint, ks
 1. Constructing the maximal polynomial system
 =======================================================
 Interrupted
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [AD(t), Atot(t), AP(t), Rtot(t), g(t)]
-Output variables:         [y1(t)]
-Input variables:          []
-Parameters in equations:  [CLtot, Kss, Q, Rtot, V1, V2, a, c, ka, kdeg, kint, ksyn]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-Interrupted
-memory used=77.7MB, alloc=116.3MB, time=0.95

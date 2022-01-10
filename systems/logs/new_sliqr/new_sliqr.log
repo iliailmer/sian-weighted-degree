@@ -7,13 +7,29 @@
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:107|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -126,24 +142,24 @@ Collection [N_8, R_0] is not transcendence basis
 Collection [N_8, mu] is not transcendence basis
 Collection [N_9, R_0] is not transcendence basis
 Collection [N_9, mu] is not transcendence basis
-Picked the best choice [R_0, mu] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {mu}
-Algebraically independent parameters among derivatives: {R(0)}
+Picked the best choice [N_0, R_0] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {}
+Algebraically independent parameters among derivatives: {N(0), R(0)}
 
 === Input info ===
-State variables:          [mu(t), S(t), LL(t), In(t), Q(t), R(t), N(t)]
-Output variables:         [y1(t), y_faux1(t)]
+State variables:          [S(t), LL(t), In(t), Q(t), R(t), N(t)]
+Output variables:         [y1(t)]
 Input variables:          []
-Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, theta1]
+Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, mu, theta1]
 ===================
 
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[g = 1, eta = 1, b = 2, alpha2 = 1, N_ = 2, Q_ = 0, dlt = 1, In_ = 1, LL_ = 0, theta1 = 1, mu_ = 0, S_ = 1, alpha1 = 2]
+States for substitution:	[mu = 2, eta = 1, N_ = 2, dlt = 1, LL_ = 0, S_ = 1, theta1 = 1, alpha1 = 2, b = 2, In_ = 1, alpha2 = 1, g = 1, Q_ = 0]
 NonID parameters:	[N_0, R_0, mu]
-Substitutions:	[b = 3, N_ = 3, Q_ = 1, In_ = 2, LL_ = 1, mu_ = 1, z_aux = 2, S_ = 2, alpha1 = 3]
+Substitutions:	[z_aux = 2, N_ = 3, LL_ = 1, S_ = 2, alpha1 = 3, b = 3, In_ = 2, Q_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -178,7 +194,7 @@ Nonidentifiable parameter:  [N(0), R(0), mu]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[g = 1, eta = 1, b = 2, alpha2 = 1, N_ = 2, Q_ = 0, dlt = 1, In_ = 1, LL_ = 0, theta1 = 1, S_ = 1, mu = 2, alpha1 = 2]
+States for substitution:	[mu = 2, eta = 1, N_ = 2, dlt = 1, LL_ = 0, S_ = 1, theta1 = 1, alpha1 = 2, b = 2, In_ = 1, alpha2 = 1, g = 1, Q_ = 0]
 NonID parameters:	[N_0, R_0, mu]
-Substitutions:	[b = 3, N_ = 3, Q_ = 1, In_ = 2, LL_ = 1, z_aux = 2, S_ = 2, alpha1 = 3]
-memory used=3047.8MB, alloc=147.8MB, time=27.63
+Substitutions:	[z_aux = 2, N_ = 3, LL_ = 1, S_ = 2, alpha1 = 3, b = 3, In_ = 2, Q_ = 1]
+memory used=3006.3MB, alloc=136.9MB, time=27.27

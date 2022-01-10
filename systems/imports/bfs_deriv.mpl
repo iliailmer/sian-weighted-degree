@@ -85,8 +85,6 @@ GetMinLevelBFS := proc(sigma)
 
     # for every y(t)-function
     for i from 1 to m do
-      # printf(`i=%d,\tj=%d\n`, i, j):
-
       if differentiate_[i]=1 then 
         # if this equation is marked as to be differentiated then diff:
         poly_d := numer(lhs(y_eqs[i]) - rhs(y_eqs[i])):
@@ -96,7 +94,7 @@ GetMinLevelBFS := proc(sigma)
         poly_d := simplify(leader - subs(x_eqs, -(poly_d - separant * leader) / separant)):
         
         # save the new equation
-        y_eqs[i]:= leader = subs(x_eqs, -(poly_d - separant * leader) / separant):
+        y_eqs[i]:= leader = simplify(poly_d - leader);#(poly_d - separant * leader) / separant:
 
         # treat everything as states, retrieve all indets at current level
         candidates := select(x-> not (GetOrderVar(x)[1]  in y_vars), indets(y_eqs[i])):

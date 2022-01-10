@@ -7,13 +7,29 @@
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:107|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -51,24 +67,24 @@ Substituting transcendence basis.
 Algebraically independent parameters {c, R(0)}
 Number of possible combinations 3
 Collection [c, ph] is not transcendence basis
-Picked the best choice [R_0, ph] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {ph}
+Picked the best choice [R_0, c] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {c}
 Algebraically independent parameters among derivatives: {R(0)}
 
 === Input info ===
-State variables:          [ph(t), S(t), In(t), R(t)]
+State variables:          [c(t), S(t), In(t), R(t)]
 Output variables:         [y1(t), y_faux1(t)]
 Input variables:          [sgm(t)]
-Parameters in equations:  [Lam, c, g, mu]
+Parameters in equations:  [Lam, g, mu, ph]
 ===================
 
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[g = 1, (NULL) = 1, S_ = 1, Lam = 2, In_ = 0, ph_ = 0, c = 1, mu = 1]
+States for substitution:	[c_ = 0, mu = 1, ph = 1, g = 1, (NULL) = 1, Lam = 2, In_ = 0, S_ = 1]
 NonID parameters:	[R_0, c, ph]
-Substitutions:	[S_ = 2, Lam = 3, In_ = 1, ph_ = 1, z_aux = 2]
+Substitutions:	[c_ = 1, z_aux = 2, Lam = 3, In_ = 1, S_ = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -103,7 +119,7 @@ Nonidentifiable parameter:  [R(0), c, ph]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[g = 1, (NULL) = 1, S_ = 1, Lam = 2, In_ = 0, c = 1, ph = 1, mu = 1]
+States for substitution:	[c = 1, mu = 1, ph = 1, g = 1, (NULL) = 1, Lam = 2, In_ = 0, S_ = 1]
 NonID parameters:	[R_0, c, ph]
-Substitutions:	[S_ = 2, Lam = 3, In_ = 1, z_aux = 2]
-memory used=291.0MB, alloc=144.3MB, time=2.85
+Substitutions:	[z_aux = 2, Lam = 3, In_ = 1, S_ = 2]
+memory used=298.4MB, alloc=144.3MB, time=2.67

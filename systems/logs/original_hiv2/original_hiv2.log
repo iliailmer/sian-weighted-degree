@@ -6,13 +6,29 @@
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:107|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -49,105 +65,107 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {beta, c}
 Number of possible combinations 406
-Collection [beta, v_7] is not transcendence basis
-Collection [lm, c] is not transcendence basis
-Collection [lm, x_7] is not transcendence basis
+Collection [beta, v_0] is not transcendence basis
+Collection [beta, v_3] is not transcendence basis
+Collection [c, x_1] is not transcendence basis
+Collection [c, x_3] is not transcendence basis
+Collection [c, x_5] is not transcendence basis
+Collection [c, x_6] is not transcendence basis
+Collection [c, x_7] is not transcendence basis
+Collection [c, y_0] is not transcendence basis
+Collection [c, y_1] is not transcendence basis
+Collection [c, y_4] is not transcendence basis
+Collection [lm, x_1] is not transcendence basis
+Collection [lm, x_5] is not transcendence basis
+Collection [lm, y_0] is not transcendence basis
 Collection [lm, y_2] is not transcendence basis
-Collection [v_0, v_1] is not transcendence basis
-Collection [v_0, v_5] is not transcendence basis
-Collection [v_1, v_0] is not transcendence basis
-Collection [v_1, v_3] is not transcendence basis
-Collection [v_1, v_6] is not transcendence basis
-Collection [v_2, v_4] is not transcendence basis
+Collection [lm, y_8] is not transcendence basis
+Collection [v_0, v_7] is not transcendence basis
+Collection [v_1, beta] is not transcendence basis
+Collection [v_2, v_1] is not transcendence basis
 Collection [v_2, v_5] is not transcendence basis
-Collection [v_2, v_6] is not transcendence basis
-Collection [v_3, beta] is not transcendence basis
 Collection [v_3, v_2] is not transcendence basis
-Collection [v_4, beta] is not transcendence basis
-Collection [v_4, v_0] is not transcendence basis
-Collection [v_5, v_0] is not transcendence basis
-Collection [v_5, v_2] is not transcendence basis
-Collection [v_5, v_3] is not transcendence basis
-Collection [v_5, v_4] is not transcendence basis
+Collection [v_5, v_6] is not transcendence basis
 Collection [v_5, v_7] is not transcendence basis
-Collection [v_6, beta] is not transcendence basis
-Collection [v_6, v_0] is not transcendence basis
-Collection [v_6, v_5] is not transcendence basis
-Collection [x_0, x_1] is not transcendence basis
-Collection [x_0, x_4] is not transcendence basis
-Collection [x_0, y_0] is not transcendence basis
-Collection [x_0, y_4] is not transcendence basis
-Collection [x_0, y_5] is not transcendence basis
-Collection [x_0, y_7] is not transcendence basis
+Collection [v_6, v_1] is not transcendence basis
+Collection [v_6, v_3] is not transcendence basis
+Collection [v_7, v_0] is not transcendence basis
+Collection [v_7, v_1] is not transcendence basis
+Collection [v_7, v_2] is not transcendence basis
+Collection [v_7, v_3] is not transcendence basis
+Collection [x_0, x_7] is not transcendence basis
+Collection [x_1, x_5] is not transcendence basis
 Collection [x_1, x_6] is not transcendence basis
-Collection [x_1, y_7] is not transcendence basis
-Collection [x_2, c] is not transcendence basis
+Collection [x_1, y_6] is not transcendence basis
 Collection [x_2, x_1] is not transcendence basis
-Collection [x_2, x_3] is not transcendence basis
-Collection [x_2, x_5] is not transcendence basis
-Collection [x_2, y_1] is not transcendence basis
-Collection [x_2, y_3] is not transcendence basis
-Collection [x_2, y_4] is not transcendence basis
-Collection [x_2, y_7] is not transcendence basis
+Collection [x_2, y_6] is not transcendence basis
+Collection [x_3, lm] is not transcendence basis
+Collection [x_3, x_1] is not transcendence basis
+Collection [x_3, x_6] is not transcendence basis
 Collection [x_3, x_7] is not transcendence basis
-Collection [x_3, y_2] is not transcendence basis
-Collection [x_3, y_3] is not transcendence basis
-Collection [x_3, y_8] is not transcendence basis
-Collection [x_4, c] is not transcendence basis
-Collection [x_4, x_1] is not transcendence basis
-Collection [x_4, x_5] is not transcendence basis
-Collection [x_4, y_8] is not transcendence basis
-Collection [x_5, x_1] is not transcendence basis
+Collection [x_3, y_5] is not transcendence basis
+Collection [x_3, y_6] is not transcendence basis
+Collection [x_4, x_0] is not transcendence basis
+Collection [x_4, x_6] is not transcendence basis
+Collection [x_4, y_0] is not transcendence basis
+Collection [x_4, y_1] is not transcendence basis
+Collection [x_4, y_6] is not transcendence basis
+Collection [x_5, x_2] is not transcendence basis
+Collection [x_5, x_3] is not transcendence basis
 Collection [x_5, x_4] is not transcendence basis
-Collection [x_5, y_1] is not transcendence basis
 Collection [x_5, y_2] is not transcendence basis
-Collection [x_6, lm] is not transcendence basis
-Collection [x_6, x_3] is not transcendence basis
-Collection [x_6, y_3] is not transcendence basis
-Collection [x_7, x_2] is not transcendence basis
+Collection [x_5, y_5] is not transcendence basis
+Collection [x_5, y_6] is not transcendence basis
+Collection [x_6, y_2] is not transcendence basis
+Collection [x_6, y_5] is not transcendence basis
+Collection [x_6, y_8] is not transcendence basis
+Collection [x_7, x_3] is not transcendence basis
 Collection [x_7, x_6] is not transcendence basis
-Collection [x_7, y_2] is not transcendence basis
-Collection [y_0, lm] is not transcendence basis
-Collection [y_0, x_1] is not transcendence basis
-Collection [y_0, x_4] is not transcendence basis
 Collection [y_0, x_7] is not transcendence basis
-Collection [y_0, y_8] is not transcendence basis
+Collection [y_0, y_2] is not transcendence basis
 Collection [y_1, x_0] is not transcendence basis
-Collection [y_1, x_2] is not transcendence basis
-Collection [y_1, x_4] is not transcendence basis
+Collection [y_1, x_1] is not transcendence basis
 Collection [y_1, x_7] is not transcendence basis
-Collection [y_2, x_0] is not transcendence basis
-Collection [y_2, x_2] is not transcendence basis
-Collection [y_2, x_6] is not transcendence basis
-Collection [y_2, y_4] is not transcendence basis
-Collection [y_2, y_6] is not transcendence basis
-Collection [y_3, c] is not transcendence basis
-Collection [y_3, x_5] is not transcendence basis
+Collection [y_1, y_0] is not transcendence basis
+Collection [y_1, y_2] is not transcendence basis
+Collection [y_1, y_3] is not transcendence basis
+Collection [y_2, x_1] is not transcendence basis
+Collection [y_2, x_7] is not transcendence basis
+Collection [y_3, lm] is not transcendence basis
+Collection [y_3, x_3] is not transcendence basis
+Collection [y_3, x_4] is not transcendence basis
 Collection [y_3, x_7] is not transcendence basis
-Collection [y_3, y_2] is not transcendence basis
-Collection [y_3, y_7] is not transcendence basis
-Collection [y_4, x_2] is not transcendence basis
-Collection [y_4, y_6] is not transcendence basis
+Collection [y_3, y_1] is not transcendence basis
+Collection [y_3, y_6] is not transcendence basis
+Collection [y_4, c] is not transcendence basis
+Collection [y_4, lm] is not transcendence basis
+Collection [y_4, x_1] is not transcendence basis
+Collection [y_4, y_0] is not transcendence basis
+Collection [y_4, y_1] is not transcendence basis
+Collection [y_4, y_3] is not transcendence basis
+Collection [y_4, y_5] is not transcendence basis
+Collection [y_4, y_8] is not transcendence basis
+Collection [y_5, x_0] is not transcendence basis
+Collection [y_5, x_1] is not transcendence basis
 Collection [y_5, x_3] is not transcendence basis
 Collection [y_5, x_5] is not transcendence basis
-Collection [y_5, x_6] is not transcendence basis
-Collection [y_5, y_1] is not transcendence basis
+Collection [y_5, x_7] is not transcendence basis
 Collection [y_5, y_2] is not transcendence basis
+Collection [y_5, y_3] is not transcendence basis
+Collection [y_5, y_4] is not transcendence basis
 Collection [y_5, y_7] is not transcendence basis
-Collection [y_6, x_3] is not transcendence basis
-Collection [y_6, x_5] is not transcendence basis
-Collection [y_6, x_6] is not transcendence basis
-Collection [y_6, y_1] is not transcendence basis
-Collection [y_7, c] is not transcendence basis
-Collection [y_7, x_1] is not transcendence basis
+Collection [y_6, x_4] is not transcendence basis
+Collection [y_6, y_0] is not transcendence basis
 Collection [y_7, x_3] is not transcendence basis
-Collection [y_7, x_5] is not transcendence basis
-Collection [y_7, y_8] is not transcendence basis
-Collection [y_8, lm] is not transcendence basis
-Collection [y_8, x_1] is not transcendence basis
-Collection [y_8, x_6] is not transcendence basis
+Collection [y_7, x_6] is not transcendence basis
+Collection [y_7, x_7] is not transcendence basis
+Collection [y_7, y_0] is not transcendence basis
+Collection [y_7, y_1] is not transcendence basis
+Collection [y_7, y_2] is not transcendence basis
+Collection [y_7, y_3] is not transcendence basis
+Collection [y_8, c] is not transcendence basis
+Collection [y_8, x_5] is not transcendence basis
 Collection [y_8, y_0] is not transcendence basis
-Collection [y_8, y_5] is not transcendence basis
 Picked the best choice [beta, c] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {beta, c}
 Algebraically independent parameters among derivatives: {}
@@ -164,9 +182,9 @@ Transcendence basis substitution turned off.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[x_ = 2, h = 1, y_ = 1, v_ = 2, z_ = 0, q = 1, k = 3, lm = 3, w_ = 0, d = 3, c_ = 0, a = 2, u = 3, beta_ = 0, b = 1]
+States for substitution:	[u = 3, y_ = 1, v_ = 2, beta_ = 0, b = 1, q = 1, w_ = 0, z_ = 0, a = 2, lm = 3, d = 3, x_ = 2, c_ = 0, k = 3, h = 1]
 NonID parameters:	[beta, c, k, lm, v_0, x_0, y_0]
-Substitutions:	[x_ = 3, y_ = 2, v_ = 3, z_aux = 3, z_ = 1, w_ = 1, d = 4, c_ = 1, u = 4, beta_ = 1]
+Substitutions:	[u = 4, z_aux = 3, y_ = 2, v_ = 3, beta_ = 1, w_ = 1, z_ = 1, d = 4, x_ = 3, c_ = 1]
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {beta_0
 = beta_0, beta_1 = beta_1, beta_2 = beta_2, beta_3 = beta_3, beta_4 = beta_4, 
 beta_5 = beta_5, beta_6 = beta_6, beta_7 = beta_7, c_0 = c_0, c_1 = c_1, c_2 =
@@ -178,555 +196,557 @@ w_4 = w_4, w_5 = w_5, w_6 = w_6, w_7 = w_7, w_8 = w_8, w_9 = w_9, w_aux = w_aux
 x_6 = x_6^3, x_7 = x_7^3, y_0 = y_0^2, y_1 = y_1^2, y_2 = y_2^2, y_3 = y_3^2, 
 y_4 = y_4^2, y_5 = y_5^2, y_6 = y_6^2, y_7 = y_7^2, y_8 = y_8^2, z_0 = z_0, z_1
 = z_1, z_2 = z_2, z_3 = z_3, z_4 = z_4, z_5 = z_5, z_6 = z_6, z_7 = z_7, z_8 =
-z_8, z_aux = z_aux, z_aux = z_aux^3}, [21035391801526618700512947-w_0, c_0*q*
-w_0*y_0^2-c_0*w_0*y_0^2*z_0+b*w_0+w_1, 1597624376378190519622941-z_0, -c_0*q*
-w_0*y_0^2+h*z_0+z_1, 16276039626586890728631664-beta_0, beta_1, 
-5039905502633334302299859-c_0, c_1, -w_1-11405190346006794703480787565975025338\
-3629032782866080023683009710209088174811357069498749028084913, ((-z_1*y_0^2-y_1
-^2*(z_0-q))*w_0-w_1*y_0^2*(z_0-q))*c_0-c_1*y_0^2*(z_0-q)*w_0+b*w_1+w_2, -beta_0
-*v_0^3*x_0^3+a*y_0^2+y_1^2, 106667545795776248718920744274839965537437290565845\
-9788642664032955255661884220574147364909447200986-z_1, ((-w_0*y_1^2-w_1*y_0^2)*
-c_0-c_1*y_0^2*w_0)*q+h*z_1+z_2, -w_2+636650340380999253808571187457977073506755\
-8516186008238439726428352689350564839200274928411282650101936214961319130376431\
-78349781494489025495641525068535439889456306012325951, ((q*y_2^2-y_0^2*z_2-2*
-y_1^2*z_1-y_2^2*z_0)*w_0+(q*w_2-2*w_1*z_1-w_2*z_0)*y_0^2-2*w_1*y_1^2*(z_0-q))*
-c_0+((-2*c_1*z_1+c_2*q-c_2*z_0)*y_0^2-2*y_1^2*c_1*(z_0-q))*w_0-2*c_1*w_1*(z_0-q
-)*y_0^2+b*w_2+w_3, c_2, (-beta_0*v_1^3-beta_1*v_0^3)*x_0^3-beta_0*v_0^3*x_1^3+a
-*y_1^2+y_2^2, u^4*v_0^3-k*y_0^2+v_1^3, beta_0*v_0^3*x_0^3+d^4*x_0^3+x_1^3-lm, -\
-5783413377895505914250727795093899222658312728871188703620152581467552916203688\
-4516899829350522227284739113795812444787362834017808418714626357760423376099539\
-25276174302068-z_2, ((-w_0*y_2^2-2*w_1*y_1^2-w_2*y_0^2)*c_0+(-2*c_1*y_1^2-c_2*
-y_0^2)*w_0-2*c_1*w_1*y_0^2)*q+h*z_2+z_3, -w_3-137973731887719391457042127940081\
-8961606730479088644983144818528624108663858876343679438664406833328923786066871\
-5949436687447740899072428675506949451605662918836876989401487434569126802337964\
-482680656491110045266221604156380522096485385753711920453, ((q*y_3^2-y_0^2*z_3-\
-3*y_1^2*z_2-3*y_2^2*z_1-y_3^2*z_0)*w_0+(q*w_3-3*w_1*z_2-3*w_2*z_1-w_3*z_0)*y_0^
-2+(-3*w_1*y_2^2-3*w_2*y_1^2)*z_0+(3*w_1*y_2^2+3*w_2*y_1^2)*q-6*y_1^2*z_1*w_1)*
-c_0+((-3*c_1*z_2-3*c_2*z_1+c_3*q-c_3*z_0)*y_0^2+(-3*c_1*y_2^2-3*c_2*y_1^2)*z_0+
-(3*c_1*y_2^2+3*c_2*y_1^2)*q-6*y_1^2*z_1*c_1)*w_0+((-3*c_1*w_2-3*c_2*w_1)*z_0+(3
-*c_1*w_2+3*c_2*w_1)*q-6*z_1*c_1*w_1)*y_0^2-6*c_1*w_1*y_1^2*z_0+6*c_1*q*w_1*y_1^
-2+b*w_3+w_4, c_3, (-v_0^3*x_2^3-2*v_1^3*x_1^3-v_2^3*x_0^3)*beta_0+(-2*beta_1*
-x_1^3-beta_2*x_0^3)*v_0^3-2*beta_1*v_1^3*x_0^3+a*y_2^2+y_3^2, beta_2, u^4*v_1^3
--k*y_1^2+v_2^3, beta_0*x_0^3*v_1^3+v_0^3*x_0^3*beta_1+(beta_0*v_0^3+d^4)*x_1^3+
-x_2^3, 322836531780493348349990590330230119862817839170839235906381109427552422\
-2987337420474073011350445924947185153024138989617688033631813476471838083768835\
-2990430867540068939835780727390418965258545307014780531977914796109512471411599\
-432316267777972432-z_3, ((-w_0*y_3^2-3*w_1*y_2^2-3*w_2*y_1^2-w_3*y_0^2)*c_0+(-3
-*c_1*y_2^2-3*c_2*y_1^2-c_3*y_0^2)*w_0+(-3*c_1*w_2-3*c_2*w_1)*y_0^2-6*c_1*w_1*
-y_1^2)*q+h*z_3+z_4, -w_4+771306480750668112546326746423024500128124855431642309\
-1802113350179271981208314591571987317274914412571097526461198338229808754871304\
-8353191432434372047799720351059886050977121722927265323793773532408367357443092\
-1962553611342842556248017588286351908407201262616991439004232683544966138092172\
-12538484410662567087096414520419, ((q*y_4^2-y_0^2*z_4-4*y_1^2*z_3-6*y_2^2*z_2-4
-*y_3^2*z_1-y_4^2*z_0)*w_0+(q*w_4-4*w_1*z_3-6*w_2*z_2-4*w_3*z_1-w_4*z_0)*y_0^2+(
--4*w_1*y_3^2-6*w_2*y_2^2-4*w_3*y_1^2)*z_0+(4*w_1*y_3^2+6*w_2*y_2^2+4*w_3*y_1^2)
-*q+(-12*y_1^2*z_2-12*y_2^2*z_1)*w_1-12*w_2*y_1^2*z_1)*c_0+((-4*c_1*z_3-6*c_2*
-z_2-4*c_3*z_1+c_4*q-c_4*z_0)*y_0^2+(-4*c_1*y_3^2-6*c_2*y_2^2-4*c_3*y_1^2)*z_0+(
-4*c_1*y_3^2+6*c_2*y_2^2+4*c_3*y_1^2)*q+(-12*y_1^2*z_2-12*y_2^2*z_1)*c_1-12*y_1^
-2*z_1*c_2)*w_0+((-4*c_1*w_3-6*c_2*w_2-4*c_3*w_1)*z_0+(4*c_1*w_3+6*c_2*w_2+4*c_3
-*w_1)*q+(-12*w_1*z_2-12*w_2*z_1)*c_1-12*z_1*c_2*w_1)*y_0^2+((-12*w_1*y_2^2-12*
-w_2*y_1^2)*c_1-12*y_1^2*c_2*w_1)*z_0+((12*w_1*y_2^2+12*w_2*y_1^2)*c_1+12*y_1^2*
-c_2*w_1)*q-24*c_1*w_1*y_1^2*z_1+b*w_4+w_5, c_4, (-v_0^3*x_3^3-3*v_1^3*x_2^3-3*
-v_2^3*x_1^3-v_3^3*x_0^3)*beta_0+(-3*beta_1*x_2^3-3*beta_2*x_1^3-beta_3*x_0^3)*
-v_0^3+(-3*beta_1*v_2^3-3*beta_2*v_1^3)*x_0^3-6*beta_1*v_1^3*x_1^3+a*y_3^2+y_4^2
-, beta_3, u^4*v_2^3-k*y_2^2+v_3^3, (v_0^3*x_2^3+2*v_1^3*x_1^3+v_2^3*x_0^3)*
-beta_0+(2*beta_1*x_1^3+beta_2*x_0^3)*v_0^3+2*beta_1*v_1^3*x_0^3+d^4*x_2^3+x_3^3
-, -w_5-354781451510137568219836638849736865551156868781790993851963413830603508\
-1543962252645862077068087848486229145980661781459540630861097321319770031939439\
-2572167691424916573735374390350072104085807006391279117053972736685146855894913\
-0003974873724233402497201806294338253351431334430522564367727491281170183786731\
-3869613600081779759060492096576098833426729580791329541344262246514990122482046\
-235599049, ((q*y_5^2-y_0^2*z_5-5*y_1^2*z_4-10*y_2^2*z_3-10*y_3^2*z_2-5*y_4^2*
-z_1-y_5^2*z_0)*w_0+(q*w_5-5*w_1*z_4-10*w_2*z_3-10*w_3*z_2-5*w_4*z_1-w_5*z_0)*
-y_0^2+(-5*w_1*y_4^2-10*w_2*y_3^2-10*w_3*y_2^2-5*w_4*y_1^2)*z_0+(5*w_1*y_4^2+10*
-w_2*y_3^2+10*w_3*y_2^2+5*w_4*y_1^2)*q+(-20*y_1^2*z_3-30*y_2^2*z_2-20*y_3^2*z_1)
-*w_1+(-30*w_2*z_2-20*w_3*z_1)*y_1^2-30*y_2^2*z_1*w_2)*c_0+((-5*c_1*z_4-10*c_2*
-z_3-10*c_3*z_2-5*c_4*z_1+c_5*q-c_5*z_0)*y_0^2+(-5*c_1*y_4^2-10*c_2*y_3^2-10*c_3
-*y_2^2-5*c_4*y_1^2)*z_0+(5*c_1*y_4^2+10*c_2*y_3^2+10*c_3*y_2^2+5*c_4*y_1^2)*q+(
--20*y_1^2*z_3-30*y_2^2*z_2-20*y_3^2*z_1)*c_1+(-30*c_2*z_2-20*c_3*z_1)*y_1^2-30*
-y_2^2*z_1*c_2)*w_0+((-5*c_1*w_4-10*c_2*w_3-10*c_3*w_2-5*c_4*w_1)*z_0+(5*c_1*w_4
-+10*c_2*w_3+10*c_3*w_2+5*c_4*w_1)*q+(-20*w_1*z_3-30*w_2*z_2-20*w_3*z_1)*c_1+(-\
-30*c_2*z_2-20*c_3*z_1)*w_1-30*w_2*z_1*c_2)*y_0^2+((-20*w_1*y_3^2-30*w_2*y_2^2-\
-20*w_3*y_1^2)*c_1+(-30*c_2*y_2^2-20*c_3*y_1^2)*w_1-30*w_2*y_1^2*c_2)*z_0+((20*
-w_1*y_3^2+30*w_2*y_2^2+20*w_3*y_1^2)*c_1+(30*c_2*y_2^2+20*c_3*y_1^2)*w_1+30*w_2
-*y_1^2*c_2)*q+((-60*y_1^2*z_2-60*y_2^2*z_1)*w_1-60*w_2*y_1^2*z_1)*c_1-60*c_2*
-w_1*y_1^2*z_1+b*w_5+w_6, c_5, (-v_0^3*x_4^3-4*v_1^3*x_3^3-6*v_2^3*x_2^3-4*v_3^3
-*x_1^3-v_4^3*x_0^3)*beta_0+(-4*beta_1*x_3^3-6*beta_2*x_2^3-4*beta_3*x_1^3-
-beta_4*x_0^3)*v_0^3+(-4*beta_1*v_3^3-6*beta_2*v_2^3-4*beta_3*v_1^3)*x_0^3+(-12*
-v_1^3*x_2^3-12*v_2^3*x_1^3)*beta_1-12*beta_2*v_1^3*x_1^3+a*y_4^2+y_5^2, ((-w_0*
-y_4^2-4*w_1*y_3^2-6*w_2*y_2^2-4*w_3*y_1^2-w_4*y_0^2)*c_0+(-4*c_1*y_3^2-6*c_2*
-y_2^2-4*c_3*y_1^2-c_4*y_0^2)*w_0+(-4*c_1*w_3-6*c_2*w_2-4*c_3*w_1)*y_0^2+(-12*
-w_1*y_2^2-12*w_2*y_1^2)*c_1-12*y_1^2*c_2*w_1)*q+h*z_4+z_5, beta_4, u^4*v_3^3-k*
-y_3^2+v_4^3, (v_0^3*x_3^3+3*v_1^3*x_2^3+3*v_2^3*x_1^3+v_3^3*x_0^3)*beta_0+(3*
-beta_1*x_2^3+3*beta_2*x_1^3+beta_3*x_0^3)*v_0^3+(3*beta_1*v_2^3+3*beta_2*v_1^3)
-*x_0^3+6*beta_1*v_1^3*x_1^3+d^4*x_3^3+x_4^3, -w_6+19872150558737326829598828480\
-5404085250038937587076952311059186971989150806946477150821503903723730693779875\
-8402684778481920560074977614694938026625241134848348303637138092363153561964432\
-6979641341050802119595392399018654703463771742275275234647261066321941881231127\
-1538907027334800194613046344521053733131338251578855462606336489832755811516334\
-2108668197067385149311785134173816772996155352524216155488560227303148697554136\
-8754953390552969571862489677375528881888828656071, ((q*y_6^2-y_0^2*z_6-6*y_1^2*
-z_5-15*y_2^2*z_4-20*y_3^2*z_3-15*y_4^2*z_2-6*y_5^2*z_1-y_6^2*z_0)*w_0+(q*w_6-6*
-w_1*z_5-15*w_2*z_4-20*w_3*z_3-15*w_4*z_2-6*w_5*z_1-w_6*z_0)*y_0^2+(-6*w_1*y_5^2
--15*w_2*y_4^2-20*w_3*y_3^2-15*w_4*y_2^2-6*w_5*y_1^2)*z_0+(6*w_1*y_5^2+15*w_2*
-y_4^2+20*w_3*y_3^2+15*w_4*y_2^2+6*w_5*y_1^2)*q+(-30*y_1^2*z_4-60*y_2^2*z_3-60*
-y_3^2*z_2-30*y_4^2*z_1)*w_1+(-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1)*y_1^2+(-60*w_2*
-y_3^2-60*w_3*y_2^2)*z_1-90*w_2*y_2^2*z_2)*c_0+((-6*c_1*z_5-15*c_2*z_4-20*c_3*
-z_3-15*c_4*z_2-6*c_5*z_1+c_6*q-c_6*z_0)*y_0^2+(-6*c_1*y_5^2-15*c_2*y_4^2-20*c_3
-*y_3^2-15*c_4*y_2^2-6*c_5*y_1^2)*z_0+(6*c_1*y_5^2+15*c_2*y_4^2+20*c_3*y_3^2+15*
-c_4*y_2^2+6*c_5*y_1^2)*q+(-30*y_1^2*z_4-60*y_2^2*z_3-60*y_3^2*z_2-30*y_4^2*z_1)
-*c_1+(-60*c_2*z_3-60*c_3*z_2-30*c_4*z_1)*y_1^2+(-60*c_2*y_3^2-60*c_3*y_2^2)*z_1
--90*y_2^2*z_2*c_2)*w_0+((-6*c_1*w_5-15*c_2*w_4-20*c_3*w_3-15*c_4*w_2-6*c_5*w_1)
-*z_0+(6*c_1*w_5+15*c_2*w_4+20*c_3*w_3+15*c_4*w_2+6*c_5*w_1)*q+(-30*w_1*z_4-60*
-w_2*z_3-60*w_3*z_2-30*w_4*z_1)*c_1+(-60*c_2*z_3-60*c_3*z_2-30*c_4*z_1)*w_1+(-60
-*c_2*w_3-60*c_3*w_2)*z_1-90*w_2*z_2*c_2)*y_0^2+((-30*w_1*y_4^2-60*w_2*y_3^2-60*
-w_3*y_2^2-30*w_4*y_1^2)*c_1+(-60*c_2*y_3^2-60*c_3*y_2^2-30*c_4*y_1^2)*w_1+(-60*
-c_2*w_3-60*c_3*w_2)*y_1^2-90*w_2*y_2^2*c_2)*z_0+((30*w_1*y_4^2+60*w_2*y_3^2+60*
-w_3*y_2^2+30*w_4*y_1^2)*c_1+(60*c_2*y_3^2+60*c_3*y_2^2+30*c_4*y_1^2)*w_1+(60*
-c_2*w_3+60*c_3*w_2)*y_1^2+90*w_2*y_2^2*c_2)*q+((-120*y_1^2*z_3-180*y_2^2*z_2-\
-120*y_3^2*z_1)*w_1+(-180*w_2*z_2-120*w_3*z_1)*y_1^2-180*y_2^2*z_1*w_2)*c_1+((-\
-180*c_2*z_2-120*c_3*z_1)*y_1^2-180*y_2^2*z_1*c_2)*w_1-180*c_2*w_2*y_1^2*z_1+b*
-w_6+w_7, c_6, (-v_0^3*x_5^3-5*v_1^3*x_4^3-10*v_2^3*x_3^3-10*v_3^3*x_2^3-5*v_4^3
-*x_1^3-v_5^3*x_0^3)*beta_0+(-5*beta_1*x_4^3-10*beta_2*x_3^3-10*beta_3*x_2^3-5*
-beta_4*x_1^3-beta_5*x_0^3)*v_0^3+(-5*beta_1*v_4^3-10*beta_2*v_3^3-10*beta_3*v_2
-^3-5*beta_4*v_1^3)*x_0^3+(-20*v_1^3*x_3^3-30*v_2^3*x_2^3-20*v_3^3*x_1^3)*beta_1
-+(-30*beta_2*x_2^3-20*beta_3*x_1^3)*v_1^3-30*beta_2*v_2^3*x_1^3+a*y_5^2+y_6^2,
-((-w_0*y_5^2-5*w_1*y_4^2-10*w_2*y_3^2-10*w_3*y_2^2-5*w_4*y_1^2-w_5*y_0^2)*c_0+(
--5*c_1*y_4^2-10*c_2*y_3^2-10*c_3*y_2^2-5*c_4*y_1^2-c_5*y_0^2)*w_0+(-5*c_1*w_4-\
-10*c_2*w_3-10*c_3*w_2-5*c_4*w_1)*y_0^2+(-20*w_1*y_3^2-30*w_2*y_2^2-20*w_3*y_1^2
-)*c_1+(-30*c_2*y_2^2-20*c_3*y_1^2)*w_1-30*w_2*y_1^2*c_2)*q+h*z_5+z_6, beta_5, u
-^4*v_4^3-k*y_4^2+v_5^3, (v_0^3*x_4^3+4*v_1^3*x_3^3+6*v_2^3*x_2^3+4*v_3^3*x_1^3+
-v_4^3*x_0^3)*beta_0+(4*beta_1*x_3^3+6*beta_2*x_2^3+4*beta_3*x_1^3+beta_4*x_0^3)
-*v_0^3+(4*beta_1*v_3^3+6*beta_2*v_2^3+4*beta_3*v_1^3)*x_0^3+(12*v_1^3*x_2^3+12*
-v_2^3*x_1^3)*beta_1+12*beta_2*v_1^3*x_1^3+d^4*x_4^3+x_5^3, -w_7-156611128065175\
-1912595315693557972878979758846907322506483895587146114718627953236556286806825\
-1073893083064246669651836951776498588235401671774134059570633963198275723650356\
-7928658698841246235659640070220356780896647500315461364856647518878500180920163\
-5581243029016672584748128336387654973619963458571254253148845058232510053406221\
-2022195751430676222889244369446071140873742610979628175675141319132524144764625\
-5595575897796298725412280872086692007721232326951878328994835333035845602858344\
-4009660563921451178213964662420146074392341954271685249421, ((q*y_7^2-y_0^2*z_7
--7*y_1^2*z_6-21*y_2^2*z_5-35*y_3^2*z_4-35*y_4^2*z_3-21*y_5^2*z_2-7*y_6^2*z_1-
-y_7^2*z_0)*w_0+(q*w_7-7*w_1*z_6-21*w_2*z_5-35*w_3*z_4-35*w_4*z_3-21*w_5*z_2-7*
-w_6*z_1-w_7*z_0)*y_0^2+(-7*w_1*y_6^2-21*w_2*y_5^2-35*w_3*y_4^2-35*w_4*y_3^2-21*
-w_5*y_2^2-7*w_6*y_1^2)*z_0+(7*w_1*y_6^2+21*w_2*y_5^2+35*w_3*y_4^2+35*w_4*y_3^2+
-21*w_5*y_2^2+7*w_6*y_1^2)*q+(-42*y_1^2*z_5-105*y_2^2*z_4-140*y_3^2*z_3-105*y_4^
-2*z_2-42*y_5^2*z_1)*w_1+(-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1)*y_1^2
-+(-105*w_2*y_4^2-140*w_3*y_3^2-105*w_4*y_2^2)*z_1+(-210*y_2^2*z_3-210*y_3^2*z_2
-)*w_2-210*w_3*y_2^2*z_2)*c_0+((-7*c_1*z_6-21*c_2*z_5-35*c_3*z_4-35*c_4*z_3-21*
-c_5*z_2-7*c_6*z_1+c_7*q-c_7*z_0)*y_0^2+(-7*c_1*y_6^2-21*c_2*y_5^2-35*c_3*y_4^2-\
-35*c_4*y_3^2-21*c_5*y_2^2-7*c_6*y_1^2)*z_0+(7*c_1*y_6^2+21*c_2*y_5^2+35*c_3*y_4
-^2+35*c_4*y_3^2+21*c_5*y_2^2+7*c_6*y_1^2)*q+(-42*y_1^2*z_5-105*y_2^2*z_4-140*
-y_3^2*z_3-105*y_4^2*z_2-42*y_5^2*z_1)*c_1+(-105*c_2*z_4-140*c_3*z_3-105*c_4*z_2
--42*c_5*z_1)*y_1^2+(-105*c_2*y_4^2-140*c_3*y_3^2-105*c_4*y_2^2)*z_1+(-210*y_2^2
-*z_3-210*y_3^2*z_2)*c_2-210*c_3*y_2^2*z_2)*w_0+((-7*c_1*w_6-21*c_2*w_5-35*c_3*
-w_4-35*c_4*w_3-21*c_5*w_2-7*c_6*w_1)*z_0+(7*c_1*w_6+21*c_2*w_5+35*c_3*w_4+35*
-c_4*w_3+21*c_5*w_2+7*c_6*w_1)*q+(-42*w_1*z_5-105*w_2*z_4-140*w_3*z_3-105*w_4*
-z_2-42*w_5*z_1)*c_1+(-105*c_2*z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*z_1)*w_1+(-105
-*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*z_1+(-210*w_2*z_3-210*w_3*z_2)*c_2-210*w_2*
-z_2*c_3)*y_0^2+((-42*w_1*y_5^2-105*w_2*y_4^2-140*w_3*y_3^2-105*w_4*y_2^2-42*w_5
-*y_1^2)*c_1+(-105*c_2*y_4^2-140*c_3*y_3^2-105*c_4*y_2^2-42*c_5*y_1^2)*w_1+(-105
-*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*y_1^2+(-210*w_2*y_3^2-210*w_3*y_2^2)*c_2-210*
-w_2*y_2^2*c_3)*z_0+((42*w_1*y_5^2+105*w_2*y_4^2+140*w_3*y_3^2+105*w_4*y_2^2+42*
-w_5*y_1^2)*c_1+(105*c_2*y_4^2+140*c_3*y_3^2+105*c_4*y_2^2+42*c_5*y_1^2)*w_1+(
-105*c_2*w_4+140*c_3*w_3+105*c_4*w_2)*y_1^2+(210*w_2*y_3^2+210*w_3*y_2^2)*c_2+
-210*w_2*y_2^2*c_3)*q+((-210*y_1^2*z_4-420*y_2^2*z_3-420*y_3^2*z_2-210*y_4^2*z_1
-)*w_1+(-420*w_2*z_3-420*w_3*z_2-210*w_4*z_1)*y_1^2+(-420*w_2*y_3^2-420*w_3*y_2^
-2)*z_1-630*w_2*y_2^2*z_2)*c_1+((-420*c_2*z_3-420*c_3*z_2-210*c_4*z_1)*y_1^2+(-\
-420*c_2*y_3^2-420*c_3*y_2^2)*z_1-630*y_2^2*z_2*c_2)*w_1+((-420*c_2*w_3-420*c_3*
-w_2)*z_1-630*w_2*z_2*c_2)*y_1^2-630*c_2*w_2*y_2^2*z_1+b*w_7+w_8, c_7, (-v_0^3*
-x_6^3-6*v_1^3*x_5^3-15*v_2^3*x_4^3-20*v_3^3*x_3^3-15*v_4^3*x_2^3-6*v_5^3*x_1^3-
-v_6^3*x_0^3)*beta_0+(-6*beta_1*x_5^3-15*beta_2*x_4^3-20*beta_3*x_3^3-15*beta_4*
-x_2^3-6*beta_5*x_1^3-beta_6*x_0^3)*v_0^3+(-6*beta_1*v_5^3-15*beta_2*v_4^3-20*
-beta_3*v_3^3-15*beta_4*v_2^3-6*beta_5*v_1^3)*x_0^3+(-30*v_1^3*x_4^3-60*v_2^3*
-x_3^3-60*v_3^3*x_2^3-30*v_4^3*x_1^3)*beta_1+(-60*beta_2*x_3^3-60*beta_3*x_2^3-\
-30*beta_4*x_1^3)*v_1^3+(-60*beta_2*v_3^3-60*beta_3*v_2^3)*x_1^3-90*beta_2*v_2^3
-*x_2^3+a*y_6^2+y_7^2, ((-w_0*y_6^2-6*w_1*y_5^2-15*w_2*y_4^2-20*w_3*y_3^2-15*w_4
-*y_2^2-6*w_5*y_1^2-w_6*y_0^2)*c_0+(-6*c_1*y_5^2-15*c_2*y_4^2-20*c_3*y_3^2-15*
-c_4*y_2^2-6*c_5*y_1^2-c_6*y_0^2)*w_0+(-6*c_1*w_5-15*c_2*w_4-20*c_3*w_3-15*c_4*
-w_2-6*c_5*w_1)*y_0^2+(-30*w_1*y_4^2-60*w_2*y_3^2-60*w_3*y_2^2-30*w_4*y_1^2)*c_1
-+(-60*c_2*y_3^2-60*c_3*y_2^2-30*c_4*y_1^2)*w_1+(-60*c_2*w_3-60*c_3*w_2)*y_1^2-\
-90*w_2*y_2^2*c_2)*q+h*z_6+z_7, beta_6, u^4*v_5^3-k*y_5^2+v_6^3, (v_0^3*x_5^3+5*
-v_1^3*x_4^3+10*v_2^3*x_3^3+10*v_3^3*x_2^3+5*v_4^3*x_1^3+v_5^3*x_0^3)*beta_0+(5*
-beta_1*x_4^3+10*beta_2*x_3^3+10*beta_3*x_2^3+5*beta_4*x_1^3+beta_5*x_0^3)*v_0^3
-+(5*beta_1*v_4^3+10*beta_2*v_3^3+10*beta_3*v_2^3+5*beta_4*v_1^3)*x_0^3+(20*v_1^
-3*x_3^3+30*v_2^3*x_2^3+20*v_3^3*x_1^3)*beta_1+(30*beta_2*x_2^3+20*beta_3*x_1^3)
-*v_1^3+30*beta_2*v_2^3*x_1^3+d^4*x_5^3+x_6^3, -w_8+8793931655778044550439383826\
-3208812607583076430603036732952423745837685538460694758370150613817590910398789\
-7352491995678966135866988479451063961373698492561026087984703988787041336778241\
-2862425505117684847718296224699226502242081374580758514292897623517105644831546\
-0091517232784564613009777589095885362614913165805044298420307383453822236351968\
-1497854667286923460512965189970945717849741426561939569756646663605939643955593\
-0931351763884576359892887351571772596250498541019412560508071353037713632501120\
-0165608655162230672719968574653643527301951675576406994606606387836278316608779\
-85923281647771582970912130265327959884171, ((q*y_8^2-y_0^2*z_8-8*y_1^2*z_7-28*
-y_2^2*z_6-56*y_3^2*z_5-70*y_4^2*z_4-56*y_5^2*z_3-28*y_6^2*z_2-8*y_7^2*z_1-y_8^2
-*z_0)*w_0+(q*w_8-8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-70*w_4*z_4-56*w_5*z_3-28*w_6*
-z_2-8*w_7*z_1-w_8*z_0)*y_0^2+(-8*w_1*y_7^2-28*w_2*y_6^2-56*w_3*y_5^2-70*w_4*y_4
-^2-56*w_5*y_3^2-28*w_6*y_2^2-8*w_7*y_1^2)*z_0+(8*w_1*y_7^2+28*w_2*y_6^2+56*w_3*
-y_5^2+70*w_4*y_4^2+56*w_5*y_3^2+28*w_6*y_2^2+8*w_7*y_1^2)*q+(-56*y_1^2*z_6-168*
-y_2^2*z_5-280*y_3^2*z_4-280*y_4^2*z_3-168*y_5^2*z_2-56*y_6^2*z_1)*w_1+(-168*w_2
-*z_5-280*w_3*z_4-280*w_4*z_3-168*w_5*z_2-56*w_6*z_1)*y_1^2+(-168*w_2*y_5^2-280*
-w_3*y_4^2-280*w_4*y_3^2-168*w_5*y_2^2)*z_1+(-420*y_2^2*z_4-560*y_3^2*z_3-420*
-y_4^2*z_2)*w_2+(-560*w_3*z_3-420*w_4*z_2)*y_2^2-560*w_3*y_3^2*z_2)*c_0+((-8*c_1
-*z_7-28*c_2*z_6-56*c_3*z_5-70*c_4*z_4-56*c_5*z_3-28*c_6*z_2-8*c_7*z_1+c_8*q-c_8
-*z_0)*y_0^2+(-8*c_1*y_7^2-28*c_2*y_6^2-56*c_3*y_5^2-70*c_4*y_4^2-56*c_5*y_3^2-\
-28*c_6*y_2^2-8*c_7*y_1^2)*z_0+(8*c_1*y_7^2+28*c_2*y_6^2+56*c_3*y_5^2+70*c_4*y_4
-^2+56*c_5*y_3^2+28*c_6*y_2^2+8*c_7*y_1^2)*q+(-56*y_1^2*z_6-168*y_2^2*z_5-280*
-y_3^2*z_4-280*y_4^2*z_3-168*y_5^2*z_2-56*y_6^2*z_1)*c_1+(-168*c_2*z_5-280*c_3*
-z_4-280*c_4*z_3-168*c_5*z_2-56*c_6*z_1)*y_1^2+(-168*c_2*y_5^2-280*c_3*y_4^2-280
-*c_4*y_3^2-168*c_5*y_2^2)*z_1+(-420*y_2^2*z_4-560*y_3^2*z_3-420*y_4^2*z_2)*c_2+
-(-560*c_3*z_3-420*c_4*z_2)*y_2^2-560*c_3*y_3^2*z_2)*w_0+((-8*c_1*w_7-28*c_2*w_6
--56*c_3*w_5-70*c_4*w_4-56*c_5*w_3-28*c_6*w_2-8*c_7*w_1)*z_0+(8*c_1*w_7+28*c_2*
-w_6+56*c_3*w_5+70*c_4*w_4+56*c_5*w_3+28*c_6*w_2+8*c_7*w_1)*q+(-56*w_1*z_6-168*
-w_2*z_5-280*w_3*z_4-280*w_4*z_3-168*w_5*z_2-56*w_6*z_1)*c_1+(-168*c_2*z_5-280*
-c_3*z_4-280*c_4*z_3-168*c_5*z_2-56*c_6*z_1)*w_1+(-168*c_2*w_5-280*c_3*w_4-280*
-c_4*w_3-168*c_5*w_2)*z_1+(-420*w_2*z_4-560*w_3*z_3-420*w_4*z_2)*c_2+(-560*c_3*
-z_3-420*c_4*z_2)*w_2-560*c_3*w_3*z_2)*y_0^2+((-56*w_1*y_6^2-168*w_2*y_5^2-280*
-w_3*y_4^2-280*w_4*y_3^2-168*w_5*y_2^2-56*w_6*y_1^2)*c_1+(-168*c_2*y_5^2-280*c_3
-*y_4^2-280*c_4*y_3^2-168*c_5*y_2^2-56*c_6*y_1^2)*w_1+(-168*c_2*w_5-280*c_3*w_4-\
-280*c_4*w_3-168*c_5*w_2)*y_1^2+(-420*w_2*y_4^2-560*w_3*y_3^2-420*w_4*y_2^2)*c_2
-+(-560*c_3*y_3^2-420*c_4*y_2^2)*w_2-560*w_3*y_2^2*c_3)*z_0+((56*w_1*y_6^2+168*
-w_2*y_5^2+280*w_3*y_4^2+280*w_4*y_3^2+168*w_5*y_2^2+56*w_6*y_1^2)*c_1+(168*c_2*
-y_5^2+280*c_3*y_4^2+280*c_4*y_3^2+168*c_5*y_2^2+56*c_6*y_1^2)*w_1+(168*c_2*w_5+
-280*c_3*w_4+280*c_4*w_3+168*c_5*w_2)*y_1^2+(420*w_2*y_4^2+560*w_3*y_3^2+420*w_4
-*y_2^2)*c_2+(560*c_3*y_3^2+420*c_4*y_2^2)*w_2+560*w_3*y_2^2*c_3)*q+((-336*y_1^2
-*z_5-840*y_2^2*z_4-1120*y_3^2*z_3-840*y_4^2*z_2-336*y_5^2*z_1)*w_1+(-840*w_2*
-z_4-1120*w_3*z_3-840*w_4*z_2-336*w_5*z_1)*y_1^2+(-840*w_2*y_4^2-1120*w_3*y_3^2-\
-840*w_4*y_2^2)*z_1+(-1680*y_2^2*z_3-1680*y_3^2*z_2)*w_2-1680*w_3*y_2^2*z_2)*c_1
-+((-840*c_2*z_4-1120*c_3*z_3-840*c_4*z_2-336*c_5*z_1)*y_1^2+(-840*c_2*y_4^2-\
-1120*c_3*y_3^2-840*c_4*y_2^2)*z_1+(-1680*y_2^2*z_3-1680*y_3^2*z_2)*c_2-1680*c_3
-*y_2^2*z_2)*w_1+((-840*c_2*w_4-1120*c_3*w_3-840*c_4*w_2)*z_1+(-1680*w_2*z_3-\
-1680*w_3*z_2)*c_2-1680*w_2*z_2*c_3)*y_1^2+((-1680*w_2*y_3^2-1680*w_3*y_2^2)*c_2
--1680*w_2*y_2^2*c_3)*z_1-2520*c_2*w_2*y_2^2*z_2+b*w_8+w_9, c_8, (-v_0^3*x_7^3-7
-*v_1^3*x_6^3-21*v_2^3*x_5^3-35*v_3^3*x_4^3-35*v_4^3*x_3^3-21*v_5^3*x_2^3-7*v_6^
-3*x_1^3-v_7^3*x_0^3)*beta_0+(-7*beta_1*x_6^3-21*beta_2*x_5^3-35*beta_3*x_4^3-35
-*beta_4*x_3^3-21*beta_5*x_2^3-7*beta_6*x_1^3-beta_7*x_0^3)*v_0^3+(-7*beta_1*v_6
-^3-21*beta_2*v_5^3-35*beta_3*v_4^3-35*beta_4*v_3^3-21*beta_5*v_2^3-7*beta_6*v_1
-^3)*x_0^3+(-42*v_1^3*x_5^3-105*v_2^3*x_4^3-140*v_3^3*x_3^3-105*v_4^3*x_2^3-42*
-v_5^3*x_1^3)*beta_1+(-105*beta_2*x_4^3-140*beta_3*x_3^3-105*beta_4*x_2^3-42*
-beta_5*x_1^3)*v_1^3+(-105*beta_2*v_4^3-140*beta_3*v_3^3-105*beta_4*v_2^3)*x_1^3
-+(-210*v_2^3*x_3^3-210*v_3^3*x_2^3)*beta_2-210*beta_3*v_2^3*x_2^3+a*y_7^2+y_8^2
-, ((-w_0*y_7^2-7*w_1*y_6^2-21*w_2*y_5^2-35*w_3*y_4^2-35*w_4*y_3^2-21*w_5*y_2^2-\
-7*w_6*y_1^2-w_7*y_0^2)*c_0+(-7*c_1*y_6^2-21*c_2*y_5^2-35*c_3*y_4^2-35*c_4*y_3^2
--21*c_5*y_2^2-7*c_6*y_1^2-c_7*y_0^2)*w_0+(-7*c_1*w_6-21*c_2*w_5-35*c_3*w_4-35*
-c_4*w_3-21*c_5*w_2-7*c_6*w_1)*y_0^2+(-42*w_1*y_5^2-105*w_2*y_4^2-140*w_3*y_3^2-\
-105*w_4*y_2^2-42*w_5*y_1^2)*c_1+(-105*c_2*y_4^2-140*c_3*y_3^2-105*c_4*y_2^2-42*
-c_5*y_1^2)*w_1+(-105*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*y_1^2+(-210*w_2*y_3^2-210
-*w_3*y_2^2)*c_2-210*w_2*y_2^2*c_3)*q+h*z_7+z_8, beta_7, u^4*v_6^3-k*y_6^2+v_7^3
-, (v_0^3*x_6^3+6*v_1^3*x_5^3+15*v_2^3*x_4^3+20*v_3^3*x_3^3+15*v_4^3*x_2^3+6*v_5
-^3*x_1^3+v_6^3*x_0^3)*beta_0+(6*beta_1*x_5^3+15*beta_2*x_4^3+20*beta_3*x_3^3+15
-*beta_4*x_2^3+6*beta_5*x_1^3+beta_6*x_0^3)*v_0^3+(6*beta_1*v_5^3+15*beta_2*v_4^
-3+20*beta_3*v_3^3+15*beta_4*v_2^3+6*beta_5*v_1^3)*x_0^3+(30*v_1^3*x_4^3+60*v_2^
-3*x_3^3+60*v_3^3*x_2^3+30*v_4^3*x_1^3)*beta_1+(60*beta_2*x_3^3+60*beta_3*x_2^3+
-30*beta_4*x_1^3)*v_1^3+(60*beta_2*v_3^3+60*beta_3*v_2^3)*x_1^3+90*beta_2*v_2^3*
-x_2^3+d^4*x_6^3+x_7^3, -w_9-105660236323703579570331468171107253568355644277245\
-2266851778376733414500522600788930948795399011872049623815807935781140875121391\
-7842999383651883859387053901101653565332061214472540940492901655794315731898343\
-6204260129290026474534965317399771459053021287557662858641928679621534924742472\
-4604091107254913471815030379272830517911615271586786533808608104034101033854365\
-4438893643348874658031235147688687322908533582094600039100111296972004488739999\
-5313206301403417687832335965222205965386973062858020099563792546515225585865723\
-8257753962529324784588346185087915620235422754435441534768231626425217322033574\
-4987820247268733600085634524941422591883094542332285450635095715147440382876782\
-84538263435409, -69964560221214276878391681068368489094157867684860716999484534\
-8124414978943205651621124082157967109214623890550587838275085161113731198380672\
-8432817742913860478253797096937403195694113674780551133987332397357349113055047\
-6444106099020874508710474025305084930389343959149218405655929487212479689048859\
-2425376885475691276024-z_4, 391118787490708920327344765721976811192258908563905\
-8751281431798241315422500895139542540705379851617045353661575823565976824309773\
-0597901864395521233661014180171815166041773802057071429336306652289159728576868\
-7828358931763374831978287326301986814134595046506208366918956180299982567238710\
-4913163337201100322187122268066309983110567767270438724325379968789910682670165\
-065587461406875683250928009864-z_5, -179904739039389369599404063718962300820384\
-4238321797702054387965361816503874006565440997954516118695732577387712175787710\
-1842337686872802198072113890673474560271017487520545976472311551174429204709661\
-5829167503524366555442429376319382186596650818977920133691330011544282600954773\
-6764796447862772579728681858561679945601416856801154699914812583298972180633390\
-2142132644741480826132908422335307354498597124463541896964378888787500143899340\
-6749178335885287059938943840569064-z_6, 100768911260822756532846345941749328664\
-0939618472084018622284768603115848783236077865547834742903684510719238033871786\
-5229797097454462888709111255294551518675530835158365391234060948273195549381600\
-1995046082119780220256494003392282393307848765567341174643199848339100458156349\
-2765364342288925842674068560164057407909049544107889163511995404349438585747453\
-6451431800934762492283620956552452759277218895691180948451899878248801589446819\
-3943529465686784636528516660812184677753217983762773392874906635879843523832264\
-3355761727112270389120130410854920-z_7, -79415324576021847379386634947483186667\
-5516807014986767626015454690811005380508867460066100165196559322622895266636323\
-5488296435414343844422531398448175621406070721586850529613830568565946391588049\
-2545093892188177152725514418547224923307999366918991308714040086415369717447644\
-3847805089613794966111500362096070263853998343273168570522803996593511405933364\
-0733416324462012718618269886476958338435362321721368548276180031501293510509085\
-7738446611896007920010187346175028261498445596965174575197340678888137662790258\
-3143425707906832444627272877883661745936916787398833420709385948277880969928180\
-21113649653408446200288210952-z_8, -beta_1, -beta_2, -beta_3, -beta_4, -beta_5,
--beta_6, -beta_7, -c_1, -c_2, -c_3, -c_4, -c_5, -c_6, -c_7, -c_8, z_aux^3-1], [
-w_9, z_8, y_8, w_8, c_8, beta_7, z_7, y_7, x_7, w_7, v_7, c_7, beta_6, z_6, y_6
-, x_6, w_6, v_6, c_6, beta_5, z_5, y_5, x_5, w_5, v_5, c_5, beta_4, z_4, y_4, 
-x_4, w_4, v_4, c_4, beta_3, z_3, y_3, x_3, w_3, v_3, c_3, beta_2, z_2, y_2, x_2
-, w_2, v_2, c_2, beta_1, z_1, y_1, x_1, w_1, v_1, c_1, beta_0, z_0, y_0, x_0, 
-w_0, v_0, c_0, z_aux, w_aux, a, b, d, h, k, lm, q, u], [beta, c], [
-21035391801526618700512947-w_0, c_0*q*w_0*y_0-c_0*w_0*y_0*z_0+b*w_0+w_1, 
-1597624376378190519622941-z_0, -c_0*q*w_0*y_0+h*z_0+z_1, 
-16276039626586890728631664-beta_0, beta_1, 5039905502633334302299859-c_0, c_1,
--w_1-11405190346006794703480787565975025338362903278286608002368300971020908817\
-4811357069498749028084913, ((-z_1*y_0-y_1*(z_0-q))*w_0-w_1*y_0*(z_0-q))*c_0-c_1
-*y_0*(z_0-q)*w_0+b*w_1+w_2, -beta_0*v_0*x_0+a*y_0+y_1, 106667545795776248718920\
-7442748399655374372905658459788642664032955255661884220574147364909447200986-
-z_1, ((-w_0*y_1-w_1*y_0)*c_0-c_1*y_0*w_0)*q+h*z_1+z_2, -w_2+6366503403809992538\
-0857118745797707350675585161860082384397264283526893505648392002749284112826501\
-0193621496131913037643178349781494489025495641525068535439889456306012325951, (
-(q*y_2-y_0*z_2-2*y_1*z_1-y_2*z_0)*w_0+(q*w_2-2*w_1*z_1-w_2*z_0)*y_0-2*w_1*y_1*(
-z_0-q))*c_0+((-2*c_1*z_1+c_2*q-c_2*z_0)*y_0-2*y_1*c_1*(z_0-q))*w_0-2*c_1*w_1*(
-z_0-q)*y_0+b*w_2+w_3, c_2, (-beta_0*v_1-beta_1*v_0)*x_0-beta_0*v_0*x_1+a*y_1+
-y_2, -k*y_0+u*v_0+v_1, beta_0*v_0*x_0+d*x_0-lm+x_1, -57834133778955059142507277\
-9509389922265831272887118870362015258146755291620368845168998293505222272847391\
-1379581244478736283401780841871462635776042337609953925276174302068-z_2, ((-w_0
-*y_2-2*w_1*y_1-w_2*y_0)*c_0+(-2*c_1*y_1-c_2*y_0)*w_0-2*c_1*w_1*y_0)*q+h*z_2+z_3
-, -w_3-137973731887719391457042127940081896160673047908864498314481852862410866\
-3858876343679438664406833328923786066871594943668744774089907242867550694945160\
-5662918836876989401487434569126802337964482680656491110045266221604156380522096\
-485385753711920453, ((q*y_3-y_0*z_3-3*y_1*z_2-3*y_2*z_1-y_3*z_0)*w_0+(q*w_3-3*
-w_1*z_2-3*w_2*z_1-w_3*z_0)*y_0+(-3*w_1*y_2-3*w_2*y_1)*z_0+(3*w_1*y_2+3*w_2*y_1)
-*q-6*y_1*z_1*w_1)*c_0+((-3*c_1*z_2-3*c_2*z_1+c_3*q-c_3*z_0)*y_0+(-3*c_1*y_2-3*
-c_2*y_1)*z_0+(3*c_1*y_2+3*c_2*y_1)*q-6*y_1*z_1*c_1)*w_0+((-3*c_1*w_2-3*c_2*w_1)
-*z_0+(3*c_1*w_2+3*c_2*w_1)*q-6*z_1*c_1*w_1)*y_0-6*c_1*w_1*y_1*z_0+6*c_1*q*w_1*
-y_1+b*w_3+w_4, c_3, (-v_0*x_2-2*v_1*x_1-v_2*x_0)*beta_0+(-2*beta_1*x_1-beta_2*
-x_0)*v_0-2*beta_1*v_1*x_0+a*y_2+y_3, beta_2, -k*y_1+u*v_1+v_2, beta_0*x_0*v_1+
-v_0*x_0*beta_1+(beta_0*v_0+d)*x_1+x_2, 3228365317804933483499905903302301198628\
-1783917083923590638110942755242229873374204740730113504459249471851530241389896\
-1768803363181347647183808376883529904308675400689398357807273904189652585453070\
-14780531977914796109512471411599432316267777972432-z_3, ((-w_0*y_3-3*w_1*y_2-3*
-w_2*y_1-w_3*y_0)*c_0+(-3*c_1*y_2-3*c_2*y_1-c_3*y_0)*w_0+(-3*c_1*w_2-3*c_2*w_1)*
-y_0-6*c_1*w_1*y_1)*q+h*z_3+z_4, -w_4+771306480750668112546326746423024500128124\
-8554316423091802113350179271981208314591571987317274914412571097526461198338229\
-8087548713048353191432434372047799720351059886050977121722927265323793773532408\
-3673574430921962553611342842556248017588286351908407201262616991439004232683544\
-96613809217212538484410662567087096414520419, ((q*y_4-y_0*z_4-4*y_1*z_3-6*y_2*
-z_2-4*y_3*z_1-y_4*z_0)*w_0+(q*w_4-4*w_1*z_3-6*w_2*z_2-4*w_3*z_1-w_4*z_0)*y_0+(-\
-4*w_1*y_3-6*w_2*y_2-4*w_3*y_1)*z_0+(4*w_1*y_3+6*w_2*y_2+4*w_3*y_1)*q+(-12*y_1*
-z_2-12*y_2*z_1)*w_1-12*w_2*y_1*z_1)*c_0+((-4*c_1*z_3-6*c_2*z_2-4*c_3*z_1+c_4*q-
-c_4*z_0)*y_0+(-4*c_1*y_3-6*c_2*y_2-4*c_3*y_1)*z_0+(4*c_1*y_3+6*c_2*y_2+4*c_3*
-y_1)*q+(-12*y_1*z_2-12*y_2*z_1)*c_1-12*y_1*z_1*c_2)*w_0+((-4*c_1*w_3-6*c_2*w_2-\
-4*c_3*w_1)*z_0+(4*c_1*w_3+6*c_2*w_2+4*c_3*w_1)*q+(-12*w_1*z_2-12*w_2*z_1)*c_1-\
-12*z_1*c_2*w_1)*y_0+((-12*w_1*y_2-12*w_2*y_1)*c_1-12*y_1*c_2*w_1)*z_0+((12*w_1*
-y_2+12*w_2*y_1)*c_1+12*y_1*c_2*w_1)*q-24*c_1*w_1*y_1*z_1+b*w_4+w_5, c_4, (-v_0*
-x_3-3*v_1*x_2-3*v_2*x_1-v_3*x_0)*beta_0+(-3*beta_1*x_2-3*beta_2*x_1-beta_3*x_0)
-*v_0+(-3*beta_1*v_2-3*beta_2*v_1)*x_0-6*beta_1*v_1*x_1+a*y_3+y_4, beta_3, -k*
-y_2+u*v_2+v_3, (v_0*x_2+2*v_1*x_1+v_2*x_0)*beta_0+(2*beta_1*x_1+beta_2*x_0)*v_0
-+2*beta_1*v_1*x_0+d*x_2+x_3, -w_5-354781451510137568219836638849736865551156868\
-7817909938519634138306035081543962252645862077068087848486229145980661781459540\
-6308610973213197700319394392572167691424916573735374390350072104085807006391279\
-1170539727366851468558949130003974873724233402497201806294338253351431334430522\
-5643677274912811701837867313869613600081779759060492096576098833426729580791329\
-541344262246514990122482046235599049, ((q*y_5-y_0*z_5-5*y_1*z_4-10*y_2*z_3-10*
-y_3*z_2-5*y_4*z_1-y_5*z_0)*w_0+(q*w_5-5*w_1*z_4-10*w_2*z_3-10*w_3*z_2-5*w_4*z_1
--w_5*z_0)*y_0+(-5*w_1*y_4-10*w_2*y_3-10*w_3*y_2-5*w_4*y_1)*z_0+(5*w_1*y_4+10*
-w_2*y_3+10*w_3*y_2+5*w_4*y_1)*q+(-20*y_1*z_3-30*y_2*z_2-20*y_3*z_1)*w_1+(-30*
-w_2*z_2-20*w_3*z_1)*y_1-30*y_2*z_1*w_2)*c_0+((-5*c_1*z_4-10*c_2*z_3-10*c_3*z_2-\
-5*c_4*z_1+c_5*q-c_5*z_0)*y_0+(-5*c_1*y_4-10*c_2*y_3-10*c_3*y_2-5*c_4*y_1)*z_0+(
-5*c_1*y_4+10*c_2*y_3+10*c_3*y_2+5*c_4*y_1)*q+(-20*y_1*z_3-30*y_2*z_2-20*y_3*z_1
-)*c_1+(-30*c_2*z_2-20*c_3*z_1)*y_1-30*y_2*z_1*c_2)*w_0+((-5*c_1*w_4-10*c_2*w_3-\
-10*c_3*w_2-5*c_4*w_1)*z_0+(5*c_1*w_4+10*c_2*w_3+10*c_3*w_2+5*c_4*w_1)*q+(-20*
-w_1*z_3-30*w_2*z_2-20*w_3*z_1)*c_1+(-30*c_2*z_2-20*c_3*z_1)*w_1-30*w_2*z_1*c_2)
-*y_0+((-20*w_1*y_3-30*w_2*y_2-20*w_3*y_1)*c_1+(-30*c_2*y_2-20*c_3*y_1)*w_1-30*
-w_2*y_1*c_2)*z_0+((20*w_1*y_3+30*w_2*y_2+20*w_3*y_1)*c_1+(30*c_2*y_2+20*c_3*y_1
-)*w_1+30*w_2*y_1*c_2)*q+((-60*y_1*z_2-60*y_2*z_1)*w_1-60*w_2*y_1*z_1)*c_1-60*
-c_2*w_1*y_1*z_1+b*w_5+w_6, c_5, (-v_0*x_4-4*v_1*x_3-6*v_2*x_2-4*v_3*x_1-v_4*x_0
-)*beta_0+(-4*beta_1*x_3-6*beta_2*x_2-4*beta_3*x_1-beta_4*x_0)*v_0+(-4*beta_1*
-v_3-6*beta_2*v_2-4*beta_3*v_1)*x_0+(-12*v_1*x_2-12*v_2*x_1)*beta_1-12*beta_2*
-v_1*x_1+a*y_4+y_5, ((-w_0*y_4-4*w_1*y_3-6*w_2*y_2-4*w_3*y_1-w_4*y_0)*c_0+(-4*
-c_1*y_3-6*c_2*y_2-4*c_3*y_1-c_4*y_0)*w_0+(-4*c_1*w_3-6*c_2*w_2-4*c_3*w_1)*y_0+(
--12*w_1*y_2-12*w_2*y_1)*c_1-12*y_1*c_2*w_1)*q+h*z_4+z_5, beta_4, -k*y_3+u*v_3+
-v_4, (v_0*x_3+3*v_1*x_2+3*v_2*x_1+v_3*x_0)*beta_0+(3*beta_1*x_2+3*beta_2*x_1+
-beta_3*x_0)*v_0+(3*beta_1*v_2+3*beta_2*v_1)*x_0+6*beta_1*v_1*x_1+d*x_3+x_4, -
-w_6+198721505587373268295988284805404085250038937587076952311059186971989150806\
-9464771508215039037237306937798758402684778481920560074977614694938026625241134\
-8483483036371380923631535619644326979641341050802119595392399018654703463771742\
-2752752346472610663219418812311271538907027334800194613046344521053733131338251\
-5788554626063364898327558115163342108668197067385149311785134173816772996155352\
-5242161554885602273031486975541368754953390552969571862489677375528881888828656\
-071, ((q*y_6-y_0*z_6-6*y_1*z_5-15*y_2*z_4-20*y_3*z_3-15*y_4*z_2-6*y_5*z_1-y_6*
-z_0)*w_0+(q*w_6-6*w_1*z_5-15*w_2*z_4-20*w_3*z_3-15*w_4*z_2-6*w_5*z_1-w_6*z_0)*
-y_0+(-6*w_1*y_5-15*w_2*y_4-20*w_3*y_3-15*w_4*y_2-6*w_5*y_1)*z_0+(6*w_1*y_5+15*
-w_2*y_4+20*w_3*y_3+15*w_4*y_2+6*w_5*y_1)*q+(-30*y_1*z_4-60*y_2*z_3-60*y_3*z_2-\
-30*y_4*z_1)*w_1+(-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1)*y_1+(-60*w_2*y_3-60*w_3*y_2
-)*z_1-90*w_2*y_2*z_2)*c_0+((-6*c_1*z_5-15*c_2*z_4-20*c_3*z_3-15*c_4*z_2-6*c_5*
-z_1+c_6*q-c_6*z_0)*y_0+(-6*c_1*y_5-15*c_2*y_4-20*c_3*y_3-15*c_4*y_2-6*c_5*y_1)*
-z_0+(6*c_1*y_5+15*c_2*y_4+20*c_3*y_3+15*c_4*y_2+6*c_5*y_1)*q+(-30*y_1*z_4-60*
-y_2*z_3-60*y_3*z_2-30*y_4*z_1)*c_1+(-60*c_2*z_3-60*c_3*z_2-30*c_4*z_1)*y_1+(-60
-*c_2*y_3-60*c_3*y_2)*z_1-90*y_2*z_2*c_2)*w_0+((-6*c_1*w_5-15*c_2*w_4-20*c_3*w_3
--15*c_4*w_2-6*c_5*w_1)*z_0+(6*c_1*w_5+15*c_2*w_4+20*c_3*w_3+15*c_4*w_2+6*c_5*
-w_1)*q+(-30*w_1*z_4-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1)*c_1+(-60*c_2*z_3-60*c_3*
-z_2-30*c_4*z_1)*w_1+(-60*c_2*w_3-60*c_3*w_2)*z_1-90*w_2*z_2*c_2)*y_0+((-30*w_1*
-y_4-60*w_2*y_3-60*w_3*y_2-30*w_4*y_1)*c_1+(-60*c_2*y_3-60*c_3*y_2-30*c_4*y_1)*
-w_1+(-60*c_2*w_3-60*c_3*w_2)*y_1-90*w_2*y_2*c_2)*z_0+((30*w_1*y_4+60*w_2*y_3+60
-*w_3*y_2+30*w_4*y_1)*c_1+(60*c_2*y_3+60*c_3*y_2+30*c_4*y_1)*w_1+(60*c_2*w_3+60*
-c_3*w_2)*y_1+90*w_2*y_2*c_2)*q+((-120*y_1*z_3-180*y_2*z_2-120*y_3*z_1)*w_1+(-\
-180*w_2*z_2-120*w_3*z_1)*y_1-180*y_2*z_1*w_2)*c_1+((-180*c_2*z_2-120*c_3*z_1)*
-y_1-180*y_2*z_1*c_2)*w_1-180*c_2*w_2*y_1*z_1+b*w_6+w_7, c_6, (-v_0*x_5-5*v_1*
-x_4-10*v_2*x_3-10*v_3*x_2-5*v_4*x_1-v_5*x_0)*beta_0+(-5*beta_1*x_4-10*beta_2*
-x_3-10*beta_3*x_2-5*beta_4*x_1-beta_5*x_0)*v_0+(-5*beta_1*v_4-10*beta_2*v_3-10*
-beta_3*v_2-5*beta_4*v_1)*x_0+(-20*v_1*x_3-30*v_2*x_2-20*v_3*x_1)*beta_1+(-30*
-beta_2*x_2-20*beta_3*x_1)*v_1-30*beta_2*v_2*x_1+a*y_5+y_6, ((-w_0*y_5-5*w_1*y_4
--10*w_2*y_3-10*w_3*y_2-5*w_4*y_1-w_5*y_0)*c_0+(-5*c_1*y_4-10*c_2*y_3-10*c_3*y_2
--5*c_4*y_1-c_5*y_0)*w_0+(-5*c_1*w_4-10*c_2*w_3-10*c_3*w_2-5*c_4*w_1)*y_0+(-20*
-w_1*y_3-30*w_2*y_2-20*w_3*y_1)*c_1+(-30*c_2*y_2-20*c_3*y_1)*w_1-30*w_2*y_1*c_2)
-*q+h*z_5+z_6, beta_5, -k*y_4+u*v_4+v_5, (v_0*x_4+4*v_1*x_3+6*v_2*x_2+4*v_3*x_1+
-v_4*x_0)*beta_0+(4*beta_1*x_3+6*beta_2*x_2+4*beta_3*x_1+beta_4*x_0)*v_0+(4*
-beta_1*v_3+6*beta_2*v_2+4*beta_3*v_1)*x_0+(12*v_1*x_2+12*v_2*x_1)*beta_1+12*
-beta_2*v_1*x_1+d*x_4+x_5, -w_7-156611128065175191259531569355797287897975884690\
-7322506483895587146114718627953236556286806825107389308306424666965183695177649\
-8588235401671774134059570633963198275723650356792865869884124623565964007022035\
-6780896647500315461364856647518878500180920163558124302901667258474812833638765\
-4973619963458571254253148845058232510053406221202219575143067622288924436944607\
-1140873742610979628175675141319132524144764625559557589779629872541228087208669\
-2007721232326951878328994835333035845602858344400966056392145117821396466242014\
-6074392341954271685249421, ((q*y_7-y_0*z_7-7*y_1*z_6-21*y_2*z_5-35*y_3*z_4-35*
-y_4*z_3-21*y_5*z_2-7*y_6*z_1-y_7*z_0)*w_0+(q*w_7-7*w_1*z_6-21*w_2*z_5-35*w_3*
-z_4-35*w_4*z_3-21*w_5*z_2-7*w_6*z_1-w_7*z_0)*y_0+(-7*w_1*y_6-21*w_2*y_5-35*w_3*
-y_4-35*w_4*y_3-21*w_5*y_2-7*w_6*y_1)*z_0+(7*w_1*y_6+21*w_2*y_5+35*w_3*y_4+35*
-w_4*y_3+21*w_5*y_2+7*w_6*y_1)*q+(-42*y_1*z_5-105*y_2*z_4-140*y_3*z_3-105*y_4*
-z_2-42*y_5*z_1)*w_1+(-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1)*y_1+(-105
-*w_2*y_4-140*w_3*y_3-105*w_4*y_2)*z_1+(-210*y_2*z_3-210*y_3*z_2)*w_2-210*w_3*
-y_2*z_2)*c_0+((-7*c_1*z_6-21*c_2*z_5-35*c_3*z_4-35*c_4*z_3-21*c_5*z_2-7*c_6*z_1
-+c_7*q-c_7*z_0)*y_0+(-7*c_1*y_6-21*c_2*y_5-35*c_3*y_4-35*c_4*y_3-21*c_5*y_2-7*
-c_6*y_1)*z_0+(7*c_1*y_6+21*c_2*y_5+35*c_3*y_4+35*c_4*y_3+21*c_5*y_2+7*c_6*y_1)*
-q+(-42*y_1*z_5-105*y_2*z_4-140*y_3*z_3-105*y_4*z_2-42*y_5*z_1)*c_1+(-105*c_2*
-z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*z_1)*y_1+(-105*c_2*y_4-140*c_3*y_3-105*c_4*
-y_2)*z_1+(-210*y_2*z_3-210*y_3*z_2)*c_2-210*c_3*y_2*z_2)*w_0+((-7*c_1*w_6-21*
-c_2*w_5-35*c_3*w_4-35*c_4*w_3-21*c_5*w_2-7*c_6*w_1)*z_0+(7*c_1*w_6+21*c_2*w_5+
-35*c_3*w_4+35*c_4*w_3+21*c_5*w_2+7*c_6*w_1)*q+(-42*w_1*z_5-105*w_2*z_4-140*w_3*
-z_3-105*w_4*z_2-42*w_5*z_1)*c_1+(-105*c_2*z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*
-z_1)*w_1+(-105*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*z_1+(-210*w_2*z_3-210*w_3*z_2)*
-c_2-210*w_2*z_2*c_3)*y_0+((-42*w_1*y_5-105*w_2*y_4-140*w_3*y_3-105*w_4*y_2-42*
-w_5*y_1)*c_1+(-105*c_2*y_4-140*c_3*y_3-105*c_4*y_2-42*c_5*y_1)*w_1+(-105*c_2*
-w_4-140*c_3*w_3-105*c_4*w_2)*y_1+(-210*w_2*y_3-210*w_3*y_2)*c_2-210*w_2*y_2*c_3
-)*z_0+((42*w_1*y_5+105*w_2*y_4+140*w_3*y_3+105*w_4*y_2+42*w_5*y_1)*c_1+(105*c_2
-*y_4+140*c_3*y_3+105*c_4*y_2+42*c_5*y_1)*w_1+(105*c_2*w_4+140*c_3*w_3+105*c_4*
-w_2)*y_1+(210*w_2*y_3+210*w_3*y_2)*c_2+210*w_2*y_2*c_3)*q+((-210*y_1*z_4-420*
-y_2*z_3-420*y_3*z_2-210*y_4*z_1)*w_1+(-420*w_2*z_3-420*w_3*z_2-210*w_4*z_1)*y_1
-+(-420*w_2*y_3-420*w_3*y_2)*z_1-630*w_2*y_2*z_2)*c_1+((-420*c_2*z_3-420*c_3*z_2
--210*c_4*z_1)*y_1+(-420*c_2*y_3-420*c_3*y_2)*z_1-630*y_2*z_2*c_2)*w_1+((-420*
-c_2*w_3-420*c_3*w_2)*z_1-630*w_2*z_2*c_2)*y_1-630*c_2*w_2*y_2*z_1+b*w_7+w_8, 
-c_7, (-v_0*x_6-6*v_1*x_5-15*v_2*x_4-20*v_3*x_3-15*v_4*x_2-6*v_5*x_1-v_6*x_0)*
-beta_0+(-6*beta_1*x_5-15*beta_2*x_4-20*beta_3*x_3-15*beta_4*x_2-6*beta_5*x_1-
-beta_6*x_0)*v_0+(-6*beta_1*v_5-15*beta_2*v_4-20*beta_3*v_3-15*beta_4*v_2-6*
-beta_5*v_1)*x_0+(-30*v_1*x_4-60*v_2*x_3-60*v_3*x_2-30*v_4*x_1)*beta_1+(-60*
-beta_2*x_3-60*beta_3*x_2-30*beta_4*x_1)*v_1+(-60*beta_2*v_3-60*beta_3*v_2)*x_1-\
-90*beta_2*v_2*x_2+a*y_6+y_7, ((-w_0*y_6-6*w_1*y_5-15*w_2*y_4-20*w_3*y_3-15*w_4*
-y_2-6*w_5*y_1-w_6*y_0)*c_0+(-6*c_1*y_5-15*c_2*y_4-20*c_3*y_3-15*c_4*y_2-6*c_5*
-y_1-c_6*y_0)*w_0+(-6*c_1*w_5-15*c_2*w_4-20*c_3*w_3-15*c_4*w_2-6*c_5*w_1)*y_0+(-\
-30*w_1*y_4-60*w_2*y_3-60*w_3*y_2-30*w_4*y_1)*c_1+(-60*c_2*y_3-60*c_3*y_2-30*c_4
-*y_1)*w_1+(-60*c_2*w_3-60*c_3*w_2)*y_1-90*w_2*y_2*c_2)*q+h*z_6+z_7, beta_6, -k*
-y_5+u*v_5+v_6, (v_0*x_5+5*v_1*x_4+10*v_2*x_3+10*v_3*x_2+5*v_4*x_1+v_5*x_0)*
-beta_0+(5*beta_1*x_4+10*beta_2*x_3+10*beta_3*x_2+5*beta_4*x_1+beta_5*x_0)*v_0+(
-5*beta_1*v_4+10*beta_2*v_3+10*beta_3*v_2+5*beta_4*v_1)*x_0+(20*v_1*x_3+30*v_2*
-x_2+20*v_3*x_1)*beta_1+(30*beta_2*x_2+20*beta_3*x_1)*v_1+30*beta_2*v_2*x_1+d*
-x_5+x_6, -w_8+87939316557780445504393838263208812607583076430603036732952423745\
-8376855384606947583701506138175909103987897352491995678966135866988479451063961\
-3736984925610260879847039887870413367782412862425505117684847718296224699226502\
-2420813745807585142928976235171056448315460091517232784564613009777589095885362\
-6149131658050442984203073834538222363519681497854667286923460512965189970945717\
-8497414265619395697566466636059396439555930931351763884576359892887351571772596\
-2504985410194125605080713530377136325011200165608655162230672719968574653643527\
-3019516755764069946066063878362783166087798592328164777158297091213026532795988\
-4171, ((q*y_8-y_0*z_8-8*y_1*z_7-28*y_2*z_6-56*y_3*z_5-70*y_4*z_4-56*y_5*z_3-28*
-y_6*z_2-8*y_7*z_1-y_8*z_0)*w_0+(q*w_8-8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-70*w_4*
-z_4-56*w_5*z_3-28*w_6*z_2-8*w_7*z_1-w_8*z_0)*y_0+(-8*w_1*y_7-28*w_2*y_6-56*w_3*
-y_5-70*w_4*y_4-56*w_5*y_3-28*w_6*y_2-8*w_7*y_1)*z_0+(8*w_1*y_7+28*w_2*y_6+56*
-w_3*y_5+70*w_4*y_4+56*w_5*y_3+28*w_6*y_2+8*w_7*y_1)*q+(-56*y_1*z_6-168*y_2*z_5-\
-280*y_3*z_4-280*y_4*z_3-168*y_5*z_2-56*y_6*z_1)*w_1+(-168*w_2*z_5-280*w_3*z_4-\
-280*w_4*z_3-168*w_5*z_2-56*w_6*z_1)*y_1+(-168*w_2*y_5-280*w_3*y_4-280*w_4*y_3-\
-168*w_5*y_2)*z_1+(-420*y_2*z_4-560*y_3*z_3-420*y_4*z_2)*w_2+(-560*w_3*z_3-420*
-w_4*z_2)*y_2-560*w_3*y_3*z_2)*c_0+((-8*c_1*z_7-28*c_2*z_6-56*c_3*z_5-70*c_4*z_4
--56*c_5*z_3-28*c_6*z_2-8*c_7*z_1+c_8*q-c_8*z_0)*y_0+(-8*c_1*y_7-28*c_2*y_6-56*
-c_3*y_5-70*c_4*y_4-56*c_5*y_3-28*c_6*y_2-8*c_7*y_1)*z_0+(8*c_1*y_7+28*c_2*y_6+
-56*c_3*y_5+70*c_4*y_4+56*c_5*y_3+28*c_6*y_2+8*c_7*y_1)*q+(-56*y_1*z_6-168*y_2*
-z_5-280*y_3*z_4-280*y_4*z_3-168*y_5*z_2-56*y_6*z_1)*c_1+(-168*c_2*z_5-280*c_3*
-z_4-280*c_4*z_3-168*c_5*z_2-56*c_6*z_1)*y_1+(-168*c_2*y_5-280*c_3*y_4-280*c_4*
-y_3-168*c_5*y_2)*z_1+(-420*y_2*z_4-560*y_3*z_3-420*y_4*z_2)*c_2+(-560*c_3*z_3-\
-420*c_4*z_2)*y_2-560*c_3*y_3*z_2)*w_0+((-8*c_1*w_7-28*c_2*w_6-56*c_3*w_5-70*c_4
-*w_4-56*c_5*w_3-28*c_6*w_2-8*c_7*w_1)*z_0+(8*c_1*w_7+28*c_2*w_6+56*c_3*w_5+70*
-c_4*w_4+56*c_5*w_3+28*c_6*w_2+8*c_7*w_1)*q+(-56*w_1*z_6-168*w_2*z_5-280*w_3*z_4
--280*w_4*z_3-168*w_5*z_2-56*w_6*z_1)*c_1+(-168*c_2*z_5-280*c_3*z_4-280*c_4*z_3-\
-168*c_5*z_2-56*c_6*z_1)*w_1+(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*c_5*w_2)*
-z_1+(-420*w_2*z_4-560*w_3*z_3-420*w_4*z_2)*c_2+(-560*c_3*z_3-420*c_4*z_2)*w_2-\
-560*c_3*w_3*z_2)*y_0+((-56*w_1*y_6-168*w_2*y_5-280*w_3*y_4-280*w_4*y_3-168*w_5*
-y_2-56*w_6*y_1)*c_1+(-168*c_2*y_5-280*c_3*y_4-280*c_4*y_3-168*c_5*y_2-56*c_6*
-y_1)*w_1+(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*c_5*w_2)*y_1+(-420*w_2*y_4-\
-560*w_3*y_3-420*w_4*y_2)*c_2+(-560*c_3*y_3-420*c_4*y_2)*w_2-560*w_3*y_2*c_3)*
-z_0+((56*w_1*y_6+168*w_2*y_5+280*w_3*y_4+280*w_4*y_3+168*w_5*y_2+56*w_6*y_1)*
-c_1+(168*c_2*y_5+280*c_3*y_4+280*c_4*y_3+168*c_5*y_2+56*c_6*y_1)*w_1+(168*c_2*
-w_5+280*c_3*w_4+280*c_4*w_3+168*c_5*w_2)*y_1+(420*w_2*y_4+560*w_3*y_3+420*w_4*
-y_2)*c_2+(560*c_3*y_3+420*c_4*y_2)*w_2+560*w_3*y_2*c_3)*q+((-336*y_1*z_5-840*
-y_2*z_4-1120*y_3*z_3-840*y_4*z_2-336*y_5*z_1)*w_1+(-840*w_2*z_4-1120*w_3*z_3-\
-840*w_4*z_2-336*w_5*z_1)*y_1+(-840*w_2*y_4-1120*w_3*y_3-840*w_4*y_2)*z_1+(-1680
-*y_2*z_3-1680*y_3*z_2)*w_2-1680*w_3*y_2*z_2)*c_1+((-840*c_2*z_4-1120*c_3*z_3-\
-840*c_4*z_2-336*c_5*z_1)*y_1+(-840*c_2*y_4-1120*c_3*y_3-840*c_4*y_2)*z_1+(-1680
-*y_2*z_3-1680*y_3*z_2)*c_2-1680*c_3*y_2*z_2)*w_1+((-840*c_2*w_4-1120*c_3*w_3-\
-840*c_4*w_2)*z_1+(-1680*w_2*z_3-1680*w_3*z_2)*c_2-1680*w_2*z_2*c_3)*y_1+((-1680
-*w_2*y_3-1680*w_3*y_2)*c_2-1680*w_2*y_2*c_3)*z_1-2520*c_2*w_2*y_2*z_2+b*w_8+w_9
-, c_8, (-v_0*x_7-7*v_1*x_6-21*v_2*x_5-35*v_3*x_4-35*v_4*x_3-21*v_5*x_2-7*v_6*
-x_1-v_7*x_0)*beta_0+(-7*beta_1*x_6-21*beta_2*x_5-35*beta_3*x_4-35*beta_4*x_3-21
-*beta_5*x_2-7*beta_6*x_1-beta_7*x_0)*v_0+(-7*beta_1*v_6-21*beta_2*v_5-35*beta_3
-*v_4-35*beta_4*v_3-21*beta_5*v_2-7*beta_6*v_1)*x_0+(-42*v_1*x_5-105*v_2*x_4-140
-*v_3*x_3-105*v_4*x_2-42*v_5*x_1)*beta_1+(-105*beta_2*x_4-140*beta_3*x_3-105*
-beta_4*x_2-42*beta_5*x_1)*v_1+(-105*beta_2*v_4-140*beta_3*v_3-105*beta_4*v_2)*
-x_1+(-210*v_2*x_3-210*v_3*x_2)*beta_2-210*beta_3*v_2*x_2+a*y_7+y_8, ((-w_0*y_7-\
-7*w_1*y_6-21*w_2*y_5-35*w_3*y_4-35*w_4*y_3-21*w_5*y_2-7*w_6*y_1-w_7*y_0)*c_0+(-\
-7*c_1*y_6-21*c_2*y_5-35*c_3*y_4-35*c_4*y_3-21*c_5*y_2-7*c_6*y_1-c_7*y_0)*w_0+(-\
-7*c_1*w_6-21*c_2*w_5-35*c_3*w_4-35*c_4*w_3-21*c_5*w_2-7*c_6*w_1)*y_0+(-42*w_1*
-y_5-105*w_2*y_4-140*w_3*y_3-105*w_4*y_2-42*w_5*y_1)*c_1+(-105*c_2*y_4-140*c_3*
-y_3-105*c_4*y_2-42*c_5*y_1)*w_1+(-105*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*y_1+(-\
-210*w_2*y_3-210*w_3*y_2)*c_2-210*w_2*y_2*c_3)*q+h*z_7+z_8, beta_7, -k*y_6+u*v_6
-+v_7, (v_0*x_6+6*v_1*x_5+15*v_2*x_4+20*v_3*x_3+15*v_4*x_2+6*v_5*x_1+v_6*x_0)*
-beta_0+(6*beta_1*x_5+15*beta_2*x_4+20*beta_3*x_3+15*beta_4*x_2+6*beta_5*x_1+
-beta_6*x_0)*v_0+(6*beta_1*v_5+15*beta_2*v_4+20*beta_3*v_3+15*beta_4*v_2+6*
-beta_5*v_1)*x_0+(30*v_1*x_4+60*v_2*x_3+60*v_3*x_2+30*v_4*x_1)*beta_1+(60*beta_2
-*x_3+60*beta_3*x_2+30*beta_4*x_1)*v_1+(60*beta_2*v_3+60*beta_3*v_2)*x_1+90*
-beta_2*v_2*x_2+d*x_6+x_7, -w_9-105660236323703579570331468171107253568355644277\
-2452266851778376733414500522600788930948795399011872049623815807935781140875121\
-3917842999383651883859387053901101653565332061214472540940492901655794315731898\
-3436204260129290026474534965317399771459053021287557662858641928679621534924742\
-4724604091107254913471815030379272830517911615271586786533808608104034101033854\
-3654438893643348874658031235147688687322908533582094600039100111296972004488739\
-9995313206301403417687832335965222205965386973062858020099563792546515225585865\
-7238257753962529324784588346185087915620235422754435441534768231626425217322033\
-5744987820247268733600085634524941422591883094542332285450635095715147440382876\
-78284538263435409, -69964560221214276878391681068368489094157867684860716999484\
-5348124414978943205651621124082157967109214623890550587838275085161113731198380\
-6728432817742913860478253797096937403195694113674780551133987332397357349113055\
-0476444106099020874508710474025305084930389343959149218405655929487212479689048\
-8592425376885475691276024-z_4, 391118787490708920327344765721976811192258908563\
-9058751281431798241315422500895139542540705379851617045353661575823565976824309\
-7730597901864395521233661014180171815166041773802057071429336306652289159728576\
-8687828358931763374831978287326301986814134595046506208366918956180299982567238\
-7104913163337201100322187122268066309983110567767270438724325379968789910682670\
-165065587461406875683250928009864-z_5, -179904739039389369599404063718962300820\
-3844238321797702054387965361816503874006565440997954516118695732577387712175787\
-7101842337686872802198072113890673474560271017487520545976472311551174429204709\
-6615829167503524366555442429376319382186596650818977920133691330011544282600954\
-7736764796447862772579728681858561679945601416856801154699914812583298972180633\
-3902142132644741480826132908422335307354498597124463541896964378888787500143899\
-3406749178335885287059938943840569064-z_6, 100768911260822756532846345941749328\
-6640939618472084018622284768603115848783236077865547834742903684510719238033871\
-7865229797097454462888709111255294551518675530835158365391234060948273195549381\
-6001995046082119780220256494003392282393307848765567341174643199848339100458156\
-3492765364342288925842674068560164057407909049544107889163511995404349438585747\
-4536451431800934762492283620956552452759277218895691180948451899878248801589446\
-8193943529465686784636528516660812184677753217983762773392874906635879843523832\
-2643355761727112270389120130410854920-z_7, -79415324576021847379386634947483186\
-6675516807014986767626015454690811005380508867460066100165196559322622895266636\
-3235488296435414343844422531398448175621406070721586850529613830568565946391588\
-0492545093892188177152725514418547224923307999366918991308714040086415369717447\
-6443847805089613794966111500362096070263853998343273168570522803996593511405933\
-3640733416324462012718618269886476958338435362321721368548276180031501293510509\
-0857738446611896007920010187346175028261498445596965174575197340678888137662790\
-2583143425707906832444627272877883661745936916787398833420709385948277880969928\
-18021113649653408446200288210952-z_8, -beta_1, -beta_2, -beta_3, -beta_4, -
-beta_5, -beta_6, -beta_7, -c_1, -c_2, -c_3, -c_4, -c_5, -c_6, -c_7, -c_8, z_aux
--1]
+z_8, z_aux = z_aux, z_aux = z_aux^3}, [18804556331148060177333964-w_0, c_0*q*
+w_0*y_0^2-c_0*w_0*y_0^2*z_0+b*w_0+w_1, 21527619398917302001545873-z_0, -c_0*q*
+w_0*y_0^2+h*z_0+z_1, 16671490814026591831213894-beta_0, beta_1, 
+17451937753216011987855213-c_0, c_1, -w_1+2774570920793778245948466381669305282\
+9645358477893977948894734969521198435077669943394926108906821660, ((-z_1*y_0^2-
+y_1^2*(z_0-q))*w_0-w_1*y_0^2*(z_0-q))*c_0-c_1*y_0^2*(z_0-q)*w_0+b*w_1+w_2, -
+beta_0*v_0^3*x_0^3+a*y_0^2+y_1^2, 991773167719160779902661417632623432960060537\
+94486461462675589050336745414421654122283200879788027310-z_1, ((-w_0*y_1^2-w_1*
+y_0^2)*c_0-c_1*y_0^2*w_0)*q+h*z_1+z_2, -w_2+62567005384645564121573692079437689\
+0278591260714070653307962949738823487057840578482521087387401875212383680105616\
+205189910110774419583652042745687028837661516679954246386415508, ((q*y_2^2-y_0^
+2*z_2-2*y_1^2*z_1-y_2^2*z_0)*w_0+(q*w_2-2*w_1*z_1-w_2*z_0)*y_0^2-2*w_1*y_1^2*(
+z_0-q))*c_0+((-2*c_1*z_1+c_2*q-c_2*z_0)*y_0^2-2*y_1^2*c_1*(z_0-q))*w_0-2*c_1*
+w_1*(z_0-q)*y_0^2+b*w_2+w_3, c_2, (-beta_0*v_1^3-beta_1*v_0^3)*x_0^3-beta_0*v_0
+^3*x_1^3+a*y_1^2+y_2^2, u^4*v_0^3-k*y_0^2+v_1^3, beta_0*v_0^3*x_0^3+d^4*x_0^3+
+x_1^3-lm, 146333949215227988975760153689105919826310587809300041624936318255910\
+6038514707225391013866071852662215810657787740456565608727765454293796819866012\
+43767626393990847779250519236-z_2, ((-w_0*y_2^2-2*w_1*y_1^2-w_2*y_0^2)*c_0+(-2*
+c_1*y_1^2-c_2*y_0^2)*w_0-2*c_1*w_1*y_0^2)*q+h*z_2+z_3, -w_3+3511439436347757068\
+4036310713980660128524565035001770330327785602336404056856269308532439948383274\
+2121122002311316980169453245629412332205379466362240665724556144671184986377755\
+0665305397275712957203393680235068466322006763333558833586972192211010584292, (
+(q*y_3^2-y_0^2*z_3-3*y_1^2*z_2-3*y_2^2*z_1-y_3^2*z_0)*w_0+(q*w_3-3*w_1*z_2-3*
+w_2*z_1-w_3*z_0)*y_0^2+(-3*w_1*y_2^2-3*w_2*y_1^2)*z_0+(3*w_1*y_2^2+3*w_2*y_1^2)
+*q-6*y_1^2*z_1*w_1)*c_0+((-3*c_1*z_2-3*c_2*z_1+c_3*q-c_3*z_0)*y_0^2+(-3*c_1*y_2
+^2-3*c_2*y_1^2)*z_0+(3*c_1*y_2^2+3*c_2*y_1^2)*q-6*y_1^2*z_1*c_1)*w_0+((-3*c_1*
+w_2-3*c_2*w_1)*z_0+(3*c_1*w_2+3*c_2*w_1)*q-6*z_1*c_1*w_1)*y_0^2-6*c_1*w_1*y_1^2
+*z_0+6*c_1*q*w_1*y_1^2+b*w_3+w_4, c_3, (-v_0^3*x_2^3-2*v_1^3*x_1^3-v_2^3*x_0^3)
+*beta_0+(-2*beta_1*x_1^3-beta_2*x_0^3)*v_0^3-2*beta_1*v_1^3*x_0^3+a*y_2^2+y_3^2
+, beta_2, u^4*v_1^3-k*y_1^2+v_2^3, beta_0*x_0^3*v_1^3+v_0^3*x_0^3*beta_1+(
+beta_0*v_0^3+d^4)*x_1^3+x_2^3, 329985329258992895014415775364277646945210782624\
+9008314531919072373834815001143037646384689865333105326183085373194042273523045\
+3814076132008347484804090179522797248557998146868979999947333853651999582483518\
+32608454408783164899908543703990653926297671288-z_3, ((-w_0*y_3^2-3*w_1*y_2^2-3
+*w_2*y_1^2-w_3*y_0^2)*c_0+(-3*c_1*y_2^2-3*c_2*y_1^2-c_3*y_0^2)*w_0+(-3*c_1*w_2-\
+3*c_2*w_1)*y_0^2-6*c_1*w_1*y_1^2)*q+h*z_3+z_4, -w_4+868213965654122844483068754\
+1466696410874412467857279472610252684291656558624440705947502765820512170977339\
+1437833148926294772497471065700139769426404404036421022722986996925260593677389\
+3615028346896700469000496553904346184340359370520352972153440063244629718007034\
+63318322153792369734188709399631256015831828332228844230266085100, ((q*y_4^2-
+y_0^2*z_4-4*y_1^2*z_3-6*y_2^2*z_2-4*y_3^2*z_1-y_4^2*z_0)*w_0+(q*w_4-4*w_1*z_3-6
+*w_2*z_2-4*w_3*z_1-w_4*z_0)*y_0^2+(-4*w_1*y_3^2-6*w_2*y_2^2-4*w_3*y_1^2)*z_0+(4
+*w_1*y_3^2+6*w_2*y_2^2+4*w_3*y_1^2)*q+(-12*y_1^2*z_2-12*y_2^2*z_1)*w_1-12*w_2*
+y_1^2*z_1)*c_0+((-4*c_1*z_3-6*c_2*z_2-4*c_3*z_1+c_4*q-c_4*z_0)*y_0^2+(-4*c_1*
+y_3^2-6*c_2*y_2^2-4*c_3*y_1^2)*z_0+(4*c_1*y_3^2+6*c_2*y_2^2+4*c_3*y_1^2)*q+(-12
+*y_1^2*z_2-12*y_2^2*z_1)*c_1-12*y_1^2*z_1*c_2)*w_0+((-4*c_1*w_3-6*c_2*w_2-4*c_3
+*w_1)*z_0+(4*c_1*w_3+6*c_2*w_2+4*c_3*w_1)*q+(-12*w_1*z_2-12*w_2*z_1)*c_1-12*z_1
+*c_2*w_1)*y_0^2+((-12*w_1*y_2^2-12*w_2*y_1^2)*c_1-12*y_1^2*c_2*w_1)*z_0+((12*
+w_1*y_2^2+12*w_2*y_1^2)*c_1+12*y_1^2*c_2*w_1)*q-24*c_1*w_1*y_1^2*z_1+b*w_4+w_5,
+c_4, (-v_0^3*x_3^3-3*v_1^3*x_2^3-3*v_2^3*x_1^3-v_3^3*x_0^3)*beta_0+(-3*beta_1*
+x_2^3-3*beta_2*x_1^3-beta_3*x_0^3)*v_0^3+(-3*beta_1*v_2^3-3*beta_2*v_1^3)*x_0^3
+-6*beta_1*v_1^3*x_1^3+a*y_3^2+y_4^2, beta_3, u^4*v_2^3-k*y_2^2+v_3^3, (v_0^3*
+x_2^3+2*v_1^3*x_1^3+v_2^3*x_0^3)*beta_0+(2*beta_1*x_1^3+beta_2*x_0^3)*v_0^3+2*
+beta_1*v_1^3*x_0^3+d^4*x_2^3+x_3^3, -w_5+96110742640020065242995550975430595906\
+6439772159867991229009198265696746073859363290841894943597470294465677081276064\
+5588493477125366380651325781948508219081447617248332203472052308011731911916995\
+3834037563025062984004829635993453663672017121340696153649513622752220598907044\
+8137478800717946111085862504133343607918258008018787039825030812331498656225874\
+888075192299564464242659903308395682985460988705788, ((q*y_5^2-y_0^2*z_5-5*y_1^
+2*z_4-10*y_2^2*z_3-10*y_3^2*z_2-5*y_4^2*z_1-y_5^2*z_0)*w_0+(q*w_5-5*w_1*z_4-10*
+w_2*z_3-10*w_3*z_2-5*w_4*z_1-w_5*z_0)*y_0^2+(-5*w_1*y_4^2-10*w_2*y_3^2-10*w_3*
+y_2^2-5*w_4*y_1^2)*z_0+(5*w_1*y_4^2+10*w_2*y_3^2+10*w_3*y_2^2+5*w_4*y_1^2)*q+(-\
+20*y_1^2*z_3-30*y_2^2*z_2-20*y_3^2*z_1)*w_1+(-30*w_2*z_2-20*w_3*z_1)*y_1^2-30*
+y_2^2*z_1*w_2)*c_0+((-5*c_1*z_4-10*c_2*z_3-10*c_3*z_2-5*c_4*z_1+c_5*q-c_5*z_0)*
+y_0^2+(-5*c_1*y_4^2-10*c_2*y_3^2-10*c_3*y_2^2-5*c_4*y_1^2)*z_0+(5*c_1*y_4^2+10*
+c_2*y_3^2+10*c_3*y_2^2+5*c_4*y_1^2)*q+(-20*y_1^2*z_3-30*y_2^2*z_2-20*y_3^2*z_1)
+*c_1+(-30*c_2*z_2-20*c_3*z_1)*y_1^2-30*y_2^2*z_1*c_2)*w_0+((-5*c_1*w_4-10*c_2*
+w_3-10*c_3*w_2-5*c_4*w_1)*z_0+(5*c_1*w_4+10*c_2*w_3+10*c_3*w_2+5*c_4*w_1)*q+(-\
+20*w_1*z_3-30*w_2*z_2-20*w_3*z_1)*c_1+(-30*c_2*z_2-20*c_3*z_1)*w_1-30*w_2*z_1*
+c_2)*y_0^2+((-20*w_1*y_3^2-30*w_2*y_2^2-20*w_3*y_1^2)*c_1+(-30*c_2*y_2^2-20*c_3
+*y_1^2)*w_1-30*w_2*y_1^2*c_2)*z_0+((20*w_1*y_3^2+30*w_2*y_2^2+20*w_3*y_1^2)*c_1
++(30*c_2*y_2^2+20*c_3*y_1^2)*w_1+30*w_2*y_1^2*c_2)*q+((-60*y_1^2*z_2-60*y_2^2*
+z_1)*w_1-60*w_2*y_1^2*z_1)*c_1-60*c_2*w_1*y_1^2*z_1+b*w_5+w_6, c_5, (-v_0^3*x_4
+^3-4*v_1^3*x_3^3-6*v_2^3*x_2^3-4*v_3^3*x_1^3-v_4^3*x_0^3)*beta_0+(-4*beta_1*x_3
+^3-6*beta_2*x_2^3-4*beta_3*x_1^3-beta_4*x_0^3)*v_0^3+(-4*beta_1*v_3^3-6*beta_2*
+v_2^3-4*beta_3*v_1^3)*x_0^3+(-12*v_1^3*x_2^3-12*v_2^3*x_1^3)*beta_1-12*beta_2*
+v_1^3*x_1^3+a*y_4^2+y_5^2, ((-w_0*y_4^2-4*w_1*y_3^2-6*w_2*y_2^2-4*w_3*y_1^2-w_4
+*y_0^2)*c_0+(-4*c_1*y_3^2-6*c_2*y_2^2-4*c_3*y_1^2-c_4*y_0^2)*w_0+(-4*c_1*w_3-6*
+c_2*w_2-4*c_3*w_1)*y_0^2+(-12*w_1*y_2^2-12*w_2*y_1^2)*c_1-12*y_1^2*c_2*w_1)*q+h
+*z_4+z_5, beta_4, u^4*v_3^3-k*y_3^2+v_4^3, (v_0^3*x_3^3+3*v_1^3*x_2^3+3*v_2^3*
+x_1^3+v_3^3*x_0^3)*beta_0+(3*beta_1*x_2^3+3*beta_2*x_1^3+beta_3*x_0^3)*v_0^3+(3
+*beta_1*v_2^3+3*beta_2*v_1^3)*x_0^3+6*beta_1*v_1^3*x_1^3+d^4*x_3^3+x_4^3, -w_6+
+2650630047384170827097707312144859904259950716202612162629537805910738703221609\
+6619136599522631243573211578566185416963750531499382584658099091724674068763322\
+8887776741799873878785972933175853438901902794433094065144531412633416100628616\
+2602629893285594170938548569862633647216920951145851859970628588420144609058183\
+7174363254401271262543964486615923614669026458267946095157384760883065222775437\
+4480059297932955059320773235152145158029782191647921290341166066247614026255058\
+61940148, ((q*y_6^2-y_0^2*z_6-6*y_1^2*z_5-15*y_2^2*z_4-20*y_3^2*z_3-15*y_4^2*
+z_2-6*y_5^2*z_1-y_6^2*z_0)*w_0+(q*w_6-6*w_1*z_5-15*w_2*z_4-20*w_3*z_3-15*w_4*
+z_2-6*w_5*z_1-w_6*z_0)*y_0^2+(-6*w_1*y_5^2-15*w_2*y_4^2-20*w_3*y_3^2-15*w_4*y_2
+^2-6*w_5*y_1^2)*z_0+(6*w_1*y_5^2+15*w_2*y_4^2+20*w_3*y_3^2+15*w_4*y_2^2+6*w_5*
+y_1^2)*q+(-30*y_1^2*z_4-60*y_2^2*z_3-60*y_3^2*z_2-30*y_4^2*z_1)*w_1+(-60*w_2*
+z_3-60*w_3*z_2-30*w_4*z_1)*y_1^2+(-60*w_2*y_3^2-60*w_3*y_2^2)*z_1-90*w_2*y_2^2*
+z_2)*c_0+((-6*c_1*z_5-15*c_2*z_4-20*c_3*z_3-15*c_4*z_2-6*c_5*z_1+c_6*q-c_6*z_0)
+*y_0^2+(-6*c_1*y_5^2-15*c_2*y_4^2-20*c_3*y_3^2-15*c_4*y_2^2-6*c_5*y_1^2)*z_0+(6
+*c_1*y_5^2+15*c_2*y_4^2+20*c_3*y_3^2+15*c_4*y_2^2+6*c_5*y_1^2)*q+(-30*y_1^2*z_4
+-60*y_2^2*z_3-60*y_3^2*z_2-30*y_4^2*z_1)*c_1+(-60*c_2*z_3-60*c_3*z_2-30*c_4*z_1
+)*y_1^2+(-60*c_2*y_3^2-60*c_3*y_2^2)*z_1-90*y_2^2*z_2*c_2)*w_0+((-6*c_1*w_5-15*
+c_2*w_4-20*c_3*w_3-15*c_4*w_2-6*c_5*w_1)*z_0+(6*c_1*w_5+15*c_2*w_4+20*c_3*w_3+
+15*c_4*w_2+6*c_5*w_1)*q+(-30*w_1*z_4-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1)*c_1+(-60
+*c_2*z_3-60*c_3*z_2-30*c_4*z_1)*w_1+(-60*c_2*w_3-60*c_3*w_2)*z_1-90*w_2*z_2*c_2
+)*y_0^2+((-30*w_1*y_4^2-60*w_2*y_3^2-60*w_3*y_2^2-30*w_4*y_1^2)*c_1+(-60*c_2*
+y_3^2-60*c_3*y_2^2-30*c_4*y_1^2)*w_1+(-60*c_2*w_3-60*c_3*w_2)*y_1^2-90*w_2*y_2^
+2*c_2)*z_0+((30*w_1*y_4^2+60*w_2*y_3^2+60*w_3*y_2^2+30*w_4*y_1^2)*c_1+(60*c_2*
+y_3^2+60*c_3*y_2^2+30*c_4*y_1^2)*w_1+(60*c_2*w_3+60*c_3*w_2)*y_1^2+90*w_2*y_2^2
+*c_2)*q+((-120*y_1^2*z_3-180*y_2^2*z_2-120*y_3^2*z_1)*w_1+(-180*w_2*z_2-120*w_3
+*z_1)*y_1^2-180*y_2^2*z_1*w_2)*c_1+((-180*c_2*z_2-120*c_3*z_1)*y_1^2-180*y_2^2*
+z_1*c_2)*w_1-180*c_2*w_2*y_1^2*z_1+b*w_6+w_7, c_6, (-v_0^3*x_5^3-5*v_1^3*x_4^3-\
+10*v_2^3*x_3^3-10*v_3^3*x_2^3-5*v_4^3*x_1^3-v_5^3*x_0^3)*beta_0+(-5*beta_1*x_4^
+3-10*beta_2*x_3^3-10*beta_3*x_2^3-5*beta_4*x_1^3-beta_5*x_0^3)*v_0^3+(-5*beta_1
+*v_4^3-10*beta_2*v_3^3-10*beta_3*v_2^3-5*beta_4*v_1^3)*x_0^3+(-20*v_1^3*x_3^3-\
+30*v_2^3*x_2^3-20*v_3^3*x_1^3)*beta_1+(-30*beta_2*x_2^3-20*beta_3*x_1^3)*v_1^3-\
+30*beta_2*v_2^3*x_1^3+a*y_5^2+y_6^2, ((-w_0*y_5^2-5*w_1*y_4^2-10*w_2*y_3^2-10*
+w_3*y_2^2-5*w_4*y_1^2-w_5*y_0^2)*c_0+(-5*c_1*y_4^2-10*c_2*y_3^2-10*c_3*y_2^2-5*
+c_4*y_1^2-c_5*y_0^2)*w_0+(-5*c_1*w_4-10*c_2*w_3-10*c_3*w_2-5*c_4*w_1)*y_0^2+(-\
+20*w_1*y_3^2-30*w_2*y_2^2-20*w_3*y_1^2)*c_1+(-30*c_2*y_2^2-20*c_3*y_1^2)*w_1-30
+*w_2*y_1^2*c_2)*q+h*z_5+z_6, beta_5, u^4*v_4^3-k*y_4^2+v_5^3, (v_0^3*x_4^3+4*
+v_1^3*x_3^3+6*v_2^3*x_2^3+4*v_3^3*x_1^3+v_4^3*x_0^3)*beta_0+(4*beta_1*x_3^3+6*
+beta_2*x_2^3+4*beta_3*x_1^3+beta_4*x_0^3)*v_0^3+(4*beta_1*v_3^3+6*beta_2*v_2^3+
+4*beta_3*v_1^3)*x_0^3+(12*v_1^3*x_2^3+12*v_2^3*x_1^3)*beta_1+12*beta_2*v_1^3*
+x_1^3+d^4*x_4^3+x_5^3, -w_7+459115420086991472616973084622658765067558181648821\
+5503919871266723625236460119708660565214109725845505397140055762406489655355062\
+9264191706990067206826268989429872853996333902653377201621007925800946153758905\
+0223250976215406082705905401702950590531932984336012240803174015656413316352624\
+6731865478165480136454411444660936401243710746819405594217472272031714213128266\
+5503880068719099978135360546528129080555880618811604319300412220458648103098055\
+2344591159983188018383880102314483847161342984015745352969877921287271163014997\
+504402150773103551662856327540036, ((q*y_7^2-y_0^2*z_7-7*y_1^2*z_6-21*y_2^2*z_5
+-35*y_3^2*z_4-35*y_4^2*z_3-21*y_5^2*z_2-7*y_6^2*z_1-y_7^2*z_0)*w_0+(q*w_7-7*w_1
+*z_6-21*w_2*z_5-35*w_3*z_4-35*w_4*z_3-21*w_5*z_2-7*w_6*z_1-w_7*z_0)*y_0^2+(-7*
+w_1*y_6^2-21*w_2*y_5^2-35*w_3*y_4^2-35*w_4*y_3^2-21*w_5*y_2^2-7*w_6*y_1^2)*z_0+
+(7*w_1*y_6^2+21*w_2*y_5^2+35*w_3*y_4^2+35*w_4*y_3^2+21*w_5*y_2^2+7*w_6*y_1^2)*q
++(-42*y_1^2*z_5-105*y_2^2*z_4-140*y_3^2*z_3-105*y_4^2*z_2-42*y_5^2*z_1)*w_1+(-\
+105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1)*y_1^2+(-105*w_2*y_4^2-140*w_3*
+y_3^2-105*w_4*y_2^2)*z_1+(-210*y_2^2*z_3-210*y_3^2*z_2)*w_2-210*z_2*y_2^2*w_3)*
+c_0+((-7*c_1*z_6-21*c_2*z_5-35*c_3*z_4-35*c_4*z_3-21*c_5*z_2-7*c_6*z_1+c_7*q-
+c_7*z_0)*y_0^2+(-7*c_1*y_6^2-21*c_2*y_5^2-35*c_3*y_4^2-35*c_4*y_3^2-21*c_5*y_2^
+2-7*c_6*y_1^2)*z_0+(7*c_1*y_6^2+21*c_2*y_5^2+35*c_3*y_4^2+35*c_4*y_3^2+21*c_5*
+y_2^2+7*c_6*y_1^2)*q+(-42*y_1^2*z_5-105*y_2^2*z_4-140*y_3^2*z_3-105*y_4^2*z_2-\
+42*y_5^2*z_1)*c_1+(-105*c_2*z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*z_1)*y_1^2+(-105
+*c_2*y_4^2-140*c_3*y_3^2-105*c_4*y_2^2)*z_1+(-210*y_2^2*z_3-210*y_3^2*z_2)*c_2-\
+210*c_3*y_2^2*z_2)*w_0+((-7*c_1*w_6-21*c_2*w_5-35*c_3*w_4-35*c_4*w_3-21*c_5*w_2
+-7*c_6*w_1)*z_0+(7*c_1*w_6+21*c_2*w_5+35*c_3*w_4+35*c_4*w_3+21*c_5*w_2+7*c_6*
+w_1)*q+(-42*w_1*z_5-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1)*c_1+(-105*
+c_2*z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*z_1)*w_1+(-105*c_2*w_4-140*c_3*w_3-105*
+c_4*w_2)*z_1+(-210*w_2*z_3-210*w_3*z_2)*c_2-210*w_2*z_2*c_3)*y_0^2+((-42*w_1*
+y_5^2-105*w_2*y_4^2-140*w_3*y_3^2-105*w_4*y_2^2-42*w_5*y_1^2)*c_1+(-105*c_2*y_4
+^2-140*c_3*y_3^2-105*c_4*y_2^2-42*c_5*y_1^2)*w_1+(-105*c_2*w_4-140*c_3*w_3-105*
+c_4*w_2)*y_1^2+(-210*w_2*y_3^2-210*w_3*y_2^2)*c_2-210*w_2*y_2^2*c_3)*z_0+((42*
+w_1*y_5^2+105*w_2*y_4^2+140*w_3*y_3^2+105*w_4*y_2^2+42*w_5*y_1^2)*c_1+(105*c_2*
+y_4^2+140*c_3*y_3^2+105*c_4*y_2^2+42*c_5*y_1^2)*w_1+(105*c_2*w_4+140*c_3*w_3+
+105*c_4*w_2)*y_1^2+(210*w_2*y_3^2+210*w_3*y_2^2)*c_2+210*w_2*y_2^2*c_3)*q+((-\
+210*y_1^2*z_4-420*y_2^2*z_3-420*y_3^2*z_2-210*y_4^2*z_1)*w_1+(-420*w_2*z_3-420*
+w_3*z_2-210*w_4*z_1)*y_1^2+(-420*w_2*y_3^2-420*w_3*y_2^2)*z_1-630*w_2*y_2^2*z_2
+)*c_1+((-420*c_2*z_3-420*c_3*z_2-210*c_4*z_1)*y_1^2+(-420*c_2*y_3^2-420*c_3*y_2
+^2)*z_1-630*y_2^2*z_2*c_2)*w_1+((-420*c_2*w_3-420*c_3*w_2)*z_1-630*w_2*z_2*c_2)
+*y_1^2-630*c_2*w_2*y_2^2*z_1+b*w_7+w_8, c_7, (-v_0^3*x_6^3-6*v_1^3*x_5^3-15*v_2
+^3*x_4^3-20*v_3^3*x_3^3-15*v_4^3*x_2^3-6*v_5^3*x_1^3-v_6^3*x_0^3)*beta_0+(-6*
+beta_1*x_5^3-15*beta_2*x_4^3-20*beta_3*x_3^3-15*beta_4*x_2^3-6*beta_5*x_1^3-
+beta_6*x_0^3)*v_0^3+(-6*beta_1*v_5^3-15*beta_2*v_4^3-20*beta_3*v_3^3-15*beta_4*
+v_2^3-6*beta_5*v_1^3)*x_0^3+(-30*v_1^3*x_4^3-60*v_2^3*x_3^3-60*v_3^3*x_2^3-30*
+v_4^3*x_1^3)*beta_1+(-60*beta_2*x_3^3-60*beta_3*x_2^3-30*beta_4*x_1^3)*v_1^3+(-\
+60*beta_2*v_3^3-60*beta_3*v_2^3)*x_1^3-90*beta_2*v_2^3*x_2^3+a*y_6^2+y_7^2, ((-
+w_0*y_6^2-6*w_1*y_5^2-15*w_2*y_4^2-20*w_3*y_3^2-15*w_4*y_2^2-6*w_5*y_1^2-w_6*
+y_0^2)*c_0+(-6*c_1*y_5^2-15*c_2*y_4^2-20*c_3*y_3^2-15*c_4*y_2^2-6*c_5*y_1^2-c_6
+*y_0^2)*w_0+(-6*c_1*w_5-15*c_2*w_4-20*c_3*w_3-15*c_4*w_2-6*c_5*w_1)*y_0^2+(-30*
+w_1*y_4^2-60*w_2*y_3^2-60*w_3*y_2^2-30*w_4*y_1^2)*c_1+(-60*c_2*y_3^2-60*c_3*y_2
+^2-30*c_4*y_1^2)*w_1+(-60*c_2*w_3-60*c_3*w_2)*y_1^2-90*w_2*y_2^2*c_2)*q+h*z_6+
+z_7, beta_6, u^4*v_5^3-k*y_5^2+v_6^3, (v_0^3*x_5^3+5*v_1^3*x_4^3+10*v_2^3*x_3^3
++10*v_3^3*x_2^3+5*v_4^3*x_1^3+v_5^3*x_0^3)*beta_0+(5*beta_1*x_4^3+10*beta_2*x_3
+^3+10*beta_3*x_2^3+5*beta_4*x_1^3+beta_5*x_0^3)*v_0^3+(5*beta_1*v_4^3+10*beta_2
+*v_3^3+10*beta_3*v_2^3+5*beta_4*v_1^3)*x_0^3+(20*v_1^3*x_3^3+30*v_2^3*x_2^3+20*
+v_3^3*x_1^3)*beta_1+(30*beta_2*x_2^3+20*beta_3*x_1^3)*v_1^3+30*beta_2*v_2^3*x_1
+^3+d^4*x_5^3+x_6^3, -w_8+142497417318947130624705386982765969881044775355331838\
+1851558115980727311052692235652105089347141321268378294329155749056451839720231\
+6358097730159334255733974041643708870226281714239367412357687070515612654033181\
+4804555927426325166369552222555383568607694156104777064363568594698249794426047\
+0821727133393063306347976362110945561179887923518329664893895093551194737946671\
+7691125158059407094181935211784747399029397852335501909473338554931470845306846\
+8999814886706751642092907592895397499891397965222574612475653221022073914543078\
+9394095822064880874417175036552982833512577778364667337266241961365233351535213\
+5612866018803128690819898508, ((q*y_8^2-y_0^2*z_8-8*y_1^2*z_7-28*y_2^2*z_6-56*
+y_3^2*z_5-70*y_4^2*z_4-56*y_5^2*z_3-28*y_6^2*z_2-8*y_7^2*z_1-y_8^2*z_0)*w_0+(q*
+w_8-8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-70*w_4*z_4-56*w_5*z_3-28*w_6*z_2-8*w_7*z_1-
+w_8*z_0)*y_0^2+(-8*w_1*y_7^2-28*w_2*y_6^2-56*w_3*y_5^2-70*w_4*y_4^2-56*w_5*y_3^
+2-28*w_6*y_2^2-8*w_7*y_1^2)*z_0+(8*w_1*y_7^2+28*w_2*y_6^2+56*w_3*y_5^2+70*w_4*
+y_4^2+56*w_5*y_3^2+28*w_6*y_2^2+8*w_7*y_1^2)*q+(-56*y_1^2*z_6-168*y_2^2*z_5-280
+*y_3^2*z_4-280*y_4^2*z_3-168*y_5^2*z_2-56*y_6^2*z_1)*w_1+(-168*w_2*z_5-280*w_3*
+z_4-280*w_4*z_3-168*w_5*z_2-56*w_6*z_1)*y_1^2+(-168*w_2*y_5^2-280*w_3*y_4^2-280
+*w_4*y_3^2-168*w_5*y_2^2)*z_1+(-420*y_2^2*z_4-560*y_3^2*z_3-420*y_4^2*z_2)*w_2+
+(-560*w_3*z_3-420*w_4*z_2)*y_2^2-560*w_3*y_3^2*z_2)*c_0+((-8*c_1*z_7-28*c_2*z_6
+-56*c_3*z_5-70*c_4*z_4-56*c_5*z_3-28*c_6*z_2-8*c_7*z_1+c_8*q-c_8*z_0)*y_0^2+(-8
+*c_1*y_7^2-28*c_2*y_6^2-56*c_3*y_5^2-70*c_4*y_4^2-56*c_5*y_3^2-28*c_6*y_2^2-8*
+c_7*y_1^2)*z_0+(8*c_1*y_7^2+28*c_2*y_6^2+56*c_3*y_5^2+70*c_4*y_4^2+56*c_5*y_3^2
++28*c_6*y_2^2+8*c_7*y_1^2)*q+(-56*y_1^2*z_6-168*y_2^2*z_5-280*y_3^2*z_4-280*y_4
+^2*z_3-168*y_5^2*z_2-56*y_6^2*z_1)*c_1+(-168*c_2*z_5-280*c_3*z_4-280*c_4*z_3-\
+168*c_5*z_2-56*c_6*z_1)*y_1^2+(-168*c_2*y_5^2-280*c_3*y_4^2-280*c_4*y_3^2-168*
+c_5*y_2^2)*z_1+(-420*y_2^2*z_4-560*y_3^2*z_3-420*y_4^2*z_2)*c_2+(-560*c_3*z_3-\
+420*c_4*z_2)*y_2^2-560*c_3*y_3^2*z_2)*w_0+((-8*c_1*w_7-28*c_2*w_6-56*c_3*w_5-70
+*c_4*w_4-56*c_5*w_3-28*c_6*w_2-8*c_7*w_1)*z_0+(8*c_1*w_7+28*c_2*w_6+56*c_3*w_5+
+70*c_4*w_4+56*c_5*w_3+28*c_6*w_2+8*c_7*w_1)*q+(-56*w_1*z_6-168*w_2*z_5-280*w_3*
+z_4-280*w_4*z_3-168*w_5*z_2-56*w_6*z_1)*c_1+(-168*c_2*z_5-280*c_3*z_4-280*c_4*
+z_3-168*c_5*z_2-56*c_6*z_1)*w_1+(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*c_5*
+w_2)*z_1+(-420*w_2*z_4-560*w_3*z_3-420*w_4*z_2)*c_2+(-560*c_3*z_3-420*c_4*z_2)*
+w_2-560*c_3*w_3*z_2)*y_0^2+((-56*w_1*y_6^2-168*w_2*y_5^2-280*w_3*y_4^2-280*w_4*
+y_3^2-168*w_5*y_2^2-56*w_6*y_1^2)*c_1+(-168*c_2*y_5^2-280*c_3*y_4^2-280*c_4*y_3
+^2-168*c_5*y_2^2-56*c_6*y_1^2)*w_1+(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*
+c_5*w_2)*y_1^2+(-420*w_2*y_4^2-560*w_3*y_3^2-420*w_4*y_2^2)*c_2+(-560*c_3*y_3^2
+-420*c_4*y_2^2)*w_2-560*w_3*y_2^2*c_3)*z_0+((56*w_1*y_6^2+168*w_2*y_5^2+280*w_3
+*y_4^2+280*w_4*y_3^2+168*w_5*y_2^2+56*w_6*y_1^2)*c_1+(168*c_2*y_5^2+280*c_3*y_4
+^2+280*c_4*y_3^2+168*c_5*y_2^2+56*c_6*y_1^2)*w_1+(168*c_2*w_5+280*c_3*w_4+280*
+c_4*w_3+168*c_5*w_2)*y_1^2+(420*w_2*y_4^2+560*w_3*y_3^2+420*w_4*y_2^2)*c_2+(560
+*c_3*y_3^2+420*c_4*y_2^2)*w_2+560*w_3*y_2^2*c_3)*q+((-336*y_1^2*z_5-840*y_2^2*
+z_4-1120*y_3^2*z_3-840*y_4^2*z_2-336*y_5^2*z_1)*w_1+(-840*w_2*z_4-1120*w_3*z_3-\
+840*w_4*z_2-336*w_5*z_1)*y_1^2+(-840*w_2*y_4^2-1120*w_3*y_3^2-840*w_4*y_2^2)*
+z_1+(-1680*y_2^2*z_3-1680*y_3^2*z_2)*w_2-1680*z_2*y_2^2*w_3)*c_1+((-840*c_2*z_4
+-1120*c_3*z_3-840*c_4*z_2-336*c_5*z_1)*y_1^2+(-840*c_2*y_4^2-1120*c_3*y_3^2-840
+*c_4*y_2^2)*z_1+(-1680*y_2^2*z_3-1680*y_3^2*z_2)*c_2-1680*c_3*y_2^2*z_2)*w_1+((
+-840*c_2*w_4-1120*c_3*w_3-840*c_4*w_2)*z_1+(-1680*w_2*z_3-1680*w_3*z_2)*c_2-\
+1680*w_2*z_2*c_3)*y_1^2+((-1680*w_2*y_3^2-1680*w_3*y_2^2)*c_2-1680*w_2*y_2^2*
+c_3)*z_1-2520*c_2*w_2*y_2^2*z_2+b*w_8+w_9, c_8, (-v_0^3*x_7^3-7*v_1^3*x_6^3-21*
+v_2^3*x_5^3-35*v_3^3*x_4^3-35*v_4^3*x_3^3-21*v_5^3*x_2^3-7*v_6^3*x_1^3-v_7^3*
+x_0^3)*beta_0+(-7*beta_1*x_6^3-21*beta_2*x_5^3-35*beta_3*x_4^3-35*beta_4*x_3^3-\
+21*beta_5*x_2^3-7*beta_6*x_1^3-beta_7*x_0^3)*v_0^3+(-7*beta_1*v_6^3-21*beta_2*
+v_5^3-35*beta_3*v_4^3-35*beta_4*v_3^3-21*beta_5*v_2^3-7*beta_6*v_1^3)*x_0^3+(-\
+42*v_1^3*x_5^3-105*v_2^3*x_4^3-140*v_3^3*x_3^3-105*v_4^3*x_2^3-42*v_5^3*x_1^3)*
+beta_1+(-105*beta_2*x_4^3-140*beta_3*x_3^3-105*beta_4*x_2^3-42*beta_5*x_1^3)*
+v_1^3+(-105*beta_2*v_4^3-140*beta_3*v_3^3-105*beta_4*v_2^3)*x_1^3+(-210*v_2^3*
+x_3^3-210*v_3^3*x_2^3)*beta_2-210*beta_3*v_2^3*x_2^3+a*y_7^2+y_8^2, ((-w_0*y_7^
+2-7*w_1*y_6^2-21*w_2*y_5^2-35*w_3*y_4^2-35*w_4*y_3^2-21*w_5*y_2^2-7*w_6*y_1^2-
+w_7*y_0^2)*c_0+(-7*c_1*y_6^2-21*c_2*y_5^2-35*c_3*y_4^2-35*c_4*y_3^2-21*c_5*y_2^
+2-7*c_6*y_1^2-c_7*y_0^2)*w_0+(-7*c_1*w_6-21*c_2*w_5-35*c_3*w_4-35*c_4*w_3-21*
+c_5*w_2-7*c_6*w_1)*y_0^2+(-42*w_1*y_5^2-105*w_2*y_4^2-140*w_3*y_3^2-105*w_4*y_2
+^2-42*w_5*y_1^2)*c_1+(-105*c_2*y_4^2-140*c_3*y_3^2-105*c_4*y_2^2-42*c_5*y_1^2)*
+w_1+(-105*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*y_1^2+(-210*w_2*y_3^2-210*w_3*y_2^2)
+*c_2-210*w_2*y_2^2*c_3)*q+h*z_7+z_8, beta_7, u^4*v_6^3-k*y_6^2+v_7^3, (v_0^3*
+x_6^3+6*v_1^3*x_5^3+15*v_2^3*x_4^3+20*v_3^3*x_3^3+15*v_4^3*x_2^3+6*v_5^3*x_1^3+
+v_6^3*x_0^3)*beta_0+(6*beta_1*x_5^3+15*beta_2*x_4^3+20*beta_3*x_3^3+15*beta_4*
+x_2^3+6*beta_5*x_1^3+beta_6*x_0^3)*v_0^3+(6*beta_1*v_5^3+15*beta_2*v_4^3+20*
+beta_3*v_3^3+15*beta_4*v_2^3+6*beta_5*v_1^3)*x_0^3+(30*v_1^3*x_4^3+60*v_2^3*x_3
+^3+60*v_3^3*x_2^3+30*v_4^3*x_1^3)*beta_1+(60*beta_2*x_3^3+60*beta_3*x_2^3+30*
+beta_4*x_1^3)*v_1^3+(60*beta_2*v_3^3+60*beta_3*v_2^3)*x_1^3+90*beta_2*v_2^3*x_2
+^3+d^4*x_6^3+x_7^3, -w_9+340339510315774668425188008559875030366498283028291057\
+8480740098170813896261742675299973726069360322239337552842098369666759525128919\
+9507700188622920015133122838199303309873856022098406260837680474119887890377507\
+7866433930133595499297055210207602800069411651548932228613197848582550548901408\
+7714824292403600277824564436949506143496892280717522372951853942312198019243116\
+9602184246856821546284063871658792521253523170867101794495464005986835576250580\
+0715118640713857265853269838703833521532377172309608663173035839485443120590417\
+3680902979748726480176107996317876073309337300444601264456260012695598909328090\
+7180067769228706927186922471858980856583803499981671366734158518335931785669291\
+1498298142504441696835164, 1851972124049566406434184468716458054292436392508190\
+4847765237324765839526135246693057409807825759988062066463496182023493684976830\
+2011448377720975599958062152112111282983297846778556381254996606333486961452312\
+3600218284308625726127354538735793581418584808950883797142007507646011445816536\
+1064478229487358827706619041896399712336-z_4, 457905679778531496546797846995874\
+4023559385350293158300420361160534001549424658561919243483091115452268701385686\
+8671140417667425850945034076761320322355944575992910168926115006939327454718350\
+5547773709278131000499444724397130471941861411335566615937954603997724463499749\
+2107935881210104811940161056350351958119871587357663053079923562594219170834801\
+60236638959174670921830679867245178641491735484410510496-z_5, 50689872178502078\
+6605202662550711373379948696483733654387782653824819771306199047373881212753708\
+1893124690566534030522537836901793319636129971160510085077006898975399215438903\
+8179850940365676231632725619585068206513293329871522166834914415603752089921471\
+3063598321367852965285543095632366169482557222449236688435821770784568692016704\
+2596282878805829818891887985307135844053917721117825660789984169280027535333811\
+113322793778919948746877476085179013609684568168701540989702040257280-z_6, 1397\
+9717001838419737754264294884064046101170022212458019061785372225112428273451898\
+6302770726949904390874008762573761115338542709638523504834095095907048556697741\
+0758552583886099512590897569380466462706337083914332341792780899633034265129895\
+4084968704836773136408869752771893770723575393076126853231882143117743420779715\
+7496348061431548127572049996425327751947907377373654342148196454069579988501855\
+3354572442211781047509726659652555045312341244125528052482352087510754941068776\
+7605841421073674352627365323265326417373696834283809788124678328181526693741612\
+8-z_7, 242142567210778393307201874645189748149535710996882533974579914347011630\
+2473899980109658123855886877577892778718843009211690457435825899186414557267485\
+3251435351706466391343362262392062860381648554889187940425010310543103278133358\
+6219546066120628631835569895156633728187969682921449432478761268734355281149025\
+2360944076902014020683965483651688488556173251232317224542298024290480483291594\
+8682922696524417881291855342488360881777625353679784420667522428741750978770462\
+5250414541843378405932434257164782832479432224049798738468717953286700274837204\
+4443660694350281535929839800937371070524883825222847488203089583790761202505738\
+655744064-z_8, -beta_1, -beta_2, -beta_3, -beta_4, -beta_5, -beta_6, -beta_7, -
+c_1, -c_2, -c_3, -c_4, -c_5, -c_6, -c_7, -c_8, z_aux^3-1], [w_9, z_8, y_8, w_8,
+c_8, beta_7, z_7, y_7, x_7, w_7, v_7, c_7, beta_6, z_6, y_6, x_6, w_6, v_6, c_6
+, beta_5, z_5, y_5, x_5, w_5, v_5, c_5, beta_4, z_4, y_4, x_4, w_4, v_4, c_4, 
+beta_3, z_3, y_3, x_3, w_3, v_3, c_3, beta_2, z_2, y_2, x_2, w_2, v_2, c_2, 
+beta_1, z_1, y_1, x_1, w_1, v_1, c_1, beta_0, z_0, y_0, x_0, w_0, v_0, c_0, 
+z_aux, w_aux, a, b, d, h, k, lm, q, u], [beta, c], [18804556331148060177333964-
+w_0, c_0*q*w_0*y_0-c_0*w_0*y_0*z_0+b*w_0+w_1, 21527619398917302001545873-z_0, -
+c_0*q*w_0*y_0+h*z_0+z_1, 16671490814026591831213894-beta_0, beta_1, 
+17451937753216011987855213-c_0, c_1, -w_1+2774570920793778245948466381669305282\
+9645358477893977948894734969521198435077669943394926108906821660, ((-z_1*y_0-
+y_1*(z_0-q))*w_0-w_1*y_0*(z_0-q))*c_0-c_1*y_0*(z_0-q)*w_0+b*w_1+w_2, -beta_0*
+v_0*x_0+a*y_0+y_1, 991773167719160779902661417632623432960060537944864614626755\
+89050336745414421654122283200879788027310-z_1, ((-w_0*y_1-w_1*y_0)*c_0-c_1*y_0*
+w_0)*q+h*z_1+z_2, -w_2+62567005384645564121573692079437689027859126071407065330\
+7962949738823487057840578482521087387401875212383680105616205189910110774419583\
+652042745687028837661516679954246386415508, ((q*y_2-y_0*z_2-2*y_1*z_1-y_2*z_0)*
+w_0+(q*w_2-2*w_1*z_1-w_2*z_0)*y_0-2*w_1*y_1*(z_0-q))*c_0+((-2*c_1*z_1+c_2*q-c_2
+*z_0)*y_0-2*y_1*c_1*(z_0-q))*w_0-2*c_1*w_1*(z_0-q)*y_0+b*w_2+w_3, c_2, (-beta_0
+*v_1-beta_1*v_0)*x_0-beta_0*v_0*x_1+a*y_1+y_2, -k*y_0+u*v_0+v_1, beta_0*v_0*x_0
++d*x_0-lm+x_1, 1463339492152279889757601536891059198263105878093000416249363182\
+5591060385147072253910138660718526622158106577877404565656087277654542937968198\
+6601243767626393990847779250519236-z_2, ((-w_0*y_2-2*w_1*y_1-w_2*y_0)*c_0+(-2*
+c_1*y_1-c_2*y_0)*w_0-2*c_1*w_1*y_0)*q+h*z_2+z_3, -w_3+3511439436347757068403631\
+0713980660128524565035001770330327785602336404056856269308532439948383274212112\
+2002311316980169453245629412332205379466362240665724556144671184986377755066530\
+5397275712957203393680235068466322006763333558833586972192211010584292, ((q*y_3
+-y_0*z_3-3*y_1*z_2-3*y_2*z_1-y_3*z_0)*w_0+(q*w_3-3*w_1*z_2-3*w_2*z_1-w_3*z_0)*
+y_0+(-3*w_1*y_2-3*w_2*y_1)*z_0+(3*w_1*y_2+3*w_2*y_1)*q-6*y_1*z_1*w_1)*c_0+((-3*
+c_1*z_2-3*c_2*z_1+c_3*q-c_3*z_0)*y_0+(-3*c_1*y_2-3*c_2*y_1)*z_0+(3*c_1*y_2+3*
+c_2*y_1)*q-6*y_1*z_1*c_1)*w_0+((-3*c_1*w_2-3*c_2*w_1)*z_0+(3*c_1*w_2+3*c_2*w_1)
+*q-6*z_1*c_1*w_1)*y_0-6*c_1*w_1*y_1*z_0+6*c_1*q*w_1*y_1+b*w_3+w_4, c_3, (-v_0*
+x_2-2*v_1*x_1-v_2*x_0)*beta_0+(-2*beta_1*x_1-beta_2*x_0)*v_0-2*beta_1*v_1*x_0+a
+*y_2+y_3, beta_2, -k*y_1+u*v_1+v_2, beta_0*x_0*v_1+v_0*x_0*beta_1+(beta_0*v_0+d
+)*x_1+x_2, 32998532925899289501441577536427764694521078262490083145319190723738\
+3481500114303764638468986533310532618308537319404227352304538140761320083474848\
+0409017952279724855799814686897999994733385365199958248351832608454408783164899\
+908543703990653926297671288-z_3, ((-w_0*y_3-3*w_1*y_2-3*w_2*y_1-w_3*y_0)*c_0+(-\
+3*c_1*y_2-3*c_2*y_1-c_3*y_0)*w_0+(-3*c_1*w_2-3*c_2*w_1)*y_0-6*c_1*w_1*y_1)*q+h*
+z_3+z_4, -w_4+86821396565412284448306875414666964108744124678572794726102526842\
+9165655862444070594750276582051217097733914378331489262947724974710657001397694\
+2640440403642102272298699692526059367738936150283468967004690004965539043461843\
+4035937052035297215344006324462971800703463318322153792369734188709399631256015\
+831828332228844230266085100, ((q*y_4-y_0*z_4-4*y_1*z_3-6*y_2*z_2-4*y_3*z_1-y_4*
+z_0)*w_0+(q*w_4-4*w_1*z_3-6*w_2*z_2-4*w_3*z_1-w_4*z_0)*y_0+(-4*w_1*y_3-6*w_2*
+y_2-4*w_3*y_1)*z_0+(4*w_1*y_3+6*w_2*y_2+4*w_3*y_1)*q+(-12*y_1*z_2-12*y_2*z_1)*
+w_1-12*w_2*y_1*z_1)*c_0+((-4*c_1*z_3-6*c_2*z_2-4*c_3*z_1+c_4*q-c_4*z_0)*y_0+(-4
+*c_1*y_3-6*c_2*y_2-4*c_3*y_1)*z_0+(4*c_1*y_3+6*c_2*y_2+4*c_3*y_1)*q+(-12*y_1*
+z_2-12*y_2*z_1)*c_1-12*y_1*z_1*c_2)*w_0+((-4*c_1*w_3-6*c_2*w_2-4*c_3*w_1)*z_0+(
+4*c_1*w_3+6*c_2*w_2+4*c_3*w_1)*q+(-12*w_1*z_2-12*w_2*z_1)*c_1-12*z_1*c_2*w_1)*
+y_0+((-12*w_1*y_2-12*w_2*y_1)*c_1-12*y_1*c_2*w_1)*z_0+((12*w_1*y_2+12*w_2*y_1)*
+c_1+12*y_1*c_2*w_1)*q-24*c_1*w_1*y_1*z_1+b*w_4+w_5, c_4, (-v_0*x_3-3*v_1*x_2-3*
+v_2*x_1-v_3*x_0)*beta_0+(-3*beta_1*x_2-3*beta_2*x_1-beta_3*x_0)*v_0+(-3*beta_1*
+v_2-3*beta_2*v_1)*x_0-6*beta_1*v_1*x_1+a*y_3+y_4, beta_3, -k*y_2+u*v_2+v_3, (
+v_0*x_2+2*v_1*x_1+v_2*x_0)*beta_0+(2*beta_1*x_1+beta_2*x_0)*v_0+2*beta_1*v_1*
+x_0+d*x_2+x_3, -w_5+96110742640020065242995550975430595906643977215986799122900\
+9198265696746073859363290841894943597470294465677081276064558849347712536638065\
+1325781948508219081447617248332203472052308011731911916995383403756302506298400\
+4829635993453663672017121340696153649513622752220598907044813747880071794611108\
+5862504133343607918258008018787039825030812331498656225874888075192299564464242\
+659903308395682985460988705788, ((q*y_5-y_0*z_5-5*y_1*z_4-10*y_2*z_3-10*y_3*z_2
+-5*y_4*z_1-y_5*z_0)*w_0+(q*w_5-5*w_1*z_4-10*w_2*z_3-10*w_3*z_2-5*w_4*z_1-w_5*
+z_0)*y_0+(-5*w_1*y_4-10*w_2*y_3-10*w_3*y_2-5*w_4*y_1)*z_0+(5*w_1*y_4+10*w_2*y_3
++10*w_3*y_2+5*w_4*y_1)*q+(-20*y_1*z_3-30*y_2*z_2-20*y_3*z_1)*w_1+(-30*w_2*z_2-\
+20*w_3*z_1)*y_1-30*y_2*z_1*w_2)*c_0+((-5*c_1*z_4-10*c_2*z_3-10*c_3*z_2-5*c_4*
+z_1+c_5*q-c_5*z_0)*y_0+(-5*c_1*y_4-10*c_2*y_3-10*c_3*y_2-5*c_4*y_1)*z_0+(5*c_1*
+y_4+10*c_2*y_3+10*c_3*y_2+5*c_4*y_1)*q+(-20*y_1*z_3-30*y_2*z_2-20*y_3*z_1)*c_1+
+(-30*c_2*z_2-20*c_3*z_1)*y_1-30*y_2*z_1*c_2)*w_0+((-5*c_1*w_4-10*c_2*w_3-10*c_3
+*w_2-5*c_4*w_1)*z_0+(5*c_1*w_4+10*c_2*w_3+10*c_3*w_2+5*c_4*w_1)*q+(-20*w_1*z_3-\
+30*w_2*z_2-20*w_3*z_1)*c_1+(-30*c_2*z_2-20*c_3*z_1)*w_1-30*w_2*z_1*c_2)*y_0+((-\
+20*w_1*y_3-30*w_2*y_2-20*w_3*y_1)*c_1+(-30*c_2*y_2-20*c_3*y_1)*w_1-30*w_2*y_1*
+c_2)*z_0+((20*w_1*y_3+30*w_2*y_2+20*w_3*y_1)*c_1+(30*c_2*y_2+20*c_3*y_1)*w_1+30
+*w_2*y_1*c_2)*q+((-60*y_1*z_2-60*y_2*z_1)*w_1-60*w_2*y_1*z_1)*c_1-60*c_2*w_1*
+y_1*z_1+b*w_5+w_6, c_5, (-v_0*x_4-4*v_1*x_3-6*v_2*x_2-4*v_3*x_1-v_4*x_0)*beta_0
++(-4*beta_1*x_3-6*beta_2*x_2-4*beta_3*x_1-beta_4*x_0)*v_0+(-4*beta_1*v_3-6*
+beta_2*v_2-4*beta_3*v_1)*x_0+(-12*v_1*x_2-12*v_2*x_1)*beta_1-12*beta_2*v_1*x_1+
+a*y_4+y_5, ((-w_0*y_4-4*w_1*y_3-6*w_2*y_2-4*w_3*y_1-w_4*y_0)*c_0+(-4*c_1*y_3-6*
+c_2*y_2-4*c_3*y_1-c_4*y_0)*w_0+(-4*c_1*w_3-6*c_2*w_2-4*c_3*w_1)*y_0+(-12*w_1*
+y_2-12*w_2*y_1)*c_1-12*y_1*c_2*w_1)*q+h*z_4+z_5, beta_4, -k*y_3+u*v_3+v_4, (v_0
+*x_3+3*v_1*x_2+3*v_2*x_1+v_3*x_0)*beta_0+(3*beta_1*x_2+3*beta_2*x_1+beta_3*x_0)
+*v_0+(3*beta_1*v_2+3*beta_2*v_1)*x_0+6*beta_1*v_1*x_1+d*x_3+x_4, -w_6+265063004\
+7384170827097707312144859904259950716202612162629537805910738703221609661913659\
+9522631243573211578566185416963750531499382584658099091724674068763322888777674\
+1799873878785972933175853438901902794433094065144531412633416100628616260262989\
+3285594170938548569862633647216920951145851859970628588420144609058183717436325\
+4401271262543964486615923614669026458267946095157384760883065222775437448005929\
+793295505932077323515214515802978219164792129034116606624761402625505861940148,
+((q*y_6-y_0*z_6-6*y_1*z_5-15*y_2*z_4-20*y_3*z_3-15*y_4*z_2-6*y_5*z_1-y_6*z_0)*
+w_0+(q*w_6-6*w_1*z_5-15*w_2*z_4-20*w_3*z_3-15*w_4*z_2-6*w_5*z_1-w_6*z_0)*y_0+(-\
+6*w_1*y_5-15*w_2*y_4-20*w_3*y_3-15*w_4*y_2-6*w_5*y_1)*z_0+(6*w_1*y_5+15*w_2*y_4
++20*w_3*y_3+15*w_4*y_2+6*w_5*y_1)*q+(-30*y_1*z_4-60*y_2*z_3-60*y_3*z_2-30*y_4*
+z_1)*w_1+(-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1)*y_1+(-60*w_2*y_3-60*w_3*y_2)*z_1-\
+90*w_2*y_2*z_2)*c_0+((-6*c_1*z_5-15*c_2*z_4-20*c_3*z_3-15*c_4*z_2-6*c_5*z_1+c_6
+*q-c_6*z_0)*y_0+(-6*c_1*y_5-15*c_2*y_4-20*c_3*y_3-15*c_4*y_2-6*c_5*y_1)*z_0+(6*
+c_1*y_5+15*c_2*y_4+20*c_3*y_3+15*c_4*y_2+6*c_5*y_1)*q+(-30*y_1*z_4-60*y_2*z_3-\
+60*y_3*z_2-30*y_4*z_1)*c_1+(-60*c_2*z_3-60*c_3*z_2-30*c_4*z_1)*y_1+(-60*c_2*y_3
+-60*c_3*y_2)*z_1-90*y_2*z_2*c_2)*w_0+((-6*c_1*w_5-15*c_2*w_4-20*c_3*w_3-15*c_4*
+w_2-6*c_5*w_1)*z_0+(6*c_1*w_5+15*c_2*w_4+20*c_3*w_3+15*c_4*w_2+6*c_5*w_1)*q+(-\
+30*w_1*z_4-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1)*c_1+(-60*c_2*z_3-60*c_3*z_2-30*c_4
+*z_1)*w_1+(-60*c_2*w_3-60*c_3*w_2)*z_1-90*w_2*z_2*c_2)*y_0+((-30*w_1*y_4-60*w_2
+*y_3-60*w_3*y_2-30*w_4*y_1)*c_1+(-60*c_2*y_3-60*c_3*y_2-30*c_4*y_1)*w_1+(-60*
+c_2*w_3-60*c_3*w_2)*y_1-90*w_2*y_2*c_2)*z_0+((30*w_1*y_4+60*w_2*y_3+60*w_3*y_2+
+30*w_4*y_1)*c_1+(60*c_2*y_3+60*c_3*y_2+30*c_4*y_1)*w_1+(60*c_2*w_3+60*c_3*w_2)*
+y_1+90*w_2*y_2*c_2)*q+((-120*y_1*z_3-180*y_2*z_2-120*y_3*z_1)*w_1+(-180*w_2*z_2
+-120*w_3*z_1)*y_1-180*y_2*z_1*w_2)*c_1+((-180*c_2*z_2-120*c_3*z_1)*y_1-180*y_2*
+z_1*c_2)*w_1-180*c_2*w_2*y_1*z_1+b*w_6+w_7, c_6, (-v_0*x_5-5*v_1*x_4-10*v_2*x_3
+-10*v_3*x_2-5*v_4*x_1-v_5*x_0)*beta_0+(-5*beta_1*x_4-10*beta_2*x_3-10*beta_3*
+x_2-5*beta_4*x_1-beta_5*x_0)*v_0+(-5*beta_1*v_4-10*beta_2*v_3-10*beta_3*v_2-5*
+beta_4*v_1)*x_0+(-20*v_1*x_3-30*v_2*x_2-20*v_3*x_1)*beta_1+(-30*beta_2*x_2-20*
+beta_3*x_1)*v_1-30*beta_2*v_2*x_1+a*y_5+y_6, ((-w_0*y_5-5*w_1*y_4-10*w_2*y_3-10
+*w_3*y_2-5*w_4*y_1-w_5*y_0)*c_0+(-5*c_1*y_4-10*c_2*y_3-10*c_3*y_2-5*c_4*y_1-c_5
+*y_0)*w_0+(-5*c_1*w_4-10*c_2*w_3-10*c_3*w_2-5*c_4*w_1)*y_0+(-20*w_1*y_3-30*w_2*
+y_2-20*w_3*y_1)*c_1+(-30*c_2*y_2-20*c_3*y_1)*w_1-30*w_2*y_1*c_2)*q+h*z_5+z_6, 
+beta_5, -k*y_4+u*v_4+v_5, (v_0*x_4+4*v_1*x_3+6*v_2*x_2+4*v_3*x_1+v_4*x_0)*
+beta_0+(4*beta_1*x_3+6*beta_2*x_2+4*beta_3*x_1+beta_4*x_0)*v_0+(4*beta_1*v_3+6*
+beta_2*v_2+4*beta_3*v_1)*x_0+(12*v_1*x_2+12*v_2*x_1)*beta_1+12*beta_2*v_1*x_1+d
+*x_4+x_5, -w_7+4591154200869914726169730846226587650675581816488215503919871266\
+7236252364601197086605652141097258455053971400557624064896553550629264191706990\
+0672068262689894298728539963339026533772016210079258009461537589050223250976215\
+4060827059054017029505905319329843360122408031740156564133163526246731865478165\
+4801364544114446609364012437107468194055942174722720317142131282665503880068719\
+0999781353605465281290805558806188116043193004122204586481030980552344591159983\
+1880183838801023144838471613429840157453529698779212872711630149975044021507731\
+03551662856327540036, ((q*y_7-y_0*z_7-7*y_1*z_6-21*y_2*z_5-35*y_3*z_4-35*y_4*
+z_3-21*y_5*z_2-7*y_6*z_1-y_7*z_0)*w_0+(q*w_7-7*w_1*z_6-21*w_2*z_5-35*w_3*z_4-35
+*w_4*z_3-21*w_5*z_2-7*w_6*z_1-w_7*z_0)*y_0+(-7*w_1*y_6-21*w_2*y_5-35*w_3*y_4-35
+*w_4*y_3-21*w_5*y_2-7*w_6*y_1)*z_0+(7*w_1*y_6+21*w_2*y_5+35*w_3*y_4+35*w_4*y_3+
+21*w_5*y_2+7*w_6*y_1)*q+(-42*y_1*z_5-105*y_2*z_4-140*y_3*z_3-105*y_4*z_2-42*y_5
+*z_1)*w_1+(-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1)*y_1+(-105*w_2*y_4-\
+140*w_3*y_3-105*w_4*y_2)*z_1+(-210*y_2*z_3-210*y_3*z_2)*w_2-210*z_2*y_2*w_3)*
+c_0+((-7*c_1*z_6-21*c_2*z_5-35*c_3*z_4-35*c_4*z_3-21*c_5*z_2-7*c_6*z_1+c_7*q-
+c_7*z_0)*y_0+(-7*c_1*y_6-21*c_2*y_5-35*c_3*y_4-35*c_4*y_3-21*c_5*y_2-7*c_6*y_1)
+*z_0+(7*c_1*y_6+21*c_2*y_5+35*c_3*y_4+35*c_4*y_3+21*c_5*y_2+7*c_6*y_1)*q+(-42*
+y_1*z_5-105*y_2*z_4-140*y_3*z_3-105*y_4*z_2-42*y_5*z_1)*c_1+(-105*c_2*z_4-140*
+c_3*z_3-105*c_4*z_2-42*c_5*z_1)*y_1+(-105*c_2*y_4-140*c_3*y_3-105*c_4*y_2)*z_1+
+(-210*y_2*z_3-210*y_3*z_2)*c_2-210*c_3*y_2*z_2)*w_0+((-7*c_1*w_6-21*c_2*w_5-35*
+c_3*w_4-35*c_4*w_3-21*c_5*w_2-7*c_6*w_1)*z_0+(7*c_1*w_6+21*c_2*w_5+35*c_3*w_4+
+35*c_4*w_3+21*c_5*w_2+7*c_6*w_1)*q+(-42*w_1*z_5-105*w_2*z_4-140*w_3*z_3-105*w_4
+*z_2-42*w_5*z_1)*c_1+(-105*c_2*z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*z_1)*w_1+(-\
+105*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*z_1+(-210*w_2*z_3-210*w_3*z_2)*c_2-210*w_2
+*z_2*c_3)*y_0+((-42*w_1*y_5-105*w_2*y_4-140*w_3*y_3-105*w_4*y_2-42*w_5*y_1)*c_1
++(-105*c_2*y_4-140*c_3*y_3-105*c_4*y_2-42*c_5*y_1)*w_1+(-105*c_2*w_4-140*c_3*
+w_3-105*c_4*w_2)*y_1+(-210*w_2*y_3-210*w_3*y_2)*c_2-210*w_2*y_2*c_3)*z_0+((42*
+w_1*y_5+105*w_2*y_4+140*w_3*y_3+105*w_4*y_2+42*w_5*y_1)*c_1+(105*c_2*y_4+140*
+c_3*y_3+105*c_4*y_2+42*c_5*y_1)*w_1+(105*c_2*w_4+140*c_3*w_3+105*c_4*w_2)*y_1+(
+210*w_2*y_3+210*w_3*y_2)*c_2+210*w_2*y_2*c_3)*q+((-210*y_1*z_4-420*y_2*z_3-420*
+y_3*z_2-210*y_4*z_1)*w_1+(-420*w_2*z_3-420*w_3*z_2-210*w_4*z_1)*y_1+(-420*w_2*
+y_3-420*w_3*y_2)*z_1-630*w_2*y_2*z_2)*c_1+((-420*c_2*z_3-420*c_3*z_2-210*c_4*
+z_1)*y_1+(-420*c_2*y_3-420*c_3*y_2)*z_1-630*y_2*z_2*c_2)*w_1+((-420*c_2*w_3-420
+*c_3*w_2)*z_1-630*w_2*z_2*c_2)*y_1-630*c_2*w_2*y_2*z_1+b*w_7+w_8, c_7, (-v_0*
+x_6-6*v_1*x_5-15*v_2*x_4-20*v_3*x_3-15*v_4*x_2-6*v_5*x_1-v_6*x_0)*beta_0+(-6*
+beta_1*x_5-15*beta_2*x_4-20*beta_3*x_3-15*beta_4*x_2-6*beta_5*x_1-beta_6*x_0)*
+v_0+(-6*beta_1*v_5-15*beta_2*v_4-20*beta_3*v_3-15*beta_4*v_2-6*beta_5*v_1)*x_0+
+(-30*v_1*x_4-60*v_2*x_3-60*v_3*x_2-30*v_4*x_1)*beta_1+(-60*beta_2*x_3-60*beta_3
+*x_2-30*beta_4*x_1)*v_1+(-60*beta_2*v_3-60*beta_3*v_2)*x_1-90*beta_2*v_2*x_2+a*
+y_6+y_7, ((-w_0*y_6-6*w_1*y_5-15*w_2*y_4-20*w_3*y_3-15*w_4*y_2-6*w_5*y_1-w_6*
+y_0)*c_0+(-6*c_1*y_5-15*c_2*y_4-20*c_3*y_3-15*c_4*y_2-6*c_5*y_1-c_6*y_0)*w_0+(-\
+6*c_1*w_5-15*c_2*w_4-20*c_3*w_3-15*c_4*w_2-6*c_5*w_1)*y_0+(-30*w_1*y_4-60*w_2*
+y_3-60*w_3*y_2-30*w_4*y_1)*c_1+(-60*c_2*y_3-60*c_3*y_2-30*c_4*y_1)*w_1+(-60*c_2
+*w_3-60*c_3*w_2)*y_1-90*w_2*y_2*c_2)*q+h*z_6+z_7, beta_6, -k*y_5+u*v_5+v_6, (
+v_0*x_5+5*v_1*x_4+10*v_2*x_3+10*v_3*x_2+5*v_4*x_1+v_5*x_0)*beta_0+(5*beta_1*x_4
++10*beta_2*x_3+10*beta_3*x_2+5*beta_4*x_1+beta_5*x_0)*v_0+(5*beta_1*v_4+10*
+beta_2*v_3+10*beta_3*v_2+5*beta_4*v_1)*x_0+(20*v_1*x_3+30*v_2*x_2+20*v_3*x_1)*
+beta_1+(30*beta_2*x_2+20*beta_3*x_1)*v_1+30*beta_2*v_2*x_1+d*x_5+x_6, -w_8+1424\
+9741731894713062470538698276596988104477535533183818515581159807273110526922356\
+5210508934714132126837829432915574905645183972023163580977301593342557339740416\
+4370887022628171423936741235768707051561265403318148045559274263251663695522225\
+5538356860769415610477706436356859469824979442604708217271333930633063479763621\
+1094556117988792351832966489389509355119473794667176911251580594070941819352117\
+8474739902939785233550190947333855493147084530684689998148867067516420929075928\
+9539749989139796522257461247565322102207391454307893940958220648808744171750365\
+529828335125777783646673372662419613652333515352135612866018803128690819898508,
+((q*y_8-y_0*z_8-8*y_1*z_7-28*y_2*z_6-56*y_3*z_5-70*y_4*z_4-56*y_5*z_3-28*y_6*
+z_2-8*y_7*z_1-y_8*z_0)*w_0+(q*w_8-8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-70*w_4*z_4-56
+*w_5*z_3-28*w_6*z_2-8*w_7*z_1-w_8*z_0)*y_0+(-8*w_1*y_7-28*w_2*y_6-56*w_3*y_5-70
+*w_4*y_4-56*w_5*y_3-28*w_6*y_2-8*w_7*y_1)*z_0+(8*w_1*y_7+28*w_2*y_6+56*w_3*y_5+
+70*w_4*y_4+56*w_5*y_3+28*w_6*y_2+8*w_7*y_1)*q+(-56*y_1*z_6-168*y_2*z_5-280*y_3*
+z_4-280*y_4*z_3-168*y_5*z_2-56*y_6*z_1)*w_1+(-168*w_2*z_5-280*w_3*z_4-280*w_4*
+z_3-168*w_5*z_2-56*w_6*z_1)*y_1+(-168*w_2*y_5-280*w_3*y_4-280*w_4*y_3-168*w_5*
+y_2)*z_1+(-420*y_2*z_4-560*y_3*z_3-420*y_4*z_2)*w_2+(-560*w_3*z_3-420*w_4*z_2)*
+y_2-560*w_3*y_3*z_2)*c_0+((-8*c_1*z_7-28*c_2*z_6-56*c_3*z_5-70*c_4*z_4-56*c_5*
+z_3-28*c_6*z_2-8*c_7*z_1+c_8*q-c_8*z_0)*y_0+(-8*c_1*y_7-28*c_2*y_6-56*c_3*y_5-\
+70*c_4*y_4-56*c_5*y_3-28*c_6*y_2-8*c_7*y_1)*z_0+(8*c_1*y_7+28*c_2*y_6+56*c_3*
+y_5+70*c_4*y_4+56*c_5*y_3+28*c_6*y_2+8*c_7*y_1)*q+(-56*y_1*z_6-168*y_2*z_5-280*
+y_3*z_4-280*y_4*z_3-168*y_5*z_2-56*y_6*z_1)*c_1+(-168*c_2*z_5-280*c_3*z_4-280*
+c_4*z_3-168*c_5*z_2-56*c_6*z_1)*y_1+(-168*c_2*y_5-280*c_3*y_4-280*c_4*y_3-168*
+c_5*y_2)*z_1+(-420*y_2*z_4-560*y_3*z_3-420*y_4*z_2)*c_2+(-560*c_3*z_3-420*c_4*
+z_2)*y_2-560*c_3*y_3*z_2)*w_0+((-8*c_1*w_7-28*c_2*w_6-56*c_3*w_5-70*c_4*w_4-56*
+c_5*w_3-28*c_6*w_2-8*c_7*w_1)*z_0+(8*c_1*w_7+28*c_2*w_6+56*c_3*w_5+70*c_4*w_4+
+56*c_5*w_3+28*c_6*w_2+8*c_7*w_1)*q+(-56*w_1*z_6-168*w_2*z_5-280*w_3*z_4-280*w_4
+*z_3-168*w_5*z_2-56*w_6*z_1)*c_1+(-168*c_2*z_5-280*c_3*z_4-280*c_4*z_3-168*c_5*
+z_2-56*c_6*z_1)*w_1+(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*c_5*w_2)*z_1+(-\
+420*w_2*z_4-560*w_3*z_3-420*w_4*z_2)*c_2+(-560*c_3*z_3-420*c_4*z_2)*w_2-560*c_3
+*w_3*z_2)*y_0+((-56*w_1*y_6-168*w_2*y_5-280*w_3*y_4-280*w_4*y_3-168*w_5*y_2-56*
+w_6*y_1)*c_1+(-168*c_2*y_5-280*c_3*y_4-280*c_4*y_3-168*c_5*y_2-56*c_6*y_1)*w_1+
+(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*c_5*w_2)*y_1+(-420*w_2*y_4-560*w_3*
+y_3-420*w_4*y_2)*c_2+(-560*c_3*y_3-420*c_4*y_2)*w_2-560*w_3*y_2*c_3)*z_0+((56*
+w_1*y_6+168*w_2*y_5+280*w_3*y_4+280*w_4*y_3+168*w_5*y_2+56*w_6*y_1)*c_1+(168*
+c_2*y_5+280*c_3*y_4+280*c_4*y_3+168*c_5*y_2+56*c_6*y_1)*w_1+(168*c_2*w_5+280*
+c_3*w_4+280*c_4*w_3+168*c_5*w_2)*y_1+(420*w_2*y_4+560*w_3*y_3+420*w_4*y_2)*c_2+
+(560*c_3*y_3+420*c_4*y_2)*w_2+560*w_3*y_2*c_3)*q+((-336*y_1*z_5-840*y_2*z_4-\
+1120*y_3*z_3-840*y_4*z_2-336*y_5*z_1)*w_1+(-840*w_2*z_4-1120*w_3*z_3-840*w_4*
+z_2-336*w_5*z_1)*y_1+(-840*w_2*y_4-1120*w_3*y_3-840*w_4*y_2)*z_1+(-1680*y_2*z_3
+-1680*y_3*z_2)*w_2-1680*z_2*y_2*w_3)*c_1+((-840*c_2*z_4-1120*c_3*z_3-840*c_4*
+z_2-336*c_5*z_1)*y_1+(-840*c_2*y_4-1120*c_3*y_3-840*c_4*y_2)*z_1+(-1680*y_2*z_3
+-1680*y_3*z_2)*c_2-1680*c_3*y_2*z_2)*w_1+((-840*c_2*w_4-1120*c_3*w_3-840*c_4*
+w_2)*z_1+(-1680*w_2*z_3-1680*w_3*z_2)*c_2-1680*w_2*z_2*c_3)*y_1+((-1680*w_2*y_3
+-1680*w_3*y_2)*c_2-1680*w_2*y_2*c_3)*z_1-2520*c_2*w_2*y_2*z_2+b*w_8+w_9, c_8, (
+-v_0*x_7-7*v_1*x_6-21*v_2*x_5-35*v_3*x_4-35*v_4*x_3-21*v_5*x_2-7*v_6*x_1-v_7*
+x_0)*beta_0+(-7*beta_1*x_6-21*beta_2*x_5-35*beta_3*x_4-35*beta_4*x_3-21*beta_5*
+x_2-7*beta_6*x_1-beta_7*x_0)*v_0+(-7*beta_1*v_6-21*beta_2*v_5-35*beta_3*v_4-35*
+beta_4*v_3-21*beta_5*v_2-7*beta_6*v_1)*x_0+(-42*v_1*x_5-105*v_2*x_4-140*v_3*x_3
+-105*v_4*x_2-42*v_5*x_1)*beta_1+(-105*beta_2*x_4-140*beta_3*x_3-105*beta_4*x_2-\
+42*beta_5*x_1)*v_1+(-105*beta_2*v_4-140*beta_3*v_3-105*beta_4*v_2)*x_1+(-210*
+v_2*x_3-210*v_3*x_2)*beta_2-210*beta_3*v_2*x_2+a*y_7+y_8, ((-w_0*y_7-7*w_1*y_6-\
+21*w_2*y_5-35*w_3*y_4-35*w_4*y_3-21*w_5*y_2-7*w_6*y_1-w_7*y_0)*c_0+(-7*c_1*y_6-\
+21*c_2*y_5-35*c_3*y_4-35*c_4*y_3-21*c_5*y_2-7*c_6*y_1-c_7*y_0)*w_0+(-7*c_1*w_6-\
+21*c_2*w_5-35*c_3*w_4-35*c_4*w_3-21*c_5*w_2-7*c_6*w_1)*y_0+(-42*w_1*y_5-105*w_2
+*y_4-140*w_3*y_3-105*w_4*y_2-42*w_5*y_1)*c_1+(-105*c_2*y_4-140*c_3*y_3-105*c_4*
+y_2-42*c_5*y_1)*w_1+(-105*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*y_1+(-210*w_2*y_3-\
+210*w_3*y_2)*c_2-210*w_2*y_2*c_3)*q+h*z_7+z_8, beta_7, -k*y_6+u*v_6+v_7, (v_0*
+x_6+6*v_1*x_5+15*v_2*x_4+20*v_3*x_3+15*v_4*x_2+6*v_5*x_1+v_6*x_0)*beta_0+(6*
+beta_1*x_5+15*beta_2*x_4+20*beta_3*x_3+15*beta_4*x_2+6*beta_5*x_1+beta_6*x_0)*
+v_0+(6*beta_1*v_5+15*beta_2*v_4+20*beta_3*v_3+15*beta_4*v_2+6*beta_5*v_1)*x_0+(
+30*v_1*x_4+60*v_2*x_3+60*v_3*x_2+30*v_4*x_1)*beta_1+(60*beta_2*x_3+60*beta_3*
+x_2+30*beta_4*x_1)*v_1+(60*beta_2*v_3+60*beta_3*v_2)*x_1+90*beta_2*v_2*x_2+d*
+x_6+x_7, -w_9+34033951031577466842518800855987503036649828302829105784807400981\
+7081389626174267529997372606936032223933755284209836966675952512891995077001886\
+2292001513312283819930330987385602209840626083768047411988789037750778664339301\
+3359549929705521020760280006941165154893222861319784858255054890140877148242924\
+0360027782456443694950614349689228071752237295185394231219801924311696021842468\
+5682154628406387165879252125352317086710179449546400598683557625058007151186407\
+1385726585326983870383352153237717230960866317303583948544312059041736809029797\
+4872648017610799631787607330933730044460126445626001269559890932809071800677692\
+2870692718692247185898085658380349998167136673415851833593178566929114982981425\
+04441696835164, 185197212404956640643418446871645805429243639250819048477652373\
+2476583952613524669305740980782575998806206646349618202349368497683020114483777\
+2097559995806215211211128298329784677855638125499660633348696145231236002182843\
+0862572612735453873579358141858480895088379714200750764601144581653610644782294\
+87358827706619041896399712336-z_4, 45790567977853149654679784699587440235593853\
+5029315830042036116053400154942465856191924348309111545226870138568686711404176\
+6742585094503407676132032235594457599291016892611500693932745471835055477737092\
+7813100049944472439713047194186141133556661593795460399772446349974921079358812\
+1010481194016105635035195811987158735766305307992356259421917083480160236638959\
+174670921830679867245178641491735484410510496-z_5, 5068987217850207866052026625\
+5071137337994869648373365438778265382481977130619904737388121275370818931246905\
+6653403052253783690179331963612997116051008507700689897539921543890381798509403\
+6567623163272561958506820651329332987152216683491441560375208992147130635983213\
+6785296528554309563236616948255722244923668843582177078456869201670425962828788\
+0582981889188798530713584405391772111782566078998416928002753533381111332279377\
+8919948746877476085179013609684568168701540989702040257280-z_6, 139797170018384\
+1973775426429488406404610117002221245801906178537222511242827345189863027707269\
+4990439087400876257376111533854270963852350483409509590704855669774107585525838\
+8609951259089756938046646270633708391433234179278089963303426512989540849687048\
+3677313640886975277189377072357539307612685323188214311774342077971574963480614\
+3154812757204999642532775194790737737365434214819645406957998850185533545724422\
+1178104750972665965255504531234124412552805248235208751075494106877676058414210\
+736743526273653232653264173736968342838097881246783281815266937416128-z_7, 2421\
+4256721077839330720187464518974814953571099688253397457991434701163024738999801\
+0965812385588687757789277871884300921169045743582589918641455726748532514353517\
+0646639134336226239206286038164855488918794042501031054310327813335862195460661\
+2062863183556989515663372818796968292144943247876126873435528114902523609440769\
+0201402068396548365168848855617325123231722454229802429048048329159486829226965\
+2441788129185534248836088177762535367978442066752242874175097877046252504145418\
+4337840593243425716478283247943222404979873846871795328670027483720444436606943\
+50281535929839800937371070524883825222847488203089583790761202505738655744064-
+z_8, -beta_1, -beta_2, -beta_3, -beta_4, -beta_5, -beta_6, -beta_7, -c_1, -c_2,
+-c_3, -c_4, -c_5, -c_6, -c_7, -c_8, z_aux-1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -761,7 +781,7 @@ Nonidentifiable parameter:  [beta, c, k, lm, v(0), x(0), y(0)]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[c = 1, x_ = 2, h = 1, y_ = 1, v_ = 2, z_ = 0, q = 1, k = 3, lm = 3, w_ = 0, d = 3, a = 2, u = 3, b = 1, beta = 2]
+States for substitution:	[u = 3, y_ = 1, v_ = 2, c = 1, beta = 2, b = 1, q = 1, w_ = 0, z_ = 0, a = 2, lm = 3, d = 3, x_ = 2, k = 3, h = 1]
 NonID parameters:	[beta, c, k, lm, v_0, x_0, y_0]
-Substitutions:	[x_ = 3, y_ = 2, v_ = 3, z_aux = 3, z_ = 1, w_ = 1, d = 4, u = 4]
-memory used=4614.2MB, alloc=153.7MB, time=42.21
+Substitutions:	[u = 4, z_aux = 3, y_ = 2, v_ = 3, w_ = 1, z_ = 1, d = 4, x_ = 3]
+memory used=4649.3MB, alloc=146.3MB, time=42.23

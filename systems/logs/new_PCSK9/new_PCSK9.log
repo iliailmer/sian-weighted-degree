@@ -1,0 +1,61 @@
+    |\^/|     Maple 2021 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+# PCSK9 9 25 https://doi.org/10.1038/psp.2014.47 2014 Gadkar et al. SimBio
+
+> kernelopts(printbytes=false, assertlevel=1):
+> interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:107|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+sigma := [diff(hepCh(t),t) = f_diet_abs*S_diet+f_hepCh_statin*S_hepCh_loss-
+k_hepCh_loss*hepCh(t)-k_LDL_syn*Ch_LDLpart*V*hepCh(t)+f_LDLchep_clr*k_LDLc_clr1
+*V*LDLc(t)*LDLr+f_LDLchep_clr*k_LDLc_clr2*V*LDLc(t)+f_LDLchep_clr*k_HDLc_clr*V*
+HDLc, diff(LDLc(t),t) = k_LDL_syn*Ch_LDL_particle*hepCh(t)-k_LDLc_clr1*LDLc(t)*
+LDLr+k_LDLc_clr2*LDLc(t), diff(LDLR(t),t) = k_LDLR_syn*f_SREBP2_reg_LDLR-
+k_LDLR_deg*LDLR(t)*f_PCSK9_deg_LDLR, diff(Ad(t),t) = -k_abs*Ad(t), diff(Cc(t),t
+) = k_abs*f*Ad(t)/Vc-Cl*Cc(t)/Vc-Q*(Cc(t)-Cp(t))/Vc-k_on*Cc(t)*PCSK9(t)+k_off*
+Ccom(t), diff(Cp(t),t) = Q*(Cc(t)-Cp(t))/Vp, diff(PCSK9(t),t) = k_PCSK9_syn*
+f_SREBP2_reg_PCSK9-k_PCSK9_deg*PCSK9(t)-k_on*Cc(t)*PCSK9(t)+k_off*Ccom(t), diff
+(Ccom(t),t) = k_on*Cc(t)*PCSK9(t)-k_off*Ccom(t)-k_complex_deg*Ccom(t), y1(t) =
+LDLc(t), y2(t) = PCSK9(t)]
+
+=======================================================
+0. Extracting states, inputs, outputs, and parameters from the system
+=======================================================
+
+=== Input info ===
+State variables:          [hepCh(t), LDLc(t), LDLR(t), Ad(t), Cc(t), Cp(t), PCSK9(t), Ccom(t)]
+Output variables:         [y1(t), y2(t)]
+Input variables:          []
+Parameters in equations:  [Cl, HDLc, LDLr, Q, S_diet, V, Vc, Vp, f, k_abs, k_off, k_on, Ch_LDL_particle, Ch_LDLpart, S_hepCh_loss, f_LDLchep_clr, f_diet_abs, f_hepCh_statin, k_HDLc_clr, k_LDLR_deg, k_LDLR_syn, k_LDL_syn, k_LDLc_clr1, k_LDLc_clr2, k_PCSK9_deg, k_PCSK9_syn, k_complex_deg, k_hepCh_loss, f_PCSK9_deg_LDLR, f_SREBP2_reg_LDLR, f_SREBP2_reg_PCSK9]
+===================
+
+
+=======================================================
+1. Constructing the maximal polynomial system
+=======================================================
+Interrupted

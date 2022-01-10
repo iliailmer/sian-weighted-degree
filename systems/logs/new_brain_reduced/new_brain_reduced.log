@@ -9,13 +9,29 @@
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:326|
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:107|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 sigma := [diff(Cp(t),t) = ((QT-LT)*CTv(t)+(Qb-Lb)*CBv(t)+(LT+Lb)*CL(t)-QT*Cp(t)
 -Qb*Cp(t))/VP, diff(CTv(t),t) = (QT*Cp(t)-(QT-LT)*CTv(t)-(1-sigmaTv)*LT*CTv(t)-
 CLupt*CTv(t)-CLupt*FR*CTeb(t))/Vtv, diff(CTeu(t),t) = (CLupt*(CTv(t)+CTl(t))-
@@ -59,4 +75,3 @@ Parameters in equations:  [CLupb, CLupbbb, CLupt, FR, FRb, KonFcRn, LB, LT, Lb, 
 1. Constructing the maximal polynomial system
 =======================================================
 Interrupted
-memory used=137.1MB, alloc=144.3MB, time=2.02

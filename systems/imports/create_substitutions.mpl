@@ -103,6 +103,18 @@ SubsByDepth := proc(sigma, {trdegsub:=true})
 end proc:
 
 WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
+  writeto(cat("../maple_scripts/", PATH, "/", script_name, "_inverted_pos_char.mpl"));
+  weights := all_subs:
+  max_degree := max(map(x->degree(rhs(x)), weights)):
+  new_weights := {seq(lhs(each)=lhs(each)^((max_degree - degree(rhs(each)) + 1)), each in weights)}:
+  printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
+  printf("infolevel[Groebner]:=10;\net_hat:=%s;\n", convert(et_hat, string));
+  printf("vars:=%s;\n", convert(vars, string));
+  printf("new_weights:=%a;\n", new_weights); 
+  printf("gb:=Groebner[Basis](subs(new_weights, et_hat), tdeg(op(vars)), characteristic=11863279);\n", convert(char, string));
+  printf("# %a\nquit;", new_weights);
+  writeto(terminal);
+
   writeto(cat("../maple_scripts/", PATH, "/", script_name, "_pos_char.mpl"));
   printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
   printf("infolevel[Groebner]:=10;\net_hat:=%s;\n", convert(et_hat, string));
