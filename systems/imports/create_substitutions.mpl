@@ -103,6 +103,7 @@ SubsByDepth := proc(sigma, {trdegsub:=true})
 end proc:
 
 WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
+  
   writeto(cat("../maple_scripts/", PATH, "/", script_name, "_inverted_pos_char.mpl"));
   weights := all_subs:
   max_degree := max(map(x->degree(rhs(x)), weights)):

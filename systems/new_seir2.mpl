@@ -19,11 +19,11 @@ y1(t) = i(t) + r(t) # this output alone causes maple to finish faster with subs 
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
-WriteScripts(original_et_hat, system_vars[2], "new_seir2_original_no_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "new_seir2_weights_no_trb", all_subs, PATH);
+WriteScripts(original_et_hat, system_vars[2], "original_no_trb", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "weights_no_trb", all_subs, PATH);
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
 
-WriteScripts(original_et_hat, system_vars[2], "new_seir2_original_with_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "new_seir2_weights_with_trb", all_subs, PATH);
+WriteScripts(original_et_hat, system_vars[2], "original_with_trb", {}, PATH);
+WriteScripts(system_vars[1], system_vars[2], "weights_with_trb", all_subs, PATH);
 quit;

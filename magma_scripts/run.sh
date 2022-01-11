@@ -11,9 +11,10 @@ done
 for each in "${array[@]}"; do
     mkdir -p $each/runtimes
     mkdir -p $each/outputs
-    for d in $each/*_original_with_trb_pos_char.m; do
-        outname="original_with_trb_pos_char.out"
-        timename="original_with_trb_pos_char_time.out"
+    for d in $each/*with_trb_pos_char.m; do
+        outname=(${d//"/"/ })
+        outname=${outname[1]}
+        timename="time_${outname}"
         echo $d
         (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" magma $d) >$each/outputs/$outname 2>$each/runtimes/$timename
         if [[ ${map["$each"]} ]]; then
@@ -22,29 +23,7 @@ for each in "${array[@]}"; do
             done
         fi
     done
-    # for d in $each/*_original_no_trb_pos_char.m; do
-    #     outname="original_no_trb_pos_char.out"
-    #     timename="original_no_trb_pos_char_time.out"
-    #     echo $d
-    #     (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" magma $d) >$each/outputs/$outname 2>$each/runtimes/$timename
-    #     if [[ ${map["$each"]} ]]; then
-    #         for iter in {1..10}; do
-    #             (/usr/bin/time -f "\n%e,=%U+%S,%M000" magma $d) >>$each/outputs/$outname 2>>$each/runtimes/$timename
-    #         done
-    #     fi
-    # done
-    for d in $each/*_weights_with_trb_pos_char.m; do
-        outname="weights_with_trb_pos_char.out"
-        timename="weights_with_trb_pos_char_time.out"
-        echo $d
-        (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" magma $d) >$each/outputs/$outname 2>$each/runtimes/$timename
-        if [[ ${map["$each"]} ]]; then
-            for iter in {1..10}; do
-                (/usr/bin/time -f "\n%e,=%U+%S,%M000" magma $d) >>$each/outputs/$outname 2>>$each/runtimes/$timename
-            done
-        fi
-    done
-    # for d in $each/*_weights_no_trb_pos_char.m; do
+    # for d in $each/*no_trb_pos_char.m; do
     #     outname="weights_no_trb_pos_char.out"
     #     timename="weights_no_trb_pos_char_time.out"
     #     echo $d
