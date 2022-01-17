@@ -23,13 +23,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -64,9 +64,9 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[IGF_ = 0, mu = 1, betaGOMF = 1, nuGOF = 1, IOGF_ = 0, SM_ = 1, betaOOFM = 1, gammaGM = 1, betaGGMF = 1, gammaOF = 1, IOM_ = 0, betaOOMF = 1, nuOGF = 1, IGM_ = 0, betaOGMF = 1, gammaOM = 1, IOGM_ = 0, gammaGF = 1, betaGOFM = 1, betaOGFM = 1, SF_ = 1, nuOGM = 1, IOF_ = 0, nuGOM = 1, betaGGFM = 1]
+States for substitution:	[betaGGFM = 1, SM_ = 1, nuGOM = 1, betaOGFM = 1, IOM_ = 0, nuOGM = 1, betaGOFM = 1, gammaGF = 1, IGF_ = 0, betaOGMF = 1, gammaOM = 1, IOGF_ = 0, betaOOMF = 1, nuOGF = 1, SF_ = 1, betaGGMF = 1, gammaOF = 1, gammaGM = 1, betaOOFM = 1, IOF_ = 0, IGM_ = 0, nuGOF = 1, IOGM_ = 0, betaGOMF = 1, mu = 1]
 NonID parameters:	[]
-Substitutions:	[IGF_ = 1, mu = 2, betaGOMF = 2, nuGOF = 2, z_aux = 1, IOGF_ = 1, SM_ = 2, betaOOFM = 2, gammaGM = 2, betaGGMF = 2, gammaOF = 2, IOM_ = 1, betaOOMF = 2, nuOGF = 2, IGM_ = 1, betaOGMF = 2, gammaOM = 2, IOGM_ = 1, gammaGF = 2, betaGOFM = 2, betaOGFM = 2, SF_ = 2, nuOGM = 2, IOF_ = 1, nuGOM = 2, betaGGFM = 2]
+Substitutions:	[betaGGFM = 2, SM_ = 2, nuGOM = 2, betaOGFM = 2, IOM_ = 1, nuOGM = 2, betaGOFM = 2, gammaGF = 2, IGF_ = 1, betaOGMF = 2, gammaOM = 2, IOGF_ = 1, betaOOMF = 2, nuOGF = 2, SF_ = 2, betaGGMF = 2, gammaOF = 2, gammaGM = 2, betaOOFM = 2, IOF_ = 1, IGM_ = 1, nuGOF = 2, z_aux = 1, IOGM_ = 1, betaGOMF = 2, mu = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -101,7 +101,7 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[IGF_ = 0, mu = 1, betaGOMF = 1, nuGOF = 1, IOGF_ = 0, SM_ = 1, betaOOFM = 1, gammaGM = 1, betaGGMF = 1, gammaOF = 1, IOM_ = 0, betaOOMF = 1, nuOGF = 1, IGM_ = 0, betaOGMF = 1, gammaOM = 1, IOGM_ = 0, gammaGF = 1, betaGOFM = 1, betaOGFM = 1, SF_ = 1, nuOGM = 1, IOF_ = 0, nuGOM = 1, betaGGFM = 1]
+States for substitution:	[betaGGFM = 1, SM_ = 1, nuGOM = 1, betaOGFM = 1, IOM_ = 0, nuOGM = 1, betaGOFM = 1, gammaGF = 1, IGF_ = 0, betaOGMF = 1, gammaOM = 1, IOGF_ = 0, betaOOMF = 1, nuOGF = 1, SF_ = 1, betaGGMF = 1, gammaOF = 1, gammaGM = 1, betaOOFM = 1, IOF_ = 0, IGM_ = 0, nuGOF = 1, IOGM_ = 0, betaGOMF = 1, mu = 1]
 NonID parameters:	[]
-Substitutions:	[IGF_ = 1, mu = 2, betaGOMF = 2, nuGOF = 2, z_aux = 1, IOGF_ = 1, SM_ = 2, betaOOFM = 2, gammaGM = 2, betaGGMF = 2, gammaOF = 2, IOM_ = 1, betaOOMF = 2, nuOGF = 2, IGM_ = 1, betaOGMF = 2, gammaOM = 2, IOGM_ = 1, gammaGF = 2, betaGOFM = 2, betaOGFM = 2, SF_ = 2, nuOGM = 2, IOF_ = 1, nuGOM = 2, betaGGFM = 2]
-memory used=22273.2MB, alloc=192.3MB, time=139.80
+Substitutions:	[betaGGFM = 2, SM_ = 2, nuGOM = 2, betaOGFM = 2, IOM_ = 1, nuOGM = 2, betaGOFM = 2, gammaGF = 2, IGF_ = 1, betaOGMF = 2, gammaOM = 2, IOGF_ = 1, betaOOMF = 2, nuOGF = 2, SF_ = 2, betaGGMF = 2, gammaOF = 2, gammaGM = 2, betaOOFM = 2, IOF_ = 1, IGM_ = 1, nuGOF = 2, z_aux = 1, IOGM_ = 1, betaGOMF = 2, mu = 2]
+memory used=14924.7MB, alloc=179.8MB, time=102.13

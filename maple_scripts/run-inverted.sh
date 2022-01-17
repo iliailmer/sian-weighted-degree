@@ -10,9 +10,10 @@ done
 for each in "${array[@]}"; do
     mkdir -p $each/runtimes
     mkdir -p $each/outputs
-    for d in $each/*_original_with_trb_inverted_pos_char.mpl; do
-        outname="original_with_trb_inverted_pos_char.out"
-        timename="original_inverted_with_trb_inverted_pos_char_time.out"
+    for d in $each/*with_trb_inverted_pos_char.mpl; do
+        outname=(${d//"/"/ })
+        outname="${outname[1]::-4}.out"
+        timename="time_${outname::-4}.out"
         echo $d
         (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" /local/maple2021/bin/maple $d) >$each/outputs/$outname 2>$each/runtimes/$timename
         if [[ ${map["$each"]} ]]; then
@@ -21,37 +22,4 @@ for each in "${array[@]}"; do
             done
         fi
     done
-    # for d in $each/original_no_trb_zero_char.mpl; do
-    #     outname="original_no_trb_zero_char.out"
-    #     timename="original_no_trb_zero_char_time.out"
-    #     echo $d
-    #     (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" /local/maple2021/bin/maple $d) >$each/outputs/$outname 2>$each/runtimes/$timename
-    #     if [[ ${map["$each"]} ]]; then
-    #         for iter in {1..10}; do
-    #             (/usr/bin/time -f "\n%e,=%U+%S,%M000" /local/maple2021/bin/maple $d) >>$each/outputs/$outname 2>>$each/runtimes/$timename
-    #         done
-    #     fi
-    # done
-    for d in $each/*_weights_with_trb_inverted_pos_char.mpl; do
-        outname="weights_with_trb_inverted_pos_char.out"
-        timename="weights_with_trb_pos_inverted_char_time.out"
-        echo $d
-        (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" /local/maple2021/bin/maple $d) >$each/outputs/$outname 2>$each/runtimes/$timename
-        if [[ ${map["$each"]} ]]; then
-            for iter in {1..10}; do
-                (/usr/bin/time -f "\n%e,=%U+%S,%M000" /local/maple2021/bin/maple $d) >>$each/outputs/$outname 2>>$each/runtimes/$timename
-            done
-        fi
-    done
-    # for d in $each/weights_no_trb_zero_char.mpl; do
-    #     outname="weights_no_trb_zero_char.out"
-    #     timename="weights_no_trb_zero_char_time.out"
-    #     echo $d
-    #     (/usr/bin/time -f "elapsed,user+system,memory\n%e,=%U+%S,%M000" /local/maple2021/bin/maple $d) >$each/outputs/$outname 2>$each/runtimes/$timename
-    #     if [[ ${map["$each"]} ]]; then
-    #         for iter in {1..10}; do
-    #             (/usr/bin/time -f "\n%e,=%U+%S,%M000" /local/maple2021/bin/maple $d) >>$each/outputs/$outname 2>>$each/runtimes/$timename
-    #         done
-    #     fi
-    # done
 done

@@ -23,13 +23,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -50,58 +50,3 @@ Parameters in equations:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
-Locally identifiable paramters:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b10, beta01, beta10, beta11, c0001, c0010, c0011, c0111, c1011, gamma0100, gamma1000, gamma1100, gamma1101, gamma1110, KS00(0), KS01(0), KS10(0), FS01(0), FS10(0), FS11(0), K(0), Ff(0), S00(0), S01(0), S10(0), S11(0)]
-Nonidentifiable parameter:  []
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[c0111 = 1, a10 = 1, K_ = 1, a01 = 1, b00 = 1, Ff_ = 0, gamma1110 = 1, gamma1101 = 1, b10 = 1, b01 = 1, KS00_ = 1, S00_ = 0, beta11 = 1, KS01_ = 1, S01_ = 0, gamma1100 = 1, beta10 = 1, alpha01 = 1, a00 = 1, S10_ = 0, KS10_ = 1, alpha11 = 1, gamma1000 = 1, c0001 = 1, S11_ = 0, FS01_ = 1, beta01 = 1, c0011 = 1, c0010 = 1, gamma0100 = 1, FS10_ = 1, alpha10 = 1, c1011 = 1, FS11_ = 1]
-NonID parameters:	[]
-Substitutions:	[c0111 = 2, a10 = 2, K_ = 2, a01 = 2, b00 = 2, Ff_ = 1, gamma1110 = 2, gamma1101 = 2, b10 = 2, b01 = 2, KS00_ = 2, S00_ = 1, beta11 = 2, KS01_ = 2, S01_ = 1, z_aux = 1, gamma1100 = 2, beta10 = 2, alpha01 = 2, a00 = 2, S10_ = 1, KS10_ = 2, alpha11 = 2, gamma1000 = 2, c0001 = 2, FS01_ = 2, S11_ = 1, beta01 = 2, c0011 = 2, c0010 = 2, gamma0100 = 2, FS10_ = 2, alpha10 = 2, c1011 = 2, FS11_ = 2]
-
-=======================================================
-0. Extracting states, inputs, outputs, and parameters from the system
-=======================================================
-
-=== Input info ===
-State variables:          [KS00(t), KS01(t), KS10(t), FS01(t), FS10(t), FS11(t), K(t), Ff(t), S00(t), S01(t), S10(t), S11(t)]
-Output variables:         [y1(t), y2(t), y3(t), y4(t), y5(t)]
-Input variables:          []
-Parameters in equations:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b10, beta01, beta10, beta11, c0001, c0010, c0011, c0111, c1011, gamma0100, gamma1000, gamma1100, gamma1101, gamma1110]
-===================
-
-
-=======================================================
-1. Constructing the maximal polynomial system
-=======================================================
-
-=======================================================
-2. Truncating the polynomial system based on the Jacobian condition
-=======================================================
-
-=======================================================
-3. Assessing local identifiability
-=======================================================
-
-=======================================================
-Creating Truncated system (old)
-=======================================================
-Locally identifiable paramters:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b10, beta01, beta10, beta11, c0001, c0010, c0011, c0111, c1011, gamma0100, gamma1000, gamma1100, gamma1101, gamma1110, KS00(0), KS01(0), KS10(0), FS01(0), FS10(0), FS11(0), K(0), Ff(0), S00(0), S01(0), S10(0), S11(0)]
-Nonidentifiable parameter:  []
-
-=======================================================
-4. Randomizing the truncated system
-=======================================================
-States for substitution:	[c0111 = 1, a10 = 1, K_ = 1, a01 = 1, b00 = 1, Ff_ = 0, gamma1110 = 1, gamma1101 = 1, b10 = 1, b01 = 1, KS00_ = 1, S00_ = 0, beta11 = 1, KS01_ = 1, S01_ = 0, gamma1100 = 1, beta10 = 1, alpha01 = 1, a00 = 1, S10_ = 0, KS10_ = 1, alpha11 = 1, gamma1000 = 1, c0001 = 1, S11_ = 0, FS01_ = 1, beta01 = 1, c0011 = 1, c0010 = 1, gamma0100 = 1, FS10_ = 1, alpha10 = 1, c1011 = 1, FS11_ = 1]
-NonID parameters:	[]
-Substitutions:	[c0111 = 2, a10 = 2, K_ = 2, a01 = 2, b00 = 2, Ff_ = 1, gamma1110 = 2, gamma1101 = 2, b10 = 2, b01 = 2, KS00_ = 2, S00_ = 1, beta11 = 2, KS01_ = 2, S01_ = 1, z_aux = 1, gamma1100 = 2, beta10 = 2, alpha01 = 2, a00 = 2, S10_ = 1, KS10_ = 2, alpha11 = 2, gamma1000 = 2, c0001 = 2, FS01_ = 2, S11_ = 1, beta01 = 2, c0011 = 2, c0010 = 2, gamma0100 = 2, FS10_ = 2, alpha10 = 2, c1011 = 2, FS11_ = 2]
-memory used=11683.4MB, alloc=211.8MB, time=83.07
