@@ -4,6 +4,8 @@ from statistics import median
 from tqdm.auto import tqdm
 
 short_scripts = [
+    "new_mapk_1",
+    "new_mapk_3",
     "new-akt",
     "new-cd8-cells",
     "original_biohydrogenation",
