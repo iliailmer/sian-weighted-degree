@@ -23,13 +23,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -64,9 +64,9 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[r_ = 0, (NULL) = 1, eq_ = 2, theta0 = 2, sq_ = 3, e_ = 1, s_ = 2, lmb = 3, h_ = 1, g_h = 1, dlt_i = 1, c = 2, g_i = 2, b = 2, alpha = 1, dlt_q = 2, i_ = 0, q = 2]
+States for substitution:	[(NULL) = 1, g_h = 1, lmb = 3, r_ = 0, e_ = 1, dlt_i = 1, theta0 = 2, sq_ = 3, s_ = 2, b = 2, g_i = 2, h_ = 1, q = 2, i_ = 0, dlt_q = 2, alpha = 1, c = 2, eq_ = 2]
 NonID parameters:	[]
-Substitutions:	[z_aux = 3, eq_ = 3, sq_ = 4, e_ = 2, s_ = 3, lmb = 4, h_ = 2, i_ = 1]
+Substitutions:	[z_aux = 3, lmb = 4, e_ = 2, sq_ = 4, s_ = 3, h_ = 2, i_ = 1, eq_ = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -101,7 +101,7 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[r_ = 0, (NULL) = 1, eq_ = 2, theta0 = 2, sq_ = 3, e_ = 1, s_ = 2, lmb = 3, h_ = 1, g_h = 1, dlt_i = 1, c = 2, g_i = 2, b = 2, alpha = 1, dlt_q = 2, i_ = 0, q = 2]
+States for substitution:	[(NULL) = 1, g_h = 1, lmb = 3, r_ = 0, e_ = 1, dlt_i = 1, theta0 = 2, sq_ = 3, s_ = 2, b = 2, g_i = 2, h_ = 1, q = 2, i_ = 0, dlt_q = 2, alpha = 1, c = 2, eq_ = 2]
 NonID parameters:	[]
-Substitutions:	[z_aux = 3, eq_ = 3, sq_ = 4, e_ = 2, s_ = 3, lmb = 4, h_ = 2, i_ = 1]
-memory used=5025.2MB, alloc=187.8MB, time=40.05
+Substitutions:	[z_aux = 3, lmb = 4, e_ = 2, sq_ = 4, s_ = 3, h_ = 2, i_ = 1, eq_ = 3]
+memory used=5051.6MB, alloc=179.7MB, time=38.43

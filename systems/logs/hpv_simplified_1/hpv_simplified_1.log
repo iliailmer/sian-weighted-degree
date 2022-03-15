@@ -5,6 +5,54 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:110|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:110|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:110|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:110|
 sigma := [diff(IO(t),t) = (1-IO(t)-IG(t)-IOG(t))*(betaOO*(IO(t)+IOG(t))+betaGO*
 (IG(t)+IOG(t)))+gammaG*IOG(t)-IO(t)*(nuOG+gammaO+mu+betaOG*(IO(t)+IOG(t))+
 betaGG*(IG(t)+IOG(t))), diff(IG(t),t) = (1-IO(t)-IG(t)-IOG(t))*(betaOG*(IO(t)+
@@ -36,15 +84,19 @@ Parameters in equations:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, n
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, nuGO, nuOG, IO(0), IG(0), IOG(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[betaGO = 2, gammaG = 1, nuGO = 2, betaOO = 2, betaGG = 1, betaOG = 1, IG_ = 0, gammaO = 2, mu = 1, IO_ = 1, nuOG = 1, IOG_ = 0]
+States for substitution:	[gammaG = 1, nuOG = 1, nuGO = 2, gammaO = 2, betaGG = 1, betaOG = 1, IG_ = 0, IOG_ = 0, IO_ = 1, betaOO = 2, betaGO = 2, mu = 1]
 NonID parameters:	[]
-Substitutions:	[betaGO = 3, z_aux = 2, nuGO = 3, betaOO = 3, IG_ = 1, gammaO = 3, IO_ = 2, IOG_ = 1]
+Substitutions:	[z_aux = 2, nuGO = 3, gammaO = 3, IG_ = 1, IOG_ = 1, IO_ = 2, betaOO = 3, betaGO = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -69,13 +121,17 @@ Parameters in equations:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, n
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, nuGO, nuOG, IO(0), IG(0), IOG(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[betaGO = 2, gammaG = 1, nuGO = 2, betaOO = 2, betaGG = 1, betaOG = 1, IG_ = 0, gammaO = 2, mu = 1, IO_ = 1, nuOG = 1, IOG_ = 0]
+States for substitution:	[gammaG = 1, nuOG = 1, nuGO = 2, gammaO = 2, betaGG = 1, betaOG = 1, IG_ = 0, IOG_ = 0, IO_ = 1, betaOO = 2, betaGO = 2, mu = 1]
 NonID parameters:	[]
-Substitutions:	[betaGO = 3, z_aux = 2, nuGO = 3, betaOO = 3, IG_ = 1, gammaO = 3, IO_ = 2, IOG_ = 1]
-memory used=743.4MB, alloc=159.1MB, time=7.83
+Substitutions:	[z_aux = 2, nuGO = 3, gammaO = 3, IG_ = 1, IOG_ = 1, IO_ = 2, betaOO = 3, betaGO = 3]
+memory used=783.0MB, alloc=160.4MB, time=7.94

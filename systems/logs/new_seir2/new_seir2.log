@@ -23,13 +23,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -64,9 +64,9 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[d0 = 1, mu = 1, rho = 2, s_ = 2, i_ = 0, e_ = 1, r_ = 0, b = 2, eps = 1]
+States for substitution:	[rho = 2, mu = 1, s_ = 2, d0 = 1, eps = 1, r_ = 0, e_ = 1, i_ = 0, b = 2]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, rho = 3, s_ = 3, i_ = 1, e_ = 2, r_ = 1, b = 3]
+Substitutions:	[rho = 3, z_aux = 2, s_ = 3, r_ = 1, e_ = 2, i_ = 1, b = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -101,7 +101,7 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[d0 = 1, mu = 1, rho = 2, s_ = 2, i_ = 0, e_ = 1, r_ = 0, b = 2, eps = 1]
+States for substitution:	[rho = 2, mu = 1, s_ = 2, d0 = 1, eps = 1, r_ = 0, e_ = 1, i_ = 0, b = 2]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, rho = 3, s_ = 3, i_ = 1, e_ = 2, r_ = 1, b = 3]
-memory used=193.8MB, alloc=119.2MB, time=1.79
+Substitutions:	[rho = 3, z_aux = 2, s_ = 3, r_ = 1, e_ = 2, i_ = 1, b = 3]
+memory used=187.4MB, alloc=80.2MB, time=1.86

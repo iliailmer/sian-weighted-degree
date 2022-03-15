@@ -22,13 +22,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -86,9 +86,9 @@ Transcendence basis substitution turned off.
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[Gb_ = 0, v_ = 0, k = 2, p1 = 1, (NULL) = 2, G_ = 0, X_ = 1, R_ = 1, p2 = 2, Ib_ = 0, p3 = 2]
+States for substitution:	[Ib_ = 0, k = 2, Gb_ = 0, (NULL) = 2, v_ = 0, p3 = 2, p2 = 2, X_ = 1, R_ = 1, p1 = 1, G_ = 0]
 NonID parameters:	[R_0, k, v]
-Substitutions:	[Gb_ = 1, v_ = 1, G_ = 1, X_ = 2, R_ = 2, p2 = 3, z_aux = 2, Ib_ = 1, p3 = 3]
+Substitutions:	[Ib_ = 1, Gb_ = 1, v_ = 1, p3 = 3, p2 = 3, X_ = 2, z_aux = 2, R_ = 2, G_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -123,7 +123,7 @@ Nonidentifiable parameter:  [R(0), k, v]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[Gb_ = 0, k = 2, p1 = 1, (NULL) = 2, G_ = 0, X_ = 1, v = 1, R_ = 1, p2 = 2, Ib_ = 0, p3 = 2]
+States for substitution:	[Ib_ = 0, k = 2, Gb_ = 0, (NULL) = 2, p3 = 2, v = 1, p2 = 2, X_ = 1, R_ = 1, p1 = 1, G_ = 0]
 NonID parameters:	[R_0, k, v]
-Substitutions:	[Gb_ = 1, G_ = 1, X_ = 2, R_ = 2, p2 = 3, z_aux = 2, Ib_ = 1, p3 = 3]
-memory used=317.9MB, alloc=128.7MB, time=2.71
+Substitutions:	[Ib_ = 1, Gb_ = 1, p3 = 3, p2 = 3, X_ = 2, z_aux = 2, R_ = 2, G_ = 1]
+memory used=318.7MB, alloc=126.0MB, time=3.08

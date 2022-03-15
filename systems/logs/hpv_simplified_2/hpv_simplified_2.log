@@ -5,6 +5,30 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:110|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:110|
 sigma := [diff(IO(t),t) = (1-IO(t)-IOG(t)-IG(t))*(betaOO*(IO(t)+IOG(t))+betaGO*
 (IG(t)+IOG(t)))+gammaG*IOG(t)-IO(t)*(nuOG+gammaO+mu+betaOG*(IO(t)+IOG(t))+
 betaGG*(IG(t)+IOG(t))), diff(IG(t),t) = (1-IO(t)-IOG(t)-IG(t))*(betaOG*(IO(t)+
@@ -36,15 +60,19 @@ Parameters in equations:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, n
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, nuGO, nuOG, IO(0), IG(0), IOG(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[gammaG = 2, nuOG = 2, gammaO = 1, betaOG = 2, betaGG = 2, nuGO = 1, IO_ = 0, IG_ = 1, betaGO = 1, IOG_ = 0, betaOO = 1, mu = 1]
+States for substitution:	[nuGO = 1, IOG_ = 0, betaGG = 2, betaOO = 1, mu = 1, betaOG = 2, gammaO = 1, IO_ = 0, nuOG = 2, IG_ = 1, gammaG = 2, betaGO = 1]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, gammaG = 3, nuOG = 3, betaOG = 3, betaGG = 3, IO_ = 1, IG_ = 2, IOG_ = 1]
+Substitutions:	[IOG_ = 1, betaGG = 3, betaOG = 3, z_aux = 2, IO_ = 1, nuOG = 3, IG_ = 2, gammaG = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -69,13 +97,17 @@ Parameters in equations:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, n
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [betaGG, betaGO, betaOG, betaOO, gammaG, gammaO, mu, nuGO, nuOG, IO(0), IG(0), IOG(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[gammaG = 2, nuOG = 2, gammaO = 1, betaOG = 2, betaGG = 2, nuGO = 1, IO_ = 0, IG_ = 1, betaGO = 1, IOG_ = 0, betaOO = 1, mu = 1]
+States for substitution:	[nuGO = 1, IOG_ = 0, betaGG = 2, betaOO = 1, mu = 1, betaOG = 2, gammaO = 1, IO_ = 0, nuOG = 2, IG_ = 1, gammaG = 2, betaGO = 1]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, gammaG = 3, nuOG = 3, betaOG = 3, betaGG = 3, IO_ = 1, IG_ = 2, IOG_ = 1]
-memory used=740.4MB, alloc=170.8MB, time=8.07
+Substitutions:	[IOG_ = 1, betaGG = 3, betaOG = 3, z_aux = 2, IO_ = 1, nuOG = 3, IG_ = 2, gammaG = 3]
+memory used=785.3MB, alloc=170.5MB, time=7.98

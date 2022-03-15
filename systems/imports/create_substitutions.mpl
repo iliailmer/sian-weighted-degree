@@ -112,7 +112,7 @@ WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
   printf("infolevel[Groebner]:=10;\net_hat:=%s;\n", convert(et_hat, string));
   printf("vars:=%s;\n", convert(vars, string));
   printf("new_weights:=%a;\n", new_weights); 
-  printf("gb:=Groebner[Basis](subs(new_weights, et_hat), tdeg(op(vars)), characteristic=11863279);\n", convert(char, string));
+  printf("gb:=CodeTools[Usage](Groebner[Basis](subs(new_weights, et_hat), tdeg(op(vars)), characteristic=11863279),output='all');\n", convert(char, string));
   printf("# %a\nquit;", new_weights);
   writeto(terminal);
 
@@ -120,7 +120,7 @@ WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
   printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
   printf("infolevel[Groebner]:=10;\net_hat:=%s;\n", convert(et_hat, string));
   printf("vars:=%s;\n", convert(vars, string));
-  printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279);\n", convert(char, string));
+  printf("gb:=CodeTools[Usage](Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=11863279),output='all');\n", convert(char, string));
   printf("# %a\nquit;", all_subs);
   writeto(terminal);
 
@@ -128,7 +128,7 @@ WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
   printf("kernelopts(printbytes=false, assertlevel=1):\ninterface(echo=0, prettyprint=0):\n");
   printf("infolevel[Groebner]:=10;\net_hat:=%s;\n", convert(et_hat, string));
   printf("vars:=%s;\n", convert(vars, string));
-  printf("gb:=Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0);\n", convert(char, string));
+  printf("gb:=CodeTools[Usage](Groebner[Basis](et_hat, tdeg(op(vars)), characteristic=0),output='all');\n", convert(char, string));
   printf("# %a\nquit;", all_subs);
   writeto(terminal);
   

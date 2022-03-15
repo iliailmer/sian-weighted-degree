@@ -23,13 +23,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -71,24 +71,24 @@ Collection [Phi, d0_0, dlt, gamma_h, gamma_i, r_0] is not transcendence basis
 Collection [Phi, d0_0, dlt, gamma_i, h_0, r_0] is not transcendence basis
 Collection [Phi, d0_0, gamma_h, gamma_i, h_0, r_0] is not transcendence basis
 Collection [Phi, dlt, gamma_h, gamma_i, h_0, r_0] is not transcendence basis
-Picked the best choice [d0_0, dlt, gamma_h, gamma_i, h_0, r_0] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {dlt, gamma_h, gamma_i}
+Picked the best choice [Phi, d0_0, dlt, gamma_h, h_0, r_0] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {Phi, dlt, gamma_h}
 Algebraically independent parameters among derivatives: {d0(0), h(0), r(0)}
 
 === Input info ===
-State variables:          [dlt(t), gamma_h(t), gamma_i(t), s(t), e(t), i(t), a(t), h(t), r(t), d0(t)]
+State variables:          [Phi(t), dlt(t), gamma_h(t), s(t), e(t), i(t), a(t), h(t), r(t), d0(t)]
 Output variables:         [y1(t), y_faux1(t), y_faux2(t), y_faux3(t)]
 Input variables:          [b(t)]
-Parameters in equations:  [Phi, alpha, eta, gamma_a, n, sgm]
+Parameters in equations:  [alpha, eta, gamma_a, gamma_i, n, sgm]
 ===================
 
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a_ = 1, i_ = 0, e_ = 1, s_ = 0, eta = 1, (NULL) = 1, n = 1, gamma_h_ = 0, dlt_ = 0, sgm = 1, alpha = 1, Phi = 1, gamma_a = 2, gamma_i_ = 0]
+States for substitution:	[gamma_i = 1, gamma_a = 2, s_ = 0, alpha = 1, e_ = 1, (NULL) = 1, n = 1, a_ = 1, Phi_ = 0, gamma_h_ = 0, i_ = 0, eta = 1, sgm = 1, dlt_ = 0]
 NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
-Substitutions:	[a_ = 2, i_ = 1, e_ = 2, s_ = 1, gamma_h_ = 1, dlt_ = 1, z_aux = 2, gamma_a = 3, gamma_i_ = 1]
+Substitutions:	[gamma_a = 3, s_ = 1, e_ = 2, a_ = 2, z_aux = 2, Phi_ = 1, gamma_h_ = 1, i_ = 1, dlt_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -123,7 +123,7 @@ Nonidentifiable parameter:  [Phi, d0(0), dlt, gamma_h, gamma_i, h(0), r(0)]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a_ = 1, i_ = 0, e_ = 1, s_ = 0, eta = 1, (NULL) = 1, n = 1, sgm = 1, alpha = 1, gamma_i = 1, Phi = 1, gamma_a = 2]
+States for substitution:	[gamma_i = 1, gamma_a = 2, s_ = 0, alpha = 1, e_ = 1, (NULL) = 1, n = 1, a_ = 1, i_ = 0, eta = 1, sgm = 1, Phi = 1]
 NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
-Substitutions:	[a_ = 2, i_ = 1, e_ = 2, s_ = 1, z_aux = 2, gamma_a = 3]
-memory used=3707.6MB, alloc=120.3MB, time=28.58
+Substitutions:	[gamma_a = 3, s_ = 1, e_ = 2, a_ = 2, z_aux = 2, i_ = 1]
+memory used=3768.4MB, alloc=112.3MB, time=28.09

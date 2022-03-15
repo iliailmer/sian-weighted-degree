@@ -389,7 +389,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
 
     # (a) ------------
     deg_variety := foldl(`*`, op( map(e -> degree(e), Et) )):
-    D2 := floor( 6 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ):
+    D2 := floor( 8 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ) :
     if infolevel > 1 then
       printf("%s %a\n", `Bound D_2 for assessing global identifiability: `, D2):
     end if:

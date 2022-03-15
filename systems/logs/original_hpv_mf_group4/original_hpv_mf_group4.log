@@ -5,6 +5,30 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in GetPolySystem) `denom_` is implicitly declared local
+|imports/generate_poly_system.mpl:324|
+Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
+|imports/generate_poly_system.mpl:490|
+Warning, (in WriteScripts) `weights` is implicitly declared local
+|imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
+Warning, (in WriteScripts) `new_weights` is implicitly declared local
+|imports/create_substitutions.mpl:110|
+Warning, (in WriteScripts) `each` is implicitly declared local
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -29,15 +53,19 @@ Parameters in equations:  [gammaGF, gammaGM, gammaOF, gammaOM, mu, nuGOF, nuGOM,
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [gammaGF, gammaGM, gammaOF, gammaOM, mu, nuGOF, nuGOM, nuOGF, nuOGM, betaGGFM, betaGGMF, betaGOFM, betaGOMF, betaOGFM, betaOGMF, betaOOFM, betaOOMF, SM(0), IOM(0), IGM(0), IOGM(0), SF(0), IOF(0), IGF(0), IOGF(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[betaGOMF = 1, SM_ = 1, gammaOM = 1, IOGF_ = 0, nuOGM = 1, IGM_ = 0, nuGOF = 1, betaOGFM = 1, IOM_ = 0, betaGGMF = 1, nuOGF = 1, betaOOFM = 1, betaGOFM = 1, SF_ = 1, gammaGF = 1, betaOOMF = 1, IOGM_ = 0, mu = 1, gammaOF = 1, IGF_ = 0, gammaGM = 1, nuGOM = 1, IOF_ = 0, betaGGFM = 1, betaOGMF = 1]
+States for substitution:	[SM_ = 1, nuGOF = 1, mu = 1, betaGOMF = 1, IOM_ = 0, nuOGF = 1, betaGGMF = 1, IGF_ = 0, betaGOFM = 1, betaOOMF = 1, betaOGFM = 1, gammaOF = 1, gammaGM = 1, IOGF_ = 0, gammaGF = 1, SF_ = 1, gammaOM = 1, IOF_ = 0, betaGGFM = 1, IGM_ = 0, nuGOM = 1, betaOOFM = 1, betaOGMF = 1, nuOGM = 1, IOGM_ = 0]
 NonID parameters:	[]
-Substitutions:	[betaGOMF = 2, z_aux = 1, SM_ = 2, gammaOM = 2, IOGF_ = 1, nuOGM = 2, IGM_ = 1, nuGOF = 2, betaOGFM = 2, IOM_ = 1, betaGGMF = 2, nuOGF = 2, betaOOFM = 2, betaGOFM = 2, SF_ = 2, gammaGF = 2, betaOOMF = 2, IOGM_ = 1, mu = 2, gammaOF = 2, IGF_ = 1, gammaGM = 2, nuGOM = 2, IOF_ = 1, betaGGFM = 2, betaOGMF = 2]
+Substitutions:	[SM_ = 2, nuGOF = 2, mu = 2, betaGOMF = 2, z_aux = 1, IOM_ = 1, nuOGF = 2, betaGGMF = 2, IGF_ = 1, betaGOFM = 2, betaOOMF = 2, betaOGFM = 2, gammaOF = 2, gammaGM = 2, IOGF_ = 1, gammaGF = 2, SF_ = 2, gammaOM = 2, IOF_ = 1, betaGGFM = 2, IGM_ = 1, betaOOFM = 2, nuGOM = 2, betaOGMF = 2, nuOGM = 2, IOGM_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -62,13 +90,17 @@ Parameters in equations:  [gammaGF, gammaGM, gammaOF, gammaOM, mu, nuGOF, nuGOM,
 =======================================================
 3. Assessing local identifiability
 =======================================================
+
+=======================================================
+Creating Truncated system (old)
+=======================================================
 Locally identifiable paramters:  [gammaGF, gammaGM, gammaOF, gammaOM, mu, nuGOF, nuGOM, nuOGF, nuOGM, betaGGFM, betaGGMF, betaGOFM, betaGOMF, betaOGFM, betaOGMF, betaOOFM, betaOOMF, SM(0), IOM(0), IGM(0), IOGM(0), SF(0), IOF(0), IGF(0), IOGF(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[betaGOMF = 1, SM_ = 1, gammaOM = 1, IOGF_ = 0, nuOGM = 1, IGM_ = 0, nuGOF = 1, betaOGFM = 1, IOM_ = 0, betaGGMF = 1, nuOGF = 1, betaOOFM = 1, betaGOFM = 1, SF_ = 1, gammaGF = 1, betaOOMF = 1, IOGM_ = 0, mu = 1, gammaOF = 1, IGF_ = 0, gammaGM = 1, nuGOM = 1, IOF_ = 0, betaGGFM = 1, betaOGMF = 1]
+States for substitution:	[SM_ = 1, nuGOF = 1, mu = 1, betaGOMF = 1, IOM_ = 0, nuOGF = 1, betaGGMF = 1, IGF_ = 0, betaGOFM = 1, betaOOMF = 1, betaOGFM = 1, gammaOF = 1, gammaGM = 1, IOGF_ = 0, gammaGF = 1, SF_ = 1, gammaOM = 1, IOF_ = 0, betaGGFM = 1, IGM_ = 0, nuGOM = 1, betaOOFM = 1, betaOGMF = 1, nuOGM = 1, IOGM_ = 0]
 NonID parameters:	[]
-Substitutions:	[betaGOMF = 2, z_aux = 1, SM_ = 2, gammaOM = 2, IOGF_ = 1, nuOGM = 2, IGM_ = 1, nuGOF = 2, betaOGFM = 2, IOM_ = 1, betaGGMF = 2, nuOGF = 2, betaOOFM = 2, betaGOFM = 2, SF_ = 2, gammaGF = 2, betaOOMF = 2, IOGM_ = 1, mu = 2, gammaOF = 2, IGF_ = 1, gammaGM = 2, nuGOM = 2, IOF_ = 1, betaGGFM = 2, betaOGMF = 2]
-memory used=11634.1MB, alloc=152.3MB, time=79.66
+Substitutions:	[SM_ = 2, nuGOF = 2, mu = 2, betaGOMF = 2, z_aux = 1, IOM_ = 1, nuOGF = 2, betaGGMF = 2, IGF_ = 1, betaGOFM = 2, betaOOMF = 2, betaOGFM = 2, gammaOF = 2, gammaGM = 2, IOGF_ = 1, gammaGF = 2, SF_ = 2, gammaOM = 2, IOF_ = 1, betaGGFM = 2, IGM_ = 1, betaOOFM = 2, nuGOM = 2, betaOGMF = 2, nuOGM = 2, IOGM_ = 1]
+memory used=5372.0MB, alloc=184.6MB, time=46.36

@@ -23,13 +23,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -82,9 +82,9 @@ Parameters in equations:  [Lam, g, mu, ph]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[c_ = 0, mu = 1, ph = 1, g = 1, (NULL) = 1, Lam = 2, In_ = 0, S_ = 1]
+States for substitution:	[mu = 1, c_ = 0, Lam = 2, In_ = 0, S_ = 1, ph = 1, g = 1, (NULL) = 1]
 NonID parameters:	[R_0, c, ph]
-Substitutions:	[c_ = 1, z_aux = 2, Lam = 3, In_ = 1, S_ = 2]
+Substitutions:	[z_aux = 2, c_ = 1, Lam = 3, In_ = 1, S_ = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -119,7 +119,7 @@ Nonidentifiable parameter:  [R(0), c, ph]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[c = 1, mu = 1, ph = 1, g = 1, (NULL) = 1, Lam = 2, In_ = 0, S_ = 1]
+States for substitution:	[mu = 1, Lam = 2, In_ = 0, S_ = 1, c = 1, ph = 1, g = 1, (NULL) = 1]
 NonID parameters:	[R_0, c, ph]
 Substitutions:	[z_aux = 2, Lam = 3, In_ = 1, S_ = 2]
-memory used=298.4MB, alloc=144.3MB, time=2.67
+memory used=299.0MB, alloc=144.3MB, time=2.84

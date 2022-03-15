@@ -22,18 +22,18 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 sigma := [diff(S(t),t) = -b*S(t)*Ninv*A(t)*q-b*S(t)*Ninv*II(t)-b*S(t)*Ninv*J(t)
 , diff(A(t),t) = -E(t)*k*r+E(t)*k-A(t)*g1, diff(E(t),t) = b*S(t)*Ninv*A(t)*q+b*
 S(t)*Ninv*II(t)+b*S(t)*Ninv*J(t)-E(t)*k, diff(C(t),t) = alpha*II(t), diff(J(t),
-t) = alpha*II(t)-g2*J(t), diff(II(t),t) = -alpha*II(t)+E(t)*k*r-g1*II(t), y2(t)
-= Ninv, y(t) = C(t)]
+t) = alpha*II(t)-g2*J(t), diff(II(t),t) = -alpha*II(t)+E(t)*k*r-g1*II(t), y(t)
+= C(t)]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -41,7 +41,7 @@ t) = alpha*II(t)-g2*J(t), diff(II(t),t) = -alpha*II(t)+E(t)*k*r-g1*II(t), y2(t)
 
 === Input info ===
 State variables:          [S(t), A(t), E(t), C(t), J(t), II(t)]
-Output variables:         [y2(t), y(t)]
+Output variables:         [y(t)]
 Input variables:          []
 Parameters in equations:  [Ninv, alpha, b, g1, g2, k, q, r]
 ===================
@@ -62,33 +62,209 @@ Parameters in equations:  [Ninv, alpha, b, g1, g2, k, q, r]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Locally identifiable paramters:  [Ninv, alpha, b, g1, g2, k, C(0), J(0), II(0)]
-Nonidentifiable parameter:  [A(0), E(0), S(0), q, r]
+Locally identifiable paramters:  [alpha, g1, g2, k, C(0), J(0), II(0)]
+Nonidentifiable parameter:  [A(0), E(0), Ninv, S(0), b, q, r]
 
 =======================================================
 Substituting transcendence basis.
 =======================================================
-Algebraically independent parameters {A(0)}
-Number of possible combinations 33
-Picked the best choice [q] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {q}
-Algebraically independent parameters among derivatives: {}
+Algebraically independent parameters {Ninv, A(0)}
+Number of possible combinations 595
+Collection [A_0, A_9] is not transcendence basis
+Collection [A_0, E_3] is not transcendence basis
+Collection [A_0, S_3] is not transcendence basis
+Collection [A_1, A_0] is not transcendence basis
+Collection [A_1, A_4] is not transcendence basis
+Collection [A_1, A_8] is not transcendence basis
+Collection [A_1, E_9] is not transcendence basis
+Collection [A_1, S_2] is not transcendence basis
+Collection [A_1, q] is not transcendence basis
+Collection [A_2, A_8] is not transcendence basis
+Collection [A_2, E_0] is not transcendence basis
+Collection [A_2, S_0] is not transcendence basis
+Collection [A_2, S_9] is not transcendence basis
+Collection [A_3, E_2] is not transcendence basis
+Collection [A_3, E_3] is not transcendence basis
+Collection [A_3, E_8] is not transcendence basis
+Collection [A_3, E_9] is not transcendence basis
+Collection [A_3, S_3] is not transcendence basis
+Collection [A_3, S_9] is not transcendence basis
+Collection [A_4, A_2] is not transcendence basis
+Collection [A_4, S_0] is not transcendence basis
+Collection [A_4, q] is not transcendence basis
+Collection [A_5, A_4] is not transcendence basis
+Collection [A_5, E_4] is not transcendence basis
+Collection [A_5, S_8] is not transcendence basis
+Collection [A_5, S_9] is not transcendence basis
+Collection [A_6, E_10] is not transcendence basis
+Collection [A_6, E_2] is not transcendence basis
+Collection [A_6, S_5] is not transcendence basis
+Collection [A_6, S_9] is not transcendence basis
+Collection [A_6, q] is not transcendence basis
+Collection [A_7, A_0] is not transcendence basis
+Collection [A_7, A_9] is not transcendence basis
+Collection [A_7, E_0] is not transcendence basis
+Collection [A_7, E_9] is not transcendence basis
+Collection [A_7, S_2] is not transcendence basis
+Collection [A_7, S_8] is not transcendence basis
+Collection [A_7, q] is not transcendence basis
+Collection [A_8, A_3] is not transcendence basis
+Collection [A_8, A_6] is not transcendence basis
+Collection [A_8, E_10] is not transcendence basis
+Collection [A_8, E_2] is not transcendence basis
+Collection [A_8, S_8] is not transcendence basis
+Collection [A_9, A_7] is not transcendence basis
+Collection [A_9, E_0] is not transcendence basis
+Collection [A_9, E_1] is not transcendence basis
+Collection [A_9, E_7] is not transcendence basis
+Collection [A_9, S_1] is not transcendence basis
+Collection [A_9, r] is not transcendence basis
+Collection [E_0, A_1] is not transcendence basis
+Collection [E_0, A_2] is not transcendence basis
+Collection [E_0, A_5] is not transcendence basis
+Collection [E_0, E_3] is not transcendence basis
+Collection [E_1, A_1] is not transcendence basis
+Collection [E_1, A_3] is not transcendence basis
+Collection [E_1, E_0] is not transcendence basis
+Collection [E_1, E_2] is not transcendence basis
+Collection [E_1, E_6] is not transcendence basis
+Collection [E_1, E_8] is not transcendence basis
+Collection [E_1, S_0] is not transcendence basis
+Collection [E_1, S_3] is not transcendence basis
+Collection [E_10, S_9] is not transcendence basis
+Collection [E_10, r] is not transcendence basis
+Collection [E_2, A_0] is not transcendence basis
+Collection [E_2, A_6] is not transcendence basis
+Collection [E_2, E_5] is not transcendence basis
+Collection [E_2, S_0] is not transcendence basis
+Collection [E_2, S_1] is not transcendence basis
+Collection [E_2, q] is not transcendence basis
+Collection [E_3, A_6] is not transcendence basis
+Collection [E_3, E_4] is not transcendence basis
+Collection [E_3, E_6] is not transcendence basis
+Collection [E_4, A_9] is not transcendence basis
+Collection [E_4, S_3] is not transcendence basis
+Collection [E_4, q] is not transcendence basis
+Collection [E_5, A_1] is not transcendence basis
+Collection [E_5, E_0] is not transcendence basis
+Collection [E_5, E_8] is not transcendence basis
+Collection [E_5, S_8] is not transcendence basis
+Collection [E_5, r] is not transcendence basis
+Collection [E_6, A_2] is not transcendence basis
+Collection [E_6, A_3] is not transcendence basis
+Collection [E_6, E_3] is not transcendence basis
+Collection [E_6, E_4] is not transcendence basis
+Collection [E_6, S_7] is not transcendence basis
+Collection [E_7, A_2] is not transcendence basis
+Collection [E_7, A_5] is not transcendence basis
+Collection [E_7, A_8] is not transcendence basis
+Collection [E_7, E_6] is not transcendence basis
+Collection [E_7, S_0] is not transcendence basis
+Collection [E_7, S_3] is not transcendence basis
+Collection [E_7, S_6] is not transcendence basis
+Collection [E_7, S_7] is not transcendence basis
+Collection [E_8, A_1] is not transcendence basis
+Collection [E_8, A_3] is not transcendence basis
+Collection [E_8, A_7] is not transcendence basis
+Collection [E_8, A_8] is not transcendence basis
+Collection [E_8, A_9] is not transcendence basis
+Collection [E_8, E_10] is not transcendence basis
+Collection [E_8, E_4] is not transcendence basis
+Collection [E_8, E_6] is not transcendence basis
+Collection [E_8, S_2] is not transcendence basis
+Collection [E_8, S_3] is not transcendence basis
+Collection [E_8, S_8] is not transcendence basis
+Collection [E_9, A_0] is not transcendence basis
+Collection [E_9, A_1] is not transcendence basis
+Collection [E_9, A_8] is not transcendence basis
+Collection [E_9, E_2] is not transcendence basis
+Collection [E_9, S_3] is not transcendence basis
+Collection [E_9, S_7] is not transcendence basis
+Collection [S_0, A_3] is not transcendence basis
+Collection [S_0, A_6] is not transcendence basis
+Collection [S_0, E_2] is not transcendence basis
+Collection [S_0, E_7] is not transcendence basis
+Collection [S_0, S_1] is not transcendence basis
+Collection [S_0, S_3] is not transcendence basis
+Collection [S_0, S_6] is not transcendence basis
+Collection [S_0, S_9] is not transcendence basis
+Collection [S_1, A_7] is not transcendence basis
+Collection [S_1, E_0] is not transcendence basis
+Collection [S_1, E_10] is not transcendence basis
+Collection [S_1, E_3] is not transcendence basis
+Collection [S_1, E_7] is not transcendence basis
+Collection [S_1, S_0] is not transcendence basis
+Collection [S_2, A_9] is not transcendence basis
+Collection [S_2, E_3] is not transcendence basis
+Collection [S_2, E_6] is not transcendence basis
+Collection [S_3, A_3] is not transcendence basis
+Collection [S_3, A_8] is not transcendence basis
+Collection [S_3, E_8] is not transcendence basis
+Collection [S_3, S_5] is not transcendence basis
+Collection [S_4, A_9] is not transcendence basis
+Collection [S_4, E_6] is not transcendence basis
+Collection [S_4, S_5] is not transcendence basis
+Collection [S_4, S_6] is not transcendence basis
+Collection [S_4, S_9] is not transcendence basis
+Collection [S_4, r] is not transcendence basis
+Collection [S_5, A_0] is not transcendence basis
+Collection [S_5, A_3] is not transcendence basis
+Collection [S_5, E_7] is not transcendence basis
+Collection [S_5, E_8] is not transcendence basis
+Collection [S_6, A_1] is not transcendence basis
+Collection [S_6, E_6] is not transcendence basis
+Collection [S_6, S_3] is not transcendence basis
+Collection [S_7, A_3] is not transcendence basis
+Collection [S_7, E_7] is not transcendence basis
+Collection [S_7, E_9] is not transcendence basis
+Collection [S_7, S_2] is not transcendence basis
+Collection [S_7, S_5] is not transcendence basis
+Collection [S_7, S_6] is not transcendence basis
+Collection [S_7, S_8] is not transcendence basis
+Collection [S_7, S_9] is not transcendence basis
+Collection [S_8, A_1] is not transcendence basis
+Collection [S_8, A_4] is not transcendence basis
+Collection [S_8, A_7] is not transcendence basis
+Collection [S_8, A_9] is not transcendence basis
+Collection [S_8, E_0] is not transcendence basis
+Collection [S_8, E_2] is not transcendence basis
+Collection [S_8, E_3] is not transcendence basis
+Collection [S_8, E_4] is not transcendence basis
+Collection [S_8, E_9] is not transcendence basis
+Collection [S_8, S_5] is not transcendence basis
+Collection [S_8, q] is not transcendence basis
+Collection [S_9, A_5] is not transcendence basis
+Collection [S_9, E_3] is not transcendence basis
+Collection [S_9, E_6] is not transcendence basis
+Collection [S_9, E_8] is not transcendence basis
+Collection [S_9, E_9] is not transcendence basis
+Collection [S_9, S_2] is not transcendence basis
+Collection [S_9, S_8] is not transcendence basis
+Collection [q, A_8] is not transcendence basis
+Collection [q, E_1] is not transcendence basis
+Collection [q, E_5] is not transcendence basis
+Collection [q, S_7] is not transcendence basis
+Collection [r, A_2] is not transcendence basis
+Collection [r, S_4] is not transcendence basis
+Collection [r, S_7] is not transcendence basis
+Picked the best choice [S_0, b] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {b}
+Algebraically independent parameters among derivatives: {S(0)}
 
 === Input info ===
-State variables:          [q(t), S(t), A(t), E(t), C(t), J(t), II(t)]
-Output variables:         [y2(t), y(t), y_faux1(t)]
+State variables:          [b(t), S(t), A(t), E(t), C(t), J(t), II(t)]
+Output variables:         [y(t), y_faux1(t)]
 Input variables:          []
-Parameters in equations:  [Ninv, alpha, b, g1, g2, k, r]
+Parameters in equations:  [Ninv, alpha, g1, g2, k, q, r]
 ===================
 
-Transcendence basis substitution turned off.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k = 2, g2 = 4, II_ = 1, alpha = 1, Ninv = 0, g1 = 2, E_ = 2, A_ = 3, b = 3, r = 2, q_ = 0, S_ = 3, J_ = 3, C_ = 0]
-NonID parameters:	[A_0, E_0, S_0, q, r]
-Substitutions:	[g2 = 5, II_ = 2, E_ = 3, A_ = 4, q_ = 1, z_aux = 3, S_ = 4, J_ = 4]
+States for substitution:	[k = 2, II_ = 1, alpha = 1, b_ = 0, A_ = 3, E_ = 2, Ninv = 3, r = 2, q = 3, g1 = 2, C_ = 0, J_ = 3, S_ = 3, g2 = 4]
+NonID parameters:	[A_0, E_0, Ninv, S_0, b, q, r]
+Substitutions:	[II_ = 2, b_ = 1, A_ = 4, E_ = 3, z_aux = 3, J_ = 4, S_ = 4, g2 = 5]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -96,7 +272,7 @@ Substitutions:	[g2 = 5, II_ = 2, E_ = 3, A_ = 4, q_ = 1, z_aux = 3, S_ = 4, J_ =
 
 === Input info ===
 State variables:          [S(t), A(t), E(t), C(t), J(t), II(t)]
-Output variables:         [y2(t), y(t)]
+Output variables:         [y(t)]
 Input variables:          []
 Parameters in equations:  [Ninv, alpha, b, g1, g2, k, q, r]
 ===================
@@ -117,13 +293,13 @@ Parameters in equations:  [Ninv, alpha, b, g1, g2, k, q, r]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Locally identifiable paramters:  [Ninv, alpha, b, g1, g2, k, C(0), J(0), II(0)]
-Nonidentifiable parameter:  [A(0), E(0), S(0), q, r]
+Locally identifiable paramters:  [alpha, g1, g2, k, C(0), J(0), II(0)]
+Nonidentifiable parameter:  [A(0), E(0), Ninv, S(0), b, q, r]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k = 2, g2 = 4, II_ = 1, alpha = 1, Ninv = 0, g1 = 2, E_ = 2, A_ = 3, b = 3, r = 2, q = 3, S_ = 3, J_ = 3, C_ = 0]
-NonID parameters:	[A_0, E_0, S_0, q, r]
-Substitutions:	[g2 = 5, II_ = 2, E_ = 3, A_ = 4, z_aux = 3, S_ = 4, J_ = 4]
-memory used=2870.7MB, alloc=179.8MB, time=26.32
+States for substitution:	[k = 2, II_ = 1, alpha = 1, b = 3, A_ = 3, E_ = 2, Ninv = 3, r = 2, q = 3, g1 = 2, C_ = 0, J_ = 3, S_ = 3, g2 = 4]
+NonID parameters:	[A_0, E_0, Ninv, S_0, b, q, r]
+Substitutions:	[II_ = 2, A_ = 4, E_ = 3, z_aux = 3, J_ = 4, S_ = 4, g2 = 5]
+memory used=8136.9MB, alloc=211.8MB, time=83.79

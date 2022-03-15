@@ -22,13 +22,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -63,9 +63,9 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[xA_ = 0, k1 = 1, xC_ = 0, xB_ = 0, eC_ = 0, eB = 0, eA_ = 0, k2 = 1]
+States for substitution:	[eC_ = 0, eA_ = 0, k1 = 1, xC_ = 0, xB_ = 0, k2 = 1, xA_ = 0, eB = 0]
 NonID parameters:	[]
-Substitutions:	[xA_ = 1, k1 = 2, z_aux = 1, xB_ = 1, k2 = 2]
+Substitutions:	[z_aux = 1, k1 = 2, xB_ = 1, k2 = 2, xA_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -100,7 +100,7 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[xA_ = 0, k1 = 1, xC_ = 0, xB_ = 0, eC_ = 0, eB = 0, eA_ = 0, k2 = 1]
+States for substitution:	[eC_ = 0, eA_ = 0, k1 = 1, xC_ = 0, xB_ = 0, k2 = 1, xA_ = 0, eB = 0]
 NonID parameters:	[]
-Substitutions:	[xA_ = 1, k1 = 2, z_aux = 1, xB_ = 1, k2 = 2]
-memory used=97.0MB, alloc=116.3MB, time=0.91
+Substitutions:	[z_aux = 1, k1 = 2, xB_ = 1, k2 = 2, xA_ = 1]
+memory used=97.7MB, alloc=112.3MB, time=1.11

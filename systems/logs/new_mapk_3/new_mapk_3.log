@@ -23,13 +23,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -64,9 +64,9 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b00 = 1, FS11_ = 1, c0111 = 1, a10 = 1, FS10_ = 1, a01 = 1, S11_ = 0, FS01_ = 1, beta11 = 1, gamma1110 = 1, b10 = 1, gamma1101 = 1, b01 = 1, S10_ = 0, KS10_ = 1, alpha11 = 1, c0001 = 1, gamma1000 = 1, KS01_ = 1, S01_ = 0, beta10 = 1, gamma1100 = 1, alpha01 = 1, a00 = 1, KS00_ = 1, S00_ = 0, alpha10 = 1, c1011 = 1, Ff_ = 0, beta01 = 1, c0011 = 1, c0010 = 1, gamma0100 = 1, K_ = 0]
+States for substitution:	[c0111 = 1, c0010 = 1, a01 = 1, S11_ = 0, FS01_ = 1, b10 = 1, gamma1100 = 1, c1011 = 1, gamma0100 = 1, S10_ = 0, KS10_ = 1, b01 = 1, FS11_ = 1, c0001 = 1, a10 = 1, beta11 = 1, FS10_ = 1, b00 = 1, a00 = 1, gamma1000 = 1, Ff_ = 0, alpha01 = 1, gamma1110 = 1, alpha11 = 1, K_ = 0, beta01 = 1, KS01_ = 1, S01_ = 0, c0011 = 1, beta10 = 1, gamma1101 = 1, KS00_ = 1, S00_ = 0, alpha10 = 1]
 NonID parameters:	[]
-Substitutions:	[b00 = 2, FS11_ = 2, c0111 = 2, FS10_ = 2, a10 = 2, a01 = 2, FS01_ = 2, S11_ = 1, beta11 = 2, z_aux = 1, gamma1110 = 2, b10 = 2, gamma1101 = 2, b01 = 2, S10_ = 1, KS10_ = 2, alpha11 = 2, c0001 = 2, gamma1000 = 2, KS01_ = 2, S01_ = 1, gamma1100 = 2, beta10 = 2, alpha01 = 2, a00 = 2, KS00_ = 2, S00_ = 1, alpha10 = 2, c1011 = 2, Ff_ = 1, beta01 = 2, c0011 = 2, c0010 = 2, gamma0100 = 2, K_ = 1]
+Substitutions:	[c0111 = 2, c0010 = 2, a01 = 2, FS01_ = 2, S11_ = 1, gamma1100 = 2, b10 = 2, c1011 = 2, gamma0100 = 2, S10_ = 1, KS10_ = 2, b01 = 2, FS11_ = 2, c0001 = 2, a10 = 2, beta11 = 2, FS10_ = 2, b00 = 2, a00 = 2, gamma1000 = 2, alpha01 = 2, Ff_ = 1, gamma1110 = 2, alpha11 = 2, K_ = 1, beta01 = 2, z_aux = 1, KS01_ = 2, S01_ = 1, c0011 = 2, beta10 = 2, gamma1101 = 2, KS00_ = 2, S00_ = 1, alpha10 = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -101,7 +101,7 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[b00 = 1, FS11_ = 1, c0111 = 1, a10 = 1, FS10_ = 1, a01 = 1, S11_ = 0, FS01_ = 1, beta11 = 1, gamma1110 = 1, b10 = 1, gamma1101 = 1, b01 = 1, S10_ = 0, KS10_ = 1, alpha11 = 1, c0001 = 1, gamma1000 = 1, KS01_ = 1, S01_ = 0, beta10 = 1, gamma1100 = 1, alpha01 = 1, a00 = 1, KS00_ = 1, S00_ = 0, alpha10 = 1, c1011 = 1, Ff_ = 0, beta01 = 1, c0011 = 1, c0010 = 1, gamma0100 = 1, K_ = 0]
+States for substitution:	[c0111 = 1, c0010 = 1, a01 = 1, S11_ = 0, FS01_ = 1, b10 = 1, gamma1100 = 1, c1011 = 1, gamma0100 = 1, S10_ = 0, KS10_ = 1, b01 = 1, FS11_ = 1, c0001 = 1, a10 = 1, beta11 = 1, FS10_ = 1, b00 = 1, a00 = 1, gamma1000 = 1, Ff_ = 0, alpha01 = 1, gamma1110 = 1, alpha11 = 1, K_ = 0, beta01 = 1, KS01_ = 1, S01_ = 0, c0011 = 1, beta10 = 1, gamma1101 = 1, KS00_ = 1, S00_ = 0, alpha10 = 1]
 NonID parameters:	[]
-Substitutions:	[b00 = 2, FS11_ = 2, c0111 = 2, FS10_ = 2, a10 = 2, a01 = 2, FS01_ = 2, S11_ = 1, beta11 = 2, z_aux = 1, gamma1110 = 2, b10 = 2, gamma1101 = 2, b01 = 2, S10_ = 1, KS10_ = 2, alpha11 = 2, c0001 = 2, gamma1000 = 2, KS01_ = 2, S01_ = 1, gamma1100 = 2, beta10 = 2, alpha01 = 2, a00 = 2, KS00_ = 2, S00_ = 1, alpha10 = 2, c1011 = 2, Ff_ = 1, beta01 = 2, c0011 = 2, c0010 = 2, gamma0100 = 2, K_ = 1]
-memory used=9081.0MB, alloc=179.8MB, time=66.39
+Substitutions:	[c0111 = 2, c0010 = 2, a01 = 2, FS01_ = 2, S11_ = 1, gamma1100 = 2, b10 = 2, c1011 = 2, gamma0100 = 2, S10_ = 1, KS10_ = 2, b01 = 2, FS11_ = 2, c0001 = 2, a10 = 2, beta11 = 2, FS10_ = 2, b00 = 2, a00 = 2, gamma1000 = 2, alpha01 = 2, Ff_ = 1, gamma1110 = 2, alpha11 = 2, K_ = 1, beta01 = 2, z_aux = 1, KS01_ = 2, S01_ = 1, c0011 = 2, beta10 = 2, gamma1101 = 2, KS00_ = 2, S00_ = 1, alpha10 = 2]
+memory used=9003.6MB, alloc=211.8MB, time=67.91

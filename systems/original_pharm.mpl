@@ -16,7 +16,6 @@ sigma := [
 
 all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
 
-
 WriteScripts(original_et_hat, system_vars[2], "original_no_trb", {}, PATH);
 WriteScripts(system_vars[1], system_vars[2], "weights_no_trb", all_subs, PATH);
 

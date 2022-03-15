@@ -1,2 +1,3 @@
+Command terminated by signal 9
 elapsed,user+system,memory
-4.57,=2.89+2.15,2662540000
+387808.26,=377275.00+10285.07,1006699628000

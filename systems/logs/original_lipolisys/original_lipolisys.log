@@ -22,13 +22,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -63,9 +63,9 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k2 = 1, x2_ = 0, x4_ = 0, k4 = 1, x3_ = 0, k3 = 2, x1_ = 0, x5_ = 1]
+States for substitution:	[k2 = 1, k3 = 2, x4_ = 0, x5_ = 1, x2_ = 0, x1_ = 0, x3_ = 0, k4 = 1]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, x2_ = 1, x3_ = 1, k3 = 3, x1_ = 1, x5_ = 2]
+Substitutions:	[k3 = 3, x5_ = 2, x2_ = 1, z_aux = 2, x1_ = 1, x3_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -100,9 +100,9 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k2 = 1, x2_ = 0, x4_ = 0, k4 = 1, x3_ = 0, k3 = 2, x1_ = 0, x5_ = 1]
+States for substitution:	[k2 = 1, k3 = 2, x4_ = 0, x5_ = 1, x2_ = 0, x1_ = 0, x3_ = 0, k4 = 1]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, x2_ = 1, x3_ = 1, k3 = 3, x1_ = 1, x5_ = 2]
+Substitutions:	[k3 = 3, x5_ = 2, x2_ = 1, z_aux = 2, x1_ = 1, x3_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -137,7 +137,7 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[k2 = 1, x2_ = 0, x4_ = 0, k4 = 1, x3_ = 0, k3 = 2, x1_ = 0, x5_ = 1]
+States for substitution:	[k2 = 1, k3 = 2, x4_ = 0, x5_ = 1, x2_ = 0, x1_ = 0, x3_ = 0, k4 = 1]
 NonID parameters:	[]
-Substitutions:	[z_aux = 2, x2_ = 1, x3_ = 1, k3 = 3, x1_ = 1, x5_ = 2]
-memory used=205.8MB, alloc=112.3MB, time=1.92
+Substitutions:	[k3 = 3, x5_ = 2, x2_ = 1, z_aux = 2, x1_ = 1, x3_ = 1]
+memory used=206.2MB, alloc=112.3MB, time=2.29

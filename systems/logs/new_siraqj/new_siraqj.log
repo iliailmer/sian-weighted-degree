@@ -23,13 +23,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -66,205 +66,205 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {d2, d3, d6, A(0), In(0), N(0), R(0)}
 Number of possible combinations 202927725
-Collection [A_0, A_3, mu1, A_8, A_5, S_1, S_7] is not transcendence basis
-Collection [A_0, In_9, mu2, k1, In_1, d6, A_10] is not transcendence basis
-Collection [A_0, N_3, S_1, In_8, R_0, mu2, N_6] is not transcendence basis
-Collection [A_1, A_10, S_6, S_4, lam, A_2, mu2] is not transcendence basis
-Collection [A_1, A_5, S_5, N_1, d4, A_0, A_2] is not transcendence basis
-Collection [A_1, A_6, b, In_2, A_3, d4, In_6] is not transcendence basis
-Collection [A_1, A_8, S_1, In_6, In_5, S_8, d6] is not transcendence basis
-Collection [A_1, N_5, N_2, In_2, N_7, In_6, d2] is not transcendence basis
-Collection [A_1, N_7, S_9, S_0, In_0, A_2, A_7] is not transcendence basis
-Collection [A_1, S_7, S_3, g2, S_9, g1, In_7] is not transcendence basis
-Collection [A_10, A_3, A_6, N_8, In_4, In_8, b] is not transcendence basis
-Collection [A_10, In_8, In_3, S_1, S_8, d4, A_4] is not transcendence basis
-Collection [A_10, eps_q, S_7, S_0, eps_j, N_8, eps_a] is not transcendence basis
-Collection [A_2, A_1, N_1, mu1, S_2, In_2, S_5] is not transcendence basis
-Collection [A_2, A_5, S_3, R_0, A_10, In_6, S_6] is not transcendence basis
-Collection [A_2, N_6, In_5, A_7, A_9, N_0, N_1] is not transcendence basis
-Collection [A_2, S_2, A_1, S_6, In_4, g2, b] is not transcendence basis
-Collection [A_2, S_8, In_5, R_0, d4, S_1, A_8] is not transcendence basis
-Collection [A_2, S_9, N_1, N_3, eps_a, S_3, eps_j] is not transcendence basis
-Collection [A_3, A_10, N_0, In_8, A_9, S_9, g2] is not transcendence basis
-Collection [A_3, A_9, N_4, eps_q, A_2, k1, A_0] is not transcendence basis
-Collection [A_3, In_1, A_7, S_6, mu2, In_9, N_6] is not transcendence basis
-Collection [A_3, In_5, eps_a, S_4, A_2, N_0, In_8] is not transcendence basis
-Collection [A_3, N_0, S_4, k1, A_6, g2, d4] is not transcendence basis
-Collection [A_3, S_6, A_10, S_0, A_5, S_5, N_2] is not transcendence basis
-Collection [A_3, S_6, In_6, S_8, N_2, mu2, R_0] is not transcendence basis
-Collection [A_3, S_7, A_4, In_4, S_9, N_7, N_0] is not transcendence basis
-Collection [A_3, k1, d3, S_3, S_6, A_6, A_5] is not transcendence basis
-Collection [A_4, lam, A_9, b, N_3, S_7, In_2] is not transcendence basis
-Collection [A_5, A_2, In_6, N_0, S_8, eps_a, A_1] is not transcendence basis
-Collection [A_5, A_2, N_5, b, A_1, mu1, A_10] is not transcendence basis
-Collection [A_5, S_0, N_3, A_4, A_3, mu2, d3] is not transcendence basis
-Collection [A_5, lam, S_6, S_2, d3, b, In_9] is not transcendence basis
-Collection [A_6, In_3, d4, In_1, g1, N_2, In_4] is not transcendence basis
-Collection [A_6, g2, In_2, b, S_4, S_7, A_2] is not transcendence basis
-Collection [A_6, mu2, N_3, d6, b, N_8, N_1] is not transcendence basis
-Collection [A_7, A_10, N_2, In_7, N_0, In_5, g1] is not transcendence basis
-Collection [A_7, In_0, d2, A_9, A_5, In_9, d6] is not transcendence basis
-Collection [A_7, N_8, In_6, In_9, A_5, mu2, b] is not transcendence basis
-Collection [A_7, S_7, In_8, S_9, N_2, N_6, In_2] is not transcendence basis
-Collection [A_7, b, S_1, A_1, d4, N_6, In_3] is not transcendence basis
-Collection [A_8, A_2, d3, A_1, In_7, N_5, S_7] is not transcendence basis
-Collection [A_8, A_9, R_0, g2, b, N_3, S_5] is not transcendence basis
-Collection [A_8, N_2, g1, In_2, N_4, k1, S_5] is not transcendence basis
-Collection [A_8, S_5, A_7, N_3, g2, k1, d2] is not transcendence basis
-Collection [A_8, d3, eps_q, S_2, d6, d2, b] is not transcendence basis
-Collection [A_8, eps_j, N_2, S_3, N_3, b, R_0] is not transcendence basis
-Collection [A_8, mu2, b, S_3, A_0, g1, mu1] is not transcendence basis
-Collection [A_9, A_2, In_4, N_8, N_5, S_6, A_6] is not transcendence basis
-Collection [A_9, In_4, In_3, A_1, S_4, S_5, d4] is not transcendence basis
-Collection [A_9, N_2, N_5, g2, In_3, In_9, S_6] is not transcendence basis
-Collection [A_9, eps_a, A_0, A_8, N_5, mu2, A_6] is not transcendence basis
-Collection [A_9, k1, A_1, d4, N_2, mu2, N_8] is not transcendence basis
-Collection [A_9, mu2, A_1, In_7, S_9, A_5, S_7] is not transcendence basis
-Collection [In_0, A_6, g1, N_3, d2, S_1, S_7] is not transcendence basis
-Collection [In_0, In_4, S_2, N_8, S_0, N_0, eps_a] is not transcendence basis
-Collection [In_1, A_5, In_4, S_5, In_3, S_9, N_6] is not transcendence basis
-Collection [In_1, N_7, d6, mu1, A_6, d2, lam] is not transcendence basis
-Collection [In_1, S_3, In_9, S_6, A_1, N_6, N_0] is not transcendence basis
-Collection [In_1, S_4, N_6, A_8, In_6, In_0, A_2] is not transcendence basis
-Collection [In_2, A_7, S_2, A_8, g2, b, lam] is not transcendence basis
-Collection [In_2, In_8, A_7, S_2, eps_j, A_2, eps_a] is not transcendence basis
-Collection [In_2, mu1, N_3, S_6, A_4, b, eps_j] is not transcendence basis
-Collection [In_3, N_2, S_8, A_9, In_2, mu2, N_8] is not transcendence basis
-Collection [In_3, S_1, N_7, g2, g1, S_8, eps_q] is not transcendence basis
-Collection [In_3, g1, S_3, N_0, S_0, eps_q, A_8] is not transcendence basis
-Collection [In_4, In_7, A_7, d3, A_9, S_4, N_4] is not transcendence basis
-Collection [In_4, N_5, A_2, A_3, N_3, In_7, In_9] is not transcendence basis
-Collection [In_4, mu2, S_8, A_4, A_2, mu1, N_6] is not transcendence basis
-Collection [In_5, In_8, mu2, N_8, eps_q, S_0, In_4] is not transcendence basis
-Collection [In_5, eps_j, N_5, eps_a, g2, b, S_0] is not transcendence basis
-Collection [In_6, A_4, A_6, d3, R_0, A_8, S_6] is not transcendence basis
-Collection [In_6, In_5, A_9, N_5, In_9, R_0, S_1] is not transcendence basis
-Collection [In_6, S_2, N_1, S_5, eps_q, S_1, N_6] is not transcendence basis
-Collection [In_6, S_5, In_9, eps_a, N_7, A_0, In_1] is not transcendence basis
-Collection [In_6, lam, S_9, S_4, In_5, A_10, A_7] is not transcendence basis
-Collection [In_6, mu1, A_4, In_3, In_9, S_1, S_4] is not transcendence basis
-Collection [In_7, A_0, b, In_9, S_8, In_8, S_9] is not transcendence basis
-Collection [In_7, In_6, N_7, In_2, N_3, A_5, N_0] is not transcendence basis
-Collection [In_8, In_9, N_3, A_4, eps_a, mu2, d3] is not transcendence basis
-Collection [In_9, A_10, N_2, N_4, N_8, S_5, mu2] is not transcendence basis
-Collection [In_9, A_9, In_7, S_1, N_3, mu2, mu1] is not transcendence basis
-Collection [In_9, R_0, S_9, A_6, g1, S_6, In_6] is not transcendence basis
-Collection [In_9, S_0, g2, k1, S_3, lam, In_3] is not transcendence basis
-Collection [In_9, S_7, S_1, S_4, eps_a, N_2, A_9] is not transcendence basis
-Collection [In_9, g2, A_0, N_7, N_6, In_2, A_10] is not transcendence basis
-Collection [N_0, A_9, S_2, N_3, b, A_1, In_6] is not transcendence basis
-Collection [N_0, N_2, In_7, In_0, k1, A_5, In_6] is not transcendence basis
-Collection [N_0, N_8, N_1, S_5, mu1, mu2, N_6] is not transcendence basis
-Collection [N_0, S_5, A_7, lam, k1, g1, N_1] is not transcendence basis
-Collection [N_0, S_6, In_2, S_3, d6, N_4, eps_a] is not transcendence basis
-Collection [N_0, eps_j, A_4, N_8, A_1, R_0, d2] is not transcendence basis
-Collection [N_1, In_3, S_7, R_0, mu2, A_1, A_9] is not transcendence basis
-Collection [N_1, eps_j, A_8, d4, In_7, lam, d3] is not transcendence basis
-Collection [N_1, g1, S_5, N_0, k1, N_2, b] is not transcendence basis
-Collection [N_2, A_10, S_3, d6, k1, S_7, S_1] is not transcendence basis
-Collection [N_2, In_5, S_2, eps_q, S_8, A_1, A_6] is not transcendence basis
-Collection [N_2, N_0, S_8, d6, In_8, g2, S_4] is not transcendence basis
-Collection [N_2, d3, N_4, A_10, A_3, S_6, In_7] is not transcendence basis
-Collection [N_3, N_1, S_2, d3, A_3, d6, A_9] is not transcendence basis
-Collection [N_3, S_3, A_3, A_9, S_8, N_4, d2] is not transcendence basis
-Collection [N_3, eps_a, In_2, A_5, A_10, A_7, S_9] is not transcendence basis
-Collection [N_4, A_9, N_7, N_5, S_7, R_0, In_0] is not transcendence basis
-Collection [N_4, N_0, N_8, In_1, In_3, In_4, eps_q] is not transcendence basis
-Collection [N_5, A_6, d2, In_7, S_0, eps_a, eps_q] is not transcendence basis
-Collection [N_5, N_4, eps_q, S_9, A_10, In_7, A_2] is not transcendence basis
-Collection [N_5, S_4, S_5, lam, d4, N_8, N_2] is not transcendence basis
-Collection [N_5, d2, lam, N_7, A_9, In_9, g1] is not transcendence basis
-Collection [N_6, eps_a, d2, d4, S_6, lam, N_7] is not transcendence basis
-Collection [N_7, N_5, d6, In_7, eps_a, N_2, S_0] is not transcendence basis
-Collection [N_7, S_5, A_1, S_3, A_0, eps_a, S_7] is not transcendence basis
-Collection [N_7, d4, lam, A_10, S_0, A_5, A_4] is not transcendence basis
-Collection [N_7, mu1, eps_q, k1, N_2, In_2, d2] is not transcendence basis
-Collection [N_8, S_0, g1, S_2, In_8, lam, A_5] is not transcendence basis
-Collection [R_0, A_4, d3, S_5, N_0, lam, mu1] is not transcendence basis
-Collection [R_0, S_0, A_5, N_7, S_8, N_8, In_7] is not transcendence basis
-Collection [S_0, R_0, mu2, S_7, g2, In_9, eps_q] is not transcendence basis
-Collection [S_0, S_4, S_5, eps_j, A_10, In_3, S_3] is not transcendence basis
-Collection [S_0, S_8, mu1, S_6, N_0, g1, In_5] is not transcendence basis
-Collection [S_1, A_1, N_1, A_8, eps_j, S_4, In_7] is not transcendence basis
-Collection [S_1, A_8, g1, In_9, In_0, N_1, In_2] is not transcendence basis
-Collection [S_1, In_3, d4, S_3, In_6, N_5, S_5] is not transcendence basis
-Collection [S_1, N_6, A_4, S_5, In_2, S_7, A_6] is not transcendence basis
-Collection [S_1, S_5, A_0, eps_a, d4, In_6, A_1] is not transcendence basis
-Collection [S_2, N_1, d6, N_8, d4, A_3, N_6] is not transcendence basis
-Collection [S_2, N_1, k1, mu1, A_9, In_4, eps_q] is not transcendence basis
-Collection [S_2, d6, A_5, lam, N_6, A_10, N_3] is not transcendence basis
-Collection [S_3, A_0, A_10, N_3, In_6, A_7, d2] is not transcendence basis
-Collection [S_3, A_10, A_4, A_2, d2, A_3, In_2] is not transcendence basis
-Collection [S_3, A_8, S_0, N_7, In_9, d3, In_3] is not transcendence basis
-Collection [S_3, In_1, S_2, In_6, In_0, R_0, N_4] is not transcendence basis
-Collection [S_3, S_0, eps_a, S_6, g1, A_9, In_3] is not transcendence basis
-Collection [S_3, S_0, lam, S_1, d6, eps_q, N_2] is not transcendence basis
-Collection [S_3, S_7, g1, In_6, A_9, d6, N_6] is not transcendence basis
-Collection [S_3, d6, In_2, S_9, N_2, d4, A_4] is not transcendence basis
-Collection [S_3, d6, In_3, A_0, N_5, N_0, N_1] is not transcendence basis
-Collection [S_4, In_3, N_2, S_0, In_7, N_7, A_10] is not transcendence basis
-Collection [S_4, In_5, N_8, b, S_7, g1, N_7] is not transcendence basis
-Collection [S_4, d3, A_7, N_6, d4, N_3, S_2] is not transcendence basis
-Collection [S_5, A_5, In_4, d4, eps_q, lam, R_0] is not transcendence basis
-Collection [S_5, N_8, A_2, S_2, A_5, In_7, b] is not transcendence basis
-Collection [S_5, S_2, eps_a, mu1, N_2, g1, R_0] is not transcendence basis
-Collection [S_5, S_9, eps_q, eps_j, In_0, d2, A_1] is not transcendence basis
-Collection [S_6, A_10, In_1, In_7, N_7, In_4, N_1] is not transcendence basis
-Collection [S_6, A_9, d2, N_3, d6, N_4, N_2] is not transcendence basis
-Collection [S_6, In_8, eps_q, In_4, A_10, S_8, S_3] is not transcendence basis
-Collection [S_6, g1, S_7, A_0, S_2, mu1, S_9] is not transcendence basis
-Collection [S_7, lam, A_1, In_3, In_6, In_8, A_5] is not transcendence basis
-Collection [S_8, A_1, N_3, N_8, N_2, In_6, S_3] is not transcendence basis
-Collection [S_8, A_7, A_4, A_8, d3, In_9, In_2] is not transcendence basis
-Collection [S_8, S_4, A_3, d4, A_2, S_9, eps_j] is not transcendence basis
-Collection [S_8, g1, N_0, S_4, N_4, d3, R_0] is not transcendence basis
-Collection [S_9, A_8, N_2, N_7, In_3, d6, N_8] is not transcendence basis
-Collection [S_9, In_0, In_2, A_7, lam, A_5, N_8] is not transcendence basis
-Collection [S_9, N_2, S_4, In_0, N_0, In_2, eps_j] is not transcendence basis
-Collection [b, In_5, A_6, A_3, N_0, S_7, eps_a] is not transcendence basis
-Collection [b, N_1, N_2, S_5, d6, S_1, N_5] is not transcendence basis
-Collection [d2, A_3, N_1, N_3, N_7, N_4, N_5] is not transcendence basis
-Collection [d2, S_5, N_3, A_9, S_8, eps_a, eps_q] is not transcendence basis
-Collection [d2, d4, eps_q, A_5, N_8, S_4, S_7] is not transcendence basis
-Collection [d2, mu1, A_9, S_2, In_4, S_5, In_8] is not transcendence basis
-Collection [d3, A_6, A_9, eps_q, In_1, In_3, S_6] is not transcendence basis
-Collection [d3, In_4, A_1, In_0, A_3, eps_j, In_1] is not transcendence basis
-Collection [d3, N_5, S_9, S_7, eps_q, S_1, b] is not transcendence basis
-Collection [d3, S_4, A_1, S_7, mu2, S_1, eps_q] is not transcendence basis
-Collection [d3, k1, A_1, b, In_2, N_2, In_7] is not transcendence basis
-Collection [d4, In_8, S_7, N_5, In_2, In_7, In_3] is not transcendence basis
-Collection [d4, S_1, S_9, S_3, A_5, In_0, N_5] is not transcendence basis
-Collection [d4, S_2, N_4, g2, g1, In_8, In_0] is not transcendence basis
-Collection [d6, N_7, S_6, N_4, S_9, S_3, d4] is not transcendence basis
-Collection [eps_a, S_7, In_3, N_5, A_3, A_7, A_0] is not transcendence basis
-Collection [eps_a, g2, A_9, N_3, S_5, S_6, d6] is not transcendence basis
-Collection [eps_j, A_1, mu1, eps_q, In_5, d3, A_4] is not transcendence basis
-Collection [eps_j, A_6, S_0, N_3, A_7, A_2, k1] is not transcendence basis
-Collection [eps_j, In_1, N_8, In_4, S_7, R_0, A_4] is not transcendence basis
-Collection [eps_j, N_3, In_0, In_3, d6, eps_q, k1] is not transcendence basis
-Collection [eps_j, d4, N_5, In_2, S_8, mu2, R_0] is not transcendence basis
-Collection [eps_q, In_2, d3, N_5, S_9, N_0, In_6] is not transcendence basis
-Collection [eps_q, g1, d2, In_2, S_4, S_2, b] is not transcendence basis
-Collection [eps_q, g2, mu2, mu1, N_0, A_6, N_6] is not transcendence basis
-Collection [eps_q, lam, mu1, In_4, A_1, In_5, S_4] is not transcendence basis
-Collection [g1, lam, N_0, d3, d2, A_2, d4] is not transcendence basis
-Collection [g2, A_0, R_0, A_6, eps_q, A_1, mu2] is not transcendence basis
-Collection [g2, A_6, In_2, N_8, In_0, N_4, b] is not transcendence basis
-Collection [g2, N_0, S_9, In_0, lam, d3, S_8] is not transcendence basis
-Collection [g2, d3, S_8, N_7, A_8, mu2, In_2] is not transcendence basis
-Collection [k1, A_8, d2, N_7, d3, In_4, A_2] is not transcendence basis
-Collection [k1, g1, d6, In_2, S_7, b, N_2] is not transcendence basis
-Collection [lam, In_4, N_8, In_6, In_3, R_0, In_5] is not transcendence basis
-Collection [mu1, N_0, d3, S_7, In_9, k1, S_3] is not transcendence basis
-Collection [mu1, N_8, d3, A_9, d2, In_5, In_3] is not transcendence basis
-Collection [mu1, g1, A_10, b, S_4, g2, In_6] is not transcendence basis
-Collection [mu2, A_10, In_3, lam, A_3, N_3, In_4] is not transcendence basis
-Collection [mu2, N_7, S_0, b, A_6, S_9, A_1] is not transcendence basis
-Collection [mu2, N_7, d2, N_6, S_5, eps_q, A_7] is not transcendence basis
-Collection [mu2, S_0, S_9, eps_q, In_4, N_7, A_3] is not transcendence basis
-Collection [mu2, S_0, eps_q, S_5, In_5, A_8, N_8] is not transcendence basis
-Collection [mu2, mu1, A_9, In_7, N_8, k1, S_0] is not transcendence basis
-Collection [mu2, mu1, In_6, In_7, N_8, A_10, S_3] is not transcendence basis
+Collection [A_0, A_2, N_5, In_8, A_1, eps_j, In_1] is not transcendence basis
+Collection [A_0, In_9, N_0, N_5, In_1, g1, S_3] is not transcendence basis
+Collection [A_0, N_7, In_5, In_1, In_2, S_4, A_9] is not transcendence basis
+Collection [A_0, S_5, A_8, N_4, b, In_2, N_6] is not transcendence basis
+Collection [A_0, d2, d4, d6, S_6, In_0, N_0] is not transcendence basis
+Collection [A_0, mu2, S_0, A_4, In_8, N_7, eps_j] is not transcendence basis
+Collection [A_1, S_1, S_7, In_1, k1, b, d2] is not transcendence basis
+Collection [A_1, eps_j, A_4, g2, A_0, In_4, b] is not transcendence basis
+Collection [A_1, g2, S_3, N_8, S_8, A_3, In_9] is not transcendence basis
+Collection [A_10, N_7, S_1, k1, R_0, A_5, d3] is not transcendence basis
+Collection [A_10, d2, N_7, d3, In_3, eps_j, A_2] is not transcendence basis
+Collection [A_2, A_1, A_0, In_4, A_9, A_8, N_0] is not transcendence basis
+Collection [A_2, A_9, N_4, k1, A_4, In_7, S_4] is not transcendence basis
+Collection [A_2, In_7, R_0, d3, A_1, N_2, In_9] is not transcendence basis
+Collection [A_2, N_0, N_4, N_3, A_7, S_2, S_5] is not transcendence basis
+Collection [A_2, N_0, d3, N_4, In_2, In_5, In_8] is not transcendence basis
+Collection [A_2, N_1, N_5, b, A_10, A_0, In_3] is not transcendence basis
+Collection [A_2, N_6, A_7, In_8, mu2, b, mu1] is not transcendence basis
+Collection [A_2, S_6, S_5, A_9, A_5, N_5, A_7] is not transcendence basis
+Collection [A_2, S_9, N_0, d2, N_7, N_1, A_6] is not transcendence basis
+Collection [A_3, N_4, S_4, A_2, N_7, A_1, S_2] is not transcendence basis
+Collection [A_3, S_4, A_2, N_0, d3, d6, A_1] is not transcendence basis
+Collection [A_4, A_1, N_0, A_7, S_0, A_5, In_8] is not transcendence basis
+Collection [A_4, A_6, eps_j, In_4, In_5, N_6, N_2] is not transcendence basis
+Collection [A_4, In_0, S_4, S_0, S_6, mu2, A_8] is not transcendence basis
+Collection [A_4, N_1, A_7, S_0, R_0, N_2, S_7] is not transcendence basis
+Collection [A_4, d3, In_2, S_6, S_1, N_0, b] is not transcendence basis
+Collection [A_5, A_10, R_0, g2, N_5, eps_j, A_1] is not transcendence basis
+Collection [A_5, A_2, eps_a, d2, S_8, A_6, N_6] is not transcendence basis
+Collection [A_5, A_9, S_6, A_7, N_5, eps_a, N_3] is not transcendence basis
+Collection [A_5, In_0, In_7, In_3, S_3, b, N_3] is not transcendence basis
+Collection [A_5, N_1, A_0, S_3, k1, In_4, N_3] is not transcendence basis
+Collection [A_6, A_0, d4, A_10, b, S_5, S_9] is not transcendence basis
+Collection [A_6, In_5, N_7, mu1, A_3, A_8, N_6] is not transcendence basis
+Collection [A_6, In_7, d3, N_8, In_3, N_7, A_0] is not transcendence basis
+Collection [A_6, S_2, R_0, lam, In_4, A_0, A_2] is not transcendence basis
+Collection [A_6, d2, S_6, In_9, A_9, S_9, eps_j] is not transcendence basis
+Collection [A_6, k1, N_6, S_5, mu1, S_3, S_2] is not transcendence basis
+Collection [A_7, In_8, N_7, A_3, A_2, S_5, eps_j] is not transcendence basis
+Collection [A_7, N_1, mu1, In_9, S_6, k1, R_0] is not transcendence basis
+Collection [A_7, N_7, N_4, In_3, A_0, k1, In_9] is not transcendence basis
+Collection [A_7, S_8, mu2, eps_j, d4, A_8, d3] is not transcendence basis
+Collection [A_7, d2, S_8, g2, S_6, N_7, g1] is not transcendence basis
+Collection [A_7, eps_a, In_7, N_1, mu1, A_10, In_2] is not transcendence basis
+Collection [A_8, In_6, N_0, A_0, eps_q, eps_a, A_6] is not transcendence basis
+Collection [A_8, N_1, g1, N_7, mu2, S_2, N_5] is not transcendence basis
+Collection [A_9, S_0, S_1, In_2, N_0, S_3, In_1] is not transcendence basis
+Collection [A_9, b, mu1, g2, In_8, g1, S_7] is not transcendence basis
+Collection [In_0, In_7, A_3, A_5, d3, N_7, N_2] is not transcendence basis
+Collection [In_0, In_8, In_4, S_0, N_2, mu1, In_9] is not transcendence basis
+Collection [In_0, S_7, A_0, d4, S_1, In_4, N_0] is not transcendence basis
+Collection [In_1, N_1, N_6, A_6, A_10, S_2, In_0] is not transcendence basis
+Collection [In_1, S_8, A_4, S_4, A_2, N_6, In_7] is not transcendence basis
+Collection [In_1, k1, g1, lam, In_8, S_6, A_3] is not transcendence basis
+Collection [In_2, S_6, mu1, eps_a, In_4, d4, S_1] is not transcendence basis
+Collection [In_2, eps_a, eps_q, A_6, S_5, g2, eps_j] is not transcendence basis
+Collection [In_3, N_1, In_1, In_4, mu2, N_6, eps_a] is not transcendence basis
+Collection [In_3, N_5, A_2, A_5, d3, In_2, eps_a] is not transcendence basis
+Collection [In_3, S_6, d3, In_5, A_2, S_3, S_4] is not transcendence basis
+Collection [In_4, In_1, In_0, k1, lam, eps_a, In_7] is not transcendence basis
+Collection [In_4, N_2, d4, S_5, In_0, In_6, b] is not transcendence basis
+Collection [In_4, d2, g2, S_8, d3, d6, b] is not transcendence basis
+Collection [In_4, d3, S_5, A_4, A_10, S_2, In_0] is not transcendence basis
+Collection [In_4, mu2, A_10, In_1, d6, k1, d4] is not transcendence basis
+Collection [In_5, N_3, S_1, A_10, N_7, g2, g1] is not transcendence basis
+Collection [In_6, In_2, N_7, lam, A_1, S_1, k1] is not transcendence basis
+Collection [In_6, eps_a, b, S_7, S_8, In_3, A_7] is not transcendence basis
+Collection [In_6, eps_j, d3, N_4, N_8, A_9, S_8] is not transcendence basis
+Collection [In_7, A_0, A_10, In_0, d4, A_4, N_6] is not transcendence basis
+Collection [In_7, A_6, In_2, N_4, S_3, A_0, A_10] is not transcendence basis
+Collection [In_7, N_1, N_7, A_3, S_8, N_3, In_0] is not transcendence basis
+Collection [In_7, b, N_6, A_6, N_8, N_1, In_5] is not transcendence basis
+Collection [In_8, A_9, A_4, In_5, eps_q, k1, eps_j] is not transcendence basis
+Collection [In_8, In_9, A_10, b, In_2, S_2, N_7] is not transcendence basis
+Collection [In_8, N_6, S_2, A_1, N_8, S_6, k1] is not transcendence basis
+Collection [In_8, S_7, A_9, A_1, S_8, In_1, R_0] is not transcendence basis
+Collection [N_0, In_4, N_3, S_5, g1, In_3, S_8] is not transcendence basis
+Collection [N_0, S_8, A_2, A_3, A_10, In_6, S_7] is not transcendence basis
+Collection [N_1, A_0, In_3, A_9, A_4, S_5, A_1] is not transcendence basis
+Collection [N_1, mu1, A_7, A_9, d3, N_4, N_7] is not transcendence basis
+Collection [N_2, A_8, d6, N_7, S_9, S_5, S_3] is not transcendence basis
+Collection [N_2, In_6, S_5, A_5, N_5, S_7, N_4] is not transcendence basis
+Collection [N_2, N_0, A_7, In_2, g1, A_5, d2] is not transcendence basis
+Collection [N_2, S_2, N_1, d6, S_3, lam, N_0] is not transcendence basis
+Collection [N_2, g2, N_8, In_3, In_4, d4, S_6] is not transcendence basis
+Collection [N_3, In_0, N_7, R_0, A_5, g1, A_3] is not transcendence basis
+Collection [N_3, In_7, N_2, A_3, g1, In_2, eps_j] is not transcendence basis
+Collection [N_3, N_5, In_1, In_2, A_8, b, S_0] is not transcendence basis
+Collection [N_3, N_7, k1, A_2, S_3, N_2, N_4] is not transcendence basis
+Collection [N_3, S_3, g2, mu2, S_7, In_0, eps_q] is not transcendence basis
+Collection [N_3, S_9, N_4, In_0, A_3, eps_q, N_6] is not transcendence basis
+Collection [N_3, eps_q, In_0, In_6, A_7, R_0, S_5] is not transcendence basis
+Collection [N_4, A_10, In_9, In_8, S_6, A_7, eps_q] is not transcendence basis
+Collection [N_4, A_4, eps_a, N_3, A_8, In_9, A_0] is not transcendence basis
+Collection [N_4, A_8, S_4, A_6, S_1, In_5, S_7] is not transcendence basis
+Collection [N_4, In_7, N_0, A_8, S_6, A_2, S_9] is not transcendence basis
+Collection [N_4, d4, S_7, S_1, In_3, A_1, N_8] is not transcendence basis
+Collection [N_5, In_1, N_7, S_3, S_5, A_5, k1] is not transcendence basis
+Collection [N_6, N_3, d4, eps_q, S_6, In_8, S_7] is not transcendence basis
+Collection [N_6, S_5, S_1, A_4, In_5, N_3, lam] is not transcendence basis
+Collection [N_7, A_1, S_3, A_8, In_1, N_3, In_0] is not transcendence basis
+Collection [N_7, A_6, S_1, g1, eps_q, A_9, d4] is not transcendence basis
+Collection [N_8, A_0, S_7, b, In_2, k1, A_7] is not transcendence basis
+Collection [N_8, In_9, A_3, In_3, N_2, In_6, mu2] is not transcendence basis
+Collection [N_8, S_8, A_8, In_1, S_7, A_3, N_7] is not transcendence basis
+Collection [R_0, In_4, N_1, d2, N_8, A_4, d4] is not transcendence basis
+Collection [R_0, N_4, k1, A_6, In_5, d2, S_0] is not transcendence basis
+Collection [R_0, S_0, g1, S_9, A_3, A_0, eps_a] is not transcendence basis
+Collection [R_0, S_8, eps_a, S_5, mu1, A_4, In_7] is not transcendence basis
+Collection [S_0, A_10, In_5, S_4, In_2, N_7, In_7] is not transcendence basis
+Collection [S_0, In_4, N_2, N_5, eps_a, d4, k1] is not transcendence basis
+Collection [S_0, In_7, In_3, S_9, b, A_7, N_8] is not transcendence basis
+Collection [S_0, S_5, In_2, N_6, N_8, lam, d2] is not transcendence basis
+Collection [S_0, S_5, N_5, N_1, A_9, S_2, eps_j] is not transcendence basis
+Collection [S_1, A_0, N_7, A_5, N_8, In_1, S_9] is not transcendence basis
+Collection [S_1, N_2, N_5, N_3, A_0, A_2, In_5] is not transcendence basis
+Collection [S_1, N_8, A_10, N_1, A_7, b, A_2] is not transcendence basis
+Collection [S_1, S_3, A_9, A_5, In_4, N_6, N_8] is not transcendence basis
+Collection [S_1, S_8, In_0, A_4, A_10, N_2, In_7] is not transcendence basis
+Collection [S_1, lam, mu2, S_4, In_5, In_9, N_4] is not transcendence basis
+Collection [S_2, A_7, A_0, In_0, g2, N_5, A_1] is not transcendence basis
+Collection [S_2, b, N_5, S_5, N_1, N_3, In_5] is not transcendence basis
+Collection [S_2, lam, A_0, S_9, A_8, d4, In_1] is not transcendence basis
+Collection [S_3, In_0, S_8, S_6, A_7, d4, S_4] is not transcendence basis
+Collection [S_3, d3, d2, A_1, A_4, b, A_9] is not transcendence basis
+Collection [S_3, k1, A_2, A_0, A_9, In_4, In_3] is not transcendence basis
+Collection [S_4, In_5, N_8, In_2, A_7, In_4, R_0] is not transcendence basis
+Collection [S_4, S_6, N_1, eps_a, In_8, S_3, eps_j] is not transcendence basis
+Collection [S_6, A_10, S_2, mu2, S_7, S_5, eps_j] is not transcendence basis
+Collection [S_6, In_2, A_9, N_3, S_4, S_9, S_0] is not transcendence basis
+Collection [S_6, In_4, k1, S_1, N_7, In_7, A_1] is not transcendence basis
+Collection [S_6, eps_q, d6, N_0, S_7, mu2, N_7] is not transcendence basis
+Collection [S_8, In_8, d3, lam, A_9, A_5, N_2] is not transcendence basis
+Collection [S_8, S_4, b, A_8, A_7, In_8, k1] is not transcendence basis
+Collection [S_9, In_2, A_9, d2, A_1, In_0, A_2] is not transcendence basis
+Collection [S_9, N_4, In_2, In_8, In_4, eps_q, N_1] is not transcendence basis
+Collection [S_9, S_5, R_0, In_4, b, In_3, S_8] is not transcendence basis
+Collection [S_9, eps_a, g2, A_7, In_2, k1, In_6] is not transcendence basis
+Collection [S_9, eps_q, In_5, A_5, A_10, In_6, In_8] is not transcendence basis
+Collection [b, S_2, In_6, N_2, S_8, g1, S_6] is not transcendence basis
+Collection [b, g1, N_8, A_4, N_5, S_3, N_4] is not transcendence basis
+Collection [d2, A_5, N_4, A_10, S_4, mu1, N_2] is not transcendence basis
+Collection [d2, A_7, N_6, A_10, N_1, A_0, mu1] is not transcendence basis
+Collection [d2, In_5, N_1, A_6, A_8, S_1, R_0] is not transcendence basis
+Collection [d2, In_6, In_3, S_4, A_10, In_7, N_1] is not transcendence basis
+Collection [d3, A_1, d6, S_2, N_1, In_6, A_3] is not transcendence basis
+Collection [d3, A_2, mu2, In_6, N_3, S_9, k1] is not transcendence basis
+Collection [d3, A_3, eps_q, A_6, N_2, N_3, mu2] is not transcendence basis
+Collection [d3, S_0, A_6, N_1, N_6, In_9, In_4] is not transcendence basis
+Collection [d3, k1, A_5, mu2, In_3, S_5, d2] is not transcendence basis
+Collection [d3, mu1, N_4, g1, S_6, N_5, mu2] is not transcendence basis
+Collection [d4, A_2, eps_j, S_0, In_4, mu1, eps_q] is not transcendence basis
+Collection [d4, A_6, N_7, N_3, N_5, In_3, A_4] is not transcendence basis
+Collection [d4, A_6, lam, R_0, S_0, b, A_2] is not transcendence basis
+Collection [d4, N_0, S_5, S_9, S_0, mu1, A_6] is not transcendence basis
+Collection [d4, lam, N_3, In_1, In_8, S_7, N_5] is not transcendence basis
+Collection [d6, A_10, d2, N_3, A_8, In_0, A_0] is not transcendence basis
+Collection [d6, A_4, A_8, d2, In_8, In_6, g1] is not transcendence basis
+Collection [d6, In_5, In_0, S_1, A_9, eps_a, k1] is not transcendence basis
+Collection [d6, In_5, mu2, In_7, N_6, d4, In_2] is not transcendence basis
+Collection [d6, N_6, k1, S_0, N_3, A_5, d3] is not transcendence basis
+Collection [d6, eps_j, N_8, S_8, N_2, S_9, A_2] is not transcendence basis
+Collection [eps_a, N_5, A_3, A_0, lam, S_2, In_3] is not transcendence basis
+Collection [eps_a, S_8, N_7, S_9, N_4, S_6, S_5] is not transcendence basis
+Collection [eps_a, g2, k1, d4, In_2, d6, A_4] is not transcendence basis
+Collection [eps_j, A_9, k1, In_6, g1, N_0, S_6] is not transcendence basis
+Collection [eps_j, In_1, N_5, d3, A_3, N_0, In_2] is not transcendence basis
+Collection [eps_j, S_1, d4, A_7, N_6, mu2, mu1] is not transcendence basis
+Collection [eps_q, A_3, d3, A_4, N_3, S_0, A_8] is not transcendence basis
+Collection [eps_q, In_5, S_6, A_9, S_7, k1, S_2] is not transcendence basis
+Collection [eps_q, S_7, eps_a, d6, g2, mu2, S_1] is not transcendence basis
+Collection [eps_q, g1, A_8, d4, A_1, mu2, S_1] is not transcendence basis
+Collection [eps_q, g1, S_1, b, N_8, N_5, g2] is not transcendence basis
+Collection [g1, A_5, S_2, In_3, N_0, In_7, S_3] is not transcendence basis
+Collection [g1, In_7, N_5, d4, In_5, S_5, mu1] is not transcendence basis
+Collection [g1, N_4, A_10, N_5, A_7, In_2, d2] is not transcendence basis
+Collection [g1, N_4, d2, A_4, S_9, N_1, In_2] is not transcendence basis
+Collection [g1, S_0, eps_j, S_3, lam, A_0, mu2] is not transcendence basis
+Collection [g1, S_2, A_4, lam, S_8, S_0, S_3] is not transcendence basis
+Collection [g1, lam, A_7, S_5, k1, In_5, A_10] is not transcendence basis
+Collection [g2, A_1, In_5, N_4, A_0, R_0, eps_q] is not transcendence basis
+Collection [g2, In_7, S_1, In_8, d6, R_0, S_7] is not transcendence basis
+Collection [g2, N_5, S_8, N_3, In_2, R_0, S_9] is not transcendence basis
+Collection [k1, In_4, In_2, In_6, A_4, S_3, In_1] is not transcendence basis
+Collection [k1, In_7, In_8, N_1, lam, S_0, A_1] is not transcendence basis
+Collection [k1, In_9, S_1, d3, In_0, N_0, N_7] is not transcendence basis
+Collection [k1, N_4, A_7, In_2, b, S_0, S_4] is not transcendence basis
+Collection [k1, eps_q, S_3, R_0, eps_j, A_3, d4] is not transcendence basis
+Collection [k1, mu1, A_0, A_2, A_7, R_0, N_6] is not transcendence basis
+Collection [lam, In_4, N_4, A_0, A_5, S_0, A_3] is not transcendence basis
+Collection [lam, N_4, eps_a, S_5, In_1, In_9, d6] is not transcendence basis
+Collection [lam, S_5, In_8, g2, S_1, S_8, S_3] is not transcendence basis
+Collection [lam, S_6, N_0, A_0, S_9, In_9, A_10] is not transcendence basis
+Collection [mu1, A_3, d4, d2, N_7, S_2, S_9] is not transcendence basis
+Collection [mu1, A_4, S_2, A_3, d2, A_2, A_6] is not transcendence basis
+Collection [mu1, N_0, S_1, S_9, S_7, S_3, g1] is not transcendence basis
+Collection [mu1, S_0, A_2, N_7, R_0, N_1, In_1] is not transcendence basis
+Collection [mu2, N_5, d6, k1, g1, lam, S_0] is not transcendence basis
+Collection [mu2, S_3, N_7, d3, N_8, In_2, A_4] is not transcendence basis
 Picked the best choice [A_0, In_0, N_0, R_0, d2, d3, d6] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {d2, d3, d6}
 Algebraically independent parameters among derivatives: {A(0), In(0), N(0), R(0)}
@@ -280,9 +280,9 @@ Parameters in equations:  [b, d1, d4, d5, eps_a, eps_j, eps_q, g1, g2, k1, k2, l
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[d5 = 1, mu2 = 1, lam = 2, d4 = 2, g1 = 2, d2_ = 0, d6_ = 0, eps_a = 2, N_ = 3, Jj_ = 0, A_ = 1, k1 = 2, k2 = 1, In_ = 1, eps_q = 2, eps_j = 2, d3_ = 0, S_ = 2, b = 3, Q_ = 0, mu1 = 1, d1 = 3, g2 = 1]
+States for substitution:	[lam = 2, d3_ = 0, mu2 = 1, d5 = 1, Jj_ = 0, eps_a = 2, k2 = 1, b = 3, eps_q = 2, d6_ = 0, S_ = 2, k1 = 2, N_ = 3, In_ = 1, g1 = 2, mu1 = 1, d1 = 3, d4 = 2, g2 = 1, Q_ = 0, d2_ = 0, A_ = 1, eps_j = 2]
 NonID parameters:	[A_0, In_0, N_0, R_0, S_0, b, d2, d3, d4, d6, eps_a, eps_j, eps_q, g1, g2, k1, lam, mu1, mu2]
-Substitutions:	[z_aux = 3, d2_ = 1, d6_ = 1, N_ = 4, Jj_ = 1, A_ = 2, In_ = 2, S_ = 3, d3_ = 1, Q_ = 1, d1 = 4]
+Substitutions:	[d3_ = 1, Jj_ = 1, d6_ = 1, S_ = 3, N_ = 4, In_ = 2, z_aux = 3, d1 = 4, Q_ = 1, d2_ = 1, A_ = 2]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -317,7 +317,7 @@ Nonidentifiable parameter:  [A(0), In(0), N(0), R(0), S(0), b, d2, d3, d4, d6, e
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[d5 = 1, mu2 = 1, d6 = 1, lam = 2, d4 = 2, g1 = 2, eps_a = 2, N_ = 3, Jj_ = 0, A_ = 1, k1 = 2, k2 = 1, In_ = 1, eps_q = 2, eps_j = 2, S_ = 2, b = 3, Q_ = 0, mu1 = 1, d1 = 3, d2 = 2, g2 = 1]
+States for substitution:	[lam = 2, mu2 = 1, d5 = 1, Jj_ = 0, eps_a = 2, d2 = 2, k2 = 1, b = 3, eps_q = 2, S_ = 2, k1 = 2, N_ = 3, d6 = 1, In_ = 1, g1 = 2, mu1 = 1, d1 = 3, d4 = 2, g2 = 1, Q_ = 0, A_ = 1, eps_j = 2]
 NonID parameters:	[A_0, In_0, N_0, R_0, S_0, b, d2, d3, d4, d6, eps_a, eps_j, eps_q, g1, g2, k1, lam, mu1, mu2]
-Substitutions:	[z_aux = 3, N_ = 4, Jj_ = 1, A_ = 2, In_ = 2, S_ = 3, Q_ = 1, d1 = 4]
-memory used=12194.1MB, alloc=179.8MB, time=106.96
+Substitutions:	[Jj_ = 1, S_ = 3, N_ = 4, In_ = 2, z_aux = 3, d1 = 4, Q_ = 1, A_ = 2]
+memory used=11873.9MB, alloc=179.8MB, time=99.85

@@ -23,13 +23,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -67,24 +67,24 @@ Substituting transcendence basis.
 Algebraically independent parameters {dlt, R(0)}
 Number of possible combinations 3
 Collection [dlt, g_ir] is not transcendence basis
-Picked the best choice [R_0, g_ir] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {g_ir}
+Picked the best choice [R_0, dlt] based on heuristic:
+Algebraically independent parameters among nonidentifiable: {dlt}
 Algebraically independent parameters among derivatives: {R(0)}
 
 === Input info ===
-State variables:          [g_ir(t), Sd(t), Sn(t), Ad(t), An(t), In(t), R(t)]
+State variables:          [dlt(t), Sd(t), Sn(t), Ad(t), An(t), In(t), R(t)]
 Output variables:         [y1(t), y2(t), y_faux1(t)]
 Input variables:          []
-Parameters in equations:  [b_a, b_i, dlt, eps_a, eps_s, f, g_ai, h1, h2]
+Parameters in equations:  [b_a, b_i, eps_a, eps_s, f, g_ai, g_ir, h1, h2]
 ===================
 
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[g_ai = 1, b_a = 1, b_i = 1, Sd_ = 0, eps_a = 1, h2 = 1, Ad_ = 1, f = 1, h1 = 1, g_ir_ = 0, Sn_ = 1, In_ = 0, eps_s = 1, dlt = 1, An_ = 1]
+States for substitution:	[g_ir = 1, h2 = 1, eps_s = 1, Sn_ = 1, h1 = 1, f = 1, Ad_ = 1, b_a = 1, An_ = 1, In_ = 0, dlt_ = 0, b_i = 1, g_ai = 1, eps_a = 1, Sd_ = 0]
 NonID parameters:	[R_0, dlt, g_ir]
-Substitutions:	[g_ai = 2, b_a = 2, b_i = 2, Sd_ = 1, eps_a = 2, h2 = 2, Ad_ = 2, f = 2, h1 = 2, Sn_ = 2, g_ir_ = 1, z_aux = 1, In_ = 1, eps_s = 2, An_ = 2]
+Substitutions:	[h2 = 2, eps_s = 2, Sn_ = 2, h1 = 2, f = 2, b_a = 2, Ad_ = 2, z_aux = 1, An_ = 2, In_ = 1, dlt_ = 1, b_i = 2, g_ai = 2, eps_a = 2, Sd_ = 1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -119,7 +119,7 @@ Nonidentifiable parameter:  [R(0), dlt, g_ir]
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[g_ai = 1, b_a = 1, b_i = 1, Sd_ = 0, eps_a = 1, h2 = 1, Ad_ = 1, f = 1, h1 = 1, Sn_ = 1, g_ir = 1, In_ = 0, eps_s = 1, dlt = 1, An_ = 1]
+States for substitution:	[g_ir = 1, h2 = 1, eps_s = 1, Sn_ = 1, h1 = 1, f = 1, Ad_ = 1, b_a = 1, An_ = 1, In_ = 0, b_i = 1, g_ai = 1, eps_a = 1, Sd_ = 0, dlt = 1]
 NonID parameters:	[R_0, dlt, g_ir]
-Substitutions:	[g_ai = 2, b_a = 2, b_i = 2, Sd_ = 1, eps_a = 2, h2 = 2, Ad_ = 2, f = 2, h1 = 2, Sn_ = 2, z_aux = 1, In_ = 1, eps_s = 2, An_ = 2]
-memory used=1215.5MB, alloc=172.6MB, time=9.73
+Substitutions:	[h2 = 2, eps_s = 2, Sn_ = 2, h1 = 2, f = 2, b_a = 2, Ad_ = 2, z_aux = 1, An_ = 2, In_ = 1, b_i = 2, g_ai = 2, eps_a = 2, Sd_ = 1]
+memory used=1209.1MB, alloc=172.6MB, time=10.24

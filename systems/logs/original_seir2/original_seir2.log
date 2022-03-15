@@ -22,13 +22,13 @@ Warning, (in GetPolySystem) `denom_` is implicitly declared local
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
 |imports/generate_poly_system.mpl:490|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:107|
-Warning, (in WriteScripts) `max_degree` is implicitly declared local
 |imports/create_substitutions.mpl:108|
+Warning, (in WriteScripts) `max_degree` is implicitly declared local
+|imports/create_substitutions.mpl:109|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:110|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -63,9 +63,9 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[N_ = 0, In_ = 2, Cu_ = 0, E_ = 1, a = 3, b = 2, nu = 1, S_ = 2]
+States for substitution:	[a = 3, S_ = 2, N_ = 0, b = 2, In_ = 2, nu = 1, E_ = 1, Cu_ = 0]
 NonID parameters:	[]
-Substitutions:	[N_ = 1, In_ = 3, E_ = 2, a = 4, z_aux = 3, S_ = 3]
+Substitutions:	[a = 4, S_ = 3, N_ = 1, In_ = 3, E_ = 2, z_aux = 3]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -100,7 +100,7 @@ Nonidentifiable parameter:  []
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[N_ = 0, In_ = 2, Cu_ = 0, E_ = 1, a = 3, b = 2, nu = 1, S_ = 2]
+States for substitution:	[a = 3, S_ = 2, N_ = 0, b = 2, In_ = 2, nu = 1, E_ = 1, Cu_ = 0]
 NonID parameters:	[]
-Substitutions:	[N_ = 1, In_ = 3, E_ = 2, a = 4, z_aux = 3, S_ = 3]
-memory used=278.0MB, alloc=116.3MB, time=2.44
+Substitutions:	[a = 4, S_ = 3, N_ = 1, In_ = 3, E_ = 2, z_aux = 3]
+memory used=278.3MB, alloc=116.3MB, time=2.50
