@@ -1,7 +1,7 @@
 # Code to take a system of ode's and generate a polynomial system for SIAN
 
 #===============================================================================
-GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_solutions:=true, p := 0.99, infolevel := 1, method := 2, num_nodes := 6, max_comb:=200})
+GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, trbasis_sub_method:=1, count_solutions:=true, p := 0.99, infolevel := 1, method := 2, num_nodes := 6, max_comb:=200})
 #===============================================================================
  local i, j, k, n, m, s, all_params, all_vars, eqs, Q, X, Y, poly, d0, D1,
         sample, all_subs,alpha, beta, Et, x_theta_vars, prolongation_possible,
@@ -335,33 +335,44 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
     faux_outputs := []:
     faux_odes := []:
     idx := 1:
-    for each in alg_indep_params do
-      if not (each in x_vars) then
-        sigma_new := subs({each=each(t)}, sigma_new):
-        faux_outputs := [op(faux_outputs), parse(cat("y_faux", idx, "(t)"))=each(t)]:
-        faux_odes := [op(faux_odes), diff(each(t), t)=0]:
-      else
-        faux_outputs := [op(faux_outputs), parse(cat("y_faux", idx, "(t)"))=parse(convert(each, string)[..-2])(t)]:
-      end if:
-      idx := idx+1:
-    end do:
-    sigma_new := [op(faux_odes), op(sigma_new), op(faux_outputs)]:
+    # for each in alg_indep_params do
+    #   if not (each in x_vars) then
+    #     sigma_new := subs({each=each(t)}, sigma_new):
+    #     faux_outputs := [op(faux_outputs), parse(cat("y_faux", idx, "(t)"))=each(t)]:
+    #     faux_odes := [op(faux_odes), diff(each(t), t)=0]:
+    #   else
+    #     faux_outputs := [op(faux_outputs), parse(cat("y_faux", idx, "(t)"))=parse(convert(each, string)[..-2])(t)]:
+    #   end if:
+    #   idx := idx+1:
+    # end do:
+    # sigma_new := [op(faux_odes), op(sigma_new), op(faux_outputs)]:
     if infolevel>0 then
       printf("%s %a\n", `Algebraically independent parameters among nonidentifiable:`, map(x-> ParamToOuter(x, all_vars), alg_indep_params)):
       printf("%s %a\n", `Algebraically independent parameters among derivatives:`, map(x-> ParamToOuter(x, all_vars), alg_indep_derivs)):
     end if:
 
-    if infolevel>1 then
-      printf("\t%s %a\n", `Adding ODEs:`, faux_odes):
-      printf("\t%s %a\n", `Adding output functions:`, faux_outputs):
-      printf("\t%s %a\n", `New system:`, sigma_new):
-    end if:
+    # if infolevel>1 then
+    #   printf("\t%s %a\n", `Adding ODEs:`, faux_odes):
+    #   printf("\t%s %a\n", `Adding output functions:`, faux_outputs):
+    #   printf("\t%s %a\n", `New system:`, sigma_new):
+    # end if:
 
-    X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
+    # X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
+    alg_indep
+    if trbasis_sub_method=1 then
+      #add Y_eqs for each alg_indep
+      faux_equations := [seq(parse(cat("y_faux", idx, "_0"))=alg_indep[idx], idx in 1..numelems(alg_indep))]:
+      y_faux := [seq(parse(cat("y_faux", idx, "_")), idx=1..numelems(alg_indep_derivs))]:
+      Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:
+      Y_eq := [op(Y_eq), op(faux_equations)]:
+    elif trbasis_sub_method = 2 then
+      # directly sample random values for each thing in alg_indep
+      transc_sample_ := SamplePoint(D2, x_vars, [op(y_vars)], u_vars, mu, X_eq, Y_eq, Q):
+    end if:
     if numelems(alg_indep_derivs)>0 then
-      if infolevel>1 then
-        printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
-      end if:
+      # if infolevel>1 then
+      #   printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
+      # end if:
       faux_equations := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_0"))=alg_indep_derivs[idx], idx in 1..numelems(alg_indep_derivs))]:
       y_faux := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_")), idx=1..numelems(alg_indep_derivs))]:
       Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:

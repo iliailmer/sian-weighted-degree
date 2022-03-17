@@ -23,7 +23,7 @@ SimpleSubstitutions := proc(sigma, exponent, {trdegsub:=true})
   local system_vars, non_id, counting_table_states, min_count, vts, rhs_terms, max_possible,
         rhs_term, indets_, term, substitutions, sigma_new, each, alg_indep;
   
-  system_vars, non_id, sigma_new, alg_indep := GetPolySystem(sigma, GetParameters(sigma), sub_transc=trdegsub):
+  system_vars, non_id, sigma_new, alg_indep := GetPolySystem(sigma, GetParameters(sigma), sub_transc=trdegsub, infolevel=2):
   
   vts := GetMinLevelBFS(sigma_new):
   printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);
@@ -55,7 +55,7 @@ SubsByDepth := proc(sigma, {trdegsub:=true})
         rhs_term, indets_, term, substitutions, sigma_new, each, alg_indep, original_et_hat,
         all_subs, names, selection, other, all_odes, each_ode;
   
-  system_vars, non_id, sigma_new, alg_indep:= GetPolySystem(sigma, GetParameters(sigma), sub_transc=trdegsub):
+  system_vars, non_id, sigma_new, alg_indep:= GetPolySystem(sigma, GetParameters(sigma), sub_transc=trdegsub, infolevel=2):
   
   vts := GetMinLevelBFS(sigma_new):
   printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);
