@@ -6,30 +6,78 @@
 # ~90 => ~60
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in SubsByDepth) `out` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `mem` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `cpu_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `real_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:108|
+|imports/create_substitutions.mpl:111|
 Warning, (in WriteScripts) `max_degree` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:112|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 sigma := [diff(EGF_EGFR(t),t) = reaction_1_k1*EGF_EGFR(t)-reaction_9_k1*
 EGF_EGFR(t)-reaction_1_k2*EGF_EGFR(t), diff(EGFR(t),t) = -reaction_1_k1*
 EGF_EGFR(t)+reaction_1_k2*EGF_EGFR(t)-EGFR(t)*EGFR_turnover+EGFR_turnover*
@@ -65,6 +113,9 @@ Parameters in equations:  [a1, a2, a3, EGFR_turnover, reaction_1_k1, reaction_1_
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  588900000
+Orders of prolongations of the outputs (beta) =  [8, 8, 7]
+Orders of prolongations of the state variables (alpha) =  [7, 1, 8, 8, 8, 8, 7, 7, 7]
 
 =======================================================
 3. Assessing local identifiability
@@ -73,6 +124,9 @@ Parameters in equations:  [a1, a2, a3, EGFR_turnover, reaction_1_k1, reaction_1_
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  85969699260000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a1 = 4974514672065662186202227805702747, a2 = 24314610630309864552775918165182981, a3 = 14139912030062416217528677271119203, EGFR_turnover = 38293456089342990668633121436951362, reaction_1_k1 = 63614120644351407340745843397195622, reaction_1_k2 = 42374645191068687916980837013754339, reaction_2_k1 = 77054891830621729019493984527406117, reaction_2_k2 = 46122287541145248674610251076700533, reaction_3_k1 = 5968199379392713051671186879591140, reaction_4_k1 = 40063171449298147005802880579347525, reaction_5_k1 = 60580951487052583279833298379183327, reaction_5_k2 = 41693058463706535771360494413961793, reaction_6_k1 = 65282906690982685989148996201418895, reaction_7_k1 = 15793048439759531558280882990737095, reaction_8_k1 = 47492970220188529867974720562767763, reaction_9_k1 = 30576226960866102150741801879662133, EGF_EGFR_0 = 19510415797426425989503962579354308, EGFR_0 = 27070127504581191122986912550566767, pEGFR_0 = 79208517533878666671279685894302337, pAkt_S6_0 = 40883940762070409504377618992663726, pEGFR_Akt_0 = 46003304313902275453298917195225497, pAkt_0 = 74262405074761373421045581687113285, S6_0 = 47075839298505500221166586123312629, pS6_0 = 75463845259039932351036557773175034, Akt_0 = 24539962460271012502997423005750147]
+The polynomial system widehat{E^t} contains  75 equations in  76  variables
 Locally identifiable paramters:  [reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1]
 Nonidentifiable parameter:  [Akt(0), EGFR(0), S6(0), a1, a2, a3, pAkt(0), pEGFR(0), pS6(0), EGFR_turnover, EGF_EGFR(0), pAkt_S6(0), pEGFR_Akt(0), reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
 
@@ -81,208 +135,211 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {EGFR_turnover, reaction_1_k1, Akt(0), EGFR(0), EGF_EGFR(0)}
 Number of possible combinations 12103014
-Collection [Akt_0, reaction_9_k1, reaction_2_k1, pS6_0, EGF_EGFR_6] is not transcendence basis
-Collection [Akt_1, S6_5, pAkt_1, pEGFR_Akt_4, pAkt_S6_7] is not transcendence basis
-Collection [Akt_2, pS6_3, EGFR_turnover, pAkt_6, pEGFR_Akt_7] is not transcendence basis
-Collection [Akt_2, pEGFR_Akt_4, pEGFR_Akt_2, Akt_3, pAkt_S6_0] is not transcendence basis
-Collection [Akt_3, pS6_3, EGF_EGFR_1, Akt_5, S6_1] is not transcendence basis
-Collection [Akt_3, EGF_EGFR_1, pEGFR_Akt_3, EGF_EGFR_6, pS6_2] is not transcendence basis
-Collection [Akt_3, EGF_EGFR_2, pAkt_S6_5, reaction_1_k2, pEGFR_4] is not transcendence basis
-Collection [Akt_3, pAkt_S6_4, pEGFR_Akt_4, EGF_EGFR_5, a1] is not transcendence basis
-Collection [Akt_4, Akt_1, pEGFR_1, pAkt_S6_1, pAkt_7] is not transcendence basis
-Collection [Akt_4, pAkt_S6_3, pAkt_S6_1, pS6_5, EGF_EGFR_3] is not transcendence basis
-Collection [Akt_4, pAkt_S6_6, pEGFR_7, EGF_EGFR_2, a1] is not transcendence basis
-Collection [Akt_4, pEGFR_Akt_7, EGF_EGFR_5, pS6_6, pEGFR_Akt_1] is not transcendence basis
-Collection [Akt_5, pAkt_S6_3, EGF_EGFR_1, Akt_1, pAkt_S6_1] is not transcendence basis
-Collection [Akt_5, pAkt_S6_4, pS6_2, a3, pAkt_S6_0] is not transcendence basis
-Collection [Akt_6, EGF_EGFR_6, EGFR_turnover, pEGFR_Akt_2, EGF_EGFR_2] is not transcendence basis
-Collection [Akt_6, pEGFR_Akt_7, Akt_4, pEGFR_7, Akt_0] is not transcendence basis
-Collection [EGFR_0, pEGFR_3, Akt_4, pAkt_6, EGF_EGFR_5] is not transcendence basis
-Collection [EGFR_0, pEGFR_5, S6_5, S6_3, EGF_EGFR_6] is not transcendence basis
-Collection [EGFR_0, pEGFR_7, S6_2, reaction_1_k2, Akt_3] is not transcendence basis
-Collection [EGFR_0, pAkt_S6_0, pS6_1, EGF_EGFR_1, a3] is not transcendence basis
-Collection [S6_0, Akt_6, pEGFR_Akt_6, pAkt_S6_7, EGF_EGFR_5] is not transcendence basis
-Collection [S6_0, EGFR_0, pEGFR_Akt_2, S6_6, pEGFR_2] is not transcendence basis
-Collection [S6_0, pEGFR_2, EGFR_turnover, Akt_6, Akt_3] is not transcendence basis
-Collection [S6_1, a2, S6_0, pEGFR_Akt_3, pS6_0] is not transcendence basis
-Collection [S6_1, pEGFR_6, a1, EGF_EGFR_1, pAkt_2] is not transcendence basis
-Collection [S6_1, EGF_EGFR_0, pAkt_S6_0, a2, a1] is not transcendence basis
-Collection [S6_1, EGF_EGFR_6, pAkt_S6_4, pAkt_3, EGF_EGFR_1] is not transcendence basis
-Collection [S6_1, pAkt_S6_4, pEGFR_Akt_3, pAkt_S6_0, pEGFR_Akt_1] is not transcendence basis
-Collection [S6_2, pEGFR_1, pEGFR_Akt_3, reaction_1_k2, pS6_1] is not transcendence basis
-Collection [S6_3, pS6_4, pAkt_S6_3, pEGFR_4, pAkt_S6_0] is not transcendence basis
-Collection [S6_3, pEGFR_Akt_0, pAkt_S6_3, pEGFR_3, S6_5] is not transcendence basis
-Collection [S6_3, reaction_2_k1, pEGFR_2, pAkt_S6_0, pEGFR_1] is not transcendence basis
-Collection [S6_4, pS6_1, Akt_0, S6_3, pS6_4] is not transcendence basis
-Collection [S6_4, pEGFR_Akt_1, EGF_EGFR_1, pAkt_S6_3, pEGFR_6] is not transcendence basis
-Collection [S6_5, EGFR_turnover, pAkt_5, pEGFR_2, EGF_EGFR_0] is not transcendence basis
-Collection [S6_6, a1, S6_1, pEGFR_4, pEGFR_Akt_3] is not transcendence basis
-Collection [S6_6, pAkt_0, Akt_6, S6_3, pS6_3] is not transcendence basis
-Collection [S6_6, pAkt_S6_2, pEGFR_Akt_6, S6_4, pEGFR_7] is not transcendence basis
-Collection [S6_6, reaction_1_k2, EGFR_0, pAkt_S6_7, pEGFR_7] is not transcendence basis
-Collection [a1, Akt_1, S6_1, reaction_5_k1, S6_2] is not transcendence basis
-Collection [a1, pAkt_3, pAkt_S6_6, S6_5, a2] is not transcendence basis
-Collection [a1, EGFR_turnover, pAkt_S6_2, pAkt_3, pEGFR_2] is not transcendence basis
-Collection [a2, pAkt_7, pAkt_5, Akt_1, pAkt_2] is not transcendence basis
-Collection [a2, pEGFR_4, S6_3, S6_6, pEGFR_5] is not transcendence basis
-Collection [a2, pS6_5, pEGFR_Akt_2, EGFR_0, pS6_2] is not transcendence basis
-Collection [a2, EGF_EGFR_6, pS6_2, pAkt_6, pAkt_S6_3] is not transcendence basis
-Collection [a2, pAkt_S6_7, EGF_EGFR_1, pAkt_6, pAkt_1] is not transcendence basis
-Collection [a2, reaction_9_k1, Akt_6, pAkt_S6_2, pAkt_S6_7] is not transcendence basis
-Collection [a3, pEGFR_3, Akt_2, pEGFR_5, reaction_1_k1] is not transcendence basis
-Collection [a3, pEGFR_5, pEGFR_Akt_7, Akt_6, pS6_3] is not transcendence basis
-Collection [a3, EGF_EGFR_4, pAkt_5, pEGFR_4, pEGFR_0] is not transcendence basis
-Collection [pAkt_0, S6_6, pS6_5, reaction_1_k2, EGF_EGFR_3] is not transcendence basis
-Collection [pAkt_0, S6_6, pAkt_S6_0, Akt_1, EGF_EGFR_5] is not transcendence basis
-Collection [pAkt_0, EGF_EGFR_2, Akt_0, reaction_5_k1, pEGFR_Akt_1] is not transcendence basis
-Collection [pAkt_0, pEGFR_Akt_6, pAkt_3, pAkt_S6_6, pEGFR_5] is not transcendence basis
-Collection [pAkt_1, S6_3, pEGFR_7, EGF_EGFR_2, Akt_2] is not transcendence basis
-Collection [pAkt_1, pAkt_2, a1, a2, pAkt_S6_1] is not transcendence basis
-Collection [pAkt_2, EGF_EGFR_2, pS6_0, pS6_1, pEGFR_Akt_2] is not transcendence basis
-Collection [pAkt_2, pEGFR_Akt_7, EGF_EGFR_0, Akt_0, a3] is not transcendence basis
-Collection [pAkt_3, pAkt_7, EGF_EGFR_3, pAkt_S6_0, S6_3] is not transcendence basis
-Collection [pAkt_3, pEGFR_1, pAkt_S6_1, reaction_5_k1, pS6_1] is not transcendence basis
-Collection [pAkt_4, S6_5, pAkt_S6_3, EGFR_turnover, pEGFR_3] is not transcendence basis
-Collection [pAkt_4, a2, pAkt_1, pAkt_S6_3, pAkt_S6_1] is not transcendence basis
-Collection [pAkt_4, pEGFR_6, S6_5, reaction_2_k1, pEGFR_3] is not transcendence basis
-Collection [pAkt_4, EGF_EGFR_3, pEGFR_Akt_0, pS6_6, S6_6] is not transcendence basis
-Collection [pAkt_4, reaction_9_k1, pEGFR_Akt_3, pEGFR_4, EGFR_0] is not transcendence basis
-Collection [pAkt_5, Akt_6, pEGFR_0, pEGFR_Akt_2, pAkt_1] is not transcendence basis
-Collection [pAkt_5, pEGFR_1, reaction_2_k1, pEGFR_6, Akt_0] is not transcendence basis
-Collection [pAkt_5, EGFR_turnover, EGF_EGFR_2, pEGFR_1, pEGFR_Akt_3] is not transcendence basis
-Collection [pAkt_5, EGF_EGFR_3, S6_3, EGF_EGFR_4, pAkt_S6_4] is not transcendence basis
-Collection [pAkt_5, pEGFR_Akt_3, S6_5, pAkt_S6_3, pEGFR_6] is not transcendence basis
-Collection [pAkt_6, pAkt_4, reaction_1_k2, pEGFR_2, EGF_EGFR_3] is not transcendence basis
-Collection [pAkt_6, pEGFR_Akt_7, EGF_EGFR_3, a1, pAkt_S6_7] is not transcendence basis
-Collection [pAkt_7, pS6_0, pEGFR_3, Akt_2, EGF_EGFR_2] is not transcendence basis
-Collection [pAkt_7, pAkt_S6_2, pAkt_0, reaction_5_k1, EGF_EGFR_4] is not transcendence basis
-Collection [pAkt_7, pEGFR_Akt_7, Akt_1, EGF_EGFR_4, EGFR_0] is not transcendence basis
-Collection [pAkt_7, reaction_1_k2, pEGFR_Akt_1, pS6_3, pAkt_S6_5] is not transcendence basis
-Collection [pEGFR_0, pAkt_6, S6_3, Akt_3, pEGFR_Akt_4] is not transcendence basis
-Collection [pEGFR_2, Akt_0, pAkt_S6_1, pEGFR_4, pEGFR_Akt_7] is not transcendence basis
-Collection [pEGFR_2, pEGFR_6, EGFR_0, pAkt_S6_3, pAkt_3] is not transcendence basis
-Collection [pEGFR_2, pEGFR_6, pEGFR_Akt_4, reaction_1_k2, EGF_EGFR_1] is not transcendence basis
-Collection [pEGFR_3, pAkt_6, S6_1, pEGFR_Akt_0, pEGFR_Akt_5] is not transcendence basis
-Collection [pEGFR_3, pAkt_6, EGF_EGFR_1, pEGFR_4, S6_5] is not transcendence basis
-Collection [pEGFR_3, pS6_3, a1, pS6_4, EGFR_turnover] is not transcendence basis
-Collection [pEGFR_3, EGF_EGFR_4, reaction_1_k2, a2, reaction_2_k1] is not transcendence basis
-Collection [pEGFR_4, pAkt_4, pAkt_S6_1, Akt_1, pEGFR_Akt_1] is not transcendence basis
-Collection [pEGFR_4, EGF_EGFR_0, pS6_0, pAkt_S6_5, S6_3] is not transcendence basis
-Collection [pEGFR_4, pEGFR_Akt_0, EGF_EGFR_3, EGFR_0, pAkt_S6_4] is not transcendence basis
-Collection [pEGFR_5, a3, pAkt_2, EGFR_turnover, pEGFR_2] is not transcendence basis
-Collection [pEGFR_5, pAkt_4, S6_2, Akt_2, EGF_EGFR_6] is not transcendence basis
-Collection [pEGFR_5, pAkt_7, pAkt_S6_7, pAkt_0, pS6_3] is not transcendence basis
-Collection [pEGFR_5, pEGFR_3, pAkt_S6_1, pAkt_3, a2] is not transcendence basis
-Collection [pEGFR_5, pAkt_S6_3, S6_4, pEGFR_Akt_3, pAkt_S6_5] is not transcendence basis
-Collection [pEGFR_6, EGF_EGFR_1, a2, S6_1, pEGFR_Akt_7] is not transcendence basis
-Collection [pEGFR_7, Akt_2, EGF_EGFR_4, pEGFR_5, Akt_4] is not transcendence basis
-Collection [pEGFR_7, pAkt_6, pAkt_S6_2, pEGFR_Akt_7, S6_2] is not transcendence basis
-Collection [pEGFR_7, pAkt_S6_3, pEGFR_1, pAkt_5, EGF_EGFR_4] is not transcendence basis
-Collection [pS6_0, S6_1, pS6_6, pEGFR_4, Akt_4] is not transcendence basis
-Collection [pS6_0, S6_6, S6_3, pS6_1, pEGFR_Akt_0] is not transcendence basis
-Collection [pS6_0, a1, pEGFR_5, pS6_4, reaction_5_k1] is not transcendence basis
-Collection [pS6_0, a3, pEGFR_7, S6_0, pEGFR_Akt_3] is not transcendence basis
-Collection [pS6_0, pAkt_1, EGF_EGFR_1, a2, EGFR_0] is not transcendence basis
-Collection [pS6_0, pAkt_6, pAkt_5, reaction_5_k1, pEGFR_2] is not transcendence basis
-Collection [pS6_0, EGF_EGFR_5, pEGFR_Akt_3, S6_0, reaction_5_k1] is not transcendence basis
-Collection [pS6_0, pEGFR_Akt_6, pEGFR_5, EGFR_0, pAkt_S6_5] is not transcendence basis
-Collection [pS6_0, reaction_1_k2, pEGFR_0, S6_2, S6_6] is not transcendence basis
-Collection [pS6_1, EGF_EGFR_1, pEGFR_Akt_7, pEGFR_2, Akt_6] is not transcendence basis
-Collection [pS6_1, pAkt_S6_3, Akt_3, S6_6, pEGFR_Akt_2] is not transcendence basis
-Collection [pS6_1, pAkt_S6_6, pEGFR_5, pEGFR_Akt_3, pS6_0] is not transcendence basis
-Collection [pS6_2, EGF_EGFR_3, a3, pEGFR_Akt_5, Akt_4] is not transcendence basis
-Collection [pS6_2, EGF_EGFR_6, pS6_4, S6_0, EGFR_0] is not transcendence basis
-Collection [pS6_3, pAkt_4, pEGFR_Akt_7, pAkt_S6_6, S6_6] is not transcendence basis
-Collection [pS6_3, pAkt_5, pAkt_1, pAkt_2, EGF_EGFR_4] is not transcendence basis
-Collection [pS6_3, pEGFR_4, pEGFR_Akt_1, pAkt_6, EGFR_0] is not transcendence basis
-Collection [pS6_3, pS6_2, pAkt_6, Akt_0, pEGFR_Akt_2] is not transcendence basis
-Collection [pS6_4, EGF_EGFR_0, pAkt_S6_0, Akt_3, pEGFR_Akt_2] is not transcendence basis
-Collection [pS6_5, pAkt_0, Akt_0, pS6_2, EGF_EGFR_0] is not transcendence basis
-Collection [pS6_5, pEGFR_3, pAkt_0, pAkt_1, pAkt_S6_3] is not transcendence basis
-Collection [pS6_5, pEGFR_5, pAkt_4, pAkt_S6_4, Akt_5] is not transcendence basis
-Collection [pS6_5, pS6_0, pEGFR_0, a3, pAkt_S6_3] is not transcendence basis
-Collection [pS6_6, EGF_EGFR_5, pAkt_5, Akt_5, pEGFR_1] is not transcendence basis
-Collection [pS6_6, pAkt_S6_2, pAkt_4, EGF_EGFR_2, pAkt_5] is not transcendence basis
-Collection [pS6_6, reaction_2_k1, EGF_EGFR_5, EGFR_0, Akt_1] is not transcendence basis
-Collection [EGFR_turnover, Akt_6, pAkt_S6_1, pS6_3, EGF_EGFR_3] is not transcendence basis
-Collection [EGFR_turnover, EGF_EGFR_5, pAkt_S6_2, pEGFR_Akt_5, a3] is not transcendence basis
-Collection [EGF_EGFR_1, pS6_6, pAkt_6, pAkt_S6_5, reaction_5_k1] is not transcendence basis
-Collection [EGF_EGFR_1, EGF_EGFR_3, reaction_1_k2, pEGFR_Akt_4, pAkt_S6_4] is not transcendence basis
-Collection [EGF_EGFR_1, pAkt_S6_7, pAkt_S6_6, pAkt_S6_0, pAkt_S6_4] is not transcendence basis
-Collection [EGF_EGFR_2, Akt_3, EGF_EGFR_0, pS6_0, S6_3] is not transcendence basis
-Collection [EGF_EGFR_2, pAkt_2, pAkt_S6_1, Akt_1, EGF_EGFR_1] is not transcendence basis
-Collection [EGF_EGFR_2, pAkt_4, pS6_5, a1, reaction_5_k1] is not transcendence basis
-Collection [EGF_EGFR_2, pAkt_4, EGF_EGFR_0, pAkt_S6_6, pEGFR_4] is not transcendence basis
-Collection [EGF_EGFR_2, pAkt_S6_1, EGF_EGFR_1, pEGFR_Akt_1, Akt_3] is not transcendence basis
-Collection [EGF_EGFR_3, Akt_1, EGF_EGFR_1, pS6_6, S6_1] is not transcendence basis
-Collection [EGF_EGFR_3, Akt_6, EGF_EGFR_5, a1, pAkt_0] is not transcendence basis
-Collection [EGF_EGFR_3, EGFR_0, pS6_5, pAkt_S6_7, Akt_5] is not transcendence basis
-Collection [EGF_EGFR_3, S6_4, pEGFR_5, EGFR_turnover, reaction_2_k1] is not transcendence basis
-Collection [EGF_EGFR_3, a1, reaction_1_k1, pS6_5, pEGFR_2] is not transcendence basis
-Collection [EGF_EGFR_3, pAkt_1, pAkt_3, pEGFR_5, pEGFR_Akt_0] is not transcendence basis
-Collection [EGF_EGFR_4, a2, S6_5, reaction_5_k1, pS6_5] is not transcendence basis
-Collection [EGF_EGFR_4, pEGFR_Akt_1, Akt_3, EGF_EGFR_1, pAkt_4] is not transcendence basis
-Collection [EGF_EGFR_5, Akt_2, pEGFR_1, pAkt_S6_7, EGFR_0] is not transcendence basis
-Collection [EGF_EGFR_5, a1, pEGFR_Akt_0, S6_0, pS6_6] is not transcendence basis
-Collection [EGF_EGFR_5, pEGFR_3, Akt_3, pEGFR_Akt_5, pS6_6] is not transcendence basis
-Collection [EGF_EGFR_5, pEGFR_Akt_1, Akt_5, pEGFR_6, pAkt_S6_5] is not transcendence basis
-Collection [pAkt_S6_0, pS6_0, pAkt_S6_6, Akt_6, S6_6] is not transcendence basis
-Collection [pAkt_S6_1, EGF_EGFR_1, EGF_EGFR_5, pS6_2, pS6_4] is not transcendence basis
-Collection [pAkt_S6_1, EGF_EGFR_5, EGF_EGFR_0, a3, Akt_0] is not transcendence basis
-Collection [pAkt_S6_2, Akt_5, reaction_1_k2, pS6_3, Akt_4] is not transcendence basis
-Collection [pAkt_S6_2, S6_2, pEGFR_6, pS6_1, S6_6] is not transcendence basis
-Collection [pAkt_S6_2, pAkt_1, pAkt_0, pAkt_3, pAkt_6] is not transcendence basis
-Collection [pAkt_S6_2, pEGFR_Akt_0, a2, S6_4, S6_1] is not transcendence basis
-Collection [pAkt_S6_3, pAkt_5, S6_5, EGF_EGFR_3, pS6_0] is not transcendence basis
-Collection [pAkt_S6_3, EGF_EGFR_0, Akt_1, pAkt_3, S6_3] is not transcendence basis
-Collection [pAkt_S6_4, Akt_1, pS6_4, reaction_9_k1, S6_2] is not transcendence basis
-Collection [pAkt_S6_4, Akt_6, Akt_1, S6_0, pEGFR_Akt_0] is not transcendence basis
-Collection [pAkt_S6_4, pAkt_2, pAkt_S6_6, a1, pEGFR_Akt_1] is not transcendence basis
-Collection [pAkt_S6_4, pEGFR_2, pS6_6, Akt_3, a3] is not transcendence basis
-Collection [pAkt_S6_4, pEGFR_7, EGFR_turnover, pEGFR_Akt_7, pAkt_S6_5] is not transcendence basis
-Collection [pAkt_S6_5, pS6_0, pAkt_4, pS6_6, Akt_4] is not transcendence basis
-Collection [pAkt_S6_6, S6_6, pAkt_5, EGF_EGFR_3, pEGFR_Akt_5] is not transcendence basis
-Collection [pAkt_S6_6, pEGFR_5, pEGFR_Akt_6, S6_1, pEGFR_0] is not transcendence basis
-Collection [pAkt_S6_7, pAkt_3, pS6_5, EGF_EGFR_4, reaction_2_k1] is not transcendence basis
-Collection [pAkt_S6_7, pS6_4, Akt_3, Akt_2, Akt_5] is not transcendence basis
-Collection [pAkt_S6_7, pAkt_S6_0, pEGFR_1, EGFR_0, pS6_4] is not transcendence basis
-Collection [pAkt_S6_7, pAkt_S6_5, pEGFR_Akt_2, S6_4, pS6_2] is not transcendence basis
-Collection [pEGFR_Akt_0, pAkt_4, Akt_1, S6_2, pS6_5] is not transcendence basis
-Collection [pEGFR_Akt_1, pEGFR_3, pEGFR_7, pAkt_7, pEGFR_Akt_0] is not transcendence basis
-Collection [pEGFR_Akt_1, pS6_1, a3, Akt_2, Akt_5] is not transcendence basis
-Collection [pEGFR_Akt_2, Akt_6, reaction_2_k1, pAkt_S6_1, pEGFR_Akt_5] is not transcendence basis
-Collection [pEGFR_Akt_2, pAkt_4, Akt_6, EGF_EGFR_4, EGFR_turnover] is not transcendence basis
-Collection [pEGFR_Akt_2, pEGFR_0, S6_1, pEGFR_5, S6_6] is not transcendence basis
-Collection [pEGFR_Akt_2, pEGFR_1, pEGFR_Akt_7, S6_3, pAkt_S6_7] is not transcendence basis
-Collection [pEGFR_Akt_3, Akt_6, EGF_EGFR_3, pAkt_S6_3, S6_6] is not transcendence basis
-Collection [pEGFR_Akt_3, S6_1, pAkt_1, pAkt_S6_6, pS6_4] is not transcendence basis
-Collection [pEGFR_Akt_3, S6_3, reaction_2_k1, pEGFR_Akt_1, pS6_4] is not transcendence basis
-Collection [pEGFR_Akt_4, Akt_2, reaction_9_k1, S6_3, pAkt_S6_3] is not transcendence basis
-Collection [pEGFR_Akt_5, Akt_1, pAkt_S6_4, pEGFR_0, reaction_5_k1] is not transcendence basis
-Collection [pEGFR_Akt_5, pAkt_0, pEGFR_Akt_7, S6_3, S6_4] is not transcendence basis
-Collection [pEGFR_Akt_5, pEGFR_0, EGF_EGFR_3, pAkt_S6_3, S6_4] is not transcendence basis
-Collection [pEGFR_Akt_5, reaction_1_k1, pAkt_S6_6, pAkt_1, EGF_EGFR_0] is not transcendence basis
-Collection [pEGFR_Akt_6, pEGFR_4, Akt_1, EGF_EGFR_6, S6_6] is not transcendence basis
-Collection [pEGFR_Akt_6, EGFR_turnover, pEGFR_7, S6_3, Akt_0] is not transcendence basis
-Collection [pEGFR_Akt_7, S6_4, pAkt_S6_3, EGF_EGFR_1, a1] is not transcendence basis
-Collection [pEGFR_Akt_7, S6_5, pEGFR_3, pAkt_6, pS6_0] is not transcendence basis
-Collection [pEGFR_Akt_7, a3, S6_0, pAkt_S6_0, EGF_EGFR_4] is not transcendence basis
-Collection [pEGFR_Akt_7, pEGFR_6, pAkt_7, EGF_EGFR_0, pEGFR_4] is not transcendence basis
-Collection [reaction_1_k1, EGFR_0, pEGFR_Akt_5, pAkt_5, EGFR_turnover] is not transcendence basis
-Collection [reaction_1_k1, pEGFR_0, EGFR_0, pEGFR_4, pAkt_S6_3] is not transcendence basis
-Collection [reaction_2_k1, S6_5, pS6_5, pAkt_S6_7, pAkt_S6_2] is not transcendence basis
-Collection [reaction_2_k1, EGF_EGFR_0, Akt_4, pEGFR_Akt_0, pAkt_S6_5] is not transcendence basis
-Collection [reaction_5_k1, pAkt_6, pEGFR_Akt_7, pAkt_4, S6_0] is not transcendence basis
-Collection [reaction_5_k1, pS6_4, S6_3, pS6_5, pAkt_S6_1] is not transcendence basis
-Collection [reaction_5_k1, pS6_4, pEGFR_Akt_4, pAkt_S6_2, pEGFR_3] is not transcendence basis
-Collection [reaction_9_k1, Akt_0, pEGFR_0, EGF_EGFR_4, pEGFR_Akt_2] is not transcendence basis
-Collection [reaction_9_k1, pEGFR_5, pAkt_S6_3, reaction_1_k2, a2] is not transcendence basis
-Collection [reaction_9_k1, pAkt_S6_3, Akt_0, Akt_3, pEGFR_Akt_0] is not transcendence basis
-Collection [reaction_9_k1, pAkt_S6_5, pAkt_5, pAkt_0, EGFR_0] is not transcendence basis
-Collection [reaction_9_k1, pEGFR_Akt_7, pS6_5, pEGFR_2, pAkt_5] is not transcendence basis
+Collection [Akt_0, Akt_3, pAkt_S6_4, pS6_3, S6_5] is not transcendence basis
+Collection [Akt_0, EGF_EGFR_4, S6_2, pAkt_7, Akt_2] is not transcendence basis
+Collection [Akt_0, pAkt_S6_5, Akt_2, pAkt_5, pEGFR_Akt_2] is not transcendence basis
+Collection [Akt_1, pAkt_6, pS6_0, S6_1, S6_4] is not transcendence basis
+Collection [Akt_1, pEGFR_5, pS6_1, reaction_5_k1, pEGFR_6] is not transcendence basis
+Collection [Akt_1, pEGFR_6, EGF_EGFR_0, S6_1, pS6_0] is not transcendence basis
+Collection [Akt_2, pS6_5, EGF_EGFR_3, pS6_1, a1] is not transcendence basis
+Collection [Akt_3, pAkt_1, reaction_5_k1, EGF_EGFR_4, S6_3] is not transcendence basis
+Collection [Akt_4, Akt_3, pS6_3, EGF_EGFR_2, pAkt_0] is not transcendence basis
+Collection [Akt_4, pEGFR_7, pEGFR_Akt_7, EGF_EGFR_5, pAkt_S6_4] is not transcendence basis
+Collection [Akt_5, Akt_4, pAkt_3, EGF_EGFR_5, pEGFR_Akt_1] is not transcendence basis
+Collection [Akt_5, S6_5, S6_3, pAkt_S6_1, pAkt_7] is not transcendence basis
+Collection [Akt_5, EGF_EGFR_0, Akt_6, pEGFR_Akt_4, pEGFR_2] is not transcendence basis
+Collection [Akt_6, pAkt_1, EGF_EGFR_3, pS6_2, pS6_4] is not transcendence basis
+Collection [Akt_6, pEGFR_Akt_0, EGF_EGFR_4, pAkt_S6_0, reaction_1_k2] is not transcendence basis
+Collection [S6_0, pS6_5, Akt_5, reaction_5_k1, EGF_EGFR_1] is not transcendence basis
+Collection [S6_1, S6_0, pAkt_S6_3, pEGFR_Akt_0, pS6_0] is not transcendence basis
+Collection [S6_1, S6_6, pAkt_1, Akt_6, reaction_1_k2] is not transcendence basis
+Collection [S6_1, pAkt_S6_0, S6_0, pEGFR_7, Akt_4] is not transcendence basis
+Collection [S6_1, pAkt_S6_3, EGF_EGFR_3, pS6_3, reaction_1_k1] is not transcendence basis
+Collection [S6_2, pEGFR_6, pAkt_S6_3, Akt_4, pS6_2] is not transcendence basis
+Collection [S6_2, pS6_2, pEGFR_Akt_6, pEGFR_3, pS6_5] is not transcendence basis
+Collection [S6_2, reaction_1_k2, S6_6, pAkt_1, pAkt_S6_1] is not transcendence basis
+Collection [S6_3, pAkt_0, pEGFR_3, EGFR_turnover, pAkt_4] is not transcendence basis
+Collection [S6_3, pEGFR_3, pAkt_S6_6, EGF_EGFR_3, Akt_1] is not transcendence basis
+Collection [S6_3, pS6_4, Akt_4, pEGFR_2, pEGFR_7] is not transcendence basis
+Collection [S6_3, pAkt_S6_7, pAkt_2, a2, pS6_4] is not transcendence basis
+Collection [S6_3, pEGFR_Akt_6, a3, pS6_4, pS6_2] is not transcendence basis
+Collection [S6_4, S6_5, pEGFR_3, EGF_EGFR_6, pS6_2] is not transcendence basis
+Collection [S6_4, pEGFR_7, pS6_6, S6_3, pS6_3] is not transcendence basis
+Collection [S6_6, pS6_1, Akt_6, pAkt_6, pEGFR_Akt_7] is not transcendence basis
+Collection [S6_6, pS6_4, EGF_EGFR_4, S6_4, pEGFR_6] is not transcendence basis
+Collection [a1, EGF_EGFR_0, pEGFR_6, pEGFR_7, pEGFR_2] is not transcendence basis
+Collection [a1, pEGFR_Akt_4, Akt_3, pAkt_7, S6_1] is not transcendence basis
+Collection [a2, pAkt_6, pEGFR_0, S6_2, pEGFR_6] is not transcendence basis
+Collection [a2, pEGFR_5, pEGFR_1, pEGFR_Akt_4, pEGFR_Akt_3] is not transcendence basis
+Collection [a2, pEGFR_5, pAkt_S6_5, pEGFR_Akt_4, pAkt_7] is not transcendence basis
+Collection [a3, pEGFR_3, pEGFR_Akt_3, pS6_3, pS6_2] is not transcendence basis
+Collection [a3, EGF_EGFR_2, EGF_EGFR_5, reaction_1_k1, pS6_5] is not transcendence basis
+Collection [a3, pEGFR_Akt_0, EGFR_turnover, pS6_1, pEGFR_6] is not transcendence basis
+Collection [pAkt_0, pS6_1, pEGFR_1, a2, pS6_5] is not transcendence basis
+Collection [pAkt_0, pAkt_S6_2, pEGFR_4, pAkt_5, pAkt_S6_5] is not transcendence basis
+Collection [pAkt_0, pAkt_S6_4, S6_5, pAkt_S6_0, pAkt_4] is not transcendence basis
+Collection [pAkt_0, pEGFR_Akt_1, pAkt_S6_4, S6_5, S6_2] is not transcendence basis
+Collection [pAkt_1, Akt_5, a1, pEGFR_Akt_2, Akt_1] is not transcendence basis
+Collection [pAkt_1, pEGFR_1, S6_1, EGFR_turnover, S6_4] is not transcendence basis
+Collection [pAkt_1, pAkt_S6_5, pEGFR_Akt_5, pAkt_S6_3, a3] is not transcendence basis
+Collection [pAkt_1, pEGFR_Akt_3, pS6_1, pEGFR_6, pAkt_4] is not transcendence basis
+Collection [pAkt_1, reaction_1_k2, pAkt_5, S6_0, Akt_3] is not transcendence basis
+Collection [pAkt_2, Akt_0, Akt_5, pEGFR_5, pS6_1] is not transcendence basis
+Collection [pAkt_2, S6_4, pAkt_S6_7, pAkt_4, Akt_0] is not transcendence basis
+Collection [pAkt_2, pEGFR_Akt_3, Akt_3, pEGFR_7, pEGFR_Akt_1] is not transcendence basis
+Collection [pAkt_2, pEGFR_Akt_3, pAkt_S6_1, pS6_5, pEGFR_6] is not transcendence basis
+Collection [pAkt_4, pAkt_2, pAkt_S6_2, EGF_EGFR_1, EGF_EGFR_0] is not transcendence basis
+Collection [pAkt_4, pAkt_5, pEGFR_Akt_2, pAkt_S6_3, S6_6] is not transcendence basis
+Collection [pAkt_4, pEGFR_2, pAkt_0, reaction_9_k1, EGF_EGFR_2] is not transcendence basis
+Collection [pAkt_5, S6_1, pEGFR_Akt_6, pAkt_S6_0, reaction_9_k1] is not transcendence basis
+Collection [pAkt_5, S6_5, reaction_1_k2, Akt_2, pS6_4] is not transcendence basis
+Collection [pAkt_5, pEGFR_2, pEGFR_Akt_0, S6_2, Akt_4] is not transcendence basis
+Collection [pAkt_5, EGF_EGFR_2, pAkt_1, pEGFR_Akt_1, pEGFR_Akt_5] is not transcendence basis
+Collection [pAkt_6, S6_2, pAkt_S6_1, a2, EGF_EGFR_6] is not transcendence basis
+Collection [pAkt_6, pAkt_4, Akt_5, pAkt_S6_3, pAkt_S6_4] is not transcendence basis
+Collection [pAkt_6, pEGFR_0, pAkt_2, pAkt_7, pEGFR_Akt_1] is not transcendence basis
+Collection [pAkt_6, pAkt_S6_2, S6_3, Akt_3, Akt_4] is not transcendence basis
+Collection [pAkt_7, Akt_4, pEGFR_Akt_7, S6_3, pS6_6] is not transcendence basis
+Collection [pAkt_7, pEGFR_3, pS6_4, S6_0, pAkt_S6_2] is not transcendence basis
+Collection [pAkt_7, pAkt_S6_6, a3, pAkt_S6_1, pAkt_3] is not transcendence basis
+Collection [pEGFR_0, Akt_6, pAkt_4, Akt_3, pEGFR_5] is not transcendence basis
+Collection [pEGFR_0, pAkt_2, Akt_5, pAkt_S6_4, pS6_6] is not transcendence basis
+Collection [pEGFR_0, pEGFR_7, pAkt_5, pEGFR_Akt_6, pEGFR_3] is not transcendence basis
+Collection [pEGFR_0, EGFR_turnover, EGF_EGFR_3, S6_3, pAkt_S6_0] is not transcendence basis
+Collection [pEGFR_1, S6_5, EGF_EGFR_6, pEGFR_6, S6_4] is not transcendence basis
+Collection [pEGFR_1, pEGFR_Akt_3, pAkt_S6_4, pS6_1, S6_0] is not transcendence basis
+Collection [pEGFR_1, pEGFR_Akt_6, Akt_3, S6_0, pAkt_4] is not transcendence basis
+Collection [pEGFR_2, a1, pS6_2, pEGFR_Akt_3, pAkt_S6_1] is not transcendence basis
+Collection [pEGFR_2, pAkt_3, S6_2, reaction_1_k1, pAkt_6] is not transcendence basis
+Collection [pEGFR_2, pAkt_S6_6, EGF_EGFR_3, pAkt_S6_2, Akt_1] is not transcendence basis
+Collection [pEGFR_2, reaction_1_k1, pAkt_6, reaction_9_k1, pEGFR_Akt_5] is not transcendence basis
+Collection [pEGFR_2, reaction_5_k1, pEGFR_1, pS6_2, pEGFR_Akt_5] is not transcendence basis
+Collection [pEGFR_3, pAkt_S6_5, pS6_3, pS6_2, pEGFR_Akt_5] is not transcendence basis
+Collection [pEGFR_4, a2, pAkt_S6_3, S6_2, pAkt_6] is not transcendence basis
+Collection [pEGFR_4, pAkt_0, pEGFR_Akt_6, pEGFR_0, EGFR_turnover] is not transcendence basis
+Collection [pEGFR_4, pAkt_S6_3, S6_0, pAkt_3, S6_4] is not transcendence basis
+Collection [pEGFR_5, Akt_3, S6_1, Akt_4, pAkt_S6_1] is not transcendence basis
+Collection [pEGFR_5, Akt_5, pAkt_S6_0, reaction_1_k1, a1] is not transcendence basis
+Collection [pEGFR_5, Akt_6, EGF_EGFR_3, EGF_EGFR_0, pAkt_S6_0] is not transcendence basis
+Collection [pEGFR_5, pEGFR_6, pEGFR_2, a3, Akt_2] is not transcendence basis
+Collection [pEGFR_5, pS6_0, pEGFR_2, pEGFR_Akt_3, Akt_3] is not transcendence basis
+Collection [pEGFR_5, reaction_5_k1, pAkt_S6_3, pAkt_S6_0, pS6_2] is not transcendence basis
+Collection [pEGFR_6, EGF_EGFR_3, EGFR_0, pAkt_7, S6_2] is not transcendence basis
+Collection [pEGFR_6, pAkt_S6_3, pS6_4, pS6_1, pEGFR_3] is not transcendence basis
+Collection [pEGFR_6, pEGFR_Akt_0, pEGFR_Akt_7, EGF_EGFR_4, pEGFR_Akt_4] is not transcendence basis
+Collection [pEGFR_6, pEGFR_Akt_1, pEGFR_7, EGF_EGFR_2, Akt_1] is not transcendence basis
+Collection [pEGFR_7, pAkt_S6_5, pS6_2, S6_2, EGFR_turnover] is not transcendence basis
+Collection [pS6_0, S6_5, a1, pEGFR_Akt_3, pEGFR_7] is not transcendence basis
+Collection [pS6_0, pEGFR_2, pS6_2, pAkt_S6_0, pEGFR_Akt_5] is not transcendence basis
+Collection [pS6_0, EGF_EGFR_2, pEGFR_4, a3, a2] is not transcendence basis
+Collection [pS6_0, pEGFR_Akt_0, EGF_EGFR_0, Akt_4, pEGFR_Akt_3] is not transcendence basis
+Collection [pS6_1, a3, reaction_5_k1, EGF_EGFR_4, S6_6] is not transcendence basis
+Collection [pS6_1, pAkt_1, pAkt_2, a2, a1] is not transcendence basis
+Collection [pS6_2, Akt_3, reaction_9_k1, pAkt_S6_0, pEGFR_Akt_1] is not transcendence basis
+Collection [pS6_2, pAkt_2, reaction_5_k1, pS6_5, pAkt_S6_2] is not transcendence basis
+Collection [pS6_2, pS6_1, pEGFR_3, pEGFR_Akt_6, S6_5] is not transcendence basis
+Collection [pS6_2, pS6_1, reaction_2_k1, S6_6, pAkt_S6_7] is not transcendence basis
+Collection [pS6_2, reaction_1_k1, pAkt_S6_5, pS6_5, pEGFR_Akt_0] is not transcendence basis
+Collection [pS6_3, S6_2, reaction_1_k1, EGF_EGFR_3, Akt_2] is not transcendence basis
+Collection [pS6_3, pEGFR_5, reaction_1_k2, S6_3, reaction_1_k1] is not transcendence basis
+Collection [pS6_3, pS6_0, EGF_EGFR_1, pEGFR_Akt_3, S6_5] is not transcendence basis
+Collection [pS6_3, pAkt_S6_3, pS6_6, pEGFR_Akt_3, S6_3] is not transcendence basis
+Collection [pS6_4, EGF_EGFR_0, pEGFR_Akt_7, pS6_6, pEGFR_1] is not transcendence basis
+Collection [pS6_5, S6_2, EGF_EGFR_0, pS6_6, a3] is not transcendence basis
+Collection [pS6_5, EGF_EGFR_6, pEGFR_Akt_2, pAkt_1, pEGFR_1] is not transcendence basis
+Collection [pS6_6, a1, pAkt_S6_4, pEGFR_Akt_4, pAkt_S6_5] is not transcendence basis
+Collection [pS6_6, pEGFR_1, pAkt_0, EGFR_0, EGF_EGFR_6] is not transcendence basis
+Collection [EGFR_turnover, EGF_EGFR_3, pEGFR_0, Akt_1, Akt_4] is not transcendence basis
+Collection [EGFR_turnover, EGF_EGFR_6, pS6_2, pEGFR_6, S6_1] is not transcendence basis
+Collection [EGFR_turnover, pAkt_S6_3, EGF_EGFR_6, a3, S6_3] is not transcendence basis
+Collection [EGFR_turnover, pEGFR_Akt_0, pAkt_1, Akt_4, pEGFR_3] is not transcendence basis
+Collection [EGF_EGFR_1, pEGFR_3, pEGFR_2, EGF_EGFR_6, Akt_3] is not transcendence basis
+Collection [EGF_EGFR_1, pEGFR_6, pEGFR_0, pAkt_3, pAkt_5] is not transcendence basis
+Collection [EGF_EGFR_1, pS6_6, pAkt_S6_1, pAkt_S6_3, pEGFR_Akt_1] is not transcendence basis
+Collection [EGF_EGFR_1, pAkt_S6_7, EGF_EGFR_6, Akt_0, a2] is not transcendence basis
+Collection [EGF_EGFR_1, reaction_1_k2, Akt_4, S6_0, Akt_3] is not transcendence basis
+Collection [EGF_EGFR_2, pAkt_0, pS6_6, pAkt_S6_3, pS6_5] is not transcendence basis
+Collection [EGF_EGFR_2, pEGFR_Akt_5, pS6_1, pAkt_S6_4, EGFR_0] is not transcendence basis
+Collection [EGF_EGFR_3, Akt_2, pAkt_S6_5, reaction_5_k1, S6_4] is not transcendence basis
+Collection [EGF_EGFR_3, S6_2, pS6_2, EGF_EGFR_2, pS6_3] is not transcendence basis
+Collection [EGF_EGFR_3, pAkt_4, pAkt_S6_6, pEGFR_4, S6_6] is not transcendence basis
+Collection [EGF_EGFR_3, pAkt_5, EGF_EGFR_0, Akt_4, pEGFR_Akt_2] is not transcendence basis
+Collection [EGF_EGFR_4, a1, EGF_EGFR_2, S6_1, pEGFR_3] is not transcendence basis
+Collection [EGF_EGFR_4, pEGFR_1, S6_6, pEGFR_Akt_6, pAkt_3] is not transcendence basis
+Collection [EGF_EGFR_4, pEGFR_6, pS6_2, pAkt_S6_3, reaction_1_k1] is not transcendence basis
+Collection [EGF_EGFR_4, EGF_EGFR_6, Akt_1, pAkt_4, reaction_5_k1] is not transcendence basis
+Collection [EGF_EGFR_4, pAkt_S6_4, pS6_4, EGF_EGFR_6, EGF_EGFR_5] is not transcendence basis
+Collection [EGF_EGFR_4, pEGFR_Akt_1, EGF_EGFR_5, pEGFR_Akt_5, reaction_2_k1] is not transcendence basis
+Collection [EGF_EGFR_4, pEGFR_Akt_3, EGF_EGFR_6, pEGFR_Akt_2, S6_1] is not transcendence basis
+Collection [EGF_EGFR_4, reaction_9_k1, pEGFR_Akt_6, reaction_2_k1, pAkt_S6_1] is not transcendence basis
+Collection [EGF_EGFR_5, pAkt_1, pS6_6, reaction_2_k1, pS6_1] is not transcendence basis
+Collection [EGF_EGFR_6, S6_2, reaction_5_k1, S6_3, Akt_5] is not transcendence basis
+Collection [EGF_EGFR_6, EGF_EGFR_2, pAkt_S6_7, pS6_0, reaction_9_k1] is not transcendence basis
+Collection [pAkt_S6_0, S6_6, pAkt_2, EGF_EGFR_4, pAkt_6] is not transcendence basis
+Collection [pAkt_S6_0, pEGFR_6, Akt_5, EGF_EGFR_2, pEGFR_1] is not transcendence basis
+Collection [pAkt_S6_0, pS6_4, pEGFR_4, pAkt_S6_6, reaction_1_k2] is not transcendence basis
+Collection [pAkt_S6_0, EGF_EGFR_0, pEGFR_0, Akt_1, pEGFR_Akt_2] is not transcendence basis
+Collection [pAkt_S6_0, pAkt_S6_5, pEGFR_1, EGF_EGFR_4, S6_3] is not transcendence basis
+Collection [pAkt_S6_1, pAkt_0, Akt_5, reaction_9_k1, EGF_EGFR_3] is not transcendence basis
+Collection [pAkt_S6_1, pEGFR_5, pAkt_1, pS6_5, Akt_4] is not transcendence basis
+Collection [pAkt_S6_1, pAkt_S6_0, S6_6, Akt_1, pEGFR_Akt_4] is not transcendence basis
+Collection [pAkt_S6_1, pEGFR_Akt_3, pS6_2, S6_6, pEGFR_2] is not transcendence basis
+Collection [pAkt_S6_1, pEGFR_Akt_7, pS6_4, pAkt_0, pEGFR_4] is not transcendence basis
+Collection [pAkt_S6_1, reaction_1_k1, EGFR_0, pAkt_S6_3, pEGFR_Akt_3] is not transcendence basis
+Collection [pAkt_S6_2, reaction_1_k1, Akt_2, pAkt_5, pAkt_4] is not transcendence basis
+Collection [pAkt_S6_3, S6_3, pAkt_5, reaction_5_k1, a2] is not transcendence basis
+Collection [pAkt_S6_3, reaction_1_k2, EGF_EGFR_4, reaction_1_k1, pAkt_S6_0] is not transcendence basis
+Collection [pAkt_S6_3, reaction_9_k1, S6_1, pAkt_S6_7, a2] is not transcendence basis
+Collection [pAkt_S6_4, EGF_EGFR_1, a1, pAkt_S6_5, S6_6] is not transcendence basis
+Collection [pAkt_S6_4, pEGFR_Akt_6, Akt_0, pAkt_3, pEGFR_4] is not transcendence basis
+Collection [pAkt_S6_5, a2, EGF_EGFR_6, EGF_EGFR_4, pAkt_1] is not transcendence basis
+Collection [pAkt_S6_5, pAkt_4, Akt_5, Akt_6, pEGFR_3] is not transcendence basis
+Collection [pAkt_S6_5, pEGFR_3, pAkt_1, pAkt_S6_3, EGF_EGFR_5] is not transcendence basis
+Collection [pAkt_S6_5, pEGFR_4, pAkt_3, pAkt_1, pEGFR_7] is not transcendence basis
+Collection [pAkt_S6_5, pS6_0, Akt_0, pS6_6, reaction_1_k1] is not transcendence basis
+Collection [pAkt_S6_5, pEGFR_Akt_7, Akt_3, EGF_EGFR_5, Akt_4] is not transcendence basis
+Collection [pAkt_S6_6, Akt_1, pAkt_S6_7, EGF_EGFR_4, a3] is not transcendence basis
+Collection [pAkt_S6_6, a2, reaction_5_k1, S6_1, pEGFR_Akt_6] is not transcendence basis
+Collection [pAkt_S6_7, pEGFR_6, pAkt_5, Akt_2, pAkt_S6_3] is not transcendence basis
+Collection [pEGFR_Akt_0, pAkt_0, Akt_3, pEGFR_5, S6_3] is not transcendence basis
+Collection [pEGFR_Akt_0, reaction_1_k1, S6_4, pEGFR_Akt_2, S6_1] is not transcendence basis
+Collection [pEGFR_Akt_1, S6_0, Akt_5, pAkt_3, pAkt_1] is not transcendence basis
+Collection [pEGFR_Akt_1, S6_6, pEGFR_6, pS6_4, reaction_2_k1] is not transcendence basis
+Collection [pEGFR_Akt_2, pEGFR_1, Akt_0, pAkt_1, Akt_1] is not transcendence basis
+Collection [pEGFR_Akt_3, pS6_0, pS6_3, pEGFR_0, S6_2] is not transcendence basis
+Collection [pEGFR_Akt_3, pS6_1, pAkt_S6_5, pEGFR_5, EGFR_turnover] is not transcendence basis
+Collection [pEGFR_Akt_4, Akt_2, S6_2, EGF_EGFR_2, pAkt_S6_6] is not transcendence basis
+Collection [pEGFR_Akt_4, S6_0, S6_3, reaction_5_k1, pS6_4] is not transcendence basis
+Collection [pEGFR_Akt_4, S6_2, pAkt_1, reaction_1_k1, S6_5] is not transcendence basis
+Collection [pEGFR_Akt_4, pAkt_0, pS6_3, pS6_5, pS6_2] is not transcendence basis
+Collection [pEGFR_Akt_4, EGF_EGFR_0, S6_4, pAkt_1, pS6_2] is not transcendence basis
+Collection [pEGFR_Akt_4, pAkt_S6_0, EGF_EGFR_3, pS6_5, pEGFR_5] is not transcendence basis
+Collection [pEGFR_Akt_5, S6_1, EGFR_turnover, reaction_5_k1, pS6_4] is not transcendence basis
+Collection [pEGFR_Akt_5, pEGFR_6, S6_4, a2, pEGFR_4] is not transcendence basis
+Collection [pEGFR_Akt_5, EGF_EGFR_2, pS6_0, pAkt_S6_5, EGF_EGFR_5] is not transcendence basis
+Collection [pEGFR_Akt_6, a3, reaction_1_k2, pS6_0, a1] is not transcendence basis
+Collection [pEGFR_Akt_6, pAkt_5, pS6_5, EGF_EGFR_6, S6_1] is not transcendence basis
+Collection [pEGFR_Akt_6, pEGFR_2, pAkt_3, S6_3, pAkt_0] is not transcendence basis
+Collection [pEGFR_Akt_6, pAkt_S6_6, pEGFR_Akt_5, pS6_1, pS6_0] is not transcendence basis
+Collection [pEGFR_Akt_7, Akt_1, pS6_0, reaction_2_k1, pEGFR_2] is not transcendence basis
+Collection [pEGFR_Akt_7, pAkt_S6_6, pEGFR_Akt_0, EGF_EGFR_3, S6_6] is not transcendence basis
+Collection [reaction_1_k1, a2, pAkt_2, pEGFR_6, pAkt_3] is not transcendence basis
+Collection [reaction_1_k2, Akt_5, Akt_0, EGFR_turnover, pAkt_S6_1] is not transcendence basis
+Collection [reaction_1_k2, pEGFR_7, S6_2, EGF_EGFR_3, S6_1] is not transcendence basis
+Collection [reaction_2_k1, S6_6, EGF_EGFR_3, pS6_2, EGF_EGFR_2] is not transcendence basis
+Collection [reaction_5_k1, pAkt_2, pEGFR_4, S6_2, pAkt_0] is not transcendence basis
+Collection [reaction_5_k1, EGF_EGFR_0, pAkt_S6_7, pS6_6, S6_5] is not transcendence basis
+Collection [reaction_9_k1, pEGFR_2, Akt_0, pEGFR_Akt_4, pAkt_S6_5] is not transcendence basis
+Collection [reaction_9_k1, pEGFR_7, pAkt_4, pAkt_S6_6, EGF_EGFR_3] is not transcendence basis
+Collection [reaction_9_k1, EGF_EGFR_1, S6_1, pAkt_S6_5, reaction_2_k1] is not transcendence basis
+Collection [reaction_9_k1, pEGFR_Akt_1, pS6_4, EGF_EGFR_1, pS6_1] is not transcendence basis
+Collection [reaction_9_k1, pEGFR_Akt_4, S6_3, S6_1, S6_5] is not transcendence basis
 Picked the best choice [Akt_0, EGFR_0, EGFR_turnover, EGF_EGFR_0, reaction_1_k1] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {EGFR_turnover, reaction_1_k1}
 Algebraically independent parameters among derivatives: {Akt(0), EGFR(0), EGF_EGFR(0)}
+	Adding ODEs: [diff(EGFR_turnover(t),t) = 0, diff(reaction_1_k1(t),t) = 0]
+	Adding output functions: [y_faux1(t) = EGFR_turnover(t), y_faux2(t) = reaction_1_k1(t)]
+	New system: [diff(EGFR_turnover(t),t) = 0, diff(reaction_1_k1(t),t) = 0, diff(EGF_EGFR(t),t) = reaction_1_k1(t)*EGF_EGFR(t)-reaction_9_k1*EGF_EGFR(t)-reaction_1_k2*EGF_EGFR(t), diff(EGFR(t),t) = -reaction_1_k1(t)*EGF_EGFR(t)+reaction_1_k2*EGF_EGFR(t)-EGFR(t)*EGFR_turnover(t)+EGFR_turnover(t)*pro_EGFR(t), diff(pEGFR(t),t) = -reaction_4_k1*pEGFR(t)+reaction_9_k1*EGF_EGFR(t)-pEGFR(t)*Akt(t)*reaction_2_k1+reaction_3_k1*pEGFR_Akt(t)+pEGFR_Akt(t)*reaction_2_k2, diff(pAkt_S6(t),t) = pAkt(t)*reaction_5_k1*S6(t)-reaction_6_k1*pAkt_S6(t)-pAkt_S6(t)*reaction_5_k2, diff(pEGFR_Akt(t),t) = pEGFR(t)*Akt(t)*reaction_2_k1-reaction_3_k1*pEGFR_Akt(t)-pEGFR_Akt(t)*reaction_2_k2, diff(pAkt(t),t) = -pAkt(t)*reaction_7_k1-pAkt(t)*reaction_5_k1*S6(t)+reaction_6_k1*pAkt_S6(t)+reaction_3_k1*pEGFR_Akt(t)+pAkt_S6(t)*reaction_5_k2, diff(S6(t),t) = pS6(t)*reaction_8_k1-pAkt(t)*reaction_5_k1*S6(t)+pAkt_S6(t)*reaction_5_k2, diff(pS6(t),t) = -pS6(t)*reaction_8_k1+reaction_6_k1*pAkt_S6(t), diff(Akt(t),t) = pAkt(t)*reaction_7_k1-pEGFR(t)*Akt(t)*reaction_2_k1+pEGFR_Akt(t)*reaction_2_k2, y1(t) = pEGFR(t)*a1+a1*pEGFR_Akt(t), y2(t) = a2*pAkt(t)+a2*pAkt_S6(t), y3(t) = pS6(t)*a3, y_faux1(t) = EGFR_turnover(t), y_faux2(t) = reaction_1_k1(t)]
 
 === Input info ===
 State variables:          [EGFR_turnover(t), reaction_1_k1(t), EGF_EGFR(t), EGFR(t), pEGFR(t), pAkt_S6(t), pEGFR_Akt(t), pAkt(t), S6(t), pS6(t), Akt(t)]
@@ -291,13 +348,32 @@ Input variables:          [pro_EGFR(t)]
 Parameters in equations:  [a1, a2, a3, reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1, reaction_9_k1]
 ===================
 
+	Adding new y-equations: faux_equations
+	Adding new y-equations: [y_faux3_0 = Akt_0, y_faux4_0 = EGFR_0, y_faux5_0 = EGF_EGFR_0]
+	New system: [-a1*pEGFR_0-a1*pEGFR_Akt_0+y1_0, Akt_0*pEGFR_0*reaction_2_k1+pEGFR_0*reaction_4_k1-EGF_EGFR_0*reaction_9_k1-pEGFR_Akt_0*reaction_2_k2-pEGFR_Akt_0*reaction_3_k1+pEGFR_1, -Akt_0*pEGFR_0*reaction_2_k1+pEGFR_Akt_0*reaction_2_k2+pEGFR_Akt_0*reaction_3_k1+pEGFR_Akt_1, -a2*pAkt_0-a2*pAkt_S6_0+y2_0, S6_0*pAkt_0*reaction_5_k1+pAkt_0*reaction_7_k1-pAkt_S6_0*reaction_5_k2-pAkt_S6_0*reaction_6_k1-pEGFR_Akt_0*reaction_3_k1+pAkt_1, -S6_0*pAkt_0*reaction_5_k1+pAkt_S6_0*reaction_5_k2+pAkt_S6_0*reaction_6_k1+pAkt_S6_1, -a3*pS6_0+y3_0, pS6_0*reaction_8_k1-pAkt_S6_0*reaction_6_k1+pS6_1, y_faux1_0-EGFR_turnover_0, EGFR_turnover_1, y_faux2_0-reaction_1_k1_0, reaction_1_k1_1, (-pEGFR_1-pEGFR_Akt_1)*a1+y1_1, (Akt_0*pEGFR_1+Akt_1*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_1+pEGFR_1*reaction_4_k1-EGF_EGFR_1*reaction_9_k1+pEGFR_2, (-Akt_0*pEGFR_1-Akt_1*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_1+pEGFR_Akt_2, Akt_0*pEGFR_0*reaction_2_k1-pAkt_0*reaction_7_k1-pEGFR_Akt_0*reaction_2_k2+Akt_1, -EGF_EGFR_0*reaction_1_k1_0+EGF_EGFR_0*reaction_1_k2+EGF_EGFR_0*reaction_9_k1+EGF_EGFR_1, (-pAkt_1-pAkt_S6_1)*a2+y2_1, (S6_0*pAkt_1+S6_1*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_1+pAkt_1*reaction_7_k1-pEGFR_Akt_1*reaction_3_k1+pAkt_2, (-S6_0*pAkt_1-S6_1*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_1+pAkt_S6_2, S6_0*pAkt_0*reaction_5_k1-pS6_0*reaction_8_k1-pAkt_S6_0*reaction_5_k2+S6_1, -a3*pS6_1+y3_1, pS6_1*reaction_8_k1-pAkt_S6_1*reaction_6_k1+pS6_2, (-pEGFR_2-pEGFR_Akt_2)*a1+y1_2, (Akt_0*pEGFR_2+2*Akt_1*pEGFR_1+Akt_2*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_2+pEGFR_2*reaction_4_k1-EGF_EGFR_2*reaction_9_k1+pEGFR_3, (-Akt_0*pEGFR_2-2*Akt_1*pEGFR_1-Akt_2*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_2+pEGFR_Akt_3, Akt_0*pEGFR_1*reaction_2_k1+Akt_1*pEGFR_0*reaction_2_k1-pAkt_1*reaction_7_k1-pEGFR_Akt_1*reaction_2_k2+Akt_2, (-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_1+EGF_EGFR_2-EGF_EGFR_0*reaction_1_k1_1, (-pAkt_2-pAkt_S6_2)*a2+y2_2, (S6_0*pAkt_2+2*S6_1*pAkt_1+S6_2*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_2-pEGFR_Akt_2*reaction_3_k1+pAkt_2*reaction_7_k1+pAkt_3, (-S6_0*pAkt_2-2*S6_1*pAkt_1-S6_2*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_2+pAkt_S6_3, S6_0*pAkt_1*reaction_5_k1+S6_1*pAkt_0*reaction_5_k1-pS6_1*reaction_8_k1-pAkt_S6_1*reaction_5_k2+S6_2, -a3*pS6_2+y3_2, pS6_2*reaction_8_k1-pAkt_S6_2*reaction_6_k1+pS6_3, (-pEGFR_3-pEGFR_Akt_3)*a1+y1_3, (Akt_0*pEGFR_3+3*Akt_1*pEGFR_2+3*Akt_2*pEGFR_1+Akt_3*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_3-EGF_EGFR_3*reaction_9_k1+pEGFR_3*reaction_4_k1+pEGFR_4, (-Akt_0*pEGFR_3-3*Akt_1*pEGFR_2-3*Akt_2*pEGFR_1-Akt_3*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_3+pEGFR_Akt_4, (Akt_0*pEGFR_2+2*Akt_1*pEGFR_1+Akt_2*pEGFR_0)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_2-pAkt_2*reaction_7_k1+Akt_3, -2*reaction_1_k1_1*EGF_EGFR_1+(-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_2+EGF_EGFR_3-EGF_EGFR_0*reaction_1_k1_2, reaction_1_k1_2, (-pAkt_3-pAkt_S6_3)*a2+y2_3, (S6_0*pAkt_3+3*S6_1*pAkt_2+3*S6_2*pAkt_1+S6_3*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_3-pEGFR_Akt_3*reaction_3_k1+pAkt_3*reaction_7_k1+pAkt_4, (-S6_0*pAkt_3-3*S6_1*pAkt_2-3*S6_2*pAkt_1-S6_3*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_3+pAkt_S6_4, (S6_0*pAkt_2+2*S6_1*pAkt_1+S6_2*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_2-reaction_8_k1*pS6_2+S6_3, -a3*pS6_3+y3_3, pS6_3*reaction_8_k1-pAkt_S6_3*reaction_6_k1+pS6_4, (-pEGFR_4-pEGFR_Akt_4)*a1+y1_4, (Akt_0*pEGFR_4+4*Akt_1*pEGFR_3+6*Akt_2*pEGFR_2+4*Akt_3*pEGFR_1+Akt_4*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_4+pEGFR_4*reaction_4_k1-EGF_EGFR_4*reaction_9_k1+pEGFR_5, (-Akt_0*pEGFR_4-4*Akt_1*pEGFR_3-6*Akt_2*pEGFR_2-4*Akt_3*pEGFR_1-Akt_4*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_4+pEGFR_Akt_5, (Akt_0*pEGFR_3+3*Akt_1*pEGFR_2+3*Akt_2*pEGFR_1+Akt_3*pEGFR_0)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_3-pAkt_3*reaction_7_k1+Akt_4, -3*reaction_1_k1_2*EGF_EGFR_1-3*reaction_1_k1_1*EGF_EGFR_2+(-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_3+EGF_EGFR_4-EGF_EGFR_0*reaction_1_k1_3, reaction_1_k1_3, (-pAkt_4-pAkt_S6_4)*a2+y2_4, (S6_0*pAkt_4+4*S6_1*pAkt_3+6*S6_2*pAkt_2+4*S6_3*pAkt_1+S6_4*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_4+pAkt_4*reaction_7_k1-pEGFR_Akt_4*reaction_3_k1+pAkt_5, (-S6_0*pAkt_4-4*S6_1*pAkt_3-6*S6_2*pAkt_2-4*S6_3*pAkt_1-S6_4*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_4+pAkt_S6_5, (S6_0*pAkt_3+3*S6_1*pAkt_2+3*S6_2*pAkt_1+S6_3*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_3-reaction_8_k1*pS6_3+S6_4, -a3*pS6_4+y3_4, pS6_4*reaction_8_k1-pAkt_S6_4*reaction_6_k1+pS6_5, (-pEGFR_5-pEGFR_Akt_5)*a1+y1_5, (Akt_0*pEGFR_5+5*Akt_1*pEGFR_4+10*Akt_2*pEGFR_3+10*Akt_3*pEGFR_2+5*Akt_4*pEGFR_1+Akt_5*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_5+pEGFR_5*reaction_4_k1-EGF_EGFR_5*reaction_9_k1+pEGFR_6, (-Akt_0*pEGFR_5-5*Akt_1*pEGFR_4-10*Akt_2*pEGFR_3-10*Akt_3*pEGFR_2-5*Akt_4*pEGFR_1-Akt_5*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_5+pEGFR_Akt_6, (Akt_0*pEGFR_4+4*Akt_1*pEGFR_3+6*Akt_2*pEGFR_2+4*Akt_3*pEGFR_1+Akt_4*pEGFR_0)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_4-pAkt_4*reaction_7_k1+Akt_5, -4*reaction_1_k1_3*EGF_EGFR_1-6*reaction_1_k1_2*EGF_EGFR_2-4*reaction_1_k1_1*EGF_EGFR_3+(-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_4+EGF_EGFR_5-EGF_EGFR_0*reaction_1_k1_4, reaction_1_k1_4, (-pAkt_5-pAkt_S6_5)*a2+y2_5, (S6_0*pAkt_5+5*S6_1*pAkt_4+10*S6_2*pAkt_3+10*S6_3*pAkt_2+5*S6_4*pAkt_1+S6_5*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_5+pAkt_5*reaction_7_k1-pEGFR_Akt_5*reaction_3_k1+pAkt_6, (-S6_0*pAkt_5-5*S6_1*pAkt_4-10*S6_2*pAkt_3-10*S6_3*pAkt_2-5*S6_4*pAkt_1-S6_5*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_5+pAkt_S6_6, (S6_0*pAkt_4+4*S6_1*pAkt_3+6*S6_2*pAkt_2+4*S6_3*pAkt_1+S6_4*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_4-reaction_8_k1*pS6_4+S6_5, -a3*pS6_5+y3_5, pS6_5*reaction_8_k1-pAkt_S6_5*reaction_6_k1+pS6_6, (-pEGFR_6-pEGFR_Akt_6)*a1+y1_6, (Akt_0*pEGFR_6+6*Akt_1*pEGFR_5+15*Akt_2*pEGFR_4+20*Akt_3*pEGFR_3+15*Akt_4*pEGFR_2+6*Akt_5*pEGFR_1+Akt_6*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_6+pEGFR_6*reaction_4_k1-EGF_EGFR_6*reaction_9_k1+pEGFR_7, (-Akt_0*pEGFR_6-6*Akt_1*pEGFR_5-15*Akt_2*pEGFR_4-20*Akt_3*pEGFR_3-15*Akt_4*pEGFR_2-6*Akt_5*pEGFR_1-Akt_6*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_6+pEGFR_Akt_7, (Akt_0*pEGFR_5+5*Akt_1*pEGFR_4+10*Akt_2*pEGFR_3+10*Akt_3*pEGFR_2+5*Akt_4*pEGFR_1+Akt_5*pEGFR_0)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_5-pAkt_5*reaction_7_k1+Akt_6, -5*reaction_1_k1_4*EGF_EGFR_1-10*reaction_1_k1_3*EGF_EGFR_2-10*reaction_1_k1_2*EGF_EGFR_3-5*reaction_1_k1_1*EGF_EGFR_4+(-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_5+EGF_EGFR_6-EGF_EGFR_0*reaction_1_k1_5, reaction_1_k1_5, (-pAkt_6-pAkt_S6_6)*a2+y2_6, (S6_0*pAkt_6+6*S6_1*pAkt_5+15*S6_2*pAkt_4+20*S6_3*pAkt_3+15*S6_4*pAkt_2+6*S6_5*pAkt_1+S6_6*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_6+pAkt_6*reaction_7_k1-pEGFR_Akt_6*reaction_3_k1+pAkt_7, (-S6_0*pAkt_6-6*S6_1*pAkt_5-15*S6_2*pAkt_4-20*S6_3*pAkt_3-15*S6_4*pAkt_2-6*S6_5*pAkt_1-S6_6*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_6+pAkt_S6_7, (S6_0*pAkt_5+5*S6_1*pAkt_4+10*S6_2*pAkt_3+10*S6_3*pAkt_2+5*S6_4*pAkt_1+S6_5*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_5-reaction_8_k1*pS6_5+S6_6, (-pEGFR_7-pEGFR_Akt_7)*a1+y1_7, (-pAkt_7-pAkt_S6_7)*a2+y2_7, -a3*pS6_6+y3_6, -EGFR_turnover_1+y_faux1_1, -reaction_1_k1_1+y_faux2_1, -reaction_1_k1_2+y_faux2_2, -reaction_1_k1_3+y_faux2_3, -reaction_1_k1_4+y_faux2_4, -reaction_1_k1_5+y_faux2_5, y_faux3_0-Akt_0, y_faux4_0-EGFR_0, y_faux5_0-EGF_EGFR_0]
+	New system: [y1_0 = a1*pEGFR_0+a1*pEGFR_Akt_0, y1_1 = -(-pEGFR_1-pEGFR_Akt_1)*a1, y1_2 = -(-pEGFR_2-pEGFR_Akt_2)*a1, y1_3 = -(-pEGFR_3-pEGFR_Akt_3)*a1, y1_4 = -(-pEGFR_4-pEGFR_Akt_4)*a1, y1_5 = -(-pEGFR_5-pEGFR_Akt_5)*a1, y1_6 = -(-pEGFR_6-pEGFR_Akt_6)*a1, y1_7 = -(-pEGFR_7-pEGFR_Akt_7)*a1, y1_8 = -(-pEGFR_8-pEGFR_Akt_8)*a1, y1_9 = -(-pEGFR_9-pEGFR_Akt_9)*a1, y1_10 = -(-pEGFR_10-pEGFR_Akt_10)*a1, y1_11 = -(-pEGFR_11-pEGFR_Akt_11)*a1, y1_12 = -(-pEGFR_12-pEGFR_Akt_12)*a1, y1_13 = -(-pEGFR_13-pEGFR_Akt_13)*a1, y1_14 = -(-pEGFR_14-pEGFR_Akt_14)*a1, y1_15 = -(-pEGFR_15-pEGFR_Akt_15)*a1, y1_16 = -(-pEGFR_16-pEGFR_Akt_16)*a1, y1_17 = -(-pEGFR_17-pEGFR_Akt_17)*a1, y1_18 = -(-pEGFR_18-pEGFR_Akt_18)*a1, y1_19 = -(-pEGFR_19-pEGFR_Akt_19)*a1, y1_20 = -(-pEGFR_20-pEGFR_Akt_20)*a1, y1_21 = -(-pEGFR_21-pEGFR_Akt_21)*a1, y1_22 = -(-pEGFR_22-pEGFR_Akt_22)*a1, y1_23 = -(-pEGFR_23-pEGFR_Akt_23)*a1, y1_24 = -(-pEGFR_24-pEGFR_Akt_24)*a1, y1_25 = -(-pEGFR_25-pEGFR_Akt_25)*a1, y1_26 = -(-pEGFR_26-pEGFR_Akt_26)*a1, y2_0 = a2*pAkt_0+a2*pAkt_S6_0, y2_1 = -(-pAkt_1-pAkt_S6_1)*a2, y2_2 = -(-pAkt_2-pAkt_S6_2)*a2, y2_3 = -(-pAkt_3-pAkt_S6_3)*a2, y2_4 = -(-pAkt_4-pAkt_S6_4)*a2, y2_5 = -(-pAkt_5-pAkt_S6_5)*a2, y2_6 = -(-pAkt_6-pAkt_S6_6)*a2, y2_7 = -(-pAkt_7-pAkt_S6_7)*a2, y2_8 = -(-pAkt_8-pAkt_S6_8)*a2, y2_9 = -(-pAkt_9-pAkt_S6_9)*a2, y2_10 = -(-pAkt_10-pAkt_S6_10)*a2, y2_11 = -(-pAkt_11-pAkt_S6_11)*a2, y2_12 = -(-pAkt_12-pAkt_S6_12)*a2, y2_13 = -(-pAkt_13-pAkt_S6_13)*a2, y2_14 = -(-pAkt_14-pAkt_S6_14)*a2, y2_15 = -(-pAkt_15-pAkt_S6_15)*a2, y2_16 = -(-pAkt_16-pAkt_S6_16)*a2, y2_17 = -(-pAkt_17-pAkt_S6_17)*a2, y2_18 = -(-pAkt_18-pAkt_S6_18)*a2, y2_19 = -(-pAkt_19-pAkt_S6_19)*a2, y2_20 = -(-pAkt_20-pAkt_S6_20)*a2, y2_21 = -(-pAkt_21-pAkt_S6_21)*a2, y2_22 = -(-pAkt_22-pAkt_S6_22)*a2, y2_23 = -(-pAkt_23-pAkt_S6_23)*a2, y2_24 = -(-pAkt_24-pAkt_S6_24)*a2, y2_25 = -(-pAkt_25-pAkt_S6_25)*a2, y2_26 = -(-pAkt_26-pAkt_S6_26)*a2, y3_0 = pS6_0*a3, y3_1 = a3*pS6_1, y3_2 = a3*pS6_2, y3_3 = a3*pS6_3, y3_4 = a3*pS6_4, y3_5 = a3*pS6_5, y3_6 = a3*pS6_6, y3_7 = a3*pS6_7, y3_8 = a3*pS6_8, y3_9 = a3*pS6_9, y3_10 = a3*pS6_10, y3_11 = a3*pS6_11, y3_12 = a3*pS6_12, y3_13 = a3*pS6_13, y3_14 = a3*pS6_14, y3_15 = a3*pS6_15, y3_16 = a3*pS6_16, y3_17 = a3*pS6_17, y3_18 = a3*pS6_18, y3_19 = a3*pS6_19, y3_20 = a3*pS6_20, y3_21 = a3*pS6_21, y3_22 = a3*pS6_22, y3_23 = a3*pS6_23, y3_24 = a3*pS6_24, y3_25 = a3*pS6_25, y3_26 = a3*pS6_26, y_faux1_0 = EGFR_turnover_0, y_faux1_1 = EGFR_turnover_1, y_faux1_2 = EGFR_turnover_2, y_faux1_3 = EGFR_turnover_3, y_faux1_4 = EGFR_turnover_4, y_faux1_5 = EGFR_turnover_5, y_faux1_6 = EGFR_turnover_6, y_faux1_7 = EGFR_turnover_7, y_faux1_8 = EGFR_turnover_8, y_faux1_9 = EGFR_turnover_9, y_faux1_10 = EGFR_turnover_10, y_faux1_11 = EGFR_turnover_11, y_faux1_12 = EGFR_turnover_12, y_faux1_13 = EGFR_turnover_13, y_faux1_14 = EGFR_turnover_14, y_faux1_15 = EGFR_turnover_15, y_faux1_16 = EGFR_turnover_16, y_faux1_17 = EGFR_turnover_17, y_faux1_18 = EGFR_turnover_18, y_faux1_19 = EGFR_turnover_19, y_faux1_20 = EGFR_turnover_20, y_faux1_21 = EGFR_turnover_21, y_faux1_22 = EGFR_turnover_22, y_faux1_23 = EGFR_turnover_23, y_faux1_24 = EGFR_turnover_24, y_faux1_25 = EGFR_turnover_25, y_faux1_26 = EGFR_turnover_26, y_faux2_0 = reaction_1_k1_0, y_faux2_1 = reaction_1_k1_1, y_faux2_2 = reaction_1_k1_2, y_faux2_3 = reaction_1_k1_3, y_faux2_4 = reaction_1_k1_4, y_faux2_5 = reaction_1_k1_5, y_faux2_6 = reaction_1_k1_6, y_faux2_7 = reaction_1_k1_7, y_faux2_8 = reaction_1_k1_8, y_faux2_9 = reaction_1_k1_9, y_faux2_10 = reaction_1_k1_10, y_faux2_11 = reaction_1_k1_11, y_faux2_12 = reaction_1_k1_12, y_faux2_13 = reaction_1_k1_13, y_faux2_14 = reaction_1_k1_14, y_faux2_15 = reaction_1_k1_15, y_faux2_16 = reaction_1_k1_16, y_faux2_17 = reaction_1_k1_17, y_faux2_18 = reaction_1_k1_18, y_faux2_19 = reaction_1_k1_19, y_faux2_20 = reaction_1_k1_20, y_faux2_21 = reaction_1_k1_21, y_faux2_22 = reaction_1_k1_22, y_faux2_23 = reaction_1_k1_23, y_faux2_24 = reaction_1_k1_24, y_faux2_25 = reaction_1_k1_25, y_faux2_26 = reaction_1_k1_26, y_faux3_0 = Akt_0, y_faux4_0 = EGFR_0, y_faux5_0 = EGF_EGFR_0]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a2 = 0, pAkt_ = 0, reaction_8_k1 = 1, reaction_2_k1 = 2, a1 = 0, reaction_4_k1 = 1, reaction_3_k1 = 1, pAkt_S6_ = 0, reaction_5_k2 = 2, reaction_1_k1_ = 0, pEGFR_ = 0, reaction_7_k1 = 1, reaction_1_k2 = 2, pEGFR_Akt_ = 0, reaction_6_k1 = 1, Akt_ = 2, a3 = 0, EGF_EGFR_ = 1, pS6_ = 0, EGFR_turnover_ = 0, reaction_5_k1 = 2, reaction_2_k2 = 2, reaction_9_k1 = 1, S6_ = 2]
+Bound D_2 for assessing global identifiability:  114626265700000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a1 = 37866910021437661137566951982622429, a2 = 98587531166756580148169777356739486, a3 = 86498489863971286811559608482921925, reaction_1_k2 = 83324935596618971049451328125962893, reaction_2_k1 = 85230661928453892783236320833543595, reaction_2_k2 = 77601746280253837164208198376898112, reaction_3_k1 = 60949612883135320537046317913499852, reaction_4_k1 = 28083642271801036791911342307914735, reaction_5_k1 = 31971334134038204257050518894091745, reaction_5_k2 = 42795800982766110725665974494756822, reaction_6_k1 = 37622519824277821804474634119213568, reaction_7_k1 = 101578033620724444515193268970424039, reaction_8_k1 = 45028452546435346817242816456715230, reaction_9_k1 = 9661323695650121014395526264797329, EGFR_turnover_0 = 90683018519804227151487584054747134, reaction_1_k1_0 = 14706709497440647784992338815494330, EGF_EGFR_0 = 20497977807461186849298863838485696, EGFR_0 = 19442333714441540761409226059964961, pEGFR_0 = 80773228674359536927889971638720791, pAkt_S6_0 = 72155899930646780064375182006970641, pEGFR_Akt_0 = 3814736882482594235456337618582457, pAkt_0 = 56085035551349493489726689400062479, S6_0 = 34858130045413968889171813514667583, pS6_0 = 28638820142254874570784292201923359, Akt_0 = 78332424217972841440638469408509445]
+The polynomial system widehat{E^t} contains  92 equations in  83  variables
+Variable ordering to be used for Groebner basis computation [pEGFR_Akt_7, pAkt_S6_7, pEGFR_7, pAkt_7, pEGFR_Akt_6, EGF_EGFR_6, pAkt_S6_6, pEGFR_6, pAkt_6, pS6_6, Akt_6, S6_6, reaction_1_k1_5, pEGFR_Akt_5, EGF_EGFR_5, pAkt_S6_5, pEGFR_5, pAkt_5, pS6_5, Akt_5, S6_5, reaction_1_k1_4, pEGFR_Akt_4, EGF_EGFR_4, pAkt_S6_4, pEGFR_4, pAkt_4, pS6_4, Akt_4, S6_4, reaction_1_k1_3, pEGFR_Akt_3, EGF_EGFR_3, pAkt_S6_3, pEGFR_3, pAkt_3, pS6_3, Akt_3, S6_3, reaction_1_k1_2, pEGFR_Akt_2, EGF_EGFR_2, pAkt_S6_2, pEGFR_2, pAkt_2, pS6_2, Akt_2, S6_2, reaction_1_k1_1, EGFR_turnover_1, pEGFR_Akt_1, EGF_EGFR_1, pAkt_S6_1, pEGFR_1, pAkt_1, pS6_1, Akt_1, S6_1, reaction_1_k1_0, EGFR_turnover_0, pEGFR_Akt_0, EGF_EGFR_0, pAkt_S6_0, pEGFR_0, pAkt_0, EGFR_0, pS6_0, Akt_0, S6_0, z_aux, w_aux, a1, a2, a3, reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1, reaction_9_k1]
+Prep CPU Time (sub_transc=true):	 93.716
+Prep Real Elapsed Time (sub_transc=true):	 86.364
+memory used=9.22GiB, alloc change=136.45MiB, cpu time=93.74s, real time=86.38s, gc time=13.03s
+
+
+GetPolySystem Usage (real, cpu, memory):	86.384,	93.736,	9895397344
+
+States for substitution:	[pS6_ = 0, reaction_7_k1 = 1, S6_ = 2, pAkt_S6_ = 0, reaction_1_k1_ = 0, reaction_3_k1 = 1, pAkt_ = 0, reaction_9_k1 = 1, EGFR_turnover_ = 0, reaction_6_k1 = 1, pEGFR_Akt_ = 0, reaction_1_k2 = 2, a2 = 0, reaction_2_k1 = 2, reaction_5_k2 = 2, pEGFR_ = 0, reaction_5_k1 = 2, a1 = 0, a3 = 0, reaction_4_k1 = 1, Akt_ = 2, reaction_8_k1 = 1, reaction_2_k2 = 2, EGF_EGFR_ = 1]
 NonID parameters:	[Akt_0, EGFR_0, S6_0, a1, a2, a3, pAkt_0, pEGFR_0, pS6_0, EGFR_turnover, EGF_EGFR_0, pAkt_S6_0, pEGFR_Akt_0, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
-Substitutions:	[pAkt_ = 1, z_aux = 2, pAkt_S6_ = 1, reaction_5_k2 = 3, reaction_1_k1_ = 1, pEGFR_ = 1, pEGFR_Akt_ = 1, Akt_ = 3, EGF_EGFR_ = 2, EGFR_turnover_ = 1, pS6_ = 1, reaction_2_k2 = 3, S6_ = 3]
+Substitutions:	[pS6_ = 1, S6_ = 3, pAkt_S6_ = 1, reaction_1_k1_ = 1, pAkt_ = 1, EGFR_turnover_ = 1, pEGFR_Akt_ = 1, reaction_5_k2 = 3, pEGFR_ = 1, Akt_ = 3, reaction_2_k2 = 3, z_aux = 2, EGF_EGFR_ = 2]
+memory used=9.22GiB, alloc change=136.45MiB, cpu time=93.88s, real time=86.53s, gc time=13.03s
+
+SubsByDepth Usage (real, cpu, memory):	86.526,	93.877,	9903979520
+
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -318,6 +394,9 @@ Parameters in equations:  [a1, a2, a3, EGFR_turnover, reaction_1_k1, reaction_1_
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  588900000
+Orders of prolongations of the outputs (beta) =  [8, 8, 7]
+Orders of prolongations of the state variables (alpha) =  [7, 1, 8, 8, 8, 8, 7, 7, 7]
 
 =======================================================
 3. Assessing local identifiability
@@ -326,13 +405,31 @@ Parameters in equations:  [a1, a2, a3, EGFR_turnover, reaction_1_k1, reaction_1_
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  85969699260000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a1 = 41035316205008043268918046924490928, a2 = 43575327278083283940535093841645835, a3 = 54534560758783874269570729333603148, EGFR_turnover = 45754475315497407802808175029189677, reaction_1_k1 = 2942439466205105514467476675860398, reaction_1_k2 = 33720606037284288652326068884961442, reaction_2_k1 = 71238090582502734396030710525800142, reaction_2_k2 = 11074714789367207996271131791066761, reaction_3_k1 = 76051189782170335434570787871929148, reaction_4_k1 = 13749972567642993149382123367834261, reaction_5_k1 = 63689515364396265680716010893335206, reaction_5_k2 = 41788673056116900819963512488946981, reaction_6_k1 = 34327799436323461006161455245103923, reaction_7_k1 = 47501535458604601388067543044951825, reaction_8_k1 = 43106450273206382849311490487240911, reaction_9_k1 = 50419158699708048030394772792433320, EGF_EGFR_0 = 7975875357316850787030952007547083, EGFR_0 = 15373089984288027869861327758650698, pEGFR_0 = 3537175624685616438771076222537486, pAkt_S6_0 = 26011755578198599443480207555928014, pEGFR_Akt_0 = 72351783635960518474114675330815038, pAkt_0 = 9911190996699531857522126150632653, S6_0 = 5363266010046863352172325904104143, pS6_0 = 80310408513898805610040954933285354, Akt_0 = 81898366598655932169068412749615090]
+The polynomial system widehat{E^t} contains  75 equations in  76  variables
 Locally identifiable paramters:  [reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1]
 Nonidentifiable parameter:  [Akt(0), EGFR(0), S6(0), a1, a2, a3, pAkt(0), pEGFR(0), pS6(0), EGFR_turnover, EGF_EGFR(0), pAkt_S6(0), pEGFR_Akt(0), reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[a2 = 0, pAkt_ = 0, reaction_8_k1 = 1, reaction_2_k1 = 2, a1 = 0, reaction_1_k1 = 2, reaction_4_k1 = 1, reaction_3_k1 = 1, pAkt_S6_ = 0, reaction_5_k2 = 2, pEGFR_ = 0, reaction_7_k1 = 1, reaction_1_k2 = 2, pEGFR_Akt_ = 0, reaction_6_k1 = 1, Akt_ = 2, a3 = 0, EGF_EGFR_ = 1, pS6_ = 0, reaction_5_k1 = 2, reaction_2_k2 = 2, reaction_9_k1 = 1, S6_ = 2]
+Bound D_2 for assessing global identifiability:  114626265700000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a1 = 80276488396574832123246781593482126, a2 = 75447082434597062082365575238812671, a3 = 79292844419968506282536906998646888, EGFR_turnover = 2200490220034039995541148028412635, reaction_1_k1 = 16691517871652714143872741180775386, reaction_1_k2 = 72949269663227615889458918514268338, reaction_2_k1 = 31603954774094959407107517849818212, reaction_2_k2 = 73667531213563379261800713807382210, reaction_3_k1 = 1017094211959510852335679638341656, reaction_4_k1 = 105826292055647729023216198271188619, reaction_5_k1 = 32446514017666541151765309036660883, reaction_5_k2 = 34242174601369257650441471128630351, reaction_6_k1 = 103538736357878093174614626172908091, reaction_7_k1 = 2356244768425253248809805718495334, reaction_8_k1 = 95940409059606359829638810098390448, reaction_9_k1 = 77703521023510331574035468663621595, EGF_EGFR_0 = 95571998739040963895953399041346069, EGFR_0 = 65382766621274788726655345116722238, pEGFR_0 = 57965619201070780295842655680444275, pAkt_S6_0 = 26008471023287129418418872987627164, pEGFR_Akt_0 = 107241267362941780465867438018961074, pAkt_0 = 82103085738867480735126706212918359, S6_0 = 53110528417826815491433299617239265, pS6_0 = 11157316435712657427105803274744894, Akt_0 = 56643407969541474333415166851923268]
+The polynomial system widehat{E^t} contains  75 equations in  76  variables
+Variable ordering to be used for Groebner basis computation [pEGFR_Akt_7, pAkt_S6_7, pEGFR_7, pAkt_7, pEGFR_Akt_6, EGF_EGFR_6, pAkt_S6_6, pEGFR_6, pAkt_6, pS6_6, Akt_6, S6_6, pEGFR_Akt_5, EGF_EGFR_5, pAkt_S6_5, pEGFR_5, pAkt_5, pS6_5, Akt_5, S6_5, pEGFR_Akt_4, EGF_EGFR_4, pAkt_S6_4, pEGFR_4, pAkt_4, pS6_4, Akt_4, S6_4, pEGFR_Akt_3, EGF_EGFR_3, pAkt_S6_3, pEGFR_3, pAkt_3, pS6_3, Akt_3, S6_3, pEGFR_Akt_2, EGF_EGFR_2, pAkt_S6_2, pEGFR_2, pAkt_2, pS6_2, Akt_2, S6_2, pEGFR_Akt_1, EGF_EGFR_1, pAkt_S6_1, pEGFR_1, pAkt_1, pS6_1, Akt_1, S6_1, pEGFR_Akt_0, EGF_EGFR_0, pAkt_S6_0, pEGFR_0, pAkt_0, pS6_0, Akt_0, S6_0, z_aux, w_aux, EGFR_turnover, a1, a2, a3, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1, reaction_9_k1]
+Prep CPU Time (sub_transc=false):	 5.443
+Prep Real Elapsed Time (sub_transc=false):	 4.802
+memory used=0.66GiB, alloc change=-4.00MiB, cpu time=5.44s, real time=4.80s, gc time=1.09s
+
+
+GetPolySystem Usage (real, cpu, memory):	4.803,	5.445,	707780560
+
+States for substitution:	[pS6_ = 0, reaction_7_k1 = 1, S6_ = 2, pAkt_S6_ = 0, reaction_1_k1 = 2, reaction_3_k1 = 1, pAkt_ = 0, reaction_9_k1 = 1, reaction_6_k1 = 1, pEGFR_Akt_ = 0, reaction_1_k2 = 2, a2 = 0, reaction_2_k1 = 2, reaction_5_k2 = 2, pEGFR_ = 0, reaction_5_k1 = 2, a1 = 0, a3 = 0, reaction_4_k1 = 1, Akt_ = 2, reaction_8_k1 = 1, reaction_2_k2 = 2, EGF_EGFR_ = 1]
 NonID parameters:	[Akt_0, EGFR_0, S6_0, a1, a2, a3, pAkt_0, pEGFR_0, pS6_0, EGFR_turnover, EGF_EGFR_0, pAkt_S6_0, pEGFR_Akt_0, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
-Substitutions:	[pAkt_ = 1, z_aux = 2, pAkt_S6_ = 1, reaction_5_k2 = 3, pEGFR_ = 1, pEGFR_Akt_ = 1, Akt_ = 3, EGF_EGFR_ = 2, pS6_ = 1, reaction_2_k2 = 3, S6_ = 3]
-memory used=10320.9MB, alloc=179.8MB, time=99.60
+Substitutions:	[pS6_ = 1, S6_ = 3, pAkt_S6_ = 1, pAkt_ = 1, pEGFR_Akt_ = 1, reaction_5_k2 = 3, pEGFR_ = 1, Akt_ = 3, reaction_2_k2 = 3, z_aux = 2, EGF_EGFR_ = 2]
+memory used=0.67GiB, alloc change=-4.00MiB, cpu time=5.52s, real time=4.88s, gc time=1.09s
+
+SubsByDepth Usage (real, cpu, memory):	4.884,	5.525,	715966696
+
+memory used=10148.9MB, alloc=211.8MB, time=99.71

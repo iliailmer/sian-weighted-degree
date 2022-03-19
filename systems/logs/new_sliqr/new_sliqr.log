@@ -6,30 +6,78 @@
 # Ex 35 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in SubsByDepth) `out` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `mem` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `cpu_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `real_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:108|
+|imports/create_substitutions.mpl:111|
 Warning, (in WriteScripts) `max_degree` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:112|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -50,6 +98,9 @@ Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, mu, theta1]
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  74970000
+Orders of prolongations of the outputs (beta) =  [13]
+Orders of prolongations of the state variables (alpha) =  [12, 13, 12, 13, 1, 11]
 
 =======================================================
 3. Assessing local identifiability
@@ -58,6 +109,9 @@ Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, mu, theta1]
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  274510225600000000000000
+Random sample for the outputs and inputs is generated from  [alpha1 = 86323508431760750307641, alpha2 = 36552563537095079454610, b = 171801973006928119074648, dlt = 105647059033788777898132, eta = 156714493529480252228209, g = 221316636850768727596343, mu = 96603415775138392928154, theta1 = 267948037330917869866321, S_0 = 11085426352348091606637, LL_0 = 69199998843147471460549, In_0 = 230965870624926614759224, Q_0 = 199272092975191347676110, R_0 = 262373852585724920172274, N_0 = 7011226907451268232496]
+The polynomial system widehat{E^t} contains  69 equations in  69  variables
 Locally identifiable paramters:  [alpha1, alpha2, b, dlt, eta, g, theta1, S(0), LL(0), In(0), Q(0)]
 Nonidentifiable parameter:  [N(0), R(0), mu]
 
@@ -145,6 +199,9 @@ Collection [N_9, mu] is not transcendence basis
 Picked the best choice [N_0, R_0] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {}
 Algebraically independent parameters among derivatives: {N(0), R(0)}
+	Adding ODEs: []
+	Adding output functions: []
+	New system: [diff(S(t),t) = mu*N(t)-b*S(t)*In(t)-(g+eta)*S(t)+dlt*LL(t), diff(LL(t),t) = eta*S(t)-(g+dlt)*LL(t), diff(In(t),t) = b*S(t)*In(t)-(g+theta1+alpha1)*In(t), diff(Q(t),t) = theta1*In(t)-(g+alpha2)*Q(t), diff(R(t),t) = alpha1*In(t)+alpha2*Q(t)-g*R(t), diff(N(t),t) = 0, y1(t) = Q(t)+LL(t)]
 
 === Input info ===
 State variables:          [S(t), LL(t), In(t), Q(t), R(t), N(t)]
@@ -153,13 +210,32 @@ Input variables:          []
 Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, mu, theta1]
 ===================
 
+	Adding new y-equations: faux_equations
+	Adding new y-equations: [y_faux1_0 = N_0, y_faux2_0 = R_0]
+	New system: [y1_0-Q_0-LL_0, LL_0*dlt+LL_0*g-S_0*eta+LL_1, -In_0*theta1+Q_0*alpha2+Q_0*g+Q_1, -LL_1-Q_1+y1_1, (g+dlt)*LL_1+LL_2-eta*S_1, -In_1*theta1+(g+alpha2)*Q_1+Q_2, -In_0*S_0*b+In_0*alpha1+In_0*g+In_0*theta1+In_1, In_0*S_0*b-LL_0*dlt-N_0*mu+S_0*eta+S_0*g+S_1, -LL_2-Q_2+y1_2, (g+dlt)*LL_2+LL_3-eta*S_2, -In_2*theta1+(g+alpha2)*Q_2+Q_3, (-S_0*b+alpha1+g+theta1)*In_1+In_2-In_0*b*S_1, b*S_0*In_1-dlt*LL_1-mu*N_1+(In_0*b+eta+g)*S_1+S_2, N_1, -LL_3-Q_3+y1_3, (g+dlt)*LL_3+LL_4-eta*S_3, -In_3*theta1+(g+alpha2)*Q_3+Q_4, (-S_0*b+alpha1+g+theta1)*In_2+(-In_0*S_2-2*In_1*S_1)*b+In_3, (In_0*b+eta+g)*S_2+(2*In_1*S_1+In_2*S_0)*b-dlt*LL_2-mu*N_2+S_3, N_2, -LL_4-Q_4+y1_4, (g+dlt)*LL_4+LL_5-eta*S_4, -In_4*theta1+(g+alpha2)*Q_4+Q_5, (-S_0*b+alpha1+g+theta1)*In_3+(-In_0*S_3-3*In_1*S_2-3*In_2*S_1)*b+In_4, (In_0*S_3+3*In_1*S_2+3*In_2*S_1+In_3*S_0)*b+(g+eta)*S_3-dlt*LL_3-mu*N_3+S_4, N_3, -LL_5-Q_5+y1_5, (g+dlt)*LL_5+LL_6-eta*S_5, -In_5*theta1+(g+alpha2)*Q_5+Q_6, (-In_0*S_4-4*In_1*S_3-6*In_2*S_2-4*In_3*S_1-In_4*S_0)*b+(g+theta1+alpha1)*In_4+In_5, (In_0*S_4+4*In_1*S_3+6*In_2*S_2+4*In_3*S_1+In_4*S_0)*b+(g+eta)*S_4-dlt*LL_4-mu*N_4+S_5, N_4, -LL_6-Q_6+y1_6, (g+dlt)*LL_6+LL_7-eta*S_6, -In_6*theta1+(g+alpha2)*Q_6+Q_7, (-In_0*S_5-5*In_1*S_4-10*In_2*S_3-10*In_3*S_2-5*In_4*S_1-In_5*S_0)*b+(g+theta1+alpha1)*In_5+In_6, (In_0*S_5+5*In_1*S_4+10*In_2*S_3+10*In_3*S_2+5*In_4*S_1+In_5*S_0)*b+(g+eta)*S_5-dlt*LL_5-mu*N_5+S_6, N_5, -LL_7-Q_7+y1_7, (g+dlt)*LL_7+LL_8-eta*S_7, -In_7*theta1+(g+alpha2)*Q_7+Q_8, (-In_0*S_6-6*In_1*S_5-15*In_2*S_4-20*In_3*S_3-15*In_4*S_2-6*In_5*S_1-In_6*S_0)*b+(g+theta1+alpha1)*In_6+In_7, (In_0*S_6+6*In_1*S_5+15*In_2*S_4+20*In_3*S_3+15*In_4*S_2+6*In_5*S_1+In_6*S_0)*b+(g+eta)*S_6-dlt*LL_6-mu*N_6+S_7, N_6, -LL_8-Q_8+y1_8, (g+dlt)*LL_8+LL_9-eta*S_8, -In_8*theta1+(g+alpha2)*Q_8+Q_9, (-In_0*S_7-7*In_1*S_6-21*In_2*S_5-35*In_3*S_4-35*In_4*S_3-21*In_5*S_2-7*In_6*S_1-In_7*S_0)*b+(g+theta1+alpha1)*In_7+In_8, (In_0*S_7+7*In_1*S_6+21*In_2*S_5+35*In_3*S_4+35*In_4*S_3+21*In_5*S_2+7*In_6*S_1+In_7*S_0)*b+(g+eta)*S_7-dlt*LL_7-mu*N_7+S_8, N_7, -LL_9-Q_9+y1_9, (g+dlt)*LL_9+LL_10-eta*S_9, -In_9*theta1+(g+alpha2)*Q_9+Q_10, (-In_0*S_8-8*In_1*S_7-28*In_2*S_6-56*In_3*S_5-70*In_4*S_4-56*In_5*S_3-28*In_6*S_2-8*In_7*S_1-In_8*S_0)*b+(g+theta1+alpha1)*In_8+In_9, (In_0*S_8+8*In_1*S_7+28*In_2*S_6+56*In_3*S_5+70*In_4*S_4+56*In_5*S_3+28*In_6*S_2+8*In_7*S_1+In_8*S_0)*b+(g+eta)*S_8-dlt*LL_8-mu*N_8+S_9, N_8, -LL_10-Q_10+y1_10, LL_11+(g+dlt)*LL_10-eta*S_10, -In_10*theta1+Q_11+(g+alpha2)*Q_10, (-In_0*S_9-9*In_1*S_8-36*In_2*S_7-84*In_3*S_6-126*In_4*S_5-126*In_5*S_4-84*In_6*S_3-36*In_7*S_2-9*In_8*S_1-In_9*S_0)*b+(g+theta1+alpha1)*In_9+In_10, (In_0*S_9+9*In_1*S_8+36*In_2*S_7+84*In_3*S_6+126*In_4*S_5+126*In_5*S_4+84*In_6*S_3+36*In_7*S_2+9*In_8*S_1+In_9*S_0)*b+(g+eta)*S_9-dlt*LL_9-mu*N_9+S_10, N_9, -LL_11-Q_11+y1_11, (g+dlt)*LL_11+LL_12-eta*S_11, -In_11*theta1+(g+alpha2)*Q_11+Q_12, (-In_0*S_10-10*In_1*S_9-In_10*S_0-45*In_2*S_8-120*In_3*S_7-210*In_4*S_6-252*In_5*S_5-210*In_6*S_4-120*In_7*S_3-45*In_8*S_2-10*In_9*S_1)*b+(g+theta1+alpha1)*In_10+In_11, (In_0*S_10+10*In_1*S_9+In_10*S_0+45*In_2*S_8+120*In_3*S_7+210*In_4*S_6+252*In_5*S_5+210*In_6*S_4+120*In_7*S_3+45*In_8*S_2+10*In_9*S_1)*b+(g+eta)*S_10-dlt*LL_10-mu*N_10+S_11, N_10, -LL_12-Q_12+y1_12, y_faux1_0-N_0, y_faux2_0-R_0]
+	New system: [y1_0 = Q_0+LL_0, y1_1 = LL_1+Q_1, y1_2 = LL_2+Q_2, y1_3 = LL_3+Q_3, y1_4 = LL_4+Q_4, y1_5 = LL_5+Q_5, y1_6 = LL_6+Q_6, y1_7 = LL_7+Q_7, y1_8 = LL_8+Q_8, y1_9 = LL_9+Q_9, y1_10 = LL_10+Q_10, y1_11 = LL_11+Q_11, y1_12 = LL_12+Q_12, y1_13 = LL_13+Q_13, y1_14 = LL_14+Q_14, y1_15 = LL_15+Q_15, y_faux1_0 = N_0, y_faux2_0 = R_0]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[theta1 = 1, LL_ = 0, b = 2, alpha1 = 2, S_ = 1, g = 1, alpha2 = 1, N_ = 2, mu = 2, dlt = 1, Q_ = 0, eta = 1, In_ = 1]
+Bound D_2 for assessing global identifiability:  366013634100000000000000
+Random sample for the outputs and inputs is generated from  [alpha1 = 124513973883416528464328, alpha2 = 179211710008721060641748, b = 274406607074751255252861, dlt = 107255894098517377870793, eta = 69556434305465316864158, g = 331076008902405366982057, mu = 186420083741009917419527, theta1 = 13770548096291631208379, S_0 = 127371063937329925238963, LL_0 = 279196610971874320229475, In_0 = 158266205001592361659878, Q_0 = 13760131642161291504196, R_0 = 361586217900199619936111, N_0 = 173545907827559260660395]
+The polynomial system widehat{E^t} contains  71 equations in  70  variables
+Variable ordering to be used for Groebner basis computation [LL_12, Q_12, LL_11, In_11, S_11, Q_11, LL_10, In_10, S_10, Q_10, N_10, LL_9, In_9, S_9, Q_9, N_9, LL_8, In_8, S_8, Q_8, N_8, LL_7, In_7, S_7, Q_7, N_7, LL_6, In_6, S_6, Q_6, N_6, LL_5, In_5, S_5, Q_5, N_5, LL_4, In_4, S_4, Q_4, N_4, LL_3, In_3, S_3, Q_3, N_3, LL_2, In_2, S_2, Q_2, N_2, LL_1, In_1, S_1, Q_1, N_1, LL_0, In_0, S_0, R_0, Q_0, N_0, z_aux, w_aux, alpha1, alpha2, b, dlt, eta, g, mu, theta1]
+Prep CPU Time (sub_transc=true):	 26.967
+Prep Real Elapsed Time (sub_transc=true):	 25.570
+memory used=2.63GiB, alloc change=95.02MiB, cpu time=26.99s, real time=25.59s, gc time=2.62s
+
+
+GetPolySystem Usage (real, cpu, memory):	25.592,	26.988,	2825063016
+
+States for substitution:	[mu = 2, eta = 1, b = 2, dlt = 1, Q_ = 0, N_ = 2, LL_ = 0, alpha1 = 2, In_ = 1, theta1 = 1, g = 1, alpha2 = 1, S_ = 1]
 NonID parameters:	[N_0, R_0, mu]
-Substitutions:	[LL_ = 1, b = 3, alpha1 = 3, S_ = 2, N_ = 3, z_aux = 2, Q_ = 1, In_ = 2]
+Substitutions:	[b = 3, z_aux = 2, Q_ = 1, N_ = 3, LL_ = 1, alpha1 = 3, In_ = 2, S_ = 2]
+memory used=2.64GiB, alloc change=95.02MiB, cpu time=27.06s, real time=25.67s, gc time=2.62s
+
+SubsByDepth Usage (real, cpu, memory):	25.666,	27.063,	2830028928
+
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -180,6 +256,9 @@ Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, mu, theta1]
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  74970000
+Orders of prolongations of the outputs (beta) =  [13]
+Orders of prolongations of the state variables (alpha) =  [12, 13, 12, 13, 1, 11]
 
 =======================================================
 3. Assessing local identifiability
@@ -188,13 +267,31 @@ Parameters in equations:  [alpha1, alpha2, b, dlt, eta, g, mu, theta1]
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  274510225600000000000000
+Random sample for the outputs and inputs is generated from  [alpha1 = 259655188896429653423431, alpha2 = 171080692086825219405794, b = 214991969018842821030169, dlt = 81745050920082942566084, eta = 200429467461045843797872, g = 30864473047629170767132, mu = 234975799202372999831912, theta1 = 113025019985692908042864, S_0 = 89426120736203894822910, LL_0 = 27226277771683681616468, In_0 = 49034548744967605874418, Q_0 = 86039287340134803831788, R_0 = 54305237107062459782894, N_0 = 102468006585520362028731]
+The polynomial system widehat{E^t} contains  69 equations in  69  variables
 Locally identifiable paramters:  [alpha1, alpha2, b, dlt, eta, g, theta1, S(0), LL(0), In(0), Q(0)]
 Nonidentifiable parameter:  [N(0), R(0), mu]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[theta1 = 1, LL_ = 0, b = 2, alpha1 = 2, S_ = 1, g = 1, alpha2 = 1, N_ = 2, mu = 2, dlt = 1, Q_ = 0, eta = 1, In_ = 1]
+Bound D_2 for assessing global identifiability:  366013634100000000000000
+Random sample for the outputs and inputs is generated from  [alpha1 = 73028566562298609471235, alpha2 = 51042282591892166702642, b = 300706077334643914679022, dlt = 14770091967009759075391, eta = 63306908297417235849494, g = 179655458878325381925281, mu = 330229350240913092677176, theta1 = 87240061823160817967957, S_0 = 233068689334338346090157, LL_0 = 334621330185979178775062, In_0 = 303311658124807130383274, Q_0 = 207657275250496864655210, R_0 = 271905488074345026821154, N_0 = 91655446490309999450344]
+The polynomial system widehat{E^t} contains  69 equations in  69  variables
+Variable ordering to be used for Groebner basis computation [LL_12, Q_12, LL_11, In_11, S_11, Q_11, LL_10, In_10, S_10, Q_10, N_10, LL_9, In_9, S_9, Q_9, N_9, LL_8, In_8, S_8, Q_8, N_8, LL_7, In_7, S_7, Q_7, N_7, LL_6, In_6, S_6, Q_6, N_6, LL_5, In_5, S_5, Q_5, N_5, LL_4, In_4, S_4, Q_4, N_4, LL_3, In_3, S_3, Q_3, N_3, LL_2, In_2, S_2, Q_2, N_2, LL_1, In_1, S_1, Q_1, N_1, LL_0, In_0, S_0, Q_0, N_0, z_aux, w_aux, alpha1, alpha2, b, dlt, eta, g, mu, theta1]
+Prep CPU Time (sub_transc=false):	 2.326
+Prep Real Elapsed Time (sub_transc=false):	 2.072
+memory used=244.09MiB, alloc change=200.00KiB, cpu time=2.33s, real time=2.08s, gc time=445.93ms
+
+
+GetPolySystem Usage (real, cpu, memory):	2.075,	2.328,	255946272
+
+States for substitution:	[mu = 2, eta = 1, b = 2, dlt = 1, Q_ = 0, N_ = 2, LL_ = 0, alpha1 = 2, In_ = 1, theta1 = 1, g = 1, alpha2 = 1, S_ = 1]
 NonID parameters:	[N_0, R_0, mu]
-Substitutions:	[LL_ = 1, b = 3, alpha1 = 3, S_ = 2, N_ = 3, z_aux = 2, Q_ = 1, In_ = 2]
-memory used=3072.9MB, alloc=153.2MB, time=27.03
+Substitutions:	[b = 3, z_aux = 2, Q_ = 1, N_ = 3, LL_ = 1, alpha1 = 3, In_ = 2, S_ = 2]
+memory used=248.20MiB, alloc change=200.00KiB, cpu time=2.36s, real time=2.11s, gc time=445.93ms
+
+SubsByDepth Usage (real, cpu, memory):	2.111,	2.364,	260252864
+
+memory used=2951.2MB, alloc=135.5MB, time=29.57

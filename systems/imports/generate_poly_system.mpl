@@ -1,7 +1,7 @@
 # Code to take a system of ode's and generate a polynomial system for SIAN
 
 #===============================================================================
-GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_solutions:=true, p := 0.99, infolevel := 1, method := 2, num_nodes := 6, max_comb:=200})
+GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_solutions:=true, p := 0.99, infolevel := 2, method := 2, num_nodes := 6, max_comb:=200})
 #===============================================================================
  local i, j, k, n, m, s, all_params, all_vars, eqs, Q, X, Y, poly, d0, D1,
         sample, all_subs,alpha, beta, Et, x_theta_vars, prolongation_possible,
@@ -19,6 +19,8 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
   #----------------------------------------------
   # 0. Extract inputs, outputs, states, and parameters from the system
   #----------------------------------------------
+  prep_cpu_start := time():
+  prep_real_start := time[real]():
 
   if SearchText(".", convert(system_ODEs, string)) <> 0 then
     PrintHeader("WARNING: It looks like your system involves floating-point numbers. This may result into a non-meaninful result, please convert them to rationals (e.g., 0.2 -> 1/5)"):
@@ -357,7 +359,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       printf("\t%s %a\n", `New system:`, sigma_new):
     end if:
 
-    X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
+    X_eq, Y_eq, Et, _, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
     if numelems(alg_indep_derivs)>0 then
       if infolevel>1 then
         printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
@@ -389,7 +391,7 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
 
     # (a) ------------
     deg_variety := foldl(`*`, op( map(e -> degree(e), Et) )):
-    D2 := floor( 8 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ) :
+    D2 := floor( 8 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ) : # if replace 8 with 6 => both D2 and D2(sigma_e) are equal
     if infolevel > 1 then
       printf("%s %a\n", `Bound D_2 for assessing global identifiability: `, D2):
     end if:
@@ -423,10 +425,18 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, count_so
       printf("Variable ordering to be used for Groebner basis computation %a\n", vars);
     end if:
   # return Y_eq, X_eq, Et_hat_old, vars;
+  prep_cpu_finish:= time() - prep_cpu_start:
+  prep_real_finish:= time[real]() - prep_real_start:
+
+  
   if sub_transc then
+    printf("Prep CPU Time (sub_transc=true):\t %a\n", prep_cpu_finish);
+    printf("Prep Real Elapsed Time (sub_transc=true):\t %a\n", prep_real_finish);
     return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
     op(sort(mu))], x_vars], non_id, sigma_new, alg_indep:
   else
+    printf("Prep CPU Time (sub_transc=false):\t %a\n", prep_cpu_finish);
+    printf("Prep Real Elapsed Time (sub_transc=false):\t %a\n", prep_real_finish);
     return [[op(Et_hat), z_aux*Q_hat-1], vars, Et_x_vars, [z_aux, w_aux,
     op(sort(mu))], x_vars], non_id, sigma_new, []: 
   end if:

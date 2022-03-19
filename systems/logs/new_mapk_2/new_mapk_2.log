@@ -6,30 +6,78 @@
 # Ex 37 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in SubsByDepth) `out` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `mem` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `cpu_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `real_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:108|
+|imports/create_substitutions.mpl:111|
 Warning, (in WriteScripts) `max_degree` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:112|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -50,6 +98,9 @@ Parameters in equations:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  1902810000
+Orders of prolongations of the outputs (beta) =  [10, 9, 9, 9, 8]
+Orders of prolongations of the state variables (alpha) =  [8, 8, 8, 9, 8, 8, 8, 10, 9, 9, 9, 8]
 
 =======================================================
 3. Assessing local identifiability
@@ -58,15 +109,33 @@ Parameters in equations:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  10861077860000000000000000000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a00 = 825125191713589483099389568806982538418487554664, a01 = 7604932219974229298423768304407904217733134223948, a10 = 907493347039419819599178000449746634684347925010, alpha01 = 4187550151865595252251738664249168745514423345943, alpha10 = 4196497877739170583697692801568618441994346186715, alpha11 = 1828054110162249724430187871748657032199496941922, b00 = 10677451659566676986138578641754160006330605068396, b01 = 3610117426285575464191575110069122139043691403713, b10 = 7175121516837234169412361347614018043547005112531, beta01 = 5806208308221045950078420681017417940953073487660, beta10 = 2224492979158861357013621621855972214814526843279, beta11 = 10258223763241266160410096166029975403420271701807, c0001 = 9371662817717504391143062811591823706131056288519, c0010 = 10592165229587567846405938186476232836052749440123, c0011 = 16855251402476337418463378154018682139606869092, c0111 = 6836537255900601231197625647459568345186819788553, c1011 = 5760720948733095481958696785566780252996614846419, gamma0100 = 2215312174852255656947768731188348634149400469184, gamma1000 = 4560241519736735160023556871649580308770967848568, gamma1100 = 2892218591989534259156387140082731346318065650422, gamma1101 = 4039367013417299670703354824744789953148598895087, gamma1110 = 6110852239388124707981450247257201182193763664040, KS00_0 = 8237901976120499084295034419590702040724627350102, KS01_0 = 8568816201621198434671223826971570554862705550158, KS10_0 = 8981522652115917998583697886010917530166446370238, FS01_0 = 4542451738150238858335024973409977624871825168762, FS10_0 = 10821317088900165398832555647652437013648177557099, FS11_0 = 1678684054189886157680344013752842557903168196899, K_0 = 10663300411262873013953368086007837786501873705879, Ff_0 = 1123943756952231905493097758833884718449559019738, S00_0 = 2978865268542654641314636116296189606529961607729, S01_0 = 8753493548292870619458254354612080462170063996580, S10_0 = 10523131696607239591493846722182145345091493124401, S11_0 = 3616999179701040224970076222623286955699410951333]
+The polynomial system widehat{E^t} contains  135 equations in  124  variables
 Locally identifiable paramters:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b10, beta01, beta10, beta11, c0001, c0010, c0011, c0111, c1011, gamma0100, gamma1000, gamma1100, gamma1101, gamma1110, KS00(0), KS01(0), KS10(0), FS01(0), FS10(0), FS11(0), K(0), Ff(0), S00(0), S01(0), S10(0), S11(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[alpha10 = 1, Ff_ = 0, beta01 = 1, beta10 = 1, c0011 = 1, K_ = 1, KS00_ = 1, alpha11 = 1, S01_ = 0, KS01_ = 1, alpha01 = 1, gamma1100 = 1, a00 = 1, S00_ = 0, gamma0100 = 1, b00 = 1, c0001 = 1, KS10_ = 1, beta11 = 1, S11_ = 0, a10 = 1, gamma1101 = 1, b01 = 1, FS01_ = 1, S10_ = 0, c1011 = 1, b10 = 1, FS10_ = 1, gamma1000 = 1, c0010 = 1, gamma1110 = 1, c0111 = 1, FS11_ = 1, a01 = 1]
+Bound D_2 for assessing global identifiability:  14481437150000000000000000000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a00 = 11505273559450934269567294763426572345883959124258, a01 = 4294883653014385919436028552620276337003955358437, a10 = 7856891290450122427679851167240109032769834132379, alpha01 = 6487874686412893219577237097170972908279325064948, alpha10 = 12556219121293098243280421167696487622140524793588, alpha11 = 912591921235117769732936935085093094865185646660, b00 = 5118908886741688218287047543008191058029931026421, b01 = 2324098311719676058536612384876981876737370789845, b10 = 2447366667216746396436485083900067804516683875235, beta01 = 8510973918037766264479867957729615319934812265605, beta10 = 7443982928573376604374999242901231737877324073641, beta11 = 3078329958690373554488254093985590123884739746507, c0001 = 14188173612720298994706618609417840530705651284577, c0010 = 1745428739926216092526764141648919042389592407316, c0011 = 13462443905180190919390155042991522306027458931253, c0111 = 13673111376665483955403212310663813286949850070716, c1011 = 1755861272554528293188253854273760311625366527734, gamma0100 = 10728681061078628476549221387861583423682777351489, gamma1000 = 10294383858919583660647894550700984516083486014216, gamma1100 = 5799583023430373828298193608193698242902840771498, gamma1101 = 12881528675218624414386714236797117681016021656696, gamma1110 = 6865958752586892897769609760099507870871561958517, KS00_0 = 12145080865103833357676422875528684004011891863526, KS01_0 = 4787001334705155435109811365681419651189922783988, KS10_0 = 10228800640013920488744873194133709941393148588105, FS01_0 = 14377788991909859771175546153931248237820480186832, FS10_0 = 13579717862997126231751905006127728981497326641436, FS11_0 = 12483840384711301515738065925892761679181529493726, K_0 = 8957053482320632526043274303334266556365349591955, Ff_0 = 6694718265093201866386450483886860878739931374722, S00_0 = 10513039302240255212433326315001955148414694902489, S01_0 = 2888238523883364062077670492368158419600006274234, S10_0 = 14030813467076786845059017701344624554584338672586, S11_0 = 9273633397201016556259871904401418372823150016315]
+The polynomial system widehat{E^t} contains  135 equations in  124  variables
+Variable ordering to be used for Groebner basis computation [Ff_9, FS01_8, S10_8, S01_8, S00_8, Ff_8, KS10_7, KS01_7, KS00_7, FS11_7, FS10_7, FS01_7, S11_7, S10_7, S01_7, S00_7, Ff_7, K_7, KS10_6, KS01_6, KS00_6, FS11_6, FS10_6, FS01_6, S11_6, S10_6, S01_6, S00_6, Ff_6, K_6, KS10_5, KS01_5, KS00_5, FS11_5, FS10_5, FS01_5, S11_5, S10_5, S01_5, S00_5, Ff_5, K_5, KS10_4, KS01_4, KS00_4, FS11_4, FS10_4, FS01_4, S11_4, S10_4, S01_4, S00_4, Ff_4, K_4, KS10_3, KS01_3, KS00_3, FS11_3, FS10_3, FS01_3, S11_3, S10_3, S01_3, S00_3, Ff_3, K_3, KS10_2, KS01_2, KS00_2, FS11_2, FS10_2, FS01_2, S11_2, S10_2, S01_2, S00_2, Ff_2, K_2, KS10_1, KS01_1, KS00_1, FS11_1, FS10_1, FS01_1, S11_1, S10_1, S01_1, S00_1, Ff_1, K_1, KS10_0, KS01_0, KS00_0, FS11_0, FS10_0, FS01_0, S11_0, S10_0, S01_0, S00_0, Ff_0, K_0, z_aux, w_aux, a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b10, beta01, beta10, beta11, c0001, c0010, c0011, c0111, c1011, gamma0100, gamma1000, gamma1100, gamma1101, gamma1110]
+Prep CPU Time (sub_transc=true):	 66.601
+Prep Real Elapsed Time (sub_transc=true):	 62.632
+memory used=7.62GiB, alloc change=171.47MiB, cpu time=66.64s, real time=62.67s, gc time=7.82s
+
+
+GetPolySystem Usage (real, cpu, memory):	62.670,	66.639,	8182210800
+
+States for substitution:	[S01_ = 0, KS00_ = 1, gamma1110 = 1, alpha10 = 1, c0011 = 1, S00_ = 0, KS01_ = 1, c0010 = 1, S11_ = 0, a00 = 1, gamma0100 = 1, KS10_ = 1, b10 = 1, c0111 = 1, S10_ = 0, a01 = 1, FS01_ = 1, c1011 = 1, a10 = 1, FS10_ = 1, gamma1101 = 1, gamma1100 = 1, beta11 = 1, FS11_ = 1, b01 = 1, beta01 = 1, beta10 = 1, Ff_ = 0, c0001 = 1, alpha11 = 1, gamma1000 = 1, K_ = 1, alpha01 = 1, b00 = 1]
 NonID parameters:	[]
-Substitutions:	[alpha10 = 2, Ff_ = 1, beta01 = 2, z_aux = 1, beta10 = 2, c0011 = 2, K_ = 2, KS00_ = 2, alpha11 = 2, S01_ = 1, KS01_ = 2, alpha01 = 2, gamma1100 = 2, a00 = 2, S00_ = 1, gamma0100 = 2, b00 = 2, c0001 = 2, KS10_ = 2, beta11 = 2, S11_ = 1, a10 = 2, gamma1101 = 2, b01 = 2, FS01_ = 2, S10_ = 1, c1011 = 2, b10 = 2, gamma1000 = 2, FS10_ = 2, c0010 = 2, gamma1110 = 2, c0111 = 2, FS11_ = 2, a01 = 2]
+Substitutions:	[S01_ = 1, KS00_ = 2, gamma1110 = 2, alpha10 = 2, c0011 = 2, S00_ = 1, KS01_ = 2, c0010 = 2, S11_ = 1, a00 = 2, gamma0100 = 2, KS10_ = 2, b10 = 2, c0111 = 2, S10_ = 1, a01 = 2, FS01_ = 2, c1011 = 2, a10 = 2, FS10_ = 2, gamma1101 = 2, gamma1100 = 2, beta11 = 2, FS11_ = 2, b01 = 2, beta01 = 2, beta10 = 2, Ff_ = 1, c0001 = 2, alpha11 = 2, gamma1000 = 2, K_ = 2, z_aux = 1, alpha01 = 2, b00 = 2]
+memory used=7.63GiB, alloc change=171.47MiB, cpu time=66.95s, real time=62.90s, gc time=7.98s
+
+SubsByDepth Usage (real, cpu, memory):	62.898,	66.951,	8196464552
+
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -87,6 +156,9 @@ Parameters in equations:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  1902810000
+Orders of prolongations of the outputs (beta) =  [10, 9, 9, 9, 8]
+Orders of prolongations of the state variables (alpha) =  [8, 8, 8, 9, 8, 8, 8, 10, 9, 9, 9, 8]
 
 =======================================================
 3. Assessing local identifiability
@@ -95,13 +167,31 @@ Parameters in equations:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  10861077860000000000000000000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a00 = 603348540165551747442266477626831021018384744534, a01 = 9687092226459895623889510968270575376929372266972, a10 = 8456817473097049888857966963451570785758058198413, alpha01 = 520316174677548829685072252699744383499900865563, alpha10 = 9141269515421524537668014615082652159721269452385, alpha11 = 9541610374804649820213934599657232986060946655688, b00 = 7491883665339506926195461267185596592002823784365, b01 = 6143068409967810762749636790603030331273047945233, b10 = 4762873680418349920210278847895690127084574012847, beta01 = 2074541299902262704103651522224170938920763734234, beta10 = 4139577275584804490710585228372074821966280580772, beta11 = 8536151412519148015384496688398350729412700977048, c0001 = 7873800093833409046597148964833655077416393134587, c0010 = 1708612095638920786828208320395407137383764212290, c0011 = 7286419340120167041237566383911754829160868362582, c0111 = 10400026250227080796808526705813598152355699549418, c1011 = 4329201443600945486327855056008026434988131956090, gamma0100 = 9854423577068526860591205439819665102318857111913, gamma1000 = 10652150530715713584082700714599321725904491354268, gamma1100 = 5699218295424305741247074059908875255865052620541, gamma1101 = 3777457132959273222844853425765220656061485491427, gamma1110 = 1000074729448034732170648347309835379059055360033, KS00_0 = 1588911448173828536770761487684668715647251257217, KS01_0 = 6074553916810781237313628847174612975382052009336, KS10_0 = 6033043738088737334434246112234956465577305406376, FS01_0 = 1196408582790602327212813714434073861064572508536, FS10_0 = 1282531741701723512794019431752923305896711741022, FS11_0 = 404100478195095351505549595510902410614931747737, K_0 = 814430959250906687221492641996530484516359557633, Ff_0 = 3878166024832894433325710843225599692451255785582, S00_0 = 3032664994141649876197509245658865754451862049136, S01_0 = 1549582545061839899733995316883151130941266572959, S10_0 = 9978642049519216831058745387084417935934484643895, S11_0 = 492735990145152661068756564553291024171432185020]
+The polynomial system widehat{E^t} contains  135 equations in  124  variables
 Locally identifiable paramters:  [a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b10, beta01, beta10, beta11, c0001, c0010, c0011, c0111, c1011, gamma0100, gamma1000, gamma1100, gamma1101, gamma1110, KS00(0), KS01(0), KS10(0), FS01(0), FS10(0), FS11(0), K(0), Ff(0), S00(0), S01(0), S10(0), S11(0)]
 Nonidentifiable parameter:  []
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[alpha10 = 1, Ff_ = 0, beta01 = 1, beta10 = 1, c0011 = 1, K_ = 1, KS00_ = 1, alpha11 = 1, S01_ = 0, KS01_ = 1, alpha01 = 1, gamma1100 = 1, a00 = 1, S00_ = 0, gamma0100 = 1, b00 = 1, c0001 = 1, KS10_ = 1, beta11 = 1, S11_ = 0, a10 = 1, gamma1101 = 1, b01 = 1, FS01_ = 1, S10_ = 0, c1011 = 1, b10 = 1, FS10_ = 1, gamma1000 = 1, c0010 = 1, gamma1110 = 1, c0111 = 1, FS11_ = 1, a01 = 1]
+Bound D_2 for assessing global identifiability:  14481437150000000000000000000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a00 = 13736139052508423108258997204667458845135154529854, a01 = 11856234953768368443184212743681548647615729362802, a10 = 9806593768003279819107395459957346337503749637533, alpha01 = 7899016943079619776749877874694390361460333591342, alpha10 = 12171502428595314613958541708056268193187056820494, alpha11 = 12163287072598850565871510975732935863210945410972, b00 = 9009749523613726633407137346679117030869024821824, b01 = 9513907451712708319743570669199100571588241296504, b10 = 10153288466109425365931129607619593199433473226448, beta01 = 3860720686241126988457610715732968627919477285240, beta10 = 4557017811492816773092950061709879625390790904872, beta11 = 347815898441341525248214233351654265489601969221, c0001 = 942567490062067690175772003128754479863549349023, c0010 = 13342668136547646384665587966821075861366048862356, c0011 = 8403972170872677319368701356752878216330067222238, c0111 = 9353117199559075078788951839813763164839182683870, c1011 = 9809997964312739667613867813665963853890096157259, gamma0100 = 5827195614569431732966166873937033988413504747733, gamma1000 = 7104531863921345731121963286496358631397407135170, gamma1100 = 13793623362499823125018890054802566087791475566177, gamma1101 = 1665982671737136091671385030515474334552853209373, gamma1110 = 4403619299313345186286158581530598131951148567889, KS00_0 = 6946584203810959619551990365114150367713246420248, KS01_0 = 1294400201151804871305659174761306401578070817141, KS10_0 = 2324634442823110794680945773403677658333846840330, FS01_0 = 10316063757258029992714281579875686945764371733678, FS10_0 = 11858486750355242186871973794492710328003673431475, FS11_0 = 6097479865937793766513460952643664152392486729836, K_0 = 4044456134049721974149454642261157098546024671525, Ff_0 = 5961688002031128536329733061256829904225671688914, S00_0 = 5604736164654356415314064003205620047303647055170, S01_0 = 6199703428334630028865994167900313509491235538473, S10_0 = 3212893062579726904733275331873956504907046923671, S11_0 = 13960599977935399410062931797600049869610300528014]
+The polynomial system widehat{E^t} contains  135 equations in  124  variables
+Variable ordering to be used for Groebner basis computation [Ff_9, FS01_8, S10_8, S01_8, S00_8, Ff_8, KS10_7, KS01_7, KS00_7, FS11_7, FS10_7, FS01_7, S11_7, S10_7, S01_7, S00_7, Ff_7, K_7, KS10_6, KS01_6, KS00_6, FS11_6, FS10_6, FS01_6, S11_6, S10_6, S01_6, S00_6, Ff_6, K_6, KS10_5, KS01_5, KS00_5, FS11_5, FS10_5, FS01_5, S11_5, S10_5, S01_5, S00_5, Ff_5, K_5, KS10_4, KS01_4, KS00_4, FS11_4, FS10_4, FS01_4, S11_4, S10_4, S01_4, S00_4, Ff_4, K_4, KS10_3, KS01_3, KS00_3, FS11_3, FS10_3, FS01_3, S11_3, S10_3, S01_3, S00_3, Ff_3, K_3, KS10_2, KS01_2, KS00_2, FS11_2, FS10_2, FS01_2, S11_2, S10_2, S01_2, S00_2, Ff_2, K_2, KS10_1, KS01_1, KS00_1, FS11_1, FS10_1, FS01_1, S11_1, S10_1, S01_1, S00_1, Ff_1, K_1, KS10_0, KS01_0, KS00_0, FS11_0, FS10_0, FS01_0, S11_0, S10_0, S01_0, S00_0, Ff_0, K_0, z_aux, w_aux, a00, a01, a10, alpha01, alpha10, alpha11, b00, b01, b10, beta01, beta10, beta11, c0001, c0010, c0011, c0111, c1011, gamma0100, gamma1000, gamma1100, gamma1101, gamma1110]
+Prep CPU Time (sub_transc=false):	 28.021
+Prep Real Elapsed Time (sub_transc=false):	 25.445
+memory used=3.89GiB, alloc change=20.00KiB, cpu time=28.02s, real time=25.45s, gc time=4.66s
+
+
+GetPolySystem Usage (real, cpu, memory):	25.447,	28.023,	4174976408
+
+States for substitution:	[S01_ = 0, KS00_ = 1, gamma1110 = 1, alpha10 = 1, c0011 = 1, S00_ = 0, KS01_ = 1, c0010 = 1, S11_ = 0, a00 = 1, gamma0100 = 1, KS10_ = 1, b10 = 1, c0111 = 1, S10_ = 0, a01 = 1, FS01_ = 1, c1011 = 1, a10 = 1, FS10_ = 1, gamma1101 = 1, gamma1100 = 1, beta11 = 1, FS11_ = 1, b01 = 1, beta01 = 1, beta10 = 1, Ff_ = 0, c0001 = 1, alpha11 = 1, gamma1000 = 1, K_ = 1, alpha01 = 1, b00 = 1]
 NonID parameters:	[]
-Substitutions:	[alpha10 = 2, Ff_ = 1, beta01 = 2, z_aux = 1, beta10 = 2, c0011 = 2, K_ = 2, KS00_ = 2, alpha11 = 2, S01_ = 1, KS01_ = 2, alpha01 = 2, gamma1100 = 2, a00 = 2, S00_ = 1, gamma0100 = 2, b00 = 2, c0001 = 2, KS10_ = 2, beta11 = 2, S11_ = 1, a10 = 2, gamma1101 = 2, b01 = 2, FS01_ = 2, S10_ = 1, c1011 = 2, b10 = 2, gamma1000 = 2, FS10_ = 2, c0010 = 2, gamma1110 = 2, c0111 = 2, FS11_ = 2, a01 = 2]
-memory used=11714.0MB, alloc=211.8MB, time=87.29
+Substitutions:	[S01_ = 1, KS00_ = 2, gamma1110 = 2, alpha10 = 2, c0011 = 2, S00_ = 1, KS01_ = 2, c0010 = 2, S11_ = 1, a00 = 2, gamma0100 = 2, KS10_ = 2, b10 = 2, c0111 = 2, S10_ = 1, a01 = 2, FS01_ = 2, c1011 = 2, a10 = 2, FS10_ = 2, gamma1101 = 2, gamma1100 = 2, beta11 = 2, FS11_ = 2, b01 = 2, beta01 = 2, beta10 = 2, Ff_ = 1, c0001 = 2, alpha11 = 2, gamma1000 = 2, K_ = 2, z_aux = 1, alpha01 = 2, b00 = 2]
+memory used=3.90GiB, alloc change=20.00KiB, cpu time=28.28s, real time=25.64s, gc time=4.77s
+
+SubsByDepth Usage (real, cpu, memory):	25.641,	28.276,	4189193384
+
+memory used=11816.0MB, alloc=211.8MB, time=95.40
