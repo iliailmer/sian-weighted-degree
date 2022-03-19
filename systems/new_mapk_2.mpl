@@ -26,14 +26,20 @@ sigma := [
 ]: 
 
 
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma):
+out, mem, cpu_time, real_time:= CodeTools[Usage](SubsByDepth(sigma),output=[`output`,`bytesused`,`cputime`,`realtime`]):
+
+  printf("\n\SubsByDepth Usage (real, cpu, memory):\t%a,\t%a,\t%a\n\n", real_time, cpu_time, mem):
 
 
-WriteScripts(original_et_hat, system_vars[2], "original_no_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "weights_no_trb", all_subs, PATH);
 
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat:=SubsByDepth(sigma, trdegsub=false):
+# WriteScripts(original_et_hat, system_vars[2], "original_no_trb", {}, PATH);
+# WriteScripts(system_vars[1], system_vars[2], "weights_no_trb", all_subs, PATH);
 
-WriteScripts(original_et_hat, system_vars[2], "original_with_trb", {}, PATH);
-WriteScripts(system_vars[1], system_vars[2], "weights_with_trb", all_subs, PATH);
+out, mem, cpu_time, real_time:= CodeTools[Usage](SubsByDepth(sigma, trdegsub=false),output=[`output`,`bytesused`,`cputime`,`realtime`]):
+
+  printf("\n\SubsByDepth Usage (real, cpu, memory):\t%a,\t%a,\t%a\n\n", real_time, cpu_time, mem):
+
+
+# WriteScripts(original_et_hat, system_vars[2], "original_with_trb", {}, PATH);
+# WriteScripts(system_vars[1], system_vars[2], "weights_with_trb", all_subs, PATH);
 quit;

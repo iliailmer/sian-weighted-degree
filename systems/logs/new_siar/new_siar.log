@@ -5,30 +5,78 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in SubsByDepth) `out` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `mem` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `cpu_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `real_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:108|
+|imports/create_substitutions.mpl:111|
 Warning, (in WriteScripts) `max_degree` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:112|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 sigma := [diff(E(t),t) = -alphaEIs*E(t)+betaIa*Ia(t)*S(t)*Ninv+Is(t)*S(t)*Ninv*
 betaIs+betaT*S(t)*Ninv*T(t)+S(t)*Ninv*betaH*H(t)-E(t)*alphaEIa, diff(H(t),t) =
 -alphaHT*H(t)+Ia(t)*xi+Is(t)*alphaIsH-alphaHRd*H(t), diff(Is(t),t) = alphaEIs*E
@@ -59,6 +107,9 @@ Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT,
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  1056369600
+Orders of prolongations of the outputs (beta) =  [12, 11, 4, 28, 10]
+Orders of prolongations of the state variables (alpha) =  [10, 10, 11, 12, 9, 10, 4, 11]
 
 =======================================================
 3. Assessing local identifiability
@@ -67,6 +118,9 @@ Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT,
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  114896309900000000000000000000000
+Random sample for the outputs and inputs is generated from  [Ninv = 27623315915349581156412104913992, alphaHT = 111001209670983839305702654145661, alphaTD = 59683855825934435835503572921371, betaH = 39107866631355621990411686860193, betaIa = 12186422777896893128680572178716, betaIs = 105499178592949400765687953989380, betaT = 42697013349002338100219230099599, xi = 49231041092822560511376629938049, alphaEIa = 80175288053464485938412613568148, alphaEIs = 15842049425019805192343714385721, alphaHRd = 56995490641887285689784406299129, alphaIaIs = 100579171575507018882217305276521, alphaIaRu = 61245621961408372078378414467443, alphaIsD = 108514974501912084554857203756239, alphaIsH = 1725126321559637821127720362484, alphaIsRu = 106021568472521553232050420225888, alphaIsT = 6395881237136391078780809334365, alphaTRd = 62735864926323884020779415863892, E_0 = 31551294977879351662653084171072, H_0 = 23221074935213498703539573749187, Is_0 = 38466530836999394594419358260156, D_0 = 23595579771514440525430232077786, S_0 = 95995035102461942086403830437443, Ia_0 = 44278315246291005438240338086878, Rd_0 = 54158886186838248671513340825094, T_0 = 64655751612481618224057948157516]
+The polynomial system widehat{E^t} contains  134 equations in  95  variables
 Locally identifiable paramters:  [Ninv, alphaHT, alphaTD, betaH, betaT, alphaHRd, alphaTRd, H(0), D(0), Rd(0), T(0)]
 Nonidentifiable parameter:  [E(0), Ia(0), Is(0), S(0), betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
 
@@ -75,70 +129,66 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {E(0), Ia(0)}
 Number of possible combinations 1275
-Collection [E_0, E_4] is not transcendence basis
-Collection [E_0, S_4] is not transcendence basis
-Collection [E_0, S_7] is not transcendence basis
+Collection [E_0, S_2] is not transcendence basis
+Collection [E_1, S_3] is not transcendence basis
 Collection [E_2, E_1] is not transcendence basis
-Collection [E_2, E_7] is not transcendence basis
-Collection [E_2, S_3] is not transcendence basis
-Collection [E_3, E_9] is not transcendence basis
-Collection [E_3, S_4] is not transcendence basis
-Collection [E_3, S_7] is not transcendence basis
+Collection [E_2, S_4] is not transcendence basis
+Collection [E_3, E_1] is not transcendence basis
+Collection [E_4, E_0] is not transcendence basis
+Collection [E_4, E_7] is not transcendence basis
 Collection [E_4, E_8] is not transcendence basis
-Collection [E_4, S_6] is not transcendence basis
-Collection [E_5, E_3] is not transcendence basis
-Collection [E_6, E_3] is not transcendence basis
-Collection [E_7, E_1] is not transcendence basis
-Collection [E_7, E_9] is not transcendence basis
-Collection [E_7, S_3] is not transcendence basis
-Collection [E_8, E_4] is not transcendence basis
-Collection [E_8, E_7] is not transcendence basis
-Collection [E_8, S_1] is not transcendence basis
-Collection [E_9, S_1] is not transcendence basis
-Collection [Ia_0, Ia_9] is not transcendence basis
-Collection [Ia_0, betaIa] is not transcendence basis
-Collection [Ia_1, Ia_4] is not transcendence basis
-Collection [Ia_3, Ia_0] is not transcendence basis
-Collection [Ia_6, Ia_1] is not transcendence basis
-Collection [Ia_7, Ia_9] is not transcendence basis
-Collection [Ia_9, xi] is not transcendence basis
-Collection [Is_1, Is_3] is not transcendence basis
-Collection [Is_1, betaIs] is not transcendence basis
-Collection [Is_1, alphaIsRu] is not transcendence basis
-Collection [Is_10, Is_3] is not transcendence basis
-Collection [Is_3, Is_4] is not transcendence basis
-Collection [Is_3, alphaIsD] is not transcendence basis
-Collection [Is_4, alphaIsH] is not transcendence basis
+Collection [E_5, S_6] is not transcendence basis
+Collection [E_6, E_0] is not transcendence basis
+Collection [E_6, E_2] is not transcendence basis
+Collection [E_6, S_3] is not transcendence basis
+Collection [E_7, E_6] is not transcendence basis
+Collection [E_8, E_2] is not transcendence basis
+Collection [E_8, S_5] is not transcendence basis
+Collection [E_9, E_2] is not transcendence basis
+Collection [Ia_0, Ia_3] is not transcendence basis
+Collection [Ia_3, Ia_1] is not transcendence basis
+Collection [Ia_5, Ia_1] is not transcendence basis
+Collection [Ia_5, Ia_7] is not transcendence basis
+Collection [Ia_5, betaIa] is not transcendence basis
+Collection [Ia_8, Ia_7] is not transcendence basis
+Collection [Ia_9, Ia_4] is not transcendence basis
+Collection [Is_0, alphaIsD] is not transcendence basis
+Collection [Is_1, Is_9] is not transcendence basis
+Collection [Is_2, Is_1] is not transcendence basis
+Collection [Is_2, Is_6] is not transcendence basis
+Collection [Is_4, Is_3] is not transcendence basis
 Collection [Is_5, Is_8] is not transcendence basis
-Collection [Is_7, betaIs] is not transcendence basis
-Collection [Is_7, alphaIsH] is not transcendence basis
-Collection [Is_8, Is_2] is not transcendence basis
-Collection [Is_8, Is_7] is not transcendence basis
+Collection [Is_6, Is_5] is not transcendence basis
+Collection [Is_7, Is_8] is not transcendence basis
 Collection [Is_8, alphaIsH] is not transcendence basis
-Collection [Is_8, alphaIsT] is not transcendence basis
-Collection [Is_9, Is_10] is not transcendence basis
-Collection [S_1, E_1] is not transcendence basis
-Collection [S_2, S_8] is not transcendence basis
-Collection [S_3, S_8] is not transcendence basis
+Collection [Is_9, Is_0] is not transcendence basis
+Collection [S_0, E_2] is not transcendence basis
+Collection [S_1, S_5] is not transcendence basis
+Collection [S_2, E_6] is not transcendence basis
+Collection [S_2, S_5] is not transcendence basis
+Collection [S_2, S_7] is not transcendence basis
+Collection [S_3, E_3] is not transcendence basis
+Collection [S_3, E_7] is not transcendence basis
+Collection [S_3, S_6] is not transcendence basis
+Collection [S_4, E_6] is not transcendence basis
+Collection [S_4, S_2] is not transcendence basis
 Collection [S_4, S_3] is not transcendence basis
-Collection [S_5, S_3] is not transcendence basis
+Collection [S_5, E_6] is not transcendence basis
+Collection [S_6, E_9] is not transcendence basis
 Collection [S_6, S_0] is not transcendence basis
-Collection [S_7, S_0] is not transcendence basis
-Collection [S_8, E_0] is not transcendence basis
-Collection [betaIa, Ia_1] is not transcendence basis
-Collection [betaIa, xi] is not transcendence basis
-Collection [xi, Ia_2] is not transcendence basis
-Collection [xi, betaIa] is not transcendence basis
-Collection [alphaIsD, alphaIsRu] is not transcendence basis
-Collection [alphaIsH, Is_5] is not transcendence basis
-Collection [alphaIsH, Is_9] is not transcendence basis
-Collection [alphaIsH, alphaIsD] is not transcendence basis
-Collection [alphaIsRu, Is_1] is not transcendence basis
-Collection [alphaIsRu, betaIs] is not transcendence basis
-Collection [alphaIsT, Is_3] is not transcendence basis
-Picked the best choice [S_4, betaIs] based on heuristic:
+Collection [S_7, E_1] is not transcendence basis
+Collection [S_7, E_2] is not transcendence basis
+Collection [S_7, E_5] is not transcendence basis
+Collection [S_8, E_4] is not transcendence basis
+Collection [alphaIaIs, alphaEIs] is not transcendence basis
+Collection [alphaIsT, Is_1] is not transcendence basis
+Collection [alphaIsT, alphaIsD] is not transcendence basis
+Picked the best choice [S_2, betaIs] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {betaIs}
-Algebraically independent parameters among derivatives: {S_4}
+Algebraically independent parameters among derivatives: {S_2}
+	Adding ODEs: [diff(betaIs(t),t) = 0]
+	Adding output functions: [y_faux1(t) = betaIs(t)]
+	New system: [diff(betaIs(t),t) = 0, diff(E(t),t) = -alphaEIs*E(t)+betaIa*Ia(t)*S(t)*Ninv+Is(t)*S(t)*Ninv*betaIs(t)+betaT*S(t)*Ninv*T(t)+S(t)*Ninv*betaH*H(t)-E(t)*alphaEIa, diff(H(t),t) = -alphaHT*H(t)+Ia(t)*xi+Is(t)*alphaIsH-alphaHRd*H(t), diff(Is(t),t) = alphaEIs*E(t)+Ia(t)*alphaIaIs-Is(t)*alphaIsT-Is(t)*alphaIsD-Is(t)*alphaIsH-Is(t)*alphaIsRu, diff(D(t),t) = Is(t)*alphaIsD+T(t)*alphaTD, diff(S(t),t) = -betaIa*Ia(t)*S(t)*Ninv-Is(t)*S(t)*Ninv*betaIs(t)-betaT*S(t)*Ninv*T(t)-S(t)*Ninv*betaH*H(t), diff(Ia(t),t) = -Ia(t)*alphaIaRu-Ia(t)*xi-Ia(t)*alphaIaIs+E(t)*alphaEIa, diff(Rd(t),t) = alphaTRd*T(t)+alphaHRd*H(t), diff(T(t),t) = alphaHT*H(t)+Is(t)*alphaIsT-alphaTRd*T(t)-T(t)*alphaTD, y4(t) = D(t), y2(t) = T(t), y3(t) = Rd(t), y5(t) = Ninv, y1(t) = H(t), y_faux1(t) = betaIs(t)]
 
 === Input info ===
 State variables:          [betaIs(t), E(t), H(t), Is(t), D(t), S(t), Ia(t), Rd(t), T(t)]
@@ -147,13 +197,32 @@ Input variables:          []
 Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaT, xi, alphaEIa, alphaEIs, alphaHRd, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTRd]
 ===================
 
+	Adding new y-equations: faux_equations
+	Adding new y-equations: [y_faux2_0 = S_2]
+	New system: [y4_0-D_0, -Is_0*alphaIsD-T_0*alphaTD+D_1, y2_0-T_0, -H_0*alphaHT-Is_0*alphaIsT+T_0*alphaTD+T_0*alphaTRd+T_1, y3_0-Rd_0, -H_0*alphaHRd-T_0*alphaTRd+Rd_1, y5_0-Ninv, y1_0-H_0, H_0*alphaHT+H_0*alphaHRd-Ia_0*xi-Is_0*alphaIsH+H_1, y_faux1_0-betaIs_0, betaIs_1, -D_1+y4_1, -Is_1*alphaIsD-T_1*alphaTD+D_2, -E_0*alphaEIs-Ia_0*alphaIaIs+Is_0*alphaIsD+Is_0*alphaIsH+Is_0*alphaIsRu+Is_0*alphaIsT+Is_1, -T_1+y2_1, -alphaHT*H_1-alphaIsT*Is_1+(alphaTD+alphaTRd)*T_1+T_2, -Rd_1+y3_1, -H_1*alphaHRd-T_1*alphaTRd+Rd_2, -H_1+y1_1, (alphaHT+alphaHRd)*H_1+H_2-xi*Ia_1-alphaIsH*Is_1, -E_0*alphaEIa+Ia_0*xi+Ia_0*alphaIaIs+Ia_0*alphaIaRu+Ia_1, -D_2+y4_2, -Is_2*alphaIsD-T_2*alphaTD+D_3, -alphaEIs*E_1-alphaIaIs*Ia_1+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_1+Is_2, -H_0*Ninv*S_0*betaH-Ia_0*Ninv*S_0*betaIa-Is_0*Ninv*S_0*betaIs_0-Ninv*S_0*T_0*betaT+E_0*alphaEIa+E_0*alphaEIs+E_1, -T_2+y2_2, -alphaHT*H_2-alphaIsT*Is_2+(alphaTD+alphaTRd)*T_2+T_3, -Rd_2+y3_2, -H_2*alphaHRd-T_2*alphaTRd+Rd_3, -H_2+y1_2, (alphaHT+alphaHRd)*H_2+H_3-xi*Ia_2-alphaIsH*Is_2, -alphaEIa*E_1+(xi+alphaIaIs+alphaIaRu)*Ia_1+Ia_2, -D_3+y4_3, -Is_3*alphaIsD-T_3*alphaTD+D_4, -alphaEIs*E_2-alphaIaIs*Ia_2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_2+Is_3, ((-H_1*betaH-Ia_1*betaIa-Is_0*betaIs_1-Is_1*betaIs_0-T_1*betaT)*S_0-S_1*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+(alphaEIa+alphaEIs)*E_1+E_2, H_0*Ninv*S_0*betaH+Ia_0*Ninv*S_0*betaIa+Is_0*Ninv*S_0*betaIs_0+Ninv*S_0*T_0*betaT+S_1, -T_3+y2_3, -alphaHT*H_3-alphaIsT*Is_3+(alphaTD+alphaTRd)*T_3+T_4, -H_3+y1_3, (alphaHT+alphaHRd)*H_3+H_4-xi*Ia_3-alphaIsH*Is_3, -alphaEIa*E_2+(xi+alphaIaIs+alphaIaRu)*Ia_2+Ia_3, -D_4+y4_4, -Is_4*alphaIsD-T_4*alphaTD+D_5, -alphaEIs*E_3-alphaIaIs*Ia_3+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_3+Is_4, ((-H_2*betaH-Ia_2*betaIa-Is_0*betaIs_2-2*Is_1*betaIs_1-Is_2*betaIs_0-T_2*betaT)*S_0+(-2*H_1*betaH-2*Ia_1*betaIa-2*Is_0*betaIs_1-2*Is_1*betaIs_0-2*T_1*betaT)*S_1-S_2*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+(alphaEIa+alphaEIs)*E_2+E_3, ((H_1*betaH+Ia_1*betaIa+Is_0*betaIs_1+Is_1*betaIs_0+T_1*betaT)*S_0+S_1*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+S_2, betaIs_2, -H_4+y1_4, (alphaHT+alphaHRd)*H_4+H_5-xi*Ia_4-alphaIsH*Is_4, -alphaEIa*E_3+(xi+alphaIaIs+alphaIaRu)*Ia_3+Ia_4, -D_5+y4_5, -Is_5*alphaIsD-T_5*alphaTD+D_6, -alphaEIs*E_4-alphaIaIs*Ia_4+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_4+Is_5, -alphaHT*H_4-alphaIsT*Is_4+(alphaTD+alphaTRd)*T_4+T_5, ((-H_3*betaH-Ia_3*betaIa-Is_0*betaIs_3-3*Is_1*betaIs_2-3*Is_2*betaIs_1-Is_3*betaIs_0-T_3*betaT)*S_0+(-3*H_2*betaH-3*Ia_2*betaIa-3*Is_0*betaIs_2-6*Is_1*betaIs_1-3*Is_2*betaIs_0-3*T_2*betaT)*S_1+(-3*H_1*betaH-3*Ia_1*betaIa-3*Is_0*betaIs_1-3*Is_1*betaIs_0-3*T_1*betaT)*S_2-S_3*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+(alphaEIa+alphaEIs)*E_3+E_4, ((H_2*betaH+Ia_2*betaIa+Is_0*betaIs_2+2*Is_1*betaIs_1+Is_2*betaIs_0+T_2*betaT)*S_0+(2*H_1*betaH+2*Ia_1*betaIa+2*Is_0*betaIs_1+2*Is_1*betaIs_0+2*T_1*betaT)*S_1+S_2*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+S_3, betaIs_3, -D_6+y4_6, -Is_6*alphaIsD-T_6*alphaTD+D_7, -alphaEIs*E_5-alphaIaIs*Ia_5+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_5+Is_6, -alphaHT*H_5-alphaIsT*Is_5+(alphaTD+alphaTRd)*T_5+T_6, ((-H_4*betaH-Ia_4*betaIa-Is_0*betaIs_4-4*Is_1*betaIs_3-6*Is_2*betaIs_2-4*Is_3*betaIs_1-Is_4*betaIs_0-T_4*betaT)*S_0+(-4*H_3*betaH-4*Ia_3*betaIa-4*Is_0*betaIs_3-12*Is_1*betaIs_2-12*Is_2*betaIs_1-4*Is_3*betaIs_0-4*T_3*betaT)*S_1+(-6*H_2*betaH-6*Ia_2*betaIa-6*Is_0*betaIs_2-12*Is_1*betaIs_1-6*Is_2*betaIs_0-6*T_2*betaT)*S_2+(-Is_0*S_4-4*Is_1*S_3)*betaIs_0+(-Ia_0*S_4-4*Ia_1*S_3)*betaIa+(-H_0*S_4-4*H_1*S_3)*betaH+(-4*S_3*T_1-S_4*T_0)*betaT-4*Is_0*S_3*betaIs_1)*Ninv+(alphaEIa+alphaEIs)*E_4+E_5, -alphaEIa*E_4+(xi+alphaIaIs+alphaIaRu)*Ia_4+Ia_5, ((H_3*betaH+Ia_3*betaIa+Is_0*betaIs_3+3*Is_1*betaIs_2+3*Is_2*betaIs_1+Is_3*betaIs_0+T_3*betaT)*S_0+(3*H_2*betaH+3*Ia_2*betaIa+3*Is_0*betaIs_2+6*Is_1*betaIs_1+3*Is_2*betaIs_0+3*T_2*betaT)*S_1+(3*H_1*betaH+3*Ia_1*betaIa+3*Is_0*betaIs_1+3*Is_1*betaIs_0+3*T_1*betaT)*S_2+S_3*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+S_4, betaIs_4, -D_7+y4_7, -Is_7*alphaIsD-T_7*alphaTD+D_8, -alphaEIs*E_6-alphaIaIs*Ia_6+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_6+Is_7, -alphaHT*H_6-alphaIsT*Is_6+(alphaTD+alphaTRd)*T_6+T_7, ((-H_5*betaH-Ia_5*betaIa-Is_0*betaIs_5-5*Is_1*betaIs_4-10*Is_2*betaIs_3-10*Is_3*betaIs_2-5*Is_4*betaIs_1-Is_5*betaIs_0-T_5*betaT)*S_0+(-5*H_4*betaH-5*Ia_4*betaIa-5*Is_0*betaIs_4-20*Is_1*betaIs_3-30*Is_2*betaIs_2-20*Is_3*betaIs_1-5*Is_4*betaIs_0-5*T_4*betaT)*S_1+(-10*H_3*betaH-10*Ia_3*betaIa-10*Is_0*betaIs_3-30*Is_1*betaIs_2-30*Is_2*betaIs_1-10*Is_3*betaIs_0-10*T_3*betaT)*S_2+(-Is_0*S_5-5*Is_1*S_4-10*Is_2*S_3)*betaIs_0+(-Ia_0*S_5-5*Ia_1*S_4-10*Ia_2*S_3)*betaIa+(-H_0*S_5-5*H_1*S_4-10*H_2*S_3)*betaH+(-10*S_3*T_2-5*S_4*T_1-S_5*T_0)*betaT+(-10*S_3*betaIs_2-5*S_4*betaIs_1)*Is_0-20*Is_1*S_3*betaIs_1)*Ninv+(alphaEIa+alphaEIs)*E_5+E_6, (alphaHT+alphaHRd)*H_5+H_6-xi*Ia_5-alphaIsH*Is_5, -alphaEIa*E_5+(xi+alphaIaIs+alphaIaRu)*Ia_5+Ia_6, ((H_4*betaH+Ia_4*betaIa+Is_0*betaIs_4+4*Is_1*betaIs_3+6*Is_2*betaIs_2+4*Is_3*betaIs_1+Is_4*betaIs_0+T_4*betaT)*S_0+(4*H_3*betaH+4*Ia_3*betaIa+4*Is_0*betaIs_3+12*Is_1*betaIs_2+12*Is_2*betaIs_1+4*Is_3*betaIs_0+4*T_3*betaT)*S_1+(6*H_2*betaH+6*Ia_2*betaIa+6*Is_0*betaIs_2+12*Is_1*betaIs_1+6*Is_2*betaIs_0+6*T_2*betaT)*S_2+(Is_0*S_4+4*Is_1*S_3)*betaIs_0+(Ia_0*S_4+4*Ia_1*S_3)*betaIa+(H_0*S_4+4*H_1*S_3)*betaH+(4*S_3*T_1+S_4*T_0)*betaT+4*Is_0*S_3*betaIs_1)*Ninv+S_5, betaIs_5, -D_8+y4_8, -Is_8*alphaIsD-T_8*alphaTD+D_9, -alphaEIs*E_7-alphaIaIs*Ia_7+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_7+Is_8, -alphaHT*H_7-alphaIsT*Is_7+(alphaTD+alphaTRd)*T_7+T_8, ((-H_6*betaH-Ia_6*betaIa-Is_0*betaIs_6-6*Is_1*betaIs_5-15*Is_2*betaIs_4-20*Is_3*betaIs_3-15*Is_4*betaIs_2-6*Is_5*betaIs_1-Is_6*betaIs_0-T_6*betaT)*S_0+(-6*H_5*betaH-6*Ia_5*betaIa-6*Is_0*betaIs_5-30*Is_1*betaIs_4-60*Is_2*betaIs_3-60*Is_3*betaIs_2-30*Is_4*betaIs_1-6*Is_5*betaIs_0-6*T_5*betaT)*S_1+(-15*H_4*betaH-15*Ia_4*betaIa-15*Is_0*betaIs_4-60*Is_1*betaIs_3-90*Is_2*betaIs_2-60*Is_3*betaIs_1-15*Is_4*betaIs_0-15*T_4*betaT)*S_2+(-Is_0*S_6-6*Is_1*S_5-15*Is_2*S_4-20*Is_3*S_3)*betaIs_0+(-Ia_0*S_6-6*Ia_1*S_5-15*Ia_2*S_4-20*Ia_3*S_3)*betaIa+(-H_0*S_6-6*H_1*S_5-15*H_2*S_4-20*H_3*S_3)*betaH+(-20*S_3*T_3-15*S_4*T_2-6*S_5*T_1-S_6*T_0)*betaT+(-20*S_3*betaIs_3-15*S_4*betaIs_2-6*S_5*betaIs_1)*Is_0+(-60*Is_1*betaIs_2-60*Is_2*betaIs_1)*S_3-30*Is_1*S_4*betaIs_1)*Ninv+(alphaEIa+alphaEIs)*E_6+E_7, (alphaHT+alphaHRd)*H_6+H_7-xi*Ia_6-alphaIsH*Is_6, -alphaEIa*E_6+(xi+alphaIaIs+alphaIaRu)*Ia_6+Ia_7, ((H_5*betaH+Ia_5*betaIa+Is_0*betaIs_5+5*Is_1*betaIs_4+10*Is_2*betaIs_3+10*Is_3*betaIs_2+5*Is_4*betaIs_1+Is_5*betaIs_0+T_5*betaT)*S_0+(5*H_4*betaH+5*Ia_4*betaIa+5*Is_0*betaIs_4+20*Is_1*betaIs_3+30*Is_2*betaIs_2+20*Is_3*betaIs_1+5*Is_4*betaIs_0+5*T_4*betaT)*S_1+(10*H_3*betaH+10*Ia_3*betaIa+10*Is_0*betaIs_3+30*Is_1*betaIs_2+30*Is_2*betaIs_1+10*Is_3*betaIs_0+10*T_3*betaT)*S_2+(Is_0*S_5+5*Is_1*S_4+10*Is_2*S_3)*betaIs_0+(Ia_0*S_5+5*Ia_1*S_4+10*Ia_2*S_3)*betaIa+(H_0*S_5+5*H_1*S_4+10*H_2*S_3)*betaH+(10*S_3*T_2+5*S_4*T_1+S_5*T_0)*betaT+(10*S_3*betaIs_2+5*S_4*betaIs_1)*Is_0+20*Is_1*S_3*betaIs_1)*Ninv+S_6, betaIs_6, -D_9+y4_9, -Is_9*alphaIsD-T_9*alphaTD+D_10, -alphaEIs*E_8-alphaIaIs*Ia_8+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_8+Is_9, -alphaHT*H_8-alphaIsT*Is_8+(alphaTD+alphaTRd)*T_8+T_9, ((-H_7*betaH-Ia_7*betaIa-Is_0*betaIs_7-7*Is_1*betaIs_6-21*Is_2*betaIs_5-35*Is_3*betaIs_4-35*Is_4*betaIs_3-21*Is_5*betaIs_2-7*Is_6*betaIs_1-Is_7*betaIs_0-T_7*betaT)*S_0+(-7*H_6*betaH-7*Ia_6*betaIa-7*Is_0*betaIs_6-42*Is_1*betaIs_5-105*Is_2*betaIs_4-140*Is_3*betaIs_3-105*Is_4*betaIs_2-42*Is_5*betaIs_1-7*Is_6*betaIs_0-7*T_6*betaT)*S_1+(-21*H_5*betaH-21*Ia_5*betaIa-21*Is_0*betaIs_5-105*Is_1*betaIs_4-210*Is_2*betaIs_3-210*Is_3*betaIs_2-105*Is_4*betaIs_1-21*Is_5*betaIs_0-21*T_5*betaT)*S_2+(-Is_0*S_7-7*Is_1*S_6-21*Is_2*S_5-35*Is_3*S_4-35*Is_4*S_3)*betaIs_0+(-Ia_0*S_7-7*Ia_1*S_6-21*Ia_2*S_5-35*Ia_3*S_4-35*Ia_4*S_3)*betaIa+(-H_0*S_7-7*H_1*S_6-21*H_2*S_5-35*H_3*S_4-35*H_4*S_3)*betaH+(-35*S_3*T_4-35*S_4*T_3-21*S_5*T_2-7*S_6*T_1-S_7*T_0)*betaT+(-35*S_3*betaIs_4-35*S_4*betaIs_3-21*S_5*betaIs_2-7*S_6*betaIs_1)*Is_0+(-140*Is_1*betaIs_3-210*Is_2*betaIs_2-140*Is_3*betaIs_1)*S_3+(-42*Is_1*S_5-105*Is_2*S_4)*betaIs_1-105*Is_1*S_4*betaIs_2)*Ninv+(alphaEIa+alphaEIs)*E_7+E_8, (alphaHT+alphaHRd)*H_7+H_8-xi*Ia_7-alphaIsH*Is_7, -alphaEIa*E_7+(xi+alphaIaIs+alphaIaRu)*Ia_7+Ia_8, ((H_6*betaH+Ia_6*betaIa+Is_0*betaIs_6+6*Is_1*betaIs_5+15*Is_2*betaIs_4+20*Is_3*betaIs_3+15*Is_4*betaIs_2+6*Is_5*betaIs_1+Is_6*betaIs_0+T_6*betaT)*S_0+(6*H_5*betaH+6*Ia_5*betaIa+6*Is_0*betaIs_5+30*Is_1*betaIs_4+60*Is_2*betaIs_3+60*Is_3*betaIs_2+30*Is_4*betaIs_1+6*Is_5*betaIs_0+6*T_5*betaT)*S_1+(15*H_4*betaH+15*Ia_4*betaIa+15*Is_0*betaIs_4+60*Is_1*betaIs_3+90*Is_2*betaIs_2+60*Is_3*betaIs_1+15*Is_4*betaIs_0+15*T_4*betaT)*S_2+(Is_0*S_6+6*Is_1*S_5+15*Is_2*S_4+20*Is_3*S_3)*betaIs_0+(Ia_0*S_6+6*Ia_1*S_5+15*Ia_2*S_4+20*Ia_3*S_3)*betaIa+(H_0*S_6+6*H_1*S_5+15*H_2*S_4+20*H_3*S_3)*betaH+(20*S_3*T_3+15*S_4*T_2+6*S_5*T_1+S_6*T_0)*betaT+(20*S_3*betaIs_3+15*S_4*betaIs_2+6*S_5*betaIs_1)*Is_0+(60*Is_1*betaIs_2+60*Is_2*betaIs_1)*S_3+30*Is_1*S_4*betaIs_1)*Ninv+S_7, betaIs_7, -D_10+y4_10, -Is_10*alphaIsD-T_10*alphaTD+D_11, -alphaEIs*E_9-alphaIaIs*Ia_9+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_9+Is_10, -alphaHT*H_9-alphaIsT*Is_9+(alphaTD+alphaTRd)*T_9+T_10, ((-H_8*betaH-Ia_8*betaIa-Is_0*betaIs_8-8*Is_1*betaIs_7-28*Is_2*betaIs_6-56*Is_3*betaIs_5-70*Is_4*betaIs_4-56*Is_5*betaIs_3-28*Is_6*betaIs_2-8*Is_7*betaIs_1-Is_8*betaIs_0-T_8*betaT)*S_0+(-8*H_7*betaH-8*Ia_7*betaIa-8*Is_0*betaIs_7-56*Is_1*betaIs_6-168*Is_2*betaIs_5-280*Is_3*betaIs_4-280*Is_4*betaIs_3-168*Is_5*betaIs_2-56*Is_6*betaIs_1-8*Is_7*betaIs_0-8*T_7*betaT)*S_1+(-28*H_6*betaH-28*Ia_6*betaIa-28*Is_0*betaIs_6-168*Is_1*betaIs_5-420*Is_2*betaIs_4-560*Is_3*betaIs_3-420*Is_4*betaIs_2-168*Is_5*betaIs_1-28*Is_6*betaIs_0-28*T_6*betaT)*S_2+(-Is_0*S_8-8*Is_1*S_7-28*Is_2*S_6-56*Is_3*S_5-70*Is_4*S_4-56*Is_5*S_3)*betaIs_0+(-Ia_0*S_8-8*Ia_1*S_7-28*Ia_2*S_6-56*Ia_3*S_5-70*Ia_4*S_4-56*Ia_5*S_3)*betaIa+(-H_0*S_8-8*H_1*S_7-28*H_2*S_6-56*H_3*S_5-70*H_4*S_4-56*H_5*S_3)*betaH+(-56*S_3*T_5-70*S_4*T_4-56*S_5*T_3-28*S_6*T_2-8*S_7*T_1-S_8*T_0)*betaT+(-56*S_3*betaIs_5-70*S_4*betaIs_4-56*S_5*betaIs_3-28*S_6*betaIs_2-8*S_7*betaIs_1)*Is_0+(-280*Is_1*betaIs_4-560*Is_2*betaIs_3-560*Is_3*betaIs_2-280*Is_4*betaIs_1)*S_3+(-56*Is_1*S_6-168*Is_2*S_5-280*Is_3*S_4)*betaIs_1+(-280*S_4*betaIs_3-168*S_5*betaIs_2)*Is_1-420*Is_2*S_4*betaIs_2)*Ninv+(alphaEIa+alphaEIs)*E_8+E_9, (alphaHT+alphaHRd)*H_8+H_9-xi*Ia_8-alphaIsH*Is_8, -alphaEIa*E_8+(xi+alphaIaIs+alphaIaRu)*Ia_8+Ia_9, ((H_7*betaH+Ia_7*betaIa+Is_0*betaIs_7+7*Is_1*betaIs_6+21*Is_2*betaIs_5+35*Is_3*betaIs_4+35*Is_4*betaIs_3+21*Is_5*betaIs_2+7*Is_6*betaIs_1+Is_7*betaIs_0+T_7*betaT)*S_0+(7*H_6*betaH+7*Ia_6*betaIa+7*Is_0*betaIs_6+42*Is_1*betaIs_5+105*Is_2*betaIs_4+140*Is_3*betaIs_3+105*Is_4*betaIs_2+42*Is_5*betaIs_1+7*Is_6*betaIs_0+7*T_6*betaT)*S_1+(21*H_5*betaH+21*Ia_5*betaIa+21*Is_0*betaIs_5+105*Is_1*betaIs_4+210*Is_2*betaIs_3+210*Is_3*betaIs_2+105*Is_4*betaIs_1+21*Is_5*betaIs_0+21*T_5*betaT)*S_2+(Is_0*S_7+7*Is_1*S_6+21*Is_2*S_5+35*Is_3*S_4+35*Is_4*S_3)*betaIs_0+(Ia_0*S_7+7*Ia_1*S_6+21*Ia_2*S_5+35*Ia_3*S_4+35*Ia_4*S_3)*betaIa+(H_0*S_7+7*H_1*S_6+21*H_2*S_5+35*H_3*S_4+35*H_4*S_3)*betaH+(35*S_3*T_4+35*S_4*T_3+21*S_5*T_2+7*S_6*T_1+S_7*T_0)*betaT+(35*S_3*betaIs_4+35*S_4*betaIs_3+21*S_5*betaIs_2+7*S_6*betaIs_1)*Is_0+(140*Is_1*betaIs_3+210*Is_2*betaIs_2+140*Is_3*betaIs_1)*S_3+(42*Is_1*S_5+105*Is_2*S_4)*betaIs_1+105*Is_1*S_4*betaIs_2)*Ninv+S_8, betaIs_8, -D_11+y4_11, -T_4+y2_4, -T_5+y2_5, -T_6+y2_6, -T_7+y2_7, -T_8+y2_8, -T_9+y2_9, -T_10+y2_10, -Rd_3+y3_3, y5_1, y5_2, y5_3, y5_4, y5_5, y5_6, y5_7, y5_8, y5_9, y5_10, y5_11, y5_12, y5_13, y5_14, y5_15, y5_16, y5_17, y5_18, y5_19, y5_20, y5_21, y5_22, y5_23, y5_24, y5_25, y5_26, y5_27, -H_5+y1_5, -H_6+y1_6, -H_7+y1_7, -H_8+y1_8, -H_9+y1_9, -betaIs_1+y_faux1_1, -betaIs_2+y_faux1_2, -betaIs_3+y_faux1_3, -betaIs_4+y_faux1_4, -betaIs_5+y_faux1_5, -betaIs_6+y_faux1_6, -betaIs_7+y_faux1_7, -betaIs_8+y_faux1_8, y_faux2_0-S_2]
+	New system: [y4_0 = D_0, y4_1 = D_1, y4_2 = D_2, y4_3 = D_3, y4_4 = D_4, y4_5 = D_5, y4_6 = D_6, y4_7 = D_7, y4_8 = D_8, y4_9 = D_9, y4_10 = D_10, y4_11 = D_11, y4_12 = D_12, y4_13 = D_13, y4_14 = D_14, y4_15 = D_15, y4_16 = D_16, y4_17 = D_17, y4_18 = D_18, y4_19 = D_19, y4_20 = D_20, y4_21 = D_21, y4_22 = D_22, y4_23 = D_23, y4_24 = D_24, y4_25 = D_25, y4_26 = D_26, y4_27 = D_27, y2_0 = T_0, y2_1 = T_1, y2_2 = T_2, y2_3 = T_3, y2_4 = T_4, y2_5 = T_5, y2_6 = T_6, y2_7 = T_7, y2_8 = T_8, y2_9 = T_9, y2_10 = T_10, y2_11 = T_11, y2_12 = T_12, y2_13 = T_13, y2_14 = T_14, y2_15 = T_15, y2_16 = T_16, y2_17 = T_17, y2_18 = T_18, y2_19 = T_19, y2_20 = T_20, y2_21 = T_21, y2_22 = T_22, y2_23 = T_23, y2_24 = T_24, y2_25 = T_25, y2_26 = T_26, y2_27 = T_27, y3_0 = Rd_0, y3_1 = Rd_1, y3_2 = Rd_2, y3_3 = Rd_3, y3_4 = Rd_4, y3_5 = Rd_5, y3_6 = Rd_6, y3_7 = Rd_7, y3_8 = Rd_8, y3_9 = Rd_9, y3_10 = Rd_10, y3_11 = Rd_11, y3_12 = Rd_12, y3_13 = Rd_13, y3_14 = Rd_14, y3_15 = Rd_15, y3_16 = Rd_16, y3_17 = Rd_17, y3_18 = Rd_18, y3_19 = Rd_19, y3_20 = Rd_20, y3_21 = Rd_21, y3_22 = Rd_22, y3_23 = Rd_23, y3_24 = Rd_24, y3_25 = Rd_25, y3_26 = Rd_26, y3_27 = Rd_27, y5_0 = Ninv, y5_1 = 0, y5_2 = 0, y5_3 = 0, y5_4 = 0, y5_5 = 0, y5_6 = 0, y5_7 = 0, y5_8 = 0, y5_9 = 0, y5_10 = 0, y5_11 = 0, y5_12 = 0, y5_13 = 0, y5_14 = 0, y5_15 = 0, y5_16 = 0, y5_17 = 0, y5_18 = 0, y5_19 = 0, y5_20 = 0, y5_21 = 0, y5_22 = 0, y5_23 = 0, y5_24 = 0, y5_25 = 0, y5_26 = 0, y5_27 = 0, y1_0 = H_0, y1_1 = H_1, y1_2 = H_2, y1_3 = H_3, y1_4 = H_4, y1_5 = H_5, y1_6 = H_6, y1_7 = H_7, y1_8 = H_8, y1_9 = H_9, y1_10 = H_10, y1_11 = H_11, y1_12 = H_12, y1_13 = H_13, y1_14 = H_14, y1_15 = H_15, y1_16 = H_16, y1_17 = H_17, y1_18 = H_18, y1_19 = H_19, y1_20 = H_20, y1_21 = H_21, y1_22 = H_22, y1_23 = H_23, y1_24 = H_24, y1_25 = H_25, y1_26 = H_26, y1_27 = H_27, y_faux1_0 = betaIs_0, y_faux1_1 = betaIs_1, y_faux1_2 = betaIs_2, y_faux1_3 = betaIs_3, y_faux1_4 = betaIs_4, y_faux1_5 = betaIs_5, y_faux1_6 = betaIs_6, y_faux1_7 = betaIs_7, y_faux1_8 = betaIs_8, y_faux1_9 = betaIs_9, y_faux1_10 = betaIs_10, y_faux1_11 = betaIs_11, y_faux1_12 = betaIs_12, y_faux1_13 = betaIs_13, y_faux1_14 = betaIs_14, y_faux1_15 = betaIs_15, y_faux1_16 = betaIs_16, y_faux1_17 = betaIs_17, y_faux1_18 = betaIs_18, y_faux1_19 = betaIs_19, y_faux1_20 = betaIs_20, y_faux1_21 = betaIs_21, y_faux1_22 = betaIs_22, y_faux1_23 = betaIs_23, y_faux1_24 = betaIs_24, y_faux1_25 = betaIs_25, y_faux1_26 = betaIs_26, y_faux1_27 = betaIs_27, y_faux2_0 = S_2]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[S_ = 3, alphaTRd = 1, alphaIaIs = 2, alphaIaRu = 2, Ia_ = 1, betaIa = 3, betaT = 3, alphaTD = 1, alphaEIs = 2, alphaHT = 1, xi = 1, alphaIsD = 1, alphaHRd = 1, Ninv = 0, E_ = 2, betaH = 3, T_ = 0, betaIs_ = 0, Rd_ = 0, alphaIsRu = 2, H_ = 0, D_ = 0, alphaIsH = 1, alphaEIa = 2, alphaIsT = 1, Is_ = 1]
+Bound D_2 for assessing global identifiability:  153195079800000000000000000000000
+Random sample for the outputs and inputs is generated from  [Ninv = 38465842573863602979096455130593, alphaHT = 25367979258201458491724053375215, alphaTD = 152272043768527280528989069409435, betaH = 151983521230886857372398372448099, betaIa = 147674135217295247243224762432105, betaT = 104183908031888422904376390350276, xi = 43169665301055377822908890482751, alphaEIa = 108911007626508098202970237427017, alphaEIs = 128162883402867450617442251370941, alphaHRd = 64180187476337133849035985825447, alphaIaIs = 138805492022899412773887647594470, alphaIaRu = 130429185234631588168507728766473, alphaIsD = 122899615502073027861542819460503, alphaIsH = 70695281315243716166561328289340, alphaIsRu = 47821674359087667547669953335800, alphaIsT = 24202281972593557885938347615941, alphaTRd = 10030371399753145476033882828726, betaIs_0 = 65309804679297543723274291529679, E_0 = 45973550402248687767761661181310, H_0 = 39838036777678383326042418036668, Is_0 = 36357363662777150399763136554604, D_0 = 137131730903790051030986473057663, S_0 = 54612535978197794455619870126409, Ia_0 = 5945175335470481178990647386221, Rd_0 = 39474698831608738563243449270580, T_0 = 126710532062437614712413847897902]
+The polynomial system widehat{E^t} contains  152 equations in  103  variables
+Variable ordering to be used for Groebner basis computation [D_11, Is_10, T_10, D_10, Is_9, Ia_9, T_9, H_9, E_9, D_9, betaIs_8, Is_8, Ia_8, T_8, S_8, H_8, E_8, D_8, betaIs_7, Is_7, Ia_7, T_7, S_7, H_7, E_7, D_7, betaIs_6, Is_6, Ia_6, T_6, S_6, H_6, E_6, D_6, betaIs_5, Is_5, Ia_5, T_5, S_5, H_5, E_5, D_5, betaIs_4, Is_4, Ia_4, T_4, S_4, H_4, E_4, D_4, betaIs_3, Rd_3, Is_3, Ia_3, T_3, S_3, H_3, E_3, D_3, betaIs_2, Rd_2, Is_2, Ia_2, T_2, S_2, H_2, E_2, D_2, betaIs_1, Rd_1, Is_1, Ia_1, T_1, S_1, H_1, E_1, D_1, betaIs_0, Rd_0, Is_0, Ia_0, T_0, S_0, H_0, E_0, D_0, z_aux, w_aux, Ninv, alphaEIa, alphaEIs, alphaHRd, alphaHT, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTD, alphaTRd, betaH, betaIa, betaT, xi]
+Prep CPU Time (sub_transc=true):	 265.431
+Prep Real Elapsed Time (sub_transc=true):	 246.227
+memory used=25.20GiB, alloc change=136.46MiB, cpu time=4.42m, real time=4.10m, gc time=33.74s
+
+
+GetPolySystem Usage (real, cpu, memory):	246.248,	265.452,	27054568272
+
+States for substitution:	[alphaHRd = 1, alphaHT = 1, alphaEIa = 2, alphaIaRu = 2, Is_ = 1, T_ = 0, alphaIsRu = 2, alphaTRd = 1, Rd_ = 0, E_ = 2, H_ = 0, xi = 1, alphaTD = 1, Ia_ = 1, D_ = 0, Ninv = 0, betaIs_ = 0, alphaIsH = 1, S_ = 3, alphaIaIs = 2, alphaIsT = 1, betaT = 3, alphaIsD = 1, betaIa = 3, betaH = 3, alphaEIs = 2]
 NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-Substitutions:	[S_ = 4, z_aux = 3, Ia_ = 2, betaT = 4, E_ = 3, betaH = 4, T_ = 1, betaIs_ = 1, H_ = 1, Is_ = 2]
+Substitutions:	[Is_ = 2, T_ = 1, E_ = 3, H_ = 1, Ia_ = 2, z_aux = 3, betaIs_ = 1, S_ = 4, betaT = 4, betaH = 4]
+memory used=25.22GiB, alloc change=136.46MiB, cpu time=4.43m, real time=4.11m, gc time=33.74s
+
+SubsByDepth Usage (real, cpu, memory):	246.484,	265.687,	27079436744
+
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -174,6 +243,9 @@ Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT,
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  1056369600
+Orders of prolongations of the outputs (beta) =  [12, 11, 4, 28, 10]
+Orders of prolongations of the state variables (alpha) =  [10, 10, 11, 12, 9, 10, 4, 11]
 
 =======================================================
 3. Assessing local identifiability
@@ -182,13 +254,31 @@ Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT,
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  114896309900000000000000000000000
+Random sample for the outputs and inputs is generated from  [Ninv = 100918643252896090607661742530396, alphaHT = 10819320889258747076570363523947, alphaTD = 44639897896548874275799299989614, betaH = 38520492058927411589028511875736, betaIa = 31785820895567414752766491965400, betaIs = 30113388760332260191540579306923, betaT = 79316139331288882501713383061078, xi = 92418761456024511936005949300439, alphaEIa = 23173837932024041237344938837948, alphaEIs = 114823053614063663436018277713978, alphaHRd = 18673198230605952686238530354951, alphaIaIs = 88161223908492867758225907354109, alphaIaRu = 21540828436078698574832455216479, alphaIsD = 70340520636122010136920276210625, alphaIsH = 50824614620436969243141727464905, alphaIsRu = 46745482676553562707050243247121, alphaIsT = 52242007395381990358148573299954, alphaTRd = 17797804590188558520418954143097, E_0 = 103816338814159657926579427242821, H_0 = 101566549651694051601577657521007, Is_0 = 9310734554894934612596747080294, D_0 = 34890520623402461798647799255960, S_0 = 42471431420629737709550181716683, Ia_0 = 18167656163723597170546057285847, Rd_0 = 78072490346802882280979780622397, T_0 = 51890786495390637064597690666496]
+The polynomial system widehat{E^t} contains  134 equations in  95  variables
 Locally identifiable paramters:  [Ninv, alphaHT, alphaTD, betaH, betaT, alphaHRd, alphaTRd, H(0), D(0), Rd(0), T(0)]
 Nonidentifiable parameter:  [E(0), Ia(0), Is(0), S(0), betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[S_ = 3, alphaTRd = 1, alphaIaIs = 2, alphaIaRu = 2, Ia_ = 1, betaIa = 3, betaT = 3, alphaTD = 1, betaIs = 3, alphaEIs = 2, alphaHT = 1, xi = 1, alphaIsD = 1, alphaHRd = 1, Ninv = 0, E_ = 2, betaH = 3, T_ = 0, Rd_ = 0, alphaIsRu = 2, H_ = 0, D_ = 0, alphaIsH = 1, alphaEIa = 2, alphaIsT = 1, Is_ = 1]
+Bound D_2 for assessing global identifiability:  153195079800000000000000000000000
+Random sample for the outputs and inputs is generated from  [Ninv = 871283682027851407260133092971, alphaHT = 120519432614703475278535363943391, alphaTD = 127721872977604303472181047574837, betaH = 15191131974398746359216030198553, betaIa = 39143406368425204285023599381244, betaIs = 66991665396965877333617077062361, betaT = 137141823136731911584319140694517, xi = 106114059036857555126878354999372, alphaEIa = 42964677101064322295751505828510, alphaEIs = 19666664005694160546783597643174, alphaHRd = 131616829837251518571887037600577, alphaIaIs = 104457944444947787104063767540182, alphaIaRu = 105940028361722816106717969888569, alphaIsD = 139565805613073570521727015653061, alphaIsH = 19175646129552917204921658490304, alphaIsRu = 19770889478069522585671501713299, alphaIsT = 72812939236280395121812534944333, alphaTRd = 56315459266365140017961083400269, E_0 = 1310519284164549215406049935127, H_0 = 10047284739039923172578533364951, Is_0 = 93002544771366489798213185806726, D_0 = 61148675305585823026042349660797, S_0 = 4361161158400551558823357708232, Ia_0 = 17305493612849290701771169948208, Rd_0 = 68546928670802551346558429426831, T_0 = 69183310522972588717834625485928]
+The polynomial system widehat{E^t} contains  134 equations in  95  variables
+Variable ordering to be used for Groebner basis computation [D_11, Is_10, T_10, D_10, Is_9, Ia_9, T_9, H_9, E_9, D_9, Is_8, Ia_8, T_8, S_8, H_8, E_8, D_8, Is_7, Ia_7, T_7, S_7, H_7, E_7, D_7, Is_6, Ia_6, T_6, S_6, H_6, E_6, D_6, Is_5, Ia_5, T_5, S_5, H_5, E_5, D_5, Is_4, Ia_4, T_4, S_4, H_4, E_4, D_4, Rd_3, Is_3, Ia_3, T_3, S_3, H_3, E_3, D_3, Rd_2, Is_2, Ia_2, T_2, S_2, H_2, E_2, D_2, Rd_1, Is_1, Ia_1, T_1, S_1, H_1, E_1, D_1, Rd_0, Is_0, Ia_0, T_0, S_0, H_0, E_0, D_0, z_aux, w_aux, Ninv, alphaEIa, alphaEIs, alphaHRd, alphaHT, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTD, alphaTRd, betaH, betaIa, betaIs, betaT, xi]
+Prep CPU Time (sub_transc=false):	 13.732
+Prep Real Elapsed Time (sub_transc=false):	 11.923
+memory used=1.59GiB, alloc change=-4.00MiB, cpu time=13.73s, real time=11.92s, gc time=3.23s
+
+
+GetPolySystem Usage (real, cpu, memory):	11.924,	13.733,	1703501328
+
+States for substitution:	[alphaHRd = 1, alphaHT = 1, alphaEIa = 2, alphaIaRu = 2, Is_ = 1, T_ = 0, alphaIsRu = 2, alphaTRd = 1, Rd_ = 0, E_ = 2, H_ = 0, xi = 1, alphaTD = 1, Ia_ = 1, D_ = 0, Ninv = 0, alphaIsH = 1, betaIs = 3, S_ = 3, alphaIaIs = 2, alphaIsT = 1, betaT = 3, alphaIsD = 1, betaIa = 3, betaH = 3, alphaEIs = 2]
 NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-Substitutions:	[S_ = 4, z_aux = 3, Ia_ = 2, betaT = 4, E_ = 3, betaH = 4, T_ = 1, H_ = 1, Is_ = 2]
-memory used=27957.1MB, alloc=211.8MB, time=274.96
+Substitutions:	[Is_ = 2, T_ = 1, E_ = 3, H_ = 1, Ia_ = 2, z_aux = 3, S_ = 4, betaT = 4, betaH = 4]
+memory used=1.61GiB, alloc change=-4.00MiB, cpu time=14.05s, real time=12.24s, gc time=3.23s
+
+SubsByDepth Usage (real, cpu, memory):	12.241,	14.050,	1727922920
+
+memory used=27494.6MB, alloc=211.8MB, time=280.01

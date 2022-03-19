@@ -55,8 +55,11 @@ SubsByDepth := proc(sigma, {trdegsub:=true})
         rhs_term, indets_, term, substitutions, sigma_new, each, alg_indep, original_et_hat,
         all_subs, names, selection, other, all_odes, each_ode;
   
-  system_vars, non_id, sigma_new, alg_indep:= GetPolySystem(sigma, GetParameters(sigma), sub_transc=trdegsub, infolevel=2):
-  
+  out, mem, cpu_time, real_time:= CodeTools[Usage](GetPolySystem(sigma, GetParameters(sigma), sub_transc=trdegsub), output=[`output`,`bytesused`,`cputime`,`realtime`]):
+  system_vars, non_id, sigma_new, alg_indep := out[1], out[2], out[3], out[4];
+
+  printf("\n\nGetPolySystem Usage (real, cpu, memory):\t%a,\t%a,\t%a\n\n", real_time, cpu_time, mem):
+
   vts := GetMinLevelBFS(sigma_new):
   printf("%s:\t%a\n", `States for substitution`, [entries(vts, `pairs`)]);
   printf("%s:\t%a\n", `NonID parameters`, non_id);

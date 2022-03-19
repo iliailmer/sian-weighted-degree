@@ -5,30 +5,78 @@
       |       Type ? for help.
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in SubsByDepth) `out` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `mem` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `cpu_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `real_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:108|
+|imports/create_substitutions.mpl:111|
 Warning, (in WriteScripts) `max_degree` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:112|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 known_data := [a1 = 1/2, a2 = 1/5, a3 = 1, c_1a = 1/2000000, c_5a = 1/10000, 
 c_6a = 1/50000, c1 = 1/2000000, c2 = 0, c3 = 1/2500, c4 = 1/2, kv = 5, e_1a = 1
 /2000, c_1c = 1/2000000, c_2c = 0, c_3c = 1/2500]
@@ -52,6 +100,9 @@ Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_d
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  2594688000
+Orders of prolongations of the outputs (beta) =  [8, 7, 6, 7, 6, 6]
+Orders of prolongations of the state variables (alpha) =  [7, 8, 7, 7, 7, 6, 6, 7, 6, 7, 6, 6, 7, 6, 1]
 
 =======================================================
 3. Assessing local identifiability
@@ -60,6 +111,9 @@ Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_d
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  1924774319000000000000000000000000
+Random sample for the outputs and inputs is generated from  [c5 = 658814707043335406995637681659855, c_2a = 428434431942874102920763149832297, c_3a = 1777515148221721054918427866791345, c_4a = 187252218625073706044282521627238, e_2a = 1846447386280187796353403352689748, i1 = 1595492290166305494764793807867751, i_1a = 1403647294597082842326980124864027, k1 = 1244518811074397817146719287801683, k2 = 517514525863471662883151901205340, k3 = 476343519022007968050771431100953, k_deg = 332590320215605432871737098557767, k_prod = 795050304895352258603809367000886, t1 = 706547664773979815376969653221840, t2 = 785259795994784139895400831624929, x1_0 = 1036935104650981251513024844758643, x2_0 = 1414287434517613900433618484437469, x3_0 = 753761823450629962048955910547827, x4_0 = 494811094197197493342713493229059, x5_0 = 323964366214420729538518570733043, x6_0 = 1550856055233743366171952315156018, x7_0 = 1614945434680742613846056997475171, x8_0 = 18539752302354101588962153111108, x9_0 = 1420826091619238887922411398065883, x10_0 = 1249796453486673351155880600991430, x11_0 = 444862677738536419282908479345993, x12_0 = 140055308939130172819039915454024, x13_0 = 1924155117066400789643899211679448, x14_0 = 1113902998554475228630536331301546, x15_0 = 447440992541570125284545003944656]
+The polynomial system widehat{E^t} contains  119 equations in  107  variables
 Locally identifiable paramters:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_deg, k_prod, t1, t2, x1(0), x2(0), x3(0), x4(0), x5(0), x6(0), x7(0), x8(0), x9(0), x10(0), x11(0), x12(0), x13(0), x14(0)]
 Nonidentifiable parameter:  [x15(0)]
 
@@ -71,6 +125,9 @@ Number of possible combinations 1
 Picked the best choice [x15_0] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {}
 Algebraically independent parameters among derivatives: {x15(0)}
+	Adding ODEs: []
+	Adding output functions: []
+	New system: [diff(x1(t),t) = k_prod-k_deg*x1(t)-k1*x1(t)*u(t), diff(x2(t),t) = -k3*x2(t)-k_deg*x2(t)-1/5*x2(t)*x10(t)+t1*x4(t)-x2(t)*x13(t)+t2*x5(t)+(k1*x1(t)-k2*x2(t)*x8(t))*u(t), diff(x3(t),t) = k3*x2(t)-k_deg*x3(t)+k2*x2(t)*x8(t)*u(t), diff(x4(t),t) = 1/5*x2(t)*x10(t)-t1*x4(t), diff(x5(t),t) = x2(t)*x13(t)-t2*x5(t), diff(x6(t),t) = 1/50000*x13(t)-1/2*x6(t)*x10(t)+t2*x5(t)-i1*x6(t), diff(x7(t),t) = 5*i1*x6(t)-1/2*x11(t)*x7(t), diff(x8(t),t) = 1/2*x9(t)-c5*x8(t), diff(x9(t),t) = 1/2000000*x7(t)-1/2500*x9(t), diff(x10(t),t) = -1/5*x2(t)*x10(t)-1/2*x6(t)*x10(t)+c_4a*x12(t)-1/10000*x10(t)-i_1a*x10(t)+1/2000*x11(t), diff(x11(t),t) = -1/2*x11(t)*x7(t)+5*i_1a*x10(t)-1/400*x11(t), diff(x12(t),t) = c_2a+1/2000000*x7(t)-c_3a*x12(t), diff(x13(t),t) = 1/2*x6(t)*x10(t)-1/50000*x13(t)-x2(t)*x13(t)+e_2a*x14(t), diff(x14(t),t) = 1/2*x11(t)*x7(t)-5*e_2a*x14(t), diff(x15(t),t) = 1/2000000*x7(t)-1/2500*x15(t), y1(t) = x2(t), y2(t) = x10(t)+x13(t), y3(t) = x9(t), y4(t) = x1(t)+x2(t)+x3(t), y6(t) = x12(t), y5(t) = x7(t)]
 
 === Input info ===
 State variables:          [x1(t), x2(t), x3(t), x4(t), x5(t), x6(t), x7(t), x8(t), x9(t), x10(t), x11(t), x12(t), x13(t), x14(t), x15(t)]
@@ -79,13 +136,32 @@ Input variables:          [u(t)]
 Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_deg, k_prod, t1, t2]
 ===================
 
+	Adding new y-equations: faux_equations
+	Adding new y-equations: [y_faux1_0 = x15_0]
+	New system: [y1_0-x2_0, 5*k2*u_0*x2_0*x8_0-5*k1*u_0*x1_0+5*k3*x2_0+5*k_deg*x2_0-5*t1*x4_0-5*t2*x5_0+x10_0*x2_0+5*x13_0*x2_0+5*x2_1, y2_0-x10_0-x13_0, -10000*c_4a*x12_0+10000*i_1a*x10_0+2000*x10_0*x2_0+5000*x10_0*x6_0+x10_0+10000*x10_1-5*x11_0, -50000*e_2a*x14_0-25000*x10_0*x6_0+50000*x13_0*x2_0+x13_0+50000*x13_1, y3_0-x9_0, 2000000*x9_1-x7_0+800*x9_0, y4_0-x1_0-x2_0-x3_0, k1*u_0*x1_0+k_deg*x1_0-k_prod+x1_1, -k2*u_0*x2_0*x8_0-k3*x2_0+k_deg*x3_0+x3_1, y6_0-x12_0, 2000000*c_3a*x12_0-2000000*c_2a+2000000*x12_1-x7_0, y5_0-x7_0, -10*i1*x6_0+x11_0*x7_0+2*x7_1, -x2_1+y1_1, (5*k2*u_0*x8_0+5*k3+5*k_deg+x10_0+5*x13_0)*x2_1+(5*k2*u_0*x8_1+5*k2*u_1*x8_0+x10_1+5*x13_1)*x2_0-5*u_0*k1*x1_1-5*k1*x1_0*u_1-5*t1*x4_1-5*t2*x5_1+5*x2_2, 5*t1*x4_0-x10_0*x2_0+5*x4_1, t2*x5_0-x13_0*x2_0+x5_1, 2*c5*x8_0+2*x8_1-x9_0, -x10_1-x13_1+y2_1, (10000*i_1a+2000*x2_0+5000*x6_0+1)*x10_1+(2000*x2_1+5000*x6_1)*x10_0-10000*c_4a*x12_1-5*x11_1+10000*x10_2, -50000*e_2a*x14_1-25000*x10_0*x6_1-25000*x10_1*x6_0+50000*x13_0*x2_1+50000*x13_1*x2_0+x13_1+50000*x13_2, -2000*i_1a*x10_0+200*x11_0*x7_0+x11_0+400*x11_1, 10*e_2a*x14_0-x11_0*x7_0+2*x14_1, 50000*i1*x6_0-50000*t2*x5_0+25000*x10_0*x6_0-x13_0+50000*x6_1, -x1_1-x2_1-x3_1+y4_1, k1*x1_0*u_1+(k1*u_0+k_deg)*x1_1+x1_2, ((-u_0*x8_1-u_1*x8_0)*x2_0-u_0*x2_1*x8_0)*k2+k_deg*x3_1-k3*x2_1+x3_2, -x12_1+y6_1, 2000000*c_3a*x12_1+2000000*x12_2-x7_1, -x7_1+y5_1, -10*i1*x6_1+x11_0*x7_1+x11_1*x7_0+2*x7_2, -x2_2+y1_2, ((5*u_0*x8_2+10*u_1*x8_1+5*u_2*x8_0)*x2_0+5*x2_2*x8_0*u_0+10*x2_1*(u_0*x8_1+u_1*x8_0))*k2+(x10_2+5*x13_2)*x2_0+(5*k_deg+x10_0+5*x13_0+5*k3)*x2_2+(2*x10_1+10*x13_1)*x2_1-10*u_1*k1*x1_1-5*u_0*k1*x1_2-5*k1*u_2*x1_0-5*t1*x4_2-5*t2*x5_2+5*x2_3, 5*t1*x4_1-x10_0*x2_1-x10_1*x2_0+5*x4_2, t2*x5_1-x13_0*x2_1-x13_1*x2_0+x5_2, 2*c5*x8_1+2*x8_2-x9_1, -x10_2-x13_2+y2_2, (10000*i_1a+2000*x2_0+5000*x6_0+1)*x10_2+(2000*x2_2+5000*x6_2)*x10_0+(4000*x2_1+10000*x6_1)*x10_1-10000*c_4a*x12_2+10000*x10_3-5*x11_2, -50000*e_2a*x14_2-25000*x10_0*x6_2-50000*x10_1*x6_1-25000*x10_2*x6_0+50000*x13_0*x2_2+100000*x13_1*x2_1+50000*x13_2*x2_0+x13_2+50000*x13_3, -2000*i_1a*x10_1+200*x11_0*x7_1+200*x11_1*x7_0+x11_1+400*x11_2, 10*e_2a*x14_1-x11_0*x7_1-x11_1*x7_0+2*x14_2, -50000*t2*x5_1+25000*x6_0*x10_1-x13_1+(50000*i1+25000*x10_0)*x6_1+50000*x6_2, -x1_2-x2_2-x3_2+y4_2, (u_0*x1_2+2*u_1*x1_1+u_2*x1_0)*k1+k_deg*x1_2+x1_3, ((-u_0*x8_2-2*u_1*x8_1-u_2*x8_0)*x2_0+(-u_0*x2_2-2*u_1*x2_1)*x8_0-2*x8_1*u_0*x2_1)*k2+k_deg*x3_2-k3*x2_2+x3_3, -x12_2+y6_2, 2000000*c_3a*x12_2+2000000*x12_3-x7_2, -x7_2+y5_2, -10*i1*x6_2+x11_0*x7_2+2*x11_1*x7_1+x11_2*x7_0+2*x7_3, -x2_3+y1_3, ((5*u_0*x8_3+15*u_1*x8_2+15*u_2*x8_1+5*u_3*x8_0)*x2_0+(15*u_0*x8_2+30*u_1*x8_1+15*u_2*x8_0)*x2_1+5*u_0*x2_3*x8_0+15*x2_2*(u_0*x8_1+u_1*x8_0))*k2+(x10_3+5*x13_3)*x2_0+(3*x10_2+15*x13_2)*x2_1+(5*k_deg+x10_0+5*x13_0+5*k3)*x2_3-5*u_0*k1*x1_3+(3*x10_1+15*x13_1)*x2_2-15*u_1*k1*x1_2+(-15*u_2*x1_1-5*u_3*x1_0)*k1-5*t1*x4_3-5*t2*x5_3+5*x2_4, 5*t1*x4_2-x10_0*x2_2-2*x10_1*x2_1-x10_2*x2_0+5*x4_3, t2*x5_2-x13_0*x2_2-2*x13_1*x2_1-x13_2*x2_0+x5_3, 2*c5*x8_2+2*x8_3-x9_2, -x7_1+800*x9_1+2000000*x9_2, -x10_3-x13_3+y2_3, (10000*i_1a+2000*x2_0+5000*x6_0+1)*x10_3+(5000*x6_3+2000*x2_3)*x10_0+(6000*x2_2+15000*x6_2)*x10_1+(6000*x2_1+15000*x6_1)*x10_2-10000*c_4a*x12_3+10000*x10_4-5*x11_3, -50000*e_2a*x14_3-25000*x10_0*x6_3-75000*x10_1*x6_2-75000*x10_2*x6_1-25000*x10_3*x6_0+50000*x13_0*x2_3+150000*x13_1*x2_2+150000*x13_2*x2_1+50000*x13_3*x2_0+x13_3+50000*x13_4, -2000*i_1a*x10_2+200*x11_0*x7_2+400*x11_1*x7_1+200*x11_2*x7_0+x11_2+400*x11_3, 10*e_2a*x14_2-x11_0*x7_2-2*x11_1*x7_1-x11_2*x7_0+2*x14_3, -50000*t2*x5_2+50000*x6_1*x10_1+25000*x6_0*x10_2-x13_2+(50000*i1+25000*x10_0)*x6_2+50000*x6_3, -x1_3-x2_3-x3_3+y4_3, (u_0*x1_3+3*u_1*x1_2+3*u_2*x1_1+u_3*x1_0)*k1+k_deg*x1_3+x1_4, ((-u_0*x8_3-3*u_1*x8_2-3*u_2*x8_1-u_3*x8_0)*x2_0+(-u_0*x2_3-3*u_1*x2_2-3*u_2*x2_1)*x8_0+(-3*x2_1*x8_2-3*x2_2*x8_1)*u_0-6*x8_1*u_1*x2_1)*k2-k3*x2_3+k_deg*x3_3+x3_4, -x7_3+y5_3, -10*i1*x6_3+x11_0*x7_3+3*x11_1*x7_2+3*x11_2*x7_1+x11_3*x7_0+2*x7_4, -x2_4+y1_4, ((5*u_0*x8_4+20*u_1*x8_3+30*u_2*x8_2+20*u_3*x8_1+5*u_4*x8_0)*x2_0+(20*u_0*x8_3+60*u_1*x8_2+60*u_2*x8_1+20*u_3*x8_0)*x2_1+(30*x2_2*x8_2+20*x2_3*x8_1+5*x2_4*x8_0)*u_0+(60*u_1*x8_1+30*u_2*x8_0)*x2_2+20*u_1*x2_3*x8_0)*k2+(x10_4+5*x13_4)*x2_0+(4*x10_3+20*x13_3)*x2_1-5*u_0*k1*x1_4+(6*x10_2+30*x13_2)*x2_2+(5*k_deg+x10_0+5*x13_0+5*k3)*x2_4-20*u_1*k1*x1_3+(-30*u_2*x1_2-20*u_3*x1_1-5*u_4*x1_0)*k1+(4*x10_1+20*x13_1)*x2_3-5*t1*x4_4-5*t2*x5_4+5*x2_5, 5*t1*x4_3-x10_0*x2_3-3*x10_1*x2_2-3*x10_2*x2_1-x10_3*x2_0+5*x4_4, t2*x5_3-x13_0*x2_3-3*x13_1*x2_2-3*x13_2*x2_1-x13_3*x2_0+x5_4, 2*c5*x8_3+2*x8_4-x9_3, -x7_2+800*x9_2+2000000*x9_3, -x10_4-x13_4+y2_4, (10000*i_1a+2000*x2_0+5000*x6_0+1)*x10_4+(5000*x6_4+2000*x2_4)*x10_0+(20000*x6_3+8000*x2_3)*x10_1+(30000*x6_2+12000*x2_2)*x10_2+(8000*x2_1+20000*x6_1)*x10_3-10000*c_4a*x12_4+10000*x10_5-5*x11_4, -50000*e_2a*x14_4-25000*x10_0*x6_4-100000*x10_1*x6_3-150000*x10_2*x6_2-100000*x10_3*x6_1-25000*x10_4*x6_0+50000*x13_0*x2_4+200000*x13_1*x2_3+300000*x13_2*x2_2+200000*x13_3*x2_1+50000*x13_4*x2_0+x13_4+50000*x13_5, -2000*i_1a*x10_3+200*x11_0*x7_3+600*x11_1*x7_2+600*x11_2*x7_1+200*x11_3*x7_0+x11_3+400*x11_4, 2000000*c_3a*x12_3+2000000*x12_4-x7_3, 10*e_2a*x14_3-x11_0*x7_3-3*x11_1*x7_2-3*x11_2*x7_1-x11_3*x7_0+2*x14_4, -50000*t2*x5_3+75000*x6_2*x10_1+75000*x6_1*x10_2+25000*x6_0*x10_3-x13_3+(50000*i1+25000*x10_0)*x6_3+50000*x6_4, -x1_4-x2_4-x3_4+y4_4, (u_0*x1_4+4*u_1*x1_3+6*u_2*x1_2+4*u_3*x1_1+u_4*x1_0)*k1+k_deg*x1_4+x1_5, ((-u_0*x8_4-4*u_1*x8_3-6*u_2*x8_2-4*u_3*x8_1-u_4*x8_0)*x2_0+(-u_0*x2_4-4*u_1*x2_3-6*u_2*x2_2-4*u_3*x2_1)*x8_0+(-4*x2_1*x8_3-6*x2_2*x8_2-4*x2_3*x8_1)*u_0+(-12*u_1*x8_2-12*u_2*x8_1)*x2_1-12*x2_2*x8_1*u_1)*k2-k3*x2_4+k_deg*x3_4+x3_5, -x7_4+y5_4, -10*i1*x6_4+x11_0*x7_4+4*x11_1*x7_3+6*x11_2*x7_2+4*x11_3*x7_1+x11_4*x7_0+2*x7_5, -x2_5+y1_5, ((5*u_0*x8_5+25*u_1*x8_4+50*u_2*x8_3+50*u_3*x8_2+25*u_4*x8_1+5*u_5*x8_0)*x2_0+(25*u_0*x8_4+100*u_1*x8_3+150*u_2*x8_2+100*u_3*x8_1+25*u_4*x8_0)*x2_1+(50*x2_2*x8_3+50*x2_3*x8_2+25*x2_4*x8_1+5*x2_5*x8_0)*u_0+(150*u_1*x8_2+150*u_2*x8_1+50*u_3*x8_0)*x2_2+(25*u_1*x2_4+50*u_2*x2_3)*x8_0+100*u_1*x2_3*x8_1)*k2+(x10_5+5*x13_5)*x2_0+(25*x13_4+5*x10_4)*x2_1-5*u_0*k1*x1_5+(10*x10_3+50*x13_3)*x2_2-25*u_1*k1*x1_4+(-50*u_2*x1_3-50*u_3*x1_2-25*u_4*x1_1-5*u_5*x1_0)*k1+(10*x10_2+50*x13_2)*x2_3+(5*k_deg+x10_0+5*x13_0+5*k3)*x2_5+(5*x10_1+25*x13_1)*x2_4-5*t1*x4_5-5*t2*x5_5+5*x2_6, 5*t1*x4_4-x10_0*x2_4-4*x10_1*x2_3-6*x10_2*x2_2-4*x10_3*x2_1-x10_4*x2_0+5*x4_5, t2*x5_4-x13_0*x2_4-4*x13_1*x2_3-6*x13_2*x2_2-4*x13_3*x2_1-x13_4*x2_0+x5_5, 2*c5*x8_4+2*x8_5-x9_4, -x7_3+800*x9_3+2000000*x9_4, -x10_5-x13_5+y2_5, (10000*i_1a+2000*x2_0+5000*x6_0+1)*x10_5+(5000*x6_5+2000*x2_5)*x10_0+(25000*x6_4+10000*x2_4)*x10_1+(50000*x6_3+20000*x2_3)*x10_2+(50000*x6_2+20000*x2_2)*x10_3+(25000*x6_1+10000*x2_1)*x10_4-10000*c_4a*x12_5+10000*x10_6-5*x11_5, -50000*e_2a*x14_5-25000*x10_0*x6_5-125000*x10_1*x6_4-250000*x10_2*x6_3-250000*x10_3*x6_2-125000*x10_4*x6_1-25000*x10_5*x6_0+50000*x13_0*x2_5+250000*x13_1*x2_4+500000*x13_2*x2_3+500000*x13_3*x2_2+250000*x13_4*x2_1+50000*x13_5*x2_0+x13_5+50000*x13_6, -2000*i_1a*x10_4+200*x11_0*x7_4+800*x11_1*x7_3+1200*x11_2*x7_2+800*x11_3*x7_1+200*x11_4*x7_0+x11_4+400*x11_5, 2000000*c_3a*x12_4+2000000*x12_5-x7_4, 10*e_2a*x14_4-x11_0*x7_4-4*x11_1*x7_3-6*x11_2*x7_2-4*x11_3*x7_1-x11_4*x7_0+2*x14_5, -50000*t2*x5_4+100000*x6_3*x10_1+150000*x6_2*x10_2+100000*x6_1*x10_3+25000*x6_0*x10_4-x13_4+(50000*i1+25000*x10_0)*x6_4+50000*x6_5, -x1_5-x2_5-x3_5+y4_5, (u_0*x1_5+5*u_1*x1_4+10*u_2*x1_3+10*u_3*x1_2+5*u_4*x1_1+u_5*x1_0)*k1+k_deg*x1_5+x1_6, ((-u_0*x8_5-5*u_1*x8_4-10*u_2*x8_3-10*u_3*x8_2-5*u_4*x8_1-u_5*x8_0)*x2_0+(-u_0*x2_5-5*u_1*x2_4-10*u_2*x2_3-10*u_3*x2_2-5*u_4*x2_1)*x8_0+(-5*x2_1*x8_4-10*x2_2*x8_3-10*x2_3*x8_2-5*x2_4*x8_1)*u_0+(-20*u_1*x8_3-30*u_2*x8_2-20*u_3*x8_1)*x2_1+(-20*u_1*x2_3-30*u_2*x2_2)*x8_1-30*x2_2*x8_2*u_1)*k2-k3*x2_5+k_deg*x3_5+x3_6, -x2_6+y1_6, ((5*u_0*x8_6+30*u_1*x8_5+75*u_2*x8_4+100*u_3*x8_3+75*u_4*x8_2+30*u_5*x8_1+5*u_6*x8_0)*x2_0+(30*u_0*x8_5+150*u_1*x8_4+300*u_2*x8_3+300*u_3*x8_2+150*u_4*x8_1+30*u_5*x8_0)*x2_1+(75*x2_2*x8_4+100*x2_3*x8_3+75*x2_4*x8_2+30*x2_5*x8_1+5*x2_6*x8_0)*u_0+(300*u_1*x8_3+450*u_2*x8_2+300*u_3*x8_1+75*u_4*x8_0)*x2_2+(30*u_1*x2_5+75*u_2*x2_4+100*u_3*x2_3)*x8_0+(300*x2_3*x8_2+150*x2_4*x8_1)*u_1+300*u_2*x2_3*x8_1)*k2+(5*x13_6+x10_6)*x2_0+(30*x13_5+6*x10_5)*x2_1-5*u_0*k1*x1_6+(15*x10_4+75*x13_4)*x2_2-30*u_1*k1*x1_5+(-75*u_2*x1_4-100*u_3*x1_3-75*u_4*x1_2-30*u_5*x1_1-5*u_6*x1_0)*k1+(20*x10_3+100*x13_3)*x2_3+(15*x10_2+75*x13_2)*x2_4+(5*k_deg+x10_0+5*x13_0+5*k3)*x2_6+(6*x10_1+30*x13_1)*x2_5-5*t1*x4_6-5*t2*x5_6+5*x2_7, 5*t1*x4_5-x10_0*x2_5-5*x10_1*x2_4-10*x10_2*x2_3-10*x10_3*x2_2-5*x10_4*x2_1-x10_5*x2_0+5*x4_6, t2*x5_5-x13_0*x2_5-5*x13_1*x2_4-10*x13_2*x2_3-10*x13_3*x2_2-5*x13_4*x2_1-x13_5*x2_0+x5_6, 2*c5*x8_5+2*x8_6-x9_5, -x7_4+800*x9_4+2000000*x9_5, -x2_7+y1_7, -x10_6-x13_6+y2_6, -x9_1+y3_1, -x9_2+y3_2, -x9_3+y3_3, -x9_4+y3_4, -x9_5+y3_5, -x1_6-x2_6-x3_6+y4_6, -x12_3+y6_3, -x12_4+y6_4, -x12_5+y6_5, -x7_5+y5_5, y_faux1_0-x15_0]
+	New system: [y1_0 = x2_0, y1_1 = x2_1, y1_2 = x2_2, y1_3 = x2_3, y1_4 = x2_4, y1_5 = x2_5, y1_6 = x2_6, y1_7 = x2_7, y1_8 = x2_8, y1_9 = x2_9, y1_10 = x2_10, y1_11 = x2_11, y1_12 = x2_12, y1_13 = x2_13, y1_14 = x2_14, y1_15 = x2_15, y1_16 = x2_16, y1_17 = x2_17, y1_18 = x2_18, y1_19 = x2_19, y1_20 = x2_20, y1_21 = x2_21, y1_22 = x2_22, y1_23 = x2_23, y1_24 = x2_24, y1_25 = x2_25, y1_26 = x2_26, y1_27 = x2_27, y1_28 = x2_28, y1_29 = x2_29, y1_30 = x2_30, y2_0 = x10_0+x13_0, y2_1 = x10_1+x13_1, y2_2 = x10_2+x13_2, y2_3 = x10_3+x13_3, y2_4 = x10_4+x13_4, y2_5 = x10_5+x13_5, y2_6 = x10_6+x13_6, y2_7 = x10_7+x13_7, y2_8 = x10_8+x13_8, y2_9 = x10_9+x13_9, y2_10 = x10_10+x13_10, y2_11 = x10_11+x13_11, y2_12 = x10_12+x13_12, y2_13 = x10_13+x13_13, y2_14 = x10_14+x13_14, y2_15 = x10_15+x13_15, y2_16 = x10_16+x13_16, y2_17 = x10_17+x13_17, y2_18 = x10_18+x13_18, y2_19 = x10_19+x13_19, y2_20 = x10_20+x13_20, y2_21 = x10_21+x13_21, y2_22 = x10_22+x13_22, y2_23 = x10_23+x13_23, y2_24 = x10_24+x13_24, y2_25 = x10_25+x13_25, y2_26 = x10_26+x13_26, y2_27 = x10_27+x13_27, y2_28 = x10_28+x13_28, y2_29 = x10_29+x13_29, y2_30 = x10_30+x13_30, y3_0 = x9_0, y3_1 = x9_1, y3_2 = x9_2, y3_3 = x9_3, y3_4 = x9_4, y3_5 = x9_5, y3_6 = x9_6, y3_7 = x9_7, y3_8 = x9_8, y3_9 = x9_9, y3_10 = x9_10, y3_11 = x9_11, y3_12 = x9_12, y3_13 = x9_13, y3_14 = x9_14, y3_15 = x9_15, y3_16 = x9_16, y3_17 = x9_17, y3_18 = x9_18, y3_19 = x9_19, y3_20 = x9_20, y3_21 = x9_21, y3_22 = x9_22, y3_23 = x9_23, y3_24 = x9_24, y3_25 = x9_25, y3_26 = x9_26, y3_27 = x9_27, y3_28 = x9_28, y3_29 = x9_29, y3_30 = x9_30, y4_0 = x1_0+x2_0+x3_0, y4_1 = x1_1+x2_1+x3_1, y4_2 = x1_2+x2_2+x3_2, y4_3 = x1_3+x2_3+x3_3, y4_4 = x1_4+x2_4+x3_4, y4_5 = x1_5+x2_5+x3_5, y4_6 = x1_6+x2_6+x3_6, y4_7 = x1_7+x2_7+x3_7, y4_8 = x1_8+x2_8+x3_8, y4_9 = x1_9+x2_9+x3_9, y4_10 = x1_10+x2_10+x3_10, y4_11 = x1_11+x2_11+x3_11, y4_12 = x1_12+x2_12+x3_12, y4_13 = x1_13+x2_13+x3_13, y4_14 = x1_14+x2_14+x3_14, y4_15 = x1_15+x2_15+x3_15, y4_16 = x1_16+x2_16+x3_16, y4_17 = x1_17+x2_17+x3_17, y4_18 = x1_18+x2_18+x3_18, y4_19 = x1_19+x2_19+x3_19, y4_20 = x1_20+x2_20+x3_20, y4_21 = x1_21+x2_21+x3_21, y4_22 = x1_22+x2_22+x3_22, y4_23 = x1_23+x2_23+x3_23, y4_24 = x1_24+x2_24+x3_24, y4_25 = x1_25+x2_25+x3_25, y4_26 = x1_26+x2_26+x3_26, y4_27 = x1_27+x2_27+x3_27, y4_28 = x1_28+x2_28+x3_28, y4_29 = x1_29+x2_29+x3_29, y4_30 = x1_30+x2_30+x3_30, y6_0 = x12_0, y6_1 = x12_1, y6_2 = x12_2, y6_3 = x12_3, y6_4 = x12_4, y6_5 = x12_5, y6_6 = x12_6, y6_7 = x12_7, y6_8 = x12_8, y6_9 = x12_9, y6_10 = x12_10, y6_11 = x12_11, y6_12 = x12_12, y6_13 = x12_13, y6_14 = x12_14, y6_15 = x12_15, y6_16 = x12_16, y6_17 = x12_17, y6_18 = x12_18, y6_19 = x12_19, y6_20 = x12_20, y6_21 = x12_21, y6_22 = x12_22, y6_23 = x12_23, y6_24 = x12_24, y6_25 = x12_25, y6_26 = x12_26, y6_27 = x12_27, y6_28 = x12_28, y6_29 = x12_29, y6_30 = x12_30, y5_0 = x7_0, y5_1 = x7_1, y5_2 = x7_2, y5_3 = x7_3, y5_4 = x7_4, y5_5 = x7_5, y5_6 = x7_6, y5_7 = x7_7, y5_8 = x7_8, y5_9 = x7_9, y5_10 = x7_10, y5_11 = x7_11, y5_12 = x7_12, y5_13 = x7_13, y5_14 = x7_14, y5_15 = x7_15, y5_16 = x7_16, y5_17 = x7_17, y5_18 = x7_18, y5_19 = x7_19, y5_20 = x7_20, y5_21 = x7_21, y5_22 = x7_22, y5_23 = x7_23, y5_24 = x7_24, y5_25 = x7_25, y5_26 = x7_26, y5_27 = x7_27, y5_28 = x7_28, y5_29 = x7_29, y5_30 = x7_30, y_faux1_0 = x15_0]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[i_1a = 1, k_prod = 1, x7_ = 0, x3_ = 0, k_deg = 1, k3 = 1, x12_ = 0, x11_ = 1, k1 = 1, c_4a = 1, t1 = 1, c5 = 2, x9_ = 0, e_2a = 1, (NULL) = 1, x5_ = 1, t2 = 1, x14_ = 1, x13_ = 0, x10_ = 0, x8_ = 1, k2 = 1, x6_ = 1, c_3a = 1, x4_ = 1, i1 = 1, x1_ = 0, x2_ = 0, c_2a = 1]
+Bound D_2 for assessing global identifiability:  2566365758000000000000000000000000
+Random sample for the outputs and inputs is generated from  [c5 = 1271045860733532570842270993585735, c_2a = 75437152869694545161462976723201, c_3a = 1853824813320091229717023768361534, c_4a = 466273935628108272469291695200913, e_2a = 711061006892074828678126425135652, i1 = 181959175521680462734790193794744, i_1a = 2481704236709105924554878482679917, k1 = 1628890427899505538777032567364083, k2 = 226016278735984410137889032962512, k3 = 1779427529065401313554581628490198, k_deg = 1217942307097526104967380588840340, k_prod = 36338079180200089277291847628296, t1 = 534267112825119135932162922360790, t2 = 432561217029039670016384303935010, x1_0 = 2305534819430769654334344952520749, x2_0 = 1361942934627989807620028805267480, x3_0 = 101909581142022647312327994048421, x4_0 = 784914541211445992414702494994167, x5_0 = 1096184337837043355489177013720698, x6_0 = 805307664672675153776992594216160, x7_0 = 1832215162796971021246874687687798, x8_0 = 1854955891583927400093903264819668, x9_0 = 862934661705421116099256494599748, x10_0 = 1136879271623556404801001513193593, x11_0 = 1688623805475459319878993459506478, x12_0 = 2539303279249829726761146293646326, x13_0 = 2087366375223797193796899053178699, x14_0 = 1653915693453335027041510764675776, x15_0 = 931862007078088858721959087063955]
+The polynomial system widehat{E^t} contains  120 equations in  108  variables
+Variable ordering to be used for Groebner basis computation [x2_7, x13_6, x10_6, x8_6, x5_6, x4_6, x3_6, x2_6, x1_6, x14_5, x13_5, x12_5, x11_5, x10_5, x9_5, x8_5, x7_5, x6_5, x5_5, x4_5, x3_5, x2_5, x1_5, x14_4, x13_4, x12_4, x11_4, x10_4, x9_4, x8_4, x7_4, x6_4, x5_4, x4_4, x3_4, x2_4, x1_4, x14_3, x13_3, x12_3, x11_3, x10_3, x9_3, x8_3, x7_3, x6_3, x5_3, x4_3, x3_3, x2_3, x1_3, x14_2, x13_2, x12_2, x11_2, x10_2, x9_2, x8_2, x7_2, x6_2, x5_2, x4_2, x3_2, x2_2, x1_2, x14_1, x13_1, x12_1, x11_1, x10_1, x9_1, x8_1, x7_1, x6_1, x5_1, x4_1, x3_1, x2_1, x1_1, x15_0, x14_0, x13_0, x12_0, x11_0, x10_0, x9_0, x8_0, x7_0, x6_0, x5_0, x4_0, x3_0, x2_0, x1_0, z_aux, w_aux, c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_deg, k_prod, t1, t2]
+Prep CPU Time (sub_transc=true):	 202.833
+Prep Real Elapsed Time (sub_transc=true):	 189.023
+memory used=25.48GiB, alloc change=144.33MiB, cpu time=3.38m, real time=3.15m, gc time=25.12s
+
+
+GetPolySystem Usage (real, cpu, memory):	189.054,	202.864,	27361361688
+
+States for substitution:	[x12_ = 0, k3 = 1, x8_ = 1, k2 = 1, i_1a = 1, x4_ = 1, x3_ = 0, x13_ = 0, c_2a = 1, x11_ = 1, t2 = 1, x9_ = 0, x7_ = 0, c_3a = 1, i1 = 1, k1 = 1, x14_ = 1, k_deg = 1, x10_ = 0, e_2a = 1, x6_ = 1, x5_ = 1, k_prod = 1, x2_ = 0, x1_ = 0, c_4a = 1, (NULL) = 1, t1 = 1, c5 = 2]
 NonID parameters:	[x15_0]
-Substitutions:	[x7_ = 1, x3_ = 1, x12_ = 1, x11_ = 2, c5 = 3, z_aux = 2, x9_ = 1, x5_ = 2, x14_ = 2, x13_ = 1, x10_ = 1, x8_ = 2, x6_ = 2, x4_ = 2, x1_ = 1, x2_ = 1]
+Substitutions:	[x12_ = 1, x8_ = 2, x4_ = 2, x3_ = 1, x13_ = 1, x11_ = 2, x9_ = 1, x7_ = 1, x14_ = 2, x10_ = 1, x6_ = 2, x5_ = 2, x2_ = 1, x1_ = 1, z_aux = 2, c5 = 3]
+memory used=25.51GiB, alloc change=144.33MiB, cpu time=3.39m, real time=3.16m, gc time=25.12s
+
+SubsByDepth Usage (real, cpu, memory):	189.416,	203.225,	27392230064
+
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -106,6 +182,9 @@ Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_d
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  2594688000
+Orders of prolongations of the outputs (beta) =  [8, 7, 6, 7, 6, 6]
+Orders of prolongations of the state variables (alpha) =  [7, 8, 7, 7, 7, 6, 6, 7, 6, 7, 6, 6, 7, 6, 1]
 
 =======================================================
 3. Assessing local identifiability
@@ -114,13 +193,31 @@ Parameters in equations:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_d
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  1924774319000000000000000000000000
+Random sample for the outputs and inputs is generated from  [c5 = 1656864643937121016878961181854224, c_2a = 1338105614837195209209740239303650, c_3a = 1603781571186394460060425142438801, c_4a = 562341921881481136143489943754492, e_2a = 445214392570721491536414464034462, i1 = 682107616255033060552481299802565, i_1a = 342669632984037925596350224099254, k1 = 1295688038433011416501182025828512, k2 = 721370322324682565738795428464910, k3 = 710475645909866704616927144473763, k_deg = 1512641203508594306786607188772779, k_prod = 1741900307496172613363157081567311, t1 = 821972719324560189373179757691755, t2 = 44046626431027784344459389172253, x1_0 = 1482171517971628812937193867066972, x2_0 = 112295833867410133666830430061986, x3_0 = 336078776333984896471631043765442, x4_0 = 1789653697531577086843912582459174, x5_0 = 339053528691177822362419290058211, x6_0 = 1074679867525656739131905022064374, x7_0 = 985486313312295622946124018646238, x8_0 = 1635476027244981784404299618361255, x9_0 = 1735809078127685037108347646337965, x10_0 = 673295732159796889437904829140757, x11_0 = 99802192497054417226725027850724, x12_0 = 785439877031232782008595003737634, x13_0 = 364266686766858640123870702352287, x14_0 = 1601397477353590921467875278423432, x15_0 = 579716602838158285430309758671164]
+The polynomial system widehat{E^t} contains  119 equations in  107  variables
 Locally identifiable paramters:  [c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_deg, k_prod, t1, t2, x1(0), x2(0), x3(0), x4(0), x5(0), x6(0), x7(0), x8(0), x9(0), x10(0), x11(0), x12(0), x13(0), x14(0)]
 Nonidentifiable parameter:  [x15(0)]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[i_1a = 1, k_prod = 1, x7_ = 0, x3_ = 0, k_deg = 1, k3 = 1, x12_ = 0, x11_ = 1, k1 = 1, c_4a = 1, t1 = 1, c5 = 2, x9_ = 0, e_2a = 1, (NULL) = 1, x5_ = 1, t2 = 1, x14_ = 1, x13_ = 0, x10_ = 0, x8_ = 1, k2 = 1, x6_ = 1, c_3a = 1, x4_ = 1, i1 = 1, x1_ = 0, x2_ = 0, c_2a = 1]
+Bound D_2 for assessing global identifiability:  2566365758000000000000000000000000
+Random sample for the outputs and inputs is generated from  [c5 = 1170503876042946209618132305478776, c_2a = 512871090979631152780687988878759, c_3a = 620141844190791223237861472279920, c_4a = 2271627371321835258317888817109580, e_2a = 1798453514907276205123946633740910, i1 = 1086495033029770709768747180555924, i_1a = 1525771837661560061578010503493806, k1 = 288617000988595268207229760722413, k2 = 1236278410327909162702660950697752, k3 = 991534521940411576999648081741759, k_deg = 1955362878709077756643240619482726, k_prod = 885421457892691291408326266495635, t1 = 2240087038776829037831201492515925, t2 = 2091232709779740263188491496765320, x1_0 = 796580174842916182065685448548607, x2_0 = 1540526382461929814576637979996549, x3_0 = 1885323852875283935320927529002535, x4_0 = 1787670849853319480145196075088060, x5_0 = 2347907671577131098010815668879474, x6_0 = 1284636586559688895167878696802742, x7_0 = 2364683326097195037987770174762513, x8_0 = 40260663199918115594006231134116, x9_0 = 424601854498470748599540501033683, x10_0 = 736224306559432020775486953761615, x11_0 = 573595420155617917538886574173446, x12_0 = 545077359516239970616282092500444, x13_0 = 2387007000472069356060078347680243, x14_0 = 1123667666683834761403417885288905, x15_0 = 2359301619833611996153033734494529]
+The polynomial system widehat{E^t} contains  119 equations in  107  variables
+Variable ordering to be used for Groebner basis computation [x2_7, x13_6, x10_6, x8_6, x5_6, x4_6, x3_6, x2_6, x1_6, x14_5, x13_5, x12_5, x11_5, x10_5, x9_5, x8_5, x7_5, x6_5, x5_5, x4_5, x3_5, x2_5, x1_5, x14_4, x13_4, x12_4, x11_4, x10_4, x9_4, x8_4, x7_4, x6_4, x5_4, x4_4, x3_4, x2_4, x1_4, x14_3, x13_3, x12_3, x11_3, x10_3, x9_3, x8_3, x7_3, x6_3, x5_3, x4_3, x3_3, x2_3, x1_3, x14_2, x13_2, x12_2, x11_2, x10_2, x9_2, x8_2, x7_2, x6_2, x5_2, x4_2, x3_2, x2_2, x1_2, x14_1, x13_1, x12_1, x11_1, x10_1, x9_1, x8_1, x7_1, x6_1, x5_1, x4_1, x3_1, x2_1, x1_1, x14_0, x13_0, x12_0, x11_0, x10_0, x9_0, x8_0, x7_0, x6_0, x5_0, x4_0, x3_0, x2_0, x1_0, z_aux, w_aux, c5, c_2a, c_3a, c_4a, e_2a, i1, i_1a, k1, k2, k3, k_deg, k_prod, t1, t2]
+Prep CPU Time (sub_transc=false):	 92.228
+Prep Real Elapsed Time (sub_transc=false):	 86.303
+memory used=12.33GiB, alloc change=32.73MiB, cpu time=92.23s, real time=86.31s, gc time=10.92s
+
+
+GetPolySystem Usage (real, cpu, memory):	86.306,	92.231,	13242740968
+
+States for substitution:	[x12_ = 0, k3 = 1, x8_ = 1, k2 = 1, i_1a = 1, x4_ = 1, x3_ = 0, x13_ = 0, c_2a = 1, x11_ = 1, t2 = 1, x9_ = 0, x7_ = 0, c_3a = 1, i1 = 1, k1 = 1, x14_ = 1, k_deg = 1, x10_ = 0, e_2a = 1, x6_ = 1, x5_ = 1, k_prod = 1, x2_ = 0, x1_ = 0, c_4a = 1, (NULL) = 1, t1 = 1, c5 = 2]
 NonID parameters:	[x15_0]
-Substitutions:	[x7_ = 1, x3_ = 1, x12_ = 1, x11_ = 2, c5 = 3, z_aux = 2, x9_ = 1, x5_ = 2, x14_ = 2, x13_ = 1, x10_ = 1, x8_ = 2, x6_ = 2, x4_ = 2, x1_ = 1, x2_ = 1]
-memory used=38688.0MB, alloc=185.3MB, time=273.84
+Substitutions:	[x12_ = 1, x8_ = 2, x4_ = 2, x3_ = 1, x13_ = 1, x11_ = 2, x9_ = 1, x7_ = 1, x14_ = 2, x10_ = 1, x6_ = 2, x5_ = 2, x2_ = 1, x1_ = 1, z_aux = 2, c5 = 3]
+memory used=12.36GiB, alloc change=32.73MiB, cpu time=92.57s, real time=86.65s, gc time=10.92s
+
+SubsByDepth Usage (real, cpu, memory):	86.649,	92.574,	13273128248
+
+memory used=38785.6MB, alloc=217.4MB, time=295.98

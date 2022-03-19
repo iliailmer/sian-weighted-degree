@@ -6,30 +6,78 @@
 # Ex 20 from  https://arxiv.org/abs/2006.14295
 > kernelopts(printbytes=false, assertlevel=1):
 > interface(echo=0, prettyprint=0):
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
+|imports/generate_poly_system.mpl:22|
+Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
+|imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
-|imports/generate_poly_system.mpl:324|
+|imports/generate_poly_system.mpl:326|
+Warning, (in GetPolySystem) `_` is implicitly declared local
+|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:428|
+Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
+|imports/generate_poly_system.mpl:429|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:490|
+|imports/generate_poly_system.mpl:500|
+Warning, (in SubsByDepth) `out` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `mem` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `cpu_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
+Warning, (in SubsByDepth) `real_time` is implicitly declared local
+|imports/create_substitutions.mpl:53|
 Warning, (in WriteScripts) `weights` is implicitly declared local
-|imports/create_substitutions.mpl:108|
+|imports/create_substitutions.mpl:111|
 Warning, (in WriteScripts) `max_degree` is implicitly declared local
-|imports/create_substitutions.mpl:109|
+|imports/create_substitutions.mpl:112|
 Warning, (in WriteScripts) `new_weights` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 Warning, (in WriteScripts) `each` is implicitly declared local
-|imports/create_substitutions.mpl:110|
+|imports/create_substitutions.mpl:113|
 sigma := [diff(S(t),t) = -S(t)*a*In(t)-S(t)*b*Dd(t)-S(t)*g*A(t)-S(t)*dlt*R(t),
 diff(In(t),t) = S(t)*a*In(t)+S(t)*b*Dd(t)+S(t)*g*A(t)+S(t)*dlt*R(t)-eps*In(t)-
 zeta*In(t)-lam*In(t), diff(Dd(t),t) = eps*In(t)-eta*Dd(t)-rho*Dd(t), diff(A(t),
@@ -57,6 +105,9 @@ Parameters in equations:  [a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho,
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  469800000
+Orders of prolongations of the outputs (beta) =  [19]
+Orders of prolongations of the state variables (alpha) =  [17, 18, 19, 18, 19, 19, 1, 1]
 
 =======================================================
 3. Assessing local identifiability
@@ -65,6 +116,9 @@ Parameters in equations:  [a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho,
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  905691285000000000000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a = 837236314001236080198634193766372387681417, b = 404255891430781760817258665676071309907269, dlt = 108709887849457432326611064778741239993009, eps = 154855235518454672116583744852041073799793, eta = 237781536231403156487731839779006193792592, g = 404386932470125893929932553264469560032431, kappa = 402532962052134260214137893285504770162263, ksi = 553762694395171693434339666641935850582983, lam = 695567130045732102993603023271740528110910, mu = 382417886585748089516174086634721784887633, nu = 600067484120545453423562179691253198655545, rho = 12980500506341395246705593724281872893307, sgm = 780630417482402997080218410363659278541308, ta = 573846286560092777574916899074785665748865, th = 511942622812104943672771374245782742505876, zeta = 794202613354014181521290220476000248651595, S_0 = 845531926699269080324162331816573463260884, In_0 = 100211535744587680100291865987461511261009, Dd_0 = 794333961890664245867066317153348040282780, A_0 = 419063657575996054933690588095859722643074, R_0 = 552343529677583762339221456778396429986707, Tt_0 = 364556055205421867429385637866963844313675, Hh_0 = 408212180797921896235883062296829720506394, E_0 = 229425824481729124962532083637446646184079]
+The polynomial system widehat{E^t} contains  123 equations in  126  variables
 Locally identifiable paramters:  [Dd(0)]
 Nonidentifiable parameter:  [A(0), E(0), Hh(0), In(0), R(0), S(0), Tt(0), a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho, sgm, ta, th, zeta]
 
@@ -73,208 +127,211 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {sgm, A(0), E(0), Hh(0), In(0), R(0)}
 Number of possible combinations 2025023364
-Collection [A_0, eps, Tt_11, nu, R_2, S_1] is not transcendence basis
-Collection [A_1, A_17, In_15, In_3, Tt_11, A_12] is not transcendence basis
-Collection [A_1, R_0, g, R_5, Tt_16, S_16] is not transcendence basis
-Collection [A_1, S_9, Tt_12, In_2, R_1, A_5] is not transcendence basis
-Collection [A_1, Tt_3, In_10, R_9, S_15, S_10] is not transcendence basis
-Collection [A_10, A_16, S_13, R_2, In_6, Tt_1] is not transcendence basis
-Collection [A_10, R_10, lam, sgm, R_9, A_8] is not transcendence basis
-Collection [A_10, th, lam, R_15, A_6, S_14] is not transcendence basis
-Collection [A_11, Tt_15, S_7, S_9, R_18, Tt_17] is not transcendence basis
-Collection [A_12, In_2, Tt_9, sgm, mu, In_5] is not transcendence basis
-Collection [A_13, In_14, Tt_16, A_12, In_6, S_5] is not transcendence basis
-Collection [A_13, S_7, Tt_11, eta, S_3, S_10] is not transcendence basis
-Collection [A_13, Tt_15, A_1, R_6, In_9, R_3] is not transcendence basis
-Collection [A_13, mu, ksi, S_0, zeta, Tt_16] is not transcendence basis
-Collection [A_14, E_0, R_18, Tt_16, A_10, In_9] is not transcendence basis
-Collection [A_14, Tt_6, In_17, S_11, A_6, Tt_17] is not transcendence basis
-Collection [A_15, A_3, a, In_3, R_18, Tt_7] is not transcendence basis
-Collection [A_15, R_14, kappa, zeta, S_14, th] is not transcendence basis
-Collection [A_15, S_12, Tt_14, R_7, In_4, a] is not transcendence basis
-Collection [A_15, S_13, S_4, Tt_13, th, In_10] is not transcendence basis
-Collection [A_15, g, In_1, R_6, S_15, R_12] is not transcendence basis
-Collection [A_15, mu, R_5, In_16, S_9, Hh_0] is not transcendence basis
-Collection [A_16, In_7, R_5, Tt_1, R_8, In_17] is not transcendence basis
-Collection [A_3, In_3, ksi, Tt_14, kappa, A_2] is not transcendence basis
-Collection [A_3, mu, S_11, In_2, In_16, In_8] is not transcendence basis
-Collection [A_4, In_13, A_8, S_9, Tt_17, In_16] is not transcendence basis
-Collection [A_4, S_1, S_5, Tt_4, In_0, R_7] is not transcendence basis
-Collection [A_5, R_1, eta, S_16, A_7, Tt_16] is not transcendence basis
-Collection [A_7, In_1, A_13, A_11, S_1, ksi] is not transcendence basis
-Collection [A_7, S_15, S_5, g, S_1, In_1] is not transcendence basis
-Collection [A_7, Tt_9, R_12, S_6, R_11, In_1] is not transcendence basis
-Collection [A_8, A_3, Hh_0, Tt_12, S_13, A_9] is not transcendence basis
-Collection [A_8, In_16, S_6, A_16, R_10, In_8] is not transcendence basis
-Collection [A_8, S_3, R_7, A_3, Tt_3, Tt_10] is not transcendence basis
-Collection [A_8, g, In_0, S_0, Hh_0, Tt_6] is not transcendence basis
-Collection [E_0, A_13, In_1, th, eps, In_14] is not transcendence basis
-Collection [In_0, A_0, eps, g, zeta, A_10] is not transcendence basis
-Collection [In_0, S_5, A_0, Tt_1, In_9, a] is not transcendence basis
-Collection [In_1, a, Tt_6, R_1, S_11, R_18] is not transcendence basis
-Collection [In_10, A_2, R_17, a, In_11, A_16] is not transcendence basis
-Collection [In_10, S_3, R_1, Tt_9, S_14, Tt_12] is not transcendence basis
-Collection [In_10, Tt_5, R_15, Tt_2, b, mu] is not transcendence basis
-Collection [In_11, A_6, In_17, In_13, In_16, A_10] is not transcendence basis
-Collection [In_12, A_2, In_13, In_17, R_9, A_1] is not transcendence basis
-Collection [In_12, A_9, In_1, A_14, Tt_13, th] is not transcendence basis
-Collection [In_12, A_9, In_15, In_16, S_10, Tt_3] is not transcendence basis
-Collection [In_13, A_14, Tt_11, Tt_17, In_12, R_9] is not transcendence basis
-Collection [In_13, Tt_5, A_17, A_8, Tt_6, In_10] is not transcendence basis
-Collection [In_14, S_8, Tt_7, dlt, Tt_13, nu] is not transcendence basis
-Collection [In_14, lam, Tt_17, dlt, Hh_0, R_5] is not transcendence basis
-Collection [In_15, In_5, S_16, In_6, S_14, S_10] is not transcendence basis
-Collection [In_16, Tt_17, zeta, A_11, In_11, R_10] is not transcendence basis
-Collection [In_17, S_9, In_0, In_13, Tt_4, In_15] is not transcendence basis
-Collection [In_17, Tt_11, Tt_9, A_5, mu, S_13] is not transcendence basis
-Collection [In_2, R_0, rho, In_16, Tt_9, Tt_15] is not transcendence basis
-Collection [In_3, Tt_4, eta, Tt_10, In_13, Tt_17] is not transcendence basis
-Collection [In_4, A_5, eta, Tt_7, Tt_2, R_13] is not transcendence basis
-Collection [In_4, mu, g, Tt_9, S_11, In_6] is not transcendence basis
-Collection [In_5, In_16, R_3, A_17, In_7, R_15] is not transcendence basis
-Collection [In_6, R_7, R_11, A_17, A_12, S_3] is not transcendence basis
-Collection [In_7, A_11, In_13, Hh_0, Tt_9, R_14] is not transcendence basis
-Collection [In_7, R_5, S_6, S_8, A_0, In_17] is not transcendence basis
-Collection [In_7, S_12, sgm, In_11, Tt_11, R_1] is not transcendence basis
-Collection [In_7, Tt_6, Tt_12, Tt_16, In_10, R_8] is not transcendence basis
-Collection [In_7, a, A_2, rho, A_8, A_1] is not transcendence basis
-Collection [In_7, eta, In_3, R_13, A_7, S_14] is not transcendence basis
-Collection [In_8, S_7, A_13, R_6, A_2, A_4] is not transcendence basis
-Collection [In_8, ta, A_5, R_0, Hh_0, S_11] is not transcendence basis
-Collection [In_9, S_6, Tt_4, S_13, In_2, R_11] is not transcendence basis
-Collection [In_9, Tt_0, R_5, In_8, R_13, R_15] is not transcendence basis
-Collection [R_0, E_0, In_17, A_3, A_5, ta] is not transcendence basis
-Collection [R_0, R_9, Tt_9, E_0, A_6, In_8] is not transcendence basis
-Collection [R_0, Tt_2, nu, S_9, A_9, Tt_5] is not transcendence basis
-Collection [R_1, A_2, R_17, A_1, A_6, In_8] is not transcendence basis
-Collection [R_1, S_11, R_7, A_1, R_9, A_15] is not transcendence basis
-Collection [R_1, Tt_10, In_14, dlt, S_13, R_5] is not transcendence basis
-Collection [R_1, mu, In_14, In_8, S_11, A_13] is not transcendence basis
-Collection [R_11, b, ksi, nu, A_16, Tt_14] is not transcendence basis
-Collection [R_12, A_16, Tt_5, In_15, R_18, Tt_13] is not transcendence basis
-Collection [R_12, R_16, A_4, In_15, Tt_6, lam] is not transcendence basis
-Collection [R_12, S_5, S_14, S_15, E_0, In_7] is not transcendence basis
-Collection [R_13, In_4, S_12, In_17, R_1, Tt_8] is not transcendence basis
-Collection [R_13, S_14, In_1, Tt_11, In_16, R_15] is not transcendence basis
-Collection [R_14, A_15, A_3, R_7, A_11, R_6] is not transcendence basis
-Collection [R_14, S_15, Tt_0, S_1, A_3, S_0] is not transcendence basis
-Collection [R_15, In_2, R_0, A_10, eta, A_0] is not transcendence basis
-Collection [R_15, Tt_6, b, A_14, Tt_13, eps] is not transcendence basis
-Collection [R_15, mu, Tt_13, S_6, sgm, R_18] is not transcendence basis
-Collection [R_16, In_0, Tt_8, R_0, Tt_6, g] is not transcendence basis
-Collection [R_16, R_17, In_9, S_10, Tt_4, A_16] is not transcendence basis
-Collection [R_17, R_2, g, In_9, Tt_1, Tt_17] is not transcendence basis
-Collection [R_17, S_9, R_14, Tt_8, S_0, R_10] is not transcendence basis
-Collection [R_18, S_9, Tt_18, A_0, A_2, In_14] is not transcendence basis
-Collection [R_2, A_14, R_13, Tt_6, S_5, A_9] is not transcendence basis
-Collection [R_2, Tt_4, In_13, S_16, Tt_17, A_5] is not transcendence basis
-Collection [R_2, Tt_7, A_17, Tt_12, kappa, R_14] is not transcendence basis
-Collection [R_3, S_11, A_3, S_6, In_1, lam] is not transcendence basis
-Collection [R_4, In_17, R_16, rho, In_11, b] is not transcendence basis
-Collection [R_4, S_5, In_10, R_15, Tt_7, In_17] is not transcendence basis
-Collection [R_6, In_13, S_7, In_1, b, In_8] is not transcendence basis
-Collection [R_7, S_2, Tt_4, S_4, ksi, R_9] is not transcendence basis
-Collection [R_8, A_11, E_0, In_14, A_1, Tt_1] is not transcendence basis
-Collection [R_8, In_2, Tt_14, Tt_13, g, ksi] is not transcendence basis
-Collection [R_9, A_5, A_9, R_5, S_15, In_4] is not transcendence basis
-Collection [R_9, Hh_0, A_17, Tt_14, In_15, A_10] is not transcendence basis
-Collection [S_10, In_14, In_0, A_12, S_7, Tt_15] is not transcendence basis
-Collection [S_11, A_2, Tt_3, E_0, Tt_11, A_5] is not transcendence basis
-Collection [S_12, R_12, ta, ksi, In_0, R_5] is not transcendence basis
-Collection [S_12, S_5, A_12, R_2, In_17, A_13] is not transcendence basis
-Collection [S_13, A_6, Tt_13, Tt_1, In_0, A_8] is not transcendence basis
-Collection [S_13, R_12, A_13, R_1, nu, R_3] is not transcendence basis
-Collection [S_13, R_7, Tt_1, R_17, Tt_18, Tt_4] is not transcendence basis
-Collection [S_13, S_1, In_12, A_2, S_9, Tt_11] is not transcendence basis
-Collection [S_14, S_2, kappa, A_7, dlt, A_13] is not transcendence basis
-Collection [S_14, ksi, R_0, S_0, R_11, A_0] is not transcendence basis
-Collection [S_15, R_9, A_9, A_8, In_13, S_4] is not transcendence basis
-Collection [S_15, Tt_3, R_0, In_8, A_0, R_16] is not transcendence basis
-Collection [S_16, R_2, R_14, g, In_16, Hh_0] is not transcendence basis
-Collection [S_16, S_1, zeta, S_14, A_0, A_14] is not transcendence basis
-Collection [S_2, In_1, R_6, zeta, In_8, A_10] is not transcendence basis
-Collection [S_4, In_8, R_17, dlt, zeta, R_13] is not transcendence basis
-Collection [S_4, R_2, A_1, Tt_12, A_17, A_9] is not transcendence basis
-Collection [S_4, b, Tt_13, A_8, Tt_8, In_11] is not transcendence basis
-Collection [S_5, In_7, In_9, Hh_0, A_16, S_6] is not transcendence basis
-Collection [S_6, A_5, A_0, dlt, R_0, Tt_7] is not transcendence basis
-Collection [S_6, S_11, S_5, A_4, R_13, S_15] is not transcendence basis
-Collection [S_7, A_0, R_9, In_5, S_3, nu] is not transcendence basis
-Collection [S_7, In_17, mu, S_3, Tt_13, a] is not transcendence basis
-Collection [S_7, Tt_17, Tt_7, R_14, S_3, g] is not transcendence basis
-Collection [S_7, mu, R_1, R_3, Tt_18, R_15] is not transcendence basis
-Collection [S_8, Tt_7, In_3, Tt_10, Tt_17, R_1] is not transcendence basis
-Collection [S_9, E_0, S_12, g, dlt, In_5] is not transcendence basis
-Collection [S_9, In_15, R_16, b, Hh_0, A_17] is not transcendence basis
-Collection [S_9, R_12, In_4, In_11, Tt_12, R_15] is not transcendence basis
-Collection [Tt_0, R_10, S_5, In_10, Tt_11, S_0] is not transcendence basis
-Collection [Tt_1, R_14, A_9, Tt_16, A_0, A_3] is not transcendence basis
-Collection [Tt_1, Tt_2, S_15, A_4, S_0, Tt_14] is not transcendence basis
-Collection [Tt_11, A_11, In_13, Tt_13, In_7, kappa] is not transcendence basis
-Collection [Tt_11, Tt_18, S_12, g, Tt_13, Tt_3] is not transcendence basis
-Collection [Tt_11, Tt_7, In_5, ksi, In_7, R_2] is not transcendence basis
-Collection [Tt_12, Tt_13, eps, ksi, A_14, R_3] is not transcendence basis
-Collection [Tt_14, Tt_17, R_9, Tt_8, R_3, Tt_18] is not transcendence basis
-Collection [Tt_14, Tt_7, A_16, Tt_12, mu, a] is not transcendence basis
-Collection [Tt_14, Tt_9, A_5, eps, In_10, S_1] is not transcendence basis
-Collection [Tt_15, Tt_0, In_7, In_4, S_4, a] is not transcendence basis
-Collection [Tt_16, S_7, sgm, R_0, S_6, ksi] is not transcendence basis
-Collection [Tt_16, Tt_10, S_14, S_13, R_15, R_7] is not transcendence basis
-Collection [Tt_16, Tt_18, In_14, S_15, Tt_17, Tt_7] is not transcendence basis
-Collection [Tt_17, R_16, A_8, a, In_8, S_10] is not transcendence basis
-Collection [Tt_17, Tt_4, nu, S_7, A_16, A_12] is not transcendence basis
-Collection [Tt_17, Tt_7, Hh_0, In_16, Tt_8, S_12] is not transcendence basis
-Collection [Tt_18, E_0, R_18, R_8, Tt_7, Tt_3] is not transcendence basis
-Collection [Tt_18, R_11, R_18, In_10, Tt_0, In_15] is not transcendence basis
-Collection [Tt_18, ksi, R_8, A_17, Tt_11, R_5] is not transcendence basis
-Collection [Tt_2, R_18, Tt_11, A_15, In_11, R_11] is not transcendence basis
-Collection [Tt_2, R_3, R_14, A_9, S_15, Tt_7] is not transcendence basis
-Collection [Tt_2, S_1, R_16, In_17, Tt_8, S_16] is not transcendence basis
-Collection [Tt_3, R_3, A_0, R_10, Tt_11, In_14] is not transcendence basis
-Collection [Tt_4, S_0, Tt_7, Hh_0, Tt_8, In_0] is not transcendence basis
-Collection [Tt_4, Tt_13, lam, R_15, R_9, S_5] is not transcendence basis
-Collection [Tt_4, Tt_6, In_11, Tt_15, S_5, R_7] is not transcendence basis
-Collection [Tt_4, g, zeta, Tt_11, th, In_13] is not transcendence basis
-Collection [Tt_6, S_11, In_13, ta, R_12, R_10] is not transcendence basis
-Collection [Tt_6, Tt_3, a, Tt_9, A_2, A_14] is not transcendence basis
-Collection [Tt_7, S_15, R_11, Tt_18, zeta, S_1] is not transcendence basis
-Collection [Tt_7, S_15, S_8, S_16, S_4, Tt_16] is not transcendence basis
-Collection [Tt_8, g, Tt_3, S_15, In_17, ksi] is not transcendence basis
-Collection [Tt_9, In_8, Tt_5, S_12, S_9, Tt_11] is not transcendence basis
-Collection [Tt_9, R_3, Tt_11, A_9, Tt_14, A_10] is not transcendence basis
-Collection [Tt_9, S_2, Tt_6, b, th, Tt_10] is not transcendence basis
-Collection [a, In_2, A_6, dlt, eps, R_6] is not transcendence basis
-Collection [a, S_13, R_7, R_2, Tt_10, A_1] is not transcendence basis
-Collection [b, S_0, Tt_6, A_4, In_5, R_4] is not transcendence basis
-Collection [dlt, R_3, In_5, R_15, R_8, rho] is not transcendence basis
-Collection [dlt, kappa, A_2, A_16, th, In_16] is not transcendence basis
-Collection [dlt, ksi, In_15, R_16, S_7, R_15] is not transcendence basis
-Collection [eps, In_17, Tt_16, A_1, A_3, R_3] is not transcendence basis
-Collection [eta, A_10, R_4, R_10, E_0, A_5] is not transcendence basis
-Collection [eta, A_12, S_11, th, In_17, Tt_5] is not transcendence basis
-Collection [eta, In_11, In_13, R_12, R_10, Tt_3] is not transcendence basis
-Collection [eta, S_0, In_11, S_10, R_0, kappa] is not transcendence basis
-Collection [eta, S_10, R_9, R_8, R_14, S_3] is not transcendence basis
-Collection [eta, S_13, A_2, S_6, mu, Tt_15] is not transcendence basis
-Collection [eta, S_2, R_6, S_9, S_5, Tt_15] is not transcendence basis
-Collection [eta, S_5, In_14, A_5, S_16, In_6] is not transcendence basis
-Collection [kappa, S_16, Tt_7, A_0, R_8, A_11] is not transcendence basis
-Collection [kappa, b, In_5, S_2, In_13, S_11] is not transcendence basis
-Collection [ksi, In_12, R_15, S_7, A_12, nu] is not transcendence basis
-Collection [ksi, Tt_4, Tt_10, R_6, A_2, Tt_3] is not transcendence basis
-Collection [lam, R_10, S_12, sgm, S_15, eps] is not transcendence basis
-Collection [lam, a, Tt_16, Tt_17, A_7, R_2] is not transcendence basis
-Collection [mu, A_16, S_2, g, A_11, dlt] is not transcendence basis
-Collection [mu, Hh_0, Tt_13, Tt_11, In_3, S_7] is not transcendence basis
-Collection [mu, In_17, S_1, In_16, A_0, R_4] is not transcendence basis
-Collection [mu, R_7, R_5, A_16, R_14, A_8] is not transcendence basis
-Collection [sgm, In_10, Tt_10, nu, In_15, In_0] is not transcendence basis
-Collection [th, R_11, A_1, Tt_18, S_9, R_0] is not transcendence basis
-Collection [zeta, In_10, In_12, eps, Tt_7, A_8] is not transcendence basis
-Collection [zeta, ta, A_6, R_17, A_1, In_2] is not transcendence basis
+Collection [A_0, In_16, In_17, Tt_16, In_10, R_14] is not transcendence basis
+Collection [A_1, Tt_17, R_13, R_16, R_12, Tt_2] is not transcendence basis
+Collection [A_10, Tt_11, Tt_8, In_2, eta, R_8] is not transcendence basis
+Collection [A_11, In_9, S_13, In_0, A_16, S_9] is not transcendence basis
+Collection [A_11, Tt_17, E_0, Tt_1, g, A_13] is not transcendence basis
+Collection [A_11, Tt_2, A_0, A_9, Tt_18, In_3] is not transcendence basis
+Collection [A_11, kappa, sgm, A_17, R_4, a] is not transcendence basis
+Collection [A_13, R_0, Tt_10, S_1, R_18, In_1] is not transcendence basis
+Collection [A_13, R_6, kappa, In_15, Tt_9, ta] is not transcendence basis
+Collection [A_13, R_8, S_4, lam, Tt_14, A_5] is not transcendence basis
+Collection [A_13, S_14, S_15, In_1, In_17, A_5] is not transcendence basis
+Collection [A_13, Tt_0, Tt_9, R_8, nu, Tt_17] is not transcendence basis
+Collection [A_13, lam, mu, Tt_1, Tt_6, nu] is not transcendence basis
+Collection [A_14, In_8, th, R_14, In_6, R_1] is not transcendence basis
+Collection [A_14, mu, S_2, S_6, In_4, Tt_15] is not transcendence basis
+Collection [A_15, A_4, R_14, rho, In_8, S_3] is not transcendence basis
+Collection [A_16, Tt_5, A_17, S_2, Tt_10, In_3] is not transcendence basis
+Collection [A_17, R_9, sgm, Tt_9, S_3, A_5] is not transcendence basis
+Collection [A_2, R_4, Tt_11, In_12, R_13, R_15] is not transcendence basis
+Collection [A_2, dlt, In_8, Tt_9, A_14, eta] is not transcendence basis
+Collection [A_3, S_10, In_5, Tt_10, In_1, A_8] is not transcendence basis
+Collection [A_3, ta, S_16, R_16, A_15, Tt_10] is not transcendence basis
+Collection [A_4, A_12, R_16, S_2, S_14, R_15] is not transcendence basis
+Collection [A_5, Tt_1, th, In_0, A_9, In_13] is not transcendence basis
+Collection [A_6, A_13, A_4, a, eps, S_3] is not transcendence basis
+Collection [A_6, Tt_3, S_9, mu, R_17, lam] is not transcendence basis
+Collection [A_8, A_17, lam, R_18, In_1, R_17] is not transcendence basis
+Collection [A_8, g, R_5, Tt_16, S_15, R_18] is not transcendence basis
+Collection [A_9, A_0, S_11, In_6, In_4, S_9] is not transcendence basis
+Collection [A_9, S_10, In_3, A_5, In_6, R_8] is not transcendence basis
+Collection [A_9, Tt_6, In_3, A_16, A_3, Tt_0] is not transcendence basis
+Collection [A_9, a, R_18, R_3, A_8, In_7] is not transcendence basis
+Collection [E_0, In_14, In_9, A_1, In_13, S_4] is not transcendence basis
+Collection [E_0, R_13, R_17, R_4, th, Tt_11] is not transcendence basis
+Collection [E_0, ksi, Tt_7, In_0, R_8, R_5] is not transcendence basis
+Collection [E_0, th, A_13, dlt, b, In_4] is not transcendence basis
+Collection [Hh_0, Tt_1, Tt_6, R_2, S_11, th] is not transcendence basis
+Collection [Hh_0, Tt_5, R_18, A_15, S_0, R_3] is not transcendence basis
+Collection [In_1, In_2, S_10, A_17, Tt_14, S_12] is not transcendence basis
+Collection [In_1, Tt_8, S_5, A_14, R_2, Tt_2] is not transcendence basis
+Collection [In_10, A_5, R_11, A_0, A_10, Tt_15] is not transcendence basis
+Collection [In_10, R_0, R_18, R_12, Tt_13, rho] is not transcendence basis
+Collection [In_10, R_5, kappa, R_11, S_6, A_6] is not transcendence basis
+Collection [In_11, A_0, A_14, S_6, rho, kappa] is not transcendence basis
+Collection [In_11, In_8, A_10, A_6, A_1, A_9] is not transcendence basis
+Collection [In_11, a, In_5, R_17, dlt, Tt_8] is not transcendence basis
+Collection [In_12, R_11, In_1, A_15, Tt_18, A_4] is not transcendence basis
+Collection [In_13, Tt_18, S_1, ksi, Tt_16, g] is not transcendence basis
+Collection [In_14, In_8, In_10, Tt_12, Tt_14, R_18] is not transcendence basis
+Collection [In_15, S_8, S_4, In_4, In_10, R_5] is not transcendence basis
+Collection [In_15, Tt_9, R_4, S_13, Tt_18, S_11] is not transcendence basis
+Collection [In_16, In_10, S_7, In_2, R_5, S_10] is not transcendence basis
+Collection [In_16, R_14, R_8, In_9, Tt_0, A_14] is not transcendence basis
+Collection [In_17, S_0, Tt_12, Tt_8, S_1, S_10] is not transcendence basis
+Collection [In_2, R_1, A_17, Tt_15, S_13, Tt_5] is not transcendence basis
+Collection [In_2, Tt_6, S_13, R_12, Tt_12, A_5] is not transcendence basis
+Collection [In_2, th, Tt_18, S_9, Tt_14, a] is not transcendence basis
+Collection [In_3, A_4, th, Tt_5, S_3, b] is not transcendence basis
+Collection [In_3, In_5, R_4, R_16, sgm, In_15] is not transcendence basis
+Collection [In_3, In_8, S_4, Tt_12, S_1, A_10] is not transcendence basis
+Collection [In_3, S_1, Tt_12, A_6, sgm, mu] is not transcendence basis
+Collection [In_3, S_11, E_0, A_16, In_0, S_0] is not transcendence basis
+Collection [In_3, S_5, Tt_2, A_9, dlt, kappa] is not transcendence basis
+Collection [In_3, g, a, Tt_7, A_0, A_8] is not transcendence basis
+Collection [In_5, sgm, A_9, A_15, S_3, S_12] is not transcendence basis
+Collection [In_6, A_6, sgm, S_12, nu, R_14] is not transcendence basis
+Collection [In_6, R_6, A_17, rho, In_5, g] is not transcendence basis
+Collection [In_7, A_8, Tt_11, dlt, eps, Tt_14] is not transcendence basis
+Collection [In_7, a, A_2, R_6, Hh_0, A_1] is not transcendence basis
+Collection [In_7, rho, kappa, ksi, In_17, S_5] is not transcendence basis
+Collection [In_8, g, A_0, R_13, Tt_18, lam] is not transcendence basis
+Collection [In_8, ta, R_1, In_17, g, S_11] is not transcendence basis
+Collection [In_9, Tt_18, S_11, R_18, A_3, R_11] is not transcendence basis
+Collection [R_0, A_13, A_14, mu, R_7, Tt_14] is not transcendence basis
+Collection [R_0, A_7, R_13, R_4, S_5, sgm] is not transcendence basis
+Collection [R_0, b, Tt_16, In_15, A_7, Tt_18] is not transcendence basis
+Collection [R_10, A_0, b, A_12, R_8, eta] is not transcendence basis
+Collection [R_10, A_3, A_6, S_5, S_15, Tt_2] is not transcendence basis
+Collection [R_10, Hh_0, R_13, Tt_6, S_13, S_16] is not transcendence basis
+Collection [R_10, Tt_1, A_6, In_5, Tt_17, Tt_0] is not transcendence basis
+Collection [R_13, E_0, R_12, Tt_16, R_16, A_8] is not transcendence basis
+Collection [R_14, R_1, In_0, R_18, nu, rho] is not transcendence basis
+Collection [R_15, R_11, R_17, R_16, In_11, A_12] is not transcendence basis
+Collection [R_15, S_3, S_11, S_5, R_13, S_4] is not transcendence basis
+Collection [R_15, ta, In_8, kappa, Tt_4, S_2] is not transcendence basis
+Collection [R_16, S_3, R_13, In_0, In_13, In_8] is not transcendence basis
+Collection [R_16, Tt_9, S_12, S_16, In_10, eps] is not transcendence basis
+Collection [R_17, S_8, A_14, ta, Tt_12, S_3] is not transcendence basis
+Collection [R_17, S_8, A_17, Tt_17, R_16, A_10] is not transcendence basis
+Collection [R_18, In_12, Tt_7, S_2, Tt_1, R_7] is not transcendence basis
+Collection [R_18, S_13, A_7, Hh_0, In_5, Tt_14] is not transcendence basis
+Collection [R_18, eta, Tt_6, ksi, S_2, R_16] is not transcendence basis
+Collection [R_2, a, Tt_11, Tt_16, A_9, R_6] is not transcendence basis
+Collection [R_2, eps, eta, R_5, R_14, Tt_15] is not transcendence basis
+Collection [R_2, g, A_3, mu, In_17, In_8] is not transcendence basis
+Collection [R_2, th, S_2, A_7, In_8, Tt_18] is not transcendence basis
+Collection [R_4, A_7, eta, Tt_0, A_8, A_10] is not transcendence basis
+Collection [R_4, ta, A_15, S_12, R_1, E_0] is not transcendence basis
+Collection [R_5, S_5, R_9, S_12, R_7, R_1] is not transcendence basis
+Collection [R_6, In_1, Tt_8, A_15, In_0, Tt_0] is not transcendence basis
+Collection [R_6, In_12, Tt_15, S_1, Tt_7, S_14] is not transcendence basis
+Collection [R_7, A_12, R_6, S_4, In_0, A_6] is not transcendence basis
+Collection [R_7, A_3, R_2, A_5, R_17, A_13] is not transcendence basis
+Collection [R_7, R_18, In_0, Tt_1, A_12, b] is not transcendence basis
+Collection [R_7, lam, S_10, A_15, S_6, Tt_6] is not transcendence basis
+Collection [R_8, A_1, In_1, R_5, S_11, R_2] is not transcendence basis
+Collection [R_8, R_10, In_6, Tt_4, In_9, g] is not transcendence basis
+Collection [R_8, R_6, In_10, b, A_16, S_11] is not transcendence basis
+Collection [R_9, S_15, In_15, S_0, In_6, kappa] is not transcendence basis
+Collection [S_0, In_2, A_3, S_11, Tt_8, R_18] is not transcendence basis
+Collection [S_1, R_12, R_4, R_6, A_4, Tt_9] is not transcendence basis
+Collection [S_10, eta, S_2, A_16, Tt_6, Tt_15] is not transcendence basis
+Collection [S_10, nu, Tt_7, R_2, S_12, A_1] is not transcendence basis
+Collection [S_11, In_4, R_8, Tt_6, In_8, A_3] is not transcendence basis
+Collection [S_11, R_5, mu, A_5, In_9, Tt_6] is not transcendence basis
+Collection [S_11, Tt_18, In_2, In_15, lam, eta] is not transcendence basis
+Collection [S_12, In_16, Tt_12, S_2, Tt_14, Tt_13] is not transcendence basis
+Collection [S_12, R_10, R_3, b, S_7, R_4] is not transcendence basis
+Collection [S_13, S_16, Tt_17, R_14, A_7, A_5] is not transcendence basis
+Collection [S_13, S_7, A_9, lam, S_3, S_4] is not transcendence basis
+Collection [S_14, Tt_13, a, Tt_10, Tt_9, R_17] is not transcendence basis
+Collection [S_16, Tt_5, In_8, a, Tt_12, S_9] is not transcendence basis
+Collection [S_2, A_17, In_15, A_14, R_17, A_15] is not transcendence basis
+Collection [S_2, ksi, eta, In_8, eps, Tt_11] is not transcendence basis
+Collection [S_3, A_0, A_7, A_1, R_2, Tt_6] is not transcendence basis
+Collection [S_3, S_6, A_4, S_12, eps, Tt_0] is not transcendence basis
+Collection [S_3, Tt_18, R_15, A_10, R_17, S_4] is not transcendence basis
+Collection [S_3, Tt_9, Tt_14, In_1, Tt_5, In_6] is not transcendence basis
+Collection [S_4, In_10, S_9, A_4, R_10, R_1] is not transcendence basis
+Collection [S_4, S_7, R_1, Tt_16, Tt_9, A_8] is not transcendence basis
+Collection [S_4, Tt_18, sgm, In_12, R_12, Tt_12] is not transcendence basis
+Collection [S_6, R_15, R_16, R_11, In_10, R_5] is not transcendence basis
+Collection [S_6, S_0, S_7, A_8, R_12, E_0] is not transcendence basis
+Collection [S_6, Tt_3, R_2, In_2, R_14, R_11] is not transcendence basis
+Collection [S_7, R_5, A_14, kappa, S_3, A_5] is not transcendence basis
+Collection [S_7, eta, In_17, A_17, S_10, S_9] is not transcendence basis
+Collection [S_9, S_3, Hh_0, S_6, b, In_17] is not transcendence basis
+Collection [S_9, S_8, nu, In_6, R_7, Tt_3] is not transcendence basis
+Collection [Tt_0, Tt_9, zeta, A_14, A_9, A_7] is not transcendence basis
+Collection [Tt_1, In_0, In_4, A_17, Tt_17, In_15] is not transcendence basis
+Collection [Tt_1, R_17, In_9, Tt_4, Tt_7, R_8] is not transcendence basis
+Collection [Tt_11, A_2, R_10, Tt_17, R_0, In_8] is not transcendence basis
+Collection [Tt_11, Tt_7, E_0, ksi, S_8, A_17] is not transcendence basis
+Collection [Tt_12, A_11, S_7, S_3, In_14, A_5] is not transcendence basis
+Collection [Tt_12, eta, R_12, S_1, kappa, E_0] is not transcendence basis
+Collection [Tt_13, In_2, mu, In_9, S_1, S_0] is not transcendence basis
+Collection [Tt_13, R_9, R_0, S_13, S_1, nu] is not transcendence basis
+Collection [Tt_13, rho, A_11, R_1, R_8, Tt_10] is not transcendence basis
+Collection [Tt_14, R_10, eta, A_13, eps, mu] is not transcendence basis
+Collection [Tt_14, R_2, A_17, A_7, R_8, zeta] is not transcendence basis
+Collection [Tt_14, S_11, A_5, A_7, A_10, In_13] is not transcendence basis
+Collection [Tt_14, Tt_12, R_11, S_9, S_12, S_8] is not transcendence basis
+Collection [Tt_14, Tt_7, Tt_15, A_3, eta, A_1] is not transcendence basis
+Collection [Tt_14, rho, R_9, Tt_10, S_10, R_6] is not transcendence basis
+Collection [Tt_15, Tt_16, Tt_8, S_1, In_5, In_3] is not transcendence basis
+Collection [Tt_16, In_12, R_0, In_16, R_10, rho] is not transcendence basis
+Collection [Tt_16, R_11, In_11, R_14, sgm, eta] is not transcendence basis
+Collection [Tt_17, In_5, sgm, S_15, In_15, In_6] is not transcendence basis
+Collection [Tt_18, A_9, A_15, A_3, Tt_15, A_11] is not transcendence basis
+Collection [Tt_18, S_10, In_7, S_12, R_4, ksi] is not transcendence basis
+Collection [Tt_18, Tt_5, S_13, R_14, eta, a] is not transcendence basis
+Collection [Tt_2, S_6, R_14, R_18, In_2, S_1] is not transcendence basis
+Collection [Tt_4, a, In_8, Tt_7, A_17, A_0] is not transcendence basis
+Collection [Tt_5, A_4, Tt_11, S_2, Tt_6, In_11] is not transcendence basis
+Collection [Tt_5, A_8, S_3, Tt_0, In_7, S_13] is not transcendence basis
+Collection [Tt_5, In_15, Tt_17, A_8, Tt_12, g] is not transcendence basis
+Collection [Tt_5, In_7, In_13, A_10, zeta, In_5] is not transcendence basis
+Collection [Tt_6, S_16, A_12, S_12, A_0, ta] is not transcendence basis
+Collection [Tt_8, R_15, In_4, rho, Tt_3, R_2] is not transcendence basis
+Collection [Tt_8, Tt_1, Tt_6, ksi, In_6, In_3] is not transcendence basis
+Collection [Tt_8, sgm, A_11, In_2, R_5, rho] is not transcendence basis
+Collection [Tt_9, A_0, S_8, th, S_15, S_7] is not transcendence basis
+Collection [Tt_9, R_15, S_10, g, R_1, Tt_2] is not transcendence basis
+Collection [Tt_9, Tt_11, R_8, a, In_7, In_8] is not transcendence basis
+Collection [a, Tt_9, Tt_11, R_8, S_6, In_14] is not transcendence basis
+Collection [b, A_13, S_7, In_15, Tt_15, R_4] is not transcendence basis
+Collection [b, A_9, Tt_12, S_9, Tt_9, rho] is not transcendence basis
+Collection [b, S_3, A_11, Tt_11, Tt_18, R_4] is not transcendence basis
+Collection [dlt, S_5, In_4, A_16, A_2, R_14] is not transcendence basis
+Collection [dlt, Tt_12, ksi, In_6, rho, b] is not transcendence basis
+Collection [dlt, Tt_8, Tt_9, S_11, Tt_7, S_15] is not transcendence basis
+Collection [eps, R_17, Tt_17, Tt_4, g, A_12] is not transcendence basis
+Collection [g, E_0, R_0, A_10, eps, A_6] is not transcendence basis
+Collection [g, R_16, Tt_16, Tt_7, S_2, R_15] is not transcendence basis
+Collection [kappa, g, R_12, In_10, lam, A_6] is not transcendence basis
+Collection [ksi, A_4, R_7, In_8, In_2, A_6] is not transcendence basis
+Collection [ksi, ta, R_4, S_16, Tt_9, b] is not transcendence basis
+Collection [lam, E_0, In_13, S_2, A_12, In_11] is not transcendence basis
+Collection [lam, In_3, Tt_2, Tt_16, Tt_15, Tt_7] is not transcendence basis
+Collection [mu, S_3, In_4, S_10, In_17, R_11] is not transcendence basis
+Collection [nu, b, A_1, R_9, Tt_12, In_3] is not transcendence basis
+Collection [rho, In_13, R_8, In_15, A_8, S_14] is not transcendence basis
+Collection [rho, In_13, S_2, Tt_11, ksi, S_3] is not transcendence basis
+Collection [rho, In_13, Tt_2, In_12, A_2, S_15] is not transcendence basis
+Collection [rho, R_11, In_5, Tt_11, S_2, R_3] is not transcendence basis
+Collection [sgm, In_7, S_12, S_4, A_11, Tt_7] is not transcendence basis
+Collection [sgm, zeta, R_16, S_12, Tt_4, eta] is not transcendence basis
+Collection [th, In_7, R_14, S_9, kappa, R_18] is not transcendence basis
+Collection [th, b, R_12, Tt_17, Tt_14, Tt_3] is not transcendence basis
 Picked the best choice [A_0, E_0, Hh_0, In_0, R_0, sgm] based on heuristic:
 Algebraically independent parameters among nonidentifiable: {sgm}
 Algebraically independent parameters among derivatives: {A(0), E(0), Hh(0), In(0), R(0)}
+	Adding ODEs: [diff(sgm(t),t) = 0]
+	Adding output functions: [y_faux1(t) = sgm(t)]
+	New system: [diff(sgm(t),t) = 0, diff(S(t),t) = -S(t)*a*In(t)-S(t)*b*Dd(t)-S(t)*g*A(t)-S(t)*dlt*R(t), diff(In(t),t) = S(t)*a*In(t)+S(t)*b*Dd(t)+S(t)*g*A(t)+S(t)*dlt*R(t)-eps*In(t)-zeta*In(t)-lam*In(t), diff(Dd(t),t) = eps*In(t)-eta*Dd(t)-rho*Dd(t), diff(A(t),t) = zeta*In(t)-th*A(t)-mu*A(t)-kappa*A(t), diff(R(t),t) = eta*Dd(t)+th*A(t)-nu*R(t)-ksi*R(t), diff(Tt(t),t) = mu*A(t)+nu*R(t)-sgm(t)*Tt(t)-ta*Tt(t), diff(Hh(t),t) = lam*In(t)+rho*Dd(t)+kappa*A(t)+ksi*R(t)+sgm(t)*Tt(t), diff(E(t),t) = ta*Tt(t), y1(t) = Dd(t)+R(t)+Tt(t), y_faux1(t) = sgm(t)]
 
 === Input info ===
 State variables:          [sgm(t), S(t), In(t), Dd(t), A(t), R(t), Tt(t), Hh(t), E(t)]
@@ -283,13 +340,32 @@ Input variables:          []
 Parameters in equations:  [a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho, ta, th, zeta]
 ===================
 
+	Adding new y-equations: faux_equations
+	Adding new y-equations: [y_faux2_0 = A_0, y_faux3_0 = E_0, y_faux4_0 = Hh_0, y_faux5_0 = In_0, y_faux6_0 = R_0]
+	New system: [y1_0-Dd_0-R_0-Tt_0, Dd_0*eta+Dd_0*rho-In_0*eps+Dd_1, -A_0*th-Dd_0*eta+R_0*ksi+R_0*nu+R_1, -A_0*mu-R_0*nu+Tt_0*sgm_0+Tt_0*ta+Tt_1, y_faux1_0-sgm_0, sgm_1, -Dd_1-R_1-Tt_1+y1_1, (eta+rho)*Dd_1+Dd_2-eps*In_1, -A_1*th-Dd_1*eta+(nu+ksi)*R_1+R_2, -A_1*mu-R_1*nu+(sgm_0+ta)*Tt_1+Tt_2+Tt_0*sgm_1, A_0*kappa+A_0*mu+A_0*th-In_0*zeta+A_1, -A_0*S_0*g-Dd_0*S_0*b-In_0*S_0*a-R_0*S_0*dlt+In_0*eps+In_0*lam+In_0*zeta+In_1, -Dd_2-R_2-Tt_2+y1_2, (eta+rho)*Dd_2+Dd_3-eps*In_2, -A_2*th-Dd_2*eta+(nu+ksi)*R_2+R_3, -A_2*mu-R_2*nu+2*sgm_1*Tt_1+(sgm_0+ta)*Tt_2+Tt_3+Tt_0*sgm_2, (th+mu+kappa)*A_1+A_2-zeta*In_1, (-S_0*a+eps+lam+zeta)*In_1+(-A_1*g-Dd_1*b-R_1*dlt)*S_0+(-A_0*g-Dd_0*b-In_0*a-R_0*dlt)*S_1+In_2, sgm_2, A_0*S_0*g+Dd_0*S_0*b+In_0*S_0*a+R_0*S_0*dlt+S_1, -Dd_3-R_3-Tt_3+y1_3, (eta+rho)*Dd_3+Dd_4-eps*In_3, -A_3*th-Dd_3*eta+(nu+ksi)*R_3+R_4, -A_3*mu-R_3*nu+3*sgm_2*Tt_1+3*sgm_1*Tt_2+(sgm_0+ta)*Tt_3+Tt_4+Tt_0*sgm_3, (th+mu+kappa)*A_2+A_3-zeta*In_2, (-S_0*a+eps+lam+zeta)*In_2+(-A_2*g-Dd_2*b-R_2*dlt)*S_0+(-2*A_1*g-2*Dd_1*b-2*In_1*a-2*R_1*dlt)*S_1+(-A_0*g-Dd_0*b-In_0*a-R_0*dlt)*S_2+In_3, sgm_3, (A_1*g+Dd_1*b+In_1*a+R_1*dlt)*S_0+(A_0*g+Dd_0*b+In_0*a+R_0*dlt)*S_1+S_2, -Dd_4-R_4-Tt_4+y1_4, (eta+rho)*Dd_4+Dd_5-eps*In_4, -A_4*th-Dd_4*eta+(nu+ksi)*R_4+R_5, -A_4*mu-R_4*nu+4*sgm_3*Tt_1+6*sgm_2*Tt_2+4*sgm_1*Tt_3+(sgm_0+ta)*Tt_4+Tt_5+Tt_0*sgm_4, (th+mu+kappa)*A_3+A_4-zeta*In_3, (-S_0*a+eps+lam+zeta)*In_3+(-A_3*g-Dd_3*b-R_3*dlt)*S_0+(-3*A_2*g-3*Dd_2*b-3*In_2*a-3*R_2*dlt)*S_1+(-3*A_1*g-3*Dd_1*b-3*In_1*a-3*R_1*dlt)*S_2+(-A_0*g-Dd_0*b-In_0*a-R_0*dlt)*S_3+In_4, sgm_4, (A_2*g+Dd_2*b+In_2*a+R_2*dlt)*S_0+(2*A_1*g+2*Dd_1*b+2*In_1*a+2*R_1*dlt)*S_1+(A_0*g+Dd_0*b+In_0*a+R_0*dlt)*S_2+S_3, -Dd_5-R_5-Tt_5+y1_5, (eta+rho)*Dd_5+Dd_6-eps*In_5, -A_5*th-Dd_5*eta+(nu+ksi)*R_5+R_6, -A_5*mu-R_5*nu+5*sgm_4*Tt_1+10*sgm_3*Tt_2+10*sgm_2*Tt_3+5*sgm_1*Tt_4+(sgm_0+ta)*Tt_5+Tt_6+Tt_0*sgm_5, (th+mu+kappa)*A_4+A_5-zeta*In_4, (-R_0*S_4-4*R_1*S_3-6*R_2*S_2-4*R_3*S_1-R_4*S_0)*dlt+(-In_0*S_4-4*In_1*S_3-6*In_2*S_2-4*In_3*S_1-In_4*S_0)*a+(-Dd_0*S_4-4*Dd_1*S_3-6*Dd_2*S_2-4*Dd_3*S_1-Dd_4*S_0)*b+(-A_0*S_4-4*A_1*S_3-6*A_2*S_2-4*A_3*S_1-A_4*S_0)*g+(eps+zeta+lam)*In_4+In_5, sgm_5, (A_3*g+Dd_3*b+In_3*a+R_3*dlt)*S_0+(3*A_2*g+3*Dd_2*b+3*In_2*a+3*R_2*dlt)*S_1+(3*A_1*g+3*Dd_1*b+3*In_1*a+3*R_1*dlt)*S_2+(A_0*g+Dd_0*b+In_0*a+R_0*dlt)*S_3+S_4, -Dd_6-R_6-Tt_6+y1_6, (eta+rho)*Dd_6+Dd_7-eps*In_6, -A_6*th-Dd_6*eta+(nu+ksi)*R_6+R_7, -A_6*mu-R_6*nu+6*sgm_5*Tt_1+15*sgm_4*Tt_2+20*sgm_3*Tt_3+15*sgm_2*Tt_4+6*sgm_1*Tt_5+(sgm_0+ta)*Tt_6+Tt_7+Tt_0*sgm_6, (th+mu+kappa)*A_5+A_6-zeta*In_5, (-R_0*S_5-5*R_1*S_4-10*R_2*S_3-10*R_3*S_2-5*R_4*S_1-R_5*S_0)*dlt+(-In_0*S_5-5*In_1*S_4-10*In_2*S_3-10*In_3*S_2-5*In_4*S_1-In_5*S_0)*a+(-Dd_0*S_5-5*Dd_1*S_4-10*Dd_2*S_3-10*Dd_3*S_2-5*Dd_4*S_1-Dd_5*S_0)*b+(-A_0*S_5-5*A_1*S_4-10*A_2*S_3-10*A_3*S_2-5*A_4*S_1-A_5*S_0)*g+(eps+zeta+lam)*In_5+In_6, sgm_6, (R_0*S_4+4*R_1*S_3+6*R_2*S_2+4*R_3*S_1+R_4*S_0)*dlt+(In_0*S_4+4*In_1*S_3+6*In_2*S_2+4*In_3*S_1+In_4*S_0)*a+(Dd_0*S_4+4*Dd_1*S_3+6*Dd_2*S_2+4*Dd_3*S_1+Dd_4*S_0)*b+(A_0*S_4+4*A_1*S_3+6*A_2*S_2+4*A_3*S_1+A_4*S_0)*g+S_5, -Dd_7-R_7-Tt_7+y1_7, (eta+rho)*Dd_7+Dd_8-eps*In_7, -A_7*th-Dd_7*eta+(nu+ksi)*R_7+R_8, -A_7*mu-R_7*nu+7*sgm_6*Tt_1+21*sgm_5*Tt_2+35*sgm_4*Tt_3+35*sgm_3*Tt_4+21*sgm_2*Tt_5+7*sgm_1*Tt_6+(sgm_0+ta)*Tt_7+Tt_8+Tt_0*sgm_7, (th+mu+kappa)*A_6+A_7-zeta*In_6, (-R_0*S_6-6*R_1*S_5-15*R_2*S_4-20*R_3*S_3-15*R_4*S_2-6*R_5*S_1-R_6*S_0)*dlt+(-In_0*S_6-6*In_1*S_5-15*In_2*S_4-20*In_3*S_3-15*In_4*S_2-6*In_5*S_1-In_6*S_0)*a+(-Dd_0*S_6-6*Dd_1*S_5-15*Dd_2*S_4-20*Dd_3*S_3-15*Dd_4*S_2-6*Dd_5*S_1-Dd_6*S_0)*b+(-A_0*S_6-6*A_1*S_5-15*A_2*S_4-20*A_3*S_3-15*A_4*S_2-6*A_5*S_1-A_6*S_0)*g+(eps+zeta+lam)*In_6+In_7, sgm_7, (R_0*S_5+5*R_1*S_4+10*R_2*S_3+10*R_3*S_2+5*R_4*S_1+R_5*S_0)*dlt+(In_0*S_5+5*In_1*S_4+10*In_2*S_3+10*In_3*S_2+5*In_4*S_1+In_5*S_0)*a+(Dd_0*S_5+5*Dd_1*S_4+10*Dd_2*S_3+10*Dd_3*S_2+5*Dd_4*S_1+Dd_5*S_0)*b+(A_0*S_5+5*A_1*S_4+10*A_2*S_3+10*A_3*S_2+5*A_4*S_1+A_5*S_0)*g+S_6, -Dd_8-R_8-Tt_8+y1_8, (eta+rho)*Dd_8+Dd_9-eps*In_8, -A_8*th-Dd_8*eta+(nu+ksi)*R_8+R_9, -A_8*mu-R_8*nu+8*sgm_7*Tt_1+28*sgm_6*Tt_2+56*sgm_5*Tt_3+70*sgm_4*Tt_4+56*sgm_3*Tt_5+28*sgm_2*Tt_6+8*sgm_1*Tt_7+(sgm_0+ta)*Tt_8+Tt_9+Tt_0*sgm_8, (th+mu+kappa)*A_7+A_8-zeta*In_7, (-R_0*S_7-7*R_1*S_6-21*R_2*S_5-35*R_3*S_4-35*R_4*S_3-21*R_5*S_2-7*R_6*S_1-R_7*S_0)*dlt+(-In_0*S_7-7*In_1*S_6-21*In_2*S_5-35*In_3*S_4-35*In_4*S_3-21*In_5*S_2-7*In_6*S_1-In_7*S_0)*a+(-Dd_0*S_7-7*Dd_1*S_6-21*Dd_2*S_5-35*Dd_3*S_4-35*Dd_4*S_3-21*Dd_5*S_2-7*Dd_6*S_1-Dd_7*S_0)*b+(-A_0*S_7-7*A_1*S_6-21*A_2*S_5-35*A_3*S_4-35*A_4*S_3-21*A_5*S_2-7*A_6*S_1-A_7*S_0)*g+(eps+zeta+lam)*In_7+In_8, sgm_8, (R_0*S_6+6*R_1*S_5+15*R_2*S_4+20*R_3*S_3+15*R_4*S_2+6*R_5*S_1+R_6*S_0)*dlt+(In_0*S_6+6*In_1*S_5+15*In_2*S_4+20*In_3*S_3+15*In_4*S_2+6*In_5*S_1+In_6*S_0)*a+(Dd_0*S_6+6*Dd_1*S_5+15*Dd_2*S_4+20*Dd_3*S_3+15*Dd_4*S_2+6*Dd_5*S_1+Dd_6*S_0)*b+(A_0*S_6+6*A_1*S_5+15*A_2*S_4+20*A_3*S_3+15*A_4*S_2+6*A_5*S_1+A_6*S_0)*g+S_7, -Dd_9-R_9-Tt_9+y1_9, (eta+rho)*Dd_9+Dd_10-eps*In_9, -A_9*th-Dd_9*eta+(nu+ksi)*R_9+R_10, -A_9*mu-R_9*nu+9*sgm_8*Tt_1+36*sgm_7*Tt_2+84*sgm_6*Tt_3+126*sgm_5*Tt_4+126*sgm_4*Tt_5+84*sgm_3*Tt_6+36*sgm_2*Tt_7+9*sgm_1*Tt_8+(sgm_0+ta)*Tt_9+Tt_10+Tt_0*sgm_9, (th+mu+kappa)*A_8+A_9-zeta*In_8, (-R_0*S_8-8*R_1*S_7-28*R_2*S_6-56*R_3*S_5-70*R_4*S_4-56*R_5*S_3-28*R_6*S_2-8*R_7*S_1-R_8*S_0)*dlt+(-In_0*S_8-8*In_1*S_7-28*In_2*S_6-56*In_3*S_5-70*In_4*S_4-56*In_5*S_3-28*In_6*S_2-8*In_7*S_1-In_8*S_0)*a+(-Dd_0*S_8-8*Dd_1*S_7-28*Dd_2*S_6-56*Dd_3*S_5-70*Dd_4*S_4-56*Dd_5*S_3-28*Dd_6*S_2-8*Dd_7*S_1-Dd_8*S_0)*b+(-A_0*S_8-8*A_1*S_7-28*A_2*S_6-56*A_3*S_5-70*A_4*S_4-56*A_5*S_3-28*A_6*S_2-8*A_7*S_1-A_8*S_0)*g+(eps+zeta+lam)*In_8+In_9, sgm_9, (R_0*S_7+7*R_1*S_6+21*R_2*S_5+35*R_3*S_4+35*R_4*S_3+21*R_5*S_2+7*R_6*S_1+R_7*S_0)*dlt+(In_0*S_7+7*In_1*S_6+21*In_2*S_5+35*In_3*S_4+35*In_4*S_3+21*In_5*S_2+7*In_6*S_1+In_7*S_0)*a+(Dd_0*S_7+7*Dd_1*S_6+21*Dd_2*S_5+35*Dd_3*S_4+35*Dd_4*S_3+21*Dd_5*S_2+7*Dd_6*S_1+Dd_7*S_0)*b+(A_0*S_7+7*A_1*S_6+21*A_2*S_5+35*A_3*S_4+35*A_4*S_3+21*A_5*S_2+7*A_6*S_1+A_7*S_0)*g+S_8, -Dd_10-R_10-Tt_10+y1_10, Dd_11+(eta+rho)*Dd_10-eps*In_10, -A_10*th-Dd_10*eta+R_11+(nu+ksi)*R_10, -A_10*mu-R_10*nu+10*sgm_9*Tt_1+45*sgm_8*Tt_2+120*sgm_7*Tt_3+210*sgm_6*Tt_4+252*sgm_5*Tt_5+210*sgm_4*Tt_6+120*sgm_3*Tt_7+45*sgm_2*Tt_8+10*sgm_1*Tt_9+Tt_11+(sgm_0+ta)*Tt_10+Tt_0*sgm_10, (th+mu+kappa)*A_9+A_10-zeta*In_9, (-R_0*S_9-9*R_1*S_8-36*R_2*S_7-84*R_3*S_6-126*R_4*S_5-126*R_5*S_4-84*R_6*S_3-36*R_7*S_2-9*R_8*S_1-R_9*S_0)*dlt+(-In_0*S_9-9*In_1*S_8-36*In_2*S_7-84*In_3*S_6-126*In_4*S_5-126*In_5*S_4-84*In_6*S_3-36*In_7*S_2-9*In_8*S_1-In_9*S_0)*a+(-Dd_0*S_9-9*Dd_1*S_8-36*Dd_2*S_7-84*Dd_3*S_6-126*Dd_4*S_5-126*Dd_5*S_4-84*Dd_6*S_3-36*Dd_7*S_2-9*Dd_8*S_1-Dd_9*S_0)*b+(-A_0*S_9-9*A_1*S_8-36*A_2*S_7-84*A_3*S_6-126*A_4*S_5-126*A_5*S_4-84*A_6*S_3-36*A_7*S_2-9*A_8*S_1-A_9*S_0)*g+(eps+zeta+lam)*In_9+In_10, sgm_10, (R_0*S_8+8*R_1*S_7+28*R_2*S_6+56*R_3*S_5+70*R_4*S_4+56*R_5*S_3+28*R_6*S_2+8*R_7*S_1+R_8*S_0)*dlt+(In_0*S_8+8*In_1*S_7+28*In_2*S_6+56*In_3*S_5+70*In_4*S_4+56*In_5*S_3+28*In_6*S_2+8*In_7*S_1+In_8*S_0)*a+(Dd_0*S_8+8*Dd_1*S_7+28*Dd_2*S_6+56*Dd_3*S_5+70*Dd_4*S_4+56*Dd_5*S_3+28*Dd_6*S_2+8*Dd_7*S_1+Dd_8*S_0)*b+(A_0*S_8+8*A_1*S_7+28*A_2*S_6+56*A_3*S_5+70*A_4*S_4+56*A_5*S_3+28*A_6*S_2+8*A_7*S_1+A_8*S_0)*g+S_9, -Dd_11-R_11-Tt_11+y1_11, (eta+rho)*Dd_11+Dd_12-eps*In_11, -A_11*th-Dd_11*eta+(nu+ksi)*R_11+R_12, -A_11*mu-R_11*nu+11*sgm_10*Tt_1+55*sgm_9*Tt_2+(sgm_0+ta)*Tt_11+Tt_12+165*sgm_8*Tt_3+330*sgm_7*Tt_4+462*sgm_6*Tt_5+462*sgm_5*Tt_6+330*sgm_4*Tt_7+165*sgm_3*Tt_8+55*sgm_2*Tt_9+11*sgm_1*Tt_10+Tt_0*sgm_11, A_11+(th+mu+kappa)*A_10-zeta*In_10, (-R_0*S_10-10*R_1*S_9-R_10*S_0-45*R_2*S_8-120*R_3*S_7-210*R_4*S_6-252*R_5*S_5-210*R_6*S_4-120*R_7*S_3-45*R_8*S_2-10*R_9*S_1)*dlt+(-In_0*S_10-10*In_1*S_9-In_10*S_0-45*In_2*S_8-120*In_3*S_7-210*In_4*S_6-252*In_5*S_5-210*In_6*S_4-120*In_7*S_3-45*In_8*S_2-10*In_9*S_1)*a+(-Dd_0*S_10-10*Dd_1*S_9-Dd_10*S_0-45*Dd_2*S_8-120*Dd_3*S_7-210*Dd_4*S_6-252*Dd_5*S_5-210*Dd_6*S_4-120*Dd_7*S_3-45*Dd_8*S_2-10*Dd_9*S_1)*b+(-A_0*S_10-10*A_1*S_9-A_10*S_0-45*A_2*S_8-120*A_3*S_7-210*A_4*S_6-252*A_5*S_5-210*A_6*S_4-120*A_7*S_3-45*A_8*S_2-10*A_9*S_1)*g+(eps+zeta+lam)*In_10+In_11, sgm_11, (R_0*S_9+9*R_1*S_8+36*R_2*S_7+84*R_3*S_6+126*R_4*S_5+126*R_5*S_4+84*R_6*S_3+36*R_7*S_2+9*R_8*S_1+R_9*S_0)*dlt+(In_0*S_9+9*In_1*S_8+36*In_2*S_7+84*In_3*S_6+126*In_4*S_5+126*In_5*S_4+84*In_6*S_3+36*In_7*S_2+9*In_8*S_1+In_9*S_0)*a+(Dd_0*S_9+9*Dd_1*S_8+36*Dd_2*S_7+84*Dd_3*S_6+126*Dd_4*S_5+126*Dd_5*S_4+84*Dd_6*S_3+36*Dd_7*S_2+9*Dd_8*S_1+Dd_9*S_0)*b+(A_0*S_9+9*A_1*S_8+36*A_2*S_7+84*A_3*S_6+126*A_4*S_5+126*A_5*S_4+84*A_6*S_3+36*A_7*S_2+9*A_8*S_1+A_9*S_0)*g+S_10, -Dd_12-R_12-Tt_12+y1_12, (eta+rho)*Dd_12+Dd_13-eps*In_12, -A_12*th-Dd_12*eta+(nu+ksi)*R_12+R_13, -A_12*mu-R_12*nu+12*sgm_11*Tt_1+12*sgm_1*Tt_11+66*sgm_10*Tt_2+(sgm_0+ta)*Tt_12+Tt_13+220*sgm_9*Tt_3+495*sgm_8*Tt_4+792*sgm_7*Tt_5+924*sgm_6*Tt_6+792*sgm_5*Tt_7+495*sgm_4*Tt_8+220*sgm_3*Tt_9+66*sgm_2*Tt_10+Tt_0*sgm_12, (th+mu+kappa)*A_11+A_12-zeta*In_11, (-R_0*S_11-11*R_1*S_10-11*R_10*S_1-R_11*S_0-55*R_2*S_9-165*R_3*S_8-330*R_4*S_7-462*R_5*S_6-462*R_6*S_5-330*R_7*S_4-165*R_8*S_3-55*R_9*S_2)*dlt+(-In_0*S_11-11*In_1*S_10-11*In_10*S_1-In_11*S_0-55*In_2*S_9-165*In_3*S_8-330*In_4*S_7-462*In_5*S_6-462*In_6*S_5-330*In_7*S_4-165*In_8*S_3-55*In_9*S_2)*a+(-Dd_0*S_11-11*Dd_1*S_10-11*Dd_10*S_1-Dd_11*S_0-55*Dd_2*S_9-165*Dd_3*S_8-330*Dd_4*S_7-462*Dd_5*S_6-462*Dd_6*S_5-330*Dd_7*S_4-165*Dd_8*S_3-55*Dd_9*S_2)*b+(-A_0*S_11-11*A_1*S_10-11*A_10*S_1-A_11*S_0-55*A_2*S_9-165*A_3*S_8-330*A_4*S_7-462*A_5*S_6-462*A_6*S_5-330*A_7*S_4-165*A_8*S_3-55*A_9*S_2)*g+(eps+zeta+lam)*In_11+In_12, sgm_12, (R_0*S_10+10*R_1*S_9+R_10*S_0+45*R_2*S_8+120*R_3*S_7+210*R_4*S_6+252*R_5*S_5+210*R_6*S_4+120*R_7*S_3+45*R_8*S_2+10*R_9*S_1)*dlt+(In_0*S_10+10*In_1*S_9+In_10*S_0+45*In_2*S_8+120*In_3*S_7+210*In_4*S_6+252*In_5*S_5+210*In_6*S_4+120*In_7*S_3+45*In_8*S_2+10*In_9*S_1)*a+(Dd_0*S_10+10*Dd_1*S_9+Dd_10*S_0+45*Dd_2*S_8+120*Dd_3*S_7+210*Dd_4*S_6+252*Dd_5*S_5+210*Dd_6*S_4+120*Dd_7*S_3+45*Dd_8*S_2+10*Dd_9*S_1)*b+(A_0*S_10+10*A_1*S_9+A_10*S_0+45*A_2*S_8+120*A_3*S_7+210*A_4*S_6+252*A_5*S_5+210*A_6*S_4+120*A_7*S_3+45*A_8*S_2+10*A_9*S_1)*g+S_11, -Dd_13-R_13-Tt_13+y1_13, (eta+rho)*Dd_13+Dd_14-eps*In_13, -A_13*th-Dd_13*eta+(nu+ksi)*R_13+R_14, -A_13*mu-R_13*nu+13*sgm_12*Tt_1+78*sgm_2*Tt_11+13*sgm_1*Tt_12+78*sgm_11*Tt_2+(sgm_0+ta)*Tt_13+Tt_14+286*sgm_10*Tt_3+715*sgm_9*Tt_4+1287*sgm_8*Tt_5+1716*sgm_7*Tt_6+1716*sgm_6*Tt_7+1287*sgm_5*Tt_8+715*sgm_4*Tt_9+286*sgm_3*Tt_10+Tt_0*sgm_13, (th+mu+kappa)*A_12+A_13-zeta*In_12, (-R_0*S_12-12*R_1*S_11-66*R_10*S_2-12*R_11*S_1-R_12*S_0-66*R_2*S_10-220*R_3*S_9-495*R_4*S_8-792*R_5*S_7-924*R_6*S_6-792*R_7*S_5-495*R_8*S_4-220*R_9*S_3)*dlt+(-In_0*S_12-12*In_1*S_11-66*In_10*S_2-12*In_11*S_1-In_12*S_0-66*In_2*S_10-220*In_3*S_9-495*In_4*S_8-792*In_5*S_7-924*In_6*S_6-792*In_7*S_5-495*In_8*S_4-220*In_9*S_3)*a+(-Dd_0*S_12-12*Dd_1*S_11-66*Dd_10*S_2-12*Dd_11*S_1-Dd_12*S_0-66*Dd_2*S_10-220*Dd_3*S_9-495*Dd_4*S_8-792*Dd_5*S_7-924*Dd_6*S_6-792*Dd_7*S_5-495*Dd_8*S_4-220*Dd_9*S_3)*b+(-A_0*S_12-12*A_1*S_11-66*A_10*S_2-12*A_11*S_1-A_12*S_0-66*A_2*S_10-220*A_3*S_9-495*A_4*S_8-792*A_5*S_7-924*A_6*S_6-792*A_7*S_5-495*A_8*S_4-220*A_9*S_3)*g+(eps+zeta+lam)*In_12+In_13, sgm_13, (R_0*S_11+11*R_1*S_10+11*R_10*S_1+R_11*S_0+55*R_2*S_9+165*R_3*S_8+330*R_4*S_7+462*R_5*S_6+462*R_6*S_5+330*R_7*S_4+165*R_8*S_3+55*R_9*S_2)*dlt+(In_0*S_11+11*In_1*S_10+11*In_10*S_1+In_11*S_0+55*In_2*S_9+165*In_3*S_8+330*In_4*S_7+462*In_5*S_6+462*In_6*S_5+330*In_7*S_4+165*In_8*S_3+55*In_9*S_2)*a+(Dd_0*S_11+11*Dd_1*S_10+11*Dd_10*S_1+Dd_11*S_0+55*Dd_2*S_9+165*Dd_3*S_8+330*Dd_4*S_7+462*Dd_5*S_6+462*Dd_6*S_5+330*Dd_7*S_4+165*Dd_8*S_3+55*Dd_9*S_2)*b+(A_0*S_11+11*A_1*S_10+11*A_10*S_1+A_11*S_0+55*A_2*S_9+165*A_3*S_8+330*A_4*S_7+462*A_5*S_6+462*A_6*S_5+330*A_7*S_4+165*A_8*S_3+55*A_9*S_2)*g+S_12, -Dd_14-R_14-Tt_14+y1_14, (eta+rho)*Dd_14+Dd_15-eps*In_14, -A_14*th-Dd_14*eta+(nu+ksi)*R_14+R_15, -A_14*mu-R_14*nu+14*sgm_13*Tt_1+364*sgm_3*Tt_11+91*sgm_2*Tt_12+14*sgm_1*Tt_13+91*sgm_12*Tt_2+(sgm_0+ta)*Tt_14+Tt_15+364*sgm_11*Tt_3+1001*sgm_10*Tt_4+2002*sgm_9*Tt_5+3003*sgm_8*Tt_6+3432*sgm_7*Tt_7+3003*sgm_6*Tt_8+2002*sgm_5*Tt_9+1001*sgm_4*Tt_10+Tt_0*sgm_14, (th+mu+kappa)*A_13+A_14-zeta*In_13, (-R_0*S_13-13*R_1*S_12-286*R_10*S_3-78*R_11*S_2-13*R_12*S_1-R_13*S_0-78*R_2*S_11-286*R_3*S_10-715*R_4*S_9-1287*R_5*S_8-1716*R_6*S_7-1716*R_7*S_6-1287*R_8*S_5-715*R_9*S_4)*dlt+(-In_0*S_13-13*In_1*S_12-286*In_10*S_3-78*In_11*S_2-13*In_12*S_1-In_13*S_0-78*In_2*S_11-286*In_3*S_10-715*In_4*S_9-1287*In_5*S_8-1716*In_6*S_7-1716*In_7*S_6-1287*In_8*S_5-715*In_9*S_4)*a+(-Dd_0*S_13-13*Dd_1*S_12-286*Dd_10*S_3-78*Dd_11*S_2-13*Dd_12*S_1-Dd_13*S_0-78*Dd_2*S_11-286*Dd_3*S_10-715*Dd_4*S_9-1287*Dd_5*S_8-1716*Dd_6*S_7-1716*Dd_7*S_6-1287*Dd_8*S_5-715*Dd_9*S_4)*b+(-A_0*S_13-13*A_1*S_12-286*A_10*S_3-78*A_11*S_2-13*A_12*S_1-A_13*S_0-78*A_2*S_11-286*A_3*S_10-715*A_4*S_9-1287*A_5*S_8-1716*A_6*S_7-1716*A_7*S_6-1287*A_8*S_5-715*A_9*S_4)*g+(eps+zeta+lam)*In_13+In_14, sgm_14, (R_0*S_12+12*R_1*S_11+66*R_10*S_2+12*R_11*S_1+R_12*S_0+66*R_2*S_10+220*R_3*S_9+495*R_4*S_8+792*R_5*S_7+924*R_6*S_6+792*R_7*S_5+495*R_8*S_4+220*R_9*S_3)*dlt+(In_0*S_12+12*In_1*S_11+66*In_10*S_2+12*In_11*S_1+In_12*S_0+66*In_2*S_10+220*In_3*S_9+495*In_4*S_8+792*In_5*S_7+924*In_6*S_6+792*In_7*S_5+495*In_8*S_4+220*In_9*S_3)*a+(Dd_0*S_12+12*Dd_1*S_11+66*Dd_10*S_2+12*Dd_11*S_1+Dd_12*S_0+66*Dd_2*S_10+220*Dd_3*S_9+495*Dd_4*S_8+792*Dd_5*S_7+924*Dd_6*S_6+792*Dd_7*S_5+495*Dd_8*S_4+220*Dd_9*S_3)*b+(A_0*S_12+12*A_1*S_11+66*A_10*S_2+12*A_11*S_1+A_12*S_0+66*A_2*S_10+220*A_3*S_9+495*A_4*S_8+792*A_5*S_7+924*A_6*S_6+792*A_7*S_5+495*A_8*S_4+220*A_9*S_3)*g+S_13, -Dd_15-R_15-Tt_15+y1_15, (eta+rho)*Dd_15+Dd_16-eps*In_15, -A_15*th-Dd_15*eta+(nu+ksi)*R_15+R_16, -A_15*mu-R_15*nu+15*sgm_14*Tt_1+1365*sgm_4*Tt_11+455*sgm_3*Tt_12+105*sgm_2*Tt_13+15*sgm_1*Tt_14+105*sgm_13*Tt_2+(sgm_0+ta)*Tt_15+Tt_16+455*sgm_12*Tt_3+1365*sgm_11*Tt_4+3003*sgm_10*Tt_5+5005*sgm_9*Tt_6+6435*sgm_8*Tt_7+6435*sgm_7*Tt_8+5005*sgm_6*Tt_9+3003*sgm_5*Tt_10+Tt_0*sgm_15, (th+mu+kappa)*A_14+A_15-zeta*In_14, (-R_0*S_14-14*R_1*S_13-1001*R_10*S_4-364*R_11*S_3-91*R_12*S_2-14*R_13*S_1-R_14*S_0-91*R_2*S_12-364*R_3*S_11-1001*R_4*S_10-2002*R_5*S_9-3003*R_6*S_8-3432*R_7*S_7-3003*R_8*S_6-2002*R_9*S_5)*dlt+(-In_0*S_14-14*In_1*S_13-1001*In_10*S_4-364*In_11*S_3-91*In_12*S_2-14*In_13*S_1-In_14*S_0-91*In_2*S_12-364*In_3*S_11-1001*In_4*S_10-2002*In_5*S_9-3003*In_6*S_8-3432*In_7*S_7-3003*In_8*S_6-2002*In_9*S_5)*a+(-Dd_0*S_14-14*Dd_1*S_13-1001*Dd_10*S_4-364*Dd_11*S_3-91*Dd_12*S_2-14*Dd_13*S_1-Dd_14*S_0-91*Dd_2*S_12-364*Dd_3*S_11-1001*Dd_4*S_10-2002*Dd_5*S_9-3003*Dd_6*S_8-3432*Dd_7*S_7-3003*Dd_8*S_6-2002*Dd_9*S_5)*b+(-A_0*S_14-14*A_1*S_13-1001*A_10*S_4-364*A_11*S_3-91*A_12*S_2-14*A_13*S_1-A_14*S_0-91*A_2*S_12-364*A_3*S_11-1001*A_4*S_10-2002*A_5*S_9-3003*A_6*S_8-3432*A_7*S_7-3003*A_8*S_6-2002*A_9*S_5)*g+(eps+zeta+lam)*In_14+In_15, sgm_15, (R_0*S_13+13*R_1*S_12+286*R_10*S_3+78*R_11*S_2+13*R_12*S_1+R_13*S_0+78*R_2*S_11+286*R_3*S_10+715*R_4*S_9+1287*R_5*S_8+1716*R_6*S_7+1716*R_7*S_6+1287*R_8*S_5+715*R_9*S_4)*dlt+(In_0*S_13+13*In_1*S_12+286*In_10*S_3+78*In_11*S_2+13*In_12*S_1+In_13*S_0+78*In_2*S_11+286*In_3*S_10+715*In_4*S_9+1287*In_5*S_8+1716*In_6*S_7+1716*In_7*S_6+1287*In_8*S_5+715*In_9*S_4)*a+(Dd_0*S_13+13*Dd_1*S_12+286*Dd_10*S_3+78*Dd_11*S_2+13*Dd_12*S_1+Dd_13*S_0+78*Dd_2*S_11+286*Dd_3*S_10+715*Dd_4*S_9+1287*Dd_5*S_8+1716*Dd_6*S_7+1716*Dd_7*S_6+1287*Dd_8*S_5+715*Dd_9*S_4)*b+(A_0*S_13+13*A_1*S_12+286*A_10*S_3+78*A_11*S_2+13*A_12*S_1+A_13*S_0+78*A_2*S_11+286*A_3*S_10+715*A_4*S_9+1287*A_5*S_8+1716*A_6*S_7+1716*A_7*S_6+1287*A_8*S_5+715*A_9*S_4)*g+S_14, -Dd_16-R_16-Tt_16+y1_16, (eta+rho)*Dd_16+Dd_17-eps*In_16, -A_16*th-Dd_16*eta+(nu+ksi)*R_16+R_17, -A_16*mu-R_16*nu+16*sgm_15*Tt_1+4368*sgm_5*Tt_11+1820*sgm_4*Tt_12+560*sgm_3*Tt_13+120*sgm_2*Tt_14+16*sgm_1*Tt_15+120*sgm_14*Tt_2+(sgm_0+ta)*Tt_16+Tt_17+560*sgm_13*Tt_3+1820*sgm_12*Tt_4+4368*sgm_11*Tt_5+8008*sgm_10*Tt_6+11440*sgm_9*Tt_7+12870*sgm_8*Tt_8+11440*sgm_7*Tt_9+8008*sgm_6*Tt_10+Tt_0*sgm_16, (th+mu+kappa)*A_15+A_16-zeta*In_15, (-15*S_14*R_1-105*S_13*R_2-1365*S_4*R_11-455*S_3*R_12-105*S_2*R_13-15*S_1*R_14-R_0*S_15-S_0*R_15-455*S_12*R_3-1365*S_11*R_4-3003*S_10*R_5-5005*S_9*R_6-6435*S_8*R_7-6435*S_7*R_8-5005*S_6*R_9-3003*S_5*R_10)*dlt+(-105*S_2*In_13-15*S_1*In_14-455*S_12*In_3-1365*S_11*In_4-3003*S_10*In_5-5005*S_9*In_6-6435*S_8*In_7-6435*S_7*In_8-5005*S_6*In_9-3003*S_5*In_10-In_0*S_15-S_0*In_15-15*S_14*In_1-105*S_13*In_2-1365*S_4*In_11-455*S_3*In_12)*a+(-15*S_14*Dd_1-105*S_13*Dd_2-1365*S_4*Dd_11-455*S_3*Dd_12-105*S_2*Dd_13-15*S_1*Dd_14-S_0*Dd_15-455*S_12*Dd_3-1365*S_11*Dd_4-3003*S_10*Dd_5-5005*S_9*Dd_6-Dd_0*S_15-6435*S_8*Dd_7-6435*S_7*Dd_8-5005*S_6*Dd_9-3003*S_5*Dd_10)*b+(-1365*A_11*S_4-455*A_12*S_3-105*A_13*S_2-15*A_14*S_1-A_15*S_0-455*A_3*S_12-1365*A_4*S_11-3003*A_5*S_10-5005*S_9*A_6-6435*A_7*S_8-6435*A_8*S_7-5005*A_9*S_6-3003*A_10*S_5-15*A_1*S_14-105*A_2*S_13-S_15*A_0)*g+(eps+zeta+lam)*In_15+In_16, sgm_16, (R_0*S_14+14*R_1*S_13+1001*R_10*S_4+364*R_11*S_3+91*R_12*S_2+14*R_13*S_1+R_14*S_0+91*R_2*S_12+364*R_3*S_11+1001*R_4*S_10+2002*R_5*S_9+3003*R_6*S_8+3432*R_7*S_7+3003*R_8*S_6+2002*R_9*S_5)*dlt+(In_0*S_14+14*In_1*S_13+1001*In_10*S_4+364*In_11*S_3+91*In_12*S_2+14*In_13*S_1+In_14*S_0+91*In_2*S_12+364*In_3*S_11+1001*In_4*S_10+2002*In_5*S_9+3003*In_6*S_8+3432*In_7*S_7+3003*In_8*S_6+2002*In_9*S_5)*a+(Dd_0*S_14+14*Dd_1*S_13+1001*Dd_10*S_4+364*Dd_11*S_3+91*Dd_12*S_2+14*Dd_13*S_1+Dd_14*S_0+91*Dd_2*S_12+364*Dd_3*S_11+1001*Dd_4*S_10+2002*Dd_5*S_9+3003*Dd_6*S_8+3432*Dd_7*S_7+3003*Dd_8*S_6+2002*Dd_9*S_5)*b+(A_0*S_14+14*A_1*S_13+1001*A_10*S_4+364*A_11*S_3+91*A_12*S_2+14*A_13*S_1+A_14*S_0+91*A_2*S_12+364*A_3*S_11+1001*A_4*S_10+2002*A_5*S_9+3003*A_6*S_8+3432*A_7*S_7+3003*A_8*S_6+2002*A_9*S_5)*g+S_15, -Dd_17-R_17-Tt_17+y1_17, (eta+rho)*Dd_17+Dd_18-eps*In_17, -A_17*th-Dd_17*eta+(nu+ksi)*R_17+R_18, -A_17*mu-R_17*nu+17*sgm_16*Tt_1+12376*sgm_6*Tt_11+6188*sgm_5*Tt_12+2380*sgm_4*Tt_13+680*sgm_3*Tt_14+136*sgm_2*Tt_15+17*sgm_1*Tt_16+136*sgm_15*Tt_2+(sgm_0+ta)*Tt_17+Tt_18+680*sgm_14*Tt_3+2380*sgm_13*Tt_4+6188*sgm_12*Tt_5+12376*sgm_11*Tt_6+19448*sgm_10*Tt_7+24310*sgm_9*Tt_8+24310*sgm_8*Tt_9+19448*sgm_7*Tt_10+Tt_0*sgm_17, (th+mu+kappa)*A_16+A_17-zeta*In_16, (-16*S_15*R_1-120*S_14*R_2-4368*S_5*R_11-1820*S_4*R_12-560*S_3*R_13-120*S_2*R_14-16*S_1*R_15-S_0*R_16-560*S_13*R_3-1820*S_12*R_4-4368*S_11*R_5-8008*S_10*R_6-11440*S_9*R_7-12870*S_8*R_8-11440*S_7*R_9-8008*S_6*R_10-R_0*S_16)*dlt+(-16*S_15*In_1-120*S_14*In_2-4368*S_5*In_11-1820*S_4*In_12-560*S_3*In_13-120*S_2*In_14-16*S_1*In_15-560*S_13*In_3-1820*S_12*In_4-4368*S_11*In_5-8008*S_10*In_6-11440*S_9*In_7-12870*S_8*In_8-11440*S_7*In_9-8008*S_6*In_10-In_0*S_16-S_0*In_16)*a+(-16*S_15*Dd_1-120*S_14*Dd_2-4368*S_5*Dd_11-1820*S_4*Dd_12-560*S_3*Dd_13-120*S_2*Dd_14-16*S_1*Dd_15-S_0*Dd_16-560*S_13*Dd_3-1820*S_12*Dd_4-4368*S_11*Dd_5-8008*S_10*Dd_6-11440*S_9*Dd_7-12870*S_8*Dd_8-11440*S_7*Dd_9-8008*S_6*Dd_10-Dd_0*S_16)*b+(-16*A_1*S_15-120*A_2*S_14-4368*A_11*S_5-1820*A_12*S_4-560*A_13*S_3-120*A_14*S_2-16*A_15*S_1-A_16*S_0-560*A_3*S_13-1820*A_4*S_12-4368*A_5*S_11-8008*S_10*A_6-11440*A_7*S_9-12870*A_8*S_8-11440*A_9*S_7-8008*A_10*S_6-S_16*A_0)*g+(eps+zeta+lam)*In_16+In_17, sgm_17, (15*S_14*R_1+105*S_13*R_2+1365*S_4*R_11+455*S_3*R_12+105*S_2*R_13+15*S_1*R_14+S_0*R_15+455*S_12*R_3+1365*S_11*R_4+3003*S_10*R_5+R_0*S_15+5005*S_9*R_6+6435*S_8*R_7+6435*S_7*R_8+5005*S_6*R_9+3003*S_5*R_10)*dlt+(5005*S_9*In_6+6435*S_8*In_7+6435*S_7*In_8+5005*S_6*In_9+3003*S_5*In_10+15*S_14*In_1+In_0*S_15+105*S_13*In_2+1365*S_4*In_11+455*S_3*In_12+105*S_2*In_13+15*S_1*In_14+S_0*In_15+455*S_12*In_3+1365*S_11*In_4+3003*S_10*In_5)*a+(15*S_14*Dd_1+105*S_13*Dd_2+1365*S_4*Dd_11+455*S_3*Dd_12+105*S_2*Dd_13+15*S_1*Dd_14+S_0*Dd_15+455*S_12*Dd_3+1365*S_11*Dd_4+3003*S_10*Dd_5+5005*S_9*Dd_6+6435*S_8*Dd_7+6435*S_7*Dd_8+5005*S_6*Dd_9+3003*S_5*Dd_10+Dd_0*S_15)*b+(15*A_14*S_1+A_15*S_0+455*A_3*S_12+1365*A_4*S_11+3003*A_5*S_10+5005*S_9*A_6+6435*A_7*S_8+6435*A_8*S_7+5005*A_9*S_6+3003*A_10*S_5+15*A_1*S_14+105*A_2*S_13+1365*A_11*S_4+455*A_12*S_3+105*A_13*S_2+S_15*A_0)*g+S_16, -Dd_18-R_18-Tt_18+y1_18, -sgm_1+y_faux1_1, -sgm_2+y_faux1_2, -sgm_3+y_faux1_3, -sgm_4+y_faux1_4, -sgm_5+y_faux1_5, -sgm_6+y_faux1_6, -sgm_7+y_faux1_7, -sgm_8+y_faux1_8, -sgm_9+y_faux1_9, -sgm_10+y_faux1_10, -sgm_11+y_faux1_11, -sgm_12+y_faux1_12, -sgm_13+y_faux1_13, -sgm_14+y_faux1_14, -sgm_15+y_faux1_15, -sgm_16+y_faux1_16, -sgm_17+y_faux1_17, y_faux2_0-A_0, y_faux3_0-E_0, y_faux4_0-Hh_0, y_faux5_0-In_0, y_faux6_0-R_0]
+	New system: [y1_0 = Dd_0+R_0+Tt_0, y1_1 = Dd_1+R_1+Tt_1, y1_2 = Dd_2+R_2+Tt_2, y1_3 = Dd_3+R_3+Tt_3, y1_4 = Dd_4+R_4+Tt_4, y1_5 = Dd_5+R_5+Tt_5, y1_6 = Dd_6+R_6+Tt_6, y1_7 = Dd_7+R_7+Tt_7, y1_8 = Dd_8+R_8+Tt_8, y1_9 = Dd_9+R_9+Tt_9, y1_10 = Dd_10+R_10+Tt_10, y1_11 = Dd_11+R_11+Tt_11, y1_12 = Dd_12+R_12+Tt_12, y1_13 = Dd_13+R_13+Tt_13, y1_14 = Dd_14+R_14+Tt_14, y1_15 = Dd_15+R_15+Tt_15, y1_16 = Dd_16+R_16+Tt_16, y1_17 = Dd_17+R_17+Tt_17, y1_18 = Dd_18+R_18+Tt_18, y1_19 = Dd_19+R_19+Tt_19, y1_20 = Dd_20+R_20+Tt_20, y1_21 = Dd_21+R_21+Tt_21, y1_22 = Dd_22+R_22+Tt_22, y1_23 = Dd_23+R_23+Tt_23, y1_24 = Dd_24+R_24+Tt_24, y1_25 = Dd_25+R_25+Tt_25, y_faux1_0 = sgm_0, y_faux1_1 = sgm_1, y_faux1_2 = sgm_2, y_faux1_3 = sgm_3, y_faux1_4 = sgm_4, y_faux1_5 = sgm_5, y_faux1_6 = sgm_6, y_faux1_7 = sgm_7, y_faux1_8 = sgm_8, y_faux1_9 = sgm_9, y_faux1_10 = sgm_10, y_faux1_11 = sgm_11, y_faux1_12 = sgm_12, y_faux1_13 = sgm_13, y_faux1_14 = sgm_14, y_faux1_15 = sgm_15, y_faux1_16 = sgm_16, y_faux1_17 = sgm_17, y_faux1_18 = sgm_18, y_faux1_19 = sgm_19, y_faux1_20 = sgm_20, y_faux1_21 = sgm_21, y_faux1_22 = sgm_22, y_faux1_23 = sgm_23, y_faux1_24 = sgm_24, y_faux1_25 = sgm_25, y_faux2_0 = A_0, y_faux3_0 = E_0, y_faux4_0 = Hh_0, y_faux5_0 = In_0, y_faux6_0 = R_0]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[A_ = 1, ksi = 1, b = 2, eps = 1, nu = 2, a = 2, dlt = 2, Tt_ = 0, Dd_ = 0, kappa = 2, In_ = 1, th = 1, g = 2, zeta = 2, S_ = 2, rho = 1, mu = 1, ta = 1, lam = 2, R_ = 0, sgm_ = 0, eta = 2]
+Bound D_2 for assessing global identifiability:  1207588380000000000000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a = 683094823741044178156460317327011047810807, b = 10845745651142860856934529133644387662277, dlt = 1162264557177008745655768348200185485441947, eps = 210677976280856188426279250549296941013420, eta = 1162504506353694454339185977510956467165323, g = 174625691405263621240973863646987302899651, kappa = 774987047626489607703457277548775266952217, ksi = 130200506802050680388066031403548018074610, lam = 165332660615285568757261537120859375923941, mu = 1199696188248552048626326748395456012423190, nu = 665470110486552231982260737074442600886042, rho = 1166389900287814117290402502328988147678041, ta = 1169422929744428380255533736768513882378937, th = 606805285622990914757652873677469559365015, zeta = 303982265584202209838471426884212265230988, sgm_0 = 463333742206034714008233602387827234096391, S_0 = 646986087085950126565597618470604483615630, In_0 = 709569102525275407943985527146687904654361, Dd_0 = 174850871470507622327522374239683843965916, A_0 = 1205862941324243358630672873877709079203764, R_0 = 292267491095525899346320779936220303520518, Tt_0 = 1120357667638869771664313763547117517220235, Hh_0 = 1153150151525859462964444051162594754898713, E_0 = 481317891981473325076391150399784856181670]
+The polynomial system widehat{E^t} contains  163 equations in  145  variables
+Variable ordering to be used for Groebner basis computation [Tt_18, Dd_18, R_18, sgm_17, Tt_17, In_17, Dd_17, R_17, A_17, sgm_16, Tt_16, In_16, Dd_16, S_16, R_16, A_16, sgm_15, Tt_15, In_15, Dd_15, S_15, R_15, A_15, sgm_14, Tt_14, In_14, Dd_14, S_14, R_14, A_14, sgm_13, Tt_13, In_13, Dd_13, S_13, R_13, A_13, sgm_12, Tt_12, In_12, Dd_12, S_12, R_12, A_12, sgm_11, Tt_11, In_11, Dd_11, S_11, R_11, A_11, sgm_10, Tt_10, In_10, Dd_10, S_10, R_10, A_10, sgm_9, Tt_9, In_9, Dd_9, S_9, R_9, A_9, sgm_8, Tt_8, In_8, Dd_8, S_8, R_8, A_8, sgm_7, Tt_7, In_7, Dd_7, S_7, R_7, A_7, sgm_6, Tt_6, In_6, Dd_6, S_6, R_6, A_6, sgm_5, Tt_5, In_5, Dd_5, S_5, R_5, A_5, sgm_4, Tt_4, In_4, Dd_4, S_4, R_4, A_4, sgm_3, Tt_3, In_3, Dd_3, S_3, R_3, A_3, sgm_2, Tt_2, In_2, Dd_2, S_2, R_2, A_2, sgm_1, Tt_1, In_1, Dd_1, S_1, R_1, A_1, sgm_0, Tt_0, In_0, Hh_0, Dd_0, S_0, R_0, E_0, A_0, z_aux, w_aux, a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho, ta, th, zeta]
+Prep CPU Time (sub_transc=true):	 938.682
+Prep Real Elapsed Time (sub_transc=true):	 869.225
+memory used=81.35GiB, alloc change=136.49MiB, cpu time=15.65m, real time=14.49m, gc time=119.03s
+
+
+GetPolySystem Usage (real, cpu, memory):	869.249,	938.706,	87351200784
+
+States for substitution:	[a = 2, th = 1, g = 2, rho = 1, eta = 2, sgm_ = 0, A_ = 1, lam = 2, eps = 1, In_ = 1, ksi = 1, R_ = 0, zeta = 2, ta = 1, Dd_ = 0, Tt_ = 0, nu = 2, kappa = 2, b = 2, dlt = 2, mu = 1, S_ = 2]
 NonID parameters:	[A_0, E_0, Hh_0, In_0, R_0, S_0, Tt_0, a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho, sgm, ta, th, zeta]
-Substitutions:	[A_ = 2, Tt_ = 1, Dd_ = 1, In_ = 2, S_ = 3, z_aux = 2, R_ = 1, sgm_ = 1]
+Substitutions:	[sgm_ = 1, A_ = 2, z_aux = 2, In_ = 2, R_ = 1, Dd_ = 1, Tt_ = 1, S_ = 3]
+memory used=81.36GiB, alloc change=136.49MiB, cpu time=15.65m, real time=14.49m, gc time=119.03s
+
+SubsByDepth Usage (real, cpu, memory):	869.357,	938.813,	87362816696
+
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -310,6 +386,9 @@ Parameters in equations:  [a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho,
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
+Bound D_1 for testing the rank of the Jacobian probabilistically:  469800000
+Orders of prolongations of the outputs (beta) =  [19]
+Orders of prolongations of the state variables (alpha) =  [17, 18, 19, 18, 19, 19, 1, 1]
 
 =======================================================
 3. Assessing local identifiability
@@ -318,13 +397,31 @@ Parameters in equations:  [a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho,
 =======================================================
 Creating Truncated system (old)
 =======================================================
+Bound D_2 for assessing global identifiability:  905691285000000000000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a = 178946754708937444058516405299902491774201, b = 783096666420635688333493851568201737208735, dlt = 625248480949422193512885576208956645243405, eps = 198330326208149422468072582978208456056844, eta = 859614251129166233970792673401673956318, g = 43175632926240226618832090124846990760146, kappa = 661849998653244344269315551773277480632381, ksi = 300528218151502636687553513650084702714115, lam = 288043560811394731311512856430261630394353, mu = 566811291674002864016294923590438072152859, nu = 155911038252955883993587536666582856874724, rho = 889311549169976601597183133567073650829463, sgm = 609315774610080736467116651969179787479328, ta = 786609666777225696001520247206768932917595, th = 247654392687133219746748739098050922661430, zeta = 821710741018496955515180026536090052726593, S_0 = 47944603158404834358152442733100896832368, In_0 = 668671433762441353663190330060400019617985, Dd_0 = 729128758301154854132578915468651549665213, A_0 = 869169357798095561024643188981269096665784, R_0 = 467707075827304449984902125683046704619155, Tt_0 = 160944344473456753863979885984992216776871, Hh_0 = 516017788453781616534133685819047917982484, E_0 = 412940652618369266527476054209974348889634]
+The polynomial system widehat{E^t} contains  123 equations in  126  variables
 Locally identifiable paramters:  [Dd(0)]
 Nonidentifiable parameter:  [A(0), E(0), Hh(0), In(0), R(0), S(0), Tt(0), a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho, sgm, ta, th, zeta]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-States for substitution:	[A_ = 1, ksi = 1, b = 2, eps = 1, nu = 2, a = 2, dlt = 2, Tt_ = 0, Dd_ = 0, kappa = 2, In_ = 1, th = 1, g = 2, zeta = 2, S_ = 2, rho = 1, mu = 1, ta = 1, lam = 2, R_ = 0, sgm = 1, eta = 2]
+Bound D_2 for assessing global identifiability:  1207588380000000000000000000000000000000000
+Random sample for the outputs and inputs is generated from  [a = 614900149710579533559409258433702256980013, b = 1120947628706460580795223129080971271916846, dlt = 28447031034756876817154876116798771738690, eps = 278530231967632536031680389855246991925659, eta = 58008726210442278488189725814071508512019, g = 858128186495737791907535488491842097440692, kappa = 14597915826220545365785432864254064401413, ksi = 80084925701476883175707204480093568554787, lam = 1125960096664194046186393732216961900745973, mu = 992726792748346741565579303760129888110829, nu = 788160470610489254017844950561584393967257, rho = 115912749973580225572069155228430936643682, sgm = 914173671899995231731395618065682839202157, ta = 1087319185986890500738665448926702422082999, th = 685659711939147618060553617413516537328234, zeta = 1080405848860252066015455480626253129030535, S_0 = 797557529125525889273125217687470439154309, In_0 = 536689852975587659393229348931278439284352, Dd_0 = 442841235264308509490298284804121640103048, A_0 = 226528978692685006071572662237396752945128, R_0 = 649077474063438207060531753837974906785722, Tt_0 = 344849877771370665823909448598019230870862, Hh_0 = 606647603898471949722840502659991637858631, E_0 = 131292242613499355302790070232479979843295]
+The polynomial system widehat{E^t} contains  123 equations in  126  variables
+Variable ordering to be used for Groebner basis computation [Tt_18, Dd_18, R_18, Tt_17, In_17, Dd_17, R_17, A_17, Tt_16, In_16, Dd_16, S_16, R_16, A_16, Tt_15, In_15, Dd_15, S_15, R_15, A_15, Tt_14, In_14, Dd_14, S_14, R_14, A_14, Tt_13, In_13, Dd_13, S_13, R_13, A_13, Tt_12, In_12, Dd_12, S_12, R_12, A_12, Tt_11, In_11, Dd_11, S_11, R_11, A_11, Tt_10, In_10, Dd_10, S_10, R_10, A_10, Tt_9, In_9, Dd_9, S_9, R_9, A_9, Tt_8, In_8, Dd_8, S_8, R_8, A_8, Tt_7, In_7, Dd_7, S_7, R_7, A_7, Tt_6, In_6, Dd_6, S_6, R_6, A_6, Tt_5, In_5, Dd_5, S_5, R_5, A_5, Tt_4, In_4, Dd_4, S_4, R_4, A_4, Tt_3, In_3, Dd_3, S_3, R_3, A_3, Tt_2, In_2, Dd_2, S_2, R_2, A_2, Tt_1, In_1, Dd_1, S_1, R_1, A_1, Tt_0, In_0, Dd_0, S_0, R_0, A_0, z_aux, w_aux, a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho, sgm, ta, th, zeta]
+Prep CPU Time (sub_transc=false):	 14.027
+Prep Real Elapsed Time (sub_transc=false):	 11.931
+memory used=1.70GiB, alloc change=-4.00MiB, cpu time=14.03s, real time=11.93s, gc time=3.67s
+
+
+GetPolySystem Usage (real, cpu, memory):	11.932,	14.028,	1824234416
+
+States for substitution:	[a = 2, th = 1, g = 2, rho = 1, eta = 2, A_ = 1, lam = 2, eps = 1, sgm = 1, In_ = 1, ksi = 1, R_ = 0, zeta = 2, ta = 1, Dd_ = 0, Tt_ = 0, nu = 2, kappa = 2, b = 2, dlt = 2, mu = 1, S_ = 2]
 NonID parameters:	[A_0, E_0, Hh_0, In_0, R_0, S_0, Tt_0, a, b, dlt, eps, eta, g, kappa, ksi, lam, mu, nu, rho, sgm, ta, th, zeta]
-Substitutions:	[A_ = 2, Tt_ = 1, Dd_ = 1, In_ = 2, S_ = 3, z_aux = 2, R_ = 1]
-memory used=84825.7MB, alloc=211.8MB, time=866.05
+Substitutions:	[A_ = 2, z_aux = 2, In_ = 2, R_ = 1, Dd_ = 1, Tt_ = 1, S_ = 3]
+memory used=1.71GiB, alloc change=-4.00MiB, cpu time=14.13s, real time=12.03s, gc time=3.67s
+
+SubsByDepth Usage (real, cpu, memory):	12.032,	14.128,	1834899560
+
+memory used=85086.5MB, alloc=211.8MB, time=953.43
