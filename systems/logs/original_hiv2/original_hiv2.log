@@ -11,56 +11,64 @@ Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in SubsByDepth) `out` is implicitly declared local
 |imports/create_substitutions.mpl:53|
 Warning, (in SubsByDepth) `mem` is implicitly declared local
@@ -97,9 +105,6 @@ Parameters in equations:  [a, b, beta, c, d, h, k, lm, q, u]
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  139392000
-Orders of prolongations of the outputs (beta) =  [10, 9]
-Orders of prolongations of the state variables (alpha) =  [8, 9, 8, 10, 9]
 
 =======================================================
 3. Assessing local identifiability
@@ -108,9 +113,6 @@ Orders of prolongations of the state variables (alpha) =  [8, 9, 8, 10, 9]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  12268031980000000000000000
-Random sample for the outputs and inputs is generated from  [a = 3710019978467714878359731, b = 241943832981872051445153, beta = 1892320836289608399911170, c = 570078138633310561484908, d = 3902762857384798256694611, h = 3220289759923686896038572, k = 4390241754552816300822200, lm = 4597255250075128822746293, q = 296512111506190322537829, u = 9341281586096562447952203, x_0 = 2344161225040104571591480, y_0 = 7441344859873967053883320, v_0 = 84385846633379972622647, w_0 = 8492006424436347111819883, z_0 = 1907511683710424911171475]
-The polynomial system widehat{E^t} contains  58 equations in  54  variables
 Locally identifiable paramters:  [a, b, d, h, q, u, w(0), z(0)]
 Nonidentifiable parameter:  [beta, c, k, lm, v(0), x(0), y(0)]
 
@@ -119,690 +121,499 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {beta, c}
 Number of possible combinations 406
-Collection [beta, v_1] is not transcendence basis
-Collection [beta, v_2] is not transcendence basis
-Collection [beta, v_4] is not transcendence basis
-Collection [beta, v_5] is not transcendence basis
-Collection [c, y_4] is not transcendence basis
-Collection [lm, x_1] is not transcendence basis
-Collection [lm, x_7] is not transcendence basis
+Collection [c, x_1] is not transcendence basis
+Collection [c, x_2] is not transcendence basis
+Collection [c, x_7] is not transcendence basis
+Collection [c, y_0] is not transcendence basis
+Collection [c, y_2] is not transcendence basis
+Collection [c, y_6] is not transcendence basis
+Collection [c, y_7] is not transcendence basis
+Collection [c, y_8] is not transcendence basis
+Collection [lm, y_0] is not transcendence basis
 Collection [lm, y_2] is not transcendence basis
+Collection [lm, y_3] is not transcendence basis
 Collection [lm, y_4] is not transcendence basis
-Collection [lm, y_8] is not transcendence basis
-Collection [v_0, v_2] is not transcendence basis
-Collection [v_0, v_3] is not transcendence basis
-Collection [v_0, v_5] is not transcendence basis
-Collection [v_1, v_2] is not transcendence basis
-Collection [v_2, v_0] is not transcendence basis
-Collection [v_2, v_4] is not transcendence basis
-Collection [v_3, v_0] is not transcendence basis
-Collection [v_3, v_1] is not transcendence basis
+Collection [lm, y_7] is not transcendence basis
+Collection [v_0, v_4] is not transcendence basis
+Collection [v_1, beta] is not transcendence basis
+Collection [v_2, beta] is not transcendence basis
+Collection [v_2, v_3] is not transcendence basis
+Collection [v_3, beta] is not transcendence basis
+Collection [v_3, v_2] is not transcendence basis
+Collection [v_3, v_5] is not transcendence basis
 Collection [v_4, v_6] is not transcendence basis
-Collection [v_6, beta] is not transcendence basis
-Collection [v_6, v_0] is not transcendence basis
-Collection [v_6, v_1] is not transcendence basis
-Collection [v_6, v_4] is not transcendence basis
-Collection [v_6, v_7] is not transcendence basis
-Collection [v_7, v_0] is not transcendence basis
-Collection [v_7, v_1] is not transcendence basis
-Collection [v_7, v_6] is not transcendence basis
-Collection [x_0, lm] is not transcendence basis
-Collection [x_0, y_7] is not transcendence basis
-Collection [x_1, x_2] is not transcendence basis
-Collection [x_1, x_4] is not transcendence basis
-Collection [x_1, y_3] is not transcendence basis
+Collection [v_5, v_6] is not transcendence basis
+Collection [v_5, v_7] is not transcendence basis
+Collection [v_6, v_2] is not transcendence basis
+Collection [x_0, x_4] is not transcendence basis
+Collection [x_0, y_6] is not transcendence basis
+Collection [x_1, lm] is not transcendence basis
+Collection [x_1, x_7] is not transcendence basis
+Collection [x_1, y_1] is not transcendence basis
+Collection [x_1, y_2] is not transcendence basis
 Collection [x_1, y_5] is not transcendence basis
-Collection [x_2, x_7] is not transcendence basis
-Collection [x_2, y_3] is not transcendence basis
-Collection [x_2, y_4] is not transcendence basis
-Collection [x_2, y_5] is not transcendence basis
-Collection [x_3, c] is not transcendence basis
+Collection [x_1, y_6] is not transcendence basis
+Collection [x_1, y_8] is not transcendence basis
+Collection [x_2, c] is not transcendence basis
+Collection [x_2, x_0] is not transcendence basis
+Collection [x_2, y_8] is not transcendence basis
+Collection [x_3, lm] is not transcendence basis
 Collection [x_3, x_4] is not transcendence basis
-Collection [x_3, y_1] is not transcendence basis
-Collection [x_3, y_3] is not transcendence basis
-Collection [x_3, y_4] is not transcendence basis
-Collection [x_3, y_7] is not transcendence basis
-Collection [x_3, y_8] is not transcendence basis
-Collection [x_4, c] is not transcendence basis
-Collection [x_4, x_0] is not transcendence basis
+Collection [x_3, x_5] is not transcendence basis
+Collection [x_3, y_2] is not transcendence basis
+Collection [x_4, y_0] is not transcendence basis
+Collection [x_4, y_1] is not transcendence basis
+Collection [x_4, y_4] is not transcendence basis
 Collection [x_4, y_6] is not transcendence basis
-Collection [x_4, y_8] is not transcendence basis
+Collection [x_5, x_0] is not transcendence basis
 Collection [x_5, x_2] is not transcendence basis
-Collection [x_5, x_6] is not transcendence basis
+Collection [x_5, x_4] is not transcendence basis
 Collection [x_5, y_0] is not transcendence basis
-Collection [x_5, y_1] is not transcendence basis
-Collection [x_5, y_6] is not transcendence basis
-Collection [x_6, lm] is not transcendence basis
+Collection [x_5, y_7] is not transcendence basis
 Collection [x_6, x_0] is not transcendence basis
 Collection [x_6, x_5] is not transcendence basis
-Collection [x_6, y_1] is not transcendence basis
-Collection [x_6, y_5] is not transcendence basis
-Collection [x_7, x_4] is not transcendence basis
+Collection [x_6, x_7] is not transcendence basis
+Collection [x_7, c] is not transcendence basis
+Collection [x_7, y_1] is not transcendence basis
+Collection [x_7, y_2] is not transcendence basis
+Collection [x_7, y_3] is not transcendence basis
 Collection [x_7, y_4] is not transcendence basis
-Collection [y_0, c] is not transcendence basis
+Collection [x_7, y_5] is not transcendence basis
+Collection [x_7, y_8] is not transcendence basis
 Collection [y_0, x_1] is not transcendence basis
-Collection [y_1, x_0] is not transcendence basis
-Collection [y_1, x_4] is not transcendence basis
-Collection [y_1, x_5] is not transcendence basis
-Collection [y_1, x_6] is not transcendence basis
-Collection [y_1, y_8] is not transcendence basis
+Collection [y_0, x_3] is not transcendence basis
+Collection [y_0, x_6] is not transcendence basis
+Collection [y_0, y_3] is not transcendence basis
+Collection [y_0, y_5] is not transcendence basis
+Collection [y_0, y_8] is not transcendence basis
+Collection [y_1, lm] is not transcendence basis
+Collection [y_1, x_1] is not transcendence basis
+Collection [y_1, y_2] is not transcendence basis
+Collection [y_1, y_4] is not transcendence basis
+Collection [y_1, y_5] is not transcendence basis
+Collection [y_1, y_6] is not transcendence basis
 Collection [y_2, x_2] is not transcendence basis
-Collection [y_2, x_6] is not transcendence basis
-Collection [y_2, y_0] is not transcendence basis
-Collection [y_2, y_5] is not transcendence basis
-Collection [y_3, x_1] is not transcendence basis
-Collection [y_3, x_4] is not transcendence basis
-Collection [y_3, x_5] is not transcendence basis
-Collection [y_3, y_4] is not transcendence basis
+Collection [y_2, x_5] is not transcendence basis
+Collection [y_2, y_1] is not transcendence basis
+Collection [y_3, lm] is not transcendence basis
+Collection [y_3, x_3] is not transcendence basis
+Collection [y_3, x_6] is not transcendence basis
 Collection [y_3, y_6] is not transcendence basis
-Collection [y_3, y_8] is not transcendence basis
-Collection [y_4, x_0] is not transcendence basis
-Collection [y_4, x_2] is not transcendence basis
-Collection [y_4, y_2] is not transcendence basis
-Collection [y_5, c] is not transcendence basis
-Collection [y_5, x_6] is not transcendence basis
-Collection [y_5, y_0] is not transcendence basis
-Collection [y_5, y_3] is not transcendence basis
-Collection [y_5, y_4] is not transcendence basis
+Collection [y_4, c] is not transcendence basis
+Collection [y_4, x_5] is not transcendence basis
+Collection [y_4, x_6] is not transcendence basis
+Collection [y_4, x_7] is not transcendence basis
+Collection [y_4, y_0] is not transcendence basis
+Collection [y_4, y_7] is not transcendence basis
+Collection [y_5, y_1] is not transcendence basis
 Collection [y_5, y_7] is not transcendence basis
-Collection [y_6, x_3] is not transcendence basis
-Collection [y_6, x_4] is not transcendence basis
-Collection [y_7, x_2] is not transcendence basis
+Collection [y_6, lm] is not transcendence basis
+Collection [y_6, y_4] is not transcendence basis
+Collection [y_6, y_8] is not transcendence basis
+Collection [y_7, c] is not transcendence basis
+Collection [y_7, x_4] is not transcendence basis
 Collection [y_7, x_5] is not transcendence basis
-Collection [y_7, y_0] is not transcendence basis
+Collection [y_8, x_0] is not transcendence basis
 Collection [y_8, x_1] is not transcendence basis
-Collection [y_8, y_3] is not transcendence basis
+Collection [y_8, x_6] is not transcendence basis
+Collection [y_8, y_0] is not transcendence basis
 Picked the best choice [beta, c] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {beta, c}
-Algebraically independent parameters among derivatives: {}
-	Adding ODEs: [diff(beta(t),t) = 0, diff(c(t),t) = 0]
-	Adding output functions: [y_faux1(t) = beta(t), y_faux2(t) = c(t)]
-	New system: [diff(beta(t),t) = 0, diff(c(t),t) = 0, diff(x(t),t) = lm-d*x(t)-beta(t)*x(t)*v(t), diff(y(t),t) = beta(t)*x(t)*v(t)-a*y(t), diff(v(t),t) = k*y(t)-u*v(t), diff(w(t),t) = c(t)*z(t)*y(t)*w(t)-c(t)*q*y(t)*w(t)-b*w(t), diff(z(t),t) = c(t)*q*y(t)*w(t)-h*z(t), y1(t) = w(t), y2(t) = z(t), y_faux1(t) = beta(t), y_faux2(t) = c(t)]
-
-=== Input info ===
-State variables:          [beta(t), c(t), x(t), y(t), v(t), w(t), z(t)]
-Output variables:         [y1(t), y2(t), y_faux1(t), y_faux2(t)]
-Input variables:          []
-Parameters in equations:  [a, b, d, h, k, lm, q, u]
-===================
-
-Transcendence basis substitution turned off.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  16357375970000000000000000
-Random sample for the outputs and inputs is generated from  [a = 15171502798209871437188924, b = 9221391394889994901192398, d = 9849041058785486732180638, h = 6330247519520626997135645, k = 1439836001428735587798911, lm = 4237666416135276359695246, q = 6077047125002441597325544, u = 10937953258330944270644708, beta_0 = 12777322528972901674411262, c_0 = 14863404131180300396982389, x_0 = 11889083432627402255468174, y_0 = 799766173269360325557927, v_0 = 4038425275834466998039894, w_0 = 1546381687435996719729968, z_0 = 381429015756642491420730]
-The polynomial system widehat{E^t} contains  90 equations in  69  variables
-Variable ordering to be used for Groebner basis computation [w_9, z_8, y_8, w_8, c_8, beta_7, z_7, y_7, x_7, w_7, v_7, c_7, beta_6, z_6, y_6, x_6, w_6, v_6, c_6, beta_5, z_5, y_5, x_5, w_5, v_5, c_5, beta_4, z_4, y_4, x_4, w_4, v_4, c_4, beta_3, z_3, y_3, x_3, w_3, v_3, c_3, beta_2, z_2, y_2, x_2, w_2, v_2, c_2, beta_1, z_1, y_1, x_1, w_1, v_1, c_1, beta_0, z_0, y_0, x_0, w_0, v_0, c_0, z_aux, w_aux, a, b, d, h, k, lm, q, u]
-Prep CPU Time (sub_transc=true):	 36.875
-Prep Real Elapsed Time (sub_transc=true):	 35.367
-memory used=4.14GiB, alloc change=97.53MiB, cpu time=36.90s, real time=35.39s, gc time=3.11s
+Prep CPU Time (sub_transc=true):	 36.389
+Prep Real Elapsed Time (sub_transc=true):	 34.680
+memory used=3.45GiB, alloc change=80.51MiB, cpu time=36.41s, real time=34.70s, gc time=4.01s
 
 
-GetPolySystem Usage (real, cpu, memory):	35.387,	36.896,	4444196312
+GetPolySystem Usage (real, cpu, memory):	34.700,	36.409,	3707581648
 
-States for substitution:	[beta_ = 0, c_ = 0, w_ = 0, h = 1, y_ = 1, z_ = 0, b = 1, u = 3, x_ = 2, a = 2, lm = 3, k = 3, d = 3, q = 1, v_ = 2]
+States for substitution:	[a = 2, w_ = 0, v_ = 2, y_ = 1, x_ = 2, h = 1, u = 3, b = 1, c = 1, lm = 3, q = 1, beta = 2, d = 3, k = 3, z_ = 0]
 NonID parameters:	[beta, c, k, lm, v_0, x_0, y_0]
-Substitutions:	[beta_ = 1, c_ = 1, z_aux = 3, w_ = 1, y_ = 2, z_ = 1, u = 4, x_ = 3, d = 4, v_ = 3]
-all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {beta_0
-= beta_0, beta_1 = beta_1, beta_2 = beta_2, beta_3 = beta_3, beta_4 = beta_4, 
-beta_5 = beta_5, beta_6 = beta_6, beta_7 = beta_7, c_0 = c_0, c_1 = c_1, c_2 =
-c_2, c_3 = c_3, c_4 = c_4, c_5 = c_5, c_6 = c_6, c_7 = c_7, c_8 = c_8, d = d^4,
-u = u^4, v_0 = v_0^3, v_1 = v_1^3, v_2 = v_2^3, v_3 = v_3^3, v_4 = v_4^3, v_5 =
-v_5^3, v_6 = v_6^3, v_7 = v_7^3, w_0 = w_0, w_1 = w_1, w_2 = w_2, w_3 = w_3, 
-w_4 = w_4, w_5 = w_5, w_6 = w_6, w_7 = w_7, w_8 = w_8, w_9 = w_9, w_aux = w_aux
-, x_0 = x_0^3, x_1 = x_1^3, x_2 = x_2^3, x_3 = x_3^3, x_4 = x_4^3, x_5 = x_5^3,
-x_6 = x_6^3, x_7 = x_7^3, y_0 = y_0^2, y_1 = y_1^2, y_2 = y_2^2, y_3 = y_3^2, 
-y_4 = y_4^2, y_5 = y_5^2, y_6 = y_6^2, y_7 = y_7^2, y_8 = y_8^2, z_0 = z_0, z_1
-= z_1, z_2 = z_2, z_3 = z_3, z_4 = z_4, z_5 = z_5, z_6 = z_6, z_7 = z_7, z_8 =
-z_8, z_aux = z_aux, z_aux = z_aux^3}, [1546381687435996719729968-w_0, c_0*q*w_0
-*y_0^2-c_0*w_0*y_0^2*z_0+b*w_0+w_1, 381429015756642491420730-z_0, -c_0*q*w_0*
-y_0^2+h*z_0+z_1, 12777322528972901674411262-beta_0, beta_1, 
-14863404131180300396982389-c_0, c_1, -w_1-1046981186733656559790483100162506766\
-19183777158702312367280738615194921133349894230445327329096320, ((-z_1*y_0^2-
-y_1^2*(z_0-q))*w_0-w_1*y_0^2*(z_0-q))*c_0-c_1*y_0^2*(z_0-q)*w_0+b*w_1+w_2, -
-beta_0*v_0^3*x_0^3+a*y_0^2+y_1^2, 111709631663031689543360092050609494031529405\
-126047027534635849561344894575353071392111042308166126-z_1, ((-w_0*y_1^2-w_1*
-y_0^2)*c_0-c_1*y_0^2*w_0)*q+h*z_1+z_2, -w_2+91420808775393597064012507032684425\
-7699541603042435982923263764928552801146787114715344735462355121162277718615336\
-3822612918514517733963609121339275411876003285523373652832, ((q*y_2^2-y_0^2*z_2
--2*y_1^2*z_1-y_2^2*z_0)*w_0+(q*w_2-2*w_1*z_1-w_2*z_0)*y_0^2-2*w_1*y_1^2*(z_0-q)
-)*c_0+((-2*c_1*z_1+c_2*q-c_2*z_0)*y_0^2-2*y_1^2*c_1*(z_0-q))*w_0-2*c_1*w_1*(z_0
--q)*y_0^2+b*w_2+w_3, c_2, (-beta_0*v_1^3-beta_1*v_0^3)*x_0^3-v_0^3*beta_0*x_1^3
-+a*y_1^2+y_2^2, u^4*v_0^3-k*y_0^2+v_1^3, beta_0*v_0^3*x_0^3+d^4*x_0^3+x_1^3-lm,
--756332564452858287259395060615855153515882468254781274871601210448693543277376\
-0664880772686176442578401360512664817418970639010491141517560663956491340579942\
-862023494263798-z_2, ((-w_0*y_2^2-2*w_1*y_1^2-w_2*y_0^2)*c_0+(-2*c_1*y_1^2-c_2*
-y_0^2)*w_0-2*c_1*w_1*y_0^2)*q+h*z_2+z_3, -w_3-103605883622491836212329382214756\
-5101840545321378492269282156937650054770959379529960453601865230574884351321821\
-3388969629376831403307590494923091109912086899722535360663182687508112740686436\
-72217439636965871099275773352822497803745376469455894496, ((q*y_3^2-y_0^2*z_3-3
-*y_1^2*z_2-3*y_2^2*z_1-y_3^2*z_0)*w_0+(q*w_3-3*w_1*z_2-3*w_2*z_1-w_3*z_0)*y_0^2
-+(-3*w_1*y_2^2-3*w_2*y_1^2)*z_0+(3*w_1*y_2^2+3*w_2*y_1^2)*q-6*y_1^2*z_1*w_1)*
-c_0+((-3*c_1*z_2-3*c_2*z_1+c_3*q-c_3*z_0)*y_0^2+(-3*c_1*y_2^2-3*c_2*y_1^2)*z_0+
-(3*c_1*y_2^2+3*c_2*y_1^2)*q-6*y_1^2*z_1*c_1)*w_0+((-3*c_1*w_2-3*c_2*w_1)*z_0+(3
-*c_1*w_2+3*c_2*w_1)*q-6*z_1*c_1*w_1)*y_0^2-6*c_1*w_1*y_1^2*z_0+6*c_1*q*w_1*y_1^
-2+b*w_3+w_4, c_3, (-v_0^3*x_2^3-2*v_1^3*x_1^3-v_2^3*x_0^3)*beta_0+(-2*beta_1*
-x_1^3-beta_2*x_0^3)*v_0^3-2*beta_1*v_1^3*x_0^3+a*y_2^2+y_3^2, beta_2, u^4*v_1^3
--k*y_1^2+v_2^3, beta_0*x_0^3*v_1^3+v_0^3*x_0^3*beta_1+(beta_0*v_0^3+d^4)*x_1^3+
-x_2^3, 660418120416882081715513909753244545915620241171549490578019043633251371\
-2643167556575608051608197622113225006822833217890601134723664980243603941328635\
-5482439830699620195450137500785226484115500610284619186159387268039672991353557\
-5925080195514334-z_3, ((-w_0*y_3^2-3*w_1*y_2^2-3*w_2*y_1^2-w_3*y_0^2)*c_0+(-3*
-c_1*y_2^2-3*c_2*y_1^2-c_3*y_0^2)*w_0+(-3*c_1*w_2-3*c_2*w_1)*y_0^2-6*c_1*w_1*y_1
-^2)*q+h*z_3+z_4, -w_4+146945727673880681199761520481504258034126025320841804130\
-9637688549558315477437378501334065134220074945905943935675879813965612863775531\
-0558508604977592350035365385209350939607661178446026693786160816472375011274622\
-9820028151760951257067151691002323588668455862600708346775859692735162535224351\
-997762937175365676552648480, ((q*y_4^2-y_0^2*z_4-4*y_1^2*z_3-6*y_2^2*z_2-4*y_3^
-2*z_1-y_4^2*z_0)*w_0+(q*w_4-4*w_1*z_3-6*w_2*z_2-4*w_3*z_1-w_4*z_0)*y_0^2+(-4*
-w_1*y_3^2-6*w_2*y_2^2-4*w_3*y_1^2)*z_0+(4*w_1*y_3^2+6*w_2*y_2^2+4*w_3*y_1^2)*q+
-(-12*y_1^2*z_2-12*y_2^2*z_1)*w_1-12*w_2*y_1^2*z_1)*c_0+((-4*c_1*z_3-6*c_2*z_2-4
-*c_3*z_1+c_4*q-c_4*z_0)*y_0^2+(-4*c_1*y_3^2-6*c_2*y_2^2-4*c_3*y_1^2)*z_0+(4*c_1
-*y_3^2+6*c_2*y_2^2+4*c_3*y_1^2)*q+(-12*y_1^2*z_2-12*y_2^2*z_1)*c_1-12*y_1^2*z_1
-*c_2)*w_0+((-4*c_1*w_3-6*c_2*w_2-4*c_3*w_1)*z_0+(4*c_1*w_3+6*c_2*w_2+4*c_3*w_1)
-*q+(-12*w_1*z_2-12*w_2*z_1)*c_1-12*z_1*c_2*w_1)*y_0^2+((-12*w_1*y_2^2-12*w_2*
-y_1^2)*c_1-12*y_1^2*c_2*w_1)*z_0+((12*w_1*y_2^2+12*w_2*y_1^2)*c_1+12*y_1^2*c_2*
-w_1)*q-24*c_1*w_1*y_1^2*z_1+b*w_4+w_5, c_4, (-v_0^3*x_3^3-3*v_1^3*x_2^3-3*v_2^3
-*x_1^3-v_3^3*x_0^3)*beta_0+(-3*beta_1*x_2^3-3*beta_2*x_1^3-beta_3*x_0^3)*v_0^3+
-(-3*beta_1*v_2^3-3*beta_2*v_1^3)*x_0^3-6*beta_1*v_1^3*x_1^3+a*y_3^2+y_4^2, 
-beta_3, u^4*v_2^3-k*y_2^2+v_3^3, (v_0^3*x_2^3+2*v_1^3*x_1^3+v_2^3*x_0^3)*beta_0
-+(2*beta_1*x_1^3+beta_2*x_0^3)*v_0^3+2*beta_1*v_1^3*x_0^3+d^4*x_2^3+x_3^3, -w_5
--250473922901717435724668544613336181870578717992616282918552856296890535771274\
-8279214156285754688059354138115651890963859165263055395998136212930157275428687\
-3618265837084056252584369323183960733980258971974741705795015228300980402102063\
-7338820086389939538913256911918890845320444273245393014280579805506476145128459\
-6131156427689930805196375570071840036061943567031865732536009060689348039623292\
-8, ((q*y_5^2-y_0^2*z_5-5*y_1^2*z_4-10*y_2^2*z_3-10*y_3^2*z_2-5*y_4^2*z_1-y_5^2*
-z_0)*w_0+(q*w_5-5*w_1*z_4-10*w_2*z_3-10*w_3*z_2-5*w_4*z_1-w_5*z_0)*y_0^2+(-5*
-w_1*y_4^2-10*w_2*y_3^2-10*w_3*y_2^2-5*w_4*y_1^2)*z_0+(5*w_1*y_4^2+10*w_2*y_3^2+
-10*w_3*y_2^2+5*w_4*y_1^2)*q+(-20*y_1^2*z_3-30*y_2^2*z_2-20*y_3^2*z_1)*w_1+(-30*
-w_2*z_2-20*w_3*z_1)*y_1^2-30*y_2^2*z_1*w_2)*c_0+((-5*c_1*z_4-10*c_2*z_3-10*c_3*
-z_2-5*c_4*z_1+c_5*q-c_5*z_0)*y_0^2+(-5*c_1*y_4^2-10*c_2*y_3^2-10*c_3*y_2^2-5*
-c_4*y_1^2)*z_0+(5*c_1*y_4^2+10*c_2*y_3^2+10*c_3*y_2^2+5*c_4*y_1^2)*q+(-20*y_1^2
-*z_3-30*y_2^2*z_2-20*y_3^2*z_1)*c_1+(-30*c_2*z_2-20*c_3*z_1)*y_1^2-30*y_2^2*z_1
-*c_2)*w_0+((-5*c_1*w_4-10*c_2*w_3-10*c_3*w_2-5*c_4*w_1)*z_0+(5*c_1*w_4+10*c_2*
-w_3+10*c_3*w_2+5*c_4*w_1)*q+(-20*w_1*z_3-30*w_2*z_2-20*w_3*z_1)*c_1+(-30*c_2*
-z_2-20*c_3*z_1)*w_1-30*w_2*z_1*c_2)*y_0^2+((-20*w_1*y_3^2-30*w_2*y_2^2-20*w_3*
-y_1^2)*c_1+(-30*c_2*y_2^2-20*c_3*y_1^2)*w_1-30*w_2*y_1^2*c_2)*z_0+((20*w_1*y_3^
-2+30*w_2*y_2^2+20*w_3*y_1^2)*c_1+(30*c_2*y_2^2+20*c_3*y_1^2)*w_1+30*w_2*y_1^2*
-c_2)*q+((-60*y_1^2*z_2-60*y_2^2*z_1)*w_1-60*w_2*y_1^2*z_1)*c_1-60*c_2*w_1*y_1^2
-*z_1+b*w_5+w_6, c_5, (-v_0^3*x_4^3-4*v_1^3*x_3^3-6*v_2^3*x_2^3-4*v_3^3*x_1^3-
-v_4^3*x_0^3)*beta_0+(-4*beta_1*x_3^3-6*beta_2*x_2^3-4*beta_3*x_1^3-beta_4*x_0^3
-)*v_0^3+(-4*beta_1*v_3^3-6*beta_2*v_2^3-4*beta_3*v_1^3)*x_0^3+(-12*v_1^3*x_2^3-\
-12*v_2^3*x_1^3)*beta_1-12*beta_2*v_1^3*x_1^3+a*y_4^2+y_5^2, ((-w_0*y_4^2-4*w_1*
-y_3^2-6*w_2*y_2^2-4*w_3*y_1^2-w_4*y_0^2)*c_0+(-4*c_1*y_3^2-6*c_2*y_2^2-4*c_3*
-y_1^2-c_4*y_0^2)*w_0+(-4*c_1*w_3-6*c_2*w_2-4*c_3*w_1)*y_0^2+(-12*w_1*y_2^2-12*
-w_2*y_1^2)*c_1-12*y_1^2*c_2*w_1)*q+h*z_4+z_5, beta_4, u^4*v_3^3-k*y_3^2+v_4^3,
-(v_0^3*x_3^3+3*v_1^3*x_2^3+3*v_2^3*x_1^3+v_3^3*x_0^3)*beta_0+(3*beta_1*x_2^3+3*
-beta_2*x_1^3+beta_3*x_0^3)*v_0^3+(3*beta_1*v_2^3+3*beta_2*v_1^3)*x_0^3+6*beta_1
-*v_1^3*x_1^3+d^4*x_3^3+x_4^3, -w_6+49815724778227023566649225192848933322884630\
-4623771543820641084525533668822981567844268708095231271555103881263072811211363\
-1419955705851108279180545177101799231987493190519509840111957887225578312354079\
-7055883737684478464668019342975052486450404496799711678468275509200563092346592\
-5875832894216707229040493044539403092001966788300821174712426534716570111807522\
-6115125506840019615404489288543530279396616633792205551194028047906523677525148\
-745678883149635824832841088672, ((q*y_6^2-y_0^2*z_6-6*y_1^2*z_5-15*y_2^2*z_4-20
-*y_3^2*z_3-15*y_4^2*z_2-6*y_5^2*z_1-y_6^2*z_0)*w_0+(q*w_6-6*w_1*z_5-15*w_2*z_4-\
-20*w_3*z_3-15*w_4*z_2-6*w_5*z_1-w_6*z_0)*y_0^2+(-6*w_1*y_5^2-15*w_2*y_4^2-20*
-w_3*y_3^2-15*w_4*y_2^2-6*w_5*y_1^2)*z_0+(6*w_1*y_5^2+15*w_2*y_4^2+20*w_3*y_3^2+
-15*w_4*y_2^2+6*w_5*y_1^2)*q+(-30*y_1^2*z_4-60*y_2^2*z_3-60*y_3^2*z_2-30*y_4^2*
-z_1)*w_1+(-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1)*y_1^2+(-60*w_2*y_3^2-60*w_3*y_2^2)
-*z_1-90*w_2*y_2^2*z_2)*c_0+((-6*c_1*z_5-15*c_2*z_4-20*c_3*z_3-15*c_4*z_2-6*c_5*
-z_1+c_6*q-c_6*z_0)*y_0^2+(-6*c_1*y_5^2-15*c_2*y_4^2-20*c_3*y_3^2-15*c_4*y_2^2-6
-*c_5*y_1^2)*z_0+(6*c_1*y_5^2+15*c_2*y_4^2+20*c_3*y_3^2+15*c_4*y_2^2+6*c_5*y_1^2
-)*q+(-30*y_1^2*z_4-60*y_2^2*z_3-60*y_3^2*z_2-30*y_4^2*z_1)*c_1+(-60*c_2*z_3-60*
-c_3*z_2-30*c_4*z_1)*y_1^2+(-60*c_2*y_3^2-60*c_3*y_2^2)*z_1-90*y_2^2*z_2*c_2)*
-w_0+((-6*c_1*w_5-15*c_2*w_4-20*c_3*w_3-15*c_4*w_2-6*c_5*w_1)*z_0+(6*c_1*w_5+15*
-c_2*w_4+20*c_3*w_3+15*c_4*w_2+6*c_5*w_1)*q+(-30*w_1*z_4-60*w_2*z_3-60*w_3*z_2-\
-30*w_4*z_1)*c_1+(-60*c_2*z_3-60*c_3*z_2-30*c_4*z_1)*w_1+(-60*c_2*w_3-60*c_3*w_2
-)*z_1-90*w_2*z_2*c_2)*y_0^2+((-30*w_1*y_4^2-60*w_2*y_3^2-60*w_3*y_2^2-30*w_4*
-y_1^2)*c_1+(-60*c_2*y_3^2-60*c_3*y_2^2-30*c_4*y_1^2)*w_1+(-60*c_2*w_3-60*c_3*
-w_2)*y_1^2-90*w_2*y_2^2*c_2)*z_0+((30*w_1*y_4^2+60*w_2*y_3^2+60*w_3*y_2^2+30*
-w_4*y_1^2)*c_1+(60*c_2*y_3^2+60*c_3*y_2^2+30*c_4*y_1^2)*w_1+(60*c_2*w_3+60*c_3*
-w_2)*y_1^2+90*w_2*y_2^2*c_2)*q+((-120*y_1^2*z_3-180*y_2^2*z_2-120*y_3^2*z_1)*
-w_1+(-180*w_2*z_2-120*w_3*z_1)*y_1^2-180*y_2^2*z_1*w_2)*c_1+((-180*c_2*z_2-120*
-c_3*z_1)*y_1^2-180*y_2^2*z_1*c_2)*w_1-180*c_2*w_2*y_1^2*z_1+b*w_6+w_7, c_6, (-
-v_0^3*x_5^3-5*v_1^3*x_4^3-10*v_2^3*x_3^3-10*v_3^3*x_2^3-5*v_4^3*x_1^3-v_5^3*x_0
-^3)*beta_0+(-5*beta_1*x_4^3-10*beta_2*x_3^3-10*beta_3*x_2^3-5*beta_4*x_1^3-
-beta_5*x_0^3)*v_0^3+(-5*beta_1*v_4^3-10*beta_2*v_3^3-10*beta_3*v_2^3-5*beta_4*
-v_1^3)*x_0^3+(-20*v_1^3*x_3^3-30*v_2^3*x_2^3-20*v_3^3*x_1^3)*beta_1+(-30*beta_2
-*x_2^3-20*beta_3*x_1^3)*v_1^3-30*beta_2*v_2^3*x_1^3+a*y_5^2+y_6^2, ((-w_0*y_5^2
--5*w_1*y_4^2-10*w_2*y_3^2-10*w_3*y_2^2-5*w_4*y_1^2-w_5*y_0^2)*c_0+(-5*c_1*y_4^2
--10*c_2*y_3^2-10*c_3*y_2^2-5*c_4*y_1^2-c_5*y_0^2)*w_0+(-5*c_1*w_4-10*c_2*w_3-10
-*c_3*w_2-5*c_4*w_1)*y_0^2+(-20*w_1*y_3^2-30*w_2*y_2^2-20*w_3*y_1^2)*c_1+(-30*
-c_2*y_2^2-20*c_3*y_1^2)*w_1-30*w_2*y_1^2*c_2)*q+h*z_5+z_6, beta_5, u^4*v_4^3-k*
-y_4^2+v_5^3, (v_0^3*x_4^3+4*v_1^3*x_3^3+6*v_2^3*x_2^3+4*v_3^3*x_1^3+v_4^3*x_0^3
-)*beta_0+(4*beta_1*x_3^3+6*beta_2*x_2^3+4*beta_3*x_1^3+beta_4*x_0^3)*v_0^3+(4*
-beta_1*v_3^3+6*beta_2*v_2^3+4*beta_3*v_1^3)*x_0^3+(12*v_1^3*x_2^3+12*v_2^3*x_1^
-3)*beta_1+12*beta_2*v_1^3*x_1^3+d^4*x_4^3+x_5^3, -w_7-1132223107346573972598163\
-0723942180017579774310643278353303995756790334670403539265595990331534149347108\
-7665091007278319042984498946416855798772383531895647747502925116131686389886918\
-3186612367892577774997214525209953012557265188597905608768355468496570022278813\
-8056671815657329810508313857279049749329275881129823149385459370896039751004776\
-7829511224205595699548286344527465511555924478189843305067254885701059125990257\
-1319583349526225466282533877430594197652053455245486695337851840672923330581600\
-672668707543782488234524339979523483795504736, ((q*y_7^2-y_0^2*z_7-7*y_1^2*z_6-\
-21*y_2^2*z_5-35*y_3^2*z_4-35*y_4^2*z_3-21*y_5^2*z_2-7*y_6^2*z_1-y_7^2*z_0)*w_0+
-(q*w_7-7*w_1*z_6-21*w_2*z_5-35*w_3*z_4-35*w_4*z_3-21*w_5*z_2-7*w_6*z_1-w_7*z_0)
-*y_0^2+(-7*w_1*y_6^2-21*w_2*y_5^2-35*w_3*y_4^2-35*w_4*y_3^2-21*w_5*y_2^2-7*w_6*
-y_1^2)*z_0+(7*w_1*y_6^2+21*w_2*y_5^2+35*w_3*y_4^2+35*w_4*y_3^2+21*w_5*y_2^2+7*
-w_6*y_1^2)*q+(-42*y_1^2*z_5-105*y_2^2*z_4-140*y_3^2*z_3-105*y_4^2*z_2-42*y_5^2*
-z_1)*w_1+(-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1)*y_1^2+(-105*w_2*y_4^
-2-140*w_3*y_3^2-105*w_4*y_2^2)*z_1+(-210*y_2^2*z_3-210*y_3^2*z_2)*w_2-210*z_2*
-y_2^2*w_3)*c_0+((-7*c_1*z_6-21*c_2*z_5-35*c_3*z_4-35*c_4*z_3-21*c_5*z_2-7*c_6*
-z_1+c_7*q-c_7*z_0)*y_0^2+(-7*c_1*y_6^2-21*c_2*y_5^2-35*c_3*y_4^2-35*c_4*y_3^2-\
-21*c_5*y_2^2-7*c_6*y_1^2)*z_0+(7*c_1*y_6^2+21*c_2*y_5^2+35*c_3*y_4^2+35*c_4*y_3
-^2+21*c_5*y_2^2+7*c_6*y_1^2)*q+(-42*y_1^2*z_5-105*y_2^2*z_4-140*y_3^2*z_3-105*
-y_4^2*z_2-42*y_5^2*z_1)*c_1+(-105*c_2*z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*z_1)*
-y_1^2+(-105*c_2*y_4^2-140*c_3*y_3^2-105*c_4*y_2^2)*z_1+(-210*y_2^2*z_3-210*y_3^
-2*z_2)*c_2-210*c_3*y_2^2*z_2)*w_0+((-7*c_1*w_6-21*c_2*w_5-35*c_3*w_4-35*c_4*w_3
--21*c_5*w_2-7*c_6*w_1)*z_0+(7*c_1*w_6+21*c_2*w_5+35*c_3*w_4+35*c_4*w_3+21*c_5*
-w_2+7*c_6*w_1)*q+(-42*w_1*z_5-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1)*
-c_1+(-105*c_2*z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*z_1)*w_1+(-105*c_2*w_4-140*c_3
-*w_3-105*c_4*w_2)*z_1+(-210*w_2*z_3-210*w_3*z_2)*c_2-210*w_2*z_2*c_3)*y_0^2+((-\
-42*w_1*y_5^2-105*w_2*y_4^2-140*w_3*y_3^2-105*w_4*y_2^2-42*w_5*y_1^2)*c_1+(-105*
-c_2*y_4^2-140*c_3*y_3^2-105*c_4*y_2^2-42*c_5*y_1^2)*w_1+(-105*c_2*w_4-140*c_3*
-w_3-105*c_4*w_2)*y_1^2+(-210*w_2*y_3^2-210*w_3*y_2^2)*c_2-210*w_2*y_2^2*c_3)*
-z_0+((42*w_1*y_5^2+105*w_2*y_4^2+140*w_3*y_3^2+105*w_4*y_2^2+42*w_5*y_1^2)*c_1+
-(105*c_2*y_4^2+140*c_3*y_3^2+105*c_4*y_2^2+42*c_5*y_1^2)*w_1+(105*c_2*w_4+140*
-c_3*w_3+105*c_4*w_2)*y_1^2+(210*w_2*y_3^2+210*w_3*y_2^2)*c_2+210*w_2*y_2^2*c_3)
-*q+((-210*y_1^2*z_4-420*y_2^2*z_3-420*y_3^2*z_2-210*y_4^2*z_1)*w_1+(-420*w_2*
-z_3-420*w_3*z_2-210*w_4*z_1)*y_1^2+(-420*w_2*y_3^2-420*w_3*y_2^2)*z_1-630*w_2*
-y_2^2*z_2)*c_1+((-420*c_2*z_3-420*c_3*z_2-210*c_4*z_1)*y_1^2+(-420*c_2*y_3^2-\
-420*c_3*y_2^2)*z_1-630*y_2^2*z_2*c_2)*w_1+((-420*c_2*w_3-420*c_3*w_2)*z_1-630*
-w_2*z_2*c_2)*y_1^2-630*c_2*w_2*y_2^2*z_1+b*w_7+w_8, c_7, (-v_0^3*x_6^3-6*v_1^3*
-x_5^3-15*v_2^3*x_4^3-20*v_3^3*x_3^3-15*v_4^3*x_2^3-6*v_5^3*x_1^3-v_6^3*x_0^3)*
-beta_0+(-6*beta_1*x_5^3-15*beta_2*x_4^3-20*beta_3*x_3^3-15*beta_4*x_2^3-6*
-beta_5*x_1^3-beta_6*x_0^3)*v_0^3+(-6*beta_1*v_5^3-15*beta_2*v_4^3-20*beta_3*v_3
-^3-15*beta_4*v_2^3-6*beta_5*v_1^3)*x_0^3+(-30*v_1^3*x_4^3-60*v_2^3*x_3^3-60*v_3
-^3*x_2^3-30*v_4^3*x_1^3)*beta_1+(-60*beta_2*x_3^3-60*beta_3*x_2^3-30*beta_4*x_1
-^3)*v_1^3+(-60*beta_2*v_3^3-60*beta_3*v_2^3)*x_1^3-90*beta_2*v_2^3*x_2^3+a*y_6^
-2+y_7^2, ((-w_0*y_6^2-6*w_1*y_5^2-15*w_2*y_4^2-20*w_3*y_3^2-15*w_4*y_2^2-6*w_5*
-y_1^2-w_6*y_0^2)*c_0+(-6*c_1*y_5^2-15*c_2*y_4^2-20*c_3*y_3^2-15*c_4*y_2^2-6*c_5
-*y_1^2-c_6*y_0^2)*w_0+(-6*c_1*w_5-15*c_2*w_4-20*c_3*w_3-15*c_4*w_2-6*c_5*w_1)*
-y_0^2+(-30*w_1*y_4^2-60*w_2*y_3^2-60*w_3*y_2^2-30*w_4*y_1^2)*c_1+(-60*c_2*y_3^2
--60*c_3*y_2^2-30*c_4*y_1^2)*w_1+(-60*c_2*w_3-60*c_3*w_2)*y_1^2-90*w_2*y_2^2*c_2
-)*q+h*z_6+z_7, beta_6, u^4*v_5^3-k*y_5^2+v_6^3, (v_0^3*x_5^3+5*v_1^3*x_4^3+10*
-v_2^3*x_3^3+10*v_3^3*x_2^3+5*v_4^3*x_1^3+v_5^3*x_0^3)*beta_0+(5*beta_1*x_4^3+10
-*beta_2*x_3^3+10*beta_3*x_2^3+5*beta_4*x_1^3+beta_5*x_0^3)*v_0^3+(5*beta_1*v_4^
-3+10*beta_2*v_3^3+10*beta_3*v_2^3+5*beta_4*v_1^3)*x_0^3+(20*v_1^3*x_3^3+30*v_2^
-3*x_2^3+20*v_3^3*x_1^3)*beta_1+(30*beta_2*x_2^3+20*beta_3*x_1^3)*v_1^3+30*
-beta_2*v_2^3*x_1^3+d^4*x_5^3+x_6^3, -w_8+28949671571606859173508915267918698361\
-4220420121749520045649083905784526761855760230315379339890644325816942333353345\
-1735763408133773821493242725303551304745433012154626513931433469959527646310346\
-7122760715756244991708038136004428882393939096118775397805283753383979684174379\
-8673558121162518683829606122358340931017131882394794809102504234266990557361913\
-4244762951588221980021172519338056625458294904965419827331473198602272561697775\
-1473800007691469682375402987966686898456122672401962502221593346818111500171334\
-1986678478410148156322806719162781143590014906735185841050923754498242456059214\
-112078670988649522009819936, ((q*y_8^2-y_0^2*z_8-8*y_1^2*z_7-28*y_2^2*z_6-56*
-y_3^2*z_5-70*y_4^2*z_4-56*y_5^2*z_3-28*y_6^2*z_2-8*y_7^2*z_1-y_8^2*z_0)*w_0+(q*
-w_8-8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-70*w_4*z_4-56*w_5*z_3-28*w_6*z_2-8*w_7*z_1-
-w_8*z_0)*y_0^2+(-8*w_1*y_7^2-28*w_2*y_6^2-56*w_3*y_5^2-70*w_4*y_4^2-56*w_5*y_3^
-2-28*w_6*y_2^2-8*w_7*y_1^2)*z_0+(8*w_1*y_7^2+28*w_2*y_6^2+56*w_3*y_5^2+70*w_4*
-y_4^2+56*w_5*y_3^2+28*w_6*y_2^2+8*w_7*y_1^2)*q+(-56*y_1^2*z_6-168*y_2^2*z_5-280
-*y_3^2*z_4-280*y_4^2*z_3-168*y_5^2*z_2-56*y_6^2*z_1)*w_1+(-168*w_2*z_5-280*w_3*
-z_4-280*w_4*z_3-168*w_5*z_2-56*w_6*z_1)*y_1^2+(-168*w_2*y_5^2-280*w_3*y_4^2-280
-*w_4*y_3^2-168*w_5*y_2^2)*z_1+(-420*y_2^2*z_4-560*y_3^2*z_3-420*y_4^2*z_2)*w_2+
-(-560*w_3*z_3-420*w_4*z_2)*y_2^2-560*w_3*y_3^2*z_2)*c_0+((-8*c_1*z_7-28*c_2*z_6
--56*c_3*z_5-70*c_4*z_4-56*c_5*z_3-28*c_6*z_2-8*c_7*z_1+c_8*q-c_8*z_0)*y_0^2+(-8
-*c_1*y_7^2-28*c_2*y_6^2-56*c_3*y_5^2-70*c_4*y_4^2-56*c_5*y_3^2-28*c_6*y_2^2-8*
-c_7*y_1^2)*z_0+(8*c_1*y_7^2+28*c_2*y_6^2+56*c_3*y_5^2+70*c_4*y_4^2+56*c_5*y_3^2
-+28*c_6*y_2^2+8*c_7*y_1^2)*q+(-56*y_1^2*z_6-168*y_2^2*z_5-280*y_3^2*z_4-280*y_4
-^2*z_3-168*y_5^2*z_2-56*y_6^2*z_1)*c_1+(-168*c_2*z_5-280*c_3*z_4-280*c_4*z_3-\
-168*c_5*z_2-56*c_6*z_1)*y_1^2+(-168*c_2*y_5^2-280*c_3*y_4^2-280*c_4*y_3^2-168*
-c_5*y_2^2)*z_1+(-420*y_2^2*z_4-560*y_3^2*z_3-420*y_4^2*z_2)*c_2+(-560*c_3*z_3-\
-420*c_4*z_2)*y_2^2-560*c_3*y_3^2*z_2)*w_0+((-8*c_1*w_7-28*c_2*w_6-56*c_3*w_5-70
-*c_4*w_4-56*c_5*w_3-28*c_6*w_2-8*c_7*w_1)*z_0+(8*c_1*w_7+28*c_2*w_6+56*c_3*w_5+
-70*c_4*w_4+56*c_5*w_3+28*c_6*w_2+8*c_7*w_1)*q+(-56*w_1*z_6-168*w_2*z_5-280*w_3*
-z_4-280*w_4*z_3-168*w_5*z_2-56*w_6*z_1)*c_1+(-168*c_2*z_5-280*c_3*z_4-280*c_4*
-z_3-168*c_5*z_2-56*c_6*z_1)*w_1+(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*c_5*
-w_2)*z_1+(-420*w_2*z_4-560*w_3*z_3-420*w_4*z_2)*c_2+(-560*c_3*z_3-420*c_4*z_2)*
-w_2-560*c_3*w_3*z_2)*y_0^2+((-56*w_1*y_6^2-168*w_2*y_5^2-280*w_3*y_4^2-280*w_4*
-y_3^2-168*w_5*y_2^2-56*w_6*y_1^2)*c_1+(-168*c_2*y_5^2-280*c_3*y_4^2-280*c_4*y_3
-^2-168*c_5*y_2^2-56*c_6*y_1^2)*w_1+(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*
-c_5*w_2)*y_1^2+(-420*w_2*y_4^2-560*w_3*y_3^2-420*w_4*y_2^2)*c_2+(-560*c_3*y_3^2
--420*c_4*y_2^2)*w_2-560*w_3*y_2^2*c_3)*z_0+((56*w_1*y_6^2+168*w_2*y_5^2+280*w_3
-*y_4^2+280*w_4*y_3^2+168*w_5*y_2^2+56*w_6*y_1^2)*c_1+(168*c_2*y_5^2+280*c_3*y_4
-^2+280*c_4*y_3^2+168*c_5*y_2^2+56*c_6*y_1^2)*w_1+(168*c_2*w_5+280*c_3*w_4+280*
-c_4*w_3+168*c_5*w_2)*y_1^2+(420*w_2*y_4^2+560*w_3*y_3^2+420*w_4*y_2^2)*c_2+(560
-*c_3*y_3^2+420*c_4*y_2^2)*w_2+560*w_3*y_2^2*c_3)*q+((-336*y_1^2*z_5-840*y_2^2*
-z_4-1120*y_3^2*z_3-840*y_4^2*z_2-336*y_5^2*z_1)*w_1+(-840*w_2*z_4-1120*w_3*z_3-\
-840*w_4*z_2-336*w_5*z_1)*y_1^2+(-840*w_2*y_4^2-1120*w_3*y_3^2-840*w_4*y_2^2)*
-z_1+(-1680*y_2^2*z_3-1680*y_3^2*z_2)*w_2-1680*z_2*y_2^2*w_3)*c_1+((-840*c_2*z_4
--1120*c_3*z_3-840*c_4*z_2-336*c_5*z_1)*y_1^2+(-840*c_2*y_4^2-1120*c_3*y_3^2-840
-*c_4*y_2^2)*z_1+(-1680*y_2^2*z_3-1680*y_3^2*z_2)*c_2-1680*c_3*y_2^2*z_2)*w_1+((
--840*c_2*w_4-1120*c_3*w_3-840*c_4*w_2)*z_1+(-1680*w_2*z_3-1680*w_3*z_2)*c_2-\
-1680*w_2*z_2*c_3)*y_1^2+((-1680*w_2*y_3^2-1680*w_3*y_2^2)*c_2-1680*w_2*y_2^2*
-c_3)*z_1-2520*c_2*w_2*y_2^2*z_2+b*w_8+w_9, c_8, (-v_0^3*x_7^3-7*v_1^3*x_6^3-21*
-v_2^3*x_5^3-35*v_3^3*x_4^3-35*v_4^3*x_3^3-21*v_5^3*x_2^3-7*v_6^3*x_1^3-v_7^3*
-x_0^3)*beta_0+(-7*beta_1*x_6^3-21*beta_2*x_5^3-35*beta_3*x_4^3-35*beta_4*x_3^3-\
-21*beta_5*x_2^3-7*beta_6*x_1^3-beta_7*x_0^3)*v_0^3+(-7*beta_1*v_6^3-21*beta_2*
-v_5^3-35*beta_3*v_4^3-35*beta_4*v_3^3-21*beta_5*v_2^3-7*beta_6*v_1^3)*x_0^3+(-\
-42*v_1^3*x_5^3-105*v_2^3*x_4^3-140*v_3^3*x_3^3-105*v_4^3*x_2^3-42*v_5^3*x_1^3)*
-beta_1+(-105*beta_2*x_4^3-140*beta_3*x_3^3-105*beta_4*x_2^3-42*beta_5*x_1^3)*
-v_1^3+(-105*beta_2*v_4^3-140*beta_3*v_3^3-105*beta_4*v_2^3)*x_1^3+(-210*v_2^3*
-x_3^3-210*v_3^3*x_2^3)*beta_2-210*beta_3*v_2^3*x_2^3+a*y_7^2+y_8^2, ((-w_0*y_7^
-2-7*w_1*y_6^2-21*w_2*y_5^2-35*w_3*y_4^2-35*w_4*y_3^2-21*w_5*y_2^2-7*w_6*y_1^2-
-w_7*y_0^2)*c_0+(-7*c_1*y_6^2-21*c_2*y_5^2-35*c_3*y_4^2-35*c_4*y_3^2-21*c_5*y_2^
-2-7*c_6*y_1^2-c_7*y_0^2)*w_0+(-7*c_1*w_6-21*c_2*w_5-35*c_3*w_4-35*c_4*w_3-21*
-c_5*w_2-7*c_6*w_1)*y_0^2+(-42*w_1*y_5^2-105*w_2*y_4^2-140*w_3*y_3^2-105*w_4*y_2
-^2-42*w_5*y_1^2)*c_1+(-105*c_2*y_4^2-140*c_3*y_3^2-105*c_4*y_2^2-42*c_5*y_1^2)*
-w_1+(-105*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*y_1^2+(-210*w_2*y_3^2-210*w_3*y_2^2)
-*c_2-210*w_2*y_2^2*c_3)*q+h*z_7+z_8, beta_7, u^4*v_6^3-k*y_6^2+v_7^3, (v_0^3*
-x_6^3+6*v_1^3*x_5^3+15*v_2^3*x_4^3+20*v_3^3*x_3^3+15*v_4^3*x_2^3+6*v_5^3*x_1^3+
-v_6^3*x_0^3)*beta_0+(6*beta_1*x_5^3+15*beta_2*x_4^3+20*beta_3*x_3^3+15*beta_4*
-x_2^3+6*beta_5*x_1^3+beta_6*x_0^3)*v_0^3+(6*beta_1*v_5^3+15*beta_2*v_4^3+20*
-beta_3*v_3^3+15*beta_4*v_2^3+6*beta_5*v_1^3)*x_0^3+(30*v_1^3*x_4^3+60*v_2^3*x_3
-^3+60*v_3^3*x_2^3+30*v_4^3*x_1^3)*beta_1+(60*beta_2*x_3^3+60*beta_3*x_2^3+30*
-beta_4*x_1^3)*v_1^3+(60*beta_2*v_3^3+60*beta_3*v_2^3)*x_1^3+90*beta_2*v_2^3*x_2
-^3+d^4*x_6^3+x_7^3, -w_9-822458014191041357810041748602939958332981443508488304\
-7055629263449050984529195012327908899935170167700299192616648403585141402683246\
-3083510212554291542608658109926872701949830214625435872660683834958297314078643\
-2184190419756922911171885750668280490886651701099245338711951137121737226682998\
-4944266582730813515813643330663991998925575323898582276098312638934966720260242\
-3113554860165814295544529500656675767997957633757178595307441188187842185416614\
-8550486258318207973700370823571619057687155138117008123530505755156990311734913\
-8686546467727191574267991431444882980751162515930888021801434536857056207994572\
-2757644522866070752611609551851915480610368228145327408041907101075108132947105\
-168352, -7484423277658943454957706117470227850506752902554202024426269125323238\
-2704906292188142376855206931468746309285265641978314462179524210723658941196858\
-3860214699741816430889738005577480221634191368965515168535995503058744976960436\
-9230892889574569581872395829379226054387357519717821991579673947271314632567845\
-4508327174950-z_4, 106152661055647590093055000336149404147228826629069596519136\
-2333755323090149098321645076600167749324761199744569418130966335981082799477754\
-4462784048268069988418827738513068644357774105163262120501915847108327063710132\
-6257274327649266344448197008841173403753642371310208682650622150241707625773312\
-5677099195829622378880297618150495180266468553333788914440809121097018285796906\
-5388018923356805198-z_5, -18094077222900075628884614010902499205351497142037195\
-0349356472259678194540178005727420004363831738563901897646149792710874199414945\
-2765068720660369807004323824308923453508281747439023420530073702534218005797652\
-4367365282569283992953119471072317460382440860039310291376551208410254436653574\
-8963129795047137511367093201510837021313049898964267535709643230701071231478235\
-0956846910618998505975728937062713952186661094975490319946668398083952867622471\
-143381022879188702166-z_6, 3598656341585154481997481227951109545338617353902032\
-7312706244368240181091874114208545390373689695890630481313770958339862905022917\
-9041228223160486348625627300653763894961661683624268021518803082434835334255984\
-6157323398089106950973524288442743819801319547599992099807607939958695516245474\
-6755124041984254814944909279740566156601354840578417197023192993868605712699945\
-5464973523136666278449420558014596182879855303173977783360279540378352791784903\
-7502057028584531957302552039246970858213660731010296928184130850821720246653251\
-71105144805807166-z_7, -8179107869013345693164571615574532157303925585016597831\
-9577652041033828374785806542759717472754901344589665534915352210102025895842876\
-7960282829412471859952639803225838901154933215180946120785780523559197824752672\
-6840252468587213520070663962011137731354721748011368619792532479142546912040155\
-8626637516680857287195305523992800485481770842601857628580629547446810330356140\
-3291617221451116736578353352478659681105325714540399685937429281743539188928493\
-8714043340926047675144613260157945015695864144095255001784036543628085568235412\
-2263389079068632682657582667646088081869353226442498735575291415205984904025860\
-753112582-z_8, -beta_1, -beta_2, -beta_3, -beta_4, -beta_5, -beta_6, -beta_7, -
-c_1, -c_2, -c_3, -c_4, -c_5, -c_6, -c_7, -c_8, z_aux^3-1], [w_9, z_8, y_8, w_8,
-c_8, beta_7, z_7, y_7, x_7, w_7, v_7, c_7, beta_6, z_6, y_6, x_6, w_6, v_6, c_6
-, beta_5, z_5, y_5, x_5, w_5, v_5, c_5, beta_4, z_4, y_4, x_4, w_4, v_4, c_4, 
-beta_3, z_3, y_3, x_3, w_3, v_3, c_3, beta_2, z_2, y_2, x_2, w_2, v_2, c_2, 
-beta_1, z_1, y_1, x_1, w_1, v_1, c_1, beta_0, z_0, y_0, x_0, w_0, v_0, c_0, 
-z_aux, w_aux, a, b, d, h, k, lm, q, u], [beta, c], [1546381687435996719729968-
-w_0, c_0*q*w_0*y_0-c_0*w_0*y_0*z_0+b*w_0+w_1, 381429015756642491420730-z_0, -
-c_0*q*w_0*y_0+h*z_0+z_1, 12777322528972901674411262-beta_0, beta_1, 
-14863404131180300396982389-c_0, c_1, -w_1-1046981186733656559790483100162506766\
-19183777158702312367280738615194921133349894230445327329096320, ((-z_1*y_0-y_1*
-(z_0-q))*w_0-w_1*y_0*(z_0-q))*c_0-c_1*y_0*(z_0-q)*w_0+b*w_1+w_2, -beta_0*v_0*
-x_0+a*y_0+y_1, 1117096316630316895433600920506094940315294051260470275346358495\
-61344894575353071392111042308166126-z_1, ((-w_0*y_1-w_1*y_0)*c_0-c_1*y_0*w_0)*q
-+h*z_1+z_2, -w_2+91420808775393597064012507032684425769954160304243598292326376\
-4928552801146787114715344735462355121162277718615336382261291851451773396360912\
-1339275411876003285523373652832, ((q*y_2-y_0*z_2-2*y_1*z_1-y_2*z_0)*w_0+(q*w_2-\
-2*w_1*z_1-w_2*z_0)*y_0-2*w_1*y_1*(z_0-q))*c_0+((-2*c_1*z_1+c_2*q-c_2*z_0)*y_0-2
-*y_1*c_1*(z_0-q))*w_0-2*c_1*w_1*(z_0-q)*y_0+b*w_2+w_3, c_2, (-beta_0*v_1-beta_1
-*v_0)*x_0-v_0*beta_0*x_1+a*y_1+y_2, -k*y_0+u*v_0+v_1, beta_0*v_0*x_0+d*x_0-lm+
-x_1, -7563325644528582872593950606158551535158824682547812748716012104486935432\
-7737606648807726861764425784013605126648174189706390104911415175606639564913405\
-79942862023494263798-z_2, ((-w_0*y_2-2*w_1*y_1-w_2*y_0)*c_0+(-2*c_1*y_1-c_2*y_0
-)*w_0-2*c_1*w_1*y_0)*q+h*z_2+z_3, -w_3-1036058836224918362123293822147565101840\
-5453213784922692821569376500547709593795299604536018652305748843513218213388969\
-6293768314033075904949230911099120868997225353606631826875081127406864367221743\
-9636965871099275773352822497803745376469455894496, ((q*y_3-y_0*z_3-3*y_1*z_2-3*
-y_2*z_1-y_3*z_0)*w_0+(q*w_3-3*w_1*z_2-3*w_2*z_1-w_3*z_0)*y_0+(-3*w_1*y_2-3*w_2*
-y_1)*z_0+(3*w_1*y_2+3*w_2*y_1)*q-6*y_1*z_1*w_1)*c_0+((-3*c_1*z_2-3*c_2*z_1+c_3*
-q-c_3*z_0)*y_0+(-3*c_1*y_2-3*c_2*y_1)*z_0+(3*c_1*y_2+3*c_2*y_1)*q-6*y_1*z_1*c_1
-)*w_0+((-3*c_1*w_2-3*c_2*w_1)*z_0+(3*c_1*w_2+3*c_2*w_1)*q-6*z_1*c_1*w_1)*y_0-6*
-c_1*w_1*y_1*z_0+6*c_1*q*w_1*y_1+b*w_3+w_4, c_3, (-v_0*x_2-2*v_1*x_1-v_2*x_0)*
-beta_0+(-2*beta_1*x_1-beta_2*x_0)*v_0-2*beta_1*v_1*x_0+a*y_2+y_3, beta_2, -k*
-y_1+u*v_1+v_2, beta_0*x_0*v_1+v_0*x_0*beta_1+(beta_0*v_0+d)*x_1+x_2, 6604181204\
-1688208171551390975324454591562024117154949057801904363325137126431675565756080\
-5160819762211322500682283321789060113472366498024360394132863554824398306996201\
-954501375007852264841155006102846191861593872680396729913535575925080195514334-
-z_3, ((-w_0*y_3-3*w_1*y_2-3*w_2*y_1-w_3*y_0)*c_0+(-3*c_1*y_2-3*c_2*y_1-c_3*y_0)
-*w_0+(-3*c_1*w_2-3*c_2*w_1)*y_0-6*c_1*w_1*y_1)*q+h*z_3+z_4, -w_4+14694572767388\
-0681199761520481504258034126025320841804130963768854955831547743737850133406513\
-4220074945905943935675879813965612863775531055850860497759235003536538520935093\
-9607661178446026693786160816472375011274622982002815176095125706715169100232358\
-8668455862600708346775859692735162535224351997762937175365676552648480, ((q*y_4
--y_0*z_4-4*y_1*z_3-6*y_2*z_2-4*y_3*z_1-y_4*z_0)*w_0+(q*w_4-4*w_1*z_3-6*w_2*z_2-\
-4*w_3*z_1-w_4*z_0)*y_0+(-4*w_1*y_3-6*w_2*y_2-4*w_3*y_1)*z_0+(4*w_1*y_3+6*w_2*
-y_2+4*w_3*y_1)*q+(-12*y_1*z_2-12*y_2*z_1)*w_1-12*w_2*y_1*z_1)*c_0+((-4*c_1*z_3-\
-6*c_2*z_2-4*c_3*z_1+c_4*q-c_4*z_0)*y_0+(-4*c_1*y_3-6*c_2*y_2-4*c_3*y_1)*z_0+(4*
-c_1*y_3+6*c_2*y_2+4*c_3*y_1)*q+(-12*y_1*z_2-12*y_2*z_1)*c_1-12*y_1*z_1*c_2)*w_0
-+((-4*c_1*w_3-6*c_2*w_2-4*c_3*w_1)*z_0+(4*c_1*w_3+6*c_2*w_2+4*c_3*w_1)*q+(-12*
-w_1*z_2-12*w_2*z_1)*c_1-12*z_1*c_2*w_1)*y_0+((-12*w_1*y_2-12*w_2*y_1)*c_1-12*
-y_1*c_2*w_1)*z_0+((12*w_1*y_2+12*w_2*y_1)*c_1+12*y_1*c_2*w_1)*q-24*c_1*w_1*y_1*
-z_1+b*w_4+w_5, c_4, (-v_0*x_3-3*v_1*x_2-3*v_2*x_1-v_3*x_0)*beta_0+(-3*beta_1*
-x_2-3*beta_2*x_1-beta_3*x_0)*v_0+(-3*beta_1*v_2-3*beta_2*v_1)*x_0-6*beta_1*v_1*
-x_1+a*y_3+y_4, beta_3, -k*y_2+u*v_2+v_3, (v_0*x_2+2*v_1*x_1+v_2*x_0)*beta_0+(2*
-beta_1*x_1+beta_2*x_0)*v_0+2*beta_1*v_1*x_0+d*x_2+x_3, -w_5-2504739229017174357\
-2466854461333618187057871799261628291855285629689053577127482792141562857546880\
-5935413811565189096385916526305539599813621293015727542868736182658370840562525\
-8436932318396073398025897197474170579501522830098040210206373388200863899395389\
-1325691191889084532044427324539301428057980550647614512845961311564276899308051\
-963755700718400360619435670318657325360090606893480396232928, ((q*y_5-y_0*z_5-5
-*y_1*z_4-10*y_2*z_3-10*y_3*z_2-5*y_4*z_1-y_5*z_0)*w_0+(q*w_5-5*w_1*z_4-10*w_2*
-z_3-10*w_3*z_2-5*w_4*z_1-w_5*z_0)*y_0+(-5*w_1*y_4-10*w_2*y_3-10*w_3*y_2-5*w_4*
-y_1)*z_0+(5*w_1*y_4+10*w_2*y_3+10*w_3*y_2+5*w_4*y_1)*q+(-20*y_1*z_3-30*y_2*z_2-\
-20*y_3*z_1)*w_1+(-30*w_2*z_2-20*w_3*z_1)*y_1-30*y_2*z_1*w_2)*c_0+((-5*c_1*z_4-\
-10*c_2*z_3-10*c_3*z_2-5*c_4*z_1+c_5*q-c_5*z_0)*y_0+(-5*c_1*y_4-10*c_2*y_3-10*
-c_3*y_2-5*c_4*y_1)*z_0+(5*c_1*y_4+10*c_2*y_3+10*c_3*y_2+5*c_4*y_1)*q+(-20*y_1*
-z_3-30*y_2*z_2-20*y_3*z_1)*c_1+(-30*c_2*z_2-20*c_3*z_1)*y_1-30*y_2*z_1*c_2)*w_0
-+((-5*c_1*w_4-10*c_2*w_3-10*c_3*w_2-5*c_4*w_1)*z_0+(5*c_1*w_4+10*c_2*w_3+10*c_3
-*w_2+5*c_4*w_1)*q+(-20*w_1*z_3-30*w_2*z_2-20*w_3*z_1)*c_1+(-30*c_2*z_2-20*c_3*
-z_1)*w_1-30*w_2*z_1*c_2)*y_0+((-20*w_1*y_3-30*w_2*y_2-20*w_3*y_1)*c_1+(-30*c_2*
-y_2-20*c_3*y_1)*w_1-30*w_2*y_1*c_2)*z_0+((20*w_1*y_3+30*w_2*y_2+20*w_3*y_1)*c_1
-+(30*c_2*y_2+20*c_3*y_1)*w_1+30*w_2*y_1*c_2)*q+((-60*y_1*z_2-60*y_2*z_1)*w_1-60
-*w_2*y_1*z_1)*c_1-60*c_2*w_1*y_1*z_1+b*w_5+w_6, c_5, (-v_0*x_4-4*v_1*x_3-6*v_2*
-x_2-4*v_3*x_1-v_4*x_0)*beta_0+(-4*beta_1*x_3-6*beta_2*x_2-4*beta_3*x_1-beta_4*
-x_0)*v_0+(-4*beta_1*v_3-6*beta_2*v_2-4*beta_3*v_1)*x_0+(-12*v_1*x_2-12*v_2*x_1)
-*beta_1-12*beta_2*v_1*x_1+a*y_4+y_5, ((-w_0*y_4-4*w_1*y_3-6*w_2*y_2-4*w_3*y_1-
-w_4*y_0)*c_0+(-4*c_1*y_3-6*c_2*y_2-4*c_3*y_1-c_4*y_0)*w_0+(-4*c_1*w_3-6*c_2*w_2
--4*c_3*w_1)*y_0+(-12*w_1*y_2-12*w_2*y_1)*c_1-12*y_1*c_2*w_1)*q+h*z_4+z_5, 
-beta_4, -k*y_3+u*v_3+v_4, (v_0*x_3+3*v_1*x_2+3*v_2*x_1+v_3*x_0)*beta_0+(3*
-beta_1*x_2+3*beta_2*x_1+beta_3*x_0)*v_0+(3*beta_1*v_2+3*beta_2*v_1)*x_0+6*
-beta_1*v_1*x_1+d*x_3+x_4, -w_6+498157247782270235666492251928489333228846304623\
-7715438206410845255336688229815678442687080952312715551038812630728112113631419\
-9557058511082791805451771017992319874931905195098401119578872255783123540797055\
-8837376844784646680193429750524864504044967997116784682755092005630923465925875\
-8328942167072290404930445394030920019667883008211747124265347165701118075226115\
-1255068400196154044892885435302793966166337922055511940280479065236775251487456\
-78883149635824832841088672, ((q*y_6-y_0*z_6-6*y_1*z_5-15*y_2*z_4-20*y_3*z_3-15*
-y_4*z_2-6*y_5*z_1-y_6*z_0)*w_0+(q*w_6-6*w_1*z_5-15*w_2*z_4-20*w_3*z_3-15*w_4*
-z_2-6*w_5*z_1-w_6*z_0)*y_0+(-6*w_1*y_5-15*w_2*y_4-20*w_3*y_3-15*w_4*y_2-6*w_5*
-y_1)*z_0+(6*w_1*y_5+15*w_2*y_4+20*w_3*y_3+15*w_4*y_2+6*w_5*y_1)*q+(-30*y_1*z_4-\
-60*y_2*z_3-60*y_3*z_2-30*y_4*z_1)*w_1+(-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1)*y_1+(
--60*w_2*y_3-60*w_3*y_2)*z_1-90*w_2*y_2*z_2)*c_0+((-6*c_1*z_5-15*c_2*z_4-20*c_3*
-z_3-15*c_4*z_2-6*c_5*z_1+c_6*q-c_6*z_0)*y_0+(-6*c_1*y_5-15*c_2*y_4-20*c_3*y_3-\
-15*c_4*y_2-6*c_5*y_1)*z_0+(6*c_1*y_5+15*c_2*y_4+20*c_3*y_3+15*c_4*y_2+6*c_5*y_1
-)*q+(-30*y_1*z_4-60*y_2*z_3-60*y_3*z_2-30*y_4*z_1)*c_1+(-60*c_2*z_3-60*c_3*z_2-\
-30*c_4*z_1)*y_1+(-60*c_2*y_3-60*c_3*y_2)*z_1-90*y_2*z_2*c_2)*w_0+((-6*c_1*w_5-\
-15*c_2*w_4-20*c_3*w_3-15*c_4*w_2-6*c_5*w_1)*z_0+(6*c_1*w_5+15*c_2*w_4+20*c_3*
-w_3+15*c_4*w_2+6*c_5*w_1)*q+(-30*w_1*z_4-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1)*c_1+
-(-60*c_2*z_3-60*c_3*z_2-30*c_4*z_1)*w_1+(-60*c_2*w_3-60*c_3*w_2)*z_1-90*w_2*z_2
-*c_2)*y_0+((-30*w_1*y_4-60*w_2*y_3-60*w_3*y_2-30*w_4*y_1)*c_1+(-60*c_2*y_3-60*
-c_3*y_2-30*c_4*y_1)*w_1+(-60*c_2*w_3-60*c_3*w_2)*y_1-90*w_2*y_2*c_2)*z_0+((30*
-w_1*y_4+60*w_2*y_3+60*w_3*y_2+30*w_4*y_1)*c_1+(60*c_2*y_3+60*c_3*y_2+30*c_4*y_1
-)*w_1+(60*c_2*w_3+60*c_3*w_2)*y_1+90*w_2*y_2*c_2)*q+((-120*y_1*z_3-180*y_2*z_2-\
-120*y_3*z_1)*w_1+(-180*w_2*z_2-120*w_3*z_1)*y_1-180*y_2*z_1*w_2)*c_1+((-180*c_2
-*z_2-120*c_3*z_1)*y_1-180*y_2*z_1*c_2)*w_1-180*c_2*w_2*y_1*z_1+b*w_6+w_7, c_6,
-(-v_0*x_5-5*v_1*x_4-10*v_2*x_3-10*v_3*x_2-5*v_4*x_1-v_5*x_0)*beta_0+(-5*beta_1*
-x_4-10*beta_2*x_3-10*beta_3*x_2-5*beta_4*x_1-beta_5*x_0)*v_0+(-5*beta_1*v_4-10*
-beta_2*v_3-10*beta_3*v_2-5*beta_4*v_1)*x_0+(-20*v_1*x_3-30*v_2*x_2-20*v_3*x_1)*
-beta_1+(-30*beta_2*x_2-20*beta_3*x_1)*v_1-30*beta_2*v_2*x_1+a*y_5+y_6, ((-w_0*
-y_5-5*w_1*y_4-10*w_2*y_3-10*w_3*y_2-5*w_4*y_1-w_5*y_0)*c_0+(-5*c_1*y_4-10*c_2*
-y_3-10*c_3*y_2-5*c_4*y_1-c_5*y_0)*w_0+(-5*c_1*w_4-10*c_2*w_3-10*c_3*w_2-5*c_4*
-w_1)*y_0+(-20*w_1*y_3-30*w_2*y_2-20*w_3*y_1)*c_1+(-30*c_2*y_2-20*c_3*y_1)*w_1-\
-30*w_2*y_1*c_2)*q+h*z_5+z_6, beta_5, -k*y_4+u*v_4+v_5, (v_0*x_4+4*v_1*x_3+6*v_2
-*x_2+4*v_3*x_1+v_4*x_0)*beta_0+(4*beta_1*x_3+6*beta_2*x_2+4*beta_3*x_1+beta_4*
-x_0)*v_0+(4*beta_1*v_3+6*beta_2*v_2+4*beta_3*v_1)*x_0+(12*v_1*x_2+12*v_2*x_1)*
-beta_1+12*beta_2*v_1*x_1+d*x_4+x_5, -w_7-11322231073465739725981630723942180017\
-5797743106432783533039957567903346704035392655959903315341493471087665091007278\
-3190429844989464168557987723835318956477475029251161316863898869183186612367892\
-5777749972145252099530125572651885979056087683554684965700222788138056671815657\
-3298105083138572790497493292758811298231493854593708960397510047767829511224205\
-5956995482863445274655115559244781898433050672548857010591259902571319583349526\
-2254662825338774305941976520534552454866953378518406729233305816006726687075437\
-82488234524339979523483795504736, ((q*y_7-y_0*z_7-7*y_1*z_6-21*y_2*z_5-35*y_3*
-z_4-35*y_4*z_3-21*y_5*z_2-7*y_6*z_1-y_7*z_0)*w_0+(q*w_7-7*w_1*z_6-21*w_2*z_5-35
-*w_3*z_4-35*w_4*z_3-21*w_5*z_2-7*w_6*z_1-w_7*z_0)*y_0+(-7*w_1*y_6-21*w_2*y_5-35
-*w_3*y_4-35*w_4*y_3-21*w_5*y_2-7*w_6*y_1)*z_0+(7*w_1*y_6+21*w_2*y_5+35*w_3*y_4+
-35*w_4*y_3+21*w_5*y_2+7*w_6*y_1)*q+(-42*y_1*z_5-105*y_2*z_4-140*y_3*z_3-105*y_4
-*z_2-42*y_5*z_1)*w_1+(-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1)*y_1+(-\
-105*w_2*y_4-140*w_3*y_3-105*w_4*y_2)*z_1+(-210*y_2*z_3-210*y_3*z_2)*w_2-210*z_2
-*y_2*w_3)*c_0+((-7*c_1*z_6-21*c_2*z_5-35*c_3*z_4-35*c_4*z_3-21*c_5*z_2-7*c_6*
-z_1+c_7*q-c_7*z_0)*y_0+(-7*c_1*y_6-21*c_2*y_5-35*c_3*y_4-35*c_4*y_3-21*c_5*y_2-\
-7*c_6*y_1)*z_0+(7*c_1*y_6+21*c_2*y_5+35*c_3*y_4+35*c_4*y_3+21*c_5*y_2+7*c_6*y_1
-)*q+(-42*y_1*z_5-105*y_2*z_4-140*y_3*z_3-105*y_4*z_2-42*y_5*z_1)*c_1+(-105*c_2*
-z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*z_1)*y_1+(-105*c_2*y_4-140*c_3*y_3-105*c_4*
-y_2)*z_1+(-210*y_2*z_3-210*y_3*z_2)*c_2-210*c_3*y_2*z_2)*w_0+((-7*c_1*w_6-21*
-c_2*w_5-35*c_3*w_4-35*c_4*w_3-21*c_5*w_2-7*c_6*w_1)*z_0+(7*c_1*w_6+21*c_2*w_5+
-35*c_3*w_4+35*c_4*w_3+21*c_5*w_2+7*c_6*w_1)*q+(-42*w_1*z_5-105*w_2*z_4-140*w_3*
-z_3-105*w_4*z_2-42*w_5*z_1)*c_1+(-105*c_2*z_4-140*c_3*z_3-105*c_4*z_2-42*c_5*
-z_1)*w_1+(-105*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*z_1+(-210*w_2*z_3-210*w_3*z_2)*
-c_2-210*w_2*z_2*c_3)*y_0+((-42*w_1*y_5-105*w_2*y_4-140*w_3*y_3-105*w_4*y_2-42*
-w_5*y_1)*c_1+(-105*c_2*y_4-140*c_3*y_3-105*c_4*y_2-42*c_5*y_1)*w_1+(-105*c_2*
-w_4-140*c_3*w_3-105*c_4*w_2)*y_1+(-210*w_2*y_3-210*w_3*y_2)*c_2-210*w_2*y_2*c_3
-)*z_0+((42*w_1*y_5+105*w_2*y_4+140*w_3*y_3+105*w_4*y_2+42*w_5*y_1)*c_1+(105*c_2
-*y_4+140*c_3*y_3+105*c_4*y_2+42*c_5*y_1)*w_1+(105*c_2*w_4+140*c_3*w_3+105*c_4*
-w_2)*y_1+(210*w_2*y_3+210*w_3*y_2)*c_2+210*w_2*y_2*c_3)*q+((-210*y_1*z_4-420*
-y_2*z_3-420*y_3*z_2-210*y_4*z_1)*w_1+(-420*w_2*z_3-420*w_3*z_2-210*w_4*z_1)*y_1
-+(-420*w_2*y_3-420*w_3*y_2)*z_1-630*w_2*y_2*z_2)*c_1+((-420*c_2*z_3-420*c_3*z_2
--210*c_4*z_1)*y_1+(-420*c_2*y_3-420*c_3*y_2)*z_1-630*y_2*z_2*c_2)*w_1+((-420*
-c_2*w_3-420*c_3*w_2)*z_1-630*w_2*z_2*c_2)*y_1-630*c_2*w_2*y_2*z_1+b*w_7+w_8, 
-c_7, (-v_0*x_6-6*v_1*x_5-15*v_2*x_4-20*v_3*x_3-15*v_4*x_2-6*v_5*x_1-v_6*x_0)*
-beta_0+(-6*beta_1*x_5-15*beta_2*x_4-20*beta_3*x_3-15*beta_4*x_2-6*beta_5*x_1-
-beta_6*x_0)*v_0+(-6*beta_1*v_5-15*beta_2*v_4-20*beta_3*v_3-15*beta_4*v_2-6*
-beta_5*v_1)*x_0+(-30*v_1*x_4-60*v_2*x_3-60*v_3*x_2-30*v_4*x_1)*beta_1+(-60*
-beta_2*x_3-60*beta_3*x_2-30*beta_4*x_1)*v_1+(-60*beta_2*v_3-60*beta_3*v_2)*x_1-\
-90*beta_2*v_2*x_2+a*y_6+y_7, ((-w_0*y_6-6*w_1*y_5-15*w_2*y_4-20*w_3*y_3-15*w_4*
-y_2-6*w_5*y_1-w_6*y_0)*c_0+(-6*c_1*y_5-15*c_2*y_4-20*c_3*y_3-15*c_4*y_2-6*c_5*
-y_1-c_6*y_0)*w_0+(-6*c_1*w_5-15*c_2*w_4-20*c_3*w_3-15*c_4*w_2-6*c_5*w_1)*y_0+(-\
-30*w_1*y_4-60*w_2*y_3-60*w_3*y_2-30*w_4*y_1)*c_1+(-60*c_2*y_3-60*c_3*y_2-30*c_4
-*y_1)*w_1+(-60*c_2*w_3-60*c_3*w_2)*y_1-90*w_2*y_2*c_2)*q+h*z_6+z_7, beta_6, -k*
-y_5+u*v_5+v_6, (v_0*x_5+5*v_1*x_4+10*v_2*x_3+10*v_3*x_2+5*v_4*x_1+v_5*x_0)*
-beta_0+(5*beta_1*x_4+10*beta_2*x_3+10*beta_3*x_2+5*beta_4*x_1+beta_5*x_0)*v_0+(
-5*beta_1*v_4+10*beta_2*v_3+10*beta_3*v_2+5*beta_4*v_1)*x_0+(20*v_1*x_3+30*v_2*
-x_2+20*v_3*x_1)*beta_1+(30*beta_2*x_2+20*beta_3*x_1)*v_1+30*beta_2*v_2*x_1+d*
-x_5+x_6, -w_8+28949671571606859173508915267918698361422042012174952004564908390\
-5784526761855760230315379339890644325816942333353345173576340813377382149324272\
-5303551304745433012154626513931433469959527646310346712276071575624499170803813\
-6004428882393939096118775397805283753383979684174379867355812116251868382960612\
-2358340931017131882394794809102504234266990557361913424476295158822198002117251\
-9338056625458294904965419827331473198602272561697775147380000769146968237540298\
-7966686898456122672401962502221593346818111500171334198667847841014815632280671\
-9162781143590014906735185841050923754498242456059214112078670988649522009819936
-, ((q*y_8-y_0*z_8-8*y_1*z_7-28*y_2*z_6-56*y_3*z_5-70*y_4*z_4-56*y_5*z_3-28*y_6*
-z_2-8*y_7*z_1-y_8*z_0)*w_0+(q*w_8-8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-70*w_4*z_4-56
-*w_5*z_3-28*w_6*z_2-8*w_7*z_1-w_8*z_0)*y_0+(-8*w_1*y_7-28*w_2*y_6-56*w_3*y_5-70
-*w_4*y_4-56*w_5*y_3-28*w_6*y_2-8*w_7*y_1)*z_0+(8*w_1*y_7+28*w_2*y_6+56*w_3*y_5+
-70*w_4*y_4+56*w_5*y_3+28*w_6*y_2+8*w_7*y_1)*q+(-56*y_1*z_6-168*y_2*z_5-280*y_3*
-z_4-280*y_4*z_3-168*y_5*z_2-56*y_6*z_1)*w_1+(-168*w_2*z_5-280*w_3*z_4-280*w_4*
-z_3-168*w_5*z_2-56*w_6*z_1)*y_1+(-168*w_2*y_5-280*w_3*y_4-280*w_4*y_3-168*w_5*
-y_2)*z_1+(-420*y_2*z_4-560*y_3*z_3-420*y_4*z_2)*w_2+(-560*w_3*z_3-420*w_4*z_2)*
-y_2-560*w_3*y_3*z_2)*c_0+((-8*c_1*z_7-28*c_2*z_6-56*c_3*z_5-70*c_4*z_4-56*c_5*
-z_3-28*c_6*z_2-8*c_7*z_1+c_8*q-c_8*z_0)*y_0+(-8*c_1*y_7-28*c_2*y_6-56*c_3*y_5-\
-70*c_4*y_4-56*c_5*y_3-28*c_6*y_2-8*c_7*y_1)*z_0+(8*c_1*y_7+28*c_2*y_6+56*c_3*
-y_5+70*c_4*y_4+56*c_5*y_3+28*c_6*y_2+8*c_7*y_1)*q+(-56*y_1*z_6-168*y_2*z_5-280*
-y_3*z_4-280*y_4*z_3-168*y_5*z_2-56*y_6*z_1)*c_1+(-168*c_2*z_5-280*c_3*z_4-280*
-c_4*z_3-168*c_5*z_2-56*c_6*z_1)*y_1+(-168*c_2*y_5-280*c_3*y_4-280*c_4*y_3-168*
-c_5*y_2)*z_1+(-420*y_2*z_4-560*y_3*z_3-420*y_4*z_2)*c_2+(-560*c_3*z_3-420*c_4*
-z_2)*y_2-560*c_3*y_3*z_2)*w_0+((-8*c_1*w_7-28*c_2*w_6-56*c_3*w_5-70*c_4*w_4-56*
-c_5*w_3-28*c_6*w_2-8*c_7*w_1)*z_0+(8*c_1*w_7+28*c_2*w_6+56*c_3*w_5+70*c_4*w_4+
-56*c_5*w_3+28*c_6*w_2+8*c_7*w_1)*q+(-56*w_1*z_6-168*w_2*z_5-280*w_3*z_4-280*w_4
-*z_3-168*w_5*z_2-56*w_6*z_1)*c_1+(-168*c_2*z_5-280*c_3*z_4-280*c_4*z_3-168*c_5*
-z_2-56*c_6*z_1)*w_1+(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*c_5*w_2)*z_1+(-\
-420*w_2*z_4-560*w_3*z_3-420*w_4*z_2)*c_2+(-560*c_3*z_3-420*c_4*z_2)*w_2-560*c_3
-*w_3*z_2)*y_0+((-56*w_1*y_6-168*w_2*y_5-280*w_3*y_4-280*w_4*y_3-168*w_5*y_2-56*
-w_6*y_1)*c_1+(-168*c_2*y_5-280*c_3*y_4-280*c_4*y_3-168*c_5*y_2-56*c_6*y_1)*w_1+
-(-168*c_2*w_5-280*c_3*w_4-280*c_4*w_3-168*c_5*w_2)*y_1+(-420*w_2*y_4-560*w_3*
-y_3-420*w_4*y_2)*c_2+(-560*c_3*y_3-420*c_4*y_2)*w_2-560*w_3*y_2*c_3)*z_0+((56*
-w_1*y_6+168*w_2*y_5+280*w_3*y_4+280*w_4*y_3+168*w_5*y_2+56*w_6*y_1)*c_1+(168*
-c_2*y_5+280*c_3*y_4+280*c_4*y_3+168*c_5*y_2+56*c_6*y_1)*w_1+(168*c_2*w_5+280*
-c_3*w_4+280*c_4*w_3+168*c_5*w_2)*y_1+(420*w_2*y_4+560*w_3*y_3+420*w_4*y_2)*c_2+
-(560*c_3*y_3+420*c_4*y_2)*w_2+560*w_3*y_2*c_3)*q+((-336*y_1*z_5-840*y_2*z_4-\
-1120*y_3*z_3-840*y_4*z_2-336*y_5*z_1)*w_1+(-840*w_2*z_4-1120*w_3*z_3-840*w_4*
-z_2-336*w_5*z_1)*y_1+(-840*w_2*y_4-1120*w_3*y_3-840*w_4*y_2)*z_1+(-1680*y_2*z_3
--1680*y_3*z_2)*w_2-1680*z_2*y_2*w_3)*c_1+((-840*c_2*z_4-1120*c_3*z_3-840*c_4*
-z_2-336*c_5*z_1)*y_1+(-840*c_2*y_4-1120*c_3*y_3-840*c_4*y_2)*z_1+(-1680*y_2*z_3
--1680*y_3*z_2)*c_2-1680*c_3*y_2*z_2)*w_1+((-840*c_2*w_4-1120*c_3*w_3-840*c_4*
-w_2)*z_1+(-1680*w_2*z_3-1680*w_3*z_2)*c_2-1680*w_2*z_2*c_3)*y_1+((-1680*w_2*y_3
--1680*w_3*y_2)*c_2-1680*w_2*y_2*c_3)*z_1-2520*c_2*w_2*y_2*z_2+b*w_8+w_9, c_8, (
--v_0*x_7-7*v_1*x_6-21*v_2*x_5-35*v_3*x_4-35*v_4*x_3-21*v_5*x_2-7*v_6*x_1-v_7*
-x_0)*beta_0+(-7*beta_1*x_6-21*beta_2*x_5-35*beta_3*x_4-35*beta_4*x_3-21*beta_5*
-x_2-7*beta_6*x_1-beta_7*x_0)*v_0+(-7*beta_1*v_6-21*beta_2*v_5-35*beta_3*v_4-35*
-beta_4*v_3-21*beta_5*v_2-7*beta_6*v_1)*x_0+(-42*v_1*x_5-105*v_2*x_4-140*v_3*x_3
--105*v_4*x_2-42*v_5*x_1)*beta_1+(-105*beta_2*x_4-140*beta_3*x_3-105*beta_4*x_2-\
-42*beta_5*x_1)*v_1+(-105*beta_2*v_4-140*beta_3*v_3-105*beta_4*v_2)*x_1+(-210*
-v_2*x_3-210*v_3*x_2)*beta_2-210*beta_3*v_2*x_2+a*y_7+y_8, ((-w_0*y_7-7*w_1*y_6-\
-21*w_2*y_5-35*w_3*y_4-35*w_4*y_3-21*w_5*y_2-7*w_6*y_1-w_7*y_0)*c_0+(-7*c_1*y_6-\
-21*c_2*y_5-35*c_3*y_4-35*c_4*y_3-21*c_5*y_2-7*c_6*y_1-c_7*y_0)*w_0+(-7*c_1*w_6-\
-21*c_2*w_5-35*c_3*w_4-35*c_4*w_3-21*c_5*w_2-7*c_6*w_1)*y_0+(-42*w_1*y_5-105*w_2
-*y_4-140*w_3*y_3-105*w_4*y_2-42*w_5*y_1)*c_1+(-105*c_2*y_4-140*c_3*y_3-105*c_4*
-y_2-42*c_5*y_1)*w_1+(-105*c_2*w_4-140*c_3*w_3-105*c_4*w_2)*y_1+(-210*w_2*y_3-\
-210*w_3*y_2)*c_2-210*w_2*y_2*c_3)*q+h*z_7+z_8, beta_7, -k*y_6+u*v_6+v_7, (v_0*
-x_6+6*v_1*x_5+15*v_2*x_4+20*v_3*x_3+15*v_4*x_2+6*v_5*x_1+v_6*x_0)*beta_0+(6*
-beta_1*x_5+15*beta_2*x_4+20*beta_3*x_3+15*beta_4*x_2+6*beta_5*x_1+beta_6*x_0)*
-v_0+(6*beta_1*v_5+15*beta_2*v_4+20*beta_3*v_3+15*beta_4*v_2+6*beta_5*v_1)*x_0+(
-30*v_1*x_4+60*v_2*x_3+60*v_3*x_2+30*v_4*x_1)*beta_1+(60*beta_2*x_3+60*beta_3*
-x_2+30*beta_4*x_1)*v_1+(60*beta_2*v_3+60*beta_3*v_2)*x_1+90*beta_2*v_2*x_2+d*
-x_6+x_7, -w_9-82245801419104135781004174860293995833298144350848830470556292634\
-4905098452919501232790889993517016770029919261664840358514140268324630835102125\
-5429154260865810992687270194983021462543587266068383495829731407864321841904197\
-5692291117188575066828049088665170109924533871195113712173722668299849442665827\
-3081351581364333066399199892557532389858227609831263893496672026024231135548601\
-6581429554452950065667576799795763375717859530744118818784218541661485504862583\
-1820797370037082357161905768715513811700812353050575515699031173491386865464677\
-2719157426799143144488298075116251593088802180143453685705620799457227576445228\
-66070752611609551851915480610368228145327408041907101075108132947105168352, -74\
-8442327765894345495770611747022785050675290255420202442626912532323827049062921\
-8814237685520693146874630928526564197831446217952421072365894119685838602146997\
-4181643088973800557748022163419136896551516853599550305874497696043692308928895\
-7456958187239582937922605438735751971782199157967394727131463256784545083271749\
-50-z_4, 10615266105564759009305500033614940414722882662906959651913623337553230\
-9014909832164507660016774932476119974456941813096633598108279947775444627840482\
-6806998841882773851306864435777410516326212050191584710832706371013262572743276\
-4926634444819700884117340375364237131020868265062215024170762577331256770991958\
-2962237888029761815049518026646855333378891444080912109701828579690653880189233\
-56805198-z_5, -1809407722290007562888461401090249920535149714203719503493564722\
-5967819454017800572742000436383173856390189764614979271087419941494527650687206\
-6036980700432382430892345350828174743902342053007370253421800579765243673652825\
-6928399295311947107231746038244086003931029137655120841025443665357489631297950\
-4713751136709320151083702131304989896426753570964323070107123147823509568469106\
-1899850597572893706271395218666109497549031994666839808395286762247114338102287\
-9188702166-z_6, 359865634158515448199748122795110954533861735390203273127062443\
-6824018109187411420854539037368969589063048131377095833986290502291790412282231\
-6048634862562730065376389496166168362426802151880308243483533425598461573233980\
-8910695097352428844274381980131954759999209980760793995869551624547467551240419\
-8425481494490927974056615660135484057841719702319299386860571269994554649735231\
-3666627844942055801459618287985530317397778336027954037835279178490375020570285\
-8453195730255203924697085821366073101029692818413085082172024665325171105144805\
-807166-z_7, -817910786901334569316457161557453215730392558501659783195776520410\
-3382837478580654275971747275490134458966553491535221010202589584287679602828294\
-1247185995263980322583890115493321518094612078578052355919782475267268402524685\
-8721352007066396201113773135472174801136861979253247914254691204015586266375166\
-8085728719530552399280048548177084260185762858062954744681033035614032916172214\
-5111673657835335247865968110532571454039968593742928174353918892849387140433409\
-2604767514461326015794501569586414409525500178403654362808556823541222633890790\
-68632682657582667646088081869353226442498735575291415205984904025860753112582-
-z_8, -beta_1, -beta_2, -beta_3, -beta_4, -beta_5, -beta_6, -beta_7, -c_1, -c_2,
--c_3, -c_4, -c_5, -c_6, -c_7, -c_8, z_aux-1]
+Substitutions:	[w_ = 1, v_ = 3, y_ = 2, x_ = 3, u = 4, d = 4, z_ = 1, z_aux = 3]
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {d = d^
+4, u = u^4, v_0 = v_0^3, v_1 = v_1^3, v_2 = v_2^3, v_3 = v_3^3, v_4 = v_4^3, 
+v_5 = v_5^3, v_6 = v_6^3, v_7 = v_7^3, w_0 = w_0, w_1 = w_1, w_2 = w_2, w_3 = 
+w_3, w_4 = w_4, w_5 = w_5, w_6 = w_6, w_7 = w_7, w_8 = w_8, w_9 = w_9, w_aux =
+w_aux, x_0 = x_0^3, x_1 = x_1^3, x_2 = x_2^3, x_3 = x_3^3, x_4 = x_4^3, x_5 = 
+x_5^3, x_6 = x_6^3, x_7 = x_7^3, y_0 = y_0^2, y_1 = y_1^2, y_2 = y_2^2, y_3 = 
+y_3^2, y_4 = y_4^2, y_5 = y_5^2, y_6 = y_6^2, y_7 = y_7^2, y_8 = y_8^2, z_0 = 
+z_0, z_1 = z_1, z_2 = z_2, z_3 = z_3, z_4 = z_4, z_5 = z_5, z_6 = z_6, z_7 = 
+z_7, z_8 = z_8, z_aux = z_aux, z_aux = z_aux^3}, [12512575548040648545086188-
+w_0, 13175579927900874519546329*q*w_0*y_0^2-13175579927900874519546329*w_0*y_0^
+2*z_0+b*w_0+w_1, 10326100484907075661566786-z_0, -13175579927900874519546329*q*
+w_0*y_0^2+h*z_0+z_1, -w_1+55661870202165102689359798475319178557438133941742061\
+26352773384926549546972083510525997645290548604, 13175579927900874519546329*(-
+z_1*y_0^2+y_1^2*(q-z_0))*w_0+13175579927900874519546329*w_1*y_0^2*(q-z_0)+b*w_1
++w_2, -2148940167359894493854041*v_0^3*x_0^3+a*y_0^2+y_1^2, 7083162608819244109\
+2681812879394144756589149984919162958117416502450166772693004975543380232795336\
+98-z_1, -13175579927900874519546329*q*(w_0*y_1^2+w_1*y_0^2)+h*z_1+z_2, -w_2+111\
+5289347168630615564116262311478357281969491412544291723674516444234882835948487\
+7551134224321887349078230542162115676191499490028844280671410313773536768595559\
+467367108494284, 13175579927900874519546329*(-z_2*y_0^2-2*z_1*y_1^2-y_2^2*(z_0-
+q))*w_0+13175579927900874519546329*(-2*z_1*w_1-w_2*(z_0-q))*y_0^2-\
+26351159855801749039092658*w_1*y_1^2*(z_0-q)+b*w_2+w_3, -\
+2148940167359894493854041*v_0^3*x_1^3-2148940167359894493854041*v_1^3*x_0^3+a*
+y_1^2+y_2^2, u^4*v_0^3-k*y_0^2+v_1^3, d^4*x_0^3+2148940167359894493854041*v_0^3
+*x_0^3+x_1^3-lm, 31509266516649615152844525314639197606225429947005603589557859\
+4484729176157754490448983611396888028890469635035468935122918914849458802721064\
+5320981608943447563573948895853250-z_2, -13175579927900874519546329*q*(w_0*y_2^
+2+2*w_1*y_1^2+w_2*y_0^2)+h*z_2+z_3, -w_3+16540878370741917089660324587198364026\
+1336303403204099536914549724678364060063248302319282829914439047727405927695880\
+4929042260651697342471307926109295866691360339475426770796740494432317642085586\
+2654949728993646081824766520774341983863763496198979484, 
+13175579927900874519546329*(q*y_3^2-y_0^2*z_3-3*y_1^2*z_2-3*y_2^2*z_1-y_3^2*z_0
+)*w_0+13175579927900874519546329*(q*w_3-3*w_1*z_2-3*w_2*z_1-w_3*z_0)*y_0^2+
+13175579927900874519546329*(-6*z_1*y_1^2-3*y_2^2*(z_0-q))*w_1-\
+39526739783702623558638987*y_1^2*w_2*(z_0-q)+b*w_3+w_4, -\
+2148940167359894493854041*v_0^3*x_2^3-4297880334719788987708082*v_1^3*x_1^3-\
+2148940167359894493854041*v_2^3*x_0^3+a*y_2^2+y_3^2, u^4*v_1^3-k*y_1^2+v_2^3, 
+2148940167359894493854041*x_0^3*v_1^3+(d^4+2148940167359894493854041*v_0^3)*x_1
+^3+x_2^3, 631346901487144247013908383697016040262340781724007044966872659604293\
+5187805521343975630081886913753983645368109537092128149679842552097370913235582\
+3981527295863060537226985645462276047355713536789642758735155842466839817554944\
+59331327859207851518402-z_3, -39526739783702623558638987*q*(y_2^2*w_1+1/3*y_3^2
+*w_0+w_2*y_1^2+1/3*w_3*y_0^2)+h*z_3+z_4, -w_4+434449930190316382989941573307230\
+6573160869891684562598512922303256777985201467855350749827890947503673884871616\
+2877140184854077122741080243173627841631571469485295945964016840519096830915757\
+8542380866813407671659069236286977301788484128216943875445968076576122054714051\
+65129304240693191178339233992825618148767984472634370540, 
+13175579927900874519546329*(q*y_4^2-y_0^2*z_4-4*y_1^2*z_3-6*y_2^2*z_2-4*y_3^2*
+z_1-y_4^2*z_0)*w_0+13175579927900874519546329*(q*w_4-4*w_1*z_3-6*w_2*z_2-4*w_3*
+z_1-w_4*z_0)*y_0^2+13175579927900874519546329*(4*q*y_3^2-12*y_1^2*z_2-12*y_2^2*
+z_1-4*y_3^2*z_0)*w_1+13175579927900874519546329*(4*q*w_3-12*w_2*z_1-4*w_3*z_0)*
+y_1^2-79053479567405247117277974*y_2^2*w_2*(z_0-q)+b*w_4+w_5, -\
+2148940167359894493854041*v_0^3*x_3^3-6446820502079683481562123*v_1^3*x_2^3-\
+6446820502079683481562123*v_2^3*x_1^3-2148940167359894493854041*v_3^3*x_0^3+a*
+y_3^2+y_4^2, u^4*v_2^3-k*y_2^2+v_3^3, d^4*x_2^3+2148940167359894493854041*v_0^3
+*x_2^3+4297880334719788987708082*v_1^3*x_1^3+2148940167359894493854041*v_2^3*
+x_0^3+x_3^3, -w_5+1110815456911906210265289794722292852012102510891749163784150\
+8607157662754036944883409418176266245486225128613147888234855308928374755958575\
+5985093391773094307136002049570669049008894695556889381501722044781193432375865\
+0084148424914650080195929131392432216348432637738991881130894646680971253988802\
+5877168259537626820729164578579170080399687392870146990916789267051567071905391\
+6841337260991787076419516, 13175579927900874519546329*(q*y_5^2-y_0^2*z_5-5*y_1^
+2*z_4-10*y_2^2*z_3-10*y_3^2*z_2-5*y_4^2*z_1-y_5^2*z_0)*w_0+
+13175579927900874519546329*(q*w_5-5*w_1*z_4-10*w_2*z_3-10*w_3*z_2-5*w_4*z_1-w_5
+*z_0)*y_0^2+13175579927900874519546329*(5*q*y_4^2-20*y_1^2*z_3-30*y_2^2*z_2-20*
+y_3^2*z_1-5*y_4^2*z_0)*w_1+13175579927900874519546329*(5*q*w_4-30*w_2*z_2-20*
+w_3*z_1-5*w_4*z_0)*y_1^2+13175579927900874519546329*(-10*w_2*y_3^2-10*w_3*y_2^2
+)*z_0+13175579927900874519546329*(10*w_2*y_3^2+10*w_3*y_2^2)*q-\
+395267397837026235586389870*y_2^2*z_1*w_2+b*w_5+w_6, -2148940167359894493854041
+*v_0^3*x_4^3-8595760669439577975416164*v_1^3*x_3^3-12893641004159366963124246*
+v_2^3*x_2^3-8595760669439577975416164*v_3^3*x_1^3-2148940167359894493854041*v_4
+^3*x_0^3+a*y_4^2+y_5^2, -52702319711603498078185316*(w_3*y_1^2+3/2*y_2^2*w_2+
+y_3^2*w_1+1/4*y_4^2*w_0+1/4*w_4*y_0^2)*q+h*z_4+z_5, u^4*v_3^3-k*y_3^2+v_4^3, d^
+4*x_3^3+2148940167359894493854041*v_0^3*x_3^3+6446820502079683481562123*v_1^3*
+x_2^3+6446820502079683481562123*v_2^3*x_1^3+2148940167359894493854041*v_3^3*x_0
+^3+x_4^3, -w_6+3756472295995472835399024363441522842443363763170792912632983915\
+4695636439963017781052497244474249043722126059897220024060404365590380751482587\
+8798252737700649074908046122961438868274614624360981238900602183551970426134044\
+4114547880475191127470704987014376518491066926053489536763628175460113055059305\
+8130180777133638782259730117524575466852361854263789101368366950097730460306882\
+5750881969255108283445001214416103822910472099181553735007244198612662673253863\
+154530103571568396, 13175579927900874519546329*(q*y_6^2-y_0^2*z_6-6*y_1^2*z_5-\
+15*y_2^2*z_4-20*y_3^2*z_3-15*y_4^2*z_2-6*y_5^2*z_1-y_6^2*z_0)*w_0+
+13175579927900874519546329*(q*w_6-6*w_1*z_5-15*w_2*z_4-20*w_3*z_3-15*w_4*z_2-6*
+w_5*z_1-w_6*z_0)*y_0^2+13175579927900874519546329*(6*q*y_5^2-30*y_1^2*z_4-60*
+y_2^2*z_3-60*y_3^2*z_2-30*y_4^2*z_1-6*y_5^2*z_0)*w_1+13175579927900874519546329
+*(6*q*w_5-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1-6*w_5*z_0)*y_1^2+
+13175579927900874519546329*(-15*w_2*y_4^2-20*w_3*y_3^2-15*w_4*y_2^2)*z_0+
+13175579927900874519546329*(15*w_2*y_4^2+20*w_3*y_3^2+15*w_4*y_2^2)*q+
+13175579927900874519546329*(-90*y_2^2*z_2-60*y_3^2*z_1)*w_2-\
+790534795674052471172779740*y_2^2*z_1*w_3+b*w_6+w_7, -2148940167359894493854041
+*v_0^3*x_5^3-10744700836799472469270205*v_1^3*x_4^3-21489401673598944938540410*
+v_2^3*x_3^3-21489401673598944938540410*v_3^3*x_2^3-10744700836799472469270205*
+v_4^3*x_1^3-2148940167359894493854041*v_5^3*x_0^3+a*y_5^2+y_6^2, -\
+13175579927900874519546329*q*(w_0*y_5^2+5*w_1*y_4^2+10*w_2*y_3^2+10*w_3*y_2^2+5
+*w_4*y_1^2+w_5*y_0^2)+h*z_5+z_6, u^4*v_4^3-k*y_4^2+v_5^3, d^4*x_4^3+
+2148940167359894493854041*v_0^3*x_4^3+8595760669439577975416164*v_1^3*x_3^3+
+12893641004159366963124246*v_2^3*x_2^3+8595760669439577975416164*v_3^3*x_1^3+
+2148940167359894493854041*v_4^3*x_0^3+x_5^3, -w_7+13455790437036272544343369843\
+5268304989812354414111606719548951991358604282056669997012024891818034193367428\
+9080310530895582181507170422350510143873774250491337812420130116544909951940737\
+2298851973174476605559220920739495249853801448659316804312757177844946768653923\
+1986658170818852052019571443682002099174419403810453777211777178131908030422816\
+8899163173230959248815995925499430716832766752393431795670336433399758930887152\
+2647360705270562977589779232573820730553056627635329385811188643832545290556616\
+17568705225653473958594972840979137298629407366812, 13175579927900874519546329*
+(q*y_7^2-y_0^2*z_7-7*y_1^2*z_6-21*y_2^2*z_5-35*y_3^2*z_4-35*y_4^2*z_3-21*y_5^2*
+z_2-7*y_6^2*z_1-y_7^2*z_0)*w_0+13175579927900874519546329*(q*w_7-7*w_1*z_6-21*
+w_2*z_5-35*w_3*z_4-35*w_4*z_3-21*w_5*z_2-7*w_6*z_1-w_7*z_0)*y_0^2+
+13175579927900874519546329*(7*q*y_6^2-42*y_1^2*z_5-105*y_2^2*z_4-140*y_3^2*z_3-\
+105*y_4^2*z_2-42*y_5^2*z_1-7*y_6^2*z_0)*w_1+13175579927900874519546329*(7*q*w_6
+-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1-7*w_6*z_0)*y_1^2+
+13175579927900874519546329*(-21*w_2*y_5^2-35*w_3*y_4^2-35*w_4*y_3^2-21*w_5*y_2^
+2)*z_0+13175579927900874519546329*(21*w_2*y_5^2+35*w_3*y_4^2+35*w_4*y_3^2+21*
+w_5*y_2^2)*q+13175579927900874519546329*(-210*y_2^2*z_3-210*y_3^2*z_2-105*y_4^2
+*z_1)*w_2+13175579927900874519546329*(-210*w_3*z_2-105*w_4*z_1)*y_2^2-\
+1844581189906122432736486060*y_3^2*z_1*w_3+b*w_7+w_8, -\
+2148940167359894493854041*v_0^3*x_6^3-12893641004159366963124246*v_1^3*x_5^3-\
+32234102510398417407810615*v_2^3*x_4^3-42978803347197889877080820*v_3^3*x_3^3-\
+32234102510398417407810615*v_4^3*x_2^3-12893641004159366963124246*v_5^3*x_1^3-\
+2148940167359894493854041*v_6^3*x_0^3+a*y_6^2+y_7^2, -\
+13175579927900874519546329*q*(w_0*y_6^2+6*w_1*y_5^2+15*w_2*y_4^2+20*w_3*y_3^2+
+15*w_4*y_2^2+6*w_5*y_1^2+w_6*y_0^2)+h*z_6+z_7, u^4*v_5^3-k*y_5^2+v_6^3, d^4*x_5
+^3+2148940167359894493854041*v_0^3*x_5^3+10744700836799472469270205*v_1^3*x_4^3
++21489401673598944938540410*v_2^3*x_3^3+21489401673598944938540410*v_3^3*x_2^3+
+10744700836799472469270205*v_4^3*x_1^3+2148940167359894493854041*v_5^3*x_0^3+
+x_6^3, -w_8+5676427262208090436278767865154842033173680025182116969584795116525\
+8014041139804976263375477734483091159910018430880960215020123024279032272555495\
+0251019363788789813560711949637406662688723538700560479328919033511718427452908\
+6139533439584822709489166945634136222372783836358328348047220808153068088399066\
+4596190828794509393858561498453204060177999465560294843999052250992254414035409\
+1013786477810613033965205774796463640589428315809075246508985434615171594648463\
+8320219442273102877635185992672147207159404921023552952337682119400973071594942\
+6738352863418751837635447812247310683425875831575829935595888118283146992020314\
+26961836, 13175579927900874519546329*(q*y_8^2-y_0^2*z_8-8*y_1^2*z_7-28*y_2^2*
+z_6-56*y_3^2*z_5-70*y_4^2*z_4-56*y_5^2*z_3-28*y_6^2*z_2-8*y_7^2*z_1-y_8^2*z_0)*
+w_0+13175579927900874519546329*(q*w_8-8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-70*w_4*
+z_4-56*w_5*z_3-28*w_6*z_2-8*w_7*z_1-w_8*z_0)*y_0^2+13175579927900874519546329*(
+8*q*y_7^2-56*y_1^2*z_6-168*y_2^2*z_5-280*y_3^2*z_4-280*y_4^2*z_3-168*y_5^2*z_2-\
+56*y_6^2*z_1-8*y_7^2*z_0)*w_1+13175579927900874519546329*(8*q*w_7-168*w_2*z_5-\
+280*w_3*z_4-280*w_4*z_3-168*w_5*z_2-56*w_6*z_1-8*w_7*z_0)*y_1^2+
+13175579927900874519546329*(-28*w_2*y_6^2-56*w_3*y_5^2-70*w_4*y_4^2-56*w_5*y_3^
+2-28*w_6*y_2^2)*z_0+13175579927900874519546329*(28*w_2*y_6^2+56*w_3*y_5^2+70*
+w_4*y_4^2+56*w_5*y_3^2+28*w_6*y_2^2)*q+13175579927900874519546329*(-420*y_2^2*
+z_4-560*y_3^2*z_3-420*y_4^2*z_2-168*y_5^2*z_1)*w_2+13175579927900874519546329*(
+-560*w_3*z_3-420*w_4*z_2-168*w_5*z_1)*y_2^2+13175579927900874519546329*(-280*
+w_3*y_4^2-280*w_4*y_3^2)*z_1-7378324759624489730945944240*w_3*y_3^2*z_2+b*w_8+
+w_9, -2148940167359894493854041*v_0^3*x_7^3-15042581171519261456978287*v_1^3*
+x_6^3-45127743514557784370934861*v_2^3*x_5^3-75212905857596307284891435*v_3^3*
+x_4^3-75212905857596307284891435*v_4^3*x_3^3-45127743514557784370934861*v_5^3*
+x_2^3-15042581171519261456978287*v_6^3*x_1^3-2148940167359894493854041*v_7^3*
+x_0^3+a*y_7^2+y_8^2, -92229059495306121636824303*q*(w_6*y_1^2+1/7*w_7*y_0^2+3*
+w_5*y_2^2+5*w_4*y_3^2+5*y_4^2*w_3+3*y_5^2*w_2+y_6^2*w_1+1/7*y_7^2*w_0)+h*z_7+
+z_8, u^4*v_6^3-k*y_6^2+v_7^3, d^4*x_6^3+2148940167359894493854041*v_0^3*x_6^3+
+12893641004159366963124246*v_1^3*x_5^3+32234102510398417407810615*v_2^3*x_4^3+
+42978803347197889877080820*v_3^3*x_3^3+32234102510398417407810615*v_4^3*x_2^3+
+12893641004159366963124246*v_5^3*x_1^3+2148940167359894493854041*v_6^3*x_0^3+
+x_7^3, -w_9+2587991793224500418903208525216431807496375767898093151549262750878\
+1539391497600404279253567805536954312567517982805926879529193955004631847775731\
+6652019895866761165794692393448201918149682383125306447078286181193233476762230\
+4684583496396743305434568910867927892092242145228144412571493214891208160412299\
+9040000594911136409686179019069746653081627641109097324876410173533857265937812\
+8682212242451713287018166282753559506529068804633076529229126725220573026910672\
+7335883906004227476487517325764056071930482981616253438969946328249599516191838\
+9873810164637721404496882390862406071207072127124076765662631426478753755438382\
+1953273851151146695541666132278724510488844073456907058011358384736868785382112\
+58812, 936351838539049211867472566828285253069225466119939936230883903573216602\
+3438798336392406638110068906301024894608974895266829983984857493320899951870469\
+9313964750995596666168608386322520114096695847142454573690023460238454637735395\
+1783386760374190758525657092489434723892731441543368017401816931194759848391422\
+7977942960243970-z_4, 245934938743291172679901019413049226758933505812800429459\
+8799585099652289028545043710032299516941899572854692921733360896064742327457605\
+0990850432235838319576735756505095654897948346646826542898525553722008132207779\
+4058089769561230650426669832700485901111568597605774677437105685975160964138658\
+4084248465757421197802969386176115589921567337281330931807730883427702057179404\
+3985737330907879150179927938-z_5, 628814306014635529091658829886983200428905982\
+1837987935395345880020654148248564002367945413396085685909836286809960857894153\
+0474660209022083336846269568615243745630781076032799980663799047005609825202046\
+3588918780455818621711048510851457214638061699005288960070423391465475233665001\
+0184738939993274676669977655510939728905795755966873374328038943215007902481753\
+1108301077184341903963044423650342406649957405811480187492794968746140540917913\
+574865791247431279394218964592801090-z_6, 2126476999551625079139981959100452296\
+5359486355637309871012542823756674413993762886858127323319586084257022997263316\
+1157651041875116009835268503950286542640738001444451939605265248261831970002089\
+6877721309876362704453079560624576414867921756647195840479543214651362912108488\
+0485581090697561827278060388447949934089274177520203732920001719590641213685988\
+9572655658047399578192880193044178024870788691024714350141995580497060662041676\
+3491227068815256383710993707358260953554486644293612438278979874801302387624723\
+63730358594882363834690834641721645751298-z_7, 76171009980952689632089763450834\
+2455736117133857552911301007581533373746429298948245391931513126798885708136459\
+8212815683679480553315453198182880961183323585940110057235817475467809658038925\
+5167276122303260620963329316639668140710064926973404498939471128761373716087390\
+2285486253507192470238998202558051158920745332687483771016040377746757109958508\
+0122326141033447953697944465777198301025228739094737216004469974468031181227696\
+9401002328655586401606013229803739969301425285301154990627633986395705714867244\
+7262252781964630297939977991226507108316526601460501169433045892259470743240019\
+703795388466726841556469889813065725307266-z_8, z_aux^3-1], [w_9, z_8, y_8, w_8
+, z_7, y_7, x_7, w_7, v_7, z_6, y_6, x_6, w_6, v_6, z_5, y_5, x_5, w_5, v_5, 
+z_4, y_4, x_4, w_4, v_4, z_3, y_3, x_3, w_3, v_3, z_2, y_2, x_2, w_2, v_2, z_1,
+y_1, x_1, w_1, v_1, z_0, y_0, x_0, w_0, v_0, z_aux, w_aux, a, b, beta, c, d, h,
+k, lm, q, u], [beta, c], [12512575548040648545086188-w_0, 
+13175579927900874519546329*q*w_0*y_0-13175579927900874519546329*w_0*y_0*z_0+b*
+w_0+w_1, 10326100484907075661566786-z_0, -13175579927900874519546329*q*w_0*y_0+
+h*z_0+z_1, -w_1+556618702021651026893597984753191785574381339417420612635277338\
+4926549546972083510525997645290548604, 13175579927900874519546329*(-z_1*y_0+y_1
+*(q-z_0))*w_0+13175579927900874519546329*w_1*y_0*(q-z_0)+b*w_1+w_2, a*y_0-\
+2148940167359894493854041*v_0*x_0+y_1, 7083162608819244109268181287939414475658\
+914998491916295811741650245016677269300497554338023279533698-z_1, -\
+13175579927900874519546329*q*(w_0*y_1+w_1*y_0)+h*z_1+z_2, -w_2+1115289347168630\
+6155641162623114783572819694914125442917236745164442348828359484877551134224321\
+8873490782305421621156761914994900288442806714103137735367685955594673671084942\
+84, 13175579927900874519546329*(-z_2*y_0-2*z_1*y_1-y_2*(z_0-q))*w_0+
+13175579927900874519546329*(-2*z_1*w_1-w_2*(z_0-q))*y_0-\
+26351159855801749039092658*w_1*y_1*(z_0-q)+b*w_2+w_3, a*y_1-\
+2148940167359894493854041*v_0*x_1-2148940167359894493854041*v_1*x_0+y_2, -k*y_0
++u*v_0+v_1, d*x_0+2148940167359894493854041*v_0*x_0-lm+x_1, 3150926651664961515\
+2844525314639197606225429947005603589557859448472917615775449044898361139688802\
+88904696350354689351229189148494588027210645320981608943447563573948895853250-
+z_2, -13175579927900874519546329*q*(w_0*y_2+2*w_1*y_1+w_2*y_0)+h*z_2+z_3, -w_3+
+1654087837074191708966032458719836402613363034032040995369145497246783640600632\
+4830231928282991443904772740592769588049290422606516973424713079261092958666913\
+6033947542677079674049443231764208558626549497289936460818247665207743419838637\
+63496198979484, 13175579927900874519546329*(q*y_3-y_0*z_3-3*y_1*z_2-3*y_2*z_1-
+y_3*z_0)*w_0+13175579927900874519546329*(q*w_3-3*w_1*z_2-3*w_2*z_1-w_3*z_0)*y_0
++13175579927900874519546329*(-6*z_1*y_1-3*y_2*(z_0-q))*w_1-\
+39526739783702623558638987*y_1*w_2*(z_0-q)+b*w_3+w_4, a*y_2-\
+2148940167359894493854041*v_0*x_2-4297880334719788987708082*v_1*x_1-\
+2148940167359894493854041*v_2*x_0+y_3, -k*y_1+u*v_1+v_2, 
+2148940167359894493854041*x_0*v_1+(d+2148940167359894493854041*v_0)*x_1+x_2, 63\
+1346901487144247013908383697016040262340781724007044966872659604293518780552134\
+3975630081886913753983645368109537092128149679842552097370913235582398152729586\
+3060537226985645462276047355713536789642758735155842466839817554944593313278592\
+07851518402-z_3, -39526739783702623558638987*q*(y_2*w_1+1/3*y_3*w_0+w_2*y_1+1/3
+*w_3*y_0)+h*z_3+z_4, -w_4+43444993019031638298994157330723065731608698916845625\
+9851292230325677798520146785535074982789094750367388487161628771401848540771227\
+4108024317362784163157146948529594596401684051909683091575785423808668134076716\
+5906923628697730178848412821694387544596807657612205471405165129304240693191178\
+339233992825618148767984472634370540, 13175579927900874519546329*(q*y_4-y_0*z_4
+-4*y_1*z_3-6*y_2*z_2-4*y_3*z_1-y_4*z_0)*w_0+13175579927900874519546329*(q*w_4-4
+*w_1*z_3-6*w_2*z_2-4*w_3*z_1-w_4*z_0)*y_0+13175579927900874519546329*(4*q*y_3-\
+12*y_1*z_2-12*y_2*z_1-4*y_3*z_0)*w_1+13175579927900874519546329*(4*q*w_3-12*w_2
+*z_1-4*w_3*z_0)*y_1-79053479567405247117277974*y_2*w_2*(z_0-q)+b*w_4+w_5, a*y_3
+-2148940167359894493854041*v_0*x_3-6446820502079683481562123*v_1*x_2-\
+6446820502079683481562123*v_2*x_1-2148940167359894493854041*v_3*x_0+y_4, -k*y_2
++u*v_2+v_3, d*x_2+2148940167359894493854041*v_0*x_2+4297880334719788987708082*
+v_1*x_1+2148940167359894493854041*v_2*x_0+x_3, -w_5+111081545691190621026528979\
+4722292852012102510891749163784150860715766275403694488340941817626624548622512\
+8613147888234855308928374755958575598509339177309430713600204957066904900889469\
+5556889381501722044781193432375865008414842491465008019592913139243221634843263\
+7738991881130894646680971253988802587716825953762682072916457857917008039968739\
+28701469909167892670515670719053916841337260991787076419516, 
+13175579927900874519546329*(q*y_5-y_0*z_5-5*y_1*z_4-10*y_2*z_3-10*y_3*z_2-5*y_4
+*z_1-y_5*z_0)*w_0+13175579927900874519546329*(q*w_5-5*w_1*z_4-10*w_2*z_3-10*w_3
+*z_2-5*w_4*z_1-w_5*z_0)*y_0+13175579927900874519546329*(5*q*y_4-20*y_1*z_3-30*
+y_2*z_2-20*y_3*z_1-5*y_4*z_0)*w_1+13175579927900874519546329*(5*q*w_4-30*w_2*
+z_2-20*w_3*z_1-5*w_4*z_0)*y_1+13175579927900874519546329*(-10*w_2*y_3-10*w_3*
+y_2)*z_0+13175579927900874519546329*(10*w_2*y_3+10*w_3*y_2)*q-\
+395267397837026235586389870*y_2*z_1*w_2+b*w_5+w_6, a*y_4-\
+2148940167359894493854041*v_0*x_4-8595760669439577975416164*v_1*x_3-\
+12893641004159366963124246*v_2*x_2-8595760669439577975416164*v_3*x_1-\
+2148940167359894493854041*v_4*x_0+y_5, -52702319711603498078185316*(w_3*y_1+3/2
+*y_2*w_2+y_3*w_1+1/4*y_4*w_0+1/4*w_4*y_0)*q+h*z_4+z_5, -k*y_3+u*v_3+v_4, d*x_3+
+2148940167359894493854041*v_0*x_3+6446820502079683481562123*v_1*x_2+
+6446820502079683481562123*v_2*x_1+2148940167359894493854041*v_3*x_0+x_4, -w_6+
+3756472295995472835399024363441522842443363763170792912632983915469563643996301\
+7781052497244474249043722126059897220024060404365590380751482587879825273770064\
+9074908046122961438868274614624360981238900602183551970426134044411454788047519\
+1127470704987014376518491066926053489536763628175460113055059305813018077713363\
+8782259730117524575466852361854263789101368366950097730460306882575088196925510\
+8283445001214416103822910472099181553735007244198612662673253863154530103571568\
+396, 13175579927900874519546329*(q*y_6-y_0*z_6-6*y_1*z_5-15*y_2*z_4-20*y_3*z_3-\
+15*y_4*z_2-6*y_5*z_1-y_6*z_0)*w_0+13175579927900874519546329*(q*w_6-6*w_1*z_5-\
+15*w_2*z_4-20*w_3*z_3-15*w_4*z_2-6*w_5*z_1-w_6*z_0)*y_0+
+13175579927900874519546329*(6*q*y_5-30*y_1*z_4-60*y_2*z_3-60*y_3*z_2-30*y_4*z_1
+-6*y_5*z_0)*w_1+13175579927900874519546329*(6*q*w_5-60*w_2*z_3-60*w_3*z_2-30*
+w_4*z_1-6*w_5*z_0)*y_1+13175579927900874519546329*(-15*w_2*y_4-20*w_3*y_3-15*
+w_4*y_2)*z_0+13175579927900874519546329*(15*w_2*y_4+20*w_3*y_3+15*w_4*y_2)*q+
+13175579927900874519546329*(-90*y_2*z_2-60*y_3*z_1)*w_2-\
+790534795674052471172779740*y_2*z_1*w_3+b*w_6+w_7, a*y_5-\
+2148940167359894493854041*v_0*x_5-10744700836799472469270205*v_1*x_4-\
+21489401673598944938540410*v_2*x_3-21489401673598944938540410*v_3*x_2-\
+10744700836799472469270205*v_4*x_1-2148940167359894493854041*v_5*x_0+y_6, -\
+13175579927900874519546329*q*(w_0*y_5+5*w_1*y_4+10*w_2*y_3+10*w_3*y_2+5*w_4*y_1
++w_5*y_0)+h*z_5+z_6, -k*y_4+u*v_4+v_5, d*x_4+2148940167359894493854041*v_0*x_4+
+8595760669439577975416164*v_1*x_3+12893641004159366963124246*v_2*x_2+
+8595760669439577975416164*v_3*x_1+2148940167359894493854041*v_4*x_0+x_5, -w_7+
+1345579043703627254434336984352683049898123544141116067195489519913586042820566\
+6999701202489181803419336742890803105308955821815071704223505101438737742504913\
+3781242013011654490995194073722988519731744766055592209207394952498538014486593\
+1680431275717784494676865392319866581708188520520195714436820020991744194038104\
+5377721177717813190803042281688991631732309592488159959254994307168327667523934\
+3179567033643339975893088715226473607052705629775897792325738207305530566276353\
+2938581118864383254529055661617568705225653473958594972840979137298629407366812
+, 13175579927900874519546329*(q*y_7-y_0*z_7-7*y_1*z_6-21*y_2*z_5-35*y_3*z_4-35*
+y_4*z_3-21*y_5*z_2-7*y_6*z_1-y_7*z_0)*w_0+13175579927900874519546329*(q*w_7-7*
+w_1*z_6-21*w_2*z_5-35*w_3*z_4-35*w_4*z_3-21*w_5*z_2-7*w_6*z_1-w_7*z_0)*y_0+
+13175579927900874519546329*(7*q*y_6-42*y_1*z_5-105*y_2*z_4-140*y_3*z_3-105*y_4*
+z_2-42*y_5*z_1-7*y_6*z_0)*w_1+13175579927900874519546329*(7*q*w_6-105*w_2*z_4-\
+140*w_3*z_3-105*w_4*z_2-42*w_5*z_1-7*w_6*z_0)*y_1+13175579927900874519546329*(-\
+21*w_2*y_5-35*w_3*y_4-35*w_4*y_3-21*w_5*y_2)*z_0+13175579927900874519546329*(21
+*w_2*y_5+35*w_3*y_4+35*w_4*y_3+21*w_5*y_2)*q+13175579927900874519546329*(-210*
+y_2*z_3-210*y_3*z_2-105*y_4*z_1)*w_2+13175579927900874519546329*(-210*w_3*z_2-\
+105*w_4*z_1)*y_2-1844581189906122432736486060*y_3*z_1*w_3+b*w_7+w_8, a*y_6-\
+2148940167359894493854041*v_0*x_6-12893641004159366963124246*v_1*x_5-\
+32234102510398417407810615*v_2*x_4-42978803347197889877080820*v_3*x_3-\
+32234102510398417407810615*v_4*x_2-12893641004159366963124246*v_5*x_1-\
+2148940167359894493854041*v_6*x_0+y_7, -13175579927900874519546329*q*(w_0*y_6+6
+*w_1*y_5+15*w_2*y_4+20*w_3*y_3+15*w_4*y_2+6*w_5*y_1+w_6*y_0)+h*z_6+z_7, -k*y_5+
+u*v_5+v_6, d*x_5+2148940167359894493854041*v_0*x_5+10744700836799472469270205*
+v_1*x_4+21489401673598944938540410*v_2*x_3+21489401673598944938540410*v_3*x_2+
+10744700836799472469270205*v_4*x_1+2148940167359894493854041*v_5*x_0+x_6, -w_8+
+5676427262208090436278767865154842033173680025182116969584795116525801404113980\
+4976263375477734483091159910018430880960215020123024279032272555495025101936378\
+8789813560711949637406662688723538700560479328919033511718427452908613953343958\
+4822709489166945634136222372783836358328348047220808153068088399066459619082879\
+4509393858561498453204060177999465560294843999052250992254414035409101378647781\
+0613033965205774796463640589428315809075246508985434615171594648463832021944227\
+3102877635185992672147207159404921023552952337682119400973071594942673835286341\
+875183763544781224731068342587583157582993559588811828314699202031426961836, 
+13175579927900874519546329*(q*y_8-y_0*z_8-8*y_1*z_7-28*y_2*z_6-56*y_3*z_5-70*
+y_4*z_4-56*y_5*z_3-28*y_6*z_2-8*y_7*z_1-y_8*z_0)*w_0+13175579927900874519546329
+*(q*w_8-8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-70*w_4*z_4-56*w_5*z_3-28*w_6*z_2-8*w_7*
+z_1-w_8*z_0)*y_0+13175579927900874519546329*(8*q*y_7-56*y_1*z_6-168*y_2*z_5-280
+*y_3*z_4-280*y_4*z_3-168*y_5*z_2-56*y_6*z_1-8*y_7*z_0)*w_1+
+13175579927900874519546329*(8*q*w_7-168*w_2*z_5-280*w_3*z_4-280*w_4*z_3-168*w_5
+*z_2-56*w_6*z_1-8*w_7*z_0)*y_1+13175579927900874519546329*(-28*w_2*y_6-56*w_3*
+y_5-70*w_4*y_4-56*w_5*y_3-28*w_6*y_2)*z_0+13175579927900874519546329*(28*w_2*
+y_6+56*w_3*y_5+70*w_4*y_4+56*w_5*y_3+28*w_6*y_2)*q+13175579927900874519546329*(
+-420*y_2*z_4-560*y_3*z_3-420*y_4*z_2-168*y_5*z_1)*w_2+
+13175579927900874519546329*(-560*w_3*z_3-420*w_4*z_2-168*w_5*z_1)*y_2+
+13175579927900874519546329*(-280*w_3*y_4-280*w_4*y_3)*z_1-\
+7378324759624489730945944240*w_3*y_3*z_2+b*w_8+w_9, a*y_7-\
+2148940167359894493854041*v_0*x_7-15042581171519261456978287*v_1*x_6-\
+45127743514557784370934861*v_2*x_5-75212905857596307284891435*v_3*x_4-\
+75212905857596307284891435*v_4*x_3-45127743514557784370934861*v_5*x_2-\
+15042581171519261456978287*v_6*x_1-2148940167359894493854041*v_7*x_0+y_8, -\
+92229059495306121636824303*q*(w_6*y_1+1/7*w_7*y_0+3*w_5*y_2+5*w_4*y_3+5*y_4*w_3
++3*y_5*w_2+y_6*w_1+1/7*y_7*w_0)+h*z_7+z_8, -k*y_6+u*v_6+v_7, d*x_6+
+2148940167359894493854041*v_0*x_6+12893641004159366963124246*v_1*x_5+
+32234102510398417407810615*v_2*x_4+42978803347197889877080820*v_3*x_3+
+32234102510398417407810615*v_4*x_2+12893641004159366963124246*v_5*x_1+
+2148940167359894493854041*v_6*x_0+x_7, -w_9+25879917932245004189032085252164318\
+0749637576789809315154926275087815393914976004042792535678055369543125675179828\
+0592687952919395500463184777573166520198958667611657946923934482019181496823831\
+2530644707828618119323347676223046845834963967433054345689108679278920922421452\
+2814441257149321489120816041229990400005949111364096861790190697466530816276411\
+0909732487641017353385726593781286822122424517132870181662827535595065290688046\
+3307652922912672522057302691067273358839060042274764875173257640560719304829816\
+1625343896994632824959951619183898738101646377214044968823908624060712070721271\
+2407676566263142647875375543838219532738511511466955416661322787245104888440734\
+5690705801135838473686878538211258812, 9363518385390492118674725668282852530692\
+2546611993993623088390357321660234387983363924066381100689063010248946089748952\
+6682998398485749332089995187046993139647509955966661686083863225201140966958471\
+4245457369002346023845463773539517833867603741907585256570924894347238927314415\
+433680174018169311947598483914227977942960243970-z_4, 2459349387432911726799010\
+1941304922675893350581280042945987995850996522890285450437100322995169418995728\
+5469292173336089606474232745760509908504322358383195767357565050956548979483466\
+4682654289852555372200813220777940580897695612306504266698327004859011115685976\
+0577467743710568597516096413865840842484657574211978029693861761155899215673372\
+813309318077308834277020571794043985737330907879150179927938-z_5, 6288143060146\
+3552909165882988698320042890598218379879353953458800206541482485640023679454133\
+9608568590983628680996085789415304746602090220833368462695686152437456307810760\
+3279998066379904700560982520204635889187804558186217110485108514572146380616990\
+0528896007042339146547523366500101847389399932746766699776555109397289057957559\
+6687337432803894321500790248175311083010771843419039630444236503424066499574058\
+11480187492794968746140540917913574865791247431279394218964592801090-z_6, 21264\
+7699955162507913998195910045229653594863556373098710125428237566744139937628868\
+5812732331958608425702299726331611576510418751160098352685039502865426407380014\
+4445193960526524826183197000208968777213098763627044530795606245764148679217566\
+4719584047954321465136291210848804855810906975618272780603884479499340892741775\
+2020373292000171959064121368598895726556580473995781928801930441780248707886910\
+2471435014199558049706066204167634912270688152563837109937073582609535544866442\
+9361243827897987480130238762472363730358594882363834690834641721645751298-z_7,
+7617100998095268963208976345083424557361171338575529113010075815333737464292989\
+4824539193151312679888570813645982128156836794805533154531981828809611833235859\
+4011005723581747546780965803892551672761223032606209633293166396681407100649269\
+7340449893947112876137371608739022854862535071924702389982025580511589207453326\
+8748377101604037774675710995850801223261410334479536979444657771983010252287390\
+9473721600446997446803118122769694010023286555864016060132298037399693014252853\
+0115499062763398639570571486724472622527819646302979399779912265071083165266014\
+60501169433045892259470743240019703795388466726841556469889813065725307266-z_8,
+z_aux-1]
 
 =======================================================
 0. Extracting states, inputs, outputs, and parameters from the system
@@ -823,9 +634,6 @@ Parameters in equations:  [a, b, beta, c, d, h, k, lm, q, u]
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  139392000
-Orders of prolongations of the outputs (beta) =  [10, 9]
-Orders of prolongations of the state variables (alpha) =  [8, 9, 8, 10, 9]
 
 =======================================================
 3. Assessing local identifiability
@@ -834,31 +642,316 @@ Orders of prolongations of the state variables (alpha) =  [8, 9, 8, 10, 9]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  12268031980000000000000000
-Random sample for the outputs and inputs is generated from  [a = 7108437765753164061561101, b = 12226708241365082941180532, beta = 8907384255334737028585149, c = 6478133767908863100173876, d = 913059077831531207045919, h = 11469794867446584727464276, k = 12221505254592443680392821, lm = 3389264053945382540197556, q = 4763667555332829364132363, u = 557961256528497703476622, x_0 = 10976823105048951730059480, y_0 = 1897239245430621467286902, v_0 = 10845657758148032848114787, w_0 = 1234835287846914300050532, z_0 = 10010024203758777240642394]
-The polynomial system widehat{E^t} contains  58 equations in  54  variables
 Locally identifiable paramters:  [a, b, d, h, q, u, w(0), z(0)]
 Nonidentifiable parameter:  [beta, c, k, lm, v(0), x(0), y(0)]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  16357375970000000000000000
-Random sample for the outputs and inputs is generated from  [a = 5595057446809532305831337, b = 1473958794663169085501953, beta = 2216817859101765255599992, c = 2767710142742264382628790, d = 4737666278607105868275341, h = 2296273036709665107603648, k = 6661557488554575184127012, lm = 8723574873216539650447945, q = 11244391463107185657410847, u = 10950995127637567493832443, x_0 = 10131037178628671798763549, y_0 = 3619106264718460419247824, v_0 = 6503309592874634702774413, w_0 = 10419749451200355635377801, z_0 = 15759649231817298679459068]
-The polynomial system widehat{E^t} contains  58 equations in  54  variables
-Variable ordering to be used for Groebner basis computation [w_9, z_8, y_8, w_8, z_7, y_7, x_7, w_7, v_7, z_6, y_6, x_6, w_6, v_6, z_5, y_5, x_5, w_5, v_5, z_4, y_4, x_4, w_4, v_4, z_3, y_3, x_3, w_3, v_3, z_2, y_2, x_2, w_2, v_2, z_1, y_1, x_1, w_1, v_1, z_0, y_0, x_0, w_0, v_0, z_aux, w_aux, a, b, beta, c, d, h, k, lm, q, u]
-Prep CPU Time (sub_transc=false):	 2.301
-Prep Real Elapsed Time (sub_transc=false):	 2.105
-memory used=297.82MiB, alloc change=16.00MiB, cpu time=2.30s, real time=2.11s, gc time=347.56ms
+Prep CPU Time (sub_transc=false):	 2.997
+Prep Real Elapsed Time (sub_transc=false):	 2.738
+memory used=275.79MiB, alloc change=5.90MiB, cpu time=3.00s, real time=2.74s, gc time=691.37ms
 
 
-GetPolySystem Usage (real, cpu, memory):	2.106,	2.302,	312283664
+GetPolySystem Usage (real, cpu, memory):	2.739,	2.998,	289188992
 
-States for substitution:	[w_ = 0, h = 1, y_ = 1, c = 1, z_ = 0, b = 1, u = 3, x_ = 2, a = 2, lm = 3, k = 3, d = 3, q = 1, beta = 2, v_ = 2]
+States for substitution:	[a = 2, w_ = 0, v_ = 2, y_ = 1, x_ = 2, h = 1, u = 3, b = 1, c = 1, lm = 3, q = 1, beta = 2, d = 3, k = 3, z_ = 0]
 NonID parameters:	[beta, c, k, lm, v_0, x_0, y_0]
-Substitutions:	[z_aux = 3, w_ = 1, y_ = 2, z_ = 1, u = 4, x_ = 3, d = 4, v_ = 3]
-memory used=315.62MiB, alloc change=16.00MiB, cpu time=2.46s, real time=2.26s, gc time=347.56ms
+Substitutions:	[w_ = 1, v_ = 3, y_ = 2, x_ = 3, u = 4, d = 4, z_ = 1, z_aux = 3]
+memory used=293.75MiB, alloc change=5.90MiB, cpu time=3.19s, real time=2.93s, gc time=691.37ms
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {d = d^
+4, u = u^4, v_0 = v_0^3, v_1 = v_1^3, v_2 = v_2^3, v_3 = v_3^3, v_4 = v_4^3, 
+v_5 = v_5^3, v_6 = v_6^3, v_7 = v_7^3, w_0 = w_0, w_1 = w_1, w_2 = w_2, w_3 = 
+w_3, w_4 = w_4, w_5 = w_5, w_6 = w_6, w_7 = w_7, w_8 = w_8, w_9 = w_9, w_aux =
+w_aux, x_0 = x_0^3, x_1 = x_1^3, x_2 = x_2^3, x_3 = x_3^3, x_4 = x_4^3, x_5 = 
+x_5^3, x_6 = x_6^3, x_7 = x_7^3, y_0 = y_0^2, y_1 = y_1^2, y_2 = y_2^2, y_3 = 
+y_3^2, y_4 = y_4^2, y_5 = y_5^2, y_6 = y_6^2, y_7 = y_7^2, y_8 = y_8^2, z_0 = 
+z_0, z_1 = z_1, z_2 = z_2, z_3 = z_3, z_4 = z_4, z_5 = z_5, z_6 = z_6, z_7 = 
+z_7, z_8 = z_8, z_aux = z_aux, z_aux = z_aux^3}, [7285239070392655818808762-w_0
+, c*q*w_0*y_0^2-c*w_0*y_0^2*z_0+b*w_0+w_1, 9045011588770596677983291-z_0, -c*q*
+w_0*y_0^2+h*z_0+z_1, -w_1+20215585034736479514961223466379735451325742144985371\
+51988998231510118476301433637601809155018587892, ((-z_1*y_0^2+y_1^2*(q-z_0))*
+w_0+w_1*y_0^2*(q-z_0))*c+b*w_1+w_2, -beta*v_0^3*x_0^3+a*y_0^2+y_1^2, 4413673263\
+3221760241601066843217297503519429022729053628624578736762613547093579558841684\
+2620057867-z_1, -q*(w_0*y_1^2+w_1*y_0^2)*c+h*z_1+z_2, -w_2+68113884827117452354\
+0459116722838015352837422484847458795169356721875352735854014835235108303541473\
+433983841792353710679120360455969424364779563752668159045106002003191966544, ((
+-z_2*y_0^2-2*z_1*y_1^2-y_2^2*(z_0-q))*w_0+(-2*z_1*w_1-w_2*(z_0-q))*y_0^2-2*w_1*
+y_1^2*(z_0-q))*c+b*w_2+w_3, -beta*v_0^3*x_1^3-beta*v_1^3*x_0^3+a*y_1^2+y_2^2, u
+^4*v_0^3-k*y_0^2+v_1^3, beta*v_0^3*x_0^3+d^4*x_0^3+x_1^3-lm, 122473657086758174\
+5507537110741918674602697806509889470667804026859351600059186891486362197560187\
+67002205076088695401825699309347643083896250586398228410797261797841647758235-
+z_2, -q*(w_0*y_2^2+2*w_1*y_1^2+w_2*y_0^2)*c+h*z_2+z_3, -w_3+2890545949321759290\
+1472684672013491605684333239002870741565977821919921590513227012849489067800226\
+1692022061392203027566862630027111050931037385098664293646700983123577038325406\
+374993141090023163883363650661452330872706698434585437773224198473175748, ((q*
+y_3^2-y_0^2*z_3-3*y_1^2*z_2-3*y_2^2*z_1-y_3^2*z_0)*w_0+(q*w_3-3*w_1*z_2-3*w_2*
+z_1-w_3*z_0)*y_0^2+(-6*z_1*y_1^2-3*y_2^2*(z_0-q))*w_1-3*y_1^2*w_2*(z_0-q))*c+b*
+w_3+w_4, (-v_0^3*x_2^3-2*v_1^3*x_1^3-v_2^3*x_0^3)*beta+a*y_2^2+y_3^2, u^4*v_1^3
+-k*y_1^2+v_2^3, beta*x_0^3*v_1^3+(beta*v_0^3+d^4)*x_1^3+x_2^3, 4126596662341940\
+3518074970247467463233407806418883496501173492596539624541796150331751719269892\
+8939755569693304913367024839367895974557340930853053938472321643354639600870579\
+47473838138379523255581374783391024175335083511310238213664529762238977403-z_3,
+-3*q*(y_2^2*w_1+1/3*y_3^2*w_0+w_2*y_1^2+1/3*w_3*y_0^2)*c+h*z_3+z_4, -w_4+152917\
+0616199712698367852129705861671749677380562506364139670408372460123088561435391\
+2067863464877037316050728778426277135831804627206103645485918236205021413592818\
+4004269702383290522824248835774783923946689250868432576122318520359200274957400\
+2843038601280265950301933516705557682831294236293867538728173571756726268761084\
+88, ((q*y_4^2-y_0^2*z_4-4*y_1^2*z_3-6*y_2^2*z_2-4*y_3^2*z_1-y_4^2*z_0)*w_0+(q*
+w_4-4*w_1*z_3-6*w_2*z_2-4*w_3*z_1-w_4*z_0)*y_0^2+(4*q*y_3^2-12*y_1^2*z_2-12*y_2
+^2*z_1-4*y_3^2*z_0)*w_1+(4*q*w_3-12*w_2*z_1-4*w_3*z_0)*y_1^2-6*y_2^2*w_2*(z_0-q
+))*c+b*w_4+w_5, (-v_0^3*x_3^3-3*v_1^3*x_2^3-3*v_2^3*x_1^3-v_3^3*x_0^3)*beta+a*
+y_3^2+y_4^2, u^4*v_2^3-k*y_2^2+v_3^3, (v_0^3*x_2^3+2*v_1^3*x_1^3+v_2^3*x_0^3)*
+beta+d^4*x_2^3+x_3^3, -w_5+9745484531094725855966761742145741441442099346004588\
+0338388080231507722320762516226012917923178243648928458958372838123223768252399\
+7893750247960719584490147063685828243449377863428727895476751914733708527033122\
+1414299974019321866818744875051800351806531033891109594682038918641743429143712\
+3100903494756203051945851002514567748027355055988652246210277334762216126846152\
+584578595715979510933282854392, ((q*y_5^2-y_0^2*z_5-5*y_1^2*z_4-10*y_2^2*z_3-10
+*y_3^2*z_2-5*y_4^2*z_1-y_5^2*z_0)*w_0+(q*w_5-5*w_1*z_4-10*w_2*z_3-10*w_3*z_2-5*
+w_4*z_1-w_5*z_0)*y_0^2+(5*q*y_4^2-20*y_1^2*z_3-30*y_2^2*z_2-20*y_3^2*z_1-5*y_4^
+2*z_0)*w_1+(5*q*w_4-30*w_2*z_2-20*w_3*z_1-5*w_4*z_0)*y_1^2+(-10*w_2*y_3^2-10*
+w_3*y_2^2)*z_0+(10*w_2*y_3^2+10*w_3*y_2^2)*q-30*y_2^2*z_1*w_2)*c+b*w_5+w_6, (-
+v_0^3*x_4^3-4*v_1^3*x_3^3-6*v_2^3*x_2^3-4*v_3^3*x_1^3-v_4^3*x_0^3)*beta+a*y_4^2
++y_5^2, -4*(w_3*y_1^2+3/2*y_2^2*w_2+y_3^2*w_1+1/4*y_4^2*w_0+1/4*w_4*y_0^2)*q*c+
+h*z_4+z_5, u^4*v_3^3-k*y_3^2+v_4^3, (v_0^3*x_3^3+3*v_1^3*x_2^3+3*v_2^3*x_1^3+
+v_3^3*x_0^3)*beta+d^4*x_3^3+x_4^3, -w_6+725317768479820095999788464858525109387\
+1057510808307817517409401412753372580395833272682982396394372695996278820706317\
+8990295153092108396061153980545636641402447087621539919160866379229942928432211\
+5636518651047404460692556631333950832248129978653503658750273817516767678819723\
+9850171375641197021100574543715351221496526858693376217983815788345940777550116\
+6377491244077989750061967602252276212635523739217394539912564253102908049360149\
+363288811608909211877136426513813037088, ((q*y_6^2-y_0^2*z_6-6*y_1^2*z_5-15*y_2
+^2*z_4-20*y_3^2*z_3-15*y_4^2*z_2-6*y_5^2*z_1-y_6^2*z_0)*w_0+(q*w_6-6*w_1*z_5-15
+*w_2*z_4-20*w_3*z_3-15*w_4*z_2-6*w_5*z_1-w_6*z_0)*y_0^2+(6*q*y_5^2-30*y_1^2*z_4
+-60*y_2^2*z_3-60*y_3^2*z_2-30*y_4^2*z_1-6*y_5^2*z_0)*w_1+(6*q*w_5-60*w_2*z_3-60
+*w_3*z_2-30*w_4*z_1-6*w_5*z_0)*y_1^2+(-15*w_2*y_4^2-20*w_3*y_3^2-15*w_4*y_2^2)*
+z_0+(15*w_2*y_4^2+20*w_3*y_3^2+15*w_4*y_2^2)*q+(-90*y_2^2*z_2-60*y_3^2*z_1)*w_2
+-60*y_2^2*z_1*w_3)*c+b*w_6+w_7, (-v_0^3*x_5^3-5*v_1^3*x_4^3-10*v_2^3*x_3^3-10*
+v_3^3*x_2^3-5*v_4^3*x_1^3-v_5^3*x_0^3)*beta+a*y_5^2+y_6^2, -q*(w_0*y_5^2+5*w_1*
+y_4^2+10*w_2*y_3^2+10*w_3*y_2^2+5*w_4*y_1^2+w_5*y_0^2)*c+h*z_5+z_6, u^4*v_4^3-k
+*y_4^2+v_5^3, (v_0^3*x_4^3+4*v_1^3*x_3^3+6*v_2^3*x_2^3+4*v_3^3*x_1^3+v_4^3*x_0^
+3)*beta+d^4*x_4^3+x_5^3, -w_7+6168449320837014142255056096222949551325370474466\
+5276238616995289402198751064198252919550037267475490659672164662666900556591744\
+3402637615382656526541853495792622012610812466680017462833811052763616448812950\
+1544137497656986311283306692775931957101476229913669665485529917203190346310286\
+3463369529107133982187547014474335547937076461850212464186367654530742013810402\
+1974637903590901029267119346847925893149249746730594374298702893322166917533843\
+1488179005055559512671349025606799939848615098449292316197249085374291666973306\
+8697894956770731571220208, ((q*y_7^2-y_0^2*z_7-7*y_1^2*z_6-21*y_2^2*z_5-35*y_3^
+2*z_4-35*y_4^2*z_3-21*y_5^2*z_2-7*y_6^2*z_1-y_7^2*z_0)*w_0+(q*w_7-7*w_1*z_6-21*
+w_2*z_5-35*w_3*z_4-35*w_4*z_3-21*w_5*z_2-7*w_6*z_1-w_7*z_0)*y_0^2+(7*q*y_6^2-42
+*y_1^2*z_5-105*y_2^2*z_4-140*y_3^2*z_3-105*y_4^2*z_2-42*y_5^2*z_1-7*y_6^2*z_0)*
+w_1+(7*q*w_6-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1-7*w_6*z_0)*y_1^2+(-\
+21*w_2*y_5^2-35*w_3*y_4^2-35*w_4*y_3^2-21*w_5*y_2^2)*z_0+(21*w_2*y_5^2+35*w_3*
+y_4^2+35*w_4*y_3^2+21*w_5*y_2^2)*q+(-210*y_2^2*z_3-210*y_3^2*z_2-105*y_4^2*z_1)
+*w_2+(-210*w_3*z_2-105*w_4*z_1)*y_2^2-140*y_3^2*z_1*w_3)*c+b*w_7+w_8, (-v_0^3*
+x_6^3-6*v_1^3*x_5^3-15*v_2^3*x_4^3-20*v_3^3*x_3^3-15*v_4^3*x_2^3-6*v_5^3*x_1^3-
+v_6^3*x_0^3)*beta+a*y_6^2+y_7^2, -q*(w_0*y_6^2+6*w_1*y_5^2+15*w_2*y_4^2+20*w_3*
+y_3^2+15*w_4*y_2^2+6*w_5*y_1^2+w_6*y_0^2)*c+h*z_6+z_7, u^4*v_5^3-k*y_5^2+v_6^3,
+(v_0^3*x_5^3+5*v_1^3*x_4^3+10*v_2^3*x_3^3+10*v_3^3*x_2^3+5*v_4^3*x_1^3+v_5^3*
+x_0^3)*beta+d^4*x_5^3+x_6^3, -w_8+590099241940735809835994556344450024067803999\
+0275313085923679215194152319723532968526877091105406959768734457860298797415936\
+1617411832964513399624076675728013710338199043892277482318169353566576813638716\
+7290623651351613590157897903686432652044301453663933012988670752893554366492446\
+2164098158925967079262442274257876361618082916627702252925211660937224558705643\
+6036697112544087578630635857906952009834673758407829921323003763282409120463106\
+7274546376974054661295137310993914185240661389778735832523829210024067417396601\
+6380297443255994989786643579775410600100984408317059767466288159479987760659411\
+2662293258075339196684392, ((q*y_8^2-y_0^2*z_8-8*y_1^2*z_7-28*y_2^2*z_6-56*y_3^
+2*z_5-70*y_4^2*z_4-56*y_5^2*z_3-28*y_6^2*z_2-8*y_7^2*z_1-y_8^2*z_0)*w_0+(q*w_8-\
+8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-70*w_4*z_4-56*w_5*z_3-28*w_6*z_2-8*w_7*z_1-w_8*
+z_0)*y_0^2+(8*q*y_7^2-56*y_1^2*z_6-168*y_2^2*z_5-280*y_3^2*z_4-280*y_4^2*z_3-\
+168*y_5^2*z_2-56*y_6^2*z_1-8*y_7^2*z_0)*w_1+(8*q*w_7-168*w_2*z_5-280*w_3*z_4-\
+280*w_4*z_3-168*w_5*z_2-56*w_6*z_1-8*w_7*z_0)*y_1^2+(-28*w_2*y_6^2-56*w_3*y_5^2
+-70*w_4*y_4^2-56*w_5*y_3^2-28*w_6*y_2^2)*z_0+(28*w_2*y_6^2+56*w_3*y_5^2+70*w_4*
+y_4^2+56*w_5*y_3^2+28*w_6*y_2^2)*q+(-420*y_2^2*z_4-560*y_3^2*z_3-420*y_4^2*z_2-\
+168*y_5^2*z_1)*w_2+(-560*w_3*z_3-420*w_4*z_2-168*w_5*z_1)*y_2^2+(-280*w_3*y_4^2
+-280*w_4*y_3^2)*z_1-560*w_3*y_3^2*z_2)*c+b*w_8+w_9, (-v_0^3*x_7^3-7*v_1^3*x_6^3
+-21*v_2^3*x_5^3-35*v_3^3*x_4^3-35*v_4^3*x_3^3-21*v_5^3*x_2^3-7*v_6^3*x_1^3-v_7^
+3*x_0^3)*beta+a*y_7^2+y_8^2, -7*q*(w_6*y_1^2+1/7*w_7*y_0^2+3*w_5*y_2^2+5*w_4*
+y_3^2+5*y_4^2*w_3+3*y_5^2*w_2+y_6^2*w_1+1/7*y_7^2*w_0)*c+h*z_7+z_8, u^4*v_6^3-k
+*y_6^2+v_7^3, (v_0^3*x_6^3+6*v_1^3*x_5^3+15*v_2^3*x_4^3+20*v_3^3*x_3^3+15*v_4^3
+*x_2^3+6*v_5^3*x_1^3+v_6^3*x_0^3)*beta+d^4*x_6^3+x_7^3, -w_9+627232415534047573\
+0489128364667535812551929259553797952927704660967847070181007856062946231263049\
+4939770235301695733465556738898164949933246279538519990051612821305910725780367\
+6066769590292852535001825358036531674548803727329350003400889820575476342041165\
+8393969063192651704731815125895444319703475698664249878356349977162381026497603\
+0391918780014646208683929501157219533982153371180079139189274578525980572619069\
+1820006339614265300038338628513710856471442212106877920469329462883888371278473\
+7719283339980857686751583495553978485140605941947635470750374099714051242367995\
+9087027355135036707783928346007559670878281778886749783775025512575368280421538\
+916207141335868030424201056004717284895070841168, 17512020195430658532618622814\
+5799753398730175304976299367535478597580538492929945764843363829271798500549237\
+5017443351159824238716474090272635344939301387919300499590580680808703716723623\
+4684138266881160467976726073205127583005725512911719234359865361342494863849970\
+699413919100392887596378540672574082211255203264988531435-z_4, 9264293729505297\
+9372618991882648273855941108596662605382346731095548677087654963739216690347831\
+7272584337274581452925132834317200490654825966893145505059288143629942268407997\
+8776250840656875817911891009450734572169847791683056903029156023224805529419808\
+6948403369539686207831239914620954070338824864814182311191958810309034196543370\
+73900179641775430308166641255128669270748078301084411105763754171-z_5, 59041829\
+7840352592420215840438441205551359241744402203638288410479516971635404634693926\
+2437218512155114440331546613640457485746269327726403253801373554139452058120309\
+6558908853083194347789548851850384767931504509658827515463036887716677116557263\
+8223061987992787406463030497020294142067698322060244859184720628337248863911034\
+5012522846713980187922462724013403656407647150920120200075056633036615194253383\
+675260642753296419520484124811992460722327552338841436572312448888107-z_6, 4394\
+2492637778918535806110467317863997343256607035410011490704930976065299885090287\
+1957791301382086246012682107132510192727301138952809453053949288589303754101792\
+4662520235608495909636652330202530879346831718309463367935837515550129765618053\
+6542330027160583384431973144107464817631097072190190019136148877184995034587676\
+1226191739483518038498389078203391793274175786157932462601100347662714400026028\
+3085820621390605776790461730428663994942871502519113328168971168573965029933058\
+134247365108689224446382766721184722088752687904648806388469350192427-z_7, 3737\
+0798103498309006018383467288271984991052762376182113869312261775110661280583225\
+5284059998439815815814710396709955023463014561534125125881011476598844598827532\
+5909688448422088286499633893295086301611597886203663065672894510067414871950674\
+5797040325713197629193630146001107453267410052099310511745750321507679649271723\
+9874162688305621369671152749590135108140394768696493493168396354447735756669970\
+2457883382251395144869923838807666725244370311987160015895175410929761530337934\
+8324650284200593366293644311555657242964571478177585884061140998559736201822974\
+27185789295036031180743100926570566638724592287924740955949305307-z_8, z_aux^3-\
+1], [w_9, z_8, y_8, w_8, z_7, y_7, x_7, w_7, v_7, z_6, y_6, x_6, w_6, v_6, z_5,
+y_5, x_5, w_5, v_5, z_4, y_4, x_4, w_4, v_4, z_3, y_3, x_3, w_3, v_3, z_2, y_2,
+x_2, w_2, v_2, z_1, y_1, x_1, w_1, v_1, z_0, y_0, x_0, w_0, v_0, z_aux, w_aux,
+a, b, beta, c, d, h, k, lm, q, u], [], [7285239070392655818808762-w_0, c*q*w_0*
+y_0-c*w_0*y_0*z_0+b*w_0+w_1, 9045011588770596677983291-z_0, -c*q*w_0*y_0+h*z_0+
+z_1, -w_1+202155850347364795149612234663797354513257421449853715198899823151011\
+8476301433637601809155018587892, ((-z_1*y_0+y_1*(q-z_0))*w_0+w_1*y_0*(q-z_0))*c
++b*w_1+w_2, -beta*v_0*x_0+a*y_0+y_1, 441367326332217602416010668432172975035194\
+290227290536286245787367626135470935795588416842620057867-z_1, -q*(w_0*y_1+w_1*
+y_0)*c+h*z_1+z_2, -w_2+68113884827117452354045911672283801535283742248484745879\
+5169356721875352735854014835235108303541473433983841792353710679120360455969424\
+364779563752668159045106002003191966544, ((-z_2*y_0-2*z_1*y_1-y_2*(z_0-q))*w_0+
+(-2*z_1*w_1-w_2*(z_0-q))*y_0-2*w_1*y_1*(z_0-q))*c+b*w_2+w_3, -beta*v_0*x_1-beta
+*v_1*x_0+a*y_1+y_2, -k*y_0+u*v_0+v_1, beta*v_0*x_0+d*x_0-lm+x_1, 12247365708675\
+8174550753711074191867460269780650988947066780402685935160005918689148636219756\
+0187670022050760886954018256993093476430838962505863982284107972617978416477582\
+35-z_2, -q*(w_0*y_2+2*w_1*y_1+w_2*y_0)*c+h*z_2+z_3, -w_3+2890545949321759290147\
+2684672013491605684333239002870741565977821919921590513227012849489067800226169\
+2022061392203027566862630027111050931037385098664293646700983123577038325406374\
+993141090023163883363650661452330872706698434585437773224198473175748, ((q*y_3-
+y_0*z_3-3*y_1*z_2-3*y_2*z_1-y_3*z_0)*w_0+(q*w_3-3*w_1*z_2-3*w_2*z_1-w_3*z_0)*
+y_0+(-6*z_1*y_1-3*y_2*(z_0-q))*w_1-3*y_1*w_2*(z_0-q))*c+b*w_3+w_4, (-v_0*x_2-2*
+v_1*x_1-v_2*x_0)*beta+a*y_2+y_3, -k*y_1+u*v_1+v_2, beta*x_0*v_1+(beta*v_0+d)*
+x_1+x_2, 4126596662341940351807497024746746323340780641888349650117349259653962\
+4541796150331751719269892893975556969330491336702483936789597455734093085305393\
+8472321643354639600870579474738381383795232555813747833910241753350835113102382\
+13664529762238977403-z_3, -3*q*(y_2*w_1+1/3*y_3*w_0+w_2*y_1+1/3*w_3*y_0)*c+h*
+z_3+z_4, -w_4+15291706161997126983678521297058616717496773805625063641396704083\
+7246012308856143539120678634648770373160507287784262771358318046272061036454859\
+1823620502141359281840042697023832905228242488357747839239466892508684325761223\
+1852035920027495740028430386012802659503019335167055576828312942362938675387281\
+7357175672626876108488, ((q*y_4-y_0*z_4-4*y_1*z_3-6*y_2*z_2-4*y_3*z_1-y_4*z_0)*
+w_0+(q*w_4-4*w_1*z_3-6*w_2*z_2-4*w_3*z_1-w_4*z_0)*y_0+(4*q*y_3-12*y_1*z_2-12*
+y_2*z_1-4*y_3*z_0)*w_1+(4*q*w_3-12*w_2*z_1-4*w_3*z_0)*y_1-6*y_2*w_2*(z_0-q))*c+
+b*w_4+w_5, (-v_0*x_3-3*v_1*x_2-3*v_2*x_1-v_3*x_0)*beta+a*y_3+y_4, -k*y_2+u*v_2+
+v_3, (v_0*x_2+2*v_1*x_1+v_2*x_0)*beta+d*x_2+x_3, -w_5+9745484531094725855966761\
+7421457414414420993460045880338388080231507722320762516226012917923178243648928\
+4589583728381232237682523997893750247960719584490147063685828243449377863428727\
+8954767519147337085270331221414299974019321866818744875051800351806531033891109\
+5946820389186417434291437123100903494756203051945851002514567748027355055988652\
+246210277334762216126846152584578595715979510933282854392, ((q*y_5-y_0*z_5-5*
+y_1*z_4-10*y_2*z_3-10*y_3*z_2-5*y_4*z_1-y_5*z_0)*w_0+(q*w_5-5*w_1*z_4-10*w_2*
+z_3-10*w_3*z_2-5*w_4*z_1-w_5*z_0)*y_0+(5*q*y_4-20*y_1*z_3-30*y_2*z_2-20*y_3*z_1
+-5*y_4*z_0)*w_1+(5*q*w_4-30*w_2*z_2-20*w_3*z_1-5*w_4*z_0)*y_1+(-10*w_2*y_3-10*
+w_3*y_2)*z_0+(10*w_2*y_3+10*w_3*y_2)*q-30*y_2*z_1*w_2)*c+b*w_5+w_6, (-v_0*x_4-4
+*v_1*x_3-6*v_2*x_2-4*v_3*x_1-v_4*x_0)*beta+a*y_4+y_5, -4*(w_3*y_1+3/2*y_2*w_2+
+y_3*w_1+1/4*y_4*w_0+1/4*w_4*y_0)*q*c+h*z_4+z_5, -k*y_3+u*v_3+v_4, (v_0*x_3+3*
+v_1*x_2+3*v_2*x_1+v_3*x_0)*beta+d*x_3+x_4, -w_6+7253177684798200959997884648585\
+2510938710575108083078175174094014127533725803958332726829823963943726959962788\
+2070631789902951530921083960611539805456366414024470876215399191608663792299429\
+2843221156365186510474044606925566313339508322481299786535036587502738175167676\
+7881972398501713756411970211005745437153512214965268586933762179838157883459407\
+7755011663774912440779897500619676022522762126355237392173945399125642531029080\
+49360149363288811608909211877136426513813037088, ((q*y_6-y_0*z_6-6*y_1*z_5-15*
+y_2*z_4-20*y_3*z_3-15*y_4*z_2-6*y_5*z_1-y_6*z_0)*w_0+(q*w_6-6*w_1*z_5-15*w_2*
+z_4-20*w_3*z_3-15*w_4*z_2-6*w_5*z_1-w_6*z_0)*y_0+(6*q*y_5-30*y_1*z_4-60*y_2*z_3
+-60*y_3*z_2-30*y_4*z_1-6*y_5*z_0)*w_1+(6*q*w_5-60*w_2*z_3-60*w_3*z_2-30*w_4*z_1
+-6*w_5*z_0)*y_1+(-15*w_2*y_4-20*w_3*y_3-15*w_4*y_2)*z_0+(15*w_2*y_4+20*w_3*y_3+
+15*w_4*y_2)*q+(-90*y_2*z_2-60*y_3*z_1)*w_2-60*y_2*z_1*w_3)*c+b*w_6+w_7, (-v_0*
+x_5-5*v_1*x_4-10*v_2*x_3-10*v_3*x_2-5*v_4*x_1-v_5*x_0)*beta+a*y_5+y_6, -q*(w_0*
+y_5+5*w_1*y_4+10*w_2*y_3+10*w_3*y_2+5*w_4*y_1+w_5*y_0)*c+h*z_5+z_6, -k*y_4+u*
+v_4+v_5, (v_0*x_4+4*v_1*x_3+6*v_2*x_2+4*v_3*x_1+v_4*x_0)*beta+d*x_4+x_5, -w_7+
+6168449320837014142255056096222949551325370474466527623861699528940219875106419\
+8252919550037267475490659672164662666900556591744340263761538265652654185349579\
+2622012610812466680017462833811052763616448812950154413749765698631128330669277\
+5931957101476229913669665485529917203190346310286346336952910713398218754701447\
+4335547937076461850212464186367654530742013810402197463790359090102926711934684\
+7925893149249746730594374298702893322166917533843148817900505555951267134902560\
+67999398486150984492923161972490853742916669733068697894956770731571220208, ((q
+*y_7-y_0*z_7-7*y_1*z_6-21*y_2*z_5-35*y_3*z_4-35*y_4*z_3-21*y_5*z_2-7*y_6*z_1-
+y_7*z_0)*w_0+(q*w_7-7*w_1*z_6-21*w_2*z_5-35*w_3*z_4-35*w_4*z_3-21*w_5*z_2-7*w_6
+*z_1-w_7*z_0)*y_0+(7*q*y_6-42*y_1*z_5-105*y_2*z_4-140*y_3*z_3-105*y_4*z_2-42*
+y_5*z_1-7*y_6*z_0)*w_1+(7*q*w_6-105*w_2*z_4-140*w_3*z_3-105*w_4*z_2-42*w_5*z_1-\
+7*w_6*z_0)*y_1+(-21*w_2*y_5-35*w_3*y_4-35*w_4*y_3-21*w_5*y_2)*z_0+(21*w_2*y_5+
+35*w_3*y_4+35*w_4*y_3+21*w_5*y_2)*q+(-210*y_2*z_3-210*y_3*z_2-105*y_4*z_1)*w_2+
+(-210*w_3*z_2-105*w_4*z_1)*y_2-140*y_3*z_1*w_3)*c+b*w_7+w_8, (-v_0*x_6-6*v_1*
+x_5-15*v_2*x_4-20*v_3*x_3-15*v_4*x_2-6*v_5*x_1-v_6*x_0)*beta+a*y_6+y_7, -q*(w_0
+*y_6+6*w_1*y_5+15*w_2*y_4+20*w_3*y_3+15*w_4*y_2+6*w_5*y_1+w_6*y_0)*c+h*z_6+z_7,
+-k*y_5+u*v_5+v_6, (v_0*x_5+5*v_1*x_4+10*v_2*x_3+10*v_3*x_2+5*v_4*x_1+v_5*x_0)*
+beta+d*x_5+x_6, -w_8+5900992419407358098359945563444500240678039990275313085923\
+6792151941523197235329685268770911054069597687344578602987974159361617411832964\
+5133996240766757280137103381990438922774823181693535665768136387167290623651351\
+6135901578979036864326520443014536639330129886707528935543664924462164098158925\
+9670792624422742578763616180829166277022529252116609372245587056436036697112544\
+0875786306358579069520098346737584078299213230037632824091204631067274546376974\
+0546612951373109939141852406613897787358325238292100240674173966016380297443255\
+9949897866435797754106001009844083170597674662881594799877606594112662293258075\
+339196684392, ((q*y_8-y_0*z_8-8*y_1*z_7-28*y_2*z_6-56*y_3*z_5-70*y_4*z_4-56*y_5
+*z_3-28*y_6*z_2-8*y_7*z_1-y_8*z_0)*w_0+(q*w_8-8*w_1*z_7-28*w_2*z_6-56*w_3*z_5-\
+70*w_4*z_4-56*w_5*z_3-28*w_6*z_2-8*w_7*z_1-w_8*z_0)*y_0+(8*q*y_7-56*y_1*z_6-168
+*y_2*z_5-280*y_3*z_4-280*y_4*z_3-168*y_5*z_2-56*y_6*z_1-8*y_7*z_0)*w_1+(8*q*w_7
+-168*w_2*z_5-280*w_3*z_4-280*w_4*z_3-168*w_5*z_2-56*w_6*z_1-8*w_7*z_0)*y_1+(-28
+*w_2*y_6-56*w_3*y_5-70*w_4*y_4-56*w_5*y_3-28*w_6*y_2)*z_0+(28*w_2*y_6+56*w_3*
+y_5+70*w_4*y_4+56*w_5*y_3+28*w_6*y_2)*q+(-420*y_2*z_4-560*y_3*z_3-420*y_4*z_2-\
+168*y_5*z_1)*w_2+(-560*w_3*z_3-420*w_4*z_2-168*w_5*z_1)*y_2+(-280*w_3*y_4-280*
+w_4*y_3)*z_1-560*w_3*y_3*z_2)*c+b*w_8+w_9, (-v_0*x_7-7*v_1*x_6-21*v_2*x_5-35*
+v_3*x_4-35*v_4*x_3-21*v_5*x_2-7*v_6*x_1-v_7*x_0)*beta+a*y_7+y_8, -7*q*(w_6*y_1+
+1/7*w_7*y_0+3*w_5*y_2+5*w_4*y_3+5*y_4*w_3+3*y_5*w_2+y_6*w_1+1/7*y_7*w_0)*c+h*
+z_7+z_8, -k*y_6+u*v_6+v_7, (v_0*x_6+6*v_1*x_5+15*v_2*x_4+20*v_3*x_3+15*v_4*x_2+
+6*v_5*x_1+v_6*x_0)*beta+d*x_6+x_7, -w_9+627232415534047573048912836466753581255\
+1929259553797952927704660967847070181007856062946231263049493977023530169573346\
+5556738898164949933246279538519990051612821305910725780367606676959029285253500\
+1825358036531674548803727329350003400889820575476342041165839396906319265170473\
+1815125895444319703475698664249878356349977162381026497603039191878001464620868\
+3929501157219533982153371180079139189274578525980572619069182000633961426530003\
+8338628513710856471442212106877920469329462883888371278473771928333998085768675\
+1583495553978485140605941947635470750374099714051242367995908702735513503670778\
+3928346007559670878281778886749783775025512575368280421538916207141335868030424\
+201056004717284895070841168, 17512020195430658532618622814579975339873017530497\
+6299367535478597580538492929945764843363829271798500549237501744335115982423871\
+6474090272635344939301387919300499590580680808703716723623468413826688116046797\
+6726073205127583005725512911719234359865361342494863849970699413919100392887596\
+378540672574082211255203264988531435-z_4, 9264293729505297937261899188264827385\
+5941108596662605382346731095548677087654963739216690347831727258433727458145292\
+5132834317200490654825966893145505059288143629942268407997877625084065687581791\
+1891009450734572169847791683056903029156023224805529419808694840336953968620783\
+1239914620954070338824864814182311191958810309034196543370739001796417754303081\
+66641255128669270748078301084411105763754171-z_5, 59041829784035259242021584043\
+8441205551359241744402203638288410479516971635404634693926243721851215511444033\
+1546613640457485746269327726403253801373554139452058120309655890885308319434778\
+9548851850384767931504509658827515463036887716677116557263822306198799278740646\
+3030497020294142067698322060244859184720628337248863911034501252284671398018792\
+2462724013403656407647150920120200075056633036615194253383675260642753296419520\
+484124811992460722327552338841436572312448888107-z_6, 4394249263777891853580611\
+0467317863997343256607035410011490704930976065299885090287195779130138208624601\
+2682107132510192727301138952809453053949288589303754101792466252023560849590963\
+6652330202530879346831718309463367935837515550129765618053654233002716058338443\
+1973144107464817631097072190190019136148877184995034587676122619173948351803849\
+8389078203391793274175786157932462601100347662714400026028308582062139060577679\
+0461730428663994942871502519113328168971168573965029933058134247365108689224446\
+382766721184722088752687904648806388469350192427-z_7, 3737079810349830900601838\
+3467288271984991052762376182113869312261775110661280583225528405999843981581581\
+4710396709955023463014561534125125881011476598844598827532590968844842208828649\
+9633893295086301611597886203663065672894510067414871950674579704032571319762919\
+3630146001107453267410052099310511745750321507679649271723987416268830562136967\
+1152749590135108140394768696493493168396354447735756669970245788338225139514486\
+9923838807666725244370311987160015895175410929761530337934832465028420059336629\
+3644311555657242964571478177585884061140998559736201822974271857892950360311807\
+43100926570566638724592287924740955949305307-z_8, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	2.263,	2.459,	330947352
+SubsByDepth Usage (real, cpu, memory):	2.933,	3.192,	308017232
 
-memory used=4580.1MB, alloc=153.9MB, time=39.85
+memory used=3855.6MB, alloc=126.7MB, time=40.12

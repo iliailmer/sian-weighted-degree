@@ -11,56 +11,64 @@ Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in SubsByDepth) `out` is implicitly declared local
 |imports/create_substitutions.mpl:53|
 Warning, (in SubsByDepth) `mem` is implicitly declared local
@@ -102,9 +110,6 @@ Parameters in equations:  [mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, 
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  134200800
-Orders of prolongations of the outputs (beta) =  [7, 7, 6]
-Orders of prolongations of the state variables (alpha) =  [7, 6, 7, 6, 6]
 
 =======================================================
 3. Assessing local identifiability
@@ -113,9 +118,6 @@ Orders of prolongations of the state variables (alpha) =  [7, 6, 7, 6, 6]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  241809892900000000
-Random sample for the outputs and inputs is generated from  [mu_EE = 175437697179776277, mu_LE = 126461045071076191, mu_LL = 226779023527040413, mu_M = 72909005319588143, mu_N = 52902032993305526, mu_P = 163620707451429529, mu_PE = 231979860642954248, mu_PL = 3873926600199699, rho_E = 187274150991107753, rho_P = 98011584576640724, delta_EL = 183025124007079516, delta_LM = 28167169733313584, delta_NE = 64775713955629168, N_0 = 203368428698142487, S_0 = 220033511498480473, M_0 = 130908041126290962, P_0 = 216568737710276387, E_0 = 78414402926849881]
-The polynomial system widehat{E^t} contains  47 equations in  45  variables
 Locally identifiable paramters:  [mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, delta_EL, delta_LM, N(0), S(0), M(0), E(0)]
 Nonidentifiable parameter:  [P(0), rho_E, rho_P, delta_NE]
 
@@ -125,41 +127,167 @@ Substituting transcendence basis.
 Algebraically independent parameters {P(0)}
 Number of possible combinations 9
 Picked the best choice [delta_NE] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {delta_NE}
-Algebraically independent parameters among derivatives: {}
-	Adding ODEs: [diff(delta_NE(t),t) = 0]
-	Adding output functions: [y_faux1(t) = delta_NE(t)]
-	New system: [diff(delta_NE(t),t) = 0, diff(N(t),t) = -delta_NE(t)*N(t)*P(t)-mu_N*N(t), diff(S(t),t) = -mu_LE*S(t)*E(t)+delta_EL*S(t)-S(t)^2*mu_LL-S(t)*delta_LM, diff(M(t),t) = S(t)*delta_LM-M(t)*mu_M, diff(P(t),t) = rho_P*P(t)^2-S(t)*P(t)*mu_PL-E(t)*mu_PE*P(t)-P(t)*mu_P, diff(E(t),t) = -mu_EE*E(t)^2+delta_NE(t)*N(t)*P(t)-delta_EL*E(t)+E(t)*P(t)*rho_E, y1(t) = N(t), y3(t) = M(t), y2(t) = S(t)+E(t), y_faux1(t) = delta_NE(t)]
-
-=== Input info ===
-State variables:          [delta_NE(t), N(t), S(t), M(t), P(t), E(t)]
-Output variables:         [y1(t), y3(t), y2(t), y_faux1(t)]
-Input variables:          []
-Parameters in equations:  [mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, rho_E, rho_P, delta_EL, delta_LM]
-===================
-
-Transcendence basis substitution turned off.
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  322413190600000000
-Random sample for the outputs and inputs is generated from  [mu_EE = 34216843127721944, mu_LE = 280180525182206566, mu_LL = 108413940328598016, mu_M = 300831001760782084, mu_N = 65661902191655904, mu_P = 267799923250965647, mu_PE = 54646418698442802, mu_PL = 126926659690449616, rho_E = 19522636812198381, rho_P = 211262393318543957, delta_EL = 62315425872839857, delta_LM = 311375196025891684, delta_NE_0 = 58788890504861462, N_0 = 134546068844586640, S_0 = 75846295759314993, M_0 = 145200815598497834, P_0 = 78025223797185819, E_0 = 114584691169207643]
-The polynomial system widehat{E^t} contains  58 equations in  50  variables
-Variable ordering to be used for Groebner basis computation [N_6, M_6, delta_NE_5, S_5, P_5, N_5, M_5, E_5, delta_NE_4, S_4, P_4, N_4, M_4, E_4, delta_NE_3, S_3, P_3, N_3, M_3, E_3, delta_NE_2, S_2, P_2, N_2, M_2, E_2, delta_NE_1, S_1, P_1, N_1, M_1, E_1, delta_NE_0, S_0, P_0, N_0, M_0, E_0, z_aux, w_aux, delta_EL, delta_LM, mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, rho_E, rho_P]
-Prep CPU Time (sub_transc=true):	 7.643
-Prep Real Elapsed Time (sub_transc=true):	 6.976
-memory used=0.83GiB, alloc change=102.40MiB, cpu time=7.66s, real time=6.99s, gc time=1.24s
+Prep CPU Time (sub_transc=true):	 4.759
+Prep Real Elapsed Time (sub_transc=true):	 4.325
+memory used=403.49MiB, alloc change=110.99MiB, cpu time=4.80s, real time=4.37s, gc time=1.01s
 
 
-GetPolySystem Usage (real, cpu, memory):	6.994,	7.662,	887898112
+GetPolySystem Usage (real, cpu, memory):	4.367,	4.799,	423085392
 
-States for substitution:	[mu_PL = 2, delta_NE_ = 0, mu_LE = 1, rho_P = 2, mu_M = 1, mu_LL = 1, N_ = 0, E_ = 0, P_ = 1, M_ = 0, S_ = 0, delta_LM = 1, rho_E = 1, mu_EE = 1, delta_EL = 1, mu_P = 2, mu_PE = 2, mu_N = 1]
+States for substitution:	[N_ = 0, S_ = 0, M_ = 0, mu_P = 2, mu_EE = 1, mu_LE = 1, E_ = 0, rho_E = 1, delta_LM = 1, delta_NE = 1, mu_LL = 1, mu_N = 1, rho_P = 2, mu_M = 1, mu_PE = 2, P_ = 1, mu_PL = 2, delta_EL = 1]
 NonID parameters:	[P_0, rho_E, rho_P, delta_NE]
-Substitutions:	[mu_PL = 3, delta_NE_ = 1, N_ = 1, E_ = 1, P_ = 2, M_ = 1, S_ = 1, mu_P = 3, z_aux = 2, mu_PE = 3]
-memory used=0.83GiB, alloc change=102.42MiB, cpu time=7.77s, real time=7.10s, gc time=1.24s
+Substitutions:	[N_ = 1, S_ = 1, M_ = 1, mu_P = 3, E_ = 1, mu_PE = 3, z_aux = 2, P_ = 2, mu_PL = 3]
+memory used=411.00MiB, alloc change=110.99MiB, cpu time=5.11s, real time=4.56s, gc time=1.23s
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {E_0 =
+E_0, E_1 = E_1, E_2 = E_2, E_3 = E_3, E_4 = E_4, E_5 = E_5, M_0 = M_0, M_1 = 
+M_1, M_2 = M_2, M_3 = M_3, M_4 = M_4, M_5 = M_5, M_6 = M_6, N_0 = N_0, N_1 = 
+N_1, N_2 = N_2, N_3 = N_3, N_4 = N_4, N_5 = N_5, N_6 = N_6, P_0 = P_0^2, P_1 =
+P_1^2, P_2 = P_2^2, P_3 = P_3^2, P_4 = P_4^2, P_5 = P_5^2, S_0 = S_0, S_1 = S_1
+, S_2 = S_2, S_3 = S_3, S_4 = S_4, S_5 = S_5, mu_P = mu_P^3, mu_PE = mu_PE^3, 
+mu_PL = mu_PL^3, z_aux = z_aux^2}, [241728910570309413-N_0, 155799640990830871*
+N_0*P_0^2+N_0*mu_N+N_1, 32764018019826595-M_0, M_0*mu_M-S_0*delta_LM+M_1, 
+463170349371273429-S_0-E_0, -E_0*P_0^2*rho_E+E_0^2*mu_EE-155799640990830871*N_0
+*P_0^2+E_0*delta_EL+E_1, E_0*S_0*mu_LE+S_0^2*mu_LL-S_0*delta_EL+S_0*delta_LM+
+S_1, -N_1-723091938536953828406729455700075762094722167095915, (
+155799640990830871*P_0^2+mu_N)*N_1+N_2+155799640990830871*N_0*P_1^2, E_0*P_0^2*
+mu_PE^9+P_0^2*S_0*mu_PL^9-P_0^4*rho_P+P_0^2*mu_P^3+P_1^2, -M_1+
+20358758421962416756496039426450120, M_1*mu_M-S_1*delta_LM+M_2, -E_1-S_1-\
+21881871282189792076331783466558551300101282181002570, (-P_0^2*rho_E+2*E_0*
+mu_EE+delta_EL)*E_1-155799640990830871*N_0*P_1^2-155799640990830871*P_0^2*N_1-
+E_0*P_1^2*rho_E+E_2, S_0*mu_LE*E_1+(E_0*mu_LE+2*S_0*mu_LL-delta_EL+delta_LM)*
+S_1+S_2, -N_2+94276114982622294871584584596517669609454760328968773039864109954\
+36261787948584664673, 155799640990830871*N_0*P_2^2+311599281981661742*N_1*P_1^2
++155799640990830871*N_2*P_0^2+N_2*mu_N+N_3, (E_0*mu_PE^9+S_0*mu_PL^9-2*P_0^2*
+rho_P+mu_P^3)*P_1^2+(E_1*mu_PE^9+S_1*mu_PL^9)*P_0^2+P_2^2, -M_2-\
+591289762286010607645070112020338181391189577665777936155652082533230, M_2*mu_M
+-S_2*delta_LM+M_3, -E_2-S_2+281527749415323348520929424917776587529626384373325\
+0946054051281942618468266865254645154, -155799640990830871*N_0*P_2^2-\
+311599281981661742*N_1*P_1^2-155799640990830871*N_2*P_0^2+(-E_0*P_2^2-2*E_1*P_1
+^2-E_2*P_0^2)*rho_E+(2*E_0*mu_EE+delta_EL)*E_2+2*E_1^2*mu_EE+E_3, (E_0*mu_LE+2*
+S_0*mu_LL-delta_EL+delta_LM)*S_2+(2*E_1*S_1+E_2*S_0)*mu_LE+2*S_1^2*mu_LL+S_3, -
+N_3-129080063647880551746848135454835926051025872683318167271698134486223420022\
+4527648802070077984707838127710621205503939147, 155799640990830871*N_0*P_3^2+
+467398922972492613*N_1*P_2^2+467398922972492613*N_2*P_1^2+155799640990830871*
+N_3*P_0^2+N_3*mu_N+N_4, (E_0*mu_PE^9+S_0*mu_PL^9-2*P_0^2*rho_P+mu_P^3)*P_2^2+(2
+*E_1*P_1^2+E_2*P_0^2)*mu_PE^9+(P_0^2*S_2+2*P_1^2*S_1)*mu_PL^9-2*P_1^4*rho_P+P_3
+^2, -M_3+3162519394660536142481190389276201463426815453692833082251631922830708\
+1642665014109529939247000879258770, M_3*mu_M-S_3*delta_LM+M_4, -E_3-S_3-5773697\
+2082072273343631701805153125492245239755220917301123934359672615695736454089193\
+0463874539093516299628083938866677242, -155799640990830871*N_0*P_3^2-\
+467398922972492613*N_1*P_2^2-467398922972492613*N_2*P_1^2-155799640990830871*
+N_3*P_0^2+(-E_0*P_3^2-3*E_1*P_2^2-3*E_2*P_1^2-E_3*P_0^2)*rho_E+(2*E_0*mu_EE+
+delta_EL)*E_3+6*E_1*E_2*mu_EE+E_4, (E_0*S_3+3*E_1*S_2+3*E_2*S_1+E_3*S_0)*mu_LE+
+(2*S_0*mu_LL-delta_EL+delta_LM)*S_3+6*S_1*S_2*mu_LL+S_4, -N_4+16152418838457514\
+1424571599907117168111728779919042879550215187915876745023096452481221178301294\
+387665991839316748606599132943079051090861970210168760877449, 
+155799640990830871*N_0*P_4^2+623198563963323484*N_1*P_3^2+934797845944985226*
+N_2*P_2^2+623198563963323484*N_3*P_1^2+155799640990830871*N_4*P_0^2+N_4*mu_N+
+N_5, (E_0*P_3^2+3*E_1*P_2^2+3*E_2*P_1^2+E_3*P_0^2)*mu_PE^9+(P_0^2*S_3+3*P_1^2*
+S_2+3*P_2^2*S_1+P_3^2*S_0)*mu_PL^9+(-2*P_0^2*rho_P+mu_P^3)*P_3^2-6*P_1^2*P_2^2*
+rho_P+P_4^2, -M_4-3109673363973605455069168793980088002849223156707019189632338\
+442321213608060588297653387842781643619625673009850960689880761664330865055650,
+M_4*mu_M-S_4*delta_LM+M_5, -E_4-S_4+1631694622036060073607556838733217696949958\
+5406956116992862259981237979976037075286448323479015794522740062502785508370764\
+0828222599690808470688822460308066282, -155799640990830871*N_0*P_4^2-\
+623198563963323484*N_1*P_3^2-934797845944985226*N_2*P_2^2-623198563963323484*
+N_3*P_1^2-155799640990830871*N_4*P_0^2+(-E_0*P_4^2-4*E_1*P_3^2-6*E_2*P_2^2-4*
+E_3*P_1^2-E_4*P_0^2)*rho_E+(2*E_0*E_4+8*E_1*E_3+6*E_2^2)*mu_EE+E_4*delta_EL+E_5
+, (E_0*S_4+4*E_1*S_3+6*E_2*S_2+4*E_3*S_1+E_4*S_0)*mu_LE+(2*S_0*mu_LL-delta_EL+
+delta_LM)*S_4+(8*S_1*S_3+6*S_2^2)*mu_LL+S_5, -N_5-38470717363468234425080721795\
+7797237844852564361499675556948457160035982550804368804396491114474711545363715\
+6829788396060045328986112468224847933536511564744013872983284024729245628604126\
+2707, 155799640990830871*N_0*P_5^2+778998204954154355*N_1*P_4^2+
+1557996409908308710*N_2*P_3^2+1557996409908308710*N_3*P_2^2+778998204954154355*
+N_4*P_1^2+155799640990830871*N_5*P_0^2+N_5*mu_N+N_6, (E_0*P_4^2+4*E_1*P_3^2+6*
+E_2*P_2^2+4*E_3*P_1^2+E_4*P_0^2)*mu_PE^9+(P_0^2*S_4+4*P_1^2*S_3+6*P_2^2*S_2+4*
+P_3^2*S_1+P_4^2*S_0)*mu_PL^9+(-2*P_0^2*rho_P+mu_P^3)*P_4^2+(-8*P_1^2*P_3^2-6*
+P_2^4)*rho_P+P_5^2, -M_5+505621093987734974825457999901677746282990017068208666\
+1995733177873550819283813507857752875710613443206542950357162739409473710045193\
+63293645234591861700915003814451031154570, M_5*mu_M-S_5*delta_LM+M_6, -N_6+1135\
+7584234442679332598183019953802555607421863499714189403183968637823908960223412\
+1487554221893818632866562320229601165799593107385066579766746706963594194756897\
+04549343366334955847894411832803227575758444324825898535614482561, -M_6-1229421\
+3347321633789574179949454819281504562663012510309699750855455113265554002329852\
+9596885707645602152057659199937846107358189553246635499652915353603471258278824\
+250115858737713221422575483425053332359327490, -E_5-S_5-58155733548069887528144\
+5114663739829555701889370385204569606164582785259681455914383353469232370697630\
+4989567751442508759256792841614457539385088334593736170101375000588450211989171\
+5207932520570, z_aux^2-1], [N_6, M_6, S_5, P_5, N_5, M_5, E_5, S_4, P_4, N_4, 
+M_4, E_4, S_3, P_3, N_3, M_3, E_3, S_2, P_2, N_2, M_2, E_2, S_1, P_1, N_1, M_1,
+E_1, S_0, P_0, N_0, M_0, E_0, z_aux, w_aux, delta_EL, delta_LM, delta_NE, mu_EE
+, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, rho_E, rho_P], [delta_NE], [
+241728910570309413-N_0, 155799640990830871*N_0*P_0+N_0*mu_N+N_1, 
+32764018019826595-M_0, M_0*mu_M-S_0*delta_LM+M_1, 463170349371273429-S_0-E_0, 
+E_0^2*mu_EE-E_0*P_0*rho_E+E_0*delta_EL-155799640990830871*N_0*P_0+E_1, E_0*S_0*
+mu_LE+S_0^2*mu_LL-S_0*delta_EL+S_0*delta_LM+S_1, -N_1-\
+723091938536953828406729455700075762094722167095915, (155799640990830871*P_0+
+mu_N)*N_1+N_2+155799640990830871*N_0*P_1, E_0*P_0*mu_PE-P_0^2*rho_P+P_0*S_0*
+mu_PL+P_0*mu_P+P_1, -M_1+20358758421962416756496039426450120, M_1*mu_M-S_1*
+delta_LM+M_2, -E_1-S_1-21881871282189792076331783466558551300101282181002570, (
+2*E_0*mu_EE-P_0*rho_E+delta_EL)*E_1-155799640990830871*N_0*P_1-\
+155799640990830871*P_0*N_1-E_0*P_1*rho_E+E_2, S_0*mu_LE*E_1+(E_0*mu_LE+2*S_0*
+mu_LL-delta_EL+delta_LM)*S_1+S_2, -N_2+9427611498262229487158458459651766960945\
+476032896877303986410995436261787948584664673, 155799640990830871*N_0*P_2+
+311599281981661742*N_1*P_1+155799640990830871*N_2*P_0+N_2*mu_N+N_3, (E_0*mu_PE-\
+2*P_0*rho_P+S_0*mu_PL+mu_P)*P_1+(E_1*mu_PE+S_1*mu_PL)*P_0+P_2, -M_2-\
+591289762286010607645070112020338181391189577665777936155652082533230, M_2*mu_M
+-S_2*delta_LM+M_3, -E_2-S_2+281527749415323348520929424917776587529626384373325\
+0946054051281942618468266865254645154, -155799640990830871*N_0*P_2-\
+311599281981661742*N_1*P_1-155799640990830871*N_2*P_0+(-E_0*P_2-2*E_1*P_1-E_2*
+P_0)*rho_E+(2*E_0*mu_EE+delta_EL)*E_2+2*E_1^2*mu_EE+E_3, (E_0*mu_LE+2*S_0*mu_LL
+-delta_EL+delta_LM)*S_2+(2*E_1*S_1+E_2*S_0)*mu_LE+2*S_1^2*mu_LL+S_3, -N_3-12908\
+0063647880551746848135454835926051025872683318167271698134486223420022452764880\
+2070077984707838127710621205503939147, 155799640990830871*N_0*P_3+
+467398922972492613*N_1*P_2+467398922972492613*N_2*P_1+155799640990830871*N_3*
+P_0+N_3*mu_N+N_4, (E_0*mu_PE-2*P_0*rho_P+S_0*mu_PL+mu_P)*P_2+(2*E_1*P_1+E_2*P_0
+)*mu_PE+(P_0*S_2+2*P_1*S_1)*mu_PL-2*P_1^2*rho_P+P_3, -M_3+316251939466053614248\
+1190389276201463426815453692833082251631922830708164266501410952993924700087925\
+8770, M_3*mu_M-S_3*delta_LM+M_4, -E_3-S_3-5773697208207227334363170180515312549\
+2245239755220917301123934359672615695736454089193046387453909351629962808393886\
+6677242, -155799640990830871*N_0*P_3-467398922972492613*N_1*P_2-\
+467398922972492613*N_2*P_1-155799640990830871*N_3*P_0+(-E_0*P_3-3*E_1*P_2-3*E_2
+*P_1-E_3*P_0)*rho_E+(2*E_0*mu_EE+delta_EL)*E_3+6*E_1*E_2*mu_EE+E_4, (E_0*S_3+3*
+E_1*S_2+3*E_2*S_1+E_3*S_0)*mu_LE+(2*S_0*mu_LL-delta_EL+delta_LM)*S_3+6*S_1*S_2*
+mu_LL+S_4, -N_4+161524188384575141424571599907117168111728779919042879550215187\
+9158767450230964524812211783012943876659918393167486065991329430790510908619702\
+10168760877449, 155799640990830871*N_0*P_4+623198563963323484*N_1*P_3+
+934797845944985226*N_2*P_2+623198563963323484*N_3*P_1+155799640990830871*N_4*
+P_0+N_4*mu_N+N_5, (E_0*P_3+3*E_1*P_2+3*E_2*P_1+E_3*P_0)*mu_PE+(P_0*S_3+3*P_1*
+S_2+3*P_2*S_1+P_3*S_0)*mu_PL+(-2*P_0*rho_P+mu_P)*P_3-6*P_1*P_2*rho_P+P_4, -M_4-\
+3109673363973605455069168793980088002849223156707019189632338442321213608060588\
+297653387842781643619625673009850960689880761664330865055650, M_4*mu_M-S_4*
+delta_LM+M_5, -E_4-S_4+16316946220360600736075568387332176969499585406956116992\
+8622599812379799760370752864483234790157945227400625027855083707640828222599690\
+808470688822460308066282, -155799640990830871*N_0*P_4-623198563963323484*N_1*
+P_3-934797845944985226*N_2*P_2-623198563963323484*N_3*P_1-155799640990830871*
+N_4*P_0+(-E_0*P_4-4*E_1*P_3-6*E_2*P_2-4*E_3*P_1-E_4*P_0)*rho_E+(2*E_0*E_4+8*E_1
+*E_3+6*E_2^2)*mu_EE+E_4*delta_EL+E_5, (E_0*S_4+4*E_1*S_3+6*E_2*S_2+4*E_3*S_1+
+E_4*S_0)*mu_LE+(2*S_0*mu_LL-delta_EL+delta_LM)*S_4+(8*S_1*S_3+6*S_2^2)*mu_LL+
+S_5, -N_5-384707173634682344250807217957797237844852564361499675556948457160035\
+9825508043688043964911144747115453637156829788396060045328986112468224847933536\
+5115647440138729832840247292456286041262707, 155799640990830871*N_0*P_5+
+778998204954154355*N_1*P_4+1557996409908308710*N_2*P_3+1557996409908308710*N_3*
+P_2+778998204954154355*N_4*P_1+155799640990830871*N_5*P_0+N_5*mu_N+N_6, (E_0*
+P_4+4*E_1*P_3+6*E_2*P_2+4*E_3*P_1+E_4*P_0)*mu_PE+(P_0*S_4+4*P_1*S_3+6*P_2*S_2+4
+*P_3*S_1+P_4*S_0)*mu_PL+(-2*P_0*rho_P+mu_P)*P_4+(-8*P_1*P_3-6*P_2^2)*rho_P+P_5,
+-M_5+50562109398773497482545799990167774628299001706820866619957331778735508192\
+8381350785775287571061344320654295035716273940947371004519363293645234591861700\
+915003814451031154570, M_5*mu_M-S_5*delta_LM+M_6, -N_6+113575842344426793325981\
+8301995380255560742186349971418940318396863782390896022341214875542218938186328\
+6656232022960116579959310738506657976674670696359419475689704549343366334955847\
+894411832803227575758444324825898535614482561, -M_6-122942133473216337895741799\
+4945481928150456266301251030969975085545511326555400232985295968857076456021520\
+5765919993784610735818955324663549965291535360347125827882425011585873771322142\
+2575483425053332359327490, -E_5-S_5-5815573354806988752814451146637398295557018\
+8937038520456960616458278525968145591438335346923237069763049895677514425087592\
+567928416144575393850883345937361701013750005884502119891715207932520570, z_aux
+-1]
 
-SubsByDepth Usage (real, cpu, memory):	7.099,	7.766,	896418320
+SubsByDepth Usage (real, cpu, memory):	4.562,	5.108,	430965584
 
 
 =======================================================
@@ -181,9 +309,6 @@ Parameters in equations:  [mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, 
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  134200800
-Orders of prolongations of the outputs (beta) =  [7, 7, 6]
-Orders of prolongations of the state variables (alpha) =  [7, 6, 7, 6, 6]
 
 =======================================================
 3. Assessing local identifiability
@@ -192,31 +317,151 @@ Orders of prolongations of the state variables (alpha) =  [7, 6, 7, 6, 6]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  241809892900000000
-Random sample for the outputs and inputs is generated from  [mu_EE = 51189209792250653, mu_LE = 229992392196347003, mu_LL = 89564896935915592, mu_M = 157610050671745930, mu_N = 27296262964031388, mu_P = 220895817973699577, mu_PE = 237765510017569732, mu_PL = 22215369762585860, rho_E = 150564817825768533, rho_P = 144993962571642582, delta_EL = 88673521329501076, delta_LM = 159685102470988894, delta_NE = 15352217927269259, N_0 = 140587441399339716, S_0 = 204207605073936841, M_0 = 66532006013051675, P_0 = 131140803531132572, E_0 = 135018928796729895]
-The polynomial system widehat{E^t} contains  47 equations in  45  variables
 Locally identifiable paramters:  [mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, delta_EL, delta_LM, N(0), S(0), M(0), E(0)]
 Nonidentifiable parameter:  [P(0), rho_E, rho_P, delta_NE]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  322413190600000000
-Random sample for the outputs and inputs is generated from  [mu_EE = 244044739366605767, mu_LE = 239813953401323612, mu_LL = 236744787003299024, mu_M = 219433273239487264, mu_N = 92617047848667483, mu_P = 215602182620228461, mu_PE = 216111587040318644, mu_PL = 260307577885643799, rho_E = 264282763030040568, rho_P = 175720207464014191, delta_EL = 242132853035152599, delta_LM = 72194637939297535, delta_NE = 85582854494987867, N_0 = 185250664100627328, S_0 = 194043212466000377, M_0 = 74848851714403256, P_0 = 11765798651903559, E_0 = 213596001592172658]
-The polynomial system widehat{E^t} contains  47 equations in  45  variables
-Variable ordering to be used for Groebner basis computation [N_6, M_6, S_5, P_5, N_5, M_5, E_5, S_4, P_4, N_4, M_4, E_4, S_3, P_3, N_3, M_3, E_3, S_2, P_2, N_2, M_2, E_2, S_1, P_1, N_1, M_1, E_1, S_0, P_0, N_0, M_0, E_0, z_aux, w_aux, delta_EL, delta_LM, delta_NE, mu_EE, mu_LE, mu_LL, mu_M, mu_N, mu_P, mu_PE, mu_PL, rho_E, rho_P]
-Prep CPU Time (sub_transc=false):	 2.401
-Prep Real Elapsed Time (sub_transc=false):	 2.101
-memory used=258.77MiB, alloc change=-12.01MiB, cpu time=2.40s, real time=2.10s, gc time=519.08ms
+Prep CPU Time (sub_transc=false):	 2.801
+Prep Real Elapsed Time (sub_transc=false):	 2.515
+memory used=272.62MiB, alloc change=18.16MiB, cpu time=2.81s, real time=2.52s, gc time=590.69ms
 
 
-GetPolySystem Usage (real, cpu, memory):	2.102,	2.402,	271344624
+GetPolySystem Usage (real, cpu, memory):	2.521,	2.806,	285863480
 
-States for substitution:	[mu_PL = 2, delta_NE = 1, mu_LE = 1, rho_P = 2, mu_M = 1, mu_LL = 1, N_ = 0, E_ = 0, P_ = 1, M_ = 0, S_ = 0, delta_LM = 1, rho_E = 1, mu_EE = 1, delta_EL = 1, mu_P = 2, mu_PE = 2, mu_N = 1]
+States for substitution:	[N_ = 0, S_ = 0, M_ = 0, mu_P = 2, mu_EE = 1, mu_LE = 1, E_ = 0, rho_E = 1, delta_LM = 1, delta_NE = 1, mu_LL = 1, mu_N = 1, rho_P = 2, mu_M = 1, mu_PE = 2, P_ = 1, mu_PL = 2, delta_EL = 1]
 NonID parameters:	[P_0, rho_E, rho_P, delta_NE]
-Substitutions:	[mu_PL = 3, N_ = 1, E_ = 1, P_ = 2, M_ = 1, S_ = 1, mu_P = 3, z_aux = 2, mu_PE = 3]
-memory used=265.70MiB, alloc change=-12.01MiB, cpu time=2.47s, real time=2.17s, gc time=519.08ms
+Substitutions:	[N_ = 1, S_ = 1, M_ = 1, mu_P = 3, E_ = 1, mu_PE = 3, z_aux = 2, P_ = 2, mu_PL = 3]
+memory used=279.54MiB, alloc change=18.16MiB, cpu time=2.88s, real time=2.60s, gc time=590.69ms
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {E_0 =
+E_0, E_1 = E_1, E_2 = E_2, E_3 = E_3, E_4 = E_4, E_5 = E_5, M_0 = M_0, M_1 = 
+M_1, M_2 = M_2, M_3 = M_3, M_4 = M_4, M_5 = M_5, M_6 = M_6, N_0 = N_0, N_1 = 
+N_1, N_2 = N_2, N_3 = N_3, N_4 = N_4, N_5 = N_5, N_6 = N_6, P_0 = P_0^2, P_1 =
+P_1^2, P_2 = P_2^2, P_3 = P_3^2, P_4 = P_4^2, P_5 = P_5^2, S_0 = S_0, S_1 = S_1
+, S_2 = S_2, S_3 = S_3, S_4 = S_4, S_5 = S_5, mu_P = mu_P^3, mu_PE = mu_PE^3, 
+mu_PL = mu_PL^3, z_aux = z_aux^2}, [123746751767559801-N_0, N_0*P_0^2*delta_NE+
+N_0*mu_N+N_1, 208950367394957-M_0, M_0*mu_M-S_0*delta_LM+M_1, 
+269063038986407894-S_0-E_0, -E_0*P_0^2*rho_E-N_0*P_0^2*delta_NE+E_0^2*mu_EE+E_0
+*delta_EL+E_1, E_0*S_0*mu_LE+S_0^2*mu_LL-S_0*delta_EL+S_0*delta_LM+S_1, -N_1-\
+2446396323718125303978064126737106559852506738081230, (P_0^2*delta_NE+mu_N)*N_1
++N_2+N_0*delta_NE*P_1^2, E_0*P_0^2*mu_PE^9+P_0^2*S_0*mu_PL^9-P_0^4*rho_P+P_0^2*
+mu_P^3+P_1^2, -M_1+3367111878496019175945673266992572, M_1*mu_M-S_1*delta_LM+
+M_2, -E_1-S_1-4275424728628963985969523447447775841718219301050872, (-P_0^2*
+rho_E+2*E_0*mu_EE+delta_EL)*E_1+(-N_0*P_1^2-N_1*P_0^2)*delta_NE-E_0*P_1^2*rho_E
++E_2, S_0*mu_LE*E_1+(E_0*mu_LE+2*S_0*mu_LL-delta_EL+delta_LM)*S_1+S_2, -N_2+141\
+1726997857217170233802889110806563090170381155794972096205662254752765522317015\
+33400, (N_0*P_2^2+2*N_1*P_1^2+N_2*P_0^2)*delta_NE+N_2*mu_N+N_3, (E_0*mu_PE^9+
+S_0*mu_PL^9-2*P_0^2*rho_P+mu_P^3)*P_1^2+(E_1*mu_PE^9+S_1*mu_PL^9)*P_0^2+P_2^2,
+-M_2-126181583848182597287215728126155022793445394178383661884449054214568, M_2
+*mu_M-S_2*delta_LM+M_3, -E_2-S_2+2226135362264319361433088306117686590858955588\
+99274089883424313148593528484492747556548, (-N_0*P_2^2-2*N_1*P_1^2-N_2*P_0^2)*
+delta_NE+(-E_0*P_2^2-2*E_1*P_1^2-E_2*P_0^2)*rho_E+(2*E_0*mu_EE+delta_EL)*E_2+2*
+E_1^2*mu_EE+E_3, (E_0*mu_LE+2*S_0*mu_LL-delta_EL+delta_LM)*S_2+(2*E_1*S_1+E_2*
+S_0)*mu_LE+2*S_1^2*mu_LL+S_3, -N_3-11516533167731484441607142691553219153023934\
+898786180392990748973062865855074691001884363577950252495125525814401309911500,
+(N_0*P_3^2+3*N_1*P_2^2+3*N_2*P_1^2+N_3*P_0^2)*delta_NE+N_3*mu_N+N_4, (E_0*mu_PE
+^9+S_0*mu_PL^9-2*P_0^2*rho_P+mu_P^3)*P_2^2+(2*E_1*P_1^2+E_2*P_0^2)*mu_PE^9+(P_0
+^2*S_2+2*P_1^2*S_1)*mu_PL^9-2*P_1^4*rho_P+P_3^2, -M_3+8726217066415073398725315\
+989295816821048389784140436412514523033769893757664998052943570341698966710392,
+M_3*mu_M-S_3*delta_LM+M_4, -E_3-S_3-2590726914147674809359695355348443638250666\
+0312685253403149446005411363724240793743187808867140671344352002398986542508644
+, (-N_0*P_3^2-3*N_1*P_2^2-3*N_2*P_1^2-N_3*P_0^2)*delta_NE+(-E_0*P_3^2-3*E_1*P_2
+^2-3*E_2*P_1^2-E_3*P_0^2)*rho_E+(2*E_0*mu_EE+delta_EL)*E_3+6*E_1*E_2*mu_EE+E_4,
+(E_0*S_3+3*E_1*S_2+3*E_2*S_1+E_3*S_0)*mu_LE+(2*S_0*mu_LL-delta_EL+delta_LM)*S_3
++6*S_1*S_2*mu_LL+S_4, -N_4+1253374050432744580863404499510244065131531106898878\
+6525511506993059724332517808630014394470515778449930806119131130774123942779724\
+55949773379213223519094500, (N_0*P_4^2+4*N_1*P_3^2+6*N_2*P_2^2+4*N_3*P_1^2+N_4*
+P_0^2)*delta_NE+N_4*mu_N+N_5, (E_0*P_3^2+3*E_1*P_2^2+3*E_2*P_1^2+E_3*P_0^2)*
+mu_PE^9+(P_0^2*S_3+3*P_1^2*S_2+3*P_2^2*S_1+P_3^2*S_0)*mu_PL^9+(-2*P_0^2*rho_P+
+mu_P^3)*P_3^2-6*P_1^2*P_2^2*rho_P+P_4^2, -M_4-894684536308197207982499147873617\
+8892039991871089289758555377957540013727404711619898415500430505202015582693125\
+68721483856496931519734008, M_4*mu_M-S_4*delta_LM+M_5, -E_4-S_4+413895857273236\
+5210437588310319963961322928301284574938929817674055640412405827015836843204715\
+907837157344699454492589015228284702135236615414537239237225940, (-N_0*P_4^2-4*
+N_1*P_3^2-6*N_2*P_2^2-4*N_3*P_1^2-N_4*P_0^2)*delta_NE+(-E_0*P_4^2-4*E_1*P_3^2-6
+*E_2*P_2^2-4*E_3*P_1^2-E_4*P_0^2)*rho_E+(2*E_0*E_4+8*E_1*E_3+6*E_2^2)*mu_EE+E_4
+*delta_EL+E_5, (E_0*S_4+4*E_1*S_3+6*E_2*S_2+4*E_3*S_1+E_4*S_0)*mu_LE+(2*S_0*
+mu_LL-delta_EL+delta_LM)*S_4+(8*S_1*S_3+6*S_2^2)*mu_LL+S_5, -N_5-17530089946156\
+1378577500596614349275370901428283183291700976665082356873081454392144451511736\
+5986227809183955335201627314670397508426977561149314613928824628724753845832338\
+86468000400047488500, (N_0*P_5^2+5*N_1*P_4^2+10*N_2*P_3^2+10*N_3*P_2^2+5*N_4*
+P_1^2+N_5*P_0^2)*delta_NE+N_5*mu_N+N_6, (E_0*P_4^2+4*E_1*P_3^2+6*E_2*P_2^2+4*
+E_3*P_1^2+E_4*P_0^2)*mu_PE^9+(P_0^2*S_4+4*P_1^2*S_3+6*P_2^2*S_2+4*P_3^2*S_1+P_4
+^2*S_0)*mu_PL^9+(-2*P_0^2*rho_P+mu_P^3)*P_4^2+(-8*P_1^2*P_3^2-6*P_2^4)*rho_P+
+P_5^2, -M_5+1225963993744172649738772390880875951524706572095449320771928214695\
+9525522837467549564648316558187558664949661123310175826488255830808383003591530\
+9999670399246308645678214712, M_5*mu_M-S_5*delta_LM+M_6, -N_6+30461017316125182\
+6169738499733859028138181264945054163474190467141227681036613344644206087407556\
+3738998546539255278552532876355429290076046354483852193449683176299427354475176\
+6584271818184149023574734822096037250559894114814500, -M_6-21072272768053060207\
+9668324316827633347059937486234468698920326676464077370345764424455630280946376\
+8901393487573769837640459038285959889787051099240234769618318744897255257803817\
+6792900263252906403784500148728, -E_5-S_5-7804043134261013226683824341505401196\
+5766539918681878061645801543829767562680694737078830882790803650235695185613659\
+0466803469339421111882504486685210738195167758698333773351388736360507740212, 
+z_aux^2-1], [N_6, M_6, S_5, P_5, N_5, M_5, E_5, S_4, P_4, N_4, M_4, E_4, S_3, 
+P_3, N_3, M_3, E_3, S_2, P_2, N_2, M_2, E_2, S_1, P_1, N_1, M_1, E_1, S_0, P_0,
+N_0, M_0, E_0, z_aux, w_aux, delta_EL, delta_LM, delta_NE, mu_EE, mu_LE, mu_LL,
+mu_M, mu_N, mu_P, mu_PE, mu_PL, rho_E, rho_P], [], [123746751767559801-N_0, N_0
+*P_0*delta_NE+N_0*mu_N+N_1, 208950367394957-M_0, M_0*mu_M-S_0*delta_LM+M_1, 
+269063038986407894-S_0-E_0, E_0^2*mu_EE-E_0*P_0*rho_E-N_0*P_0*delta_NE+E_0*
+delta_EL+E_1, E_0*S_0*mu_LE+S_0^2*mu_LL-S_0*delta_EL+S_0*delta_LM+S_1, -N_1-\
+2446396323718125303978064126737106559852506738081230, (P_0*delta_NE+mu_N)*N_1+
+N_2+N_0*delta_NE*P_1, E_0*P_0*mu_PE-P_0^2*rho_P+P_0*S_0*mu_PL+P_0*mu_P+P_1, -
+M_1+3367111878496019175945673266992572, M_1*mu_M-S_1*delta_LM+M_2, -E_1-S_1-\
+4275424728628963985969523447447775841718219301050872, (2*E_0*mu_EE-P_0*rho_E+
+delta_EL)*E_1+(-N_0*P_1-N_1*P_0)*delta_NE-E_0*P_1*rho_E+E_2, S_0*mu_LE*E_1+(E_0
+*mu_LE+2*S_0*mu_LL-delta_EL+delta_LM)*S_1+S_2, -N_2+141172699785721717023380288\
+911080656309017038115579497209620566225475276552231701533400, (N_0*P_2+2*N_1*
+P_1+N_2*P_0)*delta_NE+N_2*mu_N+N_3, (E_0*mu_PE-2*P_0*rho_P+S_0*mu_PL+mu_P)*P_1+
+(E_1*mu_PE+S_1*mu_PL)*P_0+P_2, -M_2-\
+126181583848182597287215728126155022793445394178383661884449054214568, M_2*mu_M
+-S_2*delta_LM+M_3, -E_2-S_2+222613536226431936143308830611768659085895558899274\
+089883424313148593528484492747556548, (-N_0*P_2-2*N_1*P_1-N_2*P_0)*delta_NE+(-
+E_0*P_2-2*E_1*P_1-E_2*P_0)*rho_E+(2*E_0*mu_EE+delta_EL)*E_2+2*E_1^2*mu_EE+E_3,
+(E_0*mu_LE+2*S_0*mu_LL-delta_EL+delta_LM)*S_2+(2*E_1*S_1+E_2*S_0)*mu_LE+2*S_1^2
+*mu_LL+S_3, -N_3-11516533167731484441607142691553219153023934898786180392990748\
+973062865855074691001884363577950252495125525814401309911500, (N_0*P_3+3*N_1*
+P_2+3*N_2*P_1+N_3*P_0)*delta_NE+N_3*mu_N+N_4, (E_0*mu_PE-2*P_0*rho_P+S_0*mu_PL+
+mu_P)*P_2+(2*E_1*P_1+E_2*P_0)*mu_PE+(P_0*S_2+2*P_1*S_1)*mu_PL-2*P_1^2*rho_P+P_3
+, -M_3+872621706641507339872531598929581682104838978414043641251452303376989375\
+7664998052943570341698966710392, M_3*mu_M-S_3*delta_LM+M_4, -E_3-S_3-2590726914\
+1476748093596953553484436382506660312685253403149446005411363724240793743187808\
+867140671344352002398986542508644, (-N_0*P_3-3*N_1*P_2-3*N_2*P_1-N_3*P_0)*
+delta_NE+(-E_0*P_3-3*E_1*P_2-3*E_2*P_1-E_3*P_0)*rho_E+(2*E_0*mu_EE+delta_EL)*
+E_3+6*E_1*E_2*mu_EE+E_4, (E_0*S_3+3*E_1*S_2+3*E_2*S_1+E_3*S_0)*mu_LE+(2*S_0*
+mu_LL-delta_EL+delta_LM)*S_3+6*S_1*S_2*mu_LL+S_4, -N_4+125337405043274458086340\
+4499510244065131531106898878652551150699305972433251780863001439447051577844993\
+080611913113077412394277972455949773379213223519094500, (N_0*P_4+4*N_1*P_3+6*
+N_2*P_2+4*N_3*P_1+N_4*P_0)*delta_NE+N_4*mu_N+N_5, (E_0*P_3+3*E_1*P_2+3*E_2*P_1+
+E_3*P_0)*mu_PE+(P_0*S_3+3*P_1*S_2+3*P_2*S_1+P_3*S_0)*mu_PL+(-2*P_0*rho_P+mu_P)*
+P_3-6*P_1*P_2*rho_P+P_4, -M_4-8946845363081972079824991478736178892039991871089\
+2897585553779575400137274047116198984155004305052020155826931256872148385649693\
+1519734008, M_4*mu_M-S_4*delta_LM+M_5, -E_4-S_4+4138958572732365210437588310319\
+9639613229283012845749389298176740556404124058270158368432047159078371573446994\
+54492589015228284702135236615414537239237225940, (-N_0*P_4-4*N_1*P_3-6*N_2*P_2-\
+4*N_3*P_1-N_4*P_0)*delta_NE+(-E_0*P_4-4*E_1*P_3-6*E_2*P_2-4*E_3*P_1-E_4*P_0)*
+rho_E+(2*E_0*E_4+8*E_1*E_3+6*E_2^2)*mu_EE+E_4*delta_EL+E_5, (E_0*S_4+4*E_1*S_3+
+6*E_2*S_2+4*E_3*S_1+E_4*S_0)*mu_LE+(2*S_0*mu_LL-delta_EL+delta_LM)*S_4+(8*S_1*
+S_3+6*S_2^2)*mu_LL+S_5, -N_5-17530089946156137857750059661434927537090142828318\
+3291700976665082356873081454392144451511736598622780918395533520162731467039750\
+842697756114931461392882462872475384583233886468000400047488500, (N_0*P_5+5*N_1
+*P_4+10*N_2*P_3+10*N_3*P_2+5*N_4*P_1+N_5*P_0)*delta_NE+N_5*mu_N+N_6, (E_0*P_4+4
+*E_1*P_3+6*E_2*P_2+4*E_3*P_1+E_4*P_0)*mu_PE+(P_0*S_4+4*P_1*S_3+6*P_2*S_2+4*P_3*
+S_1+P_4*S_0)*mu_PL+(-2*P_0*rho_P+mu_P)*P_4+(-8*P_1*P_3-6*P_2^2)*rho_P+P_5, -M_5
++122596399374417264973877239088087595152470657209544932077192821469595255228374\
+6754956464831655818755866494966112331017582648825583080838300359153099996703992\
+46308645678214712, M_5*mu_M-S_5*delta_LM+M_6, -N_6+3046101731612518261697384997\
+3385902813818126494505416347419046714122768103661334464420608740755637389985465\
+3925527855253287635542929007604635448385219344968317629942735447517665842718181\
+84149023574734822096037250559894114814500, -M_6-2107227276805306020796683243168\
+2763334705993748623446869892032667646407737034576442445563028094637689013934875\
+7376983764045903828595988978705109924023476961831874489725525780381767929002632\
+52906403784500148728, -E_5-S_5-780404313426101322668382434150540119657665399186\
+8187806164580154382976756268069473707883088279080365023569518561365904668034693\
+39421111882504486685210738195167758698333773351388736360507740212, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	2.168,	2.468,	278605104
+SubsByDepth Usage (real, cpu, memory):	2.595,	2.881,	293113848
 
-memory used=1141.5MB, alloc=169.8MB, time=10.55
+memory used=713.2MB, alloc=176.5MB, time=8.33

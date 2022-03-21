@@ -12,56 +12,64 @@ Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in SubsByDepth) `out` is implicitly declared local
 |imports/create_substitutions.mpl:53|
 Warning, (in SubsByDepth) `mem` is implicitly declared local
@@ -98,9 +106,6 @@ Parameters in equations:  [b, g, k, n]
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  17820000
-Orders of prolongations of the outputs (beta) =  [8]
-Orders of prolongations of the state variables (alpha) =  [8, 7, 7, 8, 8]
 
 =======================================================
 3. Assessing local identifiability
@@ -109,9 +114,6 @@ Orders of prolongations of the state variables (alpha) =  [8, 7, 7, 8, 8]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  245750018600000000
-Random sample for the outputs and inputs is generated from  [b = 99705281685682590, g = 95099754831532321, k = 41164976275650683, n = 142170488768674858, s_0 = 99544876431473693, e_0 = 14086089809457695, i_0 = 46708805756379591, r_0 = 172600573495103077, c_0 = 25491398301297734]
-The polynomial system widehat{E^t} contains  41 equations in  42  variables
 Locally identifiable paramters:  [g, k, s(0), e(0), i(0)]
 Nonidentifiable parameter:  [b, c(0), n, r(0)]
 
@@ -270,44 +272,126 @@ Collection [r_5, r_6] is not transcendence basis
 Collection [r_5, r_7] is not transcendence basis
 Collection [r_6, r_7] is not transcendence basis
 Picked the best choice [b, r_0] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {b}
-Algebraically independent parameters among derivatives: {r(0)}
-	Adding ODEs: [diff(b(t),t) = 0]
-	Adding output functions: [y_faux1(t) = b(t)]
-	New system: [diff(b(t),t) = 0, diff(s(t),t) = -b(t)*s(t)*i(t)/n, diff(e(t),t) = b(t)*s(t)*i(t)/n-k*e(t), diff(i(t),t) = k*e(t)-g*i(t), diff(r(t),t) = g*i(t), diff(c(t),t) = k*e(t), y1(t) = c(t)+s(t)+r(t), y_faux1(t) = b(t)]
-
-=== Input info ===
-State variables:          [b(t), s(t), e(t), i(t), r(t), c(t)]
-Output variables:         [y1(t), y_faux1(t)]
-Input variables:          []
-Parameters in equations:  [g, k, n]
-===================
-
-	Adding new y-equations: faux_equations
-	Adding new y-equations: [y_faux2_0 = r_0]
-	New system: [y1_0-c_0-s_0-r_0, -e_0*k+c_1, -g*i_0+r_1, b_0*i_0*s_0+n*s_1, y_faux1_0-b_0, b_1, -c_1-r_1-s_1+y1_1, -e_1*k+c_2, -g*i_1+r_2, (b_0*i_1+b_1*i_0)*s_0+b_0*i_0*s_1+n*s_2, -b_0*i_0*s_0+e_0*k*n+e_1*n, -e_0*k+g*i_0+i_1, -c_2-r_2-s_2+y1_2, -e_2*k+c_3, -g*i_2+r_3, (i_0*s_2+2*i_1*s_1+i_2*s_0)*b_0+(2*b_1*s_1+b_2*s_0)*i_0+2*b_1*i_1*s_0+n*s_3, b_2, (-b_0*s_1-b_1*s_0)*i_0-b_0*s_0*i_1+n*(e_1*k+e_2), -e_1*k+g*i_1+i_2, -c_3-r_3-s_3+y1_3, -e_3*k+c_4, -g*i_3+r_4, (i_0*s_3+3*i_1*s_2+3*i_2*s_1+i_3*s_0)*b_0+(3*b_1*s_2+3*b_2*s_1+b_3*s_0)*i_0+(3*b_1*i_2+3*b_2*i_1)*s_0+6*b_1*i_1*s_1+n*s_4, b_3, (-i_0*s_2-2*i_1*s_1-i_2*s_0)*b_0+(-2*b_1*s_1-b_2*s_0)*i_0-2*b_1*i_1*s_0+n*(e_2*k+e_3), -e_2*k+g*i_2+i_3, -c_4-r_4-s_4+y1_4, -e_4*k+c_5, -g*i_4+r_5, (i_0*s_4+4*i_1*s_3+6*i_2*s_2+4*i_3*s_1+i_4*s_0)*b_0+(4*b_1*s_3+6*b_2*s_2+4*b_3*s_1+b_4*s_0)*i_0+(4*b_1*i_3+6*b_2*i_2+4*b_3*i_1)*s_0+(12*i_1*s_2+12*i_2*s_1)*b_1+12*b_2*i_1*s_1+n*s_5, b_4, (-i_0*s_3-3*i_1*s_2-3*i_2*s_1-i_3*s_0)*b_0+(-3*b_1*s_2-3*b_2*s_1-b_3*s_0)*i_0+(-3*b_1*i_2-3*b_2*i_1)*s_0-6*b_1*i_1*s_1+n*(e_3*k+e_4), -e_3*k+g*i_3+i_4, -c_5-r_5-s_5+y1_5, -e_5*k+c_6, -g*i_5+r_6, (i_0*s_5+5*i_1*s_4+10*i_2*s_3+10*i_3*s_2+5*i_4*s_1+i_5*s_0)*b_0+(5*b_1*s_4+10*b_2*s_3+10*b_3*s_2+5*b_4*s_1+b_5*s_0)*i_0+(5*b_1*i_4+10*b_2*i_3+10*b_3*i_2+5*b_4*i_1)*s_0+(20*i_1*s_3+30*i_2*s_2+20*i_3*s_1)*b_1+(30*b_2*s_2+20*b_3*s_1)*i_1+30*b_2*i_2*s_1+n*s_6, b_5, (-i_0*s_4-4*i_1*s_3-6*i_2*s_2-4*i_3*s_1-i_4*s_0)*b_0+(-4*b_1*s_3-6*b_2*s_2-4*b_3*s_1-b_4*s_0)*i_0+(-4*b_1*i_3-6*b_2*i_2-4*b_3*i_1)*s_0+(-12*i_1*s_2-12*i_2*s_1)*b_1-12*b_2*i_1*s_1+n*(e_4*k+e_5), -e_4*k+g*i_4+i_5, -c_6-r_6-s_6+y1_6, -e_6*k+c_7, -g*i_6+r_7, (i_0*s_6+6*i_1*s_5+15*i_2*s_4+20*i_3*s_3+15*i_4*s_2+6*i_5*s_1+i_6*s_0)*b_0+(6*b_1*s_5+15*b_2*s_4+20*b_3*s_3+15*b_4*s_2+6*b_5*s_1+b_6*s_0)*i_0+(6*b_1*i_5+15*b_2*i_4+20*b_3*i_3+15*b_4*i_2+6*b_5*i_1)*s_0+(30*i_1*s_4+60*i_2*s_3+60*i_3*s_2+30*i_4*s_1)*b_1+(60*b_2*s_3+60*b_3*s_2+30*b_4*s_1)*i_1+(60*b_2*i_3+60*b_3*i_2)*s_1+90*b_2*i_2*s_2+n*s_7, b_6, (-i_0*s_5-5*i_1*s_4-10*i_2*s_3-10*i_3*s_2-5*i_4*s_1-i_5*s_0)*b_0+(-5*b_1*s_4-10*b_2*s_3-10*b_3*s_2-5*b_4*s_1-b_5*s_0)*i_0+(-5*b_1*i_4-10*b_2*i_3-10*b_3*i_2-5*b_4*i_1)*s_0+(-20*i_1*s_3-30*i_2*s_2-20*i_3*s_1)*b_1+(-30*b_2*s_2-20*b_3*s_1)*i_1-30*b_2*i_2*s_1+n*(e_5*k+e_6), -e_5*k+g*i_5+i_6, -c_7-r_7-s_7+y1_7, -b_1+y_faux1_1, -b_2+y_faux1_2, -b_3+y_faux1_3, -b_4+y_faux1_4, -b_5+y_faux1_5, -b_6+y_faux1_6, y_faux2_0-r_0]
-	New system: [y1_0 = c_0+s_0+r_0, y1_1 = c_1+r_1+s_1, y1_2 = c_2+r_2+s_2, y1_3 = c_3+r_3+s_3, y1_4 = c_4+r_4+s_4, y1_5 = c_5+r_5+s_5, y1_6 = c_6+r_6+s_6, y1_7 = c_7+r_7+s_7, y1_8 = c_8+r_8+s_8, y1_9 = c_9+r_9+s_9, y1_10 = c_10+r_10+s_10, y_faux1_0 = b_0, y_faux1_1 = b_1, y_faux1_2 = b_2, y_faux1_3 = b_3, y_faux1_4 = b_4, y_faux1_5 = b_5, y_faux1_6 = b_6, y_faux1_7 = b_7, y_faux1_8 = b_8, y_faux1_9 = b_9, y_faux1_10 = b_10, y_faux2_0 = r_0]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  327666691400000000
-Random sample for the outputs and inputs is generated from  [g = 240287589033124869, k = 227336604676683817, n = 228528533123048043, b_0 = 96534943567769122, s_0 = 270495770302485823, e_0 = 161496284658588975, i_0 = 309953987199004745, r_0 = 117123144779943624, c_0 = 297053735948023266]
-The polynomial system widehat{E^t} contains  55 equations in  48  variables
-Variable ordering to be used for Groebner basis computation [s_7, r_7, c_7, s_6, r_6, i_6, e_6, c_6, b_6, s_5, r_5, i_5, e_5, c_5, b_5, s_4, r_4, i_4, e_4, c_4, b_4, s_3, r_3, i_3, e_3, c_3, b_3, s_2, r_2, i_2, e_2, c_2, b_2, s_1, r_1, i_1, e_1, c_1, b_1, s_0, r_0, i_0, e_0, c_0, b_0, z_aux, w_aux, g, k, n]
-Prep CPU Time (sub_transc=true):	 12.133
-Prep Real Elapsed Time (sub_transc=true):	 11.705
-memory used=1.22GiB, alloc change=44.01MiB, cpu time=12.16s, real time=11.73s, gc time=1.15s
+Prep CPU Time (sub_transc=true):	 10.390
+Prep Real Elapsed Time (sub_transc=true):	 10.016
+memory used=0.92GiB, alloc change=36.00MiB, cpu time=10.42s, real time=10.04s, gc time=1.21s
 
 
-GetPolySystem Usage (real, cpu, memory):	11.727,	12.155,	1306299808
+GetPolySystem Usage (real, cpu, memory):	10.041,	10.415,	992376168
 
-States for substitution:	[s_ = 0, i_ = 1, c_ = 0, e_ = 1, b_ = 0, r_ = 0, n = 1, g = 1, k = 1]
+States for substitution:	[e_ = 1, b = 1, n = 1, g = 1, k = 1, r_ = 0, s_ = 0, i_ = 1, c_ = 0]
 NonID parameters:	[b, c_0, n, r_0]
-Substitutions:	[s_ = 1, i_ = 2, e_ = 2, z_aux = 1, b_ = 1, g = 2, k = 2]
-memory used=1.22GiB, alloc change=44.01MiB, cpu time=12.17s, real time=11.74s, gc time=1.15s
+Substitutions:	[e_ = 2, z_aux = 1, g = 2, k = 2, s_ = 1, i_ = 2]
+memory used=0.93GiB, alloc change=36.00MiB, cpu time=10.43s, real time=10.06s, gc time=1.21s
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {e_0 =
+e_0^2, e_1 = e_1^2, e_2 = e_2^2, e_3 = e_3^2, e_4 = e_4^2, e_5 = e_5^2, e_6 = 
+e_6^2, g = g^2, i_0 = i_0^2, i_1 = i_1^2, i_2 = i_2^2, i_3 = i_3^2, i_4 = i_4^2
+, i_5 = i_5^2, i_6 = i_6^2, k = k^2, s_0 = s_0, s_1 = s_1, s_2 = s_2, s_3 = s_3
+, s_4 = s_4, s_5 = s_5, s_6 = s_6, s_7 = s_7, z_aux = z_aux}, [
+95692505355410555-c_0-s_0, -e_0^2*k^2+c_1, -g^2*i_0^2+r_1, 291231221729091799*
+i_0^2*s_0+n*s_1, -c_1-r_1-s_1-\
+1326941554277775877143199419892603568366909193014596/5240655586891171, -e_1^2*k
+^2+c_2, -g^2*i_1^2+r_2, 291231221729091799*i_0^2*s_1+291231221729091799*i_1^2*
+s_0+n*s_2, e_0^2*k^2*n+e_1^2*n-291231221729091799*i_0^2*s_0, -e_0^2*k^2+g^2*i_0
+^2+i_1^2, -c_2-r_2-s_2+55867115827202593961700494133409854338032136353029872969\
+107270693637634925552295994189/109857883921654575821026391004964, -e_2^2*k^2+
+c_3, -g^2*i_2^2+r_3, 291231221729091799*i_0^2*s_2+582462443458183598*i_1^2*s_1+
+291231221729091799*i_2^2*s_0+n*s_3, n*(e_1^2*k^2+e_2^2)-291231221729091799*i_0^
+2*s_1-291231221729091799*i_1^2*s_0, -e_1^2*k^2+g^2*i_1^2+i_2^2, -c_3-r_3-s_3-54\
+8686866789805599490673736326979990089295181690626808587818615798039352680359689\
+737061673494729300792682813732592143437/
+575727333138060799411267322262584650227188772844, -e_3^2*k^2+c_4, -g^2*i_3^2+
+r_4, 291231221729091799*i_0^2*s_3+873693665187275397*i_1^2*s_2+
+873693665187275397*i_2^2*s_1+291231221729091799*i_3^2*s_0+n*s_4, -\
+291231221729091799*i_0^2*s_2-582462443458183598*i_1^2*s_1-291231221729091799*
+i_2^2*s_0+n*(e_2^2*k^2+e_3^2), -e_2^2*k^2+g^2*i_2^2+i_3^2, -c_4-r_4-s_4+1342705\
+1154866063396543381483670647015931905295773815183303258925509572703837140871647\
+979890638257486488707096052820564350657380360085748490464577943747549/
+6034377329871865481684524768853629833718085673618015504936320648, -e_4^2*k^2+
+c_5, -g^2*i_4^2+r_5, 291231221729091799*i_0^2*s_4+1164924886916367196*i_1^2*s_3
++1747387330374550794*i_2^2*s_2+1164924886916367196*i_3^2*s_1+291231221729091799
+*i_4^2*s_0+n*s_5, -291231221729091799*i_0^2*s_3-873693665187275397*i_1^2*s_2-\
+873693665187275397*i_2^2*s_1-291231221729091799*i_3^2*s_0+n*(e_3^2*k^2+e_4^2),
+-e_3^2*k^2+g^2*i_3^2+i_4^2, -c_5-r_5-s_5-10376250413645337472090386646003121594\
+8472891268280440823657403714191512454479025399450269432755841591435109900586227\
+642671811332447826275528432692583825919607005613521943766749390382729897/158120\
+46633601209290134912826413206813617497493608602957011489936888972768099404, -
+e_5^2*k^2+c_6, -g^2*i_5^2+r_6, 291231221729091799*i_0^2*s_5+1456156108645458995
+*i_1^2*s_4+2912312217290917990*i_2^2*s_3+2912312217290917990*i_3^2*s_2+
+1456156108645458995*i_4^2*s_1+291231221729091799*i_5^2*s_0+n*s_6, -\
+291231221729091799*i_0^2*s_4-1164924886916367196*i_1^2*s_3-1747387330374550794*
+i_2^2*s_2-1164924886916367196*i_3^2*s_1-291231221729091799*i_4^2*s_0+n*(e_4^2*k
+^2+e_5^2), -e_4^2*k^2+g^2*i_4^2+i_5^2, -c_6-r_6-s_6+152357284026224613031110136\
+8930452091813980385036800173961146412531002745920607069823678414988717923797503\
+1433797785808220846114788446598210683285623580713194925902981615508307818015729\
+988629436914065122699616271708461763721/662923924244527281385709191053313928243\
+082264292153945945560439277942952779914455412725263696672, -e_6^2*k^2+c_7, -g^2
+*i_6^2+r_7, 291231221729091799*i_0^2*s_6+1747387330374550794*i_1^2*s_5+
+4368468325936376985*i_2^2*s_4+5824624434581835980*i_3^2*s_3+4368468325936376985
+*i_4^2*s_2+1747387330374550794*i_5^2*s_1+291231221729091799*i_6^2*s_0+n*s_7, -\
+291231221729091799*i_0^2*s_5-1456156108645458995*i_1^2*s_4-2912312217290917990*
+i_2^2*s_3-2912312217290917990*i_3^2*s_2-1456156108645458995*i_4^2*s_1-\
+291231221729091799*i_5^2*s_0+n*(e_5^2*k^2+e_6^2), -e_5^2*k^2+g^2*i_5^2+i_6^2, -
+c_7-r_7-s_7-3178784347318231642732580350951064330230435241851463625317087609663\
+2588710235524456895069254547384751467314851017751384381579556308733141650184722\
+6364095312826390436521126735983335947045608287375650315096469720058657105524678\
+981866883091905049983702902294079/347415596727590130361633031454487470735888506\
+0966520777343046492164816584307156618532675733819900912383618882912, n*z_aux-1]
+, [s_7, r_7, c_7, s_6, r_6, i_6, e_6, c_6, s_5, r_5, i_5, e_5, c_5, s_4, r_4, 
+i_4, e_4, c_4, s_3, r_3, i_3, e_3, c_3, s_2, r_2, i_2, e_2, c_2, s_1, r_1, i_1,
+e_1, c_1, s_0, i_0, e_0, c_0, z_aux, w_aux, b, g, k, n], [b, r_0], [
+95692505355410555-c_0-s_0, -e_0*k+c_1, -g*i_0+r_1, 291231221729091799*i_0*s_0+n
+*s_1, -c_1-r_1-s_1-1326941554277775877143199419892603568366909193014596/
+5240655586891171, -e_1*k+c_2, -g*i_1+r_2, 291231221729091799*i_0*s_1+
+291231221729091799*i_1*s_0+n*s_2, e_0*k*n+e_1*n-291231221729091799*i_0*s_0, -
+e_0*k+g*i_0+i_1, -c_2-r_2-s_2+5586711582720259396170049413340985433803213635302\
+9872969107270693637634925552295994189/109857883921654575821026391004964, -e_2*k
++c_3, -g*i_2+r_3, 291231221729091799*i_0*s_2+582462443458183598*i_1*s_1+
+291231221729091799*i_2*s_0+n*s_3, n*(e_1*k+e_2)-291231221729091799*i_0*s_1-\
+291231221729091799*i_1*s_0, -e_1*k+g*i_1+i_2, -c_3-r_3-s_3-54868686678980559949\
+0673736326979990089295181690626808587818615798039352680359689737061673494729300\
+792682813732592143437/575727333138060799411267322262584650227188772844, -e_3*k+
+c_4, -g*i_3+r_4, 291231221729091799*i_0*s_3+873693665187275397*i_1*s_2+
+873693665187275397*i_2*s_1+291231221729091799*i_3*s_0+n*s_4, -\
+291231221729091799*i_0*s_2-582462443458183598*i_1*s_1-291231221729091799*i_2*
+s_0+n*(e_2*k+e_3), -e_2*k+g*i_2+i_3, -c_4-r_4-s_4+13427051154866063396543381483\
+6706470159319052957738151833032589255095727038371408716479798906382574864887070\
+96052820564350657380360085748490464577943747549/
+6034377329871865481684524768853629833718085673618015504936320648, -e_4*k+c_5, -
+g*i_4+r_5, 291231221729091799*i_0*s_4+1164924886916367196*i_1*s_3+
+1747387330374550794*i_2*s_2+1164924886916367196*i_3*s_1+291231221729091799*i_4*
+s_0+n*s_5, -291231221729091799*i_0*s_3-873693665187275397*i_1*s_2-\
+873693665187275397*i_2*s_1-291231221729091799*i_3*s_0+n*(e_3*k+e_4), -e_3*k+g*
+i_3+i_4, -c_5-r_5-s_5-103762504136453374720903866460031215948472891268280440823\
+6574037141915124544790253994502694327558415914351099005862276426718113324478262\
+75528432692583825919607005613521943766749390382729897/1581204663360120929013491\
+2826413206813617497493608602957011489936888972768099404, -e_5*k+c_6, -g*i_5+r_6
+, 291231221729091799*i_0*s_5+1456156108645458995*i_1*s_4+2912312217290917990*
+i_2*s_3+2912312217290917990*i_3*s_2+1456156108645458995*i_4*s_1+
+291231221729091799*i_5*s_0+n*s_6, -291231221729091799*i_0*s_4-\
+1164924886916367196*i_1*s_3-1747387330374550794*i_2*s_2-1164924886916367196*i_3
+*s_1-291231221729091799*i_4*s_0+n*(e_4*k+e_5), -e_4*k+g*i_4+i_5, -c_6-r_6-s_6+
+1523572840262246130311101368930452091813980385036800173961146412531002745920607\
+0698236784149887179237975031433797785808220846114788446598210683285623580713194\
+925902981615508307818015729988629436914065122699616271708461763721/662923924244\
+5272813857091910533139282430822642921539459455604392779429527799144554127252636\
+96672, -e_6*k+c_7, -g*i_6+r_7, 291231221729091799*i_0*s_6+1747387330374550794*
+i_1*s_5+4368468325936376985*i_2*s_4+5824624434581835980*i_3*s_3+
+4368468325936376985*i_4*s_2+1747387330374550794*i_5*s_1+291231221729091799*i_6*
+s_0+n*s_7, -291231221729091799*i_0*s_5-1456156108645458995*i_1*s_4-\
+2912312217290917990*i_2*s_3-2912312217290917990*i_3*s_2-1456156108645458995*i_4
+*s_1-291231221729091799*i_5*s_0+n*(e_5*k+e_6), -e_5*k+g*i_5+i_6, -c_7-r_7-s_7-\
+3178784347318231642732580350951064330230435241851463625317087609663258871023552\
+4456895069254547384751467314851017751384381579556308733141650184722636409531282\
+6390436521126735983335947045608287375650315096469720058657105524678981866883091\
+905049983702902294079/347415596727590130361633031454487470735888506096652077734\
+3046492164816584307156618532675733819900912383618882912, n*z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	11.745,	12.173,	1308140584
+SubsByDepth Usage (real, cpu, memory):	10.060,	10.433,	994036528
 
 
 =======================================================
@@ -329,9 +413,6 @@ Parameters in equations:  [b, g, k, n]
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  17820000
-Orders of prolongations of the outputs (beta) =  [8]
-Orders of prolongations of the state variables (alpha) =  [8, 7, 7, 8, 8]
 
 =======================================================
 3. Assessing local identifiability
@@ -340,31 +421,103 @@ Orders of prolongations of the state variables (alpha) =  [8, 7, 7, 8, 8]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  245750018600000000
-Random sample for the outputs and inputs is generated from  [b = 72353056037469202, g = 226382927812511811, k = 181748228329088200, n = 237219718707050126, s_0 = 105721456317588700, e_0 = 1533898543192971, i_0 = 19820916471385690, r_0 = 12715611452493695, c_0 = 62376273393455660]
-The polynomial system widehat{E^t} contains  41 equations in  42  variables
 Locally identifiable paramters:  [g, k, s(0), e(0), i(0)]
 Nonidentifiable parameter:  [b, c(0), n, r(0)]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  327666691400000000
-Random sample for the outputs and inputs is generated from  [b = 92022561981212685, g = 236750872555199473, k = 100805599357395553, n = 165167903798534814, s_0 = 317422202151080650, e_0 = 108836871815607092, i_0 = 213252948016873353, r_0 = 30916526845246610, c_0 = 296784699923039791]
-The polynomial system widehat{E^t} contains  41 equations in  42  variables
-Variable ordering to be used for Groebner basis computation [s_7, r_7, c_7, s_6, r_6, i_6, e_6, c_6, s_5, r_5, i_5, e_5, c_5, s_4, r_4, i_4, e_4, c_4, s_3, r_3, i_3, e_3, c_3, s_2, r_2, i_2, e_2, c_2, s_1, r_1, i_1, e_1, c_1, s_0, r_0, i_0, e_0, c_0, z_aux, w_aux, b, g, k, n]
-Prep CPU Time (sub_transc=false):	 1.419
-Prep Real Elapsed Time (sub_transc=false):	 1.303
-memory used=152.40MiB, alloc change=-4.00MiB, cpu time=1.42s, real time=1.30s, gc time=241.05ms
+Prep CPU Time (sub_transc=false):	 1.375
+Prep Real Elapsed Time (sub_transc=false):	 1.288
+memory used=156.92MiB, alloc change=8.00MiB, cpu time=1.38s, real time=1.29s, gc time=196.58ms
 
 
-GetPolySystem Usage (real, cpu, memory):	1.304,	1.419,	159808032
+GetPolySystem Usage (real, cpu, memory):	1.289,	1.376,	164542264
 
-States for substitution:	[s_ = 0, i_ = 1, b = 1, c_ = 0, e_ = 1, r_ = 0, n = 1, g = 1, k = 1]
+States for substitution:	[e_ = 1, b = 1, n = 1, g = 1, k = 1, r_ = 0, s_ = 0, i_ = 1, c_ = 0]
 NonID parameters:	[b, c_0, n, r_0]
-Substitutions:	[s_ = 1, i_ = 2, e_ = 2, z_aux = 1, g = 2, k = 2]
-memory used=153.97MiB, alloc change=-4.00MiB, cpu time=1.44s, real time=1.32s, gc time=241.05ms
+Substitutions:	[e_ = 2, z_aux = 1, g = 2, k = 2, s_ = 1, i_ = 2]
+memory used=158.38MiB, alloc change=8.00MiB, cpu time=1.39s, real time=1.30s, gc time=196.58ms
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {e_0 =
+e_0^2, e_1 = e_1^2, e_2 = e_2^2, e_3 = e_3^2, e_4 = e_4^2, e_5 = e_5^2, e_6 = 
+e_6^2, g = g^2, i_0 = i_0^2, i_1 = i_1^2, i_2 = i_2^2, i_3 = i_3^2, i_4 = i_4^2
+, i_5 = i_5^2, i_6 = i_6^2, k = k^2, s_0 = s_0, s_1 = s_1, s_2 = s_2, s_3 = s_3
+, s_4 = s_4, s_5 = s_5, s_6 = s_6, s_7 = s_7, z_aux = z_aux}, [
+227749109340035664-c_0-s_0-r_0, -e_0^2*k^2+c_1, -g^2*i_0^2+r_1, b*i_0^2*s_0+n*
+s_1, -c_1-r_1-s_1+197135361233159950611894740689814336472299134667859/
+14030762281677083, -e_1^2*k^2+c_2, -g^2*i_1^2+r_2, b*i_0^2*s_1+b*i_1^2*s_0+n*
+s_2, e_0^2*k^2*n-b*i_0^2*s_0+e_1^2*n, -e_0^2*k^2+g^2*i_0^2+i_1^2, -c_2-r_2-s_2+
+6750101645364686824482528628055720164020989750301928689288035993598590709374338\
+39685/196862290204932304196471087388889, -e_2^2*k^2+c_3, -g^2*i_2^2+r_3, (i_0^2
+*s_2+2*i_1^2*s_1+i_2^2*s_0)*b+n*s_3, n*(e_1^2*k^2+e_2^2)-b*(i_0^2*s_1+i_1^2*s_0
+), -e_1^2*k^2+g^2*i_1^2+i_2^2, -c_3-r_3-s_3-38436501964670534781206553187976330\
+7404099773855048861947550722741107402093273486623118990280577167663553626931842\
+3409/2762127996091932043917090725565337792958340130787, -e_3^2*k^2+c_4, -g^2*
+i_3^2+r_4, (i_0^2*s_3+3*i_1^2*s_2+3*i_2^2*s_1+i_3^2*s_0)*b+n*s_4, (-i_0^2*s_2-2
+*i_1^2*s_1-i_2^2*s_0)*b+n*(e_2^2*k^2+e_3^2), -e_2^2*k^2+g^2*i_2^2+i_3^2, -c_4-
+r_4-s_4+19699432551776510107858967798024901660860263038222891535616521290404645\
+9211882222101200194132263398218743520567055455965700780634591853416469785950633\
+69/38754761304730985440185065667608579446201621720284458255920654321, -e_4^2*k^
+2+c_5, -g^2*i_4^2+r_5, (i_0^2*s_4+4*i_1^2*s_3+6*i_2^2*s_2+4*i_3^2*s_1+i_4^2*s_0
+)*b+n*s_5, (-i_0^2*s_3-3*i_1^2*s_2-3*i_2^2*s_1-i_3^2*s_0)*b+n*(e_3^2*k^2+e_4^2)
+, -e_3^2*k^2+g^2*i_3^2+i_4^2, -c_5-r_5-s_5-125263856570982279792215710456388212\
+5455868596271997927050645214678107558150806585896512897015016099260758742328108\
+93296151447992023195314008562664465846178042236919562790732196879864569/5437588\
+43149818047414599970843387364783179002551170042126925923425219990590625643, -
+e_5^2*k^2+c_6, -g^2*i_5^2+r_6, (i_0^2*s_5+5*i_1^2*s_4+10*i_2^2*s_3+10*i_3^2*s_2
++5*i_4^2*s_1+i_5^2*s_0)*b+n*s_6, (-i_0^2*s_4-4*i_1^2*s_3-6*i_2^2*s_2-4*i_3^2*
+s_1-i_4^2*s_0)*b+n*(e_4^2*k^2+e_5^2), -e_4^2*k^2+g^2*i_4^2+i_5^2, -c_6-r_6-s_6+
+9675755866933487289242278916862033209601040889797577893152720278080307071632073\
+7864694542354528614041766016073667882914980356924175887198845405460329964757446\
+6218530668167257036433875258131342956102238189989350911932889/76293510667948321\
+6047424709261071878813036893937564858807600712650909635311664341088484426523936\
+9, -e_6^2*k^2+c_7, -g^2*i_6^2+r_7, (i_0^2*s_6+6*i_1^2*s_5+15*i_2^2*s_4+20*i_3^2
+*s_3+15*i_4^2*s_2+6*i_5^2*s_1+i_6^2*s_0)*b+n*s_7, (-i_0^2*s_5-5*i_1^2*s_4-10*
+i_2^2*s_3-10*i_3^2*s_2-5*i_4^2*s_1-i_5^2*s_0)*b+n*(e_5^2*k^2+e_6^2), -e_5^2*k^2
++g^2*i_5^2+i_6^2, -c_7-r_7-s_7-856096094299103614560423129001450174042485751246\
+5568877708339540518356926402334904988142045336737945255586830792757521837820312\
+0074180861711940155673722417195654213035424861732993242820451037254222710732965\
+67533537610239485429109570059111442552868685537/1070456111816577465512664505225\
+8677163300375433442950049206702942467129144794181564882753402185184101108175668\
+0627, n*z_aux-1], [s_7, r_7, c_7, s_6, r_6, i_6, e_6, c_6, s_5, r_5, i_5, e_5,
+c_5, s_4, r_4, i_4, e_4, c_4, s_3, r_3, i_3, e_3, c_3, s_2, r_2, i_2, e_2, c_2,
+s_1, r_1, i_1, e_1, c_1, s_0, r_0, i_0, e_0, c_0, z_aux, w_aux, b, g, k, n], []
+, [227749109340035664-c_0-s_0-r_0, -e_0*k+c_1, -g*i_0+r_1, b*i_0*s_0+n*s_1, -
+c_1-r_1-s_1+197135361233159950611894740689814336472299134667859/
+14030762281677083, -e_1*k+c_2, -g*i_1+r_2, b*i_0*s_1+b*i_1*s_0+n*s_2, -b*i_0*
+s_0+e_0*k*n+e_1*n, -e_0*k+g*i_0+i_1, -c_2-r_2-s_2+67501016453646868244825286280\
+5572016402098975030192868928803599359859070937433839685/
+196862290204932304196471087388889, -e_2*k+c_3, -g*i_2+r_3, (i_0*s_2+2*i_1*s_1+
+i_2*s_0)*b+n*s_3, n*(e_1*k+e_2)-b*(i_0*s_1+i_1*s_0), -e_1*k+g*i_1+i_2, -c_3-r_3
+-s_3-38436501964670534781206553187976330740409977385504886194755072274110740209\
+32734866231189902805771676635536269318423409/
+2762127996091932043917090725565337792958340130787, -e_3*k+c_4, -g*i_3+r_4, (i_0
+*s_3+3*i_1*s_2+3*i_2*s_1+i_3*s_0)*b+n*s_4, (-i_0*s_2-2*i_1*s_1-i_2*s_0)*b+n*(
+e_2*k+e_3), -e_2*k+g*i_2+i_3, -c_4-r_4-s_4+196994325517765101078589677980249016\
+6086026303822289153561652129040464592118822221012001941322633982187435205670554\
+5596570078063459185341646978595063369/
+38754761304730985440185065667608579446201621720284458255920654321, -e_4*k+c_5,
+-g*i_4+r_5, (i_0*s_4+4*i_1*s_3+6*i_2*s_2+4*i_3*s_1+i_4*s_0)*b+n*s_5, (-i_0*s_3-\
+3*i_1*s_2-3*i_2*s_1-i_3*s_0)*b+n*(e_3*k+e_4), -e_3*k+g*i_3+i_4, -c_5-r_5-s_5-12\
+5263856570982279792215710456388212545586859627199792705064521467810755815080658\
+5896512897015016099260758742328108932961514479920231953140085626644658461780422\
+36919562790732196879864569/5437588431498180474145999708433873647831790025511700\
+42126925923425219990590625643, -e_5*k+c_6, -g*i_5+r_6, (i_0*s_5+5*i_1*s_4+10*
+i_2*s_3+10*i_3*s_2+5*i_4*s_1+i_5*s_0)*b+n*s_6, (-i_0*s_4-4*i_1*s_3-6*i_2*s_2-4*
+i_3*s_1-i_4*s_0)*b+n*(e_4*k+e_5), -e_4*k+g*i_4+i_5, -c_6-r_6-s_6+96757558669334\
+8728924227891686203320960104088979757789315272027808030707163207378646945423545\
+2861404176601607366788291498035692417588719884540546032996475744662185306681672\
+57036433875258131342956102238189989350911932889/7629351066794832160474247092610\
+718788130368939375648588076007126509096353116643410884844265239369, -e_6*k+c_7,
+-g*i_6+r_7, (i_0*s_6+6*i_1*s_5+15*i_2*s_4+20*i_3*s_3+15*i_4*s_2+6*i_5*s_1+i_6*
+s_0)*b+n*s_7, (-i_0*s_5-5*i_1*s_4-10*i_2*s_3-10*i_3*s_2-5*i_4*s_1-i_5*s_0)*b+n*
+(e_5*k+e_6), -e_5*k+g*i_5+i_6, -c_7-r_7-s_7-85609609429910361456042312900145017\
+4042485751246556887770833954051835692640233490498814204533673794525558683079275\
+7521837820312007418086171194015567372241719565421303542486173299324282045103725\
+422271073296567533537610239485429109570059111442552868685537/107045611181657746\
+5512664505225867716330037543344295004920670294246712914479418156488275340218518\
+41011081756680627, n*z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	1.320,	1.436,	161444648
+SubsByDepth Usage (real, cpu, memory):	1.305,	1.392,	166072552
 
-memory used=1405.6MB, alloc=80.3MB, time=13.77
+memory used=1111.7MB, alloc=84.3MB, time=12.04

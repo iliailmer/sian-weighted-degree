@@ -11,56 +11,64 @@ Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in SubsByDepth) `out` is implicitly declared local
 |imports/create_substitutions.mpl:53|
 Warning, (in SubsByDepth) `mem` is implicitly declared local
@@ -107,9 +115,6 @@ Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT,
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  1056369600
-Orders of prolongations of the outputs (beta) =  [12, 11, 4, 28, 10]
-Orders of prolongations of the state variables (alpha) =  [10, 10, 11, 12, 9, 10, 4, 11]
 
 =======================================================
 3. Assessing local identifiability
@@ -118,9 +123,6 @@ Orders of prolongations of the state variables (alpha) =  [10, 10, 11, 12, 9, 10
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  114896309900000000000000000000000
-Random sample for the outputs and inputs is generated from  [Ninv = 27623315915349581156412104913992, alphaHT = 111001209670983839305702654145661, alphaTD = 59683855825934435835503572921371, betaH = 39107866631355621990411686860193, betaIa = 12186422777896893128680572178716, betaIs = 105499178592949400765687953989380, betaT = 42697013349002338100219230099599, xi = 49231041092822560511376629938049, alphaEIa = 80175288053464485938412613568148, alphaEIs = 15842049425019805192343714385721, alphaHRd = 56995490641887285689784406299129, alphaIaIs = 100579171575507018882217305276521, alphaIaRu = 61245621961408372078378414467443, alphaIsD = 108514974501912084554857203756239, alphaIsH = 1725126321559637821127720362484, alphaIsRu = 106021568472521553232050420225888, alphaIsT = 6395881237136391078780809334365, alphaTRd = 62735864926323884020779415863892, E_0 = 31551294977879351662653084171072, H_0 = 23221074935213498703539573749187, Is_0 = 38466530836999394594419358260156, D_0 = 23595579771514440525430232077786, S_0 = 95995035102461942086403830437443, Ia_0 = 44278315246291005438240338086878, Rd_0 = 54158886186838248671513340825094, T_0 = 64655751612481618224057948157516]
-The polynomial system widehat{E^t} contains  134 equations in  95  variables
 Locally identifiable paramters:  [Ninv, alphaHT, alphaTD, betaH, betaT, alphaHRd, alphaTRd, H(0), D(0), Rd(0), T(0)]
 Nonidentifiable parameter:  [E(0), Ia(0), Is(0), S(0), betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
 
@@ -129,99 +131,717 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {E(0), Ia(0)}
 Number of possible combinations 1275
-Collection [E_0, S_2] is not transcendence basis
-Collection [E_1, S_3] is not transcendence basis
+Collection [E_0, S_6] is not transcendence basis
+Collection [E_0, S_8] is not transcendence basis
 Collection [E_2, E_1] is not transcendence basis
-Collection [E_2, S_4] is not transcendence basis
-Collection [E_3, E_1] is not transcendence basis
-Collection [E_4, E_0] is not transcendence basis
-Collection [E_4, E_7] is not transcendence basis
-Collection [E_4, E_8] is not transcendence basis
-Collection [E_5, S_6] is not transcendence basis
-Collection [E_6, E_0] is not transcendence basis
-Collection [E_6, E_2] is not transcendence basis
-Collection [E_6, S_3] is not transcendence basis
-Collection [E_7, E_6] is not transcendence basis
-Collection [E_8, E_2] is not transcendence basis
-Collection [E_8, S_5] is not transcendence basis
-Collection [E_9, E_2] is not transcendence basis
-Collection [Ia_0, Ia_3] is not transcendence basis
-Collection [Ia_3, Ia_1] is not transcendence basis
-Collection [Ia_5, Ia_1] is not transcendence basis
-Collection [Ia_5, Ia_7] is not transcendence basis
-Collection [Ia_5, betaIa] is not transcendence basis
-Collection [Ia_8, Ia_7] is not transcendence basis
-Collection [Ia_9, Ia_4] is not transcendence basis
-Collection [Is_0, alphaIsD] is not transcendence basis
-Collection [Is_1, Is_9] is not transcendence basis
-Collection [Is_2, Is_1] is not transcendence basis
-Collection [Is_2, Is_6] is not transcendence basis
-Collection [Is_4, Is_3] is not transcendence basis
-Collection [Is_5, Is_8] is not transcendence basis
-Collection [Is_6, Is_5] is not transcendence basis
-Collection [Is_7, Is_8] is not transcendence basis
-Collection [Is_8, alphaIsH] is not transcendence basis
-Collection [Is_9, Is_0] is not transcendence basis
-Collection [S_0, E_2] is not transcendence basis
-Collection [S_1, S_5] is not transcendence basis
-Collection [S_2, E_6] is not transcendence basis
-Collection [S_2, S_5] is not transcendence basis
-Collection [S_2, S_7] is not transcendence basis
-Collection [S_3, E_3] is not transcendence basis
-Collection [S_3, E_7] is not transcendence basis
-Collection [S_3, S_6] is not transcendence basis
-Collection [S_4, E_6] is not transcendence basis
-Collection [S_4, S_2] is not transcendence basis
-Collection [S_4, S_3] is not transcendence basis
-Collection [S_5, E_6] is not transcendence basis
-Collection [S_6, E_9] is not transcendence basis
-Collection [S_6, S_0] is not transcendence basis
-Collection [S_7, E_1] is not transcendence basis
-Collection [S_7, E_2] is not transcendence basis
-Collection [S_7, E_5] is not transcendence basis
-Collection [S_8, E_4] is not transcendence basis
+Collection [E_2, E_9] is not transcendence basis
+Collection [E_3, E_4] is not transcendence basis
+Collection [E_3, E_5] is not transcendence basis
+Collection [E_3, S_0] is not transcendence basis
+Collection [E_4, S_1] is not transcendence basis
+Collection [E_5, S_7] is not transcendence basis
+Collection [E_6, S_1] is not transcendence basis
+Collection [E_6, S_6] is not transcendence basis
+Collection [E_6, S_7] is not transcendence basis
+Collection [E_6, S_8] is not transcendence basis
+Collection [E_7, E_2] is not transcendence basis
+Collection [E_7, S_5] is not transcendence basis
+Collection [E_7, S_8] is not transcendence basis
+Collection [E_9, E_5] is not transcendence basis
+Collection [E_9, E_8] is not transcendence basis
+Collection [Ia_1, Ia_0] is not transcendence basis
+Collection [Ia_2, Ia_9] is not transcendence basis
+Collection [Ia_3, Ia_5] is not transcendence basis
+Collection [Ia_3, Ia_8] is not transcendence basis
+Collection [Ia_4, Ia_5] is not transcendence basis
+Collection [Ia_5, Ia_4] is not transcendence basis
+Collection [Ia_8, Ia_1] is not transcendence basis
+Collection [Ia_8, Ia_9] is not transcendence basis
+Collection [Ia_9, Ia_2] is not transcendence basis
+Collection [Is_0, Is_8] is not transcendence basis
+Collection [Is_0, Is_9] is not transcendence basis
+Collection [Is_1, Is_10] is not transcendence basis
+Collection [Is_1, alphaIsRu] is not transcendence basis
+Collection [Is_10, alphaIsRu] is not transcendence basis
+Collection [Is_2, Is_0] is not transcendence basis
+Collection [Is_3, Is_10] is not transcendence basis
+Collection [Is_4, Is_1] is not transcendence basis
+Collection [Is_4, betaIs] is not transcendence basis
+Collection [Is_5, Is_1] is not transcendence basis
+Collection [Is_5, betaIs] is not transcendence basis
+Collection [Is_6, Is_0] is not transcendence basis
+Collection [Is_6, Is_10] is not transcendence basis
+Collection [Is_6, alphaIsD] is not transcendence basis
+Collection [Is_7, Is_0] is not transcendence basis
+Collection [Is_7, Is_1] is not transcendence basis
+Collection [Is_7, alphaIsT] is not transcendence basis
+Collection [Is_8, Is_2] is not transcendence basis
+Collection [Is_9, Is_2] is not transcendence basis
+Collection [Is_9, Is_4] is not transcendence basis
+Collection [Is_9, Is_7] is not transcendence basis
+Collection [S_0, E_4] is not transcendence basis
+Collection [S_0, S_6] is not transcendence basis
+Collection [S_1, E_5] is not transcendence basis
+Collection [S_1, E_9] is not transcendence basis
+Collection [S_4, E_1] is not transcendence basis
+Collection [S_4, E_7] is not transcendence basis
+Collection [S_4, S_0] is not transcendence basis
+Collection [S_5, E_7] is not transcendence basis
+Collection [S_6, S_2] is not transcendence basis
+Collection [S_6, S_4] is not transcendence basis
+Collection [S_7, E_8] is not transcendence basis
+Collection [S_8, S_7] is not transcendence basis
+Collection [betaIs, alphaIsD] is not transcendence basis
+Collection [alphaEIs, alphaIaIs] is not transcendence basis
 Collection [alphaIaIs, alphaEIs] is not transcendence basis
-Collection [alphaIsT, Is_1] is not transcendence basis
-Collection [alphaIsT, alphaIsD] is not transcendence basis
-Picked the best choice [S_2, betaIs] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {betaIs}
-Algebraically independent parameters among derivatives: {S_2}
-	Adding ODEs: [diff(betaIs(t),t) = 0]
-	Adding output functions: [y_faux1(t) = betaIs(t)]
-	New system: [diff(betaIs(t),t) = 0, diff(E(t),t) = -alphaEIs*E(t)+betaIa*Ia(t)*S(t)*Ninv+Is(t)*S(t)*Ninv*betaIs(t)+betaT*S(t)*Ninv*T(t)+S(t)*Ninv*betaH*H(t)-E(t)*alphaEIa, diff(H(t),t) = -alphaHT*H(t)+Ia(t)*xi+Is(t)*alphaIsH-alphaHRd*H(t), diff(Is(t),t) = alphaEIs*E(t)+Ia(t)*alphaIaIs-Is(t)*alphaIsT-Is(t)*alphaIsD-Is(t)*alphaIsH-Is(t)*alphaIsRu, diff(D(t),t) = Is(t)*alphaIsD+T(t)*alphaTD, diff(S(t),t) = -betaIa*Ia(t)*S(t)*Ninv-Is(t)*S(t)*Ninv*betaIs(t)-betaT*S(t)*Ninv*T(t)-S(t)*Ninv*betaH*H(t), diff(Ia(t),t) = -Ia(t)*alphaIaRu-Ia(t)*xi-Ia(t)*alphaIaIs+E(t)*alphaEIa, diff(Rd(t),t) = alphaTRd*T(t)+alphaHRd*H(t), diff(T(t),t) = alphaHT*H(t)+Is(t)*alphaIsT-alphaTRd*T(t)-T(t)*alphaTD, y4(t) = D(t), y2(t) = T(t), y3(t) = Rd(t), y5(t) = Ninv, y1(t) = H(t), y_faux1(t) = betaIs(t)]
-
-=== Input info ===
-State variables:          [betaIs(t), E(t), H(t), Is(t), D(t), S(t), Ia(t), Rd(t), T(t)]
-Output variables:         [y4(t), y2(t), y3(t), y5(t), y1(t), y_faux1(t)]
-Input variables:          []
-Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaT, xi, alphaEIa, alphaEIs, alphaHRd, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTRd]
-===================
-
-	Adding new y-equations: faux_equations
-	Adding new y-equations: [y_faux2_0 = S_2]
-	New system: [y4_0-D_0, -Is_0*alphaIsD-T_0*alphaTD+D_1, y2_0-T_0, -H_0*alphaHT-Is_0*alphaIsT+T_0*alphaTD+T_0*alphaTRd+T_1, y3_0-Rd_0, -H_0*alphaHRd-T_0*alphaTRd+Rd_1, y5_0-Ninv, y1_0-H_0, H_0*alphaHT+H_0*alphaHRd-Ia_0*xi-Is_0*alphaIsH+H_1, y_faux1_0-betaIs_0, betaIs_1, -D_1+y4_1, -Is_1*alphaIsD-T_1*alphaTD+D_2, -E_0*alphaEIs-Ia_0*alphaIaIs+Is_0*alphaIsD+Is_0*alphaIsH+Is_0*alphaIsRu+Is_0*alphaIsT+Is_1, -T_1+y2_1, -alphaHT*H_1-alphaIsT*Is_1+(alphaTD+alphaTRd)*T_1+T_2, -Rd_1+y3_1, -H_1*alphaHRd-T_1*alphaTRd+Rd_2, -H_1+y1_1, (alphaHT+alphaHRd)*H_1+H_2-xi*Ia_1-alphaIsH*Is_1, -E_0*alphaEIa+Ia_0*xi+Ia_0*alphaIaIs+Ia_0*alphaIaRu+Ia_1, -D_2+y4_2, -Is_2*alphaIsD-T_2*alphaTD+D_3, -alphaEIs*E_1-alphaIaIs*Ia_1+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_1+Is_2, -H_0*Ninv*S_0*betaH-Ia_0*Ninv*S_0*betaIa-Is_0*Ninv*S_0*betaIs_0-Ninv*S_0*T_0*betaT+E_0*alphaEIa+E_0*alphaEIs+E_1, -T_2+y2_2, -alphaHT*H_2-alphaIsT*Is_2+(alphaTD+alphaTRd)*T_2+T_3, -Rd_2+y3_2, -H_2*alphaHRd-T_2*alphaTRd+Rd_3, -H_2+y1_2, (alphaHT+alphaHRd)*H_2+H_3-xi*Ia_2-alphaIsH*Is_2, -alphaEIa*E_1+(xi+alphaIaIs+alphaIaRu)*Ia_1+Ia_2, -D_3+y4_3, -Is_3*alphaIsD-T_3*alphaTD+D_4, -alphaEIs*E_2-alphaIaIs*Ia_2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_2+Is_3, ((-H_1*betaH-Ia_1*betaIa-Is_0*betaIs_1-Is_1*betaIs_0-T_1*betaT)*S_0-S_1*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+(alphaEIa+alphaEIs)*E_1+E_2, H_0*Ninv*S_0*betaH+Ia_0*Ninv*S_0*betaIa+Is_0*Ninv*S_0*betaIs_0+Ninv*S_0*T_0*betaT+S_1, -T_3+y2_3, -alphaHT*H_3-alphaIsT*Is_3+(alphaTD+alphaTRd)*T_3+T_4, -H_3+y1_3, (alphaHT+alphaHRd)*H_3+H_4-xi*Ia_3-alphaIsH*Is_3, -alphaEIa*E_2+(xi+alphaIaIs+alphaIaRu)*Ia_2+Ia_3, -D_4+y4_4, -Is_4*alphaIsD-T_4*alphaTD+D_5, -alphaEIs*E_3-alphaIaIs*Ia_3+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_3+Is_4, ((-H_2*betaH-Ia_2*betaIa-Is_0*betaIs_2-2*Is_1*betaIs_1-Is_2*betaIs_0-T_2*betaT)*S_0+(-2*H_1*betaH-2*Ia_1*betaIa-2*Is_0*betaIs_1-2*Is_1*betaIs_0-2*T_1*betaT)*S_1-S_2*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+(alphaEIa+alphaEIs)*E_2+E_3, ((H_1*betaH+Ia_1*betaIa+Is_0*betaIs_1+Is_1*betaIs_0+T_1*betaT)*S_0+S_1*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+S_2, betaIs_2, -H_4+y1_4, (alphaHT+alphaHRd)*H_4+H_5-xi*Ia_4-alphaIsH*Is_4, -alphaEIa*E_3+(xi+alphaIaIs+alphaIaRu)*Ia_3+Ia_4, -D_5+y4_5, -Is_5*alphaIsD-T_5*alphaTD+D_6, -alphaEIs*E_4-alphaIaIs*Ia_4+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_4+Is_5, -alphaHT*H_4-alphaIsT*Is_4+(alphaTD+alphaTRd)*T_4+T_5, ((-H_3*betaH-Ia_3*betaIa-Is_0*betaIs_3-3*Is_1*betaIs_2-3*Is_2*betaIs_1-Is_3*betaIs_0-T_3*betaT)*S_0+(-3*H_2*betaH-3*Ia_2*betaIa-3*Is_0*betaIs_2-6*Is_1*betaIs_1-3*Is_2*betaIs_0-3*T_2*betaT)*S_1+(-3*H_1*betaH-3*Ia_1*betaIa-3*Is_0*betaIs_1-3*Is_1*betaIs_0-3*T_1*betaT)*S_2-S_3*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+(alphaEIa+alphaEIs)*E_3+E_4, ((H_2*betaH+Ia_2*betaIa+Is_0*betaIs_2+2*Is_1*betaIs_1+Is_2*betaIs_0+T_2*betaT)*S_0+(2*H_1*betaH+2*Ia_1*betaIa+2*Is_0*betaIs_1+2*Is_1*betaIs_0+2*T_1*betaT)*S_1+S_2*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+S_3, betaIs_3, -D_6+y4_6, -Is_6*alphaIsD-T_6*alphaTD+D_7, -alphaEIs*E_5-alphaIaIs*Ia_5+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_5+Is_6, -alphaHT*H_5-alphaIsT*Is_5+(alphaTD+alphaTRd)*T_5+T_6, ((-H_4*betaH-Ia_4*betaIa-Is_0*betaIs_4-4*Is_1*betaIs_3-6*Is_2*betaIs_2-4*Is_3*betaIs_1-Is_4*betaIs_0-T_4*betaT)*S_0+(-4*H_3*betaH-4*Ia_3*betaIa-4*Is_0*betaIs_3-12*Is_1*betaIs_2-12*Is_2*betaIs_1-4*Is_3*betaIs_0-4*T_3*betaT)*S_1+(-6*H_2*betaH-6*Ia_2*betaIa-6*Is_0*betaIs_2-12*Is_1*betaIs_1-6*Is_2*betaIs_0-6*T_2*betaT)*S_2+(-Is_0*S_4-4*Is_1*S_3)*betaIs_0+(-Ia_0*S_4-4*Ia_1*S_3)*betaIa+(-H_0*S_4-4*H_1*S_3)*betaH+(-4*S_3*T_1-S_4*T_0)*betaT-4*Is_0*S_3*betaIs_1)*Ninv+(alphaEIa+alphaEIs)*E_4+E_5, -alphaEIa*E_4+(xi+alphaIaIs+alphaIaRu)*Ia_4+Ia_5, ((H_3*betaH+Ia_3*betaIa+Is_0*betaIs_3+3*Is_1*betaIs_2+3*Is_2*betaIs_1+Is_3*betaIs_0+T_3*betaT)*S_0+(3*H_2*betaH+3*Ia_2*betaIa+3*Is_0*betaIs_2+6*Is_1*betaIs_1+3*Is_2*betaIs_0+3*T_2*betaT)*S_1+(3*H_1*betaH+3*Ia_1*betaIa+3*Is_0*betaIs_1+3*Is_1*betaIs_0+3*T_1*betaT)*S_2+S_3*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs_0+T_0*betaT))*Ninv+S_4, betaIs_4, -D_7+y4_7, -Is_7*alphaIsD-T_7*alphaTD+D_8, -alphaEIs*E_6-alphaIaIs*Ia_6+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_6+Is_7, -alphaHT*H_6-alphaIsT*Is_6+(alphaTD+alphaTRd)*T_6+T_7, ((-H_5*betaH-Ia_5*betaIa-Is_0*betaIs_5-5*Is_1*betaIs_4-10*Is_2*betaIs_3-10*Is_3*betaIs_2-5*Is_4*betaIs_1-Is_5*betaIs_0-T_5*betaT)*S_0+(-5*H_4*betaH-5*Ia_4*betaIa-5*Is_0*betaIs_4-20*Is_1*betaIs_3-30*Is_2*betaIs_2-20*Is_3*betaIs_1-5*Is_4*betaIs_0-5*T_4*betaT)*S_1+(-10*H_3*betaH-10*Ia_3*betaIa-10*Is_0*betaIs_3-30*Is_1*betaIs_2-30*Is_2*betaIs_1-10*Is_3*betaIs_0-10*T_3*betaT)*S_2+(-Is_0*S_5-5*Is_1*S_4-10*Is_2*S_3)*betaIs_0+(-Ia_0*S_5-5*Ia_1*S_4-10*Ia_2*S_3)*betaIa+(-H_0*S_5-5*H_1*S_4-10*H_2*S_3)*betaH+(-10*S_3*T_2-5*S_4*T_1-S_5*T_0)*betaT+(-10*S_3*betaIs_2-5*S_4*betaIs_1)*Is_0-20*Is_1*S_3*betaIs_1)*Ninv+(alphaEIa+alphaEIs)*E_5+E_6, (alphaHT+alphaHRd)*H_5+H_6-xi*Ia_5-alphaIsH*Is_5, -alphaEIa*E_5+(xi+alphaIaIs+alphaIaRu)*Ia_5+Ia_6, ((H_4*betaH+Ia_4*betaIa+Is_0*betaIs_4+4*Is_1*betaIs_3+6*Is_2*betaIs_2+4*Is_3*betaIs_1+Is_4*betaIs_0+T_4*betaT)*S_0+(4*H_3*betaH+4*Ia_3*betaIa+4*Is_0*betaIs_3+12*Is_1*betaIs_2+12*Is_2*betaIs_1+4*Is_3*betaIs_0+4*T_3*betaT)*S_1+(6*H_2*betaH+6*Ia_2*betaIa+6*Is_0*betaIs_2+12*Is_1*betaIs_1+6*Is_2*betaIs_0+6*T_2*betaT)*S_2+(Is_0*S_4+4*Is_1*S_3)*betaIs_0+(Ia_0*S_4+4*Ia_1*S_3)*betaIa+(H_0*S_4+4*H_1*S_3)*betaH+(4*S_3*T_1+S_4*T_0)*betaT+4*Is_0*S_3*betaIs_1)*Ninv+S_5, betaIs_5, -D_8+y4_8, -Is_8*alphaIsD-T_8*alphaTD+D_9, -alphaEIs*E_7-alphaIaIs*Ia_7+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_7+Is_8, -alphaHT*H_7-alphaIsT*Is_7+(alphaTD+alphaTRd)*T_7+T_8, ((-H_6*betaH-Ia_6*betaIa-Is_0*betaIs_6-6*Is_1*betaIs_5-15*Is_2*betaIs_4-20*Is_3*betaIs_3-15*Is_4*betaIs_2-6*Is_5*betaIs_1-Is_6*betaIs_0-T_6*betaT)*S_0+(-6*H_5*betaH-6*Ia_5*betaIa-6*Is_0*betaIs_5-30*Is_1*betaIs_4-60*Is_2*betaIs_3-60*Is_3*betaIs_2-30*Is_4*betaIs_1-6*Is_5*betaIs_0-6*T_5*betaT)*S_1+(-15*H_4*betaH-15*Ia_4*betaIa-15*Is_0*betaIs_4-60*Is_1*betaIs_3-90*Is_2*betaIs_2-60*Is_3*betaIs_1-15*Is_4*betaIs_0-15*T_4*betaT)*S_2+(-Is_0*S_6-6*Is_1*S_5-15*Is_2*S_4-20*Is_3*S_3)*betaIs_0+(-Ia_0*S_6-6*Ia_1*S_5-15*Ia_2*S_4-20*Ia_3*S_3)*betaIa+(-H_0*S_6-6*H_1*S_5-15*H_2*S_4-20*H_3*S_3)*betaH+(-20*S_3*T_3-15*S_4*T_2-6*S_5*T_1-S_6*T_0)*betaT+(-20*S_3*betaIs_3-15*S_4*betaIs_2-6*S_5*betaIs_1)*Is_0+(-60*Is_1*betaIs_2-60*Is_2*betaIs_1)*S_3-30*Is_1*S_4*betaIs_1)*Ninv+(alphaEIa+alphaEIs)*E_6+E_7, (alphaHT+alphaHRd)*H_6+H_7-xi*Ia_6-alphaIsH*Is_6, -alphaEIa*E_6+(xi+alphaIaIs+alphaIaRu)*Ia_6+Ia_7, ((H_5*betaH+Ia_5*betaIa+Is_0*betaIs_5+5*Is_1*betaIs_4+10*Is_2*betaIs_3+10*Is_3*betaIs_2+5*Is_4*betaIs_1+Is_5*betaIs_0+T_5*betaT)*S_0+(5*H_4*betaH+5*Ia_4*betaIa+5*Is_0*betaIs_4+20*Is_1*betaIs_3+30*Is_2*betaIs_2+20*Is_3*betaIs_1+5*Is_4*betaIs_0+5*T_4*betaT)*S_1+(10*H_3*betaH+10*Ia_3*betaIa+10*Is_0*betaIs_3+30*Is_1*betaIs_2+30*Is_2*betaIs_1+10*Is_3*betaIs_0+10*T_3*betaT)*S_2+(Is_0*S_5+5*Is_1*S_4+10*Is_2*S_3)*betaIs_0+(Ia_0*S_5+5*Ia_1*S_4+10*Ia_2*S_3)*betaIa+(H_0*S_5+5*H_1*S_4+10*H_2*S_3)*betaH+(10*S_3*T_2+5*S_4*T_1+S_5*T_0)*betaT+(10*S_3*betaIs_2+5*S_4*betaIs_1)*Is_0+20*Is_1*S_3*betaIs_1)*Ninv+S_6, betaIs_6, -D_9+y4_9, -Is_9*alphaIsD-T_9*alphaTD+D_10, -alphaEIs*E_8-alphaIaIs*Ia_8+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_8+Is_9, -alphaHT*H_8-alphaIsT*Is_8+(alphaTD+alphaTRd)*T_8+T_9, ((-H_7*betaH-Ia_7*betaIa-Is_0*betaIs_7-7*Is_1*betaIs_6-21*Is_2*betaIs_5-35*Is_3*betaIs_4-35*Is_4*betaIs_3-21*Is_5*betaIs_2-7*Is_6*betaIs_1-Is_7*betaIs_0-T_7*betaT)*S_0+(-7*H_6*betaH-7*Ia_6*betaIa-7*Is_0*betaIs_6-42*Is_1*betaIs_5-105*Is_2*betaIs_4-140*Is_3*betaIs_3-105*Is_4*betaIs_2-42*Is_5*betaIs_1-7*Is_6*betaIs_0-7*T_6*betaT)*S_1+(-21*H_5*betaH-21*Ia_5*betaIa-21*Is_0*betaIs_5-105*Is_1*betaIs_4-210*Is_2*betaIs_3-210*Is_3*betaIs_2-105*Is_4*betaIs_1-21*Is_5*betaIs_0-21*T_5*betaT)*S_2+(-Is_0*S_7-7*Is_1*S_6-21*Is_2*S_5-35*Is_3*S_4-35*Is_4*S_3)*betaIs_0+(-Ia_0*S_7-7*Ia_1*S_6-21*Ia_2*S_5-35*Ia_3*S_4-35*Ia_4*S_3)*betaIa+(-H_0*S_7-7*H_1*S_6-21*H_2*S_5-35*H_3*S_4-35*H_4*S_3)*betaH+(-35*S_3*T_4-35*S_4*T_3-21*S_5*T_2-7*S_6*T_1-S_7*T_0)*betaT+(-35*S_3*betaIs_4-35*S_4*betaIs_3-21*S_5*betaIs_2-7*S_6*betaIs_1)*Is_0+(-140*Is_1*betaIs_3-210*Is_2*betaIs_2-140*Is_3*betaIs_1)*S_3+(-42*Is_1*S_5-105*Is_2*S_4)*betaIs_1-105*Is_1*S_4*betaIs_2)*Ninv+(alphaEIa+alphaEIs)*E_7+E_8, (alphaHT+alphaHRd)*H_7+H_8-xi*Ia_7-alphaIsH*Is_7, -alphaEIa*E_7+(xi+alphaIaIs+alphaIaRu)*Ia_7+Ia_8, ((H_6*betaH+Ia_6*betaIa+Is_0*betaIs_6+6*Is_1*betaIs_5+15*Is_2*betaIs_4+20*Is_3*betaIs_3+15*Is_4*betaIs_2+6*Is_5*betaIs_1+Is_6*betaIs_0+T_6*betaT)*S_0+(6*H_5*betaH+6*Ia_5*betaIa+6*Is_0*betaIs_5+30*Is_1*betaIs_4+60*Is_2*betaIs_3+60*Is_3*betaIs_2+30*Is_4*betaIs_1+6*Is_5*betaIs_0+6*T_5*betaT)*S_1+(15*H_4*betaH+15*Ia_4*betaIa+15*Is_0*betaIs_4+60*Is_1*betaIs_3+90*Is_2*betaIs_2+60*Is_3*betaIs_1+15*Is_4*betaIs_0+15*T_4*betaT)*S_2+(Is_0*S_6+6*Is_1*S_5+15*Is_2*S_4+20*Is_3*S_3)*betaIs_0+(Ia_0*S_6+6*Ia_1*S_5+15*Ia_2*S_4+20*Ia_3*S_3)*betaIa+(H_0*S_6+6*H_1*S_5+15*H_2*S_4+20*H_3*S_3)*betaH+(20*S_3*T_3+15*S_4*T_2+6*S_5*T_1+S_6*T_0)*betaT+(20*S_3*betaIs_3+15*S_4*betaIs_2+6*S_5*betaIs_1)*Is_0+(60*Is_1*betaIs_2+60*Is_2*betaIs_1)*S_3+30*Is_1*S_4*betaIs_1)*Ninv+S_7, betaIs_7, -D_10+y4_10, -Is_10*alphaIsD-T_10*alphaTD+D_11, -alphaEIs*E_9-alphaIaIs*Ia_9+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_9+Is_10, -alphaHT*H_9-alphaIsT*Is_9+(alphaTD+alphaTRd)*T_9+T_10, ((-H_8*betaH-Ia_8*betaIa-Is_0*betaIs_8-8*Is_1*betaIs_7-28*Is_2*betaIs_6-56*Is_3*betaIs_5-70*Is_4*betaIs_4-56*Is_5*betaIs_3-28*Is_6*betaIs_2-8*Is_7*betaIs_1-Is_8*betaIs_0-T_8*betaT)*S_0+(-8*H_7*betaH-8*Ia_7*betaIa-8*Is_0*betaIs_7-56*Is_1*betaIs_6-168*Is_2*betaIs_5-280*Is_3*betaIs_4-280*Is_4*betaIs_3-168*Is_5*betaIs_2-56*Is_6*betaIs_1-8*Is_7*betaIs_0-8*T_7*betaT)*S_1+(-28*H_6*betaH-28*Ia_6*betaIa-28*Is_0*betaIs_6-168*Is_1*betaIs_5-420*Is_2*betaIs_4-560*Is_3*betaIs_3-420*Is_4*betaIs_2-168*Is_5*betaIs_1-28*Is_6*betaIs_0-28*T_6*betaT)*S_2+(-Is_0*S_8-8*Is_1*S_7-28*Is_2*S_6-56*Is_3*S_5-70*Is_4*S_4-56*Is_5*S_3)*betaIs_0+(-Ia_0*S_8-8*Ia_1*S_7-28*Ia_2*S_6-56*Ia_3*S_5-70*Ia_4*S_4-56*Ia_5*S_3)*betaIa+(-H_0*S_8-8*H_1*S_7-28*H_2*S_6-56*H_3*S_5-70*H_4*S_4-56*H_5*S_3)*betaH+(-56*S_3*T_5-70*S_4*T_4-56*S_5*T_3-28*S_6*T_2-8*S_7*T_1-S_8*T_0)*betaT+(-56*S_3*betaIs_5-70*S_4*betaIs_4-56*S_5*betaIs_3-28*S_6*betaIs_2-8*S_7*betaIs_1)*Is_0+(-280*Is_1*betaIs_4-560*Is_2*betaIs_3-560*Is_3*betaIs_2-280*Is_4*betaIs_1)*S_3+(-56*Is_1*S_6-168*Is_2*S_5-280*Is_3*S_4)*betaIs_1+(-280*S_4*betaIs_3-168*S_5*betaIs_2)*Is_1-420*Is_2*S_4*betaIs_2)*Ninv+(alphaEIa+alphaEIs)*E_8+E_9, (alphaHT+alphaHRd)*H_8+H_9-xi*Ia_8-alphaIsH*Is_8, -alphaEIa*E_8+(xi+alphaIaIs+alphaIaRu)*Ia_8+Ia_9, ((H_7*betaH+Ia_7*betaIa+Is_0*betaIs_7+7*Is_1*betaIs_6+21*Is_2*betaIs_5+35*Is_3*betaIs_4+35*Is_4*betaIs_3+21*Is_5*betaIs_2+7*Is_6*betaIs_1+Is_7*betaIs_0+T_7*betaT)*S_0+(7*H_6*betaH+7*Ia_6*betaIa+7*Is_0*betaIs_6+42*Is_1*betaIs_5+105*Is_2*betaIs_4+140*Is_3*betaIs_3+105*Is_4*betaIs_2+42*Is_5*betaIs_1+7*Is_6*betaIs_0+7*T_6*betaT)*S_1+(21*H_5*betaH+21*Ia_5*betaIa+21*Is_0*betaIs_5+105*Is_1*betaIs_4+210*Is_2*betaIs_3+210*Is_3*betaIs_2+105*Is_4*betaIs_1+21*Is_5*betaIs_0+21*T_5*betaT)*S_2+(Is_0*S_7+7*Is_1*S_6+21*Is_2*S_5+35*Is_3*S_4+35*Is_4*S_3)*betaIs_0+(Ia_0*S_7+7*Ia_1*S_6+21*Ia_2*S_5+35*Ia_3*S_4+35*Ia_4*S_3)*betaIa+(H_0*S_7+7*H_1*S_6+21*H_2*S_5+35*H_3*S_4+35*H_4*S_3)*betaH+(35*S_3*T_4+35*S_4*T_3+21*S_5*T_2+7*S_6*T_1+S_7*T_0)*betaT+(35*S_3*betaIs_4+35*S_4*betaIs_3+21*S_5*betaIs_2+7*S_6*betaIs_1)*Is_0+(140*Is_1*betaIs_3+210*Is_2*betaIs_2+140*Is_3*betaIs_1)*S_3+(42*Is_1*S_5+105*Is_2*S_4)*betaIs_1+105*Is_1*S_4*betaIs_2)*Ninv+S_8, betaIs_8, -D_11+y4_11, -T_4+y2_4, -T_5+y2_5, -T_6+y2_6, -T_7+y2_7, -T_8+y2_8, -T_9+y2_9, -T_10+y2_10, -Rd_3+y3_3, y5_1, y5_2, y5_3, y5_4, y5_5, y5_6, y5_7, y5_8, y5_9, y5_10, y5_11, y5_12, y5_13, y5_14, y5_15, y5_16, y5_17, y5_18, y5_19, y5_20, y5_21, y5_22, y5_23, y5_24, y5_25, y5_26, y5_27, -H_5+y1_5, -H_6+y1_6, -H_7+y1_7, -H_8+y1_8, -H_9+y1_9, -betaIs_1+y_faux1_1, -betaIs_2+y_faux1_2, -betaIs_3+y_faux1_3, -betaIs_4+y_faux1_4, -betaIs_5+y_faux1_5, -betaIs_6+y_faux1_6, -betaIs_7+y_faux1_7, -betaIs_8+y_faux1_8, y_faux2_0-S_2]
-	New system: [y4_0 = D_0, y4_1 = D_1, y4_2 = D_2, y4_3 = D_3, y4_4 = D_4, y4_5 = D_5, y4_6 = D_6, y4_7 = D_7, y4_8 = D_8, y4_9 = D_9, y4_10 = D_10, y4_11 = D_11, y4_12 = D_12, y4_13 = D_13, y4_14 = D_14, y4_15 = D_15, y4_16 = D_16, y4_17 = D_17, y4_18 = D_18, y4_19 = D_19, y4_20 = D_20, y4_21 = D_21, y4_22 = D_22, y4_23 = D_23, y4_24 = D_24, y4_25 = D_25, y4_26 = D_26, y4_27 = D_27, y2_0 = T_0, y2_1 = T_1, y2_2 = T_2, y2_3 = T_3, y2_4 = T_4, y2_5 = T_5, y2_6 = T_6, y2_7 = T_7, y2_8 = T_8, y2_9 = T_9, y2_10 = T_10, y2_11 = T_11, y2_12 = T_12, y2_13 = T_13, y2_14 = T_14, y2_15 = T_15, y2_16 = T_16, y2_17 = T_17, y2_18 = T_18, y2_19 = T_19, y2_20 = T_20, y2_21 = T_21, y2_22 = T_22, y2_23 = T_23, y2_24 = T_24, y2_25 = T_25, y2_26 = T_26, y2_27 = T_27, y3_0 = Rd_0, y3_1 = Rd_1, y3_2 = Rd_2, y3_3 = Rd_3, y3_4 = Rd_4, y3_5 = Rd_5, y3_6 = Rd_6, y3_7 = Rd_7, y3_8 = Rd_8, y3_9 = Rd_9, y3_10 = Rd_10, y3_11 = Rd_11, y3_12 = Rd_12, y3_13 = Rd_13, y3_14 = Rd_14, y3_15 = Rd_15, y3_16 = Rd_16, y3_17 = Rd_17, y3_18 = Rd_18, y3_19 = Rd_19, y3_20 = Rd_20, y3_21 = Rd_21, y3_22 = Rd_22, y3_23 = Rd_23, y3_24 = Rd_24, y3_25 = Rd_25, y3_26 = Rd_26, y3_27 = Rd_27, y5_0 = Ninv, y5_1 = 0, y5_2 = 0, y5_3 = 0, y5_4 = 0, y5_5 = 0, y5_6 = 0, y5_7 = 0, y5_8 = 0, y5_9 = 0, y5_10 = 0, y5_11 = 0, y5_12 = 0, y5_13 = 0, y5_14 = 0, y5_15 = 0, y5_16 = 0, y5_17 = 0, y5_18 = 0, y5_19 = 0, y5_20 = 0, y5_21 = 0, y5_22 = 0, y5_23 = 0, y5_24 = 0, y5_25 = 0, y5_26 = 0, y5_27 = 0, y1_0 = H_0, y1_1 = H_1, y1_2 = H_2, y1_3 = H_3, y1_4 = H_4, y1_5 = H_5, y1_6 = H_6, y1_7 = H_7, y1_8 = H_8, y1_9 = H_9, y1_10 = H_10, y1_11 = H_11, y1_12 = H_12, y1_13 = H_13, y1_14 = H_14, y1_15 = H_15, y1_16 = H_16, y1_17 = H_17, y1_18 = H_18, y1_19 = H_19, y1_20 = H_20, y1_21 = H_21, y1_22 = H_22, y1_23 = H_23, y1_24 = H_24, y1_25 = H_25, y1_26 = H_26, y1_27 = H_27, y_faux1_0 = betaIs_0, y_faux1_1 = betaIs_1, y_faux1_2 = betaIs_2, y_faux1_3 = betaIs_3, y_faux1_4 = betaIs_4, y_faux1_5 = betaIs_5, y_faux1_6 = betaIs_6, y_faux1_7 = betaIs_7, y_faux1_8 = betaIs_8, y_faux1_9 = betaIs_9, y_faux1_10 = betaIs_10, y_faux1_11 = betaIs_11, y_faux1_12 = betaIs_12, y_faux1_13 = betaIs_13, y_faux1_14 = betaIs_14, y_faux1_15 = betaIs_15, y_faux1_16 = betaIs_16, y_faux1_17 = betaIs_17, y_faux1_18 = betaIs_18, y_faux1_19 = betaIs_19, y_faux1_20 = betaIs_20, y_faux1_21 = betaIs_21, y_faux1_22 = betaIs_22, y_faux1_23 = betaIs_23, y_faux1_24 = betaIs_24, y_faux1_25 = betaIs_25, y_faux1_26 = betaIs_26, y_faux1_27 = betaIs_27, y_faux2_0 = S_2]
+Collection [alphaIsD, Is_7] is not transcendence basis
+Collection [alphaIsH, Is_4] is not transcendence basis
+Collection [alphaIsT, Is_4] is not transcendence basis
+Collection [alphaIsT, Is_7] is not transcendence basis
+Picked the best choice [Is_0, S_5] based on heuristic:
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  153195079800000000000000000000000
-Random sample for the outputs and inputs is generated from  [Ninv = 38465842573863602979096455130593, alphaHT = 25367979258201458491724053375215, alphaTD = 152272043768527280528989069409435, betaH = 151983521230886857372398372448099, betaIa = 147674135217295247243224762432105, betaT = 104183908031888422904376390350276, xi = 43169665301055377822908890482751, alphaEIa = 108911007626508098202970237427017, alphaEIs = 128162883402867450617442251370941, alphaHRd = 64180187476337133849035985825447, alphaIaIs = 138805492022899412773887647594470, alphaIaRu = 130429185234631588168507728766473, alphaIsD = 122899615502073027861542819460503, alphaIsH = 70695281315243716166561328289340, alphaIsRu = 47821674359087667547669953335800, alphaIsT = 24202281972593557885938347615941, alphaTRd = 10030371399753145476033882828726, betaIs_0 = 65309804679297543723274291529679, E_0 = 45973550402248687767761661181310, H_0 = 39838036777678383326042418036668, Is_0 = 36357363662777150399763136554604, D_0 = 137131730903790051030986473057663, S_0 = 54612535978197794455619870126409, Ia_0 = 5945175335470481178990647386221, Rd_0 = 39474698831608738563243449270580, T_0 = 126710532062437614712413847897902]
-The polynomial system widehat{E^t} contains  152 equations in  103  variables
-Variable ordering to be used for Groebner basis computation [D_11, Is_10, T_10, D_10, Is_9, Ia_9, T_9, H_9, E_9, D_9, betaIs_8, Is_8, Ia_8, T_8, S_8, H_8, E_8, D_8, betaIs_7, Is_7, Ia_7, T_7, S_7, H_7, E_7, D_7, betaIs_6, Is_6, Ia_6, T_6, S_6, H_6, E_6, D_6, betaIs_5, Is_5, Ia_5, T_5, S_5, H_5, E_5, D_5, betaIs_4, Is_4, Ia_4, T_4, S_4, H_4, E_4, D_4, betaIs_3, Rd_3, Is_3, Ia_3, T_3, S_3, H_3, E_3, D_3, betaIs_2, Rd_2, Is_2, Ia_2, T_2, S_2, H_2, E_2, D_2, betaIs_1, Rd_1, Is_1, Ia_1, T_1, S_1, H_1, E_1, D_1, betaIs_0, Rd_0, Is_0, Ia_0, T_0, S_0, H_0, E_0, D_0, z_aux, w_aux, Ninv, alphaEIa, alphaEIs, alphaHRd, alphaHT, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTD, alphaTRd, betaH, betaIa, betaT, xi]
-Prep CPU Time (sub_transc=true):	 265.431
-Prep Real Elapsed Time (sub_transc=true):	 246.227
-memory used=25.20GiB, alloc change=136.46MiB, cpu time=4.42m, real time=4.10m, gc time=33.74s
+Prep CPU Time (sub_transc=true):	 244.009
+Prep Real Elapsed Time (sub_transc=true):	 223.070
+memory used=22.73GiB, alloc change=168.45MiB, cpu time=4.07m, real time=3.72m, gc time=36.85s
 
 
-GetPolySystem Usage (real, cpu, memory):	246.248,	265.452,	27054568272
+GetPolySystem Usage (real, cpu, memory):	223.117,	244.054,	24410746392
 
-States for substitution:	[alphaHRd = 1, alphaHT = 1, alphaEIa = 2, alphaIaRu = 2, Is_ = 1, T_ = 0, alphaIsRu = 2, alphaTRd = 1, Rd_ = 0, E_ = 2, H_ = 0, xi = 1, alphaTD = 1, Ia_ = 1, D_ = 0, Ninv = 0, betaIs_ = 0, alphaIsH = 1, S_ = 3, alphaIaIs = 2, alphaIsT = 1, betaT = 3, alphaIsD = 1, betaIa = 3, betaH = 3, alphaEIs = 2]
+States for substitution:	[T_ = 0, Is_ = 1, Ninv = 0, Rd_ = 0, alphaEIs = 2, H_ = 0, alphaIaIs = 2, Ia_ = 1, alphaTD = 1, alphaHT = 1, S_ = 3, betaIs = 3, alphaIsH = 1, xi = 1, alphaHRd = 1, alphaIsT = 1, alphaTRd = 1, alphaIsRu = 2, betaT = 3, D_ = 0, alphaIsD = 1, betaIa = 3, alphaIaRu = 2, E_ = 2, betaH = 3, alphaEIa = 2]
 NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-Substitutions:	[Is_ = 2, T_ = 1, E_ = 3, H_ = 1, Ia_ = 2, z_aux = 3, betaIs_ = 1, S_ = 4, betaT = 4, betaH = 4]
-memory used=25.22GiB, alloc change=136.46MiB, cpu time=4.43m, real time=4.11m, gc time=33.74s
+Substitutions:	[z_aux = 3, T_ = 1, Is_ = 2, H_ = 1, Ia_ = 2, S_ = 4, betaT = 4, E_ = 3, betaH = 4]
+memory used=22.76GiB, alloc change=168.45MiB, cpu time=4.08m, real time=3.73m, gc time=37.11s
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {E_0 =
+E_0^3, E_1 = E_1^3, E_2 = E_2^3, E_3 = E_3^3, E_4 = E_4^3, E_5 = E_5^3, E_6 = 
+E_6^3, E_7 = E_7^3, E_8 = E_8^3, E_9 = E_9^3, H_0 = H_0, H_1 = H_1, H_2 = H_2,
+H_3 = H_3, H_4 = H_4, H_5 = H_5, H_6 = H_6, H_7 = H_7, H_8 = H_8, H_9 = H_9, 
+Ia_0 = Ia_0^2, Ia_1 = Ia_1^2, Ia_2 = Ia_2^2, Ia_3 = Ia_3^2, Ia_4 = Ia_4^2, Ia_5
+= Ia_5^2, Ia_6 = Ia_6^2, Ia_7 = Ia_7^2, Ia_8 = Ia_8^2, Ia_9 = Ia_9^2, Is_1 = 
+Is_1^2, Is_10 = Is_10^2, Is_2 = Is_2^2, Is_3 = Is_3^2, Is_4 = Is_4^2, Is_5 = 
+Is_5^2, Is_6 = Is_6^2, Is_7 = Is_7^2, Is_8 = Is_8^2, Is_9 = Is_9^2, S_0 = S_0^4
+, S_1 = S_1^4, S_2 = S_2^4, S_3 = S_3^4, S_4 = S_4^4, S_6 = S_6^4, S_7 = S_7^4,
+S_8 = S_8^4, T_0 = T_0, T_1 = T_1, T_10 = T_10, T_2 = T_2, T_3 = T_3, T_4 = T_4
+, T_5 = T_5, T_6 = T_6, T_7 = T_7, T_8 = T_8, T_9 = T_9, betaH = betaH^4, betaT
+= betaT^4, z_aux = z_aux^3}, [80829487072007745977154767086020-D_0, -T_0*
+alphaTD+D_1-149788036374467487508166179777875*alphaIsD, 
+111853818399474601201615395300573-T_0, -H_0*alphaHT+T_0*alphaTD+T_0*alphaTRd+
+T_1-149788036374467487508166179777875*alphaIsT, 
+97147410289374121112899921437834-Rd_0, -H_0*alphaHRd-T_0*alphaTRd+Rd_1, 
+141065541675191244340625600463905-Ninv, 78021969550575627712999289863262-H_0, -
+Ia_0^2*xi+H_0*alphaHT+H_0*alphaHRd+H_1-149788036374467487508166179777875*
+alphaIsH, -D_1+
+13395413569065377912601988738514766282254314322477681089578909690, -Is_1^2*
+alphaIsD-T_1*alphaTD+D_2, -E_0^3*alphaEIs-Ia_0^2*alphaIaIs+Is_1^2+
+149788036374467487508166179777875*alphaIsD+149788036374467487508166179777875*
+alphaIsH+149788036374467487508166179777875*alphaIsRu+
+149788036374467487508166179777875*alphaIsT, -T_1-\
+21993198751143353637360082913337859618694147398819061808060333387, -alphaHT*H_1
+-alphaIsT*Is_1^2+(alphaTD+alphaTRd)*T_1+T_2, -Rd_1+
+20744590299195943823520808931221035952905145088058996117089561417, -H_1*
+alphaHRd-T_1*alphaTRd+Rd_2, -H_1-\
+4959619528653426276809273589151117507940553295496861369962165559, (alphaHT+
+alphaHRd)*H_1+H_2-xi*Ia_1^2-alphaIsH*Is_1^2, -E_0^3*alphaEIa+Ia_0^2*xi+Ia_0^2*
+alphaIaIs+Ia_0^2*alphaIaRu+Ia_1^2, -D_2-233675081512405773283792201197520109921\
+0693424638500573931454051064210113294244977841486673934016, -Is_2^2*alphaIsD-
+T_2*alphaTD+D_3, -alphaEIs*E_1^3-alphaIaIs*Ia_1^2+(alphaIsD+alphaIsH+alphaIsRu+
+alphaIsT)*Is_1^2+Is_2^2, -H_0*Ninv*S_0^4*betaH^4-Ninv*S_0^4*T_0*betaT^4-Ia_0^2*
+Ninv*S_0^4*betaIa-149788036374467487508166179777875*Ninv*S_0^4*betaIs+E_0^3*
+alphaEIa+E_0^3*alphaEIs+E_1^3, -T_2+5146333628392767459409550107512294741319108\
+752335819098037666489733096679151258383525678715333440, -alphaHT*H_2-alphaIsT*
+Is_2^2+(alphaTD+alphaTRd)*T_2+T_3, -Rd_2-29718875099502323342878935814737010017\
+17827645956794769278511457627141986373998987266659699779368, -H_2*alphaHRd-T_2*
+alphaTRd+Rd_3, -H_2+92193277427835654762525224891860978009609502043671934525772\
+1937172229031482843036232777655502478, (alphaHT+alphaHRd)*H_2+H_3-xi*Ia_2^2-
+alphaIsH*Is_2^2, -alphaEIa*E_1^3+(xi+alphaIaIs+alphaIaRu)*Ia_1^2+Ia_2^2, -D_3+
+8556812043038476066675485163975788997859368917982383238944157131191743567000692\
+4298740410179945883526632155461129311971320693430718627652525875799138887723408\
+72647307186658250339622129413810, -Is_3^2*alphaIsD-T_3*alphaTD+D_4, -alphaEIs*
+E_2^3-alphaIaIs*Ia_2^2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_2^2+Is_3^2, ((
+-H_1*betaH^4-T_1*betaT^4-Ia_1^2*betaIa-Is_1^2*betaIs)*S_0^4-S_1^4*(H_0*betaH^4+
+T_0*betaT^4+Ia_0^2*betaIa+149788036374467487508166179777875*betaIs))*Ninv+(
+alphaEIa+alphaEIs)*E_1^3+E_2^3, H_0*Ninv*S_0^4*betaH^4+Ninv*S_0^4*T_0*betaT^4+
+Ia_0^2*Ninv*S_0^4*betaIa+149788036374467487508166179777875*Ninv*S_0^4*betaIs+
+S_1^4, -T_3+1560510561511952193887544506310606170952983030853640699005777619570\
+3704453210854897698310561994122845959444333672886521791625870067420524249693597\
+923798538556500364035814551249322302524985866, -alphaHT*H_3-alphaIsT*Is_3^2+(
+alphaTD+alphaTRd)*T_3+T_4, -H_3+50347908744910606188914871417971162111354728786\
+1014920027784702802628258437003295879062783273442146140881630608459970643074279\
+01270810079614687798218994034159751601217803870601101668227142934, (alphaHT+
+alphaHRd)*H_3+H_4-xi*Ia_3^2-alphaIsH*Is_3^2, -alphaEIa*E_2^3+(xi+alphaIaIs+
+alphaIaRu)*Ia_2^2+Ia_3^2, -D_4-237800029292256497834434355390485296394698536205\
+1709772813133251444938050325004582007897545486665297194146865249100643609219802\
+6424595876769951083127922459837347842869740133354876612509010888001656839612689\
+7516015528507177087373896531356295132216056786417486306501851240436393776619817\
+70, -Is_4^2*alphaIsD-T_4*alphaTD+D_5, -alphaEIs*E_3^3-alphaIaIs*Ia_3^2+(
+alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_3^2+Is_4^2, ((-H_2*betaH^4-T_2*betaT^4
+-Ia_2^2*betaIa-Is_2^2*betaIs)*S_0^4+(-2*H_1*betaH^4-2*T_1*betaT^4-2*Ia_1^2*
+betaIa-2*Is_1^2*betaIs)*S_1^4-S_2^4*(H_0*betaH^4+T_0*betaT^4+Ia_0^2*betaIa+
+149788036374467487508166179777875*betaIs))*Ninv+(alphaEIa+alphaEIs)*E_2^3+E_3^3
+, ((H_1*betaH^4+T_1*betaT^4+Ia_1^2*betaIa+Is_1^2*betaIs)*S_0^4+S_1^4*(H_0*betaH
+^4+T_0*betaT^4+Ia_0^2*betaIa+149788036374467487508166179777875*betaIs))*Ninv+
+S_2^4, -H_4-1399204997623407927463993580634108864873198392235303922566982920119\
+4511041869742397554634834380964671106950999622077374224197061143335988131653554\
+8225936908144731611470240498466191120355757205185669870409012748201523165814994\
+275435310846994561517736202291008949112271649427915511803651838, (alphaHT+
+alphaHRd)*H_4+H_5-xi*Ia_4^2-alphaIsH*Is_4^2, -alphaEIa*E_3^3+(xi+alphaIaIs+
+alphaIaRu)*Ia_3^2+Ia_4^2, -D_5+660863574506164644719738269757339975703790423006\
+2469787030084608960890761787008443649842036642485801067182600229214622205364738\
+9926987834191445200691908349966941371702304771520419558557816558270158787438618\
+8106755800159612939187517445290948831914320187226496421249609031873162492587829\
+0692031167236574998339140381865062894742910526343442826686419042981916411571539\
+6459949295246981722, -Is_5^2*alphaIsD-T_5*alphaTD+D_6, -alphaEIs*E_4^3-
+alphaIaIs*Ia_4^2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_4^2+Is_5^2, -alphaHT
+*H_4-alphaIsT*Is_4^2+(alphaTD+alphaTRd)*T_4+T_5, ((-Ia_0^2*S_3^4-3*Ia_1^2*S_2^4
+-3*Ia_2^2*S_1^4-Ia_3^2*S_0^4)*betaIa+(-3*Is_1^2*S_2^4-3*Is_2^2*S_1^4-Is_3^2*S_0
+^4-149788036374467487508166179777875*S_3^4)*betaIs+(-H_0*S_3^4-3*H_1*S_2^4-3*
+H_2*S_1^4-H_3*S_0^4)*betaH^4-betaT^4*(S_0^4*T_3+3*S_1^4*T_2+3*S_2^4*T_1+S_3^4*
+T_0))*Ninv+(alphaEIa+alphaEIs)*E_3^3+E_4^3, ((H_2*betaH^4+T_2*betaT^4+Ia_2^2*
+betaIa+Is_2^2*betaIs)*S_0^4+(2*H_1*betaH^4+2*T_1*betaT^4+2*Ia_1^2*betaIa+2*Is_1
+^2*betaIs)*S_1^4+S_2^4*(H_0*betaH^4+T_0*betaT^4+Ia_0^2*betaIa+
+149788036374467487508166179777875*betaIs))*Ninv+S_3^4, -D_6-1836587932343398795\
+2473663060030945767329448645730821563180296714504442720309528863461661034605111\
+3954320540301445874229679855389929501154968327815377637070658850917590110374983\
+8548979522351894797712683714745689165190019522260424110416644963858601519547265\
+4589142083507165151441120980384389037558517230563933849023382624647175992829133\
+7832054239502336347821380816609689470711425465645203088255136365554307286516672\
+515964981936604018448783935255457905476560114977550347582867326962, -Is_6^2*
+alphaIsD-T_6*alphaTD+D_7, -alphaEIs*E_5^3-alphaIaIs*Ia_5^2+(alphaIsD+alphaIsH+
+alphaIsRu+alphaIsT)*Is_5^2+Is_6^2, -alphaHT*H_5-alphaIsT*Is_5^2+(alphaTD+
+alphaTRd)*T_5+T_6, ((-Ia_0^2*S_4^4-4*Ia_1^2*S_3^4-6*Ia_2^2*S_2^4-4*Ia_3^2*S_1^4
+-Ia_4^2*S_0^4)*betaIa+(-4*Is_1^2*S_3^4-6*Is_2^2*S_2^4-4*Is_3^2*S_1^4-Is_4^2*S_0
+^4-149788036374467487508166179777875*S_4^4)*betaIs+(-H_0*S_4^4-4*H_1*S_3^4-6*
+H_2*S_2^4-4*H_3*S_1^4-H_4*S_0^4)*betaH^4-6*betaT^4*(S_2^4*T_2+2/3*S_3^4*T_1+1/6
+*S_4^4*T_0+2/3*S_1^4*T_3+1/6*T_4*S_0^4))*Ninv+(alphaEIa+alphaEIs)*E_4^3+E_5^3,
+-alphaEIa*E_4^3+(xi+alphaIaIs+alphaIaRu)*Ia_4^2+Ia_5^2, ((Ia_0^2*S_3^4+3*Ia_1^2
+*S_2^4+3*Ia_2^2*S_1^4+Ia_3^2*S_0^4)*betaIa+(3*Is_1^2*S_2^4+3*Is_2^2*S_1^4+Is_3^
+2*S_0^4+149788036374467487508166179777875*S_3^4)*betaIs+(H_0*S_3^4+3*H_1*S_2^4+
+3*H_2*S_1^4+H_3*S_0^4)*betaH^4+betaT^4*(S_0^4*T_3+3*S_1^4*T_2+3*S_2^4*T_1+S_3^4
+*T_0))*Ninv+S_4^4, -D_7+5104011422856740265807809233866267869505741351586265639\
+0176327695164407637227216249656369116760253598441680196929616280388161663639210\
+8669106634804822094450856414472954417081170734874054505637626426886318055315506\
+8117711388463397676617557658829745398719610145628828639630025667394432449499518\
+2794064094767927021805134768961081036526339318647413517064835903306601721002906\
+8595110445463191471361771564106938990474768472888599852759255451268756493802414\
+5702829835470898685855176497910546993430607948212456017711167392202595405656802\
+44057936833495170374505977518416394272324122858, -Is_7^2*alphaIsD-T_7*alphaTD+
+D_8, -alphaEIs*E_6^3-alphaIaIs*Ia_6^2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*
+Is_6^2+Is_7^2, -alphaHT*H_6-alphaIsT*Is_6^2+(alphaTD+alphaTRd)*T_6+T_7, ((-5*
+Ia_1^2*S_4^4-10*Ia_2^2*S_3^4-10*Ia_3^2*S_2^4-5*Ia_4^2*S_1^4-Ia_5^2*S_0^4-\
+64887386501587236116911110076619*Ia_0^2)*betaIa+(-5*Is_1^2*S_4^4-10*Is_2^2*S_3^
+4-10*Is_3^2*S_2^4-5*Is_4^2*S_1^4-Is_5^2*S_0^4-\
+9719354209543879574841050699213950110679581771179104219651004625)*betaIs+(-5*
+H_1*S_4^4-10*H_2*S_3^4-10*H_3*S_2^4-5*H_4*S_1^4-H_5*S_0^4-\
+64887386501587236116911110076619*H_0)*betaH^4-5*(S_1^4*T_4+2*T_3*S_2^4+2*S_3^4*
+T_2+T_1*S_4^4+64887386501587236116911110076619/5*T_0+1/5*T_5*S_0^4)*betaT^4)*
+Ninv+(alphaEIa+alphaEIs)*E_5^3+E_6^3, (alphaHT+alphaHRd)*H_5+H_6-xi*Ia_5^2-
+alphaIsH*Is_5^2, -alphaEIa*E_5^3+(xi+alphaIaIs+alphaIaRu)*Ia_5^2+Ia_6^2, ((Ia_0
+^2*S_4^4+4*Ia_1^2*S_3^4+6*Ia_2^2*S_2^4+4*Ia_3^2*S_1^4+Ia_4^2*S_0^4)*betaIa+(4*
+Is_1^2*S_3^4+6*Is_2^2*S_2^4+4*Is_3^2*S_1^4+Is_4^2*S_0^4+
+149788036374467487508166179777875*S_4^4)*betaIs+(H_0*S_4^4+4*H_1*S_3^4+6*H_2*
+S_2^4+4*H_3*S_1^4+H_4*S_0^4)*betaH^4+betaT^4*(S_0^4*T_4+4*S_1^4*T_3+6*S_2^4*T_2
++4*S_3^4*T_1+S_4^4*T_0))*Ninv+64887386501587236116911110076619, -D_8-1418441891\
+3943497437258887329100949811971091698930137626610188687395641375699762283389196\
+4942051985154380134778737912462173405517710735119765609685836790505747069157062\
+9160255755784605200488325195416264473504420895469784212068676434508705521402208\
+7549455228931405071826842530874501687893694484566955580235325236683900563875860\
+7403468957350871798799954242953144343619247342774277428485860434526382071032275\
+5479394673323187311187189192205482769719025173486776643007546512083883750913024\
+3071600207903249569189261068782206508894606461064160791616918038214740880942975\
+3339396011736860218300615481882966359676795431864952284434595678944486731837964\
+9358345438821923970800148166114, -Is_8^2*alphaIsD-T_8*alphaTD+D_9, -alphaEIs*
+E_7^3-alphaIaIs*Ia_7^2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_7^2+Is_8^2, -
+alphaHT*H_7-alphaIsT*Is_7^2+(alphaTD+alphaTRd)*T_7+T_8, ((-Ia_0^2*S_6^4-15*Ia_2
+^2*S_4^4-20*Ia_3^2*S_3^4-15*Ia_4^2*S_2^4-6*Ia_5^2*S_1^4-Ia_6^2*S_0^4-\
+389324319009523416701466660459714*Ia_1^2)*betaIa+(-15*Is_2^2*S_4^4-20*Is_3^2*
+S_3^4-15*Is_4^2*S_2^4-6*Is_5^2*S_1^4-Is_6^2*S_0^4-\
+149788036374467487508166179777875*S_6^4-389324319009523416701466660459714*Is_1^
+2)*betaIs+(-H_0*S_6^4-15*H_2*S_4^4-20*H_3*S_3^4-15*H_4*S_2^4-6*H_5*S_1^4-H_6*
+S_0^4-389324319009523416701466660459714*H_1)*betaH^4-betaT^4*(S_0^4*T_6+6*S_1^4
+*T_5+15*S_2^4*T_4+20*S_3^4*T_3+15*S_4^4*T_2+S_6^4*T_0+
+389324319009523416701466660459714*T_1))*Ninv+(alphaEIa+alphaEIs)*E_6^3+E_7^3, (
+alphaHT+alphaHRd)*H_6+H_7-xi*Ia_6^2-alphaIsH*Is_6^2, -alphaEIa*E_6^3+(xi+
+alphaIaIs+alphaIaRu)*Ia_6^2+Ia_7^2, ((5*Ia_1^2*S_4^4+10*Ia_2^2*S_3^4+10*Ia_3^2*
+S_2^4+5*Ia_4^2*S_1^4+Ia_5^2*S_0^4+64887386501587236116911110076619*Ia_0^2)*
+betaIa+(5*Is_1^2*S_4^4+10*Is_2^2*S_3^4+10*Is_3^2*S_2^4+5*Is_4^2*S_1^4+Is_5^2*
+S_0^4+9719354209543879574841050699213950110679581771179104219651004625)*betaIs+
+(5*H_1*S_4^4+10*H_2*S_3^4+10*H_3*S_2^4+5*H_4*S_1^4+H_5*S_0^4+
+64887386501587236116911110076619*H_0)*betaH^4+10*(S_3^4*T_2+1/2*T_1*S_4^4+
+64887386501587236116911110076619/10*T_0+T_3*S_2^4+1/2*S_1^4*T_4+1/10*T_5*S_0^4)
+*betaT^4)*Ninv+S_6^4, -D_9+3941953166978350216473016745059535888300324968305306\
+4044406100476543380227819751298025357107961671438413592328811227167401356962398\
+4495915180427691167371001804977330956834670504460514022323843383866106250388831\
+8222107780958706384279910425666156422502235488308521124590785558752043387253406\
+2481779753427927749558121580985341752130903708977167801022577892648890513217185\
+8971388888456107584576325614843469929223189779272980368461660242523916831123309\
+2030344345962874846145751806524411291682760120153867754738686480854320709443237\
+0016954835685785245315331455013874944824211122918234510215239877453764733634842\
+5345194333297072753301451858917677293122195593769163221203028182981593355071017\
+4898395217963649290835700787689917767632118885574494966979260404461743694526431\
+590074, -Is_9^2*alphaIsD-T_9*alphaTD+D_10, -alphaEIs*E_8^3-alphaIaIs*Ia_8^2+(
+alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_8^2+Is_9^2, -alphaHT*H_8-alphaIsT*Is_8
+^2+(alphaTD+alphaTRd)*T_8+T_9, ((-Ia_0^2*S_7^4-7*Ia_1^2*S_6^4-35*Ia_3^2*S_4^4-\
+35*Ia_4^2*S_3^4-21*Ia_5^2*S_2^4-7*Ia_6^2*S_1^4-Ia_7^2*S_0^4-\
+1362635116533331958455133311608999*Ia_2^2)*betaIa+(-7*Is_1^2*S_6^4-35*Is_3^2*
+S_4^4-35*Is_4^2*S_3^4-21*Is_5^2*S_2^4-7*Is_6^2*S_1^4-Is_7^2*S_0^4-\
+149788036374467487508166179777875*S_7^4-1362635116533331958455133311608999*Is_2
+^2)*betaIs+(-H_0*S_7^4-7*H_1*S_6^4-35*H_3*S_4^4-35*H_4*S_3^4-21*H_5*S_2^4-7*H_6
+*S_1^4-H_7*S_0^4-1362635116533331958455133311608999*H_2)*betaH^4-betaT^4*(S_0^4
+*T_7+7*S_1^4*T_6+21*S_2^4*T_5+35*S_3^4*T_4+35*S_4^4*T_3+7*S_6^4*T_1+S_7^4*T_0+
+1362635116533331958455133311608999*T_2))*Ninv+(alphaEIa+alphaEIs)*E_7^3+E_8^3,
+(alphaHT+alphaHRd)*H_7+H_8-xi*Ia_7^2-alphaIsH*Is_7^2, -alphaEIa*E_7^3+(xi+
+alphaIaIs+alphaIaRu)*Ia_7^2+Ia_8^2, ((Ia_0^2*S_6^4+15*Ia_2^2*S_4^4+20*Ia_3^2*
+S_3^4+15*Ia_4^2*S_2^4+6*Ia_5^2*S_1^4+Ia_6^2*S_0^4+
+389324319009523416701466660459714*Ia_1^2)*betaIa+(15*Is_2^2*S_4^4+20*Is_3^2*S_3
+^4+15*Is_4^2*S_2^4+6*Is_5^2*S_1^4+Is_6^2*S_0^4+
+149788036374467487508166179777875*S_6^4+389324319009523416701466660459714*Is_1^
+2)*betaIs+(H_0*S_6^4+15*H_2*S_4^4+20*H_3*S_3^4+15*H_4*S_2^4+6*H_5*S_1^4+H_6*S_0
+^4+389324319009523416701466660459714*H_1)*betaH^4+15*(S_2^4*T_4+4/3*S_3^4*T_3+
+S_4^4*T_2+129774773003174472233822220153238/5*T_1+1/15*S_6^4*T_0+2/5*T_5*S_1^4+
+1/15*T_6*S_0^4)*betaT^4)*Ninv+S_7^4, -D_10-109549745145890883951413891518408052\
+7880494985002668640712618933223497572531226820599249413622679435707966466955451\
+8065586437538219473936079440231064848819455044169059603910766235559359829193373\
+2128576858267841629936123048972788031503967208405900650199898782644003806914763\
+1816835233945155100230797074790393074508553695775136163725060137143167045614145\
+7603486844002990684165325433212894043075948841720056837988748410474670435691759\
+2982407369442753395963154576295319833347990740551271196097618352788677445885963\
+7962044211258362347343315140113230448392662904898082394319720023738814518310094\
+4241214641294122839263247362920526581935311110712872313238910074791598380925031\
+8222065933857825077419098428315447231046982975593573956856825471162142227623485\
+9425072107955467099202759767922127542394482548433904194240004791413768066138470\
+4225786483851912383613381669171262764978, -Is_10^2*alphaIsD-T_10*alphaTD+D_11,
+-alphaEIs*E_9^3-alphaIaIs*Ia_9^2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_9^2+
+Is_10^2, -alphaHT*H_9-alphaIsT*Is_9^2+(alphaTD+alphaTRd)*T_9+T_10, ((-Ia_0^2*
+S_8^4-8*Ia_1^2*S_7^4-28*Ia_2^2*S_6^4-70*Ia_4^2*S_4^4-56*Ia_5^2*S_3^4-28*Ia_6^2*
+S_2^4-8*Ia_7^2*S_1^4-Ia_8^2*S_0^4-3633693644088885222547022164290664*Ia_3^2)*
+betaIa+(-8*Is_1^2*S_7^4-28*Is_2^2*S_6^4-70*Is_4^2*S_4^4-56*Is_5^2*S_3^4-28*Is_6
+^2*S_2^4-8*Is_7^2*S_1^4-Is_8^2*S_0^4-149788036374467487508166179777875*S_8^4-\
+3633693644088885222547022164290664*Is_3^2)*betaIs+(-H_0*S_8^4-8*H_1*S_7^4-28*
+H_2*S_6^4-70*H_4*S_4^4-56*H_5*S_3^4-28*H_6*S_2^4-8*H_7*S_1^4-H_8*S_0^4-\
+3633693644088885222547022164290664*H_3)*betaH^4-betaT^4*(S_0^4*T_8+8*S_1^4*T_7+
+28*S_2^4*T_6+56*S_3^4*T_5+70*S_4^4*T_4+28*S_6^4*T_2+8*S_7^4*T_1+S_8^4*T_0+
+3633693644088885222547022164290664*T_3))*Ninv+(alphaEIa+alphaEIs)*E_8^3+E_9^3,
+(alphaHT+alphaHRd)*H_8+H_9-xi*Ia_8^2-alphaIsH*Is_8^2, -alphaEIa*E_8^3+(xi+
+alphaIaIs+alphaIaRu)*Ia_8^2+Ia_9^2, ((Ia_0^2*S_7^4+7*Ia_1^2*S_6^4+35*Ia_3^2*S_4
+^4+35*Ia_4^2*S_3^4+21*Ia_5^2*S_2^4+7*Ia_6^2*S_1^4+Ia_7^2*S_0^4+
+1362635116533331958455133311608999*Ia_2^2)*betaIa+(7*Is_1^2*S_6^4+35*Is_3^2*S_4
+^4+35*Is_4^2*S_3^4+21*Is_5^2*S_2^4+7*Is_6^2*S_1^4+Is_7^2*S_0^4+
+149788036374467487508166179777875*S_7^4+1362635116533331958455133311608999*Is_2
+^2)*betaIs+(H_0*S_7^4+7*H_1*S_6^4+35*H_3*S_4^4+35*H_4*S_3^4+21*H_5*S_2^4+7*H_6*
+S_1^4+H_7*S_0^4+1362635116533331958455133311608999*H_2)*betaH^4+7*(S_1^4*T_6+3*
+S_2^4*T_5+5*S_3^4*T_4+5*S_4^4*T_3+194662159504761708350733330229857*T_2+S_6^4*
+T_1+1/7*S_7^4*T_0+1/7*T_7*S_0^4)*betaT^4)*Ninv+S_8^4, -D_11+3044467083491242133\
+2682793586640490818345651080388979706809754186855490658532001575634839060982602\
+9280403756429208290241904739576118427582134307552563737020441285381748308834273\
+0803770201917146653502251467980246397070443282876731307560992867802971957796694\
+4284772056412354648842832075941974455200003868294393872607648699488688767259756\
+1588394771416687469711860086321902180565158721967369341987559872822524616648351\
+8760159671435712422424913277369307649531741810568355403027562218905862436693001\
+6238204151598918399420541915857138180736078508177047393429190584027571877670907\
+7100168386794739963852812622103986606561692263934365900588416165055117309619607\
+9270743008230209444512159168308752196514010911115657837744005804222477814302882\
+0517172855377423813816605626471822920266813302363569492582739692391510815451534\
+7033443822677039514878233655264351802404862849914146530327063324297899821243180\
+61032959094104142784164977355051527913394714062950417757912119824673636746, -
+T_4-433677233263903828487928507157841054442981136364727985142936570946713223666\
+2818604821150163450363466972236482114175138365340773902973200863607768638192957\
+8102346807165820860413327779106986989296080198485202225394658156120852286847035\
+194070872414034748595322429279148560573646402686594944, -T_5+120522056876828097\
+2071014928191674160538217406880282510997969436150658166403625369168698941277051\
+5941442156857196069207422907014936284552947267978056559172999441379255644282925\
+6878089694498721205948494636266326964024775848895817405449599624207651795120030\
+0181002777745566189145818643133635786050473438158731056304328849466993134939929\
+44495554397275115413340432008347850832385497658974, -T_6-3349395605690512142273\
+1610465650357526313984825562581680134137506292139948800049045156375909878263708\
+2940429343915805627453226532568811269895016624771946806862308929420364657803972\
+9611039306552202744167259218388614548241818618691921961199992657715553805092679\
+4535832474871127561369879040046785990317385848822595501045061605550565710104487\
+2694999676671122924997787206270174500940024828930500303216213202725879557895347\
+045702746265880110412698508297579830436255264834017607100866088, -T_7+930821396\
+0274522152769820838241592141628252107468346388825526974836273383216663898200863\
+3606273126756765205145125132334176905081056230382659557296068452791207969490090\
+0801321379678977396285713682724109458651581245212509583241879128835944585212955\
+6976016093959294954195808295852523567746259285293342695333967821751929819575724\
+4981857279417257771038707453894935760048211991474179618175843886781813560758345\
+4173915397489128454923647767989066265198510086151272770896765426534593307369988\
+4077807596038473312589322312744425901541151383762722368318181019309618792037643\
+39408625341350, -T_8-2586820350007212565562707669970884990847662369944936538819\
+2221156429815281715222822063648392582487793158130445238087974307749847963342439\
+3259778754733246523507770680743059795737682501317603651790849288857362451543476\
+6004344192292327441809391028798807312101101410445502241163700645522871026789797\
+4625108163765391445715028352299431102291658790510625281820894758876396161650360\
+9548769300705097465301758314826061660321861819534555828796382981940638176336911\
+5509753726274671978952183631498420477943928948533110656949894558201063892516717\
+6701560667790279256231711385385566076186401538925472685993357684585632410224442\
+17847046912419208431137504621979955589269172660328288889977696, -T_9+7188961869\
+3445727303537746202443794586519632433848356765917946959892073247972977813672673\
+6884043681067067780982715379191565553913313139526651532109705383537359611527668\
+0121311670606073200732028798718175491307040160747591602709819934970564262651324\
+4352427357520099486215731711241045669218208333818725295625789481282838387324104\
+9224659092985655556063740562426823654645684789694699807546968035252182159604943\
+7886984433908294738141897827185497659693568173347821798940851264462611255673471\
+1973491196967219397409201653885288565444326609362665068548155255927945584156980\
+1283429592061421515739235025877306126605248359846543000450047045184115419481609\
+0414694701892915788345734716684391581348747656058211055424481167768476288590208\
+445140644295449664677474498127677631147003269150, -T_10-19978647824827153649478\
+9546520607132258110926692865341295894552713092560917861086463892896576897806927\
+3314015261814488505026066212790306851115572402190718052482994176733104304152114\
+8442077611506440047290424635783984385473968121651667907529736130052772040080168\
+7539091586825131125567514285235065168207261716599267955073340809123494591512627\
+1243500274084536506955040635154359848485659583126843602217768866300605314160559\
+0203588148678624823478751681189851573683599010994508849864803237913463757071849\
+7302378831712133620594257569715344699019233644522425078400296390765320874866956\
+0568377288443902634710787371823963641252764533607252187982341250424871753088336\
+4776620016562133311818574644890994169442145252601353841575862821392263184469571\
+2087963949010728975974872962008620608904140547669676211838814350416242371573199\
+34481711524206528144920599179202095598248860733710616, -Rd_3+669968650017612736\
+5356925073413292060388734465375601284268573953309876704351111427130349050998455\
+71009384684507460453102987330470, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -H_5+38884924402589445734263113186282181404\
+5764259837242367112667814750121362770829982820542060717317311043216588642346424\
+4794491591876139041868297583384907820628079943275790175921220240832219336135831\
+4413608599267540515762499361676411951395421045217654547193841150612926694516642\
+7792809669236192082492338553934527579794510744854127720343181000493345864784834\
+213069432041496875201554480066, -H_6-108064032673077740360221549313807854245053\
+1263102772781732665642241603277797509980533298250833645020223645036152056790906\
+7403397234634854436618698887000955070887286518163978644899838983410081474039120\
+0658666637578327461320734042484969656632252862785756028518961207469841889754258\
+3139445283920075014493790984252282723772306774774815405167168181027319806821551\
+4925524283984381884704242730900545284958087456947978610629143163994186615498217\
+67134965749432152126996588475428153367311422, -H_7+3003178053443857727703518672\
+1061796603015188196252354041020270775364720073307727189928647324828007469099898\
+1155376851461079785398198008950056917447460380401561971607909298635834669727767\
+7930832530800079478530127601103861273271857995962405244717403729089317892931033\
+3942277513342545934968138671263439418697881712117980019981930530653700375560948\
+6001829499066653882200232224427976329140013113219490737073592175087672427776058\
+3314775741790842145906739296146002570628923919534260169802278966238846114968386\
+495717280981158827377755491108126619117490064381307987418262752559326701234, -
+H_8-834605020522594627185472035722759583181343642528779608648038802954219590125\
+4082834822784039182609229157389837180304217279332332537008138344737068760025727\
+5076639972684637538882545558763587630728540439121579254695492220217669255499275\
+3958392188116936757977113636420520702408011664514620363990798974437693195286397\
+4933781174348294654291502851141608603418130007279461844045177868271100648035983\
+4455235766193010591333433705264375406485319671515563991775797299871107717913763\
+9954035102614172046219598650472909405653403572478077077373321228223741242796865\
+9676342570520274986628006164791160922839632543656413582381405351293249157946140\
+750537761588830156778587024031354749096959838, -H_9+231942804550913183113889229\
+4766261059075460321387150197427911265464193768048389171751035965632359282369021\
+5815119074539865036864692969185566025911605323344354101541302480865468518412961\
+2678084717254001227075987112740923846716266868778614886716810173222448965956636\
+1935943432167684226170023655926955823489063017726586432572198565095829434139128\
+7952911844129997764986807986614797115149389217153201617901785371879866404201822\
+5456066608689503027183362815863832707309859669431239811331510335334275351086825\
+8194115926339242783609064801686113759260782450640218523594321830983036728822469\
+4846290600900653220638570812651894469337463081340278156517042752000530997925407\
+6062495645647639008441725756286035808887666484244752147119294215964505240638459\
+85885462826243475143555089741266, z_aux^3-1], [D_11, Is_10, T_10, D_10, Is_9, 
+Ia_9, T_9, H_9, E_9, D_9, Is_8, Ia_8, T_8, S_8, H_8, E_8, D_8, Is_7, Ia_7, T_7,
+S_7, H_7, E_7, D_7, Is_6, Ia_6, T_6, S_6, H_6, E_6, D_6, Is_5, Ia_5, T_5, H_5,
+E_5, D_5, Is_4, Ia_4, T_4, S_4, H_4, E_4, D_4, Rd_3, Is_3, Ia_3, T_3, S_3, H_3,
+E_3, D_3, Rd_2, Is_2, Ia_2, T_2, S_2, H_2, E_2, D_2, Rd_1, Is_1, Ia_1, T_1, S_1
+, H_1, E_1, D_1, Rd_0, Ia_0, T_0, S_0, H_0, E_0, D_0, z_aux, w_aux, Ninv, 
+alphaEIa, alphaEIs, alphaHRd, alphaHT, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH
+, alphaIsRu, alphaIsT, alphaTD, alphaTRd, betaH, betaIa, betaIs, betaT, xi], [
+Is_0, S_5], [80829487072007745977154767086020-D_0, -T_0*alphaTD+D_1-\
+149788036374467487508166179777875*alphaIsD, 111853818399474601201615395300573-
+T_0, -H_0*alphaHT+T_0*alphaTD+T_0*alphaTRd+T_1-\
+149788036374467487508166179777875*alphaIsT, 97147410289374121112899921437834-
+Rd_0, -H_0*alphaHRd-T_0*alphaTRd+Rd_1, 141065541675191244340625600463905-Ninv,
+78021969550575627712999289863262-H_0, H_0*alphaHT+H_0*alphaHRd-Ia_0*xi+H_1-\
+149788036374467487508166179777875*alphaIsH, -D_1+
+13395413569065377912601988738514766282254314322477681089578909690, -Is_1*
+alphaIsD-T_1*alphaTD+D_2, -E_0*alphaEIs-Ia_0*alphaIaIs+Is_1+
+149788036374467487508166179777875*alphaIsD+149788036374467487508166179777875*
+alphaIsH+149788036374467487508166179777875*alphaIsRu+
+149788036374467487508166179777875*alphaIsT, -T_1-\
+21993198751143353637360082913337859618694147398819061808060333387, -alphaHT*H_1
+-alphaIsT*Is_1+(alphaTD+alphaTRd)*T_1+T_2, -Rd_1+
+20744590299195943823520808931221035952905145088058996117089561417, -H_1*
+alphaHRd-T_1*alphaTRd+Rd_2, -H_1-\
+4959619528653426276809273589151117507940553295496861369962165559, (alphaHT+
+alphaHRd)*H_1+H_2-xi*Ia_1-alphaIsH*Is_1, -E_0*alphaEIa+Ia_0*xi+Ia_0*alphaIaIs+
+Ia_0*alphaIaRu+Ia_1, -D_2-23367508151240577328379220119752010992106934246385005\
+73931454051064210113294244977841486673934016, -Is_2*alphaIsD-T_2*alphaTD+D_3, -
+alphaEIs*E_1-alphaIaIs*Ia_1+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_1+Is_2, -
+H_0*Ninv*S_0*betaH-Ia_0*Ninv*S_0*betaIa-Ninv*S_0*T_0*betaT-\
+149788036374467487508166179777875*Ninv*S_0*betaIs+E_0*alphaEIa+E_0*alphaEIs+E_1
+, -T_2+514633362839276745940955010751229474131910875233581909803766648973309667\
+9151258383525678715333440, -alphaHT*H_2-alphaIsT*Is_2+(alphaTD+alphaTRd)*T_2+
+T_3, -Rd_2-29718875099502323342878935814737010017178276459567947692785114576271\
+41986373998987266659699779368, -H_2*alphaHRd-T_2*alphaTRd+Rd_3, -H_2+9219327742\
+7835654762525224891860978009609502043671934525772193717222903148284303623277765\
+5502478, (alphaHT+alphaHRd)*H_2+H_3-xi*Ia_2-alphaIsH*Is_2, -alphaEIa*E_1+(xi+
+alphaIaIs+alphaIaRu)*Ia_1+Ia_2, -D_3+855681204303847606667548516397578899785936\
+8917982383238944157131191743567000692429874041017994588352663215546112931197132\
+069343071862765252587579913888772340872647307186658250339622129413810, -Is_3*
+alphaIsD-T_3*alphaTD+D_4, -alphaEIs*E_2-alphaIaIs*Ia_2+(alphaIsD+alphaIsH+
+alphaIsRu+alphaIsT)*Is_2+Is_3, ((-H_1*betaH-Ia_1*betaIa-Is_1*betaIs-T_1*betaT)*
+S_0-S_1*(H_0*betaH+Ia_0*betaIa+T_0*betaT+149788036374467487508166179777875*
+betaIs))*Ninv+(alphaEIa+alphaEIs)*E_1+E_2, H_0*Ninv*S_0*betaH+Ia_0*Ninv*S_0*
+betaIa+Ninv*S_0*T_0*betaT+149788036374467487508166179777875*Ninv*S_0*betaIs+S_1
+, -T_3+156051056151195219388754450631060617095298303085364069900577761957037044\
+5321085489769831056199412284595944433367288652179162587006742052424969359792379\
+8538556500364035814551249322302524985866, -alphaHT*H_3-alphaIsT*Is_3+(alphaTD+
+alphaTRd)*T_3+T_4, -H_3+5034790874491060618891487141797116211135472878610149200\
+2778470280262825843700329587906278327344214614088163060845997064307427901270810\
+079614687798218994034159751601217803870601101668227142934, (alphaHT+alphaHRd)*
+H_3+H_4-xi*Ia_3-alphaIsH*Is_3, -alphaEIa*E_2+(xi+alphaIaIs+alphaIaRu)*Ia_2+Ia_3
+, -D_4-237800029292256497834434355390485296394698536205170977281313325144493805\
+0325004582007897545486665297194146865249100643609219802642459587676995108312792\
+2459837347842869740133354876612509010888001656839612689751601552850717708737389\
+653135629513221605678641748630650185124043639377661981770, -Is_4*alphaIsD-T_4*
+alphaTD+D_5, -alphaEIs*E_3-alphaIaIs*Ia_3+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT
+)*Is_3+Is_4, ((-H_2*betaH-Ia_2*betaIa-Is_2*betaIs-T_2*betaT)*S_0+(-2*H_1*betaH-\
+2*Ia_1*betaIa-2*Is_1*betaIs-2*T_1*betaT)*S_1-S_2*(H_0*betaH+Ia_0*betaIa+T_0*
+betaT+149788036374467487508166179777875*betaIs))*Ninv+(alphaEIa+alphaEIs)*E_2+
+E_3, ((H_1*betaH+Ia_1*betaIa+Is_1*betaIs+T_1*betaT)*S_0+S_1*(H_0*betaH+Ia_0*
+betaIa+T_0*betaT+149788036374467487508166179777875*betaIs))*Ninv+S_2, -H_4-1399\
+2049976234079274639935806341088648731983922353039225669829201194511041869742397\
+5546348343809646711069509996220773742241970611433359881316535548225936908144731\
+6114702404984661911203557572051856698704090127482015231658149942754353108469945\
+61517736202291008949112271649427915511803651838, (alphaHT+alphaHRd)*H_4+H_5-xi*
+Ia_4-alphaIsH*Is_4, -alphaEIa*E_3+(xi+alphaIaIs+alphaIaRu)*Ia_3+Ia_4, -D_5+6608\
+6357450616464471973826975733997570379042300624697870300846089608907617870084436\
+4984203664248580106718260022921462220536473899269878341914452006919083499669413\
+7170230477152041955855781655827015878743861881067558001596129391875174452909488\
+3191432018722649642124960903187316249258782906920311672365749983391403818650628\
+947429105263434428266864190429819164115715396459949295246981722, -Is_5*alphaIsD
+-T_5*alphaTD+D_6, -alphaEIs*E_4-alphaIaIs*Ia_4+(alphaIsD+alphaIsH+alphaIsRu+
+alphaIsT)*Is_4+Is_5, -alphaHT*H_4-alphaIsT*Is_4+(alphaTD+alphaTRd)*T_4+T_5, ((-
+Ia_0*S_3-3*Ia_1*S_2-3*Ia_2*S_1-Ia_3*S_0)*betaIa+(-3*Is_1*S_2-3*Is_2*S_1-Is_3*
+S_0-149788036374467487508166179777875*S_3)*betaIs+(-H_0*S_3-3*H_1*S_2-3*H_2*S_1
+-H_3*S_0)*betaH-betaT*(S_0*T_3+3*S_1*T_2+3*S_2*T_1+S_3*T_0))*Ninv+(alphaEIa+
+alphaEIs)*E_3+E_4, ((H_2*betaH+Ia_2*betaIa+Is_2*betaIs+T_2*betaT)*S_0+(2*H_1*
+betaH+2*Ia_1*betaIa+2*Is_1*betaIs+2*T_1*betaT)*S_1+S_2*(H_0*betaH+Ia_0*betaIa+
+T_0*betaT+149788036374467487508166179777875*betaIs))*Ninv+S_3, -D_6-18365879323\
+4339879524736630600309457673294486457308215631802967145044427203095288634616610\
+3460511139543205403014458742296798553899295011549683278153776370706588509175901\
+1037498385489795223518947977126837147456891651900195222604241104166449638586015\
+1954726545891420835071651514411209803843890375585172305639338490233826246471759\
+9282913378320542395023363478213808166096894707114254656452030882551363655543072\
+86516672515964981936604018448783935255457905476560114977550347582867326962, -
+Is_6*alphaIsD-T_6*alphaTD+D_7, -alphaEIs*E_5-alphaIaIs*Ia_5+(alphaIsD+alphaIsH+
+alphaIsRu+alphaIsT)*Is_5+Is_6, -alphaHT*H_5-alphaIsT*Is_5+(alphaTD+alphaTRd)*
+T_5+T_6, ((-Ia_0*S_4-4*Ia_1*S_3-6*Ia_2*S_2-4*Ia_3*S_1-Ia_4*S_0)*betaIa+(-4*Is_1
+*S_3-6*Is_2*S_2-4*Is_3*S_1-Is_4*S_0-149788036374467487508166179777875*S_4)*
+betaIs+(-H_0*S_4-4*H_1*S_3-6*H_2*S_2-4*H_3*S_1-H_4*S_0)*betaH-6*betaT*(S_2*T_2+
+2/3*S_3*T_1+1/6*S_4*T_0+2/3*S_1*T_3+1/6*T_4*S_0))*Ninv+(alphaEIa+alphaEIs)*E_4+
+E_5, -alphaEIa*E_4+(xi+alphaIaIs+alphaIaRu)*Ia_4+Ia_5, ((Ia_0*S_3+3*Ia_1*S_2+3*
+Ia_2*S_1+Ia_3*S_0)*betaIa+(3*Is_1*S_2+3*Is_2*S_1+Is_3*S_0+
+149788036374467487508166179777875*S_3)*betaIs+(H_0*S_3+3*H_1*S_2+3*H_2*S_1+H_3*
+S_0)*betaH+betaT*(S_0*T_3+3*S_1*T_2+3*S_2*T_1+S_3*T_0))*Ninv+S_4, -D_7+51040114\
+2285674026580780923386626786950574135158626563901763276951644076372272162496563\
+6911676025359844168019692961628038816166363921086691066348048220944508564144729\
+5441708117073487405450563762642688631805531550681177113884633976766175576588297\
+4539871961014562882863963002566739443244949951827940640947679270218051347689610\
+8103652633931864741351706483590330660172100290685951104454631914713617715641069\
+3899047476847288859985275925545126875649380241457028298354708986858551764979105\
+4699343060794821245601771116739220259540565680244057936833495170374505977518416\
+394272324122858, -Is_7*alphaIsD-T_7*alphaTD+D_8, -alphaEIs*E_6-alphaIaIs*Ia_6+(
+alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_6+Is_7, -alphaHT*H_6-alphaIsT*Is_6+(
+alphaTD+alphaTRd)*T_6+T_7, ((-5*Ia_1*S_4-10*Ia_2*S_3-10*Ia_3*S_2-5*Ia_4*S_1-
+Ia_5*S_0-64887386501587236116911110076619*Ia_0)*betaIa+(-5*Is_1*S_4-10*Is_2*S_3
+-10*Is_3*S_2-5*Is_4*S_1-Is_5*S_0-\
+9719354209543879574841050699213950110679581771179104219651004625)*betaIs+(-5*
+H_1*S_4-10*H_2*S_3-10*H_3*S_2-5*H_4*S_1-H_5*S_0-\
+64887386501587236116911110076619*H_0)*betaH-5*(S_1*T_4+2*T_3*S_2+2*S_3*T_2+T_1*
+S_4+64887386501587236116911110076619/5*T_0+1/5*T_5*S_0)*betaT)*Ninv+(alphaEIa+
+alphaEIs)*E_5+E_6, (alphaHT+alphaHRd)*H_5+H_6-xi*Ia_5-alphaIsH*Is_5, -alphaEIa*
+E_5+(xi+alphaIaIs+alphaIaRu)*Ia_5+Ia_6, ((Ia_0*S_4+4*Ia_1*S_3+6*Ia_2*S_2+4*Ia_3
+*S_1+Ia_4*S_0)*betaIa+(4*Is_1*S_3+6*Is_2*S_2+4*Is_3*S_1+Is_4*S_0+
+149788036374467487508166179777875*S_4)*betaIs+(H_0*S_4+4*H_1*S_3+6*H_2*S_2+4*
+H_3*S_1+H_4*S_0)*betaH+betaT*(S_0*T_4+4*S_1*T_3+6*S_2*T_2+4*S_3*T_1+S_4*T_0))*
+Ninv+64887386501587236116911110076619, -D_8-14184418913943497437258887329100949\
+8119710916989301376266101886873956413756997622833891964942051985154380134778737\
+9124621734055177107351197656096858367905057470691570629160255755784605200488325\
+1954162644735044208954697842120686764345087055214022087549455228931405071826842\
+5308745016878936944845669555802353252366839005638758607403468957350871798799954\
+2429531443436192473427742774284858604345263820710322755479394673323187311187189\
+1922054827697190251734867766430075465120838837509130243071600207903249569189261\
+0687822065088946064610641607916169180382147408809429753339396011736860218300615\
+4818829663596767954318649522844345956789444867318379649358345438821923970800148\
+166114, -Is_8*alphaIsD-T_8*alphaTD+D_9, -alphaEIs*E_7-alphaIaIs*Ia_7+(alphaIsD+
+alphaIsH+alphaIsRu+alphaIsT)*Is_7+Is_8, -alphaHT*H_7-alphaIsT*Is_7+(alphaTD+
+alphaTRd)*T_7+T_8, ((-Ia_0*S_6-15*Ia_2*S_4-20*Ia_3*S_3-15*Ia_4*S_2-6*Ia_5*S_1-
+Ia_6*S_0-389324319009523416701466660459714*Ia_1)*betaIa+(-15*Is_2*S_4-20*Is_3*
+S_3-15*Is_4*S_2-6*Is_5*S_1-Is_6*S_0-389324319009523416701466660459714*Is_1-\
+149788036374467487508166179777875*S_6)*betaIs+(-H_0*S_6-15*H_2*S_4-20*H_3*S_3-\
+15*H_4*S_2-6*H_5*S_1-H_6*S_0-389324319009523416701466660459714*H_1)*betaH-betaT
+*(S_0*T_6+6*S_1*T_5+15*S_2*T_4+20*S_3*T_3+15*S_4*T_2+S_6*T_0+
+389324319009523416701466660459714*T_1))*Ninv+(alphaEIa+alphaEIs)*E_6+E_7, (
+alphaHT+alphaHRd)*H_6+H_7-xi*Ia_6-alphaIsH*Is_6, -alphaEIa*E_6+(xi+alphaIaIs+
+alphaIaRu)*Ia_6+Ia_7, ((5*Ia_1*S_4+10*Ia_2*S_3+10*Ia_3*S_2+5*Ia_4*S_1+Ia_5*S_0+
+64887386501587236116911110076619*Ia_0)*betaIa+(5*Is_1*S_4+10*Is_2*S_3+10*Is_3*
+S_2+5*Is_4*S_1+Is_5*S_0+
+9719354209543879574841050699213950110679581771179104219651004625)*betaIs+(5*H_1
+*S_4+10*H_2*S_3+10*H_3*S_2+5*H_4*S_1+H_5*S_0+64887386501587236116911110076619*
+H_0)*betaH+10*(S_3*T_2+1/2*T_1*S_4+64887386501587236116911110076619/10*T_0+T_3*
+S_2+1/2*S_1*T_4+1/10*T_5*S_0)*betaT)*Ninv+S_6, -D_9+394195316697835021647301674\
+5059535888300324968305306404440610047654338022781975129802535710796167143841359\
+2328811227167401356962398449591518042769116737100180497733095683467050446051402\
+2323843383866106250388831822210778095870638427991042566615642250223548830852112\
+4590785558752043387253406248177975342792774955812158098534175213090370897716780\
+1022577892648890513217185897138888845610758457632561484346992922318977927298036\
+8461660242523916831123309203034434596287484614575180652441129168276012015386775\
+4738686480854320709443237001695483568578524531533145501387494482421112291823451\
+0215239877453764733634842534519433329707275330145185891767729312219559376916322\
+1203028182981593355071017489839521796364929083570078768991776763211888557449496\
+6979260404461743694526431590074, -Is_9*alphaIsD-T_9*alphaTD+D_10, -alphaEIs*E_8
+-alphaIaIs*Ia_8+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_8+Is_9, -alphaHT*H_8-
+alphaIsT*Is_8+(alphaTD+alphaTRd)*T_8+T_9, ((-Ia_0*S_7-7*Ia_1*S_6-35*Ia_3*S_4-35
+*Ia_4*S_3-21*Ia_5*S_2-7*Ia_6*S_1-Ia_7*S_0-1362635116533331958455133311608999*
+Ia_2)*betaIa+(-7*Is_1*S_6-35*Is_3*S_4-35*Is_4*S_3-21*Is_5*S_2-7*Is_6*S_1-Is_7*
+S_0-1362635116533331958455133311608999*Is_2-149788036374467487508166179777875*
+S_7)*betaIs+(-H_0*S_7-7*H_1*S_6-35*H_3*S_4-35*H_4*S_3-21*H_5*S_2-7*H_6*S_1-H_7*
+S_0-1362635116533331958455133311608999*H_2)*betaH-betaT*(S_0*T_7+7*S_1*T_6+21*
+S_2*T_5+35*S_3*T_4+35*S_4*T_3+7*S_6*T_1+S_7*T_0+
+1362635116533331958455133311608999*T_2))*Ninv+(alphaEIa+alphaEIs)*E_7+E_8, (
+alphaHT+alphaHRd)*H_7+H_8-xi*Ia_7-alphaIsH*Is_7, -alphaEIa*E_7+(xi+alphaIaIs+
+alphaIaRu)*Ia_7+Ia_8, ((Ia_0*S_6+15*Ia_2*S_4+20*Ia_3*S_3+15*Ia_4*S_2+6*Ia_5*S_1
++Ia_6*S_0+389324319009523416701466660459714*Ia_1)*betaIa+(15*Is_2*S_4+20*Is_3*
+S_3+15*Is_4*S_2+6*Is_5*S_1+Is_6*S_0+389324319009523416701466660459714*Is_1+
+149788036374467487508166179777875*S_6)*betaIs+(H_0*S_6+15*H_2*S_4+20*H_3*S_3+15
+*H_4*S_2+6*H_5*S_1+H_6*S_0+389324319009523416701466660459714*H_1)*betaH+15*(S_2
+*T_4+4/3*S_3*T_3+S_4*T_2+129774773003174472233822220153238/5*T_1+1/15*S_6*T_0+2
+/5*T_5*S_1+1/15*T_6*S_0)*betaT)*Ninv+S_7, -D_10-1095497451458908839514138915184\
+0805278804949850026686407126189332234975725312268205992494136226794357079664669\
+5545180655864375382194739360794402310648488194550441690596039107662355593598291\
+9337321285768582678416299361230489727880315039672084059006501998987826440038069\
+1476318168352339451551002307970747903930745085536957751361637250601371431670456\
+1414576034868440029906841653254332128940430759488417200568379887484104746704356\
+9175929824073694427533959631545762953198333479907405512711960976183527886774458\
+8596379620442112583623473433151401132304483926629048980823943197200237388145183\
+1009442412146412941228392632473629205265819353111107128723132389100747915983809\
+2503182220659338578250774190984283154472310469829755935739568568254711621422276\
+2348594250721079554670992027597679221275423944825484339041942400047914137680661\
+384704225786483851912383613381669171262764978, -Is_10*alphaIsD-T_10*alphaTD+
+D_11, -alphaEIs*E_9-alphaIaIs*Ia_9+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_9+
+Is_10, -alphaHT*H_9-alphaIsT*Is_9+(alphaTD+alphaTRd)*T_9+T_10, ((-Ia_0*S_8-8*
+Ia_1*S_7-28*Ia_2*S_6-70*Ia_4*S_4-56*Ia_5*S_3-28*Ia_6*S_2-8*Ia_7*S_1-Ia_8*S_0-\
+3633693644088885222547022164290664*Ia_3)*betaIa+(-8*Is_1*S_7-28*Is_2*S_6-70*
+Is_4*S_4-56*Is_5*S_3-28*Is_6*S_2-8*Is_7*S_1-Is_8*S_0-\
+3633693644088885222547022164290664*Is_3-149788036374467487508166179777875*S_8)*
+betaIs+(-H_0*S_8-8*H_1*S_7-28*H_2*S_6-70*H_4*S_4-56*H_5*S_3-28*H_6*S_2-8*H_7*
+S_1-H_8*S_0-3633693644088885222547022164290664*H_3)*betaH-betaT*(S_0*T_8+8*S_1*
+T_7+28*S_2*T_6+56*S_3*T_5+70*S_4*T_4+28*S_6*T_2+8*S_7*T_1+S_8*T_0+
+3633693644088885222547022164290664*T_3))*Ninv+(alphaEIa+alphaEIs)*E_8+E_9, (
+alphaHT+alphaHRd)*H_8+H_9-xi*Ia_8-alphaIsH*Is_8, -alphaEIa*E_8+(xi+alphaIaIs+
+alphaIaRu)*Ia_8+Ia_9, ((Ia_0*S_7+7*Ia_1*S_6+35*Ia_3*S_4+35*Ia_4*S_3+21*Ia_5*S_2
++7*Ia_6*S_1+Ia_7*S_0+1362635116533331958455133311608999*Ia_2)*betaIa+(7*Is_1*
+S_6+35*Is_3*S_4+35*Is_4*S_3+21*Is_5*S_2+7*Is_6*S_1+Is_7*S_0+
+1362635116533331958455133311608999*Is_2+149788036374467487508166179777875*S_7)*
+betaIs+(H_0*S_7+7*H_1*S_6+35*H_3*S_4+35*H_4*S_3+21*H_5*S_2+7*H_6*S_1+H_7*S_0+
+1362635116533331958455133311608999*H_2)*betaH+7*(S_1*T_6+3*S_2*T_5+5*S_3*T_4+5*
+S_4*T_3+194662159504761708350733330229857*T_2+S_6*T_1+1/7*S_7*T_0+1/7*T_7*S_0)*
+betaT)*Ninv+S_8, -D_11+30444670834912421332682793586640490818345651080388979706\
+8097541868554906585320015756348390609826029280403756429208290241904739576118427\
+5821343075525637370204412853817483088342730803770201917146653502251467980246397\
+0704432828767313075609928678029719577966944284772056412354648842832075941974455\
+2000038682943938726076486994886887672597561588394771416687469711860086321902180\
+5651587219673693419875598728225246166483518760159671435712422424913277369307649\
+5317418105683554030275622189058624366930016238204151598918399420541915857138180\
+7360785081770473934291905840275718776709077100168386794739963852812622103986606\
+5616922639343659005884161650551173096196079270743008230209444512159168308752196\
+5140109111156578377440058042224778143028820517172855377423813816605626471822920\
+2668133023635694925827396923915108154515347033443822677039514878233655264351802\
+4048628499141465303270633242978998212431806103295909410414278416497735505152791\
+3394714062950417757912119824673636746, -T_4-43367723326390382848792850715784105\
+4442981136364727985142936570946713223666281860482115016345036346697223648211417\
+5138365340773902973200863607768638192957810234680716582086041332777910698698929\
+6080198485202225394658156120852286847035194070872414034748595322429279148560573\
+646402686594944, -T_5+120522056876828097207101492819167416053821740688028251099\
+7969436150658166403625369168698941277051594144215685719606920742290701493628455\
+2947267978056559172999441379255644282925687808969449872120594849463626632696402\
+4775848895817405449599624207651795120030018100277774556618914581864313363578605\
+0473438158731056304328849466993134939929444955543972751154133404320083478508323\
+85497658974, -T_6-3349395605690512142273161046565035752631398482556258168013413\
+7506292139948800049045156375909878263708294042934391580562745322653256881126989\
+5016624771946806862308929420364657803972961103930655220274416725921838861454824\
+1818618691921961199992657715553805092679453583247487112756136987904004678599031\
+7385848822595501045061605550565710104487269499967667112292499778720627017450094\
+0024828930500303216213202725879557895347045702746265880110412698508297579830436\
+255264834017607100866088, -T_7+930821396027452215276982083824159214162825210746\
+8346388825526974836273383216663898200863360627312675676520514512513233417690508\
+1056230382659557296068452791207969490090080132137967897739628571368272410945865\
+1581245212509583241879128835944585212955697601609395929495419580829585252356774\
+6259285293342695333967821751929819575724498185727941725777103870745389493576004\
+8211991474179618175843886781813560758345417391539748912845492364776798906626519\
+8510086151272770896765426534593307369988407780759603847331258932231274442590154\
+115138376272236831818101930961879203764339408625341350, -T_8-258682035000721256\
+5562707669970884990847662369944936538819222115642981528171522282206364839258248\
+7793158130445238087974307749847963342439325977875473324652350777068074305979573\
+7682501317603651790849288857362451543476600434419229232744180939102879880731210\
+1101410445502241163700645522871026789797462510816376539144571502835229943110229\
+1658790510625281820894758876396161650360954876930070509746530175831482606166032\
+1861819534555828796382981940638176336911550975372627467197895218363149842047794\
+3928948533110656949894558201063892516717670156066779027925623171138538556607618\
+6401538925472685993357684585632410224442178470469124192084311375046219799555892\
+69172660328288889977696, -T_9+7188961869344572730353774620244379458651963243384\
+8356765917946959892073247972977813672673688404368106706778098271537919156555391\
+3313139526651532109705383537359611527668012131167060607320073202879871817549130\
+7040160747591602709819934970564262651324435242735752009948621573171124104566921\
+8208333818725295625789481282838387324104922465909298565555606374056242682365464\
+5684789694699807546968035252182159604943788698443390829473814189782718549765969\
+3568173347821798940851264462611255673471197349119696721939740920165388528856544\
+4326609362665068548155255927945584156980128342959206142151573923502587730612660\
+5248359846543000450047045184115419481609041469470189291578834573471668439158134\
+8747656058211055424481167768476288590208445140644295449664677474498127677631147\
+003269150, -T_10-19978647824827153649478954652060713225811092669286534129589455\
+2713092560917861086463892896576897806927331401526181448850502606621279030685111\
+5572402190718052482994176733104304152114844207761150644004729042463578398438547\
+3968121651667907529736130052772040080168753909158682513112556751428523506516820\
+7261716599267955073340809123494591512627124350027408453650695504063515435984848\
+5659583126843602217768866300605314160559020358814867862482347875168118985157368\
+3599010994508849864803237913463757071849730237883171213362059425756971534469901\
+9233644522425078400296390765320874866956056837728844390263471078737182396364125\
+2764533607252187982341250424871753088336477662001656213331181857464489099416944\
+2145252601353841575862821392263184469571208796394901072897597487296200862060890\
+4140547669676211838814350416242371573199344817115242065281449205991792020955982\
+48860733710616, -Rd_3+669968650017612736535692507341329206038873446537560128426\
+857395330987670435111142713034905099845571009384684507460453102987330470, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -H_5
++388849244025894457342631131862821814045764259837242367112667814750121362770829\
+9828205420607173173110432165886423464244794491591876139041868297583384907820628\
+0799432757901759212202408322193361358314413608599267540515762499361676411951395\
+4210452176545471938411506129266945166427792809669236192082492338553934527579794\
+510744854127720343181000493345864784834213069432041496875201554480066, -H_6-108\
+0640326730777403602215493138078542450531263102772781732665642241603277797509980\
+5332982508336450202236450361520567909067403397234634854436618698887000955070887\
+2865181639786448998389834100814740391200658666637578327461320734042484969656632\
+2528627857560285189612074698418897542583139445283920075014493790984252282723772\
+3067747748154051671681810273198068215514925524283984381884704242730900545284958\
+0874569479786106291431639941866154982176713496574943215212699658847542815336731\
+1422, -H_7+30031780534438577277035186721061796603015188196252354041020270775364\
+7200733077271899286473248280074690998981155376851461079785398198008950056917447\
+4603804015619716079092986358346697277677930832530800079478530127601103861273271\
+8579959624052447174037290893178929310333942277513342545934968138671263439418697\
+8817121179800199819305306537003755609486001829499066653882200232224427976329140\
+0131132194907370735921750876724277760583314775741790842145906739296146002570628\
+9239195342601698022789662388461149683864957172809811588273777554911081266191174\
+90064381307987418262752559326701234, -H_8-8346050205225946271854720357227595831\
+8134364252877960864803880295421959012540828348227840391826092291573898371803042\
+1727933233253700813834473706876002572750766399726846375388825455587635876307285\
+4043912157925469549222021766925549927539583921881169367579771136364205207024080\
+1166451462036399079897443769319528639749337811743482946542915028511416086034181\
+3000727946184404517786827110064803598344552357661930105913334337052643754064853\
+1967151556399177579729987110771791376399540351026141720462195986504729094056534\
+0357247807707737332122822374124279686596763425705202749866280061647911609228396\
+3254365641358238140535129324915794614075053776158883015677858702403135474909695\
+9838, -H_9+23194280455091318311388922947662610590754603213871501974279112654641\
+9376804838917175103596563235928236902158151190745398650368646929691855660259116\
+0532334435410154130248086546851841296126780847172540012270759871127409238467162\
+6686877861488671681017322244896595663619359434321676842261700236559269558234890\
+6301772658643257219856509582943413912879529118441299977649868079866147971151493\
+8921715320161790178537187986640420182254560666086895030271833628158638327073098\
+5966943123981133151033533427535108682581941159263392427836090648016861137592607\
+8245064021852359432183098303672882246948462906009006532206385708126518944693374\
+6308134027815651704275200053099792540760624956456476390084417257562860358088876\
+6648424475214711929421596450524063845985885462826243475143555089741266, z_aux-1
+]
 
-SubsByDepth Usage (real, cpu, memory):	246.484,	265.687,	27079436744
+SubsByDepth Usage (real, cpu, memory):	223.508,	244.602,	24436209616
 
 
 =======================================================
@@ -243,9 +863,6 @@ Parameters in equations:  [Ninv, alphaHT, alphaTD, betaH, betaIa, betaIs, betaT,
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  1056369600
-Orders of prolongations of the outputs (beta) =  [12, 11, 4, 28, 10]
-Orders of prolongations of the state variables (alpha) =  [10, 10, 11, 12, 9, 10, 4, 11]
 
 =======================================================
 3. Assessing local identifiability
@@ -254,31 +871,602 @@ Orders of prolongations of the state variables (alpha) =  [10, 10, 11, 12, 9, 10
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  114896309900000000000000000000000
-Random sample for the outputs and inputs is generated from  [Ninv = 100918643252896090607661742530396, alphaHT = 10819320889258747076570363523947, alphaTD = 44639897896548874275799299989614, betaH = 38520492058927411589028511875736, betaIa = 31785820895567414752766491965400, betaIs = 30113388760332260191540579306923, betaT = 79316139331288882501713383061078, xi = 92418761456024511936005949300439, alphaEIa = 23173837932024041237344938837948, alphaEIs = 114823053614063663436018277713978, alphaHRd = 18673198230605952686238530354951, alphaIaIs = 88161223908492867758225907354109, alphaIaRu = 21540828436078698574832455216479, alphaIsD = 70340520636122010136920276210625, alphaIsH = 50824614620436969243141727464905, alphaIsRu = 46745482676553562707050243247121, alphaIsT = 52242007395381990358148573299954, alphaTRd = 17797804590188558520418954143097, E_0 = 103816338814159657926579427242821, H_0 = 101566549651694051601577657521007, Is_0 = 9310734554894934612596747080294, D_0 = 34890520623402461798647799255960, S_0 = 42471431420629737709550181716683, Ia_0 = 18167656163723597170546057285847, Rd_0 = 78072490346802882280979780622397, T_0 = 51890786495390637064597690666496]
-The polynomial system widehat{E^t} contains  134 equations in  95  variables
 Locally identifiable paramters:  [Ninv, alphaHT, alphaTD, betaH, betaT, alphaHRd, alphaTRd, H(0), D(0), Rd(0), T(0)]
 Nonidentifiable parameter:  [E(0), Ia(0), Is(0), S(0), betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  153195079800000000000000000000000
-Random sample for the outputs and inputs is generated from  [Ninv = 871283682027851407260133092971, alphaHT = 120519432614703475278535363943391, alphaTD = 127721872977604303472181047574837, betaH = 15191131974398746359216030198553, betaIa = 39143406368425204285023599381244, betaIs = 66991665396965877333617077062361, betaT = 137141823136731911584319140694517, xi = 106114059036857555126878354999372, alphaEIa = 42964677101064322295751505828510, alphaEIs = 19666664005694160546783597643174, alphaHRd = 131616829837251518571887037600577, alphaIaIs = 104457944444947787104063767540182, alphaIaRu = 105940028361722816106717969888569, alphaIsD = 139565805613073570521727015653061, alphaIsH = 19175646129552917204921658490304, alphaIsRu = 19770889478069522585671501713299, alphaIsT = 72812939236280395121812534944333, alphaTRd = 56315459266365140017961083400269, E_0 = 1310519284164549215406049935127, H_0 = 10047284739039923172578533364951, Is_0 = 93002544771366489798213185806726, D_0 = 61148675305585823026042349660797, S_0 = 4361161158400551558823357708232, Ia_0 = 17305493612849290701771169948208, Rd_0 = 68546928670802551346558429426831, T_0 = 69183310522972588717834625485928]
-The polynomial system widehat{E^t} contains  134 equations in  95  variables
-Variable ordering to be used for Groebner basis computation [D_11, Is_10, T_10, D_10, Is_9, Ia_9, T_9, H_9, E_9, D_9, Is_8, Ia_8, T_8, S_8, H_8, E_8, D_8, Is_7, Ia_7, T_7, S_7, H_7, E_7, D_7, Is_6, Ia_6, T_6, S_6, H_6, E_6, D_6, Is_5, Ia_5, T_5, S_5, H_5, E_5, D_5, Is_4, Ia_4, T_4, S_4, H_4, E_4, D_4, Rd_3, Is_3, Ia_3, T_3, S_3, H_3, E_3, D_3, Rd_2, Is_2, Ia_2, T_2, S_2, H_2, E_2, D_2, Rd_1, Is_1, Ia_1, T_1, S_1, H_1, E_1, D_1, Rd_0, Is_0, Ia_0, T_0, S_0, H_0, E_0, D_0, z_aux, w_aux, Ninv, alphaEIa, alphaEIs, alphaHRd, alphaHT, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTD, alphaTRd, betaH, betaIa, betaIs, betaT, xi]
-Prep CPU Time (sub_transc=false):	 13.732
-Prep Real Elapsed Time (sub_transc=false):	 11.923
-memory used=1.59GiB, alloc change=-4.00MiB, cpu time=13.73s, real time=11.92s, gc time=3.23s
+Prep CPU Time (sub_transc=false):	 14.008
+Prep Real Elapsed Time (sub_transc=false):	 11.785
+memory used=1.59GiB, alloc change=-4.00MiB, cpu time=14.01s, real time=11.79s, gc time=4.17s
 
 
-GetPolySystem Usage (real, cpu, memory):	11.924,	13.733,	1703501328
+GetPolySystem Usage (real, cpu, memory):	11.789,	14.011,	1711963792
 
-States for substitution:	[alphaHRd = 1, alphaHT = 1, alphaEIa = 2, alphaIaRu = 2, Is_ = 1, T_ = 0, alphaIsRu = 2, alphaTRd = 1, Rd_ = 0, E_ = 2, H_ = 0, xi = 1, alphaTD = 1, Ia_ = 1, D_ = 0, Ninv = 0, alphaIsH = 1, betaIs = 3, S_ = 3, alphaIaIs = 2, alphaIsT = 1, betaT = 3, alphaIsD = 1, betaIa = 3, betaH = 3, alphaEIs = 2]
+States for substitution:	[T_ = 0, Is_ = 1, Ninv = 0, Rd_ = 0, alphaEIs = 2, H_ = 0, alphaIaIs = 2, Ia_ = 1, alphaTD = 1, alphaHT = 1, S_ = 3, betaIs = 3, alphaIsH = 1, xi = 1, alphaHRd = 1, alphaIsT = 1, alphaTRd = 1, alphaIsRu = 2, betaT = 3, D_ = 0, alphaIsD = 1, betaIa = 3, alphaIaRu = 2, E_ = 2, betaH = 3, alphaEIa = 2]
 NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
-Substitutions:	[Is_ = 2, T_ = 1, E_ = 3, H_ = 1, Ia_ = 2, z_aux = 3, S_ = 4, betaT = 4, betaH = 4]
-memory used=1.61GiB, alloc change=-4.00MiB, cpu time=14.05s, real time=12.24s, gc time=3.23s
+Substitutions:	[z_aux = 3, T_ = 1, Is_ = 2, H_ = 1, Ia_ = 2, S_ = 4, betaT = 4, E_ = 3, betaH = 4]
+memory used=1.62GiB, alloc change=-4.00MiB, cpu time=14.25s, real time=12.03s, gc time=4.17s
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {E_0 =
+E_0^3, E_1 = E_1^3, E_2 = E_2^3, E_3 = E_3^3, E_4 = E_4^3, E_5 = E_5^3, E_6 = 
+E_6^3, E_7 = E_7^3, E_8 = E_8^3, E_9 = E_9^3, H_0 = H_0, H_1 = H_1, H_2 = H_2,
+H_3 = H_3, H_4 = H_4, H_5 = H_5, H_6 = H_6, H_7 = H_7, H_8 = H_8, H_9 = H_9, 
+Ia_0 = Ia_0^2, Ia_1 = Ia_1^2, Ia_2 = Ia_2^2, Ia_3 = Ia_3^2, Ia_4 = Ia_4^2, Ia_5
+= Ia_5^2, Ia_6 = Ia_6^2, Ia_7 = Ia_7^2, Ia_8 = Ia_8^2, Ia_9 = Ia_9^2, Is_0 = 
+Is_0^2, Is_1 = Is_1^2, Is_10 = Is_10^2, Is_2 = Is_2^2, Is_3 = Is_3^2, Is_4 = 
+Is_4^2, Is_5 = Is_5^2, Is_6 = Is_6^2, Is_7 = Is_7^2, Is_8 = Is_8^2, Is_9 = Is_9
+^2, S_0 = S_0^4, S_1 = S_1^4, S_2 = S_2^4, S_3 = S_3^4, S_4 = S_4^4, S_5 = S_5^
+4, S_6 = S_6^4, S_7 = S_7^4, S_8 = S_8^4, T_0 = T_0, T_1 = T_1, T_10 = T_10, 
+T_2 = T_2, T_3 = T_3, T_4 = T_4, T_5 = T_5, T_6 = T_6, T_7 = T_7, T_8 = T_8, 
+T_9 = T_9, betaH = betaH^4, betaT = betaT^4, z_aux = z_aux^3}, [
+47266692176107580598237489979606-D_0, -Is_0^2*alphaIsD-T_0*alphaTD+D_1, 
+10861732769836532387292062788829-T_0, -Is_0^2*alphaIsT-H_0*alphaHT+T_0*alphaTD+
+T_0*alphaTRd+T_1, 4683574323745467859137568414589-Rd_0, -H_0*alphaHRd-T_0*
+alphaTRd+Rd_1, 63422133896677549744076641499235-Ninv, 
+91762504221787157200755157441242-H_0, -Ia_0^2*xi-Is_0^2*alphaIsH+H_0*alphaHT+
+H_0*alphaHRd+H_1, -D_1+
+2153780157644976516572514449975476789190629772112784702592889029, -Is_1^2*
+alphaIsD-T_1*alphaTD+D_2, -E_0^3*alphaEIs-Ia_0^2*alphaIaIs+Is_0^2*alphaIsD+Is_0
+^2*alphaIsH+Is_0^2*alphaIsRu+Is_0^2*alphaIsT+Is_1^2, -T_1+
+11548017655960450684461073218560211440264078432638940951411841696, -alphaHT*H_1
+-alphaIsT*Is_1^2+(alphaTD+alphaTRd)*T_1+T_2, -Rd_1+
+7408321526330621790913474438139319731160878691465187933172424133, -H_1*alphaHRd
+-T_1*alphaTRd+Rd_2, -H_1-\
+10567708450709538549101838873250984204322974766642811994976633642, (alphaHT+
+alphaHRd)*H_1+H_2-xi*Ia_1^2-alphaIsH*Is_1^2, -E_0^3*alphaEIa+Ia_0^2*xi+Ia_0^2*
+alphaIaIs+Ia_0^2*alphaIaRu+Ia_1^2, -D_2-163009961558144726410903984571853804925\
+80261751933903725068749102348970807951810163997492454210, -Is_2^2*alphaIsD-T_2*
+alphaTD+D_3, -alphaEIs*E_1^3-alphaIaIs*Ia_1^2+(alphaIsD+alphaIsH+alphaIsRu+
+alphaIsT)*Is_1^2+Is_2^2, -H_0*Ninv*S_0^4*betaH^4-Ninv*S_0^4*T_0*betaT^4-Ia_0^2*
+Ninv*S_0^4*betaIa-Is_0^2*Ninv*S_0^4*betaIs+E_0^3*alphaEIa+E_0^3*alphaEIs+E_1^3,
+-T_2-26449363439105097276961152349160885069420248540232224037812360117598983543\
+99759028049712561236400, -alphaHT*H_2-alphaIsT*Is_2^2+(alphaTD+alphaTRd)*T_2+
+T_3, -Rd_2+92191175766736944371535308230304541910138591426023811871312437043869\
+356908024850410724662846992, -H_2*alphaHRd-T_2*alphaTRd+Rd_3, -H_2+969704761903\
+2190384672464225799816372053814989118704740158144936515431742975351586239779935\
+54966, (alphaHT+alphaHRd)*H_2+H_3-xi*Ia_2^2-alphaIsH*Is_2^2, -alphaEIa*E_1^3+(
+xi+alphaIaIs+alphaIaRu)*Ia_1^2+Ia_2^2, -D_3+10475556285116624482290337885428240\
+4743676475873822814191138363192110430590388708530510638596950394023963918166112\
+736760909090854185171616092385347213963408221631499721019201456026020100014309,
+-Is_3^2*alphaIsD-T_3*alphaTD+D_4, -alphaEIs*E_2^3-alphaIaIs*Ia_2^2+(alphaIsD+
+alphaIsH+alphaIsRu+alphaIsT)*Is_2^2+Is_3^2, ((-H_1*betaH^4-T_1*betaT^4-Ia_1^2*
+betaIa-Is_1^2*betaIs)*S_0^4-S_1^4*(H_0*betaH^4+T_0*betaT^4+Ia_0^2*betaIa+Is_0^2
+*betaIs))*Ninv+(alphaEIa+alphaEIs)*E_1^3+E_2^3, H_0*Ninv*S_0^4*betaH^4+Ninv*S_0
+^4*T_0*betaT^4+Ia_0^2*Ninv*S_0^4*betaIa+Is_0^2*Ninv*S_0^4*betaIs+S_1^4, -T_3+17\
+8036290238705518003480824378272056625400535133500220402471247715472605980984867\
+7138016806251598031197581782451835160313099760549734385489108400052172536374390\
+23534773875363769123446899532672, -alphaHT*H_3-alphaIsT*Is_3^2+(alphaTD+
+alphaTRd)*T_3+T_4, -H_3+2807335758783069934677230908045263282670428363431610618\
+4194776224275950869103852984779927069744433985505989765364153356285257104773355\
+8192116328666040791431666948238975115036863491896880846745, (alphaHT+alphaHRd)*
+H_3+H_4-xi*Ia_3^2-alphaIsH*Is_3^2, -alphaEIa*E_2^3+(xi+alphaIaIs+alphaIaRu)*
+Ia_2^2+Ia_3^2, -D_4-40592757691312904019524324805641029436614558627350926141921\
+2529519209226074620311294618153194147102763320255053939818373235790321394337475\
+7785814685425515362780958825306372662007477755941604786226669865428904657921507\
+7070112356326856965382807938531870352527391680250426497973666438974814, -Is_4^2
+*alphaIsD-T_4*alphaTD+D_5, -alphaEIs*E_3^3-alphaIaIs*Ia_3^2+(alphaIsD+alphaIsH+
+alphaIsRu+alphaIsT)*Is_3^2+Is_4^2, ((-H_2*betaH^4-T_2*betaT^4-Ia_2^2*betaIa-
+Is_2^2*betaIs)*S_0^4+(-2*H_1*betaH^4-2*T_1*betaT^4-2*Ia_1^2*betaIa-2*Is_1^2*
+betaIs)*S_1^4-S_2^4*(H_0*betaH^4+T_0*betaT^4+Ia_0^2*betaIa+Is_0^2*betaIs))*Ninv
++(alphaEIa+alphaEIs)*E_2^3+E_3^3, ((H_1*betaH^4+T_1*betaT^4+Ia_1^2*betaIa+Is_1^
+2*betaIs)*S_0^4+S_1^4*(H_0*betaH^4+T_0*betaT^4+Ia_0^2*betaIa+Is_0^2*betaIs))*
+Ninv+S_2^4, -H_4-10878419924710520463084062801754152624378776973545285649409706\
+2673073932249454390977269878329406363449361150493424064763551425458337378212973\
+9139649739092766891599623590415805152353835286249362964891218235542857261932515\
+61861617580677065933122099516753596359506396059970512204060924939278, (alphaHT+
+alphaHRd)*H_4+H_5-xi*Ia_4^2-alphaIsH*Is_4^2, -alphaEIa*E_3^3+(xi+alphaIaIs+
+alphaIaRu)*Ia_3^2+Ia_4^2, -D_5+157296847264020811109909551729824023642854747901\
+1240348396916938334044486261747205962342146587655334802982826695586992612877091\
+0637449748027225355981984019724551716914640981761589926976677644479030603557791\
+3243715823549656923662683735962312496405976391554286446002615146895737025928051\
+1955790239934767945407334135077499859093621296012237586719110793322319850369543\
+6294496083213923412, -Is_5^2*alphaIsD-T_5*alphaTD+D_6, -alphaEIs*E_4^3-
+alphaIaIs*Ia_4^2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_4^2+Is_5^2, -alphaHT
+*H_4-alphaIsT*Is_4^2+(alphaTD+alphaTRd)*T_4+T_5, ((-Ia_0^2*S_3^4-3*Ia_1^2*S_2^4
+-3*Ia_2^2*S_1^4-Ia_3^2*S_0^4)*betaIa+(-Is_0^2*S_3^4-3*Is_1^2*S_2^4-3*Is_2^2*S_1
+^4-Is_3^2*S_0^4)*betaIs+(-H_0*S_3^4-3*H_1*S_2^4-3*H_2*S_1^4-H_3*S_0^4)*betaH^4-
+betaT^4*(S_0^4*T_3+3*S_1^4*T_2+3*S_2^4*T_1+S_3^4*T_0))*Ninv+(alphaEIa+alphaEIs)
+*E_3^3+E_4^3, ((H_2*betaH^4+T_2*betaT^4+Ia_2^2*betaIa+Is_2^2*betaIs)*S_0^4+(2*
+H_1*betaH^4+2*T_1*betaT^4+2*Ia_1^2*betaIa+2*Is_1^2*betaIs)*S_1^4+S_2^4*(H_0*
+betaH^4+T_0*betaT^4+Ia_0^2*betaIa+Is_0^2*betaIs))*Ninv+S_3^4, -D_6-609524939087\
+7351744446379305437969682564143851193034003449869001079872906974912707170114039\
+6925616163318524387130067893296309802019752071360080130159275034859654682734893\
+6404199299913230808129759240475360304053242786989085749035156921045311136452251\
+6209119622299472621671526627683376973643597259694623113968254964436014088567860\
+9099660671284532136755348200925898464701407891589421340999922958475228430871525\
+68868866116178781859226136393131035505391613006205747463609532823954700, -Is_6^
+2*alphaIsD-T_6*alphaTD+D_7, -alphaEIs*E_5^3-alphaIaIs*Ia_5^2+(alphaIsD+alphaIsH
++alphaIsRu+alphaIsT)*Is_5^2+Is_6^2, -alphaHT*H_5-alphaIsT*Is_5^2+(alphaTD+
+alphaTRd)*T_5+T_6, ((-Ia_0^2*S_4^4-4*Ia_1^2*S_3^4-6*Ia_2^2*S_2^4-4*Ia_3^2*S_1^4
+-Ia_4^2*S_0^4)*betaIa+(-Is_0^2*S_4^4-4*Is_1^2*S_3^4-6*Is_2^2*S_2^4-4*Is_3^2*S_1
+^4-Is_4^2*S_0^4)*betaIs+(-H_0*S_4^4-4*H_1*S_3^4-6*H_2*S_2^4-4*H_3*S_1^4-H_4*S_0
+^4)*betaH^4-6*betaT^4*(S_2^4*T_2+2/3*S_3^4*T_1+1/6*S_4^4*T_0+2/3*S_1^4*T_3+1/6*
+T_4*S_0^4))*Ninv+(alphaEIa+alphaEIs)*E_4^3+E_5^3, -alphaEIa*E_4^3+(xi+alphaIaIs
++alphaIaRu)*Ia_4^2+Ia_5^2, ((Ia_0^2*S_3^4+3*Ia_1^2*S_2^4+3*Ia_2^2*S_1^4+Ia_3^2*
+S_0^4)*betaIa+(Is_0^2*S_3^4+3*Is_1^2*S_2^4+3*Is_2^2*S_1^4+Is_3^2*S_0^4)*betaIs+
+(H_0*S_3^4+3*H_1*S_2^4+3*H_2*S_1^4+H_3*S_0^4)*betaH^4+betaT^4*(S_0^4*T_3+3*S_1^
+4*T_2+3*S_2^4*T_1+S_3^4*T_0))*Ninv+S_4^4, -D_7+23619078057318876841478099350182\
+0499616742371793858885122071202101394962677431845033129531232318739507709967173\
+4062867188886732529950994217430732874514217225710850149717141768931055300990040\
+1440134316588490316716037567051833748407117357718317509210325722337522206188625\
+6925308919632271713376385300440407802272815467119719729774626738737289650278126\
+3358804129906468088283040891337289545735084642511850762644384855622729656324099\
+0770362051532785894657507856490006094915160731681975210894509938610626852503537\
+48227624995562701926196148095666402035928299839720091299425777092644, -Is_7^2*
+alphaIsD-T_7*alphaTD+D_8, -alphaEIs*E_6^3-alphaIaIs*Ia_6^2+(alphaIsD+alphaIsH+
+alphaIsRu+alphaIsT)*Is_6^2+Is_7^2, -alphaHT*H_6-alphaIsT*Is_6^2+(alphaTD+
+alphaTRd)*T_6+T_7, ((-Ia_0^2*S_5^4-5*Ia_1^2*S_4^4-10*Ia_2^2*S_3^4-10*Ia_3^2*S_2
+^4-5*Ia_4^2*S_1^4-Ia_5^2*S_0^4)*betaIa+(-Is_0^2*S_5^4-5*Is_1^2*S_4^4-10*Is_2^2*
+S_3^4-10*Is_3^2*S_2^4-5*Is_4^2*S_1^4-Is_5^2*S_0^4)*betaIs+(-H_0*S_5^4-5*H_1*S_4
+^4-10*H_2*S_3^4-10*H_3*S_2^4-5*H_4*S_1^4-H_5*S_0^4)*betaH^4-5*(S_1^4*T_4+2*T_3*
+S_2^4+2*S_3^4*T_2+T_1*S_4^4+1/5*T_0*S_5^4+1/5*T_5*S_0^4)*betaT^4)*Ninv+(
+alphaEIa+alphaEIs)*E_5^3+E_6^3, (alphaHT+alphaHRd)*H_5+H_6-xi*Ia_5^2-alphaIsH*
+Is_5^2, -alphaEIa*E_5^3+(xi+alphaIaIs+alphaIaRu)*Ia_5^2+Ia_6^2, ((Ia_0^2*S_4^4+
+4*Ia_1^2*S_3^4+6*Ia_2^2*S_2^4+4*Ia_3^2*S_1^4+Ia_4^2*S_0^4)*betaIa+(Is_0^2*S_4^4
++4*Is_1^2*S_3^4+6*Is_2^2*S_2^4+4*Is_3^2*S_1^4+Is_4^2*S_0^4)*betaIs+(H_0*S_4^4+4
+*H_1*S_3^4+6*H_2*S_2^4+4*H_3*S_1^4+H_4*S_0^4)*betaH^4+betaT^4*(S_0^4*T_4+4*S_1^
+4*T_3+6*S_2^4*T_2+4*S_3^4*T_1+S_4^4*T_0))*Ninv+S_5^4, -D_8-91523875809357722960\
+7252536358810806300980749546971983427140209177387082127627724011918911343214108\
+7355883728004056663314441792816342853716652939643457726916794463488193829530386\
+5558606661221783896306296686004338974514519016034589402086494116543720774555508\
+1527504132954641356921490003505715899034822816071264679621252736768007226593166\
+0852251133462860127693086684254011963849659553431615644685819875500182650369834\
+2090001253739892600019801239265915602345263474774688547015344174641614718494411\
+4437538633533291186563593156450855775535423661803274108689895495866153292886710\
+5499326859928638672777853990226145205988066619545546918069945744852124287373929\
+27617368247135584, -Is_8^2*alphaIsD-T_8*alphaTD+D_9, -alphaEIs*E_7^3-alphaIaIs*
+Ia_7^2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_7^2+Is_8^2, -alphaHT*H_7-
+alphaIsT*Is_7^2+(alphaTD+alphaTRd)*T_7+T_8, ((-Ia_0^2*S_6^4-6*Ia_1^2*S_5^4-15*
+Ia_2^2*S_4^4-20*Ia_3^2*S_3^4-15*Ia_4^2*S_2^4-6*Ia_5^2*S_1^4-Ia_6^2*S_0^4)*
+betaIa+(-Is_0^2*S_6^4-6*Is_1^2*S_5^4-15*Is_2^2*S_4^4-20*Is_3^2*S_3^4-15*Is_4^2*
+S_2^4-6*Is_5^2*S_1^4-Is_6^2*S_0^4)*betaIs+(-H_0*S_6^4-6*H_1*S_5^4-15*H_2*S_4^4-\
+20*H_3*S_3^4-15*H_4*S_2^4-6*H_5*S_1^4-H_6*S_0^4)*betaH^4-betaT^4*(S_0^4*T_6+6*
+S_1^4*T_5+15*S_2^4*T_4+20*S_3^4*T_3+15*S_4^4*T_2+6*S_5^4*T_1+S_6^4*T_0))*Ninv+(
+alphaEIa+alphaEIs)*E_6^3+E_7^3, (alphaHT+alphaHRd)*H_6+H_7-xi*Ia_6^2-alphaIsH*
+Is_6^2, -alphaEIa*E_6^3+(xi+alphaIaIs+alphaIaRu)*Ia_6^2+Ia_7^2, ((Ia_0^2*S_5^4+
+5*Ia_1^2*S_4^4+10*Ia_2^2*S_3^4+10*Ia_3^2*S_2^4+5*Ia_4^2*S_1^4+Ia_5^2*S_0^4)*
+betaIa+(Is_0^2*S_5^4+5*Is_1^2*S_4^4+10*Is_2^2*S_3^4+10*Is_3^2*S_2^4+5*Is_4^2*
+S_1^4+Is_5^2*S_0^4)*betaIs+(H_0*S_5^4+5*H_1*S_4^4+10*H_2*S_3^4+10*H_3*S_2^4+5*
+H_4*S_1^4+H_5*S_0^4)*betaH^4+10*(S_3^4*T_2+1/2*T_1*S_4^4+1/10*T_0*S_5^4+T_3*S_2
+^4+1/2*S_1^4*T_4+1/10*T_5*S_0^4)*betaT^4)*Ninv+S_6^4, -D_9+35465481856820659643\
+8532683815896834337539370892282869821572781812442104516165666372259749012151347\
+6947521973421955191073788689819974703460991484558743556650181577633592727146895\
+0872727280710302350768588828171826059402103329083867551338938789935553924417012\
+5847108395078124224018766156511993135858586306469933093726341879548682398867631\
+4579608727337237057715552393832748226839439434637631544202966757652199252562331\
+8602069429873671028987286386966850619069088255878944694811983622342403592178499\
+0887372505805816253666644649767411379210556638080010853810720278101443711788449\
+9341715525376783847742214347266922119911601715805061794968166622526277508283182\
+8515261679590039602395171836627501053739272719404001999381122640074088148057699\
+4464967857554697112918698524687302, -Is_9^2*alphaIsD-T_9*alphaTD+D_10, -
+alphaEIs*E_8^3-alphaIaIs*Ia_8^2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_8^2+
+Is_9^2, -alphaHT*H_8-alphaIsT*Is_8^2+(alphaTD+alphaTRd)*T_8+T_9, ((-Ia_0^2*S_7^
+4-7*Ia_1^2*S_6^4-21*Ia_2^2*S_5^4-35*Ia_3^2*S_4^4-35*Ia_4^2*S_3^4-21*Ia_5^2*S_2^
+4-7*Ia_6^2*S_1^4-Ia_7^2*S_0^4)*betaIa+(-Is_0^2*S_7^4-7*Is_1^2*S_6^4-21*Is_2^2*
+S_5^4-35*Is_3^2*S_4^4-35*Is_4^2*S_3^4-21*Is_5^2*S_2^4-7*Is_6^2*S_1^4-Is_7^2*S_0
+^4)*betaIs+(-H_0*S_7^4-7*H_1*S_6^4-21*H_2*S_5^4-35*H_3*S_4^4-35*H_4*S_3^4-21*
+H_5*S_2^4-7*H_6*S_1^4-H_7*S_0^4)*betaH^4-betaT^4*(S_0^4*T_7+7*S_1^4*T_6+21*S_2^
+4*T_5+35*S_3^4*T_4+35*S_4^4*T_3+21*S_5^4*T_2+7*S_6^4*T_1+S_7^4*T_0))*Ninv+(
+alphaEIa+alphaEIs)*E_7^3+E_8^3, (alphaHT+alphaHRd)*H_7+H_8-xi*Ia_7^2-alphaIsH*
+Is_7^2, -alphaEIa*E_7^3+(xi+alphaIaIs+alphaIaRu)*Ia_7^2+Ia_8^2, ((Ia_0^2*S_6^4+
+6*Ia_1^2*S_5^4+15*Ia_2^2*S_4^4+20*Ia_3^2*S_3^4+15*Ia_4^2*S_2^4+6*Ia_5^2*S_1^4+
+Ia_6^2*S_0^4)*betaIa+(Is_0^2*S_6^4+6*Is_1^2*S_5^4+15*Is_2^2*S_4^4+20*Is_3^2*S_3
+^4+15*Is_4^2*S_2^4+6*Is_5^2*S_1^4+Is_6^2*S_0^4)*betaIs+(H_0*S_6^4+6*H_1*S_5^4+
+15*H_2*S_4^4+20*H_3*S_3^4+15*H_4*S_2^4+6*H_5*S_1^4+H_6*S_0^4)*betaH^4+15*(S_2^4
+*T_4+4/3*S_3^4*T_3+S_4^4*T_2+2/5*S_5^4*T_1+1/15*S_6^4*T_0+2/5*T_5*S_1^4+1/15*
+T_6*S_0^4)*betaT^4)*Ninv+S_7^4, -D_10-13742866462041519521365216770144615131157\
+4061861641211545903658193167892435176624090088536561681944775535898949042093053\
+0471418067244640417723550020772556998904205860302908046836079869802171643603865\
+8816594232558195907016523312718155930044333836721999599122659154449840844247721\
+9223688886248102217485451088603393597155422782484278252112022783463519657271178\
+0085663260696132664011438908572727609310457708515631952134926412785832070425445\
+2862580291309409140424964023778442120193719629880223454527916988875766222834089\
+6686880656726990947614295865575205828330144940244938654040277127697397522303748\
+6260079597238959691966465573414426195335016925207136948929974957979639409568532\
+1972203945655772620126735747947256178096189803657292630934243442175079410926119\
+1385862684158471660024263547186795170270137062565089823858231924902849084189093\
+799342367994708536692253987680, -Is_10^2*alphaIsD-T_10*alphaTD+D_11, -alphaEIs*
+E_9^3-alphaIaIs*Ia_9^2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_9^2+Is_10^2, -
+alphaHT*H_9-alphaIsT*Is_9^2+(alphaTD+alphaTRd)*T_9+T_10, ((-Ia_0^2*S_8^4-8*Ia_1
+^2*S_7^4-28*Ia_2^2*S_6^4-56*Ia_3^2*S_5^4-70*Ia_4^2*S_4^4-56*Ia_5^2*S_3^4-28*
+Ia_6^2*S_2^4-8*Ia_7^2*S_1^4-Ia_8^2*S_0^4)*betaIa+(-Is_0^2*S_8^4-8*Is_1^2*S_7^4-\
+28*Is_2^2*S_6^4-56*Is_3^2*S_5^4-70*Is_4^2*S_4^4-56*Is_5^2*S_3^4-28*Is_6^2*S_2^4
+-8*Is_7^2*S_1^4-Is_8^2*S_0^4)*betaIs+(-H_0*S_8^4-8*H_1*S_7^4-28*H_2*S_6^4-56*
+H_3*S_5^4-70*H_4*S_4^4-56*H_5*S_3^4-28*H_6*S_2^4-8*H_7*S_1^4-H_8*S_0^4)*betaH^4
+-betaT^4*(S_0^4*T_8+8*S_1^4*T_7+28*S_2^4*T_6+56*S_3^4*T_5+70*S_4^4*T_4+56*S_5^4
+*T_3+28*S_6^4*T_2+8*S_7^4*T_1+S_8^4*T_0))*Ninv+(alphaEIa+alphaEIs)*E_8^3+E_9^3,
+(alphaHT+alphaHRd)*H_8+H_9-xi*Ia_8^2-alphaIsH*Is_8^2, -alphaEIa*E_8^3+(xi+
+alphaIaIs+alphaIaRu)*Ia_8^2+Ia_9^2, ((Ia_0^2*S_7^4+7*Ia_1^2*S_6^4+21*Ia_2^2*S_5
+^4+35*Ia_3^2*S_4^4+35*Ia_4^2*S_3^4+21*Ia_5^2*S_2^4+7*Ia_6^2*S_1^4+Ia_7^2*S_0^4)
+*betaIa+(Is_0^2*S_7^4+7*Is_1^2*S_6^4+21*Is_2^2*S_5^4+35*Is_3^2*S_4^4+35*Is_4^2*
+S_3^4+21*Is_5^2*S_2^4+7*Is_6^2*S_1^4+Is_7^2*S_0^4)*betaIs+(H_0*S_7^4+7*H_1*S_6^
+4+21*H_2*S_5^4+35*H_3*S_4^4+35*H_4*S_3^4+21*H_5*S_2^4+7*H_6*S_1^4+H_7*S_0^4)*
+betaH^4+7*(S_1^4*T_6+3*S_2^4*T_5+5*S_3^4*T_4+5*S_4^4*T_3+3*S_5^4*T_2+S_6^4*T_1+
+1/7*S_7^4*T_0+1/7*T_7*S_0^4)*betaT^4)*Ninv+S_8^4, -D_11+53253577480206472716617\
+7308019893751858864624366334037649354489545992702140417563542759099029888710543\
+5267602335361170302254009262658236176139036386259134090953542705362173711014583\
+4275306451182507566106978024322721311377176156623038919478897174109022771904186\
+7872859616016789715473195898972324949977536320779946363664397148204417283081982\
+8336145925291092954016479647526927300153392821609964081279505632305631921547012\
+5919410376010068638833126473151351268128253441930207173948237972764739402248421\
+7138691620126226961735533316077198116482030495539189527033942189363473167624189\
+5221600252154625962316720479325659112162045589557420404315376034407386114284547\
+7900483480901876122591518591340589269880865768248459951753366764000114106381843\
+3301995535414469893713143452247413222869400950835529681634276916629143550624095\
+4995298856542727770565947088116737149640699346892677258641222022251823882711151\
+0890201232731906926252035351491861188370030209733911404705686404, -T_4-68989023\
+5250601951315234100995407803295706617456290449342219473980053151166463780875338\
+9034492138031863121286552980795069041527999999333389378612954527782213374298656\
+8129894396846407131964109980049079146789585214880297227505630806246458105915063\
+101870197894229168321599048167791770111032, -T_5+267332315257745437913108902090\
+7639125614907613753737827671557876300815115788204234589907339516801544870375138\
+2157490021333673709834125962115284613280748842094802822559341422607694757843733\
+7897057163386216021958234582434180466894999071740801992562049339553833885732814\
+8790823916453002856744126045077338447143732627918255911871398262574764596187781\
+7828490454864670327392953734800840336, -T_6-10359121368793752236994994234282649\
+6239566431604233280268395344744627776435669679561871770013358781787472660662276\
+7761135176069458020037685137697434074797565167038432771295485780775818914958068\
+6668951268272125582252578628191463704662547978683808282620403679522583664298901\
+3419919765845830416448884556890868086117242906361038287039906061074332085520702\
+7773563984945936757617290288528002434813407520599946920910462652007153256659709\
+6588745208720195870310665552495215224581645235040, -T_7+40141572645243531723145\
+2765295205304529906967874866878666532735152134557150854521900047866028952677455\
+0782601431476967844412448683340640010545728518640207773560410919591576368782564\
+5086684215877957247073169952417044173912292149820472356360562431989937719249842\
+3280965779188944797537912545105557109944673832158679472547747492300310451475185\
+0964933595838295007685124941006090460252946262844833086135776173324182688036596\
+1270551411542285078840260819001646020385799632015376413132598814940773127783892\
+65544170054974003429244627944947962097466223523713489631708183013124003296352,
+-T_8-15554850619739324729780933915835548433138501908169300165600890344996070028\
+0065134389230680523238710685931512262745986152377297842855367826984236952132862\
+9528364783294443068502286297021846183129845067446339066770318186869814427349392\
+6257243625334030281528588538519526364584758349293203618498780697471085577312514\
+6761172162737028081285922882611897716147770506970261539652319409202920695771291\
+4588720649210695405055762524507341770919498679710995482779000650027911276928461\
+5479339363425683679583696319539642858038198952113682631864606776743615115796127\
+5073577373431640138136667483190032406089658853888613416028253342701700299703440\
+4509334817802259869183848205585706182292192, -T_9+60275012127875481463037268772\
+0196403915145243508345349029790239852501876638605537696285877487641426365901202\
+5043411799446799067852563069770566066409361040603389025499956498819228714879973\
+4405222343713659918318313783964605504449831812883663609024541590278589897366476\
+7919672280524814221025856112875107723411337914431131898299430000985325810312219\
+2384514564963079489484582825032485356348795701186896898639371745596971715221332\
+5409198160869359836240049615138950617988043681341564242798014461632538134963419\
+3132661485387060244954358638775990705320955882697526035257939033699039094763528\
+0465059397277620819452162270037707952554969479030800892704484820245261135839273\
+6352775508129841812611062883931463151410183898955093509866021503665392283386539\
+1792445476418266804140256, -T_10-2335655401540861043657110445398219353758951515\
+5356686984265124960199092301208473614130223991800269949156848068973363847204106\
+5837688073903900123782422174199043610508556231094517910244044592457924900737764\
+2119049320506388922237313022103129839804322928432156981521912161414413059264108\
+4928646300520673165270599670927705026420675845104566970788369103345716889833485\
+9128570619488667866549429396119272395766649638606302655461668485415251406795254\
+5749415634896068205709747182496607847375974121750053315099266814194032191181280\
+5195950417314830164569196377719505164186887018612828513307698474283266454210491\
+6693200963237984542763975072073017253121091558540316141270941710703913024857481\
+6807249397469103607481673464062592300194719209307449619014508330005331891261001\
+5155124405099012672899746010322350625817861655415148151068786087730163362741819\
+6567731636857432602486480, -Rd_3-1255524127065720077621425072397652991639922485\
+7504983363554619466185475903279349769512196538311026688891905706804878427194896\
+5312, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+, 0, 0, -H_5+421538534135429305715468894382643552774602863251092151353659875043\
+8331941197315992782834859288218609549339384546967406421928859375630900691166231\
+5195843524654387604534081884892302562805359754195842304737316139333278878249943\
+5007200225558391506439208235774303260680697373677400586069963580662822745029120\
+4737883306292308161616051761161027133101097041366320462805995988130877169381074\
+8, -H_6-16334608977302835001992882689428668667542683296522691050647449938956764\
+5687032643925178037000057383712009858719024360915349952897718590219739150354821\
+5685963534016291409011804998938985521093493468266053348412475496168685872250618\
+3235536671074445244911702925894816711038659000946501225042225114156172360593538\
+3361132394011760131032227337728545008005318076625311573482219174146684444975545\
+0791581179263206874545542597506104464755116077353191191742072994641965353083603\
+8841382668364, -H_7+63296574057844082748810190655557985566649080903832618994260\
+9494758470867058954311760204587760921471311416895814909991181973713429505764550\
+4514924628884857533437898611173287443003041962022816484037653627232320584181641\
+5406739451520149772756794254309275635941119419673426105780813795070134567040835\
+9459992923954508201613830414455574031251910454864139164573938634171787423560361\
+7450200192285878784178153901055001467550801519321133908020783056211683690965960\
+1142368375413325980467364246956442448370303418636295286469134304537221229664218\
+02956636250501135286023379623626238814580, -H_8-2452740860235569110899670641835\
+3799359092154318234519766266292137545668385683510836069563775335850449641998137\
+2708804062960098644769697560170981701032718002558015681713227780784200772701505\
+5202680867506044419312772569276617501345978061608972819339525765283261598351676\
+0388794566383411875125494666991328070879604728031895820480540190393988726937566\
+9064060236577709227038044472658179480690191965588112949197256012471167148524197\
+0418506560649786482029118766451689473009093194733853323143668049133871081234102\
+1023686223337603766260248303261761566445142378861644444612754187907520488000573\
+9410909150796954299896663628857259720541102079920878720015518503291641552234273\
+6807648, -H_9+95043654684555384325346217382230029791423049189119185435130464838\
+1036755068518952504273769302350232256185229937632701392909987222939441180312677\
+8404092374188712427369761445131499365963319249524089827632388890316177559381320\
+9548071456831326700936424761331757494646765252404992888039730088025896174788490\
+8285082853584449532579823308818929784782376036786147572918964649438782808187225\
+4070968928862479080294189693737334422589837319368143041480553586487641108982130\
+8340869762136751288705111493953022678824301549208737552400626142633746872494469\
+8734338571607236711772775592159081616076805048803630230788325567769787851962759\
+3755234444511309858857667410044981962683108805419545187070877434631508795941470\
+26775653705687133335571446656906692596197714989568550355307929522238, z_aux^3-1
+], [D_11, Is_10, T_10, D_10, Is_9, Ia_9, T_9, H_9, E_9, D_9, Is_8, Ia_8, T_8, 
+S_8, H_8, E_8, D_8, Is_7, Ia_7, T_7, S_7, H_7, E_7, D_7, Is_6, Ia_6, T_6, S_6,
+H_6, E_6, D_6, Is_5, Ia_5, T_5, S_5, H_5, E_5, D_5, Is_4, Ia_4, T_4, S_4, H_4,
+E_4, D_4, Rd_3, Is_3, Ia_3, T_3, S_3, H_3, E_3, D_3, Rd_2, Is_2, Ia_2, T_2, S_2
+, H_2, E_2, D_2, Rd_1, Is_1, Ia_1, T_1, S_1, H_1, E_1, D_1, Rd_0, Is_0, Ia_0, 
+T_0, S_0, H_0, E_0, D_0, z_aux, w_aux, Ninv, alphaEIa, alphaEIs, alphaHRd, 
+alphaHT, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT, alphaTD
+, alphaTRd, betaH, betaIa, betaIs, betaT, xi], [], [
+47266692176107580598237489979606-D_0, -Is_0*alphaIsD-T_0*alphaTD+D_1, 
+10861732769836532387292062788829-T_0, -H_0*alphaHT-Is_0*alphaIsT+T_0*alphaTD+
+T_0*alphaTRd+T_1, 4683574323745467859137568414589-Rd_0, -H_0*alphaHRd-T_0*
+alphaTRd+Rd_1, 63422133896677549744076641499235-Ninv, 
+91762504221787157200755157441242-H_0, H_0*alphaHT+H_0*alphaHRd-Ia_0*xi-Is_0*
+alphaIsH+H_1, -D_1+
+2153780157644976516572514449975476789190629772112784702592889029, -Is_1*
+alphaIsD-T_1*alphaTD+D_2, -E_0*alphaEIs-Ia_0*alphaIaIs+Is_0*alphaIsD+Is_0*
+alphaIsH+Is_0*alphaIsRu+Is_0*alphaIsT+Is_1, -T_1+
+11548017655960450684461073218560211440264078432638940951411841696, -alphaHT*H_1
+-alphaIsT*Is_1+(alphaTD+alphaTRd)*T_1+T_2, -Rd_1+
+7408321526330621790913474438139319731160878691465187933172424133, -H_1*alphaHRd
+-T_1*alphaTRd+Rd_2, -H_1-\
+10567708450709538549101838873250984204322974766642811994976633642, (alphaHT+
+alphaHRd)*H_1+H_2-xi*Ia_1-alphaIsH*Is_1, -E_0*alphaEIa+Ia_0*xi+Ia_0*alphaIaIs+
+Ia_0*alphaIaRu+Ia_1, -D_2-16300996155814472641090398457185380492580261751933903\
+725068749102348970807951810163997492454210, -Is_2*alphaIsD-T_2*alphaTD+D_3, -
+alphaEIs*E_1-alphaIaIs*Ia_1+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_1+Is_2, -
+H_0*Ninv*S_0*betaH-Ia_0*Ninv*S_0*betaIa-Is_0*Ninv*S_0*betaIs-Ninv*S_0*T_0*betaT
++E_0*alphaEIa+E_0*alphaEIs+E_1, -T_2-264493634391050972769611523491608850694202\
+4854023222403781236011759898354399759028049712561236400, -alphaHT*H_2-alphaIsT*
+Is_2+(alphaTD+alphaTRd)*T_2+T_3, -Rd_2+9219117576673694437153530823030454191013\
+8591426023811871312437043869356908024850410724662846992, -H_2*alphaHRd-T_2*
+alphaTRd+Rd_3, -H_2+96970476190321903846724642257998163720538149891187047401581\
+4493651543174297535158623977993554966, (alphaHT+alphaHRd)*H_2+H_3-xi*Ia_2-
+alphaIsH*Is_2, -alphaEIa*E_1+(xi+alphaIaIs+alphaIaRu)*Ia_1+Ia_2, -D_3+104755562\
+8511662448229033788542824047436764758738228141911383631921104305903887085305106\
+3859695039402396391816611273676090909085418517161609238534721396340822163149972\
+1019201456026020100014309, -Is_3*alphaIsD-T_3*alphaTD+D_4, -alphaEIs*E_2-
+alphaIaIs*Ia_2+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_2+Is_3, ((-H_1*betaH-
+Ia_1*betaIa-Is_1*betaIs-T_1*betaT)*S_0-S_1*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs+
+T_0*betaT))*Ninv+(alphaEIa+alphaEIs)*E_1+E_2, H_0*Ninv*S_0*betaH+Ia_0*Ninv*S_0*
+betaIa+Is_0*Ninv*S_0*betaIs+Ninv*S_0*T_0*betaT+S_1, -T_3+1780362902387055180034\
+8082437827205662540053513350022040247124771547260598098486771380168062515980311\
+9758178245183516031309976054973438548910840005217253637439023534773875363769123\
+446899532672, -alphaHT*H_3-alphaIsT*Is_3+(alphaTD+alphaTRd)*T_3+T_4, -H_3+28073\
+3575878306993467723090804526328267042836343161061841947762242759508691038529847\
+7992706974443398550598976536415335628525710477335581921163286660407914316669482\
+38975115036863491896880846745, (alphaHT+alphaHRd)*H_3+H_4-xi*Ia_3-alphaIsH*Is_3
+, -alphaEIa*E_2+(xi+alphaIaIs+alphaIaRu)*Ia_2+Ia_3, -D_4-4059275769131290401952\
+4324805641029436614558627350926141921252951920922607462031129461815319414710276\
+3320255053939818373235790321394337475778581468542551536278095882530637266200747\
+7755941604786226669865428904657921507707011235632685696538280793853187035252739\
+1680250426497973666438974814, -Is_4*alphaIsD-T_4*alphaTD+D_5, -alphaEIs*E_3-
+alphaIaIs*Ia_3+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_3+Is_4, ((-H_2*betaH-
+Ia_2*betaIa-Is_2*betaIs-T_2*betaT)*S_0+(-2*H_1*betaH-2*Ia_1*betaIa-2*Is_1*
+betaIs-2*T_1*betaT)*S_1-S_2*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs+T_0*betaT))*Ninv
++(alphaEIa+alphaEIs)*E_2+E_3, ((H_1*betaH+Ia_1*betaIa+Is_1*betaIs+T_1*betaT)*
+S_0+S_1*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs+T_0*betaT))*Ninv+S_2, -H_4-108784199\
+2471052046308406280175415262437877697354528564940970626730739322494543909772698\
+7832940636344936115049342406476355142545833737821297391396497390927668915996235\
+9041580515235383528624936296489121823554285726193251561861617580677065933122099\
+516753596359506396059970512204060924939278, (alphaHT+alphaHRd)*H_4+H_5-xi*Ia_4-
+alphaIsH*Is_4, -alphaEIa*E_3+(xi+alphaIaIs+alphaIaRu)*Ia_3+Ia_4, -D_5+157296847\
+2640208111099095517298240236428547479011240348396916938334044486261747205962342\
+1465876553348029828266955869926128770910637449748027225355981984019724551716914\
+6409817615899269766776444790306035577913243715823549656923662683735962312496405\
+9763915542864460026151468957370259280511955790239934767945407334135077499859093\
+6212960122375867191107933223198503695436294496083213923412, -Is_5*alphaIsD-T_5*
+alphaTD+D_6, -alphaEIs*E_4-alphaIaIs*Ia_4+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT
+)*Is_4+Is_5, -alphaHT*H_4-alphaIsT*Is_4+(alphaTD+alphaTRd)*T_4+T_5, ((-Ia_0*S_3
+-3*Ia_1*S_2-3*Ia_2*S_1-Ia_3*S_0)*betaIa+(-Is_0*S_3-3*Is_1*S_2-3*Is_2*S_1-Is_3*
+S_0)*betaIs+(-H_0*S_3-3*H_1*S_2-3*H_2*S_1-H_3*S_0)*betaH-betaT*(S_0*T_3+3*S_1*
+T_2+3*S_2*T_1+S_3*T_0))*Ninv+(alphaEIa+alphaEIs)*E_3+E_4, ((H_2*betaH+Ia_2*
+betaIa+Is_2*betaIs+T_2*betaT)*S_0+(2*H_1*betaH+2*Ia_1*betaIa+2*Is_1*betaIs+2*
+T_1*betaT)*S_1+S_2*(H_0*betaH+Ia_0*betaIa+Is_0*betaIs+T_0*betaT))*Ninv+S_3, -
+D_6-609524939087735174444637930543796968256414385119303400344986900107987290697\
+4912707170114039692561616331852438713006789329630980201975207136008013015927503\
+4859654682734893640419929991323080812975924047536030405324278698908574903515692\
+1045311136452251620911962229947262167152662768337697364359725969462311396825496\
+4436014088567860909966067128453213675534820092589846470140789158942134099992295\
+8475228430871525688688661161787818592261363931310355053916130062057474636095328\
+23954700, -Is_6*alphaIsD-T_6*alphaTD+D_7, -alphaEIs*E_5-alphaIaIs*Ia_5+(
+alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_5+Is_6, -alphaHT*H_5-alphaIsT*Is_5+(
+alphaTD+alphaTRd)*T_5+T_6, ((-Ia_0*S_4-4*Ia_1*S_3-6*Ia_2*S_2-4*Ia_3*S_1-Ia_4*
+S_0)*betaIa+(-Is_0*S_4-4*Is_1*S_3-6*Is_2*S_2-4*Is_3*S_1-Is_4*S_0)*betaIs+(-H_0*
+S_4-4*H_1*S_3-6*H_2*S_2-4*H_3*S_1-H_4*S_0)*betaH-6*betaT*(S_2*T_2+2/3*S_3*T_1+1
+/6*S_4*T_0+2/3*S_1*T_3+1/6*T_4*S_0))*Ninv+(alphaEIa+alphaEIs)*E_4+E_5, -
+alphaEIa*E_4+(xi+alphaIaIs+alphaIaRu)*Ia_4+Ia_5, ((Ia_0*S_3+3*Ia_1*S_2+3*Ia_2*
+S_1+Ia_3*S_0)*betaIa+(Is_0*S_3+3*Is_1*S_2+3*Is_2*S_1+Is_3*S_0)*betaIs+(H_0*S_3+
+3*H_1*S_2+3*H_2*S_1+H_3*S_0)*betaH+betaT*(S_0*T_3+3*S_1*T_2+3*S_2*T_1+S_3*T_0))
+*Ninv+S_4, -D_7+236190780573188768414780993501820499616742371793858885122071202\
+1013949626774318450331295312323187395077099671734062867188886732529950994217430\
+7328745142172257108501497171417689310553009900401440134316588490316716037567051\
+8337484071173577183175092103257223375222061886256925308919632271713376385300440\
+4078022728154671197197297746267387372896502781263358804129906468088283040891337\
+2895457350846425118507626443848556227296563240990770362051532785894657507856490\
+0060949151607316819752108945099386106268525035374822762499556270192619614809566\
+6402035928299839720091299425777092644, -Is_7*alphaIsD-T_7*alphaTD+D_8, -
+alphaEIs*E_6-alphaIaIs*Ia_6+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_6+Is_7, -
+alphaHT*H_6-alphaIsT*Is_6+(alphaTD+alphaTRd)*T_6+T_7, ((-Ia_0*S_5-5*Ia_1*S_4-10
+*Ia_2*S_3-10*Ia_3*S_2-5*Ia_4*S_1-Ia_5*S_0)*betaIa+(-Is_0*S_5-5*Is_1*S_4-10*Is_2
+*S_3-10*Is_3*S_2-5*Is_4*S_1-Is_5*S_0)*betaIs+(-H_0*S_5-5*H_1*S_4-10*H_2*S_3-10*
+H_3*S_2-5*H_4*S_1-H_5*S_0)*betaH-5*(S_1*T_4+2*T_3*S_2+2*S_3*T_2+T_1*S_4+1/5*T_0
+*S_5+1/5*T_5*S_0)*betaT)*Ninv+(alphaEIa+alphaEIs)*E_5+E_6, (alphaHT+alphaHRd)*
+H_5+H_6-xi*Ia_5-alphaIsH*Is_5, -alphaEIa*E_5+(xi+alphaIaIs+alphaIaRu)*Ia_5+Ia_6
+, ((Ia_0*S_4+4*Ia_1*S_3+6*Ia_2*S_2+4*Ia_3*S_1+Ia_4*S_0)*betaIa+(Is_0*S_4+4*Is_1
+*S_3+6*Is_2*S_2+4*Is_3*S_1+Is_4*S_0)*betaIs+(H_0*S_4+4*H_1*S_3+6*H_2*S_2+4*H_3*
+S_1+H_4*S_0)*betaH+betaT*(S_0*T_4+4*S_1*T_3+6*S_2*T_2+4*S_3*T_1+S_4*T_0))*Ninv+
+S_5, -D_8-915238758093577229607252536358810806300980749546971983427140209177387\
+0821276277240119189113432141087355883728004056663314441792816342853716652939643\
+4577269167944634881938295303865558606661221783896306296686004338974514519016034\
+5894020864941165437207745555081527504132954641356921490003505715899034822816071\
+2646796212527367680072265931660852251133462860127693086684254011963849659553431\
+6156446858198755001826503698342090001253739892600019801239265915602345263474774\
+6885470153441746416147184944114437538633533291186563593156450855775535423661803\
+2741086898954958661532928867105499326859928638672777853990226145205988066619545\
+54691806994574485212428737392927617368247135584, -Is_8*alphaIsD-T_8*alphaTD+D_9
+, -alphaEIs*E_7-alphaIaIs*Ia_7+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_7+Is_8
+, -alphaHT*H_7-alphaIsT*Is_7+(alphaTD+alphaTRd)*T_7+T_8, ((-Ia_0*S_6-6*Ia_1*S_5
+-15*Ia_2*S_4-20*Ia_3*S_3-15*Ia_4*S_2-6*Ia_5*S_1-Ia_6*S_0)*betaIa+(-Is_0*S_6-6*
+Is_1*S_5-15*Is_2*S_4-20*Is_3*S_3-15*Is_4*S_2-6*Is_5*S_1-Is_6*S_0)*betaIs+(-H_0*
+S_6-6*H_1*S_5-15*H_2*S_4-20*H_3*S_3-15*H_4*S_2-6*H_5*S_1-H_6*S_0)*betaH-betaT*(
+S_0*T_6+6*S_1*T_5+15*S_2*T_4+20*S_3*T_3+15*S_4*T_2+6*S_5*T_1+S_6*T_0))*Ninv+(
+alphaEIa+alphaEIs)*E_6+E_7, (alphaHT+alphaHRd)*H_6+H_7-xi*Ia_6-alphaIsH*Is_6, -
+alphaEIa*E_6+(xi+alphaIaIs+alphaIaRu)*Ia_6+Ia_7, ((Ia_0*S_5+5*Ia_1*S_4+10*Ia_2*
+S_3+10*Ia_3*S_2+5*Ia_4*S_1+Ia_5*S_0)*betaIa+(Is_0*S_5+5*Is_1*S_4+10*Is_2*S_3+10
+*Is_3*S_2+5*Is_4*S_1+Is_5*S_0)*betaIs+(H_0*S_5+5*H_1*S_4+10*H_2*S_3+10*H_3*S_2+
+5*H_4*S_1+H_5*S_0)*betaH+10*(S_3*T_2+1/2*T_1*S_4+1/10*T_0*S_5+T_3*S_2+1/2*S_1*
+T_4+1/10*T_5*S_0)*betaT)*Ninv+S_6, -D_9+354654818568206596438532683815896834337\
+5393708922828698215727818124421045161656663722597490121513476947521973421955191\
+0737886898199747034609914845587435566501815776335927271468950872727280710302350\
+7685888281718260594021033290838675513389387899355539244170125847108395078124224\
+0187661565119931358585863064699330937263418795486823988676314579608727337237057\
+7155523938327482268394394346376315442029667576521992525623318602069429873671028\
+9872863869668506190690882558789446948119836223424035921784990887372505805816253\
+6666446497674113792105566380800108538107202781014437117884499341715525376783847\
+7422143472669221199116017158050617949681666225262775082831828515261679590039602\
+3951718366275010537392727194040019993811226400740881480576994464967857554697112\
+918698524687302, -Is_9*alphaIsD-T_9*alphaTD+D_10, -alphaEIs*E_8-alphaIaIs*Ia_8+
+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_8+Is_9, -alphaHT*H_8-alphaIsT*Is_8+(
+alphaTD+alphaTRd)*T_8+T_9, ((-Ia_0*S_7-7*Ia_1*S_6-21*Ia_2*S_5-35*Ia_3*S_4-35*
+Ia_4*S_3-21*Ia_5*S_2-7*Ia_6*S_1-Ia_7*S_0)*betaIa+(-Is_0*S_7-7*Is_1*S_6-21*Is_2*
+S_5-35*Is_3*S_4-35*Is_4*S_3-21*Is_5*S_2-7*Is_6*S_1-Is_7*S_0)*betaIs+(-H_0*S_7-7
+*H_1*S_6-21*H_2*S_5-35*H_3*S_4-35*H_4*S_3-21*H_5*S_2-7*H_6*S_1-H_7*S_0)*betaH-
+betaT*(S_0*T_7+7*S_1*T_6+21*S_2*T_5+35*S_3*T_4+35*S_4*T_3+21*S_5*T_2+7*S_6*T_1+
+S_7*T_0))*Ninv+(alphaEIa+alphaEIs)*E_7+E_8, (alphaHT+alphaHRd)*H_7+H_8-xi*Ia_7-
+alphaIsH*Is_7, -alphaEIa*E_7+(xi+alphaIaIs+alphaIaRu)*Ia_7+Ia_8, ((Ia_0*S_6+6*
+Ia_1*S_5+15*Ia_2*S_4+20*Ia_3*S_3+15*Ia_4*S_2+6*Ia_5*S_1+Ia_6*S_0)*betaIa+(Is_0*
+S_6+6*Is_1*S_5+15*Is_2*S_4+20*Is_3*S_3+15*Is_4*S_2+6*Is_5*S_1+Is_6*S_0)*betaIs+
+(H_0*S_6+6*H_1*S_5+15*H_2*S_4+20*H_3*S_3+15*H_4*S_2+6*H_5*S_1+H_6*S_0)*betaH+15
+*(S_2*T_4+4/3*S_3*T_3+S_4*T_2+2/5*S_5*T_1+1/15*S_6*T_0+2/5*T_5*S_1+1/15*T_6*S_0
+)*betaT)*Ninv+S_7, -D_10-137428664620415195213652167701446151311574061861641211\
+5459036581931678924351766240900885365616819447755358989490420930530471418067244\
+6404177235500207725569989042058603029080468360798698021716436038658816594232558\
+1959070165233127181559300443338367219995991226591544498408442477219223688886248\
+1022174854510886033935971554227824842782521120227834635196572711780085663260696\
+1326640114389085727276093104577085156319521349264127858320704254452862580291309\
+4091404249640237784421201937196298802234545279169888757662228340896686880656726\
+9909476142958655752058283301449402449386540402771276973975223037486260079597238\
+9596919664655734144261953350169252071369489299749579796394095685321972203945655\
+7726201267357479472561780961898036572926309342434421750794109261191385862684158\
+4716600242635471867951702701370625650898238582319249028490841890937993423679947\
+08536692253987680, -Is_10*alphaIsD-T_10*alphaTD+D_11, -alphaEIs*E_9-alphaIaIs*
+Ia_9+(alphaIsD+alphaIsH+alphaIsRu+alphaIsT)*Is_9+Is_10, -alphaHT*H_9-alphaIsT*
+Is_9+(alphaTD+alphaTRd)*T_9+T_10, ((-Ia_0*S_8-8*Ia_1*S_7-28*Ia_2*S_6-56*Ia_3*
+S_5-70*Ia_4*S_4-56*Ia_5*S_3-28*Ia_6*S_2-8*Ia_7*S_1-Ia_8*S_0)*betaIa+(-Is_0*S_8-\
+8*Is_1*S_7-28*Is_2*S_6-56*Is_3*S_5-70*Is_4*S_4-56*Is_5*S_3-28*Is_6*S_2-8*Is_7*
+S_1-Is_8*S_0)*betaIs+(-H_0*S_8-8*H_1*S_7-28*H_2*S_6-56*H_3*S_5-70*H_4*S_4-56*
+H_5*S_3-28*H_6*S_2-8*H_7*S_1-H_8*S_0)*betaH-betaT*(S_0*T_8+8*S_1*T_7+28*S_2*T_6
++56*S_3*T_5+70*S_4*T_4+56*S_5*T_3+28*S_6*T_2+8*S_7*T_1+S_8*T_0))*Ninv+(alphaEIa
++alphaEIs)*E_8+E_9, (alphaHT+alphaHRd)*H_8+H_9-xi*Ia_8-alphaIsH*Is_8, -alphaEIa
+*E_8+(xi+alphaIaIs+alphaIaRu)*Ia_8+Ia_9, ((Ia_0*S_7+7*Ia_1*S_6+21*Ia_2*S_5+35*
+Ia_3*S_4+35*Ia_4*S_3+21*Ia_5*S_2+7*Ia_6*S_1+Ia_7*S_0)*betaIa+(Is_0*S_7+7*Is_1*
+S_6+21*Is_2*S_5+35*Is_3*S_4+35*Is_4*S_3+21*Is_5*S_2+7*Is_6*S_1+Is_7*S_0)*betaIs
++(H_0*S_7+7*H_1*S_6+21*H_2*S_5+35*H_3*S_4+35*H_4*S_3+21*H_5*S_2+7*H_6*S_1+H_7*
+S_0)*betaH+7*(S_1*T_6+3*S_2*T_5+5*S_3*T_4+5*S_4*T_3+3*S_5*T_2+S_6*T_1+1/7*S_7*
+T_0+1/7*T_7*S_0)*betaT)*Ninv+S_8, -D_11+532535774802064727166177308019893751858\
+8646243663340376493544895459927021404175635427590990298887105435267602335361170\
+3022540092626582361761390363862591340909535427053621737110145834275306451182507\
+5661069780243227213113771761566230389194788971741090227719041867872859616016789\
+7154731958989723249499775363207799463636643971482044172830819828336145925291092\
+9540164796475269273001533928216099640812795056323056319215470125919410376010068\
+6388331264731513512681282534419302071739482379727647394022484217138691620126226\
+9617355333160771981164820304955391895270339421893634731676241895221600252154625\
+9623167204793256591121620455895574204043153760344073861142845477900483480901876\
+1225915185913405892698808657682484599517533667640001141063818433301995535414469\
+8937131434522474132228694009508355296816342769166291435506240954995298856542727\
+7705659470881167371496406993468926772586412220222518238827111510890201232731906\
+926252035351491861188370030209733911404705686404, -T_4-689890235250601951315234\
+1009954078032957066174562904493422194739800531511664637808753389034492138031863\
+1212865529807950690415279999993333893786129545277822133742986568129894396846407\
+1319641099800490791467895852148802972275056308062464581059150631018701978942291\
+68321599048167791770111032, -T_5+2673323152577454379131089020907639125614907613\
+7537378276715578763008151157882042345899073395168015448703751382157490021333673\
+7098341259621152846132807488420948028225593414226076947578437337897057163386216\
+0219582345824341804668949990717408019925620493395538338857328148790823916453002\
+8567441260450773384471437326279182559118713982625747645961877817828490454864670\
+327392953734800840336, -T_6-103591213687937522369949942342826496239566431604233\
+2802683953447446277764356696795618717700133587817874726606622767761135176069458\
+0200376851376974340747975651670384327712954857807758189149580686668951268272125\
+5822525786281914637046625479786838082826204036795225836642989013419919765845830\
+4164488845568908680861172429063610382870399060610743320855207027773563984945936\
+7576172902885280024348134075205999469209104626520071532566597096588745208720195\
+870310665552495215224581645235040, -T_7+401415726452435317231452765295205304529\
+9069678748668786665327351521345571508545219000478660289526774550782601431476967\
+8444124486833406400105457285186402077735604109195915763687825645086684215877957\
+2470731699524170441739122921498204723563605624319899377192498423280965779188944\
+7975379125451055571099446738321586794725477474923003104514751850964933595838295\
+0076851249410060904602529462628448330861357761733241826880365961270551411542285\
+0788402608190016460203857996320153764131325988149407731277838926554417005497400\
+3429244627944947962097466223523713489631708183013124003296352, -T_8-15554850619\
+7393247297809339158355484331385019081693001656008903449960700280065134389230680\
+5232387106859315122627459861523772978428553678269842369521328629528364783294443\
+0685022862970218461831298450674463390667703181868698144273493926257243625334030\
+2815285885385195263645847583492932036184987806974710855773125146761172162737028\
+0812859228826118977161477705069702615396523194092029206957712914588720649210695\
+4050557625245073417709194986797109954827790006500279112769284615479339363425683\
+6795836963195396428580381989521136826318646067767436151157961275073577373431640\
+1381366674831900324060896588538886134160282533427017002997034404509334817802259\
+869183848205585706182292192, -T_9+602750121278754814630372687720196403915145243\
+5083453490297902398525018766386055376962858774876414263659012025043411799446799\
+0678525630697705660664093610406033890254999564988192287148799734405222343713659\
+9183183137839646055044498318128836636090245415902785898973664767919672280524814\
+2210258561128751077234113379144311318982994300009853258103122192384514564963079\
+4894845828250324853563487957011868968986393717455969717152213325409198160869359\
+8362400496151389506179880436813415642427980144616325381349634193132661485387060\
+2449543586387759907053209558826975260352579390336990390947635280465059397277620\
+8194521622700377079525549694790308008927044848202452611358392736352775508129841\
+8126110628839314631514101838989550935098660215036653922833865391792445476418266\
+804140256, -T_10-23356554015408610436571104453982193537589515155356686984265124\
+9601990923012084736141302239918002699491568480689733638472041065837688073903900\
+1237824221741990436105085562310945179102440445924579249007377642119049320506388\
+9222373130221031298398043229284321569815219121614144130592641084928646300520673\
+1652705996709277050264206758451045669707883691033457168898334859128570619488667\
+8665494293961192723957666496386063026554616684854152514067952545749415634896068\
+2057097471824966078473759741217500533150992668141940321911812805195950417314830\
+1645691963777195051641868870186128285133076984742832664542104916693200963237984\
+5427639750720730172531210915585403161412709417107039130248574816807249397469103\
+6074816734640625923001947192093074496190145083300053318912610015155124405099012\
+6728997460103223506258178616554151481510687860877301633627418196567731636857432\
+602486480, -Rd_3-12555241270657200776214250723976529916399224857504983363554619\
+4661854759032793497695121965383110266888919057068048784271948965312, 0, 0, 0, 0
+, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -H_5+421\
+5385341354293057154688943826435527746028632510921513536598750438331941197315992\
+7828348592882186095493393845469674064219288593756309006911662315195843524654387\
+6045340818848923025628053597541958423047373161393332788782499435007200225558391\
+5064392082357743032606806973736774005860699635806628227450291204737883306292308\
+1616160517611610271331010970413663204628059959881308771693810748, -H_6-16334608\
+9773028350019928826894286686675426832965226910506474499389567645687032643925178\
+0370000573837120098587190243609153499528977185902197391503548215685963534016291\
+4090118049989389855210934934682660533484124754961686858722506183235536671074445\
+2449117029258948167110386590009465012250422251141561723605935383361132394011760\
+1310322273377285450080053180766253115734822191741466844449755450791581179263206\
+8745455425975061044647551160773531911917420729946419653530836038841382668364, -
+H_7+632965740578440827488101906555579855666490809038326189942609494758470867058\
+9543117602045877609214713114168958149099911819737134295057645504514924628884857\
+5334378986111732874430030419620228164840376536272323205841816415406739451520149\
+7727567942543092756359411194196734261057808137950701345670408359459992923954508\
+2016138304144555740312519104548641391645739386341717874235603617450200192285878\
+7841781539010550014675508015193211339080207830562116836909659601142368375413325\
+9804673642469564424483703034186362952864691343045372212296642180295663625050113\
+5286023379623626238814580, -H_8-24527408602355691108996706418353799359092154318\
+2345197662662921375456683856835108360695637753358504496419981372708804062960098\
+6447696975601709817010327180025580156817132277807842007727015055202680867506044\
+4193127725692766175013459780616089728193395257652832615983516760388794566383411\
+8751254946669913280708796047280318958204805401903939887269375669064060236577709\
+2270380444726581794806901919655881129491972560124711671485241970418506560649786\
+4820291187664516894730090931947338533231436680491338710812341021023686223337603\
+7662602483032617615664451423788616444446127541879075204880005739410909150796954\
+2998966636288572597205411020799208787200155185032916415522342736807648, -H_9+95\
+0436546845553843253462173822300297914230491891191854351304648381036755068518952\
+5042737693023502322561852299376327013929099872229394411803126778404092374188712\
+4273697614451314993659633192495240898276323888903161775593813209548071456831326\
+7009364247613317574946467652524049928880397300880258961747884908285082853584449\
+5325798233088189297847823760367861475729189646494387828081872254070968928862479\
+0802941896937373344225898373193681430414805535864876411089821308340869762136751\
+2887051114939530226788243015492087375524006261426337468724944698734338571607236\
+7117727755921590816160768050488036302307883255677697878519627593755234444511309\
+8588576674100449819626831088054195451870708774346315087959414702677565370568713\
+3335571446656906692596197714989568550355307929522238, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	12.241,	14.050,	1727922920
+SubsByDepth Usage (real, cpu, memory):	12.030,	14.252,	1736391432
 
-memory used=27494.6MB, alloc=211.8MB, time=280.01
+memory used=24987.7MB, alloc=211.8MB, time=259.24

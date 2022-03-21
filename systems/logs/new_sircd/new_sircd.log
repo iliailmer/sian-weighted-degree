@@ -12,56 +12,64 @@ Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in SubsByDepth) `out` is implicitly declared local
 |imports/create_substitutions.mpl:53|
 Warning, (in SubsByDepth) `mem` is implicitly declared local
@@ -98,9 +106,6 @@ Parameters in equations:  [N, b, mu, p, q, r]
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  31838400
-Orders of prolongations of the outputs (beta) =  [9]
-Orders of prolongations of the state variables (alpha) =  [8, 9, 9, 1, 9]
 
 =======================================================
 3. Assessing local identifiability
@@ -109,9 +114,6 @@ Orders of prolongations of the state variables (alpha) =  [8, 9, 9, 1, 9]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  186193253900000000
-Random sample for the outputs and inputs is generated from  [N = 45312283569052093, b = 43058983866362690, mu = 90703526108071024, p = 158687890135946597, q = 35790725240019628, r = 35929253137819416, S_0 = 40203316634641902, i_0 = 11298891940472717, R_0 = 41122275715858567, Cc_0 = 106158191573226157, D_0 = 92106128895882966]
-The polynomial system widehat{E^t} contains  40 equations in  41  variables
 Locally identifiable paramters:  [mu, p, q, r, S(0), i(0)]
 Nonidentifiable parameter:  [Cc(0), D(0), N, R(0), b]
 
@@ -120,244 +122,349 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {N, Cc(0), D(0)}
 Number of possible combinations 1330
-Collection [Cc_0, D_0, R_1] is not transcendence basis
-Collection [Cc_0, D_3, D_1] is not transcendence basis
-Collection [Cc_0, D_5, D_4] is not transcendence basis
-Collection [Cc_0, D_7, R_1] is not transcendence basis
-Collection [Cc_0, R_1, R_5] is not transcendence basis
-Collection [Cc_0, R_2, D_7] is not transcendence basis
-Collection [Cc_0, R_2, R_5] is not transcendence basis
-Collection [Cc_0, R_4, D_6] is not transcendence basis
-Collection [Cc_0, R_6, D_5] is not transcendence basis
-Collection [Cc_0, R_8, D_1] is not transcendence basis
-Collection [Cc_0, R_8, R_7] is not transcendence basis
-Collection [D_0, Cc_0, R_5] is not transcendence basis
-Collection [D_0, D_1, R_5] is not transcendence basis
-Collection [D_0, D_4, R_1] is not transcendence basis
-Collection [D_0, D_5, R_6] is not transcendence basis
-Collection [D_0, D_6, D_2] is not transcendence basis
-Collection [D_0, D_7, D_8] is not transcendence basis
-Collection [D_0, D_7, R_0] is not transcendence basis
-Collection [D_0, D_8, D_4] is not transcendence basis
-Collection [D_0, N, R_5] is not transcendence basis
-Collection [D_0, R_2, D_8] is not transcendence basis
-Collection [D_0, R_6, R_7] is not transcendence basis
-Collection [D_0, R_8, D_5] is not transcendence basis
-Collection [D_1, D_0, R_0] is not transcendence basis
-Collection [D_1, R_0, R_6] is not transcendence basis
-Collection [D_1, R_0, b] is not transcendence basis
-Collection [D_1, R_4, D_3] is not transcendence basis
-Collection [D_1, R_5, R_0] is not transcendence basis
-Collection [D_1, R_5, R_2] is not transcendence basis
-Collection [D_1, R_6, R_5] is not transcendence basis
-Collection [D_1, R_8, D_4] is not transcendence basis
-Collection [D_1, b, D_2] is not transcendence basis
-Collection [D_2, Cc_0, D_5] is not transcendence basis
-Collection [D_2, D_1, R_5] is not transcendence basis
-Collection [D_2, D_3, D_7] is not transcendence basis
-Collection [D_2, N, D_4] is not transcendence basis
-Collection [D_2, N, D_7] is not transcendence basis
-Collection [D_2, R_2, D_3] is not transcendence basis
-Collection [D_2, R_5, D_8] is not transcendence basis
-Collection [D_2, R_7, Cc_0] is not transcendence basis
-Collection [D_2, R_8, D_0] is not transcendence basis
-Collection [D_2, R_8, R_3] is not transcendence basis
-Collection [D_2, R_8, R_5] is not transcendence basis
-Collection [D_2, b, Cc_0] is not transcendence basis
-Collection [D_3, Cc_0, D_2] is not transcendence basis
-Collection [D_3, Cc_0, R_5] is not transcendence basis
-Collection [D_3, D_0, N] is not transcendence basis
-Collection [D_3, D_2, R_5] is not transcendence basis
-Collection [D_3, N, R_0] is not transcendence basis
-Collection [D_3, R_6, N] is not transcendence basis
-Collection [D_3, R_8, R_5] is not transcendence basis
-Collection [D_4, Cc_0, R_4] is not transcendence basis
-Collection [D_4, Cc_0, R_5] is not transcendence basis
-Collection [D_4, D_6, D_1] is not transcendence basis
-Collection [D_4, D_6, R_4] is not transcendence basis
-Collection [D_4, N, R_8] is not transcendence basis
-Collection [D_4, R_3, D_8] is not transcendence basis
-Collection [D_4, R_3, R_4] is not transcendence basis
-Collection [D_4, R_3, b] is not transcendence basis
-Collection [D_4, R_5, D_0] is not transcendence basis
-Collection [D_4, R_5, D_5] is not transcendence basis
-Collection [D_4, R_6, R_0] is not transcendence basis
-Collection [D_4, R_8, D_6] is not transcendence basis
-Collection [D_5, D_3, b] is not transcendence basis
-Collection [D_5, N, Cc_0] is not transcendence basis
-Collection [D_5, N, b] is not transcendence basis
-Collection [D_5, R_3, N] is not transcendence basis
-Collection [D_5, R_6, Cc_0] is not transcendence basis
-Collection [D_5, R_6, R_2] is not transcendence basis
+Collection [Cc_0, D_1, D_7] is not transcendence basis
+Collection [Cc_0, D_1, R_0] is not transcendence basis
+Collection [Cc_0, D_5, D_0] is not transcendence basis
+Collection [Cc_0, D_5, R_8] is not transcendence basis
+Collection [Cc_0, R_3, D_3] is not transcendence basis
+Collection [Cc_0, R_4, N] is not transcendence basis
+Collection [Cc_0, R_8, D_5] is not transcendence basis
+Collection [D_0, D_1, D_7] is not transcendence basis
+Collection [D_0, D_3, R_7] is not transcendence basis
+Collection [D_0, D_4, D_3] is not transcendence basis
+Collection [D_0, D_7, Cc_0] is not transcendence basis
+Collection [D_0, R_2, D_4] is not transcendence basis
+Collection [D_0, R_2, R_0] is not transcendence basis
+Collection [D_0, R_3, R_2] is not transcendence basis
+Collection [D_0, R_4, R_2] is not transcendence basis
+Collection [D_0, R_8, R_0] is not transcendence basis
+Collection [D_1, D_3, D_4] is not transcendence basis
+Collection [D_1, D_4, D_5] is not transcendence basis
+Collection [D_1, D_7, Cc_0] is not transcendence basis
+Collection [D_1, R_2, R_8] is not transcendence basis
+Collection [D_1, R_4, D_8] is not transcendence basis
+Collection [D_1, R_6, R_1] is not transcendence basis
+Collection [D_1, R_7, Cc_0] is not transcendence basis
+Collection [D_1, R_7, R_6] is not transcendence basis
+Collection [D_1, b, D_4] is not transcendence basis
+Collection [D_2, Cc_0, R_7] is not transcendence basis
+Collection [D_2, D_0, R_1] is not transcendence basis
+Collection [D_2, D_3, R_1] is not transcendence basis
+Collection [D_2, D_3, R_8] is not transcendence basis
+Collection [D_2, D_4, D_1] is not transcendence basis
+Collection [D_2, D_5, R_5] is not transcendence basis
+Collection [D_2, D_6, D_0] is not transcendence basis
+Collection [D_2, D_7, D_5] is not transcendence basis
+Collection [D_2, D_7, R_2] is not transcendence basis
+Collection [D_2, D_8, R_4] is not transcendence basis
+Collection [D_2, D_8, R_8] is not transcendence basis
+Collection [D_2, R_0, D_6] is not transcendence basis
+Collection [D_2, b, D_4] is not transcendence basis
+Collection [D_3, Cc_0, N] is not transcendence basis
+Collection [D_3, D_6, D_7] is not transcendence basis
+Collection [D_3, D_7, b] is not transcendence basis
+Collection [D_3, N, D_4] is not transcendence basis
+Collection [D_3, R_1, R_4] is not transcendence basis
+Collection [D_3, R_2, N] is not transcendence basis
+Collection [D_3, R_3, R_7] is not transcendence basis
+Collection [D_3, R_6, b] is not transcendence basis
+Collection [D_4, D_0, R_5] is not transcendence basis
+Collection [D_4, D_3, N] is not transcendence basis
+Collection [D_4, D_5, R_8] is not transcendence basis
+Collection [D_4, D_6, R_8] is not transcendence basis
+Collection [D_4, D_7, R_1] is not transcendence basis
+Collection [D_4, N, R_3] is not transcendence basis
+Collection [D_4, R_5, Cc_0] is not transcendence basis
+Collection [D_4, R_6, R_7] is not transcendence basis
+Collection [D_4, R_6, R_8] is not transcendence basis
+Collection [D_4, R_7, D_5] is not transcendence basis
+Collection [D_5, D_0, R_6] is not transcendence basis
+Collection [D_5, D_0, b] is not transcendence basis
+Collection [D_5, D_4, D_8] is not transcendence basis
+Collection [D_5, N, D_6] is not transcendence basis
+Collection [D_5, R_0, R_1] is not transcendence basis
+Collection [D_5, R_6, D_7] is not transcendence basis
+Collection [D_5, R_6, N] is not transcendence basis
 Collection [D_5, R_6, R_7] is not transcendence basis
-Collection [D_5, b, R_2] is not transcendence basis
-Collection [D_6, Cc_0, D_0] is not transcendence basis
-Collection [D_6, Cc_0, D_8] is not transcendence basis
-Collection [D_6, Cc_0, R_7] is not transcendence basis
-Collection [D_6, D_1, D_3] is not transcendence basis
-Collection [D_6, D_2, Cc_0] is not transcendence basis
-Collection [D_6, D_3, R_8] is not transcendence basis
+Collection [D_5, R_7, Cc_0] is not transcendence basis
+Collection [D_5, R_8, Cc_0] is not transcendence basis
+Collection [D_5, R_8, R_5] is not transcendence basis
+Collection [D_6, D_0, D_8] is not transcendence basis
+Collection [D_6, D_2, D_8] is not transcendence basis
+Collection [D_6, D_4, D_7] is not transcendence basis
 Collection [D_6, D_4, R_2] is not transcendence basis
-Collection [D_6, D_7, D_4] is not transcendence basis
-Collection [D_6, D_7, R_5] is not transcendence basis
-Collection [D_6, D_7, R_8] is not transcendence basis
-Collection [D_6, D_8, D_7] is not transcendence basis
-Collection [D_6, R_0, R_5] is not transcendence basis
-Collection [D_6, R_2, R_7] is not transcendence basis
-Collection [D_6, R_3, N] is not transcendence basis
+Collection [D_6, R_1, D_8] is not transcendence basis
+Collection [D_6, R_3, D_4] is not transcendence basis
 Collection [D_6, R_3, R_2] is not transcendence basis
-Collection [D_6, R_7, D_4] is not transcendence basis
-Collection [D_6, R_8, D_5] is not transcendence basis
-Collection [D_7, D_2, D_0] is not transcendence basis
-Collection [D_7, D_8, R_0] is not transcendence basis
-Collection [D_7, N, Cc_0] is not transcendence basis
-Collection [D_7, R_5, R_2] is not transcendence basis
-Collection [D_7, R_6, D_1] is not transcendence basis
-Collection [D_8, Cc_0, D_2] is not transcendence basis
-Collection [D_8, D_5, R_0] is not transcendence basis
-Collection [D_8, D_7, D_1] is not transcendence basis
-Collection [D_8, D_7, D_6] is not transcendence basis
-Collection [D_8, D_7, R_6] is not transcendence basis
-Collection [D_8, R_3, D_5] is not transcendence basis
-Collection [D_8, R_4, D_6] is not transcendence basis
-Collection [D_8, R_5, b] is not transcendence basis
-Collection [D_8, b, R_4] is not transcendence basis
-Collection [N, R_0, R_5] is not transcendence basis
-Collection [N, R_3, R_2] is not transcendence basis
+Collection [D_6, R_5, D_1] is not transcendence basis
+Collection [D_6, R_6, D_1] is not transcendence basis
+Collection [D_6, R_7, b] is not transcendence basis
+Collection [D_6, b, R_7] is not transcendence basis
+Collection [D_7, D_0, R_6] is not transcendence basis
+Collection [D_7, D_3, R_1] is not transcendence basis
+Collection [D_7, D_3, R_3] is not transcendence basis
+Collection [D_7, D_5, D_2] is not transcendence basis
+Collection [D_7, N, D_0] is not transcendence basis
+Collection [D_7, N, D_4] is not transcendence basis
+Collection [D_7, N, R_1] is not transcendence basis
+Collection [D_7, R_7, D_5] is not transcendence basis
+Collection [D_7, R_8, D_3] is not transcendence basis
+Collection [D_7, R_8, D_6] is not transcendence basis
+Collection [D_7, R_8, D_8] is not transcendence basis
+Collection [D_7, b, R_0] is not transcendence basis
+Collection [D_8, D_0, R_2] is not transcendence basis
+Collection [D_8, D_1, R_7] is not transcendence basis
+Collection [D_8, D_6, D_5] is not transcendence basis
+Collection [D_8, D_6, D_7] is not transcendence basis
+Collection [D_8, N, D_1] is not transcendence basis
+Collection [D_8, N, R_2] is not transcendence basis
+Collection [D_8, R_3, D_2] is not transcendence basis
+Collection [D_8, R_5, Cc_0] is not transcendence basis
+Collection [D_8, R_5, D_5] is not transcendence basis
+Collection [D_8, R_7, Cc_0] is not transcendence basis
+Collection [N, Cc_0, D_3] is not transcendence basis
+Collection [N, D_1, D_5] is not transcendence basis
+Collection [N, D_1, b] is not transcendence basis
+Collection [N, D_7, R_3] is not transcendence basis
+Collection [N, D_8, Cc_0] is not transcendence basis
 Collection [N, R_6, R_1] is not transcendence basis
-Collection [R_0, Cc_0, R_4] is not transcendence basis
-Collection [R_0, D_2, D_6] is not transcendence basis
-Collection [R_0, D_2, D_8] is not transcendence basis
-Collection [R_0, D_2, R_7] is not transcendence basis
-Collection [R_0, D_3, D_4] is not transcendence basis
-Collection [R_0, D_3, R_3] is not transcendence basis
-Collection [R_0, D_5, R_1] is not transcendence basis
-Collection [R_0, D_6, R_2] is not transcendence basis
-Collection [R_0, D_6, R_6] is not transcendence basis
-Collection [R_0, D_7, R_1] is not transcendence basis
-Collection [R_0, D_8, D_5] is not transcendence basis
-Collection [R_0, R_1, R_8] is not transcendence basis
-Collection [R_0, R_4, N] is not transcendence basis
-Collection [R_0, R_6, D_6] is not transcendence basis
-Collection [R_0, R_6, R_5] is not transcendence basis
-Collection [R_0, b, D_5] is not transcendence basis
-Collection [R_0, b, R_8] is not transcendence basis
-Collection [R_1, D_2, D_0] is not transcendence basis
-Collection [R_1, D_6, Cc_0] is not transcendence basis
-Collection [R_1, D_6, R_4] is not transcendence basis
-Collection [R_1, D_7, R_5] is not transcendence basis
-Collection [R_1, N, R_2] is not transcendence basis
-Collection [R_1, R_0, R_2] is not transcendence basis
-Collection [R_1, R_0, R_5] is not transcendence basis
-Collection [R_1, R_5, R_2] is not transcendence basis
-Collection [R_1, b, D_6] is not transcendence basis
-Collection [R_2, Cc_0, R_3] is not transcendence basis
-Collection [R_2, D_5, N] is not transcendence basis
-Collection [R_2, D_5, R_6] is not transcendence basis
-Collection [R_2, D_6, b] is not transcendence basis
-Collection [R_2, R_4, D_5] is not transcendence basis
-Collection [R_2, R_4, R_1] is not transcendence basis
-Collection [R_3, D_2, D_3] is not transcendence basis
-Collection [R_3, D_6, Cc_0] is not transcendence basis
+Collection [N, R_6, R_5] is not transcendence basis
+Collection [N, R_8, D_6] is not transcendence basis
+Collection [R_0, Cc_0, R_3] is not transcendence basis
+Collection [R_0, D_0, R_3] is not transcendence basis
+Collection [R_0, D_7, R_7] is not transcendence basis
+Collection [R_0, R_1, D_5] is not transcendence basis
+Collection [R_0, R_2, D_2] is not transcendence basis
+Collection [R_0, R_2, D_5] is not transcendence basis
+Collection [R_0, R_7, D_7] is not transcendence basis
+Collection [R_0, b, R_7] is not transcendence basis
+Collection [R_1, D_0, R_2] is not transcendence basis
+Collection [R_1, D_1, D_2] is not transcendence basis
+Collection [R_1, D_1, N] is not transcendence basis
+Collection [R_1, D_3, D_2] is not transcendence basis
+Collection [R_1, D_7, D_1] is not transcendence basis
+Collection [R_1, R_0, D_3] is not transcendence basis
+Collection [R_1, R_3, D_5] is not transcendence basis
+Collection [R_1, R_7, R_5] is not transcendence basis
+Collection [R_1, R_8, Cc_0] is not transcendence basis
+Collection [R_1, R_8, R_4] is not transcendence basis
+Collection [R_2, D_0, D_7] is not transcendence basis
+Collection [R_2, D_1, N] is not transcendence basis
+Collection [R_2, D_4, D_8] is not transcendence basis
+Collection [R_2, D_5, D_1] is not transcendence basis
+Collection [R_2, D_5, R_7] is not transcendence basis
+Collection [R_2, N, R_4] is not transcendence basis
+Collection [R_2, R_1, D_5] is not transcendence basis
+Collection [R_2, R_1, b] is not transcendence basis
+Collection [R_2, R_3, D_3] is not transcendence basis
+Collection [R_2, R_4, D_7] is not transcendence basis
+Collection [R_2, R_7, D_1] is not transcendence basis
+Collection [R_2, R_7, D_8] is not transcendence basis
+Collection [R_2, R_8, D_0] is not transcendence basis
+Collection [R_2, b, Cc_0] is not transcendence basis
+Collection [R_3, D_0, R_6] is not transcendence basis
+Collection [R_3, D_2, R_7] is not transcendence basis
+Collection [R_3, D_3, D_6] is not transcendence basis
+Collection [R_3, D_5, R_8] is not transcendence basis
+Collection [R_3, D_6, D_7] is not transcendence basis
+Collection [R_3, D_6, R_1] is not transcendence basis
 Collection [R_3, D_6, R_7] is not transcendence basis
-Collection [R_3, N, R_8] is not transcendence basis
-Collection [R_3, R_1, R_5] is not transcendence basis
-Collection [R_3, R_2, R_8] is not transcendence basis
-Collection [R_3, R_5, D_1] is not transcendence basis
-Collection [R_3, R_5, D_2] is not transcendence basis
-Collection [R_3, R_5, D_5] is not transcendence basis
-Collection [R_4, D_0, D_1] is not transcendence basis
-Collection [R_4, D_0, R_2] is not transcendence basis
-Collection [R_4, D_4, D_5] is not transcendence basis
-Collection [R_4, R_6, D_7] is not transcendence basis
-Collection [R_4, R_6, R_0] is not transcendence basis
-Collection [R_4, R_6, R_5] is not transcendence basis
-Collection [R_4, R_7, D_2] is not transcendence basis
-Collection [R_4, R_7, R_0] is not transcendence basis
-Collection [R_4, R_8, D_7] is not transcendence basis
-Collection [R_4, b, D_1] is not transcendence basis
-Collection [R_4, b, R_7] is not transcendence basis
-Collection [R_5, Cc_0, D_5] is not transcendence basis
-Collection [R_5, D_3, D_4] is not transcendence basis
-Collection [R_5, D_5, Cc_0] is not transcendence basis
-Collection [R_5, D_7, b] is not transcendence basis
-Collection [R_5, R_4, D_0] is not transcendence basis
-Collection [R_5, R_7, D_0] is not transcendence basis
-Collection [R_5, R_7, R_4] is not transcendence basis
-Collection [R_5, R_8, D_6] is not transcendence basis
-Collection [R_6, Cc_0, D_4] is not transcendence basis
-Collection [R_6, Cc_0, N] is not transcendence basis
-Collection [R_6, D_0, R_4] is not transcendence basis
-Collection [R_6, D_0, R_5] is not transcendence basis
-Collection [R_6, D_1, D_6] is not transcendence basis
-Collection [R_6, R_0, D_5] is not transcendence basis
-Collection [R_6, R_1, D_0] is not transcendence basis
-Collection [R_6, R_7, D_0] is not transcendence basis
-Collection [R_7, D_1, D_4] is not transcendence basis
-Collection [R_7, D_2, D_1] is not transcendence basis
+Collection [R_3, N, Cc_0] is not transcendence basis
+Collection [R_3, R_0, D_7] is not transcendence basis
+Collection [R_3, R_5, b] is not transcendence basis
+Collection [R_3, R_6, R_7] is not transcendence basis
+Collection [R_3, b, R_1] is not transcendence basis
+Collection [R_4, Cc_0, R_7] is not transcendence basis
+Collection [R_4, D_0, Cc_0] is not transcendence basis
+Collection [R_4, D_3, D_2] is not transcendence basis
+Collection [R_4, D_6, D_0] is not transcendence basis
+Collection [R_4, R_0, D_2] is not transcendence basis
+Collection [R_4, R_1, D_5] is not transcendence basis
+Collection [R_4, R_1, D_7] is not transcendence basis
+Collection [R_4, b, R_6] is not transcendence basis
+Collection [R_5, D_2, R_0] is not transcendence basis
+Collection [R_5, D_3, D_7] is not transcendence basis
+Collection [R_5, D_5, R_8] is not transcendence basis
+Collection [R_5, D_7, R_6] is not transcendence basis
+Collection [R_5, D_8, D_0] is not transcendence basis
+Collection [R_5, R_0, b] is not transcendence basis
+Collection [R_5, R_8, D_2] is not transcendence basis
+Collection [R_6, D_5, Cc_0] is not transcendence basis
+Collection [R_6, D_7, N] is not transcendence basis
+Collection [R_6, D_7, R_7] is not transcendence basis
+Collection [R_6, R_0, D_7] is not transcendence basis
+Collection [R_6, R_1, R_5] is not transcendence basis
+Collection [R_6, R_4, D_0] is not transcendence basis
+Collection [R_6, R_5, D_5] is not transcendence basis
+Collection [R_6, R_8, D_2] is not transcendence basis
+Collection [R_6, b, N] is not transcendence basis
+Collection [R_7, Cc_0, D_0] is not transcendence basis
+Collection [R_7, Cc_0, R_6] is not transcendence basis
 Collection [R_7, D_2, R_6] is not transcendence basis
-Collection [R_7, D_3, D_5] is not transcendence basis
-Collection [R_7, D_4, D_8] is not transcendence basis
-Collection [R_7, N, D_1] is not transcendence basis
-Collection [R_7, R_1, R_0] is not transcendence basis
-Collection [R_7, R_6, R_3] is not transcendence basis
-Collection [R_7, b, R_0] is not transcendence basis
-Collection [R_7, b, R_5] is not transcendence basis
-Collection [R_8, Cc_0, D_2] is not transcendence basis
-Collection [R_8, D_0, R_6] is not transcendence basis
-Collection [R_8, D_1, R_2] is not transcendence basis
+Collection [R_7, D_6, D_2] is not transcendence basis
+Collection [R_7, D_6, D_7] is not transcendence basis
+Collection [R_7, R_2, D_5] is not transcendence basis
+Collection [R_7, R_3, R_6] is not transcendence basis
+Collection [R_7, R_5, Cc_0] is not transcendence basis
+Collection [R_7, R_5, D_5] is not transcendence basis
+Collection [R_8, D_0, D_6] is not transcendence basis
+Collection [R_8, D_1, R_7] is not transcendence basis
 Collection [R_8, D_3, D_1] is not transcendence basis
-Collection [R_8, D_6, D_4] is not transcendence basis
-Collection [R_8, R_1, D_1] is not transcendence basis
-Collection [R_8, b, N] is not transcendence basis
-Collection [b, D_0, R_5] is not transcendence basis
-Collection [b, D_2, D_0] is not transcendence basis
-Collection [b, D_2, R_3] is not transcendence basis
-Collection [b, D_3, Cc_0] is not transcendence basis
-Collection [b, D_3, D_0] is not transcendence basis
-Collection [b, R_0, D_6] is not transcendence basis
-Collection [b, R_2, N] is not transcendence basis
-Collection [b, R_3, R_2] is not transcendence basis
-Collection [b, R_8, D_2] is not transcendence basis
-Picked the best choice [Cc_0, D_0, N] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {N}
-Algebraically independent parameters among derivatives: {Cc(0), D(0)}
-	Adding ODEs: [diff(N(t),t) = 0]
-	Adding output functions: [y_faux1(t) = N(t)]
-	New system: [diff(N(t),t) = 0, diff(S(t),t) = -b*S(t)*i(t)/N(t)-p*S(t)+q*C(t), diff(i(t),t) = b*S(t)*i(t)/N(t)-(r-mu)*i(t), diff(R(t),t) = r*i(t), diff(Cc(t),t) = p*S(t)-q*Cc(t), diff(D(t),t) = mu*i(t), y1(t) = i(t)+R(t)+D(t), y_faux1(t) = N(t)]
-
-=== Input info ===
-State variables:          [N(t), S(t), i(t), R(t), Cc(t), D(t)]
-Output variables:         [y1(t), y_faux1(t)]
-Input variables:          [C(t)]
-Parameters in equations:  [b, mu, p, q, r]
-===================
-
-	Adding new y-equations: faux_equations
-	Adding new y-equations: [y_faux2_0 = Cc_0, y_faux3_0 = D_0]
-	New system: [y1_0-i_0-R_0-D_0, -i_0*mu+D_1, -i_0*r+R_1, -N_0*i_0*mu+N_0*i_0*r-S_0*b*i_0+N_0*i_1, y_faux1_0-N_0, N_1, -D_1-R_1-i_1+y1_1, -i_1*mu+D_2, -i_1*r+R_2, ((r-mu)*N_0-b*S_0+N_1)*i_1+N_0*i_2-i_0*((-r+mu)*N_1+S_1*b), -C_0*N_0*q+N_0*S_0*p+S_0*b*i_0+N_0*S_1, -D_2-R_2-i_2+y1_2, -i_2*mu+D_3, -i_2*r+R_3, ((2*r-2*mu)*N_1-2*S_1*b+N_2)*i_1+((r-mu)*N_0-b*S_0+2*N_1)*i_2+N_0*i_3-i_0*((-r+mu)*N_2+S_2*b), N_2, (-C_1*q+S_1*p+S_2)*N_0+(-C_0*q+S_0*p+S_1)*N_1+b*(S_0*i_1+S_1*i_0), -D_3-R_3-i_3+y1_3, -i_3*mu+D_4, -i_3*r+R_4, (-3*N_2*mu+3*N_2*r-3*S_2*b+N_3)*i_1+(-3*N_1*mu+3*N_1*r-3*S_1*b+3*N_2)*i_2+(-N_0*mu+N_0*r-S_0*b+3*N_1)*i_3-S_3*b*i_0+N_3*i_0*r-N_3*i_0*mu+N_0*i_4, N_3, (-C_2*q+S_2*p+S_3)*N_0+(-2*C_1*q+2*S_1*p+2*S_2)*N_1+(-C_0*q+S_0*p+S_1)*N_2+b*(S_0*i_2+2*S_1*i_1+S_2*i_0), -D_4-R_4-i_4+y1_4, -i_4*mu+D_5, -i_4*r+R_5, (-N_0*i_4-4*N_1*i_3-6*N_2*i_2-4*N_3*i_1-N_4*i_0)*mu+(-S_0*i_4-4*S_1*i_3-6*S_2*i_2-4*S_3*i_1-S_4*i_0)*b+(N_0*i_4+4*N_1*i_3+6*N_2*i_2+4*N_3*i_1+N_4*i_0)*r+N_4*i_1+4*N_3*i_2+6*N_2*i_3+4*N_1*i_4+N_0*i_5, N_4, (S_0*i_3+3*S_1*i_2+3*S_2*i_1+S_3*i_0)*b+(N_0*S_3+3*N_1*S_2+3*N_2*S_1+N_3*S_0)*p+(-C_0*N_3-3*C_1*N_2-3*C_2*N_1-C_3*N_0)*q+3*N_2*S_2+N_3*S_1+3*N_1*S_3+N_0*S_4, -D_5-R_5-i_5+y1_5, -i_5*mu+D_6, -i_5*r+R_6, (-N_0*i_5-5*N_1*i_4-10*N_2*i_3-10*N_3*i_2-5*N_4*i_1-N_5*i_0)*mu+(-S_0*i_5-5*S_1*i_4-10*S_2*i_3-10*S_3*i_2-5*S_4*i_1-S_5*i_0)*b+(N_0*i_5+5*N_1*i_4+10*N_2*i_3+10*N_3*i_2+5*N_4*i_1+N_5*i_0)*r+N_5*i_1+5*N_4*i_2+10*N_3*i_3+10*N_2*i_4+5*N_1*i_5+N_0*i_6, N_5, (S_0*i_4+4*S_1*i_3+6*S_2*i_2+4*S_3*i_1+S_4*i_0)*b+(N_0*S_4+4*N_1*S_3+6*N_2*S_2+4*N_3*S_1+N_4*S_0)*p+(-C_0*N_4-4*C_1*N_3-6*C_2*N_2-4*C_3*N_1-C_4*N_0)*q+4*N_1*S_4+6*N_2*S_3+4*N_3*S_2+N_4*S_1+N_0*S_5, -D_6-R_6-i_6+y1_6, -i_6*mu+D_7, -i_6*r+R_7, (-N_0*i_6-6*N_1*i_5-15*N_2*i_4-20*N_3*i_3-15*N_4*i_2-6*N_5*i_1-N_6*i_0)*mu+(-S_0*i_6-6*S_1*i_5-15*S_2*i_4-20*S_3*i_3-15*S_4*i_2-6*S_5*i_1-S_6*i_0)*b+(N_0*i_6+6*N_1*i_5+15*N_2*i_4+20*N_3*i_3+15*N_4*i_2+6*N_5*i_1+N_6*i_0)*r+N_6*i_1+6*N_5*i_2+15*N_4*i_3+20*N_3*i_4+15*N_2*i_5+6*N_1*i_6+N_0*i_7, N_6, (S_0*i_5+5*S_1*i_4+10*S_2*i_3+10*S_3*i_2+5*S_4*i_1+S_5*i_0)*b+(N_0*S_5+5*N_1*S_4+10*N_2*S_3+10*N_3*S_2+5*N_4*S_1+N_5*S_0)*p+(-C_0*N_5-5*C_1*N_4-10*C_2*N_3-10*C_3*N_2-5*C_4*N_1-C_5*N_0)*q+N_0*S_6+5*N_1*S_5+10*N_2*S_4+10*N_3*S_3+5*N_4*S_2+N_5*S_1, -D_7-R_7-i_7+y1_7, -i_7*mu+D_8, -i_7*r+R_8, (-N_0*i_7-7*N_1*i_6-21*N_2*i_5-35*N_3*i_4-35*N_4*i_3-21*N_5*i_2-7*N_6*i_1-N_7*i_0)*mu+(-S_0*i_7-7*S_1*i_6-21*S_2*i_5-35*S_3*i_4-35*S_4*i_3-21*S_5*i_2-7*S_6*i_1-S_7*i_0)*b+(N_0*i_7+7*N_1*i_6+21*N_2*i_5+35*N_3*i_4+35*N_4*i_3+21*N_5*i_2+7*N_6*i_1+N_7*i_0)*r+7*N_6*i_2+N_7*i_1+21*N_5*i_3+35*N_4*i_4+35*N_3*i_5+21*N_2*i_6+7*N_1*i_7+N_0*i_8, N_7, (S_0*i_6+6*S_1*i_5+15*S_2*i_4+20*S_3*i_3+15*S_4*i_2+6*S_5*i_1+S_6*i_0)*b+(N_0*S_6+6*N_1*S_5+15*N_2*S_4+20*N_3*S_3+15*N_4*S_2+6*N_5*S_1+N_6*S_0)*p+(-C_0*N_6-6*C_1*N_5-15*C_2*N_4-20*C_3*N_3-15*C_4*N_2-6*C_5*N_1-C_6*N_0)*q+N_0*S_7+6*N_1*S_6+15*N_2*S_5+20*N_3*S_4+15*N_4*S_3+6*N_5*S_2+N_6*S_1, -D_8-R_8-i_8+y1_8, -N_1+y_faux1_1, -N_2+y_faux1_2, -N_3+y_faux1_3, -N_4+y_faux1_4, -N_5+y_faux1_5, -N_6+y_faux1_6, -N_7+y_faux1_7, y_faux2_0-Cc_0, y_faux3_0-D_0]
-	New system: [y1_0 = i_0+R_0+D_0, y1_1 = D_1+R_1+i_1, y1_2 = D_2+R_2+i_2, y1_3 = D_3+R_3+i_3, y1_4 = D_4+R_4+i_4, y1_5 = D_5+R_5+i_5, y1_6 = D_6+R_6+i_6, y1_7 = D_7+R_7+i_7, y1_8 = D_8+R_8+i_8, y1_9 = D_9+R_9+i_9, y1_10 = D_10+R_10+i_10, y1_11 = D_11+R_11+i_11, y1_12 = D_12+R_12+i_12, y_faux1_0 = N_0, y_faux1_1 = N_1, y_faux1_2 = N_2, y_faux1_3 = N_3, y_faux1_4 = N_4, y_faux1_5 = N_5, y_faux1_6 = N_6, y_faux1_7 = N_7, y_faux1_8 = N_8, y_faux1_9 = N_9, y_faux1_10 = N_10, y_faux1_11 = N_11, y_faux1_12 = N_12, y_faux2_0 = Cc_0, y_faux3_0 = D_0]
+Collection [R_8, D_4, R_3] is not transcendence basis
+Collection [R_8, D_6, D_2] is not transcendence basis
+Collection [R_8, N, D_8] is not transcendence basis
+Collection [R_8, R_3, R_6] is not transcendence basis
+Collection [R_8, R_6, D_2] is not transcendence basis
+Collection [R_8, b, R_5] is not transcendence basis
+Collection [b, D_7, N] is not transcendence basis
+Collection [b, D_8, D_4] is not transcendence basis
+Picked the best choice [R_0, b, Cc_0] based on heuristic:
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  248257671800000000
-Random sample for the outputs and inputs is generated from  [b = 27352110007762285, mu = 176700853020419780, p = 16277595973661183, q = 94618799755996434, r = 167454728849223268, N_0 = 43490699692803956, S_0 = 207077821230348506, i_0 = 207883697829518018, R_0 = 114819204379278743, Cc_0 = 94799930497673966, D_0 = 11119958970322519]
-The polynomial system widehat{E^t} contains  57 equations in  49  variables
-Variable ordering to be used for Groebner basis computation [i_8, R_8, D_8, i_7, S_7, R_7, N_7, D_7, i_6, S_6, R_6, N_6, D_6, i_5, S_5, R_5, N_5, D_5, i_4, S_4, R_4, N_4, D_4, i_3, S_3, R_3, N_3, D_3, i_2, S_2, R_2, N_2, D_2, i_1, S_1, R_1, N_1, D_1, Cc_0, i_0, S_0, R_0, N_0, D_0, z_aux, w_aux, b, mu, p, q, r]
-Prep CPU Time (sub_transc=true):	 17.729
-Prep Real Elapsed Time (sub_transc=true):	 16.959
-memory used=1.68GiB, alloc change=76.01MiB, cpu time=17.75s, real time=16.98s, gc time=1.68s
+Prep CPU Time (sub_transc=true):	 14.221
+Prep Real Elapsed Time (sub_transc=true):	 13.414
+memory used=1.33GiB, alloc change=36.00MiB, cpu time=14.25s, real time=13.44s, gc time=1.96s
 
 
-GetPolySystem Usage (real, cpu, memory):	16.982,	17.753,	1805369432
+GetPolySystem Usage (real, cpu, memory):	13.441,	14.247,	1425759872
 
-States for substitution:	[q = 2, p = 2, b = 1, D_ = 0, mu = 1, N_ = 0, r = 2, S_ = 1, i_ = 0, R_ = 0, (NULL) = 2]
+States for substitution:	[i_ = 0, (NULL) = 2, r = 2, D_ = 0, mu = 1, S_ = 1, R_ = 0, q = 2, p = 2, b = 1, N = 1]
 NonID parameters:	[Cc_0, D_0, N, R_0, b]
-Substitutions:	[q = 3, p = 3, z_aux = 2, N_ = 1, r = 3, S_ = 2, i_ = 1]
-memory used=1.69GiB, alloc change=76.01MiB, cpu time=17.82s, real time=17.05s, gc time=1.68s
+Substitutions:	[i_ = 1, z_aux = 2, r = 3, S_ = 2, q = 3, p = 3]
+memory used=1.33GiB, alloc change=36.00MiB, cpu time=14.33s, real time=13.52s, gc time=1.96s
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {S_0 =
+S_0^2, S_1 = S_1^2, S_2 = S_2^2, S_3 = S_3^2, S_4 = S_4^2, S_5 = S_5^2, S_6 = 
+S_6^2, S_7 = S_7^2, i_0 = i_0, i_1 = i_1, i_2 = i_2, i_3 = i_3, i_4 = i_4, i_5
+= i_5, i_6 = i_6, i_7 = i_7, i_8 = i_8, p = p^3, q = q^3, r = r^3, z_aux = 
+z_aux^2}, [426057354485351220-i_0-D_0, -i_0*mu+D_1, -i_0*r^3+R_1, N*i_0*r^3-N*
+i_0*mu-81239876297427082*S_0^2*i_0+N*i_1, -D_1-R_1-i_1+
+1224607965716855380387708391909639799978569751584688/78382977194514779, -i_1*mu
++D_2, -i_1*r^3+R_2, ((r^3-mu)*N-81239876297427082*S_0^2)*i_1-81239876297427082*
+S_1^2*i_0+N*i_2, N*S_0^2*p^3-126006409278075425*N*q^3+N*S_1^2+81239876297427082
+*S_0^2*i_0, -D_2-R_2-i_2+214444458241753026232043333351585738749086667459427592\
+22733031737149014221757516807576/6143891113875823934870165249418841, -i_2*mu+
+D_3, -i_2*r^3+R_3, ((r^3-mu)*N-81239876297427082*S_0^2)*i_2+N*i_3-\
+162479752594854164*S_1^2*i_1-81239876297427082*S_2^2*i_0, (S_1^2*p^3-\
+211833173280273436*q^3+S_2^2)*N+81239876297427082*S_0^2*i_1+81239876297427082*
+S_1^2*i_0, -D_3-R_3-i_3+3083912139085093545083271517114742812310359741990148256\
+92045858823533009014091860878787847367483164024400368130451029312/
+481576477064510710558597386865576864653842735551139, -i_3*mu+D_4, -i_3*r^3+R_4,
+-81239876297427082*S_0^2*i_3-243719628892281246*S_1^2*i_2-243719628892281246*
+S_2^2*i_1-81239876297427082*S_3^2*i_0+N*((r^3-mu)*i_3+i_4), (S_2^2*p^3-\
+233129820980717985*q^3+S_3^2)*N+81239876297427082*S_0^2*i_2+162479752594854164*
+S_1^2*i_1+81239876297427082*S_2^2*i_0, -D_4-R_4-i_4+372766140765521089542695168\
+9217802826593639812854645382104351237789430588134479228107821871880378117063164\
+671061947043923291952811753651066473581719559904/
+37747398019162312549770065734383150730029454637977141767288245783281, -i_4*mu+
+D_5, -i_4*r^3+R_5, -81239876297427082*S_0^2*i_4-324959505189708328*S_1^2*i_3-\
+487439257784562492*S_2^2*i_2-324959505189708328*S_3^2*i_1-81239876297427082*S_4
+^2*i_0+N*((r^3-mu)*i_4+i_5), 81239876297427082*S_0^2*i_3+243719628892281246*S_1
+^2*i_2+243719628892281246*S_2^2*i_1+81239876297427082*S_3^2*i_0+N*(S_3^2*p^3-\
+75551628903026249*q^3+S_4^2), -D_5-R_5-i_5+294895266018725834364165992986377985\
+1337664391015310208568942259222821706837616631223298700083233897879453051578163\
+2825999878069045364142260861954415901247185323147202670134702910690462208/29587\
+5343808827188737783340849409344999844321778647366206774265951700416536958560989\
+9, -i_5*mu+D_6, -i_5*r^3+R_6, -81239876297427082*S_0^2*i_5-406199381487135410*
+S_1^2*i_4-812398762974270820*S_2^2*i_3-812398762974270820*S_3^2*i_2-\
+406199381487135410*S_4^2*i_1-81239876297427082*S_5^2*i_0+((r^3-mu)*i_5+i_6)*N,
+81239876297427082*S_0^2*i_4+324959505189708328*S_1^2*i_3+487439257784562492*S_2
+^2*i_2+324959505189708328*S_3^2*i_1+81239876297427082*S_4^2*i_0+N*(S_4^2*p^3-\
+201854960620134974*q^3+S_5^2), -D_6-R_6-i_6-30277738273324098912485261674880512\
+2736510797807446109316537071108074229517468154121425113201294861092314831750641\
+6285614116174750221844469300376150114216314890946323848175040117017673270574209\
+68193344443459814523688045464/2319159032618652104433136950330362864791239350073\
+57888816746438889267815047890737329188687554084197321, -i_6*mu+D_7, -i_6*r^3+
+R_7, -81239876297427082*S_0^2*i_6-487439257784562492*S_1^2*i_5-\
+1218598144461406230*S_2^2*i_4-1624797525948541640*S_3^2*i_3-1218598144461406230
+*S_4^2*i_2-487439257784562492*S_5^2*i_1-81239876297427082*S_6^2*i_0+N*((r^3-mu)
+*i_6+i_7), 81239876297427082*S_0^2*i_5+406199381487135410*S_1^2*i_4+
+812398762974270820*S_2^2*i_3+812398762974270820*S_3^2*i_2+406199381487135410*
+S_4^2*i_1+81239876297427082*S_5^2*i_0+N*(S_5^2*p^3-43512921432283616*q^3+S_6^2)
+, -D_7-R_7-i_7-1542564304209582941824672964294215855944342513016266492037968311\
+9680028761935004068040771421685935915981173230149689784363854583909108953362132\
+7044663943907757100684596286842059047859830717881162853131002993654145053426534\
+72199266611210313182362450421359528/1817825895642007643684550769872915290028303\
+3341298708561458176451385389753322008078440179512946155703558142806286707059, -
+i_7*mu+D_8, -i_7*r^3+R_8, -81239876297427082*S_0^2*i_7-568679134081989574*S_1^2
+*i_6-1706037402245968722*S_2^2*i_5-2843395670409947870*S_3^2*i_4-\
+2843395670409947870*S_4^2*i_3-1706037402245968722*S_5^2*i_2-568679134081989574*
+S_6^2*i_1-81239876297427082*S_7^2*i_0+N*((r^3-mu)*i_7+i_8), 81239876297427082*
+S_0^2*i_6+487439257784562492*S_1^2*i_5+1218598144461406230*S_2^2*i_4+
+1624797525948541640*S_3^2*i_3+1218598144461406230*S_4^2*i_2+487439257784562492*
+S_5^2*i_1+81239876297427082*S_6^2*i_0+N*(S_6^2*p^3-46917409926965976*q^3+S_7^2)
+, -D_8-R_8-i_8-1561062178575402964999264053551093949198977076622001217460092881\
+0372768371050839162846490871156099207864281657974560134690352702109032478031829\
+5610201410370469751920860146977423334869817554342594771748515022115046170971185\
+976274732015293519056637866628068011379299497016919440401579109658856/142486605\
+7217058877200325181778921508173468053137013091134829200068327733354907964502485\
+703853135907431465841325088076426633277219124961, N*z_aux^2-1], [i_8, R_8, D_8,
+i_7, S_7, R_7, D_7, i_6, S_6, R_6, D_6, i_5, S_5, R_5, D_5, i_4, S_4, R_4, D_4,
+i_3, S_3, R_3, D_3, i_2, S_2, R_2, D_2, i_1, S_1, R_1, D_1, i_0, S_0, D_0, 
+z_aux, w_aux, N, b, mu, p, q, r], [R_0, b, Cc_0], [426057354485351220-i_0-D_0,
+-i_0*mu+D_1, -i_0*r+R_1, -N*i_0*mu+N*i_0*r+N*i_1-81239876297427082*S_0*i_0, -
+D_1-R_1-i_1+1224607965716855380387708391909639799978569751584688/
+78382977194514779, -i_1*mu+D_2, -i_1*r+R_2, ((r-mu)*N-81239876297427082*S_0)*
+i_1-81239876297427082*S_1*i_0+N*i_2, N*S_0*p+N*S_1-126006409278075425*N*q+
+81239876297427082*S_0*i_0, -D_2-R_2-i_2+214444458241753026232043333351585738749\
+08666745942759222733031737149014221757516807576/
+6143891113875823934870165249418841, -i_2*mu+D_3, -i_2*r+R_3, ((r-mu)*N-\
+81239876297427082*S_0)*i_2+N*i_3-162479752594854164*S_1*i_1-81239876297427082*
+S_2*i_0, (S_1*p+S_2-211833173280273436*q)*N+81239876297427082*S_0*i_1+
+81239876297427082*S_1*i_0, -D_3-R_3-i_3+308391213908509354508327151711474281231\
+0359741990148256920458588235330090140918608787878473674831640244003681304510293\
+12/481576477064510710558597386865576864653842735551139, -i_3*mu+D_4, -i_3*r+R_4
+, -81239876297427082*S_0*i_3-243719628892281246*S_1*i_2-243719628892281246*S_2*
+i_1-81239876297427082*S_3*i_0+N*((r-mu)*i_3+i_4), (S_2*p+S_3-233129820980717985
+*q)*N+81239876297427082*S_0*i_2+162479752594854164*S_1*i_1+81239876297427082*
+S_2*i_0, -D_4-R_4-i_4+372766140765521089542695168921780282659363981285464538210\
+4351237789430588134479228107821871880378117063164671061947043923291952811753651\
+066473581719559904/
+37747398019162312549770065734383150730029454637977141767288245783281, -i_4*mu+
+D_5, -i_4*r+R_5, -81239876297427082*S_0*i_4-324959505189708328*S_1*i_3-\
+487439257784562492*S_2*i_2-324959505189708328*S_3*i_1-81239876297427082*S_4*i_0
++N*((r-mu)*i_4+i_5), 81239876297427082*S_0*i_3+243719628892281246*S_1*i_2+
+243719628892281246*S_2*i_1+81239876297427082*S_3*i_0+N*(S_3*p+S_4-\
+75551628903026249*q), -D_5-R_5-i_5+29489526601872583436416599298637798513376643\
+9101531020856894225922282170683761663122329870008323389787945305157816328259998\
+78069045364142260861954415901247185323147202670134702910690462208/2958753438088\
+271887377833408494093449998443217786473662067742659517004165369585609899, -i_5*
+mu+D_6, -i_5*r+R_6, -81239876297427082*S_0*i_5-406199381487135410*S_1*i_4-\
+812398762974270820*S_2*i_3-812398762974270820*S_3*i_2-406199381487135410*S_4*
+i_1-81239876297427082*S_5*i_0+((r-mu)*i_5+i_6)*N, 81239876297427082*S_0*i_4+
+324959505189708328*S_1*i_3+487439257784562492*S_2*i_2+324959505189708328*S_3*
+i_1+81239876297427082*S_4*i_0+N*(S_4*p+S_5-201854960620134974*q), -D_6-R_6-i_6-\
+3027773827332409891248526167488051227365107978074461093165370711080742295174681\
+5412142511320129486109231483175064162856141161747502218444693003761501142163148\
+9094632384817504011701767327057420968193344443459814523688045464/23191590326186\
+5210443313695033036286479123935007357888816746438889267815047890737329188687554\
+084197321, -i_6*mu+D_7, -i_6*r+R_7, -81239876297427082*S_0*i_6-\
+487439257784562492*S_1*i_5-1218598144461406230*S_2*i_4-1624797525948541640*S_3*
+i_3-1218598144461406230*S_4*i_2-487439257784562492*S_5*i_1-81239876297427082*
+S_6*i_0+N*((r-mu)*i_6+i_7), 81239876297427082*S_0*i_5+406199381487135410*S_1*
+i_4+812398762974270820*S_2*i_3+812398762974270820*S_3*i_2+406199381487135410*
+S_4*i_1+81239876297427082*S_5*i_0+N*(S_5*p+S_6-43512921432283616*q), -D_7-R_7-
+i_7-154256430420958294182467296429421585594434251301626649203796831196800287619\
+3500406804077142168593591598117323014968978436385458390910895336213270446639439\
+0775710068459628684205904785983071788116285313100299365414505342653472199266611\
+210313182362450421359528/181782589564200764368455076987291529002830333412987085\
+61458176451385389753322008078440179512946155703558142806286707059, -i_7*mu+D_8,
+-i_7*r+R_8, -81239876297427082*S_0*i_7-568679134081989574*S_1*i_6-\
+1706037402245968722*S_2*i_5-2843395670409947870*S_3*i_4-2843395670409947870*S_4
+*i_3-1706037402245968722*S_5*i_2-568679134081989574*S_6*i_1-81239876297427082*
+S_7*i_0+N*((r-mu)*i_7+i_8), 81239876297427082*S_0*i_6+487439257784562492*S_1*
+i_5+1218598144461406230*S_2*i_4+1624797525948541640*S_3*i_3+1218598144461406230
+*S_4*i_2+487439257784562492*S_5*i_1+81239876297427082*S_6*i_0+N*(S_6*p+S_7-\
+46917409926965976*q), -D_8-R_8-i_8-15610621785754029649992640535510939491989770\
+7662200121746009288103727683710508391628464908711560992078642816579745601346903\
+5270210903247803182956102014103704697519208601469774233348698175543425947717485\
+1502211504617097118597627473201529351905663786662806801137929949701691944040157\
+9109658856/14248660572170588772003251817789215081734680531370130911348292000683\
+27733354907964502485703853135907431465841325088076426633277219124961, N*z_aux-1
+]
 
-SubsByDepth Usage (real, cpu, memory):	17.049,	17.820,	1809928120
+SubsByDepth Usage (real, cpu, memory):	13.518,	14.326,	1430089616
 
 
 =======================================================
@@ -379,9 +486,6 @@ Parameters in equations:  [N, b, mu, p, q, r]
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  31838400
-Orders of prolongations of the outputs (beta) =  [9]
-Orders of prolongations of the state variables (alpha) =  [8, 9, 9, 1, 9]
 
 =======================================================
 3. Assessing local identifiability
@@ -390,31 +494,122 @@ Orders of prolongations of the state variables (alpha) =  [8, 9, 9, 1, 9]
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  186193253900000000
-Random sample for the outputs and inputs is generated from  [N = 122653034541167190, b = 172251704402812761, mu = 18562984851773184, p = 82449213370246228, q = 79420581782170463, r = 94877754836392519, S_0 = 29364186649636304, i_0 = 183870651008997902, R_0 = 47537143132500099, Cc_0 = 166397093669826477, D_0 = 144893470813782856]
-The polynomial system widehat{E^t} contains  40 equations in  41  variables
 Locally identifiable paramters:  [mu, p, q, r, S(0), i(0)]
 Nonidentifiable parameter:  [Cc(0), D(0), N, R(0), b]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  248257671800000000
-Random sample for the outputs and inputs is generated from  [N = 39224973589995858, b = 216158534669969173, mu = 140397436352551633, p = 38942484531604355, q = 242812748031182847, r = 7967029144764923, S_0 = 157706175319816506, i_0 = 75736827264259765, R_0 = 237942848090460312, Cc_0 = 140317355142551092, D_0 = 206254915548191545]
-The polynomial system widehat{E^t} contains  40 equations in  41  variables
-Variable ordering to be used for Groebner basis computation [i_8, R_8, D_8, i_7, S_7, R_7, D_7, i_6, S_6, R_6, D_6, i_5, S_5, R_5, D_5, i_4, S_4, R_4, D_4, i_3, S_3, R_3, D_3, i_2, S_2, R_2, D_2, i_1, S_1, R_1, D_1, i_0, S_0, R_0, D_0, z_aux, w_aux, N, b, mu, p, q, r]
-Prep CPU Time (sub_transc=false):	 1.921
-Prep Real Elapsed Time (sub_transc=false):	 1.804
-memory used=193.70MiB, alloc change=-4.00MiB, cpu time=1.92s, real time=1.80s, gc time=265.11ms
+Prep CPU Time (sub_transc=false):	 1.782
+Prep Real Elapsed Time (sub_transc=false):	 1.650
+memory used=198.47MiB, alloc change=8.00MiB, cpu time=1.78s, real time=1.65s, gc time=287.43ms
 
 
-GetPolySystem Usage (real, cpu, memory):	1.805,	1.922,	203114104
+GetPolySystem Usage (real, cpu, memory):	1.651,	1.783,	208113032
 
-States for substitution:	[q = 2, p = 2, b = 1, D_ = 0, mu = 1, r = 2, S_ = 1, i_ = 0, R_ = 0, (NULL) = 2, N = 1]
+States for substitution:	[i_ = 0, (NULL) = 2, r = 2, D_ = 0, mu = 1, S_ = 1, R_ = 0, q = 2, p = 2, b = 1, N = 1]
 NonID parameters:	[Cc_0, D_0, N, R_0, b]
-Substitutions:	[q = 3, p = 3, z_aux = 2, r = 3, S_ = 2, i_ = 1]
-memory used=197.56MiB, alloc change=-4.00MiB, cpu time=1.96s, real time=1.84s, gc time=265.11ms
+Substitutions:	[i_ = 1, z_aux = 2, r = 3, S_ = 2, q = 3, p = 3]
+memory used=201.79MiB, alloc change=8.00MiB, cpu time=1.82s, real time=1.68s, gc time=287.43ms
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {S_0 =
+S_0^2, S_1 = S_1^2, S_2 = S_2^2, S_3 = S_3^2, S_4 = S_4^2, S_5 = S_5^2, S_6 = 
+S_6^2, S_7 = S_7^2, i_0 = i_0, i_1 = i_1, i_2 = i_2, i_3 = i_3, i_4 = i_4, i_5
+= i_5, i_6 = i_6, i_7 = i_7, i_8 = i_8, p = p^3, q = q^3, r = r^3, z_aux = 
+z_aux^2}, [192806578883325666-i_0-R_0-D_0, -i_0*mu+D_1, -i_0*r^3+R_1, N*i_0*r^3
+-S_0^2*b*i_0-N*i_0*mu+N*i_1, -D_1-R_1-i_1+
+168916007674023807359460391708723784516434511096802/84826906485050099, -i_1*mu+
+D_2, -i_1*r^3+R_2, ((r^3-mu)*N-b*S_0^2)*i_1-S_1^2*b*i_0+N*i_2, N*S_0^2*p^3-\
+2604883341448147*N*q^3+S_0^2*b*i_0+N*S_1^2, -D_2-R_2-i_2+1493772688429672186192\
+300637048507310292036489322277677051289038096389760186626222284/
+7195604063823434541600986539909801, -i_2*mu+D_3, -i_2*r^3+R_3, ((r^3-mu)*N-b*
+S_0^2)*i_2+N*i_3+(-2*S_1^2*i_1-S_2^2*i_0)*b, (S_1^2*p^3-89124286413649033*q^3+
+S_2^2)*N+b*(S_0^2*i_1+S_1^2*i_0), -D_3-R_3-i_3+12661310878013034235185610276863\
+0577796834657224774375412549717525262701404882222088977915838404869253209898915\
+69772928/610380833025396945979899217651772077586622426120299, -i_3*mu+D_4, -i_3
+*r^3+R_4, (-S_0^2*i_3-3*S_1^2*i_2-3*S_2^2*i_1-S_3^2*i_0)*b+N*((r^3-mu)*i_3+i_4)
+, (S_2^2*p^3-38279018780183165*q^3+S_3^2)*N+b*(S_0^2*i_2+2*S_1^2*i_1+S_2^2*i_0)
+, -D_4-R_4-i_4+1086562557772680375493846730944222782773858314507562961437414070\
+7030639577418966095714399298760550068531579067991492094255086829235540761908450\
+1301108568/51776717843312325835995246987068178290879721156825436830165215859601
+, -i_4*mu+D_5, -i_4*r^3+R_5, (-S_0^2*i_4-4*S_1^2*i_3-6*S_2^2*i_2-4*S_3^2*i_1-
+S_4^2*i_0)*b+N*((r^3-mu)*i_4+i_5), (S_0^2*i_3+3*S_1^2*i_2+3*S_2^2*i_1+S_3^2*i_0
+)*b+N*(S_3^2*p^3-109906667633368998*q^3+S_4^2), -D_5-R_5-i_5+931504137930518958\
+2268765245689008590782864603736692934726709420930477260253990645934866699422299\
+0575297662523406594343603856130406879829824022729685605785605181293991877209300\
+3835524220/43920588025974795081250503672885678900785663636171021326119353903819\
+67363561835150499, -i_5*mu+D_6, -i_5*r^3+R_6, (-S_0^2*i_5-5*S_1^2*i_4-10*S_2^2*
+i_3-10*S_3^2*i_2-5*S_4^2*i_1-S_5^2*i_0)*b+((r^3-mu)*i_5+i_6)*N, (S_0^2*i_4+4*
+S_1^2*i_3+6*S_2^2*i_2+4*S_3^2*i_1+S_4^2*i_0)*b+N*(S_4^2*p^3-101641437374380652*
+q^3+S_5^2), -D_6-R_6-i_6+793866455579291641922986410608401429954615528896093972\
+1092309690259634541822282021160741318073973028263850163151675770281986260582741\
+2387426943373803771815990625541596538002301066735298962986660812292441353488610\
+24105344/3725647613247775070863787763177798083196190981921394750460175653545348\
+39330304533009311658465219849401, -i_6*mu+D_7, -i_6*r^3+R_7, (-S_0^2*i_6-6*S_1^
+2*i_5-15*S_2^2*i_4-20*S_3^2*i_3-15*S_4^2*i_2-6*S_5^2*i_1-S_6^2*i_0)*b+N*((r^3-
+mu)*i_6+i_7), (S_0^2*i_5+5*S_1^2*i_4+10*S_2^2*i_3+10*S_3^2*i_2+5*S_4^2*i_1+S_5^
+2*i_0)*b+N*(S_5^2*p^3-147473815238642788*q^3+S_6^2), -D_7-R_7-i_7+6825479569965\
+4970752855988709285370643996248374418199848178295110703398645770191923981719497\
+0563794510631499693927437481170304056299939805370810628260003797177068460097813\
+2292527113194681151758307300037000330011705820121324779219323702899341451840552\
+8568/31603516168521911429025287304324560933464298683781652409005851083556833120\
+552939489068084613648696294881859314720140699, -i_7*mu+D_8, -i_7*r^3+R_8, (-S_0
+^2*i_7-7*S_1^2*i_6-21*S_2^2*i_5-35*S_3^2*i_4-35*S_4^2*i_3-21*S_5^2*i_2-7*S_6^2*
+i_1-S_7^2*i_0)*b+N*((r^3-mu)*i_7+i_8), (S_0^2*i_6+6*S_1^2*i_5+15*S_2^2*i_4+20*
+S_3^2*i_3+15*S_4^2*i_2+6*S_5^2*i_1+S_6^2*i_0)*b+N*(S_6^2*p^3-81910223341179964*
+q^3+S_7^2), -D_8-R_8-i_8+572379238641150284476785105372616550615899801314073816\
+2087958296398628318566971733588814783195513994842847375613393292784377050551363\
+4014048448026785952232518544402037351523081834159967071262018107326418170365375\
+4197135612946859871362780973810338207826593318238632733926419805399493841456/26\
+8082851062597698601990754010488000426031972771346044295727307868675018843333004\
+3313548675035508137219168650248368845289923697343879201, N*z_aux^2-1], [i_8, 
+R_8, D_8, i_7, S_7, R_7, D_7, i_6, S_6, R_6, D_6, i_5, S_5, R_5, D_5, i_4, S_4,
+R_4, D_4, i_3, S_3, R_3, D_3, i_2, S_2, R_2, D_2, i_1, S_1, R_1, D_1, i_0, S_0,
+R_0, D_0, z_aux, w_aux, N, b, mu, p, q, r], [], [192806578883325666-i_0-R_0-D_0
+, -i_0*mu+D_1, -i_0*r+R_1, -N*i_0*mu+N*i_0*r-S_0*b*i_0+N*i_1, -D_1-R_1-i_1+
+168916007674023807359460391708723784516434511096802/84826906485050099, -i_1*mu+
+D_2, -i_1*r+R_2, ((r-mu)*N-b*S_0)*i_1-S_1*b*i_0+N*i_2, N*S_0*p+S_0*b*i_0+N*S_1-\
+2604883341448147*N*q, -D_2-R_2-i_2+14937726884296721861923006370485073102920364\
+89322277677051289038096389760186626222284/7195604063823434541600986539909801, -
+i_2*mu+D_3, -i_2*r+R_3, ((r-mu)*N-b*S_0)*i_2+N*i_3+(-2*S_1*i_1-S_2*i_0)*b, (S_1
+*p+S_2-89124286413649033*q)*N+b*(S_0*i_1+S_1*i_0), -D_3-R_3-i_3+126613108780130\
+3423518561027686305777968346572247743754125497175252627014048822220889779158384\
+0486925320989891569772928/610380833025396945979899217651772077586622426120299,
+-i_3*mu+D_4, -i_3*r+R_4, (-S_0*i_3-3*S_1*i_2-3*S_2*i_1-S_3*i_0)*b+N*((r-mu)*i_3
++i_4), (S_2*p+S_3-38279018780183165*q)*N+b*(S_0*i_2+2*S_1*i_1+S_2*i_0), -D_4-
+R_4-i_4+10865625577726803754938467309442227827738583145075629614374140707030639\
+5774189660957143992987605500685315790679914920942550868292355407619084501301108\
+568/51776717843312325835995246987068178290879721156825436830165215859601, -i_4*
+mu+D_5, -i_4*r+R_5, (-S_0*i_4-4*S_1*i_3-6*S_2*i_2-4*S_3*i_1-S_4*i_0)*b+N*((r-mu
+)*i_4+i_5), (S_0*i_3+3*S_1*i_2+3*S_2*i_1+S_3*i_0)*b+N*(S_3*p+S_4-\
+109906667633368998*q), -D_5-R_5-i_5+9315041379305189582268765245689008590782864\
+6037366929347267094209304772602539906459348666994222990575297662523406594343603\
+8561304068798298240227296856057856051812939918772093003835524220/43920588025974\
+79508125050367288567890078566363617102132611935390381967363561835150499, -i_5*
+mu+D_6, -i_5*r+R_6, (-S_0*i_5-5*S_1*i_4-10*S_2*i_3-10*S_3*i_2-5*S_4*i_1-S_5*i_0
+)*b+((r-mu)*i_5+i_6)*N, (S_0*i_4+4*S_1*i_3+6*S_2*i_2+4*S_3*i_1+S_4*i_0)*b+N*(
+S_4*p+S_5-101641437374380652*q), -D_6-R_6-i_6+793866455579291641922986410608401\
+4299546155288960939721092309690259634541822282021160741318073973028263850163151\
+6757702819862605827412387426943373803771815990625541596538002301066735298962986\
+66081229244135348861024105344/3725647613247775070863787763177798083196190981921\
+39475046017565354534839330304533009311658465219849401, -i_6*mu+D_7, -i_6*r+R_7,
+(-S_0*i_6-6*S_1*i_5-15*S_2*i_4-20*S_3*i_3-15*S_4*i_2-6*S_5*i_1-S_6*i_0)*b+N*((r
+-mu)*i_6+i_7), (S_0*i_5+5*S_1*i_4+10*S_2*i_3+10*S_3*i_2+5*S_4*i_1+S_5*i_0)*b+N*
+(S_5*p+S_6-147473815238642788*q), -D_7-R_7-i_7+68254795699654970752855988709285\
+3706439962483744181998481782951107033986457701919239817194970563794510631499693\
+9274374811703040562999398053708106282600037971770684600978132292527113194681151\
+7583073000370003300117058201213247792193237028993414518405528568/31603516168521\
+9114290252873043245609334642986837816524090058510835568331205529394890680846136\
+48696294881859314720140699, -i_7*mu+D_8, -i_7*r+R_8, (-S_0*i_7-7*S_1*i_6-21*S_2
+*i_5-35*S_3*i_4-35*S_4*i_3-21*S_5*i_2-7*S_6*i_1-S_7*i_0)*b+N*((r-mu)*i_7+i_8),
+(S_0*i_6+6*S_1*i_5+15*S_2*i_4+20*S_3*i_3+15*S_4*i_2+6*S_5*i_1+S_6*i_0)*b+N*(S_6
+*p+S_7-81910223341179964*q), -D_8-R_8-i_8+5723792386411502844767851053726165506\
+1589980131407381620879582963986283185669717335888147831955139948428473756133932\
+9278437705055136340140484480267859522325185444020373515230818341599670712620181\
+0732641817036537541971356129468598713627809738103382078265933182386327339264198\
+05399493841456/2680828510625976986019907540104880004260319727713460442957273078\
+686750188433330043313548675035508137219168650248368845289923697343879201, N*
+z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	1.842,	1.960,	207157472
+SubsByDepth Usage (real, cpu, memory):	1.685,	1.817,	211594304
 
-memory used=1928.6MB, alloc=112.3MB, time=20.02
+memory used=1572.1MB, alloc=84.3MB, time=16.40

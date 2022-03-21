@@ -12,56 +12,64 @@ Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in GetPolySystem) `prep_cpu_start` is implicitly declared local
 |imports/generate_poly_system.mpl:22|
 Warning, (in GetPolySystem) `prep_real_start` is implicitly declared local
 |imports/generate_poly_system.mpl:23|
 Warning, (in GetPolySystem) `denom_` is implicitly declared local
 |imports/generate_poly_system.mpl:326|
-Warning, (in GetPolySystem) `_` is implicitly declared local
-|imports/generate_poly_system.mpl:4|
+Warning, (in GetPolySystem) `roll` is implicitly declared local
+|imports/generate_poly_system.mpl:419|
+Warning, (in GetPolySystem) `alg_indep_hat` is implicitly declared local
+|imports/generate_poly_system.mpl:420|
 Warning, (in GetPolySystem) `prep_cpu_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:428|
+|imports/generate_poly_system.mpl:447|
 Warning, (in GetPolySystem) `prep_real_finish` is implicitly declared local
-|imports/generate_poly_system.mpl:429|
+|imports/generate_poly_system.mpl:448|
 Warning, (in generate_graph_from_eqs) `new_verts` is implicitly declared local
-|imports/generate_poly_system.mpl:500|
+|imports/generate_poly_system.mpl:519|
 Warning, (in SubsByDepth) `out` is implicitly declared local
 |imports/create_substitutions.mpl:53|
 Warning, (in SubsByDepth) `mem` is implicitly declared local
@@ -113,9 +121,6 @@ Parameters in equations:  [a1, a2, a3, EGFR_turnover, reaction_1_k1, reaction_1_
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  588900000
-Orders of prolongations of the outputs (beta) =  [8, 8, 7]
-Orders of prolongations of the state variables (alpha) =  [7, 1, 8, 8, 8, 8, 7, 7, 7]
 
 =======================================================
 3. Assessing local identifiability
@@ -124,9 +129,6 @@ Orders of prolongations of the state variables (alpha) =  [7, 1, 8, 8, 8, 8, 7, 
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  85969699260000000000000000000000000
-Random sample for the outputs and inputs is generated from  [a1 = 4974514672065662186202227805702747, a2 = 24314610630309864552775918165182981, a3 = 14139912030062416217528677271119203, EGFR_turnover = 38293456089342990668633121436951362, reaction_1_k1 = 63614120644351407340745843397195622, reaction_1_k2 = 42374645191068687916980837013754339, reaction_2_k1 = 77054891830621729019493984527406117, reaction_2_k2 = 46122287541145248674610251076700533, reaction_3_k1 = 5968199379392713051671186879591140, reaction_4_k1 = 40063171449298147005802880579347525, reaction_5_k1 = 60580951487052583279833298379183327, reaction_5_k2 = 41693058463706535771360494413961793, reaction_6_k1 = 65282906690982685989148996201418895, reaction_7_k1 = 15793048439759531558280882990737095, reaction_8_k1 = 47492970220188529867974720562767763, reaction_9_k1 = 30576226960866102150741801879662133, EGF_EGFR_0 = 19510415797426425989503962579354308, EGFR_0 = 27070127504581191122986912550566767, pEGFR_0 = 79208517533878666671279685894302337, pAkt_S6_0 = 40883940762070409504377618992663726, pEGFR_Akt_0 = 46003304313902275453298917195225497, pAkt_0 = 74262405074761373421045581687113285, S6_0 = 47075839298505500221166586123312629, pS6_0 = 75463845259039932351036557773175034, Akt_0 = 24539962460271012502997423005750147]
-The polynomial system widehat{E^t} contains  75 equations in  76  variables
 Locally identifiable paramters:  [reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1]
 Nonidentifiable parameter:  [Akt(0), EGFR(0), S6(0), a1, a2, a3, pAkt(0), pEGFR(0), pS6(0), EGFR_turnover, EGF_EGFR(0), pAkt_S6(0), pEGFR_Akt(0), reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
 
@@ -135,244 +137,627 @@ Substituting transcendence basis.
 =======================================================
 Algebraically independent parameters {EGFR_turnover, reaction_1_k1, Akt(0), EGFR(0), EGF_EGFR(0)}
 Number of possible combinations 12103014
-Collection [Akt_0, Akt_3, pAkt_S6_4, pS6_3, S6_5] is not transcendence basis
-Collection [Akt_0, EGF_EGFR_4, S6_2, pAkt_7, Akt_2] is not transcendence basis
-Collection [Akt_0, pAkt_S6_5, Akt_2, pAkt_5, pEGFR_Akt_2] is not transcendence basis
-Collection [Akt_1, pAkt_6, pS6_0, S6_1, S6_4] is not transcendence basis
-Collection [Akt_1, pEGFR_5, pS6_1, reaction_5_k1, pEGFR_6] is not transcendence basis
-Collection [Akt_1, pEGFR_6, EGF_EGFR_0, S6_1, pS6_0] is not transcendence basis
-Collection [Akt_2, pS6_5, EGF_EGFR_3, pS6_1, a1] is not transcendence basis
-Collection [Akt_3, pAkt_1, reaction_5_k1, EGF_EGFR_4, S6_3] is not transcendence basis
-Collection [Akt_4, Akt_3, pS6_3, EGF_EGFR_2, pAkt_0] is not transcendence basis
-Collection [Akt_4, pEGFR_7, pEGFR_Akt_7, EGF_EGFR_5, pAkt_S6_4] is not transcendence basis
-Collection [Akt_5, Akt_4, pAkt_3, EGF_EGFR_5, pEGFR_Akt_1] is not transcendence basis
-Collection [Akt_5, S6_5, S6_3, pAkt_S6_1, pAkt_7] is not transcendence basis
-Collection [Akt_5, EGF_EGFR_0, Akt_6, pEGFR_Akt_4, pEGFR_2] is not transcendence basis
-Collection [Akt_6, pAkt_1, EGF_EGFR_3, pS6_2, pS6_4] is not transcendence basis
-Collection [Akt_6, pEGFR_Akt_0, EGF_EGFR_4, pAkt_S6_0, reaction_1_k2] is not transcendence basis
-Collection [S6_0, pS6_5, Akt_5, reaction_5_k1, EGF_EGFR_1] is not transcendence basis
-Collection [S6_1, S6_0, pAkt_S6_3, pEGFR_Akt_0, pS6_0] is not transcendence basis
-Collection [S6_1, S6_6, pAkt_1, Akt_6, reaction_1_k2] is not transcendence basis
-Collection [S6_1, pAkt_S6_0, S6_0, pEGFR_7, Akt_4] is not transcendence basis
-Collection [S6_1, pAkt_S6_3, EGF_EGFR_3, pS6_3, reaction_1_k1] is not transcendence basis
-Collection [S6_2, pEGFR_6, pAkt_S6_3, Akt_4, pS6_2] is not transcendence basis
-Collection [S6_2, pS6_2, pEGFR_Akt_6, pEGFR_3, pS6_5] is not transcendence basis
-Collection [S6_2, reaction_1_k2, S6_6, pAkt_1, pAkt_S6_1] is not transcendence basis
-Collection [S6_3, pAkt_0, pEGFR_3, EGFR_turnover, pAkt_4] is not transcendence basis
-Collection [S6_3, pEGFR_3, pAkt_S6_6, EGF_EGFR_3, Akt_1] is not transcendence basis
-Collection [S6_3, pS6_4, Akt_4, pEGFR_2, pEGFR_7] is not transcendence basis
-Collection [S6_3, pAkt_S6_7, pAkt_2, a2, pS6_4] is not transcendence basis
-Collection [S6_3, pEGFR_Akt_6, a3, pS6_4, pS6_2] is not transcendence basis
-Collection [S6_4, S6_5, pEGFR_3, EGF_EGFR_6, pS6_2] is not transcendence basis
-Collection [S6_4, pEGFR_7, pS6_6, S6_3, pS6_3] is not transcendence basis
-Collection [S6_6, pS6_1, Akt_6, pAkt_6, pEGFR_Akt_7] is not transcendence basis
-Collection [S6_6, pS6_4, EGF_EGFR_4, S6_4, pEGFR_6] is not transcendence basis
-Collection [a1, EGF_EGFR_0, pEGFR_6, pEGFR_7, pEGFR_2] is not transcendence basis
-Collection [a1, pEGFR_Akt_4, Akt_3, pAkt_7, S6_1] is not transcendence basis
-Collection [a2, pAkt_6, pEGFR_0, S6_2, pEGFR_6] is not transcendence basis
-Collection [a2, pEGFR_5, pEGFR_1, pEGFR_Akt_4, pEGFR_Akt_3] is not transcendence basis
-Collection [a2, pEGFR_5, pAkt_S6_5, pEGFR_Akt_4, pAkt_7] is not transcendence basis
-Collection [a3, pEGFR_3, pEGFR_Akt_3, pS6_3, pS6_2] is not transcendence basis
-Collection [a3, EGF_EGFR_2, EGF_EGFR_5, reaction_1_k1, pS6_5] is not transcendence basis
-Collection [a3, pEGFR_Akt_0, EGFR_turnover, pS6_1, pEGFR_6] is not transcendence basis
-Collection [pAkt_0, pS6_1, pEGFR_1, a2, pS6_5] is not transcendence basis
-Collection [pAkt_0, pAkt_S6_2, pEGFR_4, pAkt_5, pAkt_S6_5] is not transcendence basis
-Collection [pAkt_0, pAkt_S6_4, S6_5, pAkt_S6_0, pAkt_4] is not transcendence basis
-Collection [pAkt_0, pEGFR_Akt_1, pAkt_S6_4, S6_5, S6_2] is not transcendence basis
-Collection [pAkt_1, Akt_5, a1, pEGFR_Akt_2, Akt_1] is not transcendence basis
-Collection [pAkt_1, pEGFR_1, S6_1, EGFR_turnover, S6_4] is not transcendence basis
-Collection [pAkt_1, pAkt_S6_5, pEGFR_Akt_5, pAkt_S6_3, a3] is not transcendence basis
-Collection [pAkt_1, pEGFR_Akt_3, pS6_1, pEGFR_6, pAkt_4] is not transcendence basis
-Collection [pAkt_1, reaction_1_k2, pAkt_5, S6_0, Akt_3] is not transcendence basis
-Collection [pAkt_2, Akt_0, Akt_5, pEGFR_5, pS6_1] is not transcendence basis
-Collection [pAkt_2, S6_4, pAkt_S6_7, pAkt_4, Akt_0] is not transcendence basis
-Collection [pAkt_2, pEGFR_Akt_3, Akt_3, pEGFR_7, pEGFR_Akt_1] is not transcendence basis
-Collection [pAkt_2, pEGFR_Akt_3, pAkt_S6_1, pS6_5, pEGFR_6] is not transcendence basis
-Collection [pAkt_4, pAkt_2, pAkt_S6_2, EGF_EGFR_1, EGF_EGFR_0] is not transcendence basis
-Collection [pAkt_4, pAkt_5, pEGFR_Akt_2, pAkt_S6_3, S6_6] is not transcendence basis
-Collection [pAkt_4, pEGFR_2, pAkt_0, reaction_9_k1, EGF_EGFR_2] is not transcendence basis
-Collection [pAkt_5, S6_1, pEGFR_Akt_6, pAkt_S6_0, reaction_9_k1] is not transcendence basis
-Collection [pAkt_5, S6_5, reaction_1_k2, Akt_2, pS6_4] is not transcendence basis
-Collection [pAkt_5, pEGFR_2, pEGFR_Akt_0, S6_2, Akt_4] is not transcendence basis
-Collection [pAkt_5, EGF_EGFR_2, pAkt_1, pEGFR_Akt_1, pEGFR_Akt_5] is not transcendence basis
-Collection [pAkt_6, S6_2, pAkt_S6_1, a2, EGF_EGFR_6] is not transcendence basis
-Collection [pAkt_6, pAkt_4, Akt_5, pAkt_S6_3, pAkt_S6_4] is not transcendence basis
-Collection [pAkt_6, pEGFR_0, pAkt_2, pAkt_7, pEGFR_Akt_1] is not transcendence basis
-Collection [pAkt_6, pAkt_S6_2, S6_3, Akt_3, Akt_4] is not transcendence basis
-Collection [pAkt_7, Akt_4, pEGFR_Akt_7, S6_3, pS6_6] is not transcendence basis
-Collection [pAkt_7, pEGFR_3, pS6_4, S6_0, pAkt_S6_2] is not transcendence basis
-Collection [pAkt_7, pAkt_S6_6, a3, pAkt_S6_1, pAkt_3] is not transcendence basis
-Collection [pEGFR_0, Akt_6, pAkt_4, Akt_3, pEGFR_5] is not transcendence basis
-Collection [pEGFR_0, pAkt_2, Akt_5, pAkt_S6_4, pS6_6] is not transcendence basis
-Collection [pEGFR_0, pEGFR_7, pAkt_5, pEGFR_Akt_6, pEGFR_3] is not transcendence basis
-Collection [pEGFR_0, EGFR_turnover, EGF_EGFR_3, S6_3, pAkt_S6_0] is not transcendence basis
-Collection [pEGFR_1, S6_5, EGF_EGFR_6, pEGFR_6, S6_4] is not transcendence basis
-Collection [pEGFR_1, pEGFR_Akt_3, pAkt_S6_4, pS6_1, S6_0] is not transcendence basis
-Collection [pEGFR_1, pEGFR_Akt_6, Akt_3, S6_0, pAkt_4] is not transcendence basis
-Collection [pEGFR_2, a1, pS6_2, pEGFR_Akt_3, pAkt_S6_1] is not transcendence basis
-Collection [pEGFR_2, pAkt_3, S6_2, reaction_1_k1, pAkt_6] is not transcendence basis
-Collection [pEGFR_2, pAkt_S6_6, EGF_EGFR_3, pAkt_S6_2, Akt_1] is not transcendence basis
-Collection [pEGFR_2, reaction_1_k1, pAkt_6, reaction_9_k1, pEGFR_Akt_5] is not transcendence basis
-Collection [pEGFR_2, reaction_5_k1, pEGFR_1, pS6_2, pEGFR_Akt_5] is not transcendence basis
-Collection [pEGFR_3, pAkt_S6_5, pS6_3, pS6_2, pEGFR_Akt_5] is not transcendence basis
-Collection [pEGFR_4, a2, pAkt_S6_3, S6_2, pAkt_6] is not transcendence basis
-Collection [pEGFR_4, pAkt_0, pEGFR_Akt_6, pEGFR_0, EGFR_turnover] is not transcendence basis
-Collection [pEGFR_4, pAkt_S6_3, S6_0, pAkt_3, S6_4] is not transcendence basis
-Collection [pEGFR_5, Akt_3, S6_1, Akt_4, pAkt_S6_1] is not transcendence basis
-Collection [pEGFR_5, Akt_5, pAkt_S6_0, reaction_1_k1, a1] is not transcendence basis
-Collection [pEGFR_5, Akt_6, EGF_EGFR_3, EGF_EGFR_0, pAkt_S6_0] is not transcendence basis
-Collection [pEGFR_5, pEGFR_6, pEGFR_2, a3, Akt_2] is not transcendence basis
-Collection [pEGFR_5, pS6_0, pEGFR_2, pEGFR_Akt_3, Akt_3] is not transcendence basis
-Collection [pEGFR_5, reaction_5_k1, pAkt_S6_3, pAkt_S6_0, pS6_2] is not transcendence basis
-Collection [pEGFR_6, EGF_EGFR_3, EGFR_0, pAkt_7, S6_2] is not transcendence basis
-Collection [pEGFR_6, pAkt_S6_3, pS6_4, pS6_1, pEGFR_3] is not transcendence basis
-Collection [pEGFR_6, pEGFR_Akt_0, pEGFR_Akt_7, EGF_EGFR_4, pEGFR_Akt_4] is not transcendence basis
-Collection [pEGFR_6, pEGFR_Akt_1, pEGFR_7, EGF_EGFR_2, Akt_1] is not transcendence basis
-Collection [pEGFR_7, pAkt_S6_5, pS6_2, S6_2, EGFR_turnover] is not transcendence basis
-Collection [pS6_0, S6_5, a1, pEGFR_Akt_3, pEGFR_7] is not transcendence basis
-Collection [pS6_0, pEGFR_2, pS6_2, pAkt_S6_0, pEGFR_Akt_5] is not transcendence basis
-Collection [pS6_0, EGF_EGFR_2, pEGFR_4, a3, a2] is not transcendence basis
-Collection [pS6_0, pEGFR_Akt_0, EGF_EGFR_0, Akt_4, pEGFR_Akt_3] is not transcendence basis
-Collection [pS6_1, a3, reaction_5_k1, EGF_EGFR_4, S6_6] is not transcendence basis
-Collection [pS6_1, pAkt_1, pAkt_2, a2, a1] is not transcendence basis
-Collection [pS6_2, Akt_3, reaction_9_k1, pAkt_S6_0, pEGFR_Akt_1] is not transcendence basis
-Collection [pS6_2, pAkt_2, reaction_5_k1, pS6_5, pAkt_S6_2] is not transcendence basis
-Collection [pS6_2, pS6_1, pEGFR_3, pEGFR_Akt_6, S6_5] is not transcendence basis
-Collection [pS6_2, pS6_1, reaction_2_k1, S6_6, pAkt_S6_7] is not transcendence basis
-Collection [pS6_2, reaction_1_k1, pAkt_S6_5, pS6_5, pEGFR_Akt_0] is not transcendence basis
-Collection [pS6_3, S6_2, reaction_1_k1, EGF_EGFR_3, Akt_2] is not transcendence basis
-Collection [pS6_3, pEGFR_5, reaction_1_k2, S6_3, reaction_1_k1] is not transcendence basis
-Collection [pS6_3, pS6_0, EGF_EGFR_1, pEGFR_Akt_3, S6_5] is not transcendence basis
-Collection [pS6_3, pAkt_S6_3, pS6_6, pEGFR_Akt_3, S6_3] is not transcendence basis
-Collection [pS6_4, EGF_EGFR_0, pEGFR_Akt_7, pS6_6, pEGFR_1] is not transcendence basis
-Collection [pS6_5, S6_2, EGF_EGFR_0, pS6_6, a3] is not transcendence basis
-Collection [pS6_5, EGF_EGFR_6, pEGFR_Akt_2, pAkt_1, pEGFR_1] is not transcendence basis
-Collection [pS6_6, a1, pAkt_S6_4, pEGFR_Akt_4, pAkt_S6_5] is not transcendence basis
-Collection [pS6_6, pEGFR_1, pAkt_0, EGFR_0, EGF_EGFR_6] is not transcendence basis
-Collection [EGFR_turnover, EGF_EGFR_3, pEGFR_0, Akt_1, Akt_4] is not transcendence basis
-Collection [EGFR_turnover, EGF_EGFR_6, pS6_2, pEGFR_6, S6_1] is not transcendence basis
-Collection [EGFR_turnover, pAkt_S6_3, EGF_EGFR_6, a3, S6_3] is not transcendence basis
-Collection [EGFR_turnover, pEGFR_Akt_0, pAkt_1, Akt_4, pEGFR_3] is not transcendence basis
-Collection [EGF_EGFR_1, pEGFR_3, pEGFR_2, EGF_EGFR_6, Akt_3] is not transcendence basis
-Collection [EGF_EGFR_1, pEGFR_6, pEGFR_0, pAkt_3, pAkt_5] is not transcendence basis
-Collection [EGF_EGFR_1, pS6_6, pAkt_S6_1, pAkt_S6_3, pEGFR_Akt_1] is not transcendence basis
-Collection [EGF_EGFR_1, pAkt_S6_7, EGF_EGFR_6, Akt_0, a2] is not transcendence basis
-Collection [EGF_EGFR_1, reaction_1_k2, Akt_4, S6_0, Akt_3] is not transcendence basis
-Collection [EGF_EGFR_2, pAkt_0, pS6_6, pAkt_S6_3, pS6_5] is not transcendence basis
-Collection [EGF_EGFR_2, pEGFR_Akt_5, pS6_1, pAkt_S6_4, EGFR_0] is not transcendence basis
-Collection [EGF_EGFR_3, Akt_2, pAkt_S6_5, reaction_5_k1, S6_4] is not transcendence basis
-Collection [EGF_EGFR_3, S6_2, pS6_2, EGF_EGFR_2, pS6_3] is not transcendence basis
-Collection [EGF_EGFR_3, pAkt_4, pAkt_S6_6, pEGFR_4, S6_6] is not transcendence basis
-Collection [EGF_EGFR_3, pAkt_5, EGF_EGFR_0, Akt_4, pEGFR_Akt_2] is not transcendence basis
-Collection [EGF_EGFR_4, a1, EGF_EGFR_2, S6_1, pEGFR_3] is not transcendence basis
-Collection [EGF_EGFR_4, pEGFR_1, S6_6, pEGFR_Akt_6, pAkt_3] is not transcendence basis
-Collection [EGF_EGFR_4, pEGFR_6, pS6_2, pAkt_S6_3, reaction_1_k1] is not transcendence basis
-Collection [EGF_EGFR_4, EGF_EGFR_6, Akt_1, pAkt_4, reaction_5_k1] is not transcendence basis
-Collection [EGF_EGFR_4, pAkt_S6_4, pS6_4, EGF_EGFR_6, EGF_EGFR_5] is not transcendence basis
-Collection [EGF_EGFR_4, pEGFR_Akt_1, EGF_EGFR_5, pEGFR_Akt_5, reaction_2_k1] is not transcendence basis
-Collection [EGF_EGFR_4, pEGFR_Akt_3, EGF_EGFR_6, pEGFR_Akt_2, S6_1] is not transcendence basis
-Collection [EGF_EGFR_4, reaction_9_k1, pEGFR_Akt_6, reaction_2_k1, pAkt_S6_1] is not transcendence basis
-Collection [EGF_EGFR_5, pAkt_1, pS6_6, reaction_2_k1, pS6_1] is not transcendence basis
-Collection [EGF_EGFR_6, S6_2, reaction_5_k1, S6_3, Akt_5] is not transcendence basis
-Collection [EGF_EGFR_6, EGF_EGFR_2, pAkt_S6_7, pS6_0, reaction_9_k1] is not transcendence basis
-Collection [pAkt_S6_0, S6_6, pAkt_2, EGF_EGFR_4, pAkt_6] is not transcendence basis
-Collection [pAkt_S6_0, pEGFR_6, Akt_5, EGF_EGFR_2, pEGFR_1] is not transcendence basis
-Collection [pAkt_S6_0, pS6_4, pEGFR_4, pAkt_S6_6, reaction_1_k2] is not transcendence basis
-Collection [pAkt_S6_0, EGF_EGFR_0, pEGFR_0, Akt_1, pEGFR_Akt_2] is not transcendence basis
-Collection [pAkt_S6_0, pAkt_S6_5, pEGFR_1, EGF_EGFR_4, S6_3] is not transcendence basis
-Collection [pAkt_S6_1, pAkt_0, Akt_5, reaction_9_k1, EGF_EGFR_3] is not transcendence basis
-Collection [pAkt_S6_1, pEGFR_5, pAkt_1, pS6_5, Akt_4] is not transcendence basis
-Collection [pAkt_S6_1, pAkt_S6_0, S6_6, Akt_1, pEGFR_Akt_4] is not transcendence basis
-Collection [pAkt_S6_1, pEGFR_Akt_3, pS6_2, S6_6, pEGFR_2] is not transcendence basis
-Collection [pAkt_S6_1, pEGFR_Akt_7, pS6_4, pAkt_0, pEGFR_4] is not transcendence basis
-Collection [pAkt_S6_1, reaction_1_k1, EGFR_0, pAkt_S6_3, pEGFR_Akt_3] is not transcendence basis
-Collection [pAkt_S6_2, reaction_1_k1, Akt_2, pAkt_5, pAkt_4] is not transcendence basis
-Collection [pAkt_S6_3, S6_3, pAkt_5, reaction_5_k1, a2] is not transcendence basis
-Collection [pAkt_S6_3, reaction_1_k2, EGF_EGFR_4, reaction_1_k1, pAkt_S6_0] is not transcendence basis
-Collection [pAkt_S6_3, reaction_9_k1, S6_1, pAkt_S6_7, a2] is not transcendence basis
-Collection [pAkt_S6_4, EGF_EGFR_1, a1, pAkt_S6_5, S6_6] is not transcendence basis
-Collection [pAkt_S6_4, pEGFR_Akt_6, Akt_0, pAkt_3, pEGFR_4] is not transcendence basis
-Collection [pAkt_S6_5, a2, EGF_EGFR_6, EGF_EGFR_4, pAkt_1] is not transcendence basis
-Collection [pAkt_S6_5, pAkt_4, Akt_5, Akt_6, pEGFR_3] is not transcendence basis
-Collection [pAkt_S6_5, pEGFR_3, pAkt_1, pAkt_S6_3, EGF_EGFR_5] is not transcendence basis
-Collection [pAkt_S6_5, pEGFR_4, pAkt_3, pAkt_1, pEGFR_7] is not transcendence basis
-Collection [pAkt_S6_5, pS6_0, Akt_0, pS6_6, reaction_1_k1] is not transcendence basis
-Collection [pAkt_S6_5, pEGFR_Akt_7, Akt_3, EGF_EGFR_5, Akt_4] is not transcendence basis
-Collection [pAkt_S6_6, Akt_1, pAkt_S6_7, EGF_EGFR_4, a3] is not transcendence basis
-Collection [pAkt_S6_6, a2, reaction_5_k1, S6_1, pEGFR_Akt_6] is not transcendence basis
-Collection [pAkt_S6_7, pEGFR_6, pAkt_5, Akt_2, pAkt_S6_3] is not transcendence basis
-Collection [pEGFR_Akt_0, pAkt_0, Akt_3, pEGFR_5, S6_3] is not transcendence basis
-Collection [pEGFR_Akt_0, reaction_1_k1, S6_4, pEGFR_Akt_2, S6_1] is not transcendence basis
-Collection [pEGFR_Akt_1, S6_0, Akt_5, pAkt_3, pAkt_1] is not transcendence basis
-Collection [pEGFR_Akt_1, S6_6, pEGFR_6, pS6_4, reaction_2_k1] is not transcendence basis
-Collection [pEGFR_Akt_2, pEGFR_1, Akt_0, pAkt_1, Akt_1] is not transcendence basis
-Collection [pEGFR_Akt_3, pS6_0, pS6_3, pEGFR_0, S6_2] is not transcendence basis
-Collection [pEGFR_Akt_3, pS6_1, pAkt_S6_5, pEGFR_5, EGFR_turnover] is not transcendence basis
-Collection [pEGFR_Akt_4, Akt_2, S6_2, EGF_EGFR_2, pAkt_S6_6] is not transcendence basis
-Collection [pEGFR_Akt_4, S6_0, S6_3, reaction_5_k1, pS6_4] is not transcendence basis
-Collection [pEGFR_Akt_4, S6_2, pAkt_1, reaction_1_k1, S6_5] is not transcendence basis
-Collection [pEGFR_Akt_4, pAkt_0, pS6_3, pS6_5, pS6_2] is not transcendence basis
-Collection [pEGFR_Akt_4, EGF_EGFR_0, S6_4, pAkt_1, pS6_2] is not transcendence basis
-Collection [pEGFR_Akt_4, pAkt_S6_0, EGF_EGFR_3, pS6_5, pEGFR_5] is not transcendence basis
-Collection [pEGFR_Akt_5, S6_1, EGFR_turnover, reaction_5_k1, pS6_4] is not transcendence basis
-Collection [pEGFR_Akt_5, pEGFR_6, S6_4, a2, pEGFR_4] is not transcendence basis
-Collection [pEGFR_Akt_5, EGF_EGFR_2, pS6_0, pAkt_S6_5, EGF_EGFR_5] is not transcendence basis
-Collection [pEGFR_Akt_6, a3, reaction_1_k2, pS6_0, a1] is not transcendence basis
-Collection [pEGFR_Akt_6, pAkt_5, pS6_5, EGF_EGFR_6, S6_1] is not transcendence basis
-Collection [pEGFR_Akt_6, pEGFR_2, pAkt_3, S6_3, pAkt_0] is not transcendence basis
-Collection [pEGFR_Akt_6, pAkt_S6_6, pEGFR_Akt_5, pS6_1, pS6_0] is not transcendence basis
-Collection [pEGFR_Akt_7, Akt_1, pS6_0, reaction_2_k1, pEGFR_2] is not transcendence basis
-Collection [pEGFR_Akt_7, pAkt_S6_6, pEGFR_Akt_0, EGF_EGFR_3, S6_6] is not transcendence basis
-Collection [reaction_1_k1, a2, pAkt_2, pEGFR_6, pAkt_3] is not transcendence basis
-Collection [reaction_1_k2, Akt_5, Akt_0, EGFR_turnover, pAkt_S6_1] is not transcendence basis
-Collection [reaction_1_k2, pEGFR_7, S6_2, EGF_EGFR_3, S6_1] is not transcendence basis
-Collection [reaction_2_k1, S6_6, EGF_EGFR_3, pS6_2, EGF_EGFR_2] is not transcendence basis
-Collection [reaction_5_k1, pAkt_2, pEGFR_4, S6_2, pAkt_0] is not transcendence basis
-Collection [reaction_5_k1, EGF_EGFR_0, pAkt_S6_7, pS6_6, S6_5] is not transcendence basis
-Collection [reaction_9_k1, pEGFR_2, Akt_0, pEGFR_Akt_4, pAkt_S6_5] is not transcendence basis
-Collection [reaction_9_k1, pEGFR_7, pAkt_4, pAkt_S6_6, EGF_EGFR_3] is not transcendence basis
-Collection [reaction_9_k1, EGF_EGFR_1, S6_1, pAkt_S6_5, reaction_2_k1] is not transcendence basis
-Collection [reaction_9_k1, pEGFR_Akt_1, pS6_4, EGF_EGFR_1, pS6_1] is not transcendence basis
-Collection [reaction_9_k1, pEGFR_Akt_4, S6_3, S6_1, S6_5] is not transcendence basis
+Collection [Akt_0, Akt_3, pEGFR_6, pAkt_7, S6_2] is not transcendence basis
+Collection [Akt_1, pS6_0, pAkt_S6_4, pEGFR_Akt_2, pAkt_2] is not transcendence basis
+Collection [Akt_2, reaction_1_k1, EGF_EGFR_4, S6_3, Akt_5] is not transcendence basis
+Collection [Akt_2, reaction_1_k2, Akt_0, Akt_4, pAkt_3] is not transcendence basis
+Collection [Akt_3, reaction_2_k1, pAkt_S6_1, S6_4, Akt_5] is not transcendence basis
+Collection [Akt_4, Akt_5, pAkt_1, EGFR_turnover, pEGFR_4] is not transcendence basis
+Collection [Akt_4, pS6_1, pAkt_S6_7, EGFR_0, pEGFR_Akt_4] is not transcendence basis
+Collection [Akt_4, pEGFR_Akt_0, pEGFR_2, EGF_EGFR_5, EGF_EGFR_0] is not transcendence basis
+Collection [Akt_5, EGFR_0, pEGFR_Akt_3, pEGFR_0, pS6_6] is not transcendence basis
+Collection [Akt_5, pAkt_2, pAkt_4, pEGFR_Akt_0, pS6_6] is not transcendence basis
+Collection [Akt_5, pEGFR_5, a1, pAkt_6, pEGFR_Akt_1] is not transcendence basis
+Collection [Akt_5, pS6_1, reaction_2_k1, EGF_EGFR_4, EGFR_0] is not transcendence basis
+Collection [Akt_6, S6_0, pAkt_1, pS6_2, pEGFR_Akt_7] is not transcendence basis
+Collection [Akt_6, pAkt_3, reaction_1_k2, pAkt_2, EGF_EGFR_0] is not transcendence basis
+Collection [Akt_6, pEGFR_0, a2, pEGFR_5, EGF_EGFR_6] is not transcendence basis
+Collection [Akt_6, pEGFR_7, pEGFR_Akt_3, pAkt_0, S6_3] is not transcendence basis
+Collection [Akt_6, EGF_EGFR_6, pEGFR_Akt_5, pEGFR_2, EGF_EGFR_4] is not transcendence basis
+Collection [Akt_6, pEGFR_Akt_3, pS6_1, pEGFR_3, pEGFR_0] is not transcendence basis
+Collection [Akt_6, reaction_2_k1, pEGFR_Akt_6, pEGFR_Akt_7, pAkt_7] is not transcendence basis
+Collection [Akt_6, reaction_9_k1, pAkt_3, S6_3, pEGFR_Akt_6] is not transcendence basis
+Collection [EGFR_0, pAkt_3, pAkt_S6_6, pEGFR_7, pAkt_S6_1] is not transcendence basis
+Collection [EGFR_0, pAkt_S6_1, pEGFR_Akt_4, pAkt_S6_3, pEGFR_Akt_6] is not transcendence basis
+Collection [S6_0, pAkt_3, pEGFR_Akt_7, EGFR_turnover, EGF_EGFR_4] is not transcendence basis
+Collection [S6_0, pAkt_6, a2, EGF_EGFR_6, reaction_1_k1] is not transcendence basis
+Collection [S6_1, Akt_4, pAkt_7, EGF_EGFR_3, a1] is not transcendence basis
+Collection [S6_1, EGF_EGFR_5, pEGFR_7, pAkt_2, pAkt_S6_7] is not transcendence basis
+Collection [S6_2, S6_3, pEGFR_Akt_4, pEGFR_Akt_2, pAkt_S6_1] is not transcendence basis
+Collection [S6_2, pAkt_5, pAkt_6, Akt_2, pS6_2] is not transcendence basis
+Collection [S6_2, pAkt_S6_1, pAkt_1, reaction_1_k2, pEGFR_Akt_7] is not transcendence basis
+Collection [S6_3, pEGFR_2, Akt_5, pS6_6, a3] is not transcendence basis
+Collection [S6_3, pEGFR_Akt_6, pS6_0, S6_4, pEGFR_7] is not transcendence basis
+Collection [S6_4, S6_3, Akt_5, pAkt_2, Akt_6] is not transcendence basis
+Collection [S6_4, pS6_2, pEGFR_6, pAkt_S6_0, pAkt_S6_5] is not transcendence basis
+Collection [S6_4, reaction_9_k1, pEGFR_Akt_0, pS6_0, EGF_EGFR_3] is not transcendence basis
+Collection [S6_5, Akt_2, S6_6, EGFR_turnover, a1] is not transcendence basis
+Collection [S6_5, pAkt_3, pS6_0, pS6_4, pAkt_4] is not transcendence basis
+Collection [S6_5, pEGFR_2, Akt_0, Akt_6, pEGFR_Akt_1] is not transcendence basis
+Collection [S6_5, EGF_EGFR_5, S6_1, pEGFR_Akt_7, pAkt_2] is not transcendence basis
+Collection [S6_6, pAkt_5, pEGFR_Akt_6, reaction_5_k1, a1] is not transcendence basis
+Collection [S6_6, pAkt_7, S6_1, pAkt_S6_5, reaction_1_k1] is not transcendence basis
+Collection [a1, S6_5, pEGFR_Akt_2, pEGFR_Akt_6, pS6_3] is not transcendence basis
+Collection [a1, a2, EGF_EGFR_5, EGF_EGFR_4, pS6_5] is not transcendence basis
+Collection [a1, pEGFR_5, pEGFR_Akt_1, S6_3, pS6_6] is not transcendence basis
+Collection [a1, pEGFR_7, pAkt_S6_4, pEGFR_6, reaction_2_k1] is not transcendence basis
+Collection [a1, reaction_9_k1, pEGFR_Akt_6, pS6_1, S6_2] is not transcendence basis
+Collection [a2, Akt_5, reaction_2_k1, pEGFR_Akt_7, pAkt_S6_5] is not transcendence basis
+Collection [a2, pAkt_4, pEGFR_Akt_7, pAkt_S6_6, pAkt_5] is not transcendence basis
+Collection [a2, pAkt_S6_2, reaction_9_k1, pAkt_1, pEGFR_7] is not transcendence basis
+Collection [a3, pEGFR_2, pEGFR_Akt_1, pEGFR_Akt_0, pAkt_S6_2] is not transcendence basis
+Collection [a3, pS6_2, pAkt_2, pS6_4, pEGFR_Akt_1] is not transcendence basis
+Collection [pAkt_0, Akt_2, pEGFR_Akt_2, a3, pEGFR_4] is not transcendence basis
+Collection [pAkt_0, a3, pAkt_S6_1, reaction_2_k1, Akt_4] is not transcendence basis
+Collection [pAkt_0, pS6_4, pEGFR_5, reaction_1_k2, pAkt_5] is not transcendence basis
+Collection [pAkt_0, EGF_EGFR_3, pEGFR_Akt_4, pEGFR_Akt_6, pAkt_6] is not transcendence basis
+Collection [pAkt_1, S6_6, S6_4, pS6_4, Akt_5] is not transcendence basis
+Collection [pAkt_1, pS6_6, EGF_EGFR_6, pAkt_S6_0, pEGFR_0] is not transcendence basis
+Collection [pAkt_2, S6_2, pEGFR_4, pAkt_S6_7, pS6_6] is not transcendence basis
+Collection [pAkt_2, S6_4, EGF_EGFR_5, reaction_2_k1, reaction_1_k2] is not transcendence basis
+Collection [pAkt_2, a3, pS6_5, reaction_9_k1, pEGFR_Akt_1] is not transcendence basis
+Collection [pAkt_2, pAkt_4, pEGFR_5, pEGFR_1, Akt_4] is not transcendence basis
+Collection [pAkt_2, pAkt_S6_0, pAkt_7, pS6_5, pAkt_4] is not transcendence basis
+Collection [pAkt_3, EGF_EGFR_5, pEGFR_Akt_5, pAkt_0, pAkt_6] is not transcendence basis
+Collection [pAkt_3, pEGFR_Akt_0, S6_0, S6_1, EGFR_0] is not transcendence basis
+Collection [pAkt_3, pEGFR_Akt_6, Akt_2, reaction_2_k1, EGFR_turnover] is not transcendence basis
+Collection [pAkt_4, S6_4, S6_1, pEGFR_Akt_1, pS6_2] is not transcendence basis
+Collection [pAkt_4, pEGFR_5, a2, a3, reaction_1_k1] is not transcendence basis
+Collection [pAkt_4, pAkt_S6_5, EGF_EGFR_6, pAkt_7, pS6_1] is not transcendence basis
+Collection [pAkt_4, pEGFR_Akt_7, reaction_5_k1, EGF_EGFR_5, pS6_4] is not transcendence basis
+Collection [pAkt_5, pEGFR_Akt_4, S6_6, reaction_2_k1, Akt_5] is not transcendence basis
+Collection [pAkt_6, Akt_2, Akt_6, pEGFR_Akt_6, pEGFR_Akt_2] is not transcendence basis
+Collection [pAkt_6, Akt_5, pS6_2, EGF_EGFR_2, Akt_4] is not transcendence basis
+Collection [pAkt_6, S6_3, pAkt_S6_6, pS6_4, a1] is not transcendence basis
+Collection [pAkt_6, pEGFR_3, pEGFR_Akt_6, pS6_6, a3] is not transcendence basis
+Collection [pAkt_6, pEGFR_Akt_0, reaction_2_k1, reaction_5_k1, a1] is not transcendence basis
+Collection [pAkt_7, EGFR_0, pAkt_4, pEGFR_6, Akt_4] is not transcendence basis
+Collection [pAkt_7, pAkt_S6_4, EGF_EGFR_3, S6_1, pS6_2] is not transcendence basis
+Collection [pAkt_7, reaction_1_k2, EGF_EGFR_4, pS6_2, pS6_1] is not transcendence basis
+Collection [pEGFR_0, pAkt_7, reaction_2_k1, pAkt_S6_6, pEGFR_Akt_7] is not transcendence basis
+Collection [pEGFR_0, pEGFR_2, pEGFR_Akt_3, pAkt_0, pAkt_S6_1] is not transcendence basis
+Collection [pEGFR_0, pEGFR_4, pS6_5, pAkt_7, pEGFR_5] is not transcendence basis
+Collection [pEGFR_0, pAkt_S6_5, pAkt_S6_2, Akt_6, pAkt_S6_3] is not transcendence basis
+Collection [pEGFR_0, pEGFR_Akt_5, pEGFR_7, pEGFR_2, a3] is not transcendence basis
+Collection [pEGFR_1, S6_0, pS6_5, pEGFR_Akt_4, pEGFR_Akt_0] is not transcendence basis
+Collection [pEGFR_1, pEGFR_7, Akt_4, pEGFR_3, pEGFR_Akt_5] is not transcendence basis
+Collection [pEGFR_1, pEGFR_Akt_3, Akt_2, pAkt_2, pEGFR_Akt_0] is not transcendence basis
+Collection [pEGFR_2, S6_4, pAkt_4, pS6_2, pEGFR_3] is not transcendence basis
+Collection [pEGFR_2, pAkt_2, pEGFR_Akt_7, Akt_5, Akt_2] is not transcendence basis
+Collection [pEGFR_2, pS6_0, pAkt_7, Akt_3, pEGFR_3] is not transcendence basis
+Collection [pEGFR_2, EGF_EGFR_1, pAkt_0, pEGFR_Akt_5, reaction_5_k1] is not transcendence basis
+Collection [pEGFR_3, Akt_3, EGFR_0, EGFR_turnover, pAkt_S6_0] is not transcendence basis
+Collection [pEGFR_3, EGFR_0, S6_5, reaction_2_k1, Akt_0] is not transcendence basis
+Collection [pEGFR_3, pAkt_4, Akt_3, EGFR_turnover, pEGFR_Akt_3] is not transcendence basis
+Collection [pEGFR_3, pEGFR_2, pAkt_3, pEGFR_Akt_6, EGF_EGFR_1] is not transcendence basis
+Collection [pEGFR_3, pEGFR_Akt_1, EGF_EGFR_5, pAkt_S6_5, pEGFR_Akt_2] is not transcendence basis
+Collection [pEGFR_4, EGFR_turnover, S6_5, pEGFR_Akt_3, pAkt_6] is not transcendence basis
+Collection [pEGFR_4, reaction_9_k1, pAkt_1, pEGFR_Akt_1, Akt_6] is not transcendence basis
+Collection [pEGFR_5, S6_0, EGF_EGFR_2, pEGFR_2, pEGFR_7] is not transcendence basis
+Collection [pEGFR_5, a1, pAkt_S6_5, S6_5, S6_2] is not transcendence basis
+Collection [pEGFR_5, pAkt_3, Akt_2, pAkt_S6_0, pAkt_S6_5] is not transcendence basis
+Collection [pEGFR_5, pAkt_5, Akt_5, reaction_1_k2, pAkt_S6_2] is not transcendence basis
+Collection [pEGFR_5, EGF_EGFR_3, pEGFR_Akt_0, Akt_3, pEGFR_7] is not transcendence basis
+Collection [pEGFR_5, pAkt_S6_3, reaction_1_k2, Akt_1, S6_6] is not transcendence basis
+Collection [pEGFR_6, pAkt_S6_3, pAkt_S6_0, pEGFR_4, Akt_1] is not transcendence basis
+Collection [pEGFR_6, pAkt_S6_7, pAkt_S6_6, S6_2, pS6_0] is not transcendence basis
+Collection [pEGFR_7, a2, S6_1, a1, pEGFR_6] is not transcendence basis
+Collection [pEGFR_7, EGF_EGFR_4, pAkt_S6_6, pEGFR_Akt_4, pS6_0] is not transcendence basis
+Collection [pEGFR_7, pAkt_S6_2, pS6_4, EGF_EGFR_3, EGFR_turnover] is not transcendence basis
+Collection [pS6_0, pEGFR_0, EGF_EGFR_6, a3, pAkt_4] is not transcendence basis
+Collection [pS6_0, pEGFR_Akt_4, pEGFR_4, EGF_EGFR_2, pEGFR_Akt_2] is not transcendence basis
+Collection [pS6_1, S6_1, reaction_9_k1, pAkt_7, pEGFR_Akt_6] is not transcendence basis
+Collection [pS6_2, pAkt_0, pEGFR_Akt_6, EGF_EGFR_2, pEGFR_Akt_3] is not transcendence basis
+Collection [pS6_2, pS6_5, Akt_4, reaction_9_k1, pAkt_5] is not transcendence basis
+Collection [pS6_3, Akt_6, EGFR_turnover, pAkt_S6_1, pEGFR_2] is not transcendence basis
+Collection [pS6_3, pEGFR_7, pAkt_4, pEGFR_6, reaction_1_k2] is not transcendence basis
+Collection [pS6_3, EGF_EGFR_1, reaction_1_k2, pAkt_S6_0, reaction_1_k1] is not transcendence basis
+Collection [pS6_4, pS6_2, Akt_0, pEGFR_4, Akt_5] is not transcendence basis
+Collection [pS6_4, EGF_EGFR_3, pS6_6, S6_0, Akt_1] is not transcendence basis
+Collection [pS6_5, S6_2, pAkt_S6_1, pS6_4, pEGFR_Akt_0] is not transcendence basis
+Collection [pS6_5, pS6_3, pAkt_S6_2, EGF_EGFR_1, EGF_EGFR_0] is not transcendence basis
+Collection [pS6_6, EGF_EGFR_5, a2, reaction_2_k1, pEGFR_Akt_1] is not transcendence basis
+Collection [pS6_6, reaction_1_k2, pS6_4, pS6_5, pS6_1] is not transcendence basis
+Collection [EGF_EGFR_0, EGF_EGFR_6, pS6_4, EGFR_0, pAkt_S6_3] is not transcendence basis
+Collection [EGF_EGFR_0, pEGFR_Akt_1, pAkt_0, pAkt_2, EGF_EGFR_6] is not transcendence basis
+Collection [EGF_EGFR_1, EGFR_0, EGF_EGFR_0, S6_6, pAkt_S6_2] is not transcendence basis
+Collection [EGF_EGFR_1, S6_4, S6_0, pAkt_1, reaction_5_k1] is not transcendence basis
+Collection [EGF_EGFR_1, pEGFR_3, S6_2, S6_3, pEGFR_Akt_4] is not transcendence basis
+Collection [EGF_EGFR_1, pS6_4, S6_0, S6_4, reaction_1_k1] is not transcendence basis
+Collection [EGF_EGFR_1, pS6_4, reaction_2_k1, Akt_3, pAkt_7] is not transcendence basis
+Collection [EGF_EGFR_1, EGFR_turnover, pAkt_S6_4, S6_6, pEGFR_4] is not transcendence basis
+Collection [EGF_EGFR_1, pAkt_S6_0, EGF_EGFR_4, pEGFR_Akt_1, a3] is not transcendence basis
+Collection [EGF_EGFR_2, pEGFR_5, reaction_9_k1, pS6_0, reaction_1_k1] is not transcendence basis
+Collection [EGF_EGFR_2, EGF_EGFR_0, Akt_5, Akt_6, pAkt_7] is not transcendence basis
+Collection [EGF_EGFR_3, pEGFR_5, Akt_1, pEGFR_4, pAkt_S6_3] is not transcendence basis
+Collection [EGF_EGFR_3, pS6_1, Akt_3, pS6_6, Akt_4] is not transcendence basis
+Collection [EGF_EGFR_3, EGFR_turnover, pAkt_S6_1, Akt_5, pAkt_1] is not transcendence basis
+Collection [EGF_EGFR_3, pAkt_S6_7, Akt_3, Akt_1, pEGFR_3] is not transcendence basis
+Collection [EGF_EGFR_4, pEGFR_Akt_1, reaction_1_k2, a3, EGF_EGFR_5] is not transcendence basis
+Collection [EGF_EGFR_4, pEGFR_Akt_4, reaction_1_k2, Akt_1, pAkt_7] is not transcendence basis
+Collection [EGF_EGFR_5, Akt_1, pEGFR_6, pEGFR_2, pEGFR_Akt_0] is not transcendence basis
+Collection [EGF_EGFR_5, a2, a1, pEGFR_3, pEGFR_Akt_0] is not transcendence basis
+Collection [EGF_EGFR_5, pEGFR_Akt_4, S6_5, reaction_9_k1, Akt_6] is not transcendence basis
+Collection [EGF_EGFR_5, reaction_9_k1, a2, pAkt_S6_4, S6_2] is not transcendence basis
+Collection [EGF_EGFR_6, pAkt_3, EGFR_0, pAkt_1, pS6_1] is not transcendence basis
+Collection [pAkt_S6_0, S6_0, Akt_0, pEGFR_0, EGF_EGFR_6] is not transcendence basis
+Collection [pAkt_S6_0, pEGFR_6, pAkt_5, EGF_EGFR_6, pEGFR_Akt_1] is not transcendence basis
+Collection [pAkt_S6_0, pEGFR_7, Akt_1, pEGFR_0, S6_1] is not transcendence basis
+Collection [pAkt_S6_0, pS6_1, Akt_5, EGF_EGFR_1, pS6_2] is not transcendence basis
+Collection [pAkt_S6_0, reaction_1_k2, S6_0, pAkt_S6_5, pS6_4] is not transcendence basis
+Collection [pAkt_S6_1, a2, EGF_EGFR_3, pEGFR_Akt_2, pEGFR_Akt_7] is not transcendence basis
+Collection [pAkt_S6_1, pS6_5, reaction_1_k1, S6_0, pEGFR_1] is not transcendence basis
+Collection [pAkt_S6_2, S6_6, pEGFR_7, EGF_EGFR_5, pS6_0] is not transcendence basis
+Collection [pAkt_S6_2, pEGFR_6, Akt_5, pS6_2, reaction_1_k1] is not transcendence basis
+Collection [pAkt_S6_2, pS6_5, EGF_EGFR_5, pEGFR_6, pEGFR_5] is not transcendence basis
+Collection [pAkt_S6_2, EGF_EGFR_2, Akt_4, S6_1, Akt_2] is not transcendence basis
+Collection [pAkt_S6_2, reaction_9_k1, Akt_0, Akt_4, S6_1] is not transcendence basis
+Collection [pAkt_S6_3, pEGFR_6, pEGFR_4, S6_6, pAkt_2] is not transcendence basis
+Collection [pAkt_S6_3, pS6_6, pAkt_S6_0, pS6_5, reaction_9_k1] is not transcendence basis
+Collection [pAkt_S6_3, pEGFR_Akt_5, pAkt_S6_1, S6_3, EGF_EGFR_5] is not transcendence basis
+Collection [pAkt_S6_3, pEGFR_Akt_7, Akt_6, EGF_EGFR_6, EGF_EGFR_4] is not transcendence basis
+Collection [pAkt_S6_3, pEGFR_Akt_7, reaction_1_k1, pAkt_7, pAkt_3] is not transcendence basis
+Collection [pAkt_S6_4, pS6_6, pEGFR_Akt_7, pAkt_2, Akt_3] is not transcendence basis
+Collection [pAkt_S6_4, EGF_EGFR_4, pEGFR_Akt_5, Akt_1, reaction_1_k1] is not transcendence basis
+Collection [pAkt_S6_5, pEGFR_4, pEGFR_6, pEGFR_Akt_2, S6_1] is not transcendence basis
+Collection [pAkt_S6_6, pAkt_S6_3, EGF_EGFR_4, S6_2, pEGFR_Akt_5] is not transcendence basis
+Collection [pAkt_S6_7, EGF_EGFR_5, Akt_3, EGF_EGFR_0, EGFR_turnover] is not transcendence basis
+Collection [pAkt_S6_7, pEGFR_Akt_3, EGF_EGFR_2, pEGFR_Akt_0, pAkt_3] is not transcendence basis
+Collection [pAkt_S6_7, pEGFR_Akt_4, pEGFR_3, reaction_1_k2, pAkt_4] is not transcendence basis
+Collection [pEGFR_Akt_0, pAkt_S6_1, Akt_3, EGF_EGFR_4, reaction_2_k1] is not transcendence basis
+Collection [pEGFR_Akt_1, Akt_2, pEGFR_3, EGF_EGFR_2, pAkt_S6_1] is not transcendence basis
+Collection [pEGFR_Akt_1, Akt_3, pS6_5, pAkt_6, pS6_2] is not transcendence basis
+Collection [pEGFR_Akt_1, Akt_6, S6_2, pS6_6, pEGFR_Akt_6] is not transcendence basis
+Collection [pEGFR_Akt_1, EGF_EGFR_0, pEGFR_5, pEGFR_0, pAkt_S6_4] is not transcendence basis
+Collection [pEGFR_Akt_1, EGF_EGFR_4, pS6_0, EGF_EGFR_5, Akt_3] is not transcendence basis
+Collection [pEGFR_Akt_1, EGF_EGFR_5, pEGFR_4, Akt_2, EGFR_0] is not transcendence basis
+Collection [pEGFR_Akt_1, reaction_5_k1, Akt_6, EGF_EGFR_3, pS6_1] is not transcendence basis
+Collection [pEGFR_Akt_2, Akt_5, pAkt_S6_5, pAkt_2, pAkt_3] is not transcendence basis
+Collection [pEGFR_Akt_2, pAkt_5, pS6_0, Akt_0, pS6_4] is not transcendence basis
+Collection [pEGFR_Akt_2, pS6_1, pEGFR_Akt_5, pAkt_6, S6_1] is not transcendence basis
+Collection [pEGFR_Akt_3, Akt_6, S6_5, pEGFR_Akt_4, pS6_4] is not transcendence basis
+Collection [pEGFR_Akt_5, pAkt_3, S6_2, pS6_6, pAkt_S6_3] is not transcendence basis
+Collection [pEGFR_Akt_5, pS6_4, reaction_9_k1, S6_5, EGF_EGFR_2] is not transcendence basis
+Collection [pEGFR_Akt_6, pAkt_3, pEGFR_6, pEGFR_7, Akt_0] is not transcendence basis
+Collection [pEGFR_Akt_6, pEGFR_2, Akt_0, pS6_1, Akt_3] is not transcendence basis
+Collection [pEGFR_Akt_6, pS6_4, S6_0, pAkt_S6_2, pAkt_6] is not transcendence basis
+Collection [pEGFR_Akt_7, a2, reaction_1_k1, pEGFR_4, S6_6] is not transcendence basis
+Collection [pEGFR_Akt_7, pAkt_2, S6_5, reaction_1_k1, pS6_4] is not transcendence basis
+Collection [pEGFR_Akt_7, pAkt_S6_3, EGF_EGFR_4, pEGFR_1, reaction_9_k1] is not transcendence basis
+Collection [reaction_1_k1, pAkt_1, pS6_0, pEGFR_5, Akt_4] is not transcendence basis
+Collection [reaction_1_k1, pAkt_7, pAkt_S6_5, pEGFR_Akt_2, pEGFR_Akt_7] is not transcendence basis
+Collection [reaction_1_k1, pS6_1, pAkt_S6_2, pAkt_6, pAkt_3] is not transcendence basis
+Collection [reaction_1_k1, pAkt_S6_1, pEGFR_6, pEGFR_Akt_5, Akt_3] is not transcendence basis
+Collection [reaction_1_k2, pEGFR_0, S6_5, pS6_6, pEGFR_1] is not transcendence basis
+Collection [reaction_1_k2, pEGFR_Akt_7, pEGFR_Akt_3, pAkt_5, S6_5] is not transcendence basis
+Collection [reaction_2_k1, EGFR_0, EGF_EGFR_1, pS6_4, pEGFR_Akt_2] is not transcendence basis
+Collection [reaction_2_k1, S6_4, EGF_EGFR_0, pEGFR_4, reaction_1_k1] is not transcendence basis
+Collection [reaction_2_k1, pS6_0, pS6_3, pEGFR_Akt_6, EGF_EGFR_5] is not transcendence basis
+Collection [reaction_2_k1, pEGFR_Akt_0, a1, pEGFR_1, pEGFR_Akt_2] is not transcendence basis
+Collection [reaction_9_k1, a3, pEGFR_5, S6_2, pS6_0] is not transcendence basis
+Collection [reaction_9_k1, pAkt_5, S6_0, Akt_2, pS6_2] is not transcendence basis
 Picked the best choice [Akt_0, EGFR_0, EGFR_turnover, EGF_EGFR_0, reaction_1_k1] based on heuristic:
-Algebraically independent parameters among nonidentifiable: {EGFR_turnover, reaction_1_k1}
-Algebraically independent parameters among derivatives: {Akt(0), EGFR(0), EGF_EGFR(0)}
-	Adding ODEs: [diff(EGFR_turnover(t),t) = 0, diff(reaction_1_k1(t),t) = 0]
-	Adding output functions: [y_faux1(t) = EGFR_turnover(t), y_faux2(t) = reaction_1_k1(t)]
-	New system: [diff(EGFR_turnover(t),t) = 0, diff(reaction_1_k1(t),t) = 0, diff(EGF_EGFR(t),t) = reaction_1_k1(t)*EGF_EGFR(t)-reaction_9_k1*EGF_EGFR(t)-reaction_1_k2*EGF_EGFR(t), diff(EGFR(t),t) = -reaction_1_k1(t)*EGF_EGFR(t)+reaction_1_k2*EGF_EGFR(t)-EGFR(t)*EGFR_turnover(t)+EGFR_turnover(t)*pro_EGFR(t), diff(pEGFR(t),t) = -reaction_4_k1*pEGFR(t)+reaction_9_k1*EGF_EGFR(t)-pEGFR(t)*Akt(t)*reaction_2_k1+reaction_3_k1*pEGFR_Akt(t)+pEGFR_Akt(t)*reaction_2_k2, diff(pAkt_S6(t),t) = pAkt(t)*reaction_5_k1*S6(t)-reaction_6_k1*pAkt_S6(t)-pAkt_S6(t)*reaction_5_k2, diff(pEGFR_Akt(t),t) = pEGFR(t)*Akt(t)*reaction_2_k1-reaction_3_k1*pEGFR_Akt(t)-pEGFR_Akt(t)*reaction_2_k2, diff(pAkt(t),t) = -pAkt(t)*reaction_7_k1-pAkt(t)*reaction_5_k1*S6(t)+reaction_6_k1*pAkt_S6(t)+reaction_3_k1*pEGFR_Akt(t)+pAkt_S6(t)*reaction_5_k2, diff(S6(t),t) = pS6(t)*reaction_8_k1-pAkt(t)*reaction_5_k1*S6(t)+pAkt_S6(t)*reaction_5_k2, diff(pS6(t),t) = -pS6(t)*reaction_8_k1+reaction_6_k1*pAkt_S6(t), diff(Akt(t),t) = pAkt(t)*reaction_7_k1-pEGFR(t)*Akt(t)*reaction_2_k1+pEGFR_Akt(t)*reaction_2_k2, y1(t) = pEGFR(t)*a1+a1*pEGFR_Akt(t), y2(t) = a2*pAkt(t)+a2*pAkt_S6(t), y3(t) = pS6(t)*a3, y_faux1(t) = EGFR_turnover(t), y_faux2(t) = reaction_1_k1(t)]
-
-=== Input info ===
-State variables:          [EGFR_turnover(t), reaction_1_k1(t), EGF_EGFR(t), EGFR(t), pEGFR(t), pAkt_S6(t), pEGFR_Akt(t), pAkt(t), S6(t), pS6(t), Akt(t)]
-Output variables:         [y1(t), y2(t), y3(t), y_faux1(t), y_faux2(t)]
-Input variables:          [pro_EGFR(t)]
-Parameters in equations:  [a1, a2, a3, reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1, reaction_9_k1]
-===================
-
-	Adding new y-equations: faux_equations
-	Adding new y-equations: [y_faux3_0 = Akt_0, y_faux4_0 = EGFR_0, y_faux5_0 = EGF_EGFR_0]
-	New system: [-a1*pEGFR_0-a1*pEGFR_Akt_0+y1_0, Akt_0*pEGFR_0*reaction_2_k1+pEGFR_0*reaction_4_k1-EGF_EGFR_0*reaction_9_k1-pEGFR_Akt_0*reaction_2_k2-pEGFR_Akt_0*reaction_3_k1+pEGFR_1, -Akt_0*pEGFR_0*reaction_2_k1+pEGFR_Akt_0*reaction_2_k2+pEGFR_Akt_0*reaction_3_k1+pEGFR_Akt_1, -a2*pAkt_0-a2*pAkt_S6_0+y2_0, S6_0*pAkt_0*reaction_5_k1+pAkt_0*reaction_7_k1-pAkt_S6_0*reaction_5_k2-pAkt_S6_0*reaction_6_k1-pEGFR_Akt_0*reaction_3_k1+pAkt_1, -S6_0*pAkt_0*reaction_5_k1+pAkt_S6_0*reaction_5_k2+pAkt_S6_0*reaction_6_k1+pAkt_S6_1, -a3*pS6_0+y3_0, pS6_0*reaction_8_k1-pAkt_S6_0*reaction_6_k1+pS6_1, y_faux1_0-EGFR_turnover_0, EGFR_turnover_1, y_faux2_0-reaction_1_k1_0, reaction_1_k1_1, (-pEGFR_1-pEGFR_Akt_1)*a1+y1_1, (Akt_0*pEGFR_1+Akt_1*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_1+pEGFR_1*reaction_4_k1-EGF_EGFR_1*reaction_9_k1+pEGFR_2, (-Akt_0*pEGFR_1-Akt_1*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_1+pEGFR_Akt_2, Akt_0*pEGFR_0*reaction_2_k1-pAkt_0*reaction_7_k1-pEGFR_Akt_0*reaction_2_k2+Akt_1, -EGF_EGFR_0*reaction_1_k1_0+EGF_EGFR_0*reaction_1_k2+EGF_EGFR_0*reaction_9_k1+EGF_EGFR_1, (-pAkt_1-pAkt_S6_1)*a2+y2_1, (S6_0*pAkt_1+S6_1*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_1+pAkt_1*reaction_7_k1-pEGFR_Akt_1*reaction_3_k1+pAkt_2, (-S6_0*pAkt_1-S6_1*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_1+pAkt_S6_2, S6_0*pAkt_0*reaction_5_k1-pS6_0*reaction_8_k1-pAkt_S6_0*reaction_5_k2+S6_1, -a3*pS6_1+y3_1, pS6_1*reaction_8_k1-pAkt_S6_1*reaction_6_k1+pS6_2, (-pEGFR_2-pEGFR_Akt_2)*a1+y1_2, (Akt_0*pEGFR_2+2*Akt_1*pEGFR_1+Akt_2*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_2+pEGFR_2*reaction_4_k1-EGF_EGFR_2*reaction_9_k1+pEGFR_3, (-Akt_0*pEGFR_2-2*Akt_1*pEGFR_1-Akt_2*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_2+pEGFR_Akt_3, Akt_0*pEGFR_1*reaction_2_k1+Akt_1*pEGFR_0*reaction_2_k1-pAkt_1*reaction_7_k1-pEGFR_Akt_1*reaction_2_k2+Akt_2, (-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_1+EGF_EGFR_2-EGF_EGFR_0*reaction_1_k1_1, (-pAkt_2-pAkt_S6_2)*a2+y2_2, (S6_0*pAkt_2+2*S6_1*pAkt_1+S6_2*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_2-pEGFR_Akt_2*reaction_3_k1+pAkt_2*reaction_7_k1+pAkt_3, (-S6_0*pAkt_2-2*S6_1*pAkt_1-S6_2*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_2+pAkt_S6_3, S6_0*pAkt_1*reaction_5_k1+S6_1*pAkt_0*reaction_5_k1-pS6_1*reaction_8_k1-pAkt_S6_1*reaction_5_k2+S6_2, -a3*pS6_2+y3_2, pS6_2*reaction_8_k1-pAkt_S6_2*reaction_6_k1+pS6_3, (-pEGFR_3-pEGFR_Akt_3)*a1+y1_3, (Akt_0*pEGFR_3+3*Akt_1*pEGFR_2+3*Akt_2*pEGFR_1+Akt_3*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_3-EGF_EGFR_3*reaction_9_k1+pEGFR_3*reaction_4_k1+pEGFR_4, (-Akt_0*pEGFR_3-3*Akt_1*pEGFR_2-3*Akt_2*pEGFR_1-Akt_3*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_3+pEGFR_Akt_4, (Akt_0*pEGFR_2+2*Akt_1*pEGFR_1+Akt_2*pEGFR_0)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_2-pAkt_2*reaction_7_k1+Akt_3, -2*reaction_1_k1_1*EGF_EGFR_1+(-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_2+EGF_EGFR_3-EGF_EGFR_0*reaction_1_k1_2, reaction_1_k1_2, (-pAkt_3-pAkt_S6_3)*a2+y2_3, (S6_0*pAkt_3+3*S6_1*pAkt_2+3*S6_2*pAkt_1+S6_3*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_3-pEGFR_Akt_3*reaction_3_k1+pAkt_3*reaction_7_k1+pAkt_4, (-S6_0*pAkt_3-3*S6_1*pAkt_2-3*S6_2*pAkt_1-S6_3*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_3+pAkt_S6_4, (S6_0*pAkt_2+2*S6_1*pAkt_1+S6_2*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_2-reaction_8_k1*pS6_2+S6_3, -a3*pS6_3+y3_3, pS6_3*reaction_8_k1-pAkt_S6_3*reaction_6_k1+pS6_4, (-pEGFR_4-pEGFR_Akt_4)*a1+y1_4, (Akt_0*pEGFR_4+4*Akt_1*pEGFR_3+6*Akt_2*pEGFR_2+4*Akt_3*pEGFR_1+Akt_4*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_4+pEGFR_4*reaction_4_k1-EGF_EGFR_4*reaction_9_k1+pEGFR_5, (-Akt_0*pEGFR_4-4*Akt_1*pEGFR_3-6*Akt_2*pEGFR_2-4*Akt_3*pEGFR_1-Akt_4*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_4+pEGFR_Akt_5, (Akt_0*pEGFR_3+3*Akt_1*pEGFR_2+3*Akt_2*pEGFR_1+Akt_3*pEGFR_0)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_3-pAkt_3*reaction_7_k1+Akt_4, -3*reaction_1_k1_2*EGF_EGFR_1-3*reaction_1_k1_1*EGF_EGFR_2+(-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_3+EGF_EGFR_4-EGF_EGFR_0*reaction_1_k1_3, reaction_1_k1_3, (-pAkt_4-pAkt_S6_4)*a2+y2_4, (S6_0*pAkt_4+4*S6_1*pAkt_3+6*S6_2*pAkt_2+4*S6_3*pAkt_1+S6_4*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_4+pAkt_4*reaction_7_k1-pEGFR_Akt_4*reaction_3_k1+pAkt_5, (-S6_0*pAkt_4-4*S6_1*pAkt_3-6*S6_2*pAkt_2-4*S6_3*pAkt_1-S6_4*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_4+pAkt_S6_5, (S6_0*pAkt_3+3*S6_1*pAkt_2+3*S6_2*pAkt_1+S6_3*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_3-reaction_8_k1*pS6_3+S6_4, -a3*pS6_4+y3_4, pS6_4*reaction_8_k1-pAkt_S6_4*reaction_6_k1+pS6_5, (-pEGFR_5-pEGFR_Akt_5)*a1+y1_5, (Akt_0*pEGFR_5+5*Akt_1*pEGFR_4+10*Akt_2*pEGFR_3+10*Akt_3*pEGFR_2+5*Akt_4*pEGFR_1+Akt_5*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_5+pEGFR_5*reaction_4_k1-EGF_EGFR_5*reaction_9_k1+pEGFR_6, (-Akt_0*pEGFR_5-5*Akt_1*pEGFR_4-10*Akt_2*pEGFR_3-10*Akt_3*pEGFR_2-5*Akt_4*pEGFR_1-Akt_5*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_5+pEGFR_Akt_6, (Akt_0*pEGFR_4+4*Akt_1*pEGFR_3+6*Akt_2*pEGFR_2+4*Akt_3*pEGFR_1+Akt_4*pEGFR_0)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_4-pAkt_4*reaction_7_k1+Akt_5, -4*reaction_1_k1_3*EGF_EGFR_1-6*reaction_1_k1_2*EGF_EGFR_2-4*reaction_1_k1_1*EGF_EGFR_3+(-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_4+EGF_EGFR_5-EGF_EGFR_0*reaction_1_k1_4, reaction_1_k1_4, (-pAkt_5-pAkt_S6_5)*a2+y2_5, (S6_0*pAkt_5+5*S6_1*pAkt_4+10*S6_2*pAkt_3+10*S6_3*pAkt_2+5*S6_4*pAkt_1+S6_5*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_5+pAkt_5*reaction_7_k1-pEGFR_Akt_5*reaction_3_k1+pAkt_6, (-S6_0*pAkt_5-5*S6_1*pAkt_4-10*S6_2*pAkt_3-10*S6_3*pAkt_2-5*S6_4*pAkt_1-S6_5*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_5+pAkt_S6_6, (S6_0*pAkt_4+4*S6_1*pAkt_3+6*S6_2*pAkt_2+4*S6_3*pAkt_1+S6_4*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_4-reaction_8_k1*pS6_4+S6_5, -a3*pS6_5+y3_5, pS6_5*reaction_8_k1-pAkt_S6_5*reaction_6_k1+pS6_6, (-pEGFR_6-pEGFR_Akt_6)*a1+y1_6, (Akt_0*pEGFR_6+6*Akt_1*pEGFR_5+15*Akt_2*pEGFR_4+20*Akt_3*pEGFR_3+15*Akt_4*pEGFR_2+6*Akt_5*pEGFR_1+Akt_6*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_6+pEGFR_6*reaction_4_k1-EGF_EGFR_6*reaction_9_k1+pEGFR_7, (-Akt_0*pEGFR_6-6*Akt_1*pEGFR_5-15*Akt_2*pEGFR_4-20*Akt_3*pEGFR_3-15*Akt_4*pEGFR_2-6*Akt_5*pEGFR_1-Akt_6*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_6+pEGFR_Akt_7, (Akt_0*pEGFR_5+5*Akt_1*pEGFR_4+10*Akt_2*pEGFR_3+10*Akt_3*pEGFR_2+5*Akt_4*pEGFR_1+Akt_5*pEGFR_0)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_5-pAkt_5*reaction_7_k1+Akt_6, -5*reaction_1_k1_4*EGF_EGFR_1-10*reaction_1_k1_3*EGF_EGFR_2-10*reaction_1_k1_2*EGF_EGFR_3-5*reaction_1_k1_1*EGF_EGFR_4+(-reaction_1_k1_0+reaction_1_k2+reaction_9_k1)*EGF_EGFR_5+EGF_EGFR_6-EGF_EGFR_0*reaction_1_k1_5, reaction_1_k1_5, (-pAkt_6-pAkt_S6_6)*a2+y2_6, (S6_0*pAkt_6+6*S6_1*pAkt_5+15*S6_2*pAkt_4+20*S6_3*pAkt_3+15*S6_4*pAkt_2+6*S6_5*pAkt_1+S6_6*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_6+pAkt_6*reaction_7_k1-pEGFR_Akt_6*reaction_3_k1+pAkt_7, (-S6_0*pAkt_6-6*S6_1*pAkt_5-15*S6_2*pAkt_4-20*S6_3*pAkt_3-15*S6_4*pAkt_2-6*S6_5*pAkt_1-S6_6*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_6+pAkt_S6_7, (S6_0*pAkt_5+5*S6_1*pAkt_4+10*S6_2*pAkt_3+10*S6_3*pAkt_2+5*S6_4*pAkt_1+S6_5*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_5-reaction_8_k1*pS6_5+S6_6, (-pEGFR_7-pEGFR_Akt_7)*a1+y1_7, (-pAkt_7-pAkt_S6_7)*a2+y2_7, -a3*pS6_6+y3_6, -EGFR_turnover_1+y_faux1_1, -reaction_1_k1_1+y_faux2_1, -reaction_1_k1_2+y_faux2_2, -reaction_1_k1_3+y_faux2_3, -reaction_1_k1_4+y_faux2_4, -reaction_1_k1_5+y_faux2_5, y_faux3_0-Akt_0, y_faux4_0-EGFR_0, y_faux5_0-EGF_EGFR_0]
-	New system: [y1_0 = a1*pEGFR_0+a1*pEGFR_Akt_0, y1_1 = -(-pEGFR_1-pEGFR_Akt_1)*a1, y1_2 = -(-pEGFR_2-pEGFR_Akt_2)*a1, y1_3 = -(-pEGFR_3-pEGFR_Akt_3)*a1, y1_4 = -(-pEGFR_4-pEGFR_Akt_4)*a1, y1_5 = -(-pEGFR_5-pEGFR_Akt_5)*a1, y1_6 = -(-pEGFR_6-pEGFR_Akt_6)*a1, y1_7 = -(-pEGFR_7-pEGFR_Akt_7)*a1, y1_8 = -(-pEGFR_8-pEGFR_Akt_8)*a1, y1_9 = -(-pEGFR_9-pEGFR_Akt_9)*a1, y1_10 = -(-pEGFR_10-pEGFR_Akt_10)*a1, y1_11 = -(-pEGFR_11-pEGFR_Akt_11)*a1, y1_12 = -(-pEGFR_12-pEGFR_Akt_12)*a1, y1_13 = -(-pEGFR_13-pEGFR_Akt_13)*a1, y1_14 = -(-pEGFR_14-pEGFR_Akt_14)*a1, y1_15 = -(-pEGFR_15-pEGFR_Akt_15)*a1, y1_16 = -(-pEGFR_16-pEGFR_Akt_16)*a1, y1_17 = -(-pEGFR_17-pEGFR_Akt_17)*a1, y1_18 = -(-pEGFR_18-pEGFR_Akt_18)*a1, y1_19 = -(-pEGFR_19-pEGFR_Akt_19)*a1, y1_20 = -(-pEGFR_20-pEGFR_Akt_20)*a1, y1_21 = -(-pEGFR_21-pEGFR_Akt_21)*a1, y1_22 = -(-pEGFR_22-pEGFR_Akt_22)*a1, y1_23 = -(-pEGFR_23-pEGFR_Akt_23)*a1, y1_24 = -(-pEGFR_24-pEGFR_Akt_24)*a1, y1_25 = -(-pEGFR_25-pEGFR_Akt_25)*a1, y1_26 = -(-pEGFR_26-pEGFR_Akt_26)*a1, y2_0 = a2*pAkt_0+a2*pAkt_S6_0, y2_1 = -(-pAkt_1-pAkt_S6_1)*a2, y2_2 = -(-pAkt_2-pAkt_S6_2)*a2, y2_3 = -(-pAkt_3-pAkt_S6_3)*a2, y2_4 = -(-pAkt_4-pAkt_S6_4)*a2, y2_5 = -(-pAkt_5-pAkt_S6_5)*a2, y2_6 = -(-pAkt_6-pAkt_S6_6)*a2, y2_7 = -(-pAkt_7-pAkt_S6_7)*a2, y2_8 = -(-pAkt_8-pAkt_S6_8)*a2, y2_9 = -(-pAkt_9-pAkt_S6_9)*a2, y2_10 = -(-pAkt_10-pAkt_S6_10)*a2, y2_11 = -(-pAkt_11-pAkt_S6_11)*a2, y2_12 = -(-pAkt_12-pAkt_S6_12)*a2, y2_13 = -(-pAkt_13-pAkt_S6_13)*a2, y2_14 = -(-pAkt_14-pAkt_S6_14)*a2, y2_15 = -(-pAkt_15-pAkt_S6_15)*a2, y2_16 = -(-pAkt_16-pAkt_S6_16)*a2, y2_17 = -(-pAkt_17-pAkt_S6_17)*a2, y2_18 = -(-pAkt_18-pAkt_S6_18)*a2, y2_19 = -(-pAkt_19-pAkt_S6_19)*a2, y2_20 = -(-pAkt_20-pAkt_S6_20)*a2, y2_21 = -(-pAkt_21-pAkt_S6_21)*a2, y2_22 = -(-pAkt_22-pAkt_S6_22)*a2, y2_23 = -(-pAkt_23-pAkt_S6_23)*a2, y2_24 = -(-pAkt_24-pAkt_S6_24)*a2, y2_25 = -(-pAkt_25-pAkt_S6_25)*a2, y2_26 = -(-pAkt_26-pAkt_S6_26)*a2, y3_0 = pS6_0*a3, y3_1 = a3*pS6_1, y3_2 = a3*pS6_2, y3_3 = a3*pS6_3, y3_4 = a3*pS6_4, y3_5 = a3*pS6_5, y3_6 = a3*pS6_6, y3_7 = a3*pS6_7, y3_8 = a3*pS6_8, y3_9 = a3*pS6_9, y3_10 = a3*pS6_10, y3_11 = a3*pS6_11, y3_12 = a3*pS6_12, y3_13 = a3*pS6_13, y3_14 = a3*pS6_14, y3_15 = a3*pS6_15, y3_16 = a3*pS6_16, y3_17 = a3*pS6_17, y3_18 = a3*pS6_18, y3_19 = a3*pS6_19, y3_20 = a3*pS6_20, y3_21 = a3*pS6_21, y3_22 = a3*pS6_22, y3_23 = a3*pS6_23, y3_24 = a3*pS6_24, y3_25 = a3*pS6_25, y3_26 = a3*pS6_26, y_faux1_0 = EGFR_turnover_0, y_faux1_1 = EGFR_turnover_1, y_faux1_2 = EGFR_turnover_2, y_faux1_3 = EGFR_turnover_3, y_faux1_4 = EGFR_turnover_4, y_faux1_5 = EGFR_turnover_5, y_faux1_6 = EGFR_turnover_6, y_faux1_7 = EGFR_turnover_7, y_faux1_8 = EGFR_turnover_8, y_faux1_9 = EGFR_turnover_9, y_faux1_10 = EGFR_turnover_10, y_faux1_11 = EGFR_turnover_11, y_faux1_12 = EGFR_turnover_12, y_faux1_13 = EGFR_turnover_13, y_faux1_14 = EGFR_turnover_14, y_faux1_15 = EGFR_turnover_15, y_faux1_16 = EGFR_turnover_16, y_faux1_17 = EGFR_turnover_17, y_faux1_18 = EGFR_turnover_18, y_faux1_19 = EGFR_turnover_19, y_faux1_20 = EGFR_turnover_20, y_faux1_21 = EGFR_turnover_21, y_faux1_22 = EGFR_turnover_22, y_faux1_23 = EGFR_turnover_23, y_faux1_24 = EGFR_turnover_24, y_faux1_25 = EGFR_turnover_25, y_faux1_26 = EGFR_turnover_26, y_faux2_0 = reaction_1_k1_0, y_faux2_1 = reaction_1_k1_1, y_faux2_2 = reaction_1_k1_2, y_faux2_3 = reaction_1_k1_3, y_faux2_4 = reaction_1_k1_4, y_faux2_5 = reaction_1_k1_5, y_faux2_6 = reaction_1_k1_6, y_faux2_7 = reaction_1_k1_7, y_faux2_8 = reaction_1_k1_8, y_faux2_9 = reaction_1_k1_9, y_faux2_10 = reaction_1_k1_10, y_faux2_11 = reaction_1_k1_11, y_faux2_12 = reaction_1_k1_12, y_faux2_13 = reaction_1_k1_13, y_faux2_14 = reaction_1_k1_14, y_faux2_15 = reaction_1_k1_15, y_faux2_16 = reaction_1_k1_16, y_faux2_17 = reaction_1_k1_17, y_faux2_18 = reaction_1_k1_18, y_faux2_19 = reaction_1_k1_19, y_faux2_20 = reaction_1_k1_20, y_faux2_21 = reaction_1_k1_21, y_faux2_22 = reaction_1_k1_22, y_faux2_23 = reaction_1_k1_23, y_faux2_24 = reaction_1_k1_24, y_faux2_25 = reaction_1_k1_25, y_faux2_26 = reaction_1_k1_26, y_faux3_0 = Akt_0, y_faux4_0 = EGFR_0, y_faux5_0 = EGF_EGFR_0]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  114626265700000000000000000000000000
-Random sample for the outputs and inputs is generated from  [a1 = 37866910021437661137566951982622429, a2 = 98587531166756580148169777356739486, a3 = 86498489863971286811559608482921925, reaction_1_k2 = 83324935596618971049451328125962893, reaction_2_k1 = 85230661928453892783236320833543595, reaction_2_k2 = 77601746280253837164208198376898112, reaction_3_k1 = 60949612883135320537046317913499852, reaction_4_k1 = 28083642271801036791911342307914735, reaction_5_k1 = 31971334134038204257050518894091745, reaction_5_k2 = 42795800982766110725665974494756822, reaction_6_k1 = 37622519824277821804474634119213568, reaction_7_k1 = 101578033620724444515193268970424039, reaction_8_k1 = 45028452546435346817242816456715230, reaction_9_k1 = 9661323695650121014395526264797329, EGFR_turnover_0 = 90683018519804227151487584054747134, reaction_1_k1_0 = 14706709497440647784992338815494330, EGF_EGFR_0 = 20497977807461186849298863838485696, EGFR_0 = 19442333714441540761409226059964961, pEGFR_0 = 80773228674359536927889971638720791, pAkt_S6_0 = 72155899930646780064375182006970641, pEGFR_Akt_0 = 3814736882482594235456337618582457, pAkt_0 = 56085035551349493489726689400062479, S6_0 = 34858130045413968889171813514667583, pS6_0 = 28638820142254874570784292201923359, Akt_0 = 78332424217972841440638469408509445]
-The polynomial system widehat{E^t} contains  92 equations in  83  variables
-Variable ordering to be used for Groebner basis computation [pEGFR_Akt_7, pAkt_S6_7, pEGFR_7, pAkt_7, pEGFR_Akt_6, EGF_EGFR_6, pAkt_S6_6, pEGFR_6, pAkt_6, pS6_6, Akt_6, S6_6, reaction_1_k1_5, pEGFR_Akt_5, EGF_EGFR_5, pAkt_S6_5, pEGFR_5, pAkt_5, pS6_5, Akt_5, S6_5, reaction_1_k1_4, pEGFR_Akt_4, EGF_EGFR_4, pAkt_S6_4, pEGFR_4, pAkt_4, pS6_4, Akt_4, S6_4, reaction_1_k1_3, pEGFR_Akt_3, EGF_EGFR_3, pAkt_S6_3, pEGFR_3, pAkt_3, pS6_3, Akt_3, S6_3, reaction_1_k1_2, pEGFR_Akt_2, EGF_EGFR_2, pAkt_S6_2, pEGFR_2, pAkt_2, pS6_2, Akt_2, S6_2, reaction_1_k1_1, EGFR_turnover_1, pEGFR_Akt_1, EGF_EGFR_1, pAkt_S6_1, pEGFR_1, pAkt_1, pS6_1, Akt_1, S6_1, reaction_1_k1_0, EGFR_turnover_0, pEGFR_Akt_0, EGF_EGFR_0, pAkt_S6_0, pEGFR_0, pAkt_0, EGFR_0, pS6_0, Akt_0, S6_0, z_aux, w_aux, a1, a2, a3, reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1, reaction_9_k1]
-Prep CPU Time (sub_transc=true):	 93.716
-Prep Real Elapsed Time (sub_transc=true):	 86.364
-memory used=9.22GiB, alloc change=136.45MiB, cpu time=93.74s, real time=86.38s, gc time=13.03s
+Prep CPU Time (sub_transc=true):	 85.254
+Prep Real Elapsed Time (sub_transc=true):	 78.193
+memory used=8.29GiB, alloc change=168.00MiB, cpu time=85.30s, real time=78.24s, gc time=12.98s
 
 
-GetPolySystem Usage (real, cpu, memory):	86.384,	93.736,	9895397344
+GetPolySystem Usage (real, cpu, memory):	78.237,	85.299,	8899675368
 
-States for substitution:	[pS6_ = 0, reaction_7_k1 = 1, S6_ = 2, pAkt_S6_ = 0, reaction_1_k1_ = 0, reaction_3_k1 = 1, pAkt_ = 0, reaction_9_k1 = 1, EGFR_turnover_ = 0, reaction_6_k1 = 1, pEGFR_Akt_ = 0, reaction_1_k2 = 2, a2 = 0, reaction_2_k1 = 2, reaction_5_k2 = 2, pEGFR_ = 0, reaction_5_k1 = 2, a1 = 0, a3 = 0, reaction_4_k1 = 1, Akt_ = 2, reaction_8_k1 = 1, reaction_2_k2 = 2, EGF_EGFR_ = 1]
+States for substitution:	[a1 = 0, reaction_1_k1 = 2, pAkt_S6_ = 0, reaction_5_k1 = 2, reaction_1_k2 = 2, reaction_8_k1 = 1, a2 = 0, S6_ = 2, pEGFR_ = 0, reaction_2_k2 = 2, pAkt_ = 0, a3 = 0, reaction_7_k1 = 1, Akt_ = 2, pEGFR_Akt_ = 0, reaction_5_k2 = 2, reaction_4_k1 = 1, reaction_9_k1 = 1, pS6_ = 0, EGF_EGFR_ = 1, reaction_6_k1 = 1, reaction_3_k1 = 1, reaction_2_k1 = 2]
 NonID parameters:	[Akt_0, EGFR_0, S6_0, a1, a2, a3, pAkt_0, pEGFR_0, pS6_0, EGFR_turnover, EGF_EGFR_0, pAkt_S6_0, pEGFR_Akt_0, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
-Substitutions:	[pS6_ = 1, S6_ = 3, pAkt_S6_ = 1, reaction_1_k1_ = 1, pAkt_ = 1, EGFR_turnover_ = 1, pEGFR_Akt_ = 1, reaction_5_k2 = 3, pEGFR_ = 1, Akt_ = 3, reaction_2_k2 = 3, z_aux = 2, EGF_EGFR_ = 2]
-memory used=9.22GiB, alloc change=136.45MiB, cpu time=93.88s, real time=86.53s, gc time=13.03s
+Substitutions:	[pAkt_S6_ = 1, S6_ = 3, pEGFR_ = 1, reaction_2_k2 = 3, pAkt_ = 1, Akt_ = 3, z_aux = 2, pEGFR_Akt_ = 1, reaction_5_k2 = 3, pS6_ = 1, EGF_EGFR_ = 2]
+memory used=8.30GiB, alloc change=168.00MiB, cpu time=85.38s, real time=78.32s, gc time=12.98s
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {Akt_1
+= Akt_1^3, Akt_2 = Akt_2^3, Akt_3 = Akt_3^3, Akt_4 = Akt_4^3, Akt_5 = Akt_5^3,
+Akt_6 = Akt_6^3, S6_0 = S6_0^3, S6_1 = S6_1^3, S6_2 = S6_2^3, S6_3 = S6_3^3, 
+S6_4 = S6_4^3, S6_5 = S6_5^3, S6_6 = S6_6^3, pAkt_0 = pAkt_0, pAkt_1 = pAkt_1,
+pAkt_2 = pAkt_2, pAkt_3 = pAkt_3, pAkt_4 = pAkt_4, pAkt_5 = pAkt_5, pAkt_6 = 
+pAkt_6, pAkt_7 = pAkt_7, pEGFR_0 = pEGFR_0, pEGFR_1 = pEGFR_1, pEGFR_2 = 
+pEGFR_2, pEGFR_3 = pEGFR_3, pEGFR_4 = pEGFR_4, pEGFR_5 = pEGFR_5, pEGFR_6 = 
+pEGFR_6, pEGFR_7 = pEGFR_7, pS6_0 = pS6_0, pS6_1 = pS6_1, pS6_2 = pS6_2, pS6_3
+= pS6_3, pS6_4 = pS6_4, pS6_5 = pS6_5, pS6_6 = pS6_6, z_aux = z_aux^2, 
+EGF_EGFR_1 = EGF_EGFR_1^2, EGF_EGFR_2 = EGF_EGFR_2^2, EGF_EGFR_3 = EGF_EGFR_3^2
+, EGF_EGFR_4 = EGF_EGFR_4^2, EGF_EGFR_5 = EGF_EGFR_5^2, EGF_EGFR_6 = EGF_EGFR_6
+^2, pAkt_S6_0 = pAkt_S6_0, pAkt_S6_1 = pAkt_S6_1, pAkt_S6_2 = pAkt_S6_2, 
+pAkt_S6_3 = pAkt_S6_3, pAkt_S6_4 = pAkt_S6_4, pAkt_S6_5 = pAkt_S6_5, pAkt_S6_6
+= pAkt_S6_6, pAkt_S6_7 = pAkt_S6_7, pEGFR_Akt_0 = pEGFR_Akt_0, pEGFR_Akt_1 = 
+pEGFR_Akt_1, pEGFR_Akt_2 = pEGFR_Akt_2, pEGFR_Akt_3 = pEGFR_Akt_3, pEGFR_Akt_4
+= pEGFR_Akt_4, pEGFR_Akt_5 = pEGFR_Akt_5, pEGFR_Akt_6 = pEGFR_Akt_6, 
+pEGFR_Akt_7 = pEGFR_Akt_7, reaction_2_k2 = reaction_2_k2^3, reaction_5_k2 = 
+reaction_5_k2^3}, [-a1*pEGFR_0-a1*pEGFR_Akt_0+
+10328306239387695810195161610241261547747399800396839004935765249589113, -
+pEGFR_Akt_0*reaction_2_k2^3+29356961175563268867274324583588392*pEGFR_0*
+reaction_2_k1+pEGFR_0*reaction_4_k1-pEGFR_Akt_0*reaction_3_k1+pEGFR_1-\
+54095985598872503527676727248505468*reaction_9_k1, pEGFR_Akt_0*reaction_2_k2^3-\
+29356961175563268867274324583588392*pEGFR_0*reaction_2_k1+pEGFR_Akt_0*
+reaction_3_k1+pEGFR_Akt_1, -a2*pAkt_0-a2*pAkt_S6_0+
+13419815186686638932398538280299130165100998371109250501803834170824548, S6_0^3
+*pAkt_0*reaction_5_k1-pAkt_S6_0*reaction_5_k2^3+pAkt_0*reaction_7_k1-pAkt_S6_0*
+reaction_6_k1-pEGFR_Akt_0*reaction_3_k1+pAkt_1, -S6_0^3*pAkt_0*reaction_5_k1+
+pAkt_S6_0*reaction_5_k2^3+pAkt_S6_0*reaction_6_k1+pAkt_S6_1, -a3*pS6_0+
+5539406442340731198114176078820595984706112951045295163419968748754100, pS6_0*
+reaction_8_k1-pAkt_S6_0*reaction_6_k1+pS6_1, (-pEGFR_1-pEGFR_Akt_1)*a1+86713535\
+8324488836343865082960047702067265726600248850081732155202008338823672992627817\
+09254279668056434, (Akt_1^3*pEGFR_0+29356961175563268867274324583588392*pEGFR_1
+)*reaction_2_k1+(-reaction_2_k2^3-reaction_3_k1)*pEGFR_Akt_1+pEGFR_1*
+reaction_4_k1-EGF_EGFR_1^2*reaction_9_k1+pEGFR_2, (-Akt_1^3*pEGFR_0-\
+29356961175563268867274324583588392*pEGFR_1)*reaction_2_k1+(reaction_2_k2^3+
+reaction_3_k1)*pEGFR_Akt_1+pEGFR_Akt_2, -pEGFR_Akt_0*reaction_2_k2^3+Akt_1^3-
+pAkt_0*reaction_7_k1+29356961175563268867274324583588392*pEGFR_0*reaction_2_k1,
+EGF_EGFR_1^2+54095985598872503527676727248505468*reaction_1_k2+
+54095985598872503527676727248505468*reaction_9_k1-\
+2769099547453428005572766250675609986717025254343035798063213250315192, (-
+pAkt_1-pAkt_S6_1)*a2+6508010605730785696325772523314688983065162462205559717046\
+7694440090983968047877585874282881387221789930, (S6_0^3*pAkt_1+S6_1^3*pAkt_0)*
+reaction_5_k1+(-reaction_5_k2^3-reaction_6_k1)*pAkt_S6_1+pAkt_1*reaction_7_k1-
+pEGFR_Akt_1*reaction_3_k1+pAkt_2, (-S6_0^3*pAkt_1-S6_1^3*pAkt_0)*reaction_5_k1+
+(reaction_5_k2^3+reaction_6_k1)*pAkt_S6_1+pAkt_S6_2, S6_0^3*pAkt_0*
+reaction_5_k1-pAkt_S6_0*reaction_5_k2^3+S6_1^3-pS6_0*reaction_8_k1, -a3*pS6_1-\
+1376311447398680479991966355602273279644650890736652536575665002028868468967837\
+68663791789855056720355812, pS6_1*reaction_8_k1-pAkt_S6_1*reaction_6_k1+pS6_2,
+(-pEGFR_2-pEGFR_Akt_2)*a1+16671112836831004495231099399521366963073506902009628\
+7358018495280643990152673954358670498935741549005798417323430908905405324065440\
+8327595025381876121129007665386326577722472, (2*Akt_1^3*pEGFR_1+Akt_2^3*pEGFR_0
++29356961175563268867274324583588392*pEGFR_2)*reaction_2_k1+(-reaction_2_k2^3-
+reaction_3_k1)*pEGFR_Akt_2+pEGFR_2*reaction_4_k1-EGF_EGFR_2^2*reaction_9_k1+
+pEGFR_3, (-2*Akt_1^3*pEGFR_1-Akt_2^3*pEGFR_0-\
+29356961175563268867274324583588392*pEGFR_2)*reaction_2_k1+(reaction_2_k2^3+
+reaction_3_k1)*pEGFR_Akt_2+pEGFR_Akt_3, Akt_1^3*pEGFR_0*reaction_2_k1-
+pEGFR_Akt_1*reaction_2_k2^3+Akt_2^3-pAkt_1*reaction_7_k1+
+29356961175563268867274324583588392*pEGFR_1*reaction_2_k1, (-\
+51188632886488031906296066695910994+reaction_1_k2+reaction_9_k1)*EGF_EGFR_1^2+
+EGF_EGFR_2^2, (-pAkt_2-pAkt_S6_2)*a2+138555251159724428101544495958184429587922\
+9304722960881493264959088578834663108616231753236942440808790557035860630370354\
+358397065893051165519647866320631571535627905052804370, (S6_0^3*pAkt_2+2*S6_1^3
+*pAkt_1+S6_2^3*pAkt_0)*reaction_5_k1+(-reaction_5_k2^3-reaction_6_k1)*pAkt_S6_2
+-pEGFR_Akt_2*reaction_3_k1+pAkt_2*reaction_7_k1+pAkt_3, (-S6_0^3*pAkt_2-2*S6_1^
+3*pAkt_1-S6_2^3*pAkt_0)*reaction_5_k1+(reaction_5_k2^3+reaction_6_k1)*pAkt_S6_2
++pAkt_S6_3, S6_0^3*pAkt_1*reaction_5_k1+S6_1^3*pAkt_0*reaction_5_k1-pAkt_S6_1*
+reaction_5_k2^3+S6_2^3-pS6_1*reaction_8_k1, -a3*pS6_2+6010726313521323313442626\
+0656357089540895183773649905293024412458804878685432658593708468632784737029428\
+3025068820889795091143304312984218525349120173350987222545511794072668, pS6_2*
+reaction_8_k1-pAkt_S6_2*reaction_6_k1+pS6_3, (-pEGFR_3-pEGFR_Akt_3)*a1-19601071\
+9751194240245514170174789838924377296809352792869027496235617322410187186351273\
+2988928606831943676263859643379560312758062797558931207769584563450910889183686\
+5191646613201848568453606921612521413600455972265691772769772373961661928231544
+, (3*Akt_1^3*pEGFR_2+3*Akt_2^3*pEGFR_1+Akt_3^3*pEGFR_0+
+29356961175563268867274324583588392*pEGFR_3)*reaction_2_k1+(-reaction_2_k2^3-
+reaction_3_k1)*pEGFR_Akt_3-EGF_EGFR_3^2*reaction_9_k1+pEGFR_3*reaction_4_k1+
+pEGFR_4, (-3*Akt_1^3*pEGFR_2-3*Akt_2^3*pEGFR_1-Akt_3^3*pEGFR_0-\
+29356961175563268867274324583588392*pEGFR_3)*reaction_2_k1+(reaction_2_k2^3+
+reaction_3_k1)*pEGFR_Akt_3+pEGFR_Akt_4, (2*Akt_1^3*pEGFR_1+Akt_2^3*pEGFR_0+
+29356961175563268867274324583588392*pEGFR_2)*reaction_2_k1-reaction_2_k2^3*
+pEGFR_Akt_2-pAkt_2*reaction_7_k1+Akt_3^3, (-51188632886488031906296066695910994
++reaction_1_k2+reaction_9_k1)*EGF_EGFR_2^2+EGF_EGFR_3^2, (-pAkt_3-pAkt_S6_3)*a2
+-143602723764089253321586261429775644171434511852584705250676760413670579523729\
+3818255385982743879095535162543366109459640281042769338587880669029448828894902\
+4082777185334749264962604164037931548114649617971891730650099923554845471675700\
+893875030, (S6_0^3*pAkt_3+3*S6_1^3*pAkt_2+3*S6_2^3*pAkt_1+S6_3^3*pAkt_0)*
+reaction_5_k1+(-reaction_5_k2^3-reaction_6_k1)*pAkt_S6_3-pEGFR_Akt_3*
+reaction_3_k1+pAkt_3*reaction_7_k1+pAkt_4, (-S6_0^3*pAkt_3-3*S6_1^3*pAkt_2-3*
+S6_2^3*pAkt_1-S6_3^3*pAkt_0)*reaction_5_k1+(reaction_5_k2^3+reaction_6_k1)*
+pAkt_S6_3+pAkt_S6_4, (S6_0^3*pAkt_2+2*S6_1^3*pAkt_1+S6_2^3*pAkt_0)*
+reaction_5_k1-reaction_5_k2^3*pAkt_S6_2-reaction_8_k1*pS6_2+S6_3^3, -a3*pS6_3-\
+5146809976637753307358868557752213979383026801744252941897677053041042129843491\
+6313398672069522653264283582194955632210232975658965532957336720579478357405864\
+0545954407594006591428508043708024924126459461771407143505100932900686061524498\
+7247312, pS6_3*reaction_8_k1-pAkt_S6_3*reaction_6_k1+pS6_4, (-pEGFR_4-
+pEGFR_Akt_4)*a1+341834566683241925382938840321423848015539594093924722012150024\
+0845317699548045636815523294326541850582728572426050649172953423476217269030422\
+9776880750454563578496313946243216619355276634105802118100356688836430386671202\
+3570403169680881880373814874802275659116811484662369003235475957611661973033995\
+072217443469128, (4*Akt_1^3*pEGFR_3+6*Akt_2^3*pEGFR_2+4*Akt_3^3*pEGFR_1+Akt_4^3
+*pEGFR_0+29356961175563268867274324583588392*pEGFR_4)*reaction_2_k1+(-
+reaction_2_k2^3-reaction_3_k1)*pEGFR_Akt_4+pEGFR_4*reaction_4_k1-EGF_EGFR_4^2*
+reaction_9_k1+pEGFR_5, (-4*Akt_1^3*pEGFR_3-6*Akt_2^3*pEGFR_2-4*Akt_3^3*pEGFR_1-
+Akt_4^3*pEGFR_0-29356961175563268867274324583588392*pEGFR_4)*reaction_2_k1+(
+reaction_2_k2^3+reaction_3_k1)*pEGFR_Akt_4+pEGFR_Akt_5, (3*Akt_1^3*pEGFR_2+3*
+Akt_2^3*pEGFR_1+Akt_3^3*pEGFR_0+29356961175563268867274324583588392*pEGFR_3)*
+reaction_2_k1-reaction_2_k2^3*pEGFR_Akt_3-pAkt_3*reaction_7_k1+Akt_4^3, (-\
+51188632886488031906296066695910994+reaction_1_k2+reaction_9_k1)*EGF_EGFR_3^2+
+EGF_EGFR_4^2, (-pAkt_4-pAkt_S6_4)*a2+222706879858558862664000297405611839796491\
+1387185788608416493386672847023161269551633062652966372346571712571773714004290\
+3450020495973420217929933322271025987503441436830772624378327272925023054490530\
+2008491061164969492385174102773906065315625225239715542567603902821046285644648\
+919909272863565469502625010961963370, (S6_0^3*pAkt_4+4*S6_1^3*pAkt_3+6*S6_2^3*
+pAkt_2+4*S6_3^3*pAkt_1+S6_4^3*pAkt_0)*reaction_5_k1+(-reaction_5_k2^3-
+reaction_6_k1)*pAkt_S6_4+pAkt_4*reaction_7_k1-pEGFR_Akt_4*reaction_3_k1+pAkt_5,
+(-S6_0^3*pAkt_4-4*S6_1^3*pAkt_3-6*S6_2^3*pAkt_2-4*S6_3^3*pAkt_1-S6_4^3*pAkt_0)*
+reaction_5_k1+(reaction_5_k2^3+reaction_6_k1)*pAkt_S6_4+pAkt_S6_5, (S6_0^3*
+pAkt_3+3*S6_1^3*pAkt_2+3*S6_2^3*pAkt_1+S6_3^3*pAkt_0)*reaction_5_k1-
+reaction_5_k2^3*pAkt_S6_3-reaction_8_k1*pS6_3+S6_4^3, -a3*pS6_4+621725029196984\
+1694175529238052874748727910003108476422434653480229178445572728506708759142441\
+8265496498457809362080876997678229817468445587033045169052438093126836567975704\
+9740692625650150910507082715429642950930011406168473537839314808423992737183012\
+26828658085658821360200126940429439221398847963915179777793028, pS6_4*
+reaction_8_k1-pAkt_S6_4*reaction_6_k1+pS6_5, (-pEGFR_5-pEGFR_Akt_5)*a1-79475931\
+9565796439493814052096499406878957927321083905037566209737456002701049864894401\
+2897369932012809763790677393279938540195506887517134255018244483094186115042102\
+3232580798783818742339723147585520303516925469757669141170486315248528735019471\
+1276666982059205639936172488743038837534682587303252101958548465891216573170449\
+7593064490885780552202127923541877174938513416897615732302016, (5*Akt_1^3*
+pEGFR_4+10*Akt_2^3*pEGFR_3+10*Akt_3^3*pEGFR_2+5*Akt_4^3*pEGFR_1+Akt_5^3*pEGFR_0
++29356961175563268867274324583588392*pEGFR_5)*reaction_2_k1+(-reaction_2_k2^3-
+reaction_3_k1)*pEGFR_Akt_5+pEGFR_5*reaction_4_k1-EGF_EGFR_5^2*reaction_9_k1+
+pEGFR_6, (-5*Akt_1^3*pEGFR_4-10*Akt_2^3*pEGFR_3-10*Akt_3^3*pEGFR_2-5*Akt_4^3*
+pEGFR_1-Akt_5^3*pEGFR_0-29356961175563268867274324583588392*pEGFR_5)*
+reaction_2_k1+(reaction_2_k2^3+reaction_3_k1)*pEGFR_Akt_5+pEGFR_Akt_6, (4*Akt_1
+^3*pEGFR_3+6*Akt_2^3*pEGFR_2+4*Akt_3^3*pEGFR_1+Akt_4^3*pEGFR_0+
+29356961175563268867274324583588392*pEGFR_4)*reaction_2_k1-reaction_2_k2^3*
+pEGFR_Akt_4-pAkt_4*reaction_7_k1+Akt_5^3, (-51188632886488031906296066695910994
++reaction_1_k2+reaction_9_k1)*EGF_EGFR_4^2+EGF_EGFR_5^2, (-pAkt_5-pAkt_S6_5)*a2
+-472741515125633625609812598885011858885790587545236359003457201750596170372388\
+8464954739544517677668741703438695102304042297382646560566241592485638373500643\
+6054974412618179917912927939157913873855236504767053025609501822270869012104390\
+9655524034592904151554927899272645998442838632491558272045046243354414893605473\
+4766846876090813123468066831934038777469596130312378094216508940637930, (S6_0^3
+*pAkt_5+5*S6_1^3*pAkt_4+10*S6_2^3*pAkt_3+10*S6_3^3*pAkt_2+5*S6_4^3*pAkt_1+S6_5^
+3*pAkt_0)*reaction_5_k1+(-reaction_5_k2^3-reaction_6_k1)*pAkt_S6_5+pAkt_5*
+reaction_7_k1-pEGFR_Akt_5*reaction_3_k1+pAkt_6, (-S6_0^3*pAkt_5-5*S6_1^3*pAkt_4
+-10*S6_2^3*pAkt_3-10*S6_3^3*pAkt_2-5*S6_4^3*pAkt_1-S6_5^3*pAkt_0)*reaction_5_k1
++(reaction_5_k2^3+reaction_6_k1)*pAkt_S6_5+pAkt_S6_6, (S6_0^3*pAkt_4+4*S6_1^3*
+pAkt_3+6*S6_2^3*pAkt_2+4*S6_3^3*pAkt_1+S6_4^3*pAkt_0)*reaction_5_k1-
+reaction_5_k2^3*pAkt_S6_4-reaction_8_k1*pS6_4+S6_5^3, -a3*pS6_5-997368105292997\
+7174265268432797836647284184901358789244757628126098107588344619749143924131857\
+3538212831835530268196865215025728121522265280637520340313832046594811047843434\
+2664216202466297712032064667029610161639258141699281924904733815137757681258489\
+7025604522081813931004054593306611748757210519735625468251188531047966846202072\
+76064468818565203577295380084128901072000201775335892, pS6_5*reaction_8_k1-
+pAkt_S6_5*reaction_6_k1+pS6_6, (-pEGFR_6-pEGFR_Akt_6)*a1+2309807773929425517596\
+4418825625971124492339333151996134076947449675915275213320910744022007387148133\
+9224888005315059686425902446759982128943762771381319062637547125002843201598652\
+1071917771210938223964419040445674833528686486346984742683986698508116598985728\
+0330266095320319472234661215520419584692093097208990646370427936895126066501029\
+0669302794145758048155179012526562820542216152229735950129357771178693129452943\
+432667986990578194803769507464604125752, (6*Akt_1^3*pEGFR_5+15*Akt_2^3*pEGFR_4+
+20*Akt_3^3*pEGFR_3+15*Akt_4^3*pEGFR_2+6*Akt_5^3*pEGFR_1+Akt_6^3*pEGFR_0+
+29356961175563268867274324583588392*pEGFR_6)*reaction_2_k1+(-reaction_2_k2^3-
+reaction_3_k1)*pEGFR_Akt_6+pEGFR_6*reaction_4_k1-EGF_EGFR_6^2*reaction_9_k1+
+pEGFR_7, (-6*Akt_1^3*pEGFR_5-15*Akt_2^3*pEGFR_4-20*Akt_3^3*pEGFR_3-15*Akt_4^3*
+pEGFR_2-6*Akt_5^3*pEGFR_1-Akt_6^3*pEGFR_0-29356961175563268867274324583588392*
+pEGFR_6)*reaction_2_k1+(reaction_2_k2^3+reaction_3_k1)*pEGFR_Akt_6+pEGFR_Akt_7,
+(5*Akt_1^3*pEGFR_4+10*Akt_2^3*pEGFR_3+10*Akt_3^3*pEGFR_2+5*Akt_4^3*pEGFR_1+
+Akt_5^3*pEGFR_0+29356961175563268867274324583588392*pEGFR_5)*reaction_2_k1-
+reaction_2_k2^3*pEGFR_Akt_5-pAkt_5*reaction_7_k1+Akt_6^3, (-\
+51188632886488031906296066695910994+reaction_1_k2+reaction_9_k1)*EGF_EGFR_5^2+
+EGF_EGFR_6^2, (-pAkt_6-pAkt_S6_6)*a2+128370649673319443867624024925917808136302\
+6762061250270384967019099161427108979474387890519969987104847580536782149186001\
+4723865409009569063190688210639839220646652082120462303911914228276323122125091\
+8609779733360571023671119221407101034188245453579615968144957075748911870971691\
+4337599010489517991436367587680398775915301208009148205968544333609295088529084\
+4997926029574072584568852026234226689210140156291906734082048993942215279506561\
+4933409220580069470, (S6_0^3*pAkt_6+6*S6_1^3*pAkt_5+15*S6_2^3*pAkt_4+20*S6_3^3*
+pAkt_3+15*S6_4^3*pAkt_2+6*S6_5^3*pAkt_1+S6_6^3*pAkt_0)*reaction_5_k1+(-
+reaction_5_k2^3-reaction_6_k1)*pAkt_S6_6+pAkt_6*reaction_7_k1-pEGFR_Akt_6*
+reaction_3_k1+pAkt_7, (-S6_0^3*pAkt_6-6*S6_1^3*pAkt_5-15*S6_2^3*pAkt_4-20*S6_3^
+3*pAkt_3-15*S6_4^3*pAkt_2-6*S6_5^3*pAkt_1-S6_6^3*pAkt_0)*reaction_5_k1+(
+reaction_5_k2^3+reaction_6_k1)*pAkt_S6_6+pAkt_S6_7, (S6_0^3*pAkt_5+5*S6_1^3*
+pAkt_4+10*S6_2^3*pAkt_3+10*S6_3^3*pAkt_2+5*S6_4^3*pAkt_1+S6_5^3*pAkt_0)*
+reaction_5_k1-reaction_5_k2^3*pAkt_S6_5-reaction_8_k1*pS6_5+S6_6^3, (-pEGFR_7-
+pEGFR_Akt_7)*a1-805559347756471764271994478718575430168158518417043750473581231\
+4797287804272689471588064088444740036237119406176664320339157941491462730425746\
+7601526854283226185471217811761587316394222924375697405993152251370327435162372\
+6061337276775888073625335982973834666801610775415734449042037829311872037530633\
+0165606565576149044690971271519517769556521399740778190204994835253416006393747\
+2714921198076134905379997889189879902039401651579285921235926086601969325805893\
+40860891366255816547647503262184934950833742702999179450306937972184, (-pAkt_7-
+pAkt_S6_7)*a2-42598237261715896919450755168001042962044815773123418953852648154\
+2133639496518398966050238077755782896014764467530855516941892032300310742926723\
+7090810920293295578330411728530893682370652186962025378314067983461472972707506\
+0300912504002323998217702125964407654573643038073864456378416838826595940827572\
+1619288102108177775070631674022797260099623803266179832958013960669603970019815\
+9714469177186458153603960772142542378242916791666697124155280258215160165581951\
+617278381791208036802470352084620424656422949389953691730569830330, -a3*pS6_6+
+2001139206983297032050027016080283725880694368203759993525604654980810052406490\
+4383675338249278046418714794025643398920645710819534643623106207311146629862376\
+3086662331931857185967957678257072296237435826887168712431264355618037938584992\
+4883736194004265811239816194379694828222166317880810134819429211675766172898445\
+9580293881973651559862059800096229213802162514404519174936697809844916922900596\
+933045911435794119481317081585574658459924355075397974256168, z_aux^2-1], [
+pEGFR_Akt_7, pAkt_S6_7, pEGFR_7, pAkt_7, pEGFR_Akt_6, EGF_EGFR_6, pAkt_S6_6, 
+pEGFR_6, pAkt_6, pS6_6, Akt_6, S6_6, pEGFR_Akt_5, EGF_EGFR_5, pAkt_S6_5, 
+pEGFR_5, pAkt_5, pS6_5, Akt_5, S6_5, pEGFR_Akt_4, EGF_EGFR_4, pAkt_S6_4, 
+pEGFR_4, pAkt_4, pS6_4, Akt_4, S6_4, pEGFR_Akt_3, EGF_EGFR_3, pAkt_S6_3, 
+pEGFR_3, pAkt_3, pS6_3, Akt_3, S6_3, pEGFR_Akt_2, EGF_EGFR_2, pAkt_S6_2, 
+pEGFR_2, pAkt_2, pS6_2, Akt_2, S6_2, pEGFR_Akt_1, EGF_EGFR_1, pAkt_S6_1, 
+pEGFR_1, pAkt_1, pS6_1, Akt_1, S6_1, pEGFR_Akt_0, pAkt_S6_0, pEGFR_0, pAkt_0, 
+pS6_0, S6_0, z_aux, w_aux, EGFR_turnover, a1, a2, a3, reaction_1_k1, 
+reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, reaction_4_k1, 
+reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1, 
+reaction_9_k1], [Akt_0, EGFR_0, EGFR_turnover, EGF_EGFR_0, reaction_1_k1], [-a1
+*pEGFR_0-a1*pEGFR_Akt_0+
+10328306239387695810195161610241261547747399800396839004935765249589113, 
+29356961175563268867274324583588392*pEGFR_0*reaction_2_k1+pEGFR_0*reaction_4_k1
+-pEGFR_Akt_0*reaction_2_k2-pEGFR_Akt_0*reaction_3_k1+pEGFR_1-\
+54095985598872503527676727248505468*reaction_9_k1, -\
+29356961175563268867274324583588392*pEGFR_0*reaction_2_k1+pEGFR_Akt_0*
+reaction_2_k2+pEGFR_Akt_0*reaction_3_k1+pEGFR_Akt_1, -a2*pAkt_0-a2*pAkt_S6_0+
+13419815186686638932398538280299130165100998371109250501803834170824548, S6_0*
+pAkt_0*reaction_5_k1+pAkt_0*reaction_7_k1-pAkt_S6_0*reaction_5_k2-pAkt_S6_0*
+reaction_6_k1-pEGFR_Akt_0*reaction_3_k1+pAkt_1, -S6_0*pAkt_0*reaction_5_k1+
+pAkt_S6_0*reaction_5_k2+pAkt_S6_0*reaction_6_k1+pAkt_S6_1, -a3*pS6_0+
+5539406442340731198114176078820595984706112951045295163419968748754100, pS6_0*
+reaction_8_k1-pAkt_S6_0*reaction_6_k1+pS6_1, (-pEGFR_1-pEGFR_Akt_1)*a1+86713535\
+8324488836343865082960047702067265726600248850081732155202008338823672992627817\
+09254279668056434, (Akt_1*pEGFR_0+29356961175563268867274324583588392*pEGFR_1)*
+reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_1+pEGFR_1*reaction_4_k1-
+EGF_EGFR_1*reaction_9_k1+pEGFR_2, (-Akt_1*pEGFR_0-\
+29356961175563268867274324583588392*pEGFR_1)*reaction_2_k1+(reaction_2_k2+
+reaction_3_k1)*pEGFR_Akt_1+pEGFR_Akt_2, -pAkt_0*reaction_7_k1+
+29356961175563268867274324583588392*pEGFR_0*reaction_2_k1-pEGFR_Akt_0*
+reaction_2_k2+Akt_1, EGF_EGFR_1+54095985598872503527676727248505468*
+reaction_1_k2+54095985598872503527676727248505468*reaction_9_k1-\
+2769099547453428005572766250675609986717025254343035798063213250315192, (-
+pAkt_1-pAkt_S6_1)*a2+6508010605730785696325772523314688983065162462205559717046\
+7694440090983968047877585874282881387221789930, (S6_0*pAkt_1+S6_1*pAkt_0)*
+reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_1+pAkt_1*reaction_7_k1-
+pEGFR_Akt_1*reaction_3_k1+pAkt_2, (-S6_0*pAkt_1-S6_1*pAkt_0)*reaction_5_k1+(
+reaction_5_k2+reaction_6_k1)*pAkt_S6_1+pAkt_S6_2, S6_0*pAkt_0*reaction_5_k1-
+pS6_0*reaction_8_k1-pAkt_S6_0*reaction_5_k2+S6_1, -a3*pS6_1-1376311447398680479\
+9919663556022732796446508907366525365756650020288684689678376866379178985505672\
+0355812, pS6_1*reaction_8_k1-pAkt_S6_1*reaction_6_k1+pS6_2, (-pEGFR_2-
+pEGFR_Akt_2)*a1+166711128368310044952310993995213669630735069020096287358018495\
+2806439901526739543586704989357415490057984173234309089054053240654408327595025\
+381876121129007665386326577722472, (2*Akt_1*pEGFR_1+Akt_2*pEGFR_0+
+29356961175563268867274324583588392*pEGFR_2)*reaction_2_k1+(-reaction_2_k2-
+reaction_3_k1)*pEGFR_Akt_2+pEGFR_2*reaction_4_k1-EGF_EGFR_2*reaction_9_k1+
+pEGFR_3, (-2*Akt_1*pEGFR_1-Akt_2*pEGFR_0-29356961175563268867274324583588392*
+pEGFR_2)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_2+pEGFR_Akt_3, 
+Akt_1*pEGFR_0*reaction_2_k1-pAkt_1*reaction_7_k1+
+29356961175563268867274324583588392*pEGFR_1*reaction_2_k1-pEGFR_Akt_1*
+reaction_2_k2+Akt_2, (-51188632886488031906296066695910994+reaction_1_k2+
+reaction_9_k1)*EGF_EGFR_1+EGF_EGFR_2, (-pAkt_2-pAkt_S6_2)*a2+138555251159724428\
+1015444959581844295879229304722960881493264959088578834663108616231753236942440\
+808790557035860630370354358397065893051165519647866320631571535627905052804370,
+(S6_0*pAkt_2+2*S6_1*pAkt_1+S6_2*pAkt_0)*reaction_5_k1+(-reaction_5_k2-
+reaction_6_k1)*pAkt_S6_2-pEGFR_Akt_2*reaction_3_k1+pAkt_2*reaction_7_k1+pAkt_3,
+(-S6_0*pAkt_2-2*S6_1*pAkt_1-S6_2*pAkt_0)*reaction_5_k1+(reaction_5_k2+
+reaction_6_k1)*pAkt_S6_2+pAkt_S6_3, S6_0*pAkt_1*reaction_5_k1+S6_1*pAkt_0*
+reaction_5_k1-pS6_1*reaction_8_k1-pAkt_S6_1*reaction_5_k2+S6_2, -a3*pS6_2+60107\
+2631352132331344262606563570895408951837736499052930244124588048786854326585937\
+0846863278473702942830250688208897950911433043129842185253491201733509872225455\
+11794072668, pS6_2*reaction_8_k1-pAkt_S6_2*reaction_6_k1+pS6_3, (-pEGFR_3-
+pEGFR_Akt_3)*a1-196010719751194240245514170174789838924377296809352792869027496\
+2356173224101871863512732988928606831943676263859643379560312758062797558931207\
+7695845634509108891836865191646613201848568453606921612521413600455972265691772\
+769772373961661928231544, (3*Akt_1*pEGFR_2+3*Akt_2*pEGFR_1+Akt_3*pEGFR_0+
+29356961175563268867274324583588392*pEGFR_3)*reaction_2_k1+(-reaction_2_k2-
+reaction_3_k1)*pEGFR_Akt_3-EGF_EGFR_3*reaction_9_k1+pEGFR_3*reaction_4_k1+
+pEGFR_4, (-3*Akt_1*pEGFR_2-3*Akt_2*pEGFR_1-Akt_3*pEGFR_0-\
+29356961175563268867274324583588392*pEGFR_3)*reaction_2_k1+(reaction_2_k2+
+reaction_3_k1)*pEGFR_Akt_3+pEGFR_Akt_4, (2*Akt_1*pEGFR_1+Akt_2*pEGFR_0+
+29356961175563268867274324583588392*pEGFR_2)*reaction_2_k1-reaction_2_k2*
+pEGFR_Akt_2-pAkt_2*reaction_7_k1+Akt_3, (-51188632886488031906296066695910994+
+reaction_1_k2+reaction_9_k1)*EGF_EGFR_2+EGF_EGFR_3, (-pAkt_3-pAkt_S6_3)*a2-1436\
+0272376408925332158626142977564417143451185258470525067676041367057952372938182\
+5538598274387909553516254336610945964028104276933858788066902944882889490240827\
+7718533474926496260416403793154811464961797189173065009992355484547167570089387\
+5030, (S6_0*pAkt_3+3*S6_1*pAkt_2+3*S6_2*pAkt_1+S6_3*pAkt_0)*reaction_5_k1+(-
+reaction_5_k2-reaction_6_k1)*pAkt_S6_3-pEGFR_Akt_3*reaction_3_k1+pAkt_3*
+reaction_7_k1+pAkt_4, (-S6_0*pAkt_3-3*S6_1*pAkt_2-3*S6_2*pAkt_1-S6_3*pAkt_0)*
+reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_3+pAkt_S6_4, (S6_0*pAkt_2+2
+*S6_1*pAkt_1+S6_2*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_2-reaction_8_k1*
+pS6_2+S6_3, -a3*pS6_3-514680997663775330735886855775221397938302680174425294189\
+7677053041042129843491631339867206952265326428358219495563221023297565896553295\
+7336720579478357405864054595440759400659142850804370802492412645946177140714350\
+51009329006860615244987247312, pS6_3*reaction_8_k1-pAkt_S6_3*reaction_6_k1+
+pS6_4, (-pEGFR_4-pEGFR_Akt_4)*a1+3418345666832419253829388403214238480155395940\
+9392472201215002408453176995480456368155232943265418505827285724260506491729534\
+2347621726903042297768807504545635784963139462432166193552766341058021181003566\
+8883643038667120235704031696808818803738148748022756591168114846623690032354759\
+57611661973033995072217443469128, (4*Akt_1*pEGFR_3+6*Akt_2*pEGFR_2+4*Akt_3*
+pEGFR_1+Akt_4*pEGFR_0+29356961175563268867274324583588392*pEGFR_4)*
+reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_4+pEGFR_4*reaction_4_k1-
+EGF_EGFR_4*reaction_9_k1+pEGFR_5, (-4*Akt_1*pEGFR_3-6*Akt_2*pEGFR_2-4*Akt_3*
+pEGFR_1-Akt_4*pEGFR_0-29356961175563268867274324583588392*pEGFR_4)*
+reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_4+pEGFR_Akt_5, (3*Akt_1*
+pEGFR_2+3*Akt_2*pEGFR_1+Akt_3*pEGFR_0+29356961175563268867274324583588392*
+pEGFR_3)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_3-pAkt_3*reaction_7_k1+Akt_4, (-\
+51188632886488031906296066695910994+reaction_1_k2+reaction_9_k1)*EGF_EGFR_3+
+EGF_EGFR_4, (-pAkt_4-pAkt_S6_4)*a2+22270687985855886266400029740561183979649113\
+8718578860841649338667284702316126955163306265296637234657171257177371400429034\
+5002049597342021792993332227102598750344143683077262437832727292502305449053020\
+0849106116496949238517410277390606531562522523971554256760390282104628564464891\
+9909272863565469502625010961963370, (S6_0*pAkt_4+4*S6_1*pAkt_3+6*S6_2*pAkt_2+4*
+S6_3*pAkt_1+S6_4*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_4
++pAkt_4*reaction_7_k1-pEGFR_Akt_4*reaction_3_k1+pAkt_5, (-S6_0*pAkt_4-4*S6_1*
+pAkt_3-6*S6_2*pAkt_2-4*S6_3*pAkt_1-S6_4*pAkt_0)*reaction_5_k1+(reaction_5_k2+
+reaction_6_k1)*pAkt_S6_4+pAkt_S6_5, (S6_0*pAkt_3+3*S6_1*pAkt_2+3*S6_2*pAkt_1+
+S6_3*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_3-reaction_8_k1*pS6_3+S6_4, -
+a3*pS6_4+6217250291969841694175529238052874748727910003108476422434653480229178\
+4455727285067087591424418265496498457809362080876997678229817468445587033045169\
+0524380931268365679757049740692625650150910507082715429642950930011406168473537\
+8393148084239927371830122682865808565882136020012694042943922139884796391517977\
+7793028, pS6_4*reaction_8_k1-pAkt_S6_4*reaction_6_k1+pS6_5, (-pEGFR_5-
+pEGFR_Akt_5)*a1-794759319565796439493814052096499406878957927321083905037566209\
+7374560027010498648944012897369932012809763790677393279938540195506887517134255\
+0182444830941861150421023232580798783818742339723147585520303516925469757669141\
+1704863152485287350194711276666982059205639936172488743038837534682587303252101\
+9585484658912165731704497593064490885780552202127923541877174938513416897615732\
+302016, (5*Akt_1*pEGFR_4+10*Akt_2*pEGFR_3+10*Akt_3*pEGFR_2+5*Akt_4*pEGFR_1+
+Akt_5*pEGFR_0+29356961175563268867274324583588392*pEGFR_5)*reaction_2_k1+(-
+reaction_2_k2-reaction_3_k1)*pEGFR_Akt_5+pEGFR_5*reaction_4_k1-EGF_EGFR_5*
+reaction_9_k1+pEGFR_6, (-5*Akt_1*pEGFR_4-10*Akt_2*pEGFR_3-10*Akt_3*pEGFR_2-5*
+Akt_4*pEGFR_1-Akt_5*pEGFR_0-29356961175563268867274324583588392*pEGFR_5)*
+reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_5+pEGFR_Akt_6, (4*Akt_1*
+pEGFR_3+6*Akt_2*pEGFR_2+4*Akt_3*pEGFR_1+Akt_4*pEGFR_0+
+29356961175563268867274324583588392*pEGFR_4)*reaction_2_k1-reaction_2_k2*
+pEGFR_Akt_4-pAkt_4*reaction_7_k1+Akt_5, (-51188632886488031906296066695910994+
+reaction_1_k2+reaction_9_k1)*EGF_EGFR_4+EGF_EGFR_5, (-pAkt_5-pAkt_S6_5)*a2-4727\
+4151512563362560981259888501185888579058754523635900345720175059617037238884649\
+5473954451767766874170343869510230404229738264656056624159248563837350064360549\
+7441261817991791292793915791387385523650476705302560950182227086901210439096555\
+2403459290415155492789927264599844283863249155827204504624335441489360547347668\
+46876090813123468066831934038777469596130312378094216508940637930, (S6_0*pAkt_5
++5*S6_1*pAkt_4+10*S6_2*pAkt_3+10*S6_3*pAkt_2+5*S6_4*pAkt_1+S6_5*pAkt_0)*
+reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_5+pAkt_5*reaction_7_k1-
+pEGFR_Akt_5*reaction_3_k1+pAkt_6, (-S6_0*pAkt_5-5*S6_1*pAkt_4-10*S6_2*pAkt_3-10
+*S6_3*pAkt_2-5*S6_4*pAkt_1-S6_5*pAkt_0)*reaction_5_k1+(reaction_5_k2+
+reaction_6_k1)*pAkt_S6_5+pAkt_S6_6, (S6_0*pAkt_4+4*S6_1*pAkt_3+6*S6_2*pAkt_2+4*
+S6_3*pAkt_1+S6_4*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_4-reaction_8_k1*
+pS6_4+S6_5, -a3*pS6_5-997368105292997717426526843279783664728418490135878924475\
+7628126098107588344619749143924131857353821283183553026819686521502572812152226\
+5280637520340313832046594811047843434266421620246629771203206466702961016163925\
+8141699281924904733815137757681258489702560452208181393100405459330661174875721\
+0519735625468251188531047966846202072760644688185652035772953800841289010720002\
+01775335892, pS6_5*reaction_8_k1-pAkt_S6_5*reaction_6_k1+pS6_6, (-pEGFR_6-
+pEGFR_Akt_6)*a1+230980777392942551759644188256259711244923393331519961340769474\
+4967591527521332091074402200738714813392248880053150596864259024467599821289437\
+6277138131906263754712500284320159865210719177712109382239644190404456748335286\
+8648634698474268398669850811659898572803302660953203194722346612155204195846920\
+9309720899064637042793689512606650102906693027941457580481551790125265628205422\
+16152229735950129357771178693129452943432667986990578194803769507464604125752,
+(6*Akt_1*pEGFR_5+15*Akt_2*pEGFR_4+20*Akt_3*pEGFR_3+15*Akt_4*pEGFR_2+6*Akt_5*
+pEGFR_1+Akt_6*pEGFR_0+29356961175563268867274324583588392*pEGFR_6)*
+reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_6+pEGFR_6*reaction_4_k1-
+EGF_EGFR_6*reaction_9_k1+pEGFR_7, (-6*Akt_1*pEGFR_5-15*Akt_2*pEGFR_4-20*Akt_3*
+pEGFR_3-15*Akt_4*pEGFR_2-6*Akt_5*pEGFR_1-Akt_6*pEGFR_0-\
+29356961175563268867274324583588392*pEGFR_6)*reaction_2_k1+(reaction_2_k2+
+reaction_3_k1)*pEGFR_Akt_6+pEGFR_Akt_7, (5*Akt_1*pEGFR_4+10*Akt_2*pEGFR_3+10*
+Akt_3*pEGFR_2+5*Akt_4*pEGFR_1+Akt_5*pEGFR_0+29356961175563268867274324583588392
+*pEGFR_5)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_5-pAkt_5*reaction_7_k1+Akt_6, (
+-51188632886488031906296066695910994+reaction_1_k2+reaction_9_k1)*EGF_EGFR_5+
+EGF_EGFR_6, (-pAkt_6-pAkt_S6_6)*a2+12837064967331944386762402492591780813630267\
+6206125027038496701909916142710897947438789051996998710484758053678214918600147\
+2386540900956906319068821063983922064665208212046230391191422827632312212509186\
+0977973336057102367111922140710103418824545357961596814495707574891187097169143\
+3759901048951799143636758768039877591530120800914820596854433360929508852908449\
+9792602957407258456885202623422668921014015629190673408204899394221527950656149\
+33409220580069470, (S6_0*pAkt_6+6*S6_1*pAkt_5+15*S6_2*pAkt_4+20*S6_3*pAkt_3+15*
+S6_4*pAkt_2+6*S6_5*pAkt_1+S6_6*pAkt_0)*reaction_5_k1+(-reaction_5_k2-
+reaction_6_k1)*pAkt_S6_6+pAkt_6*reaction_7_k1-pEGFR_Akt_6*reaction_3_k1+pAkt_7,
+(-S6_0*pAkt_6-6*S6_1*pAkt_5-15*S6_2*pAkt_4-20*S6_3*pAkt_3-15*S6_4*pAkt_2-6*S6_5
+*pAkt_1-S6_6*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_6+
+pAkt_S6_7, (S6_0*pAkt_5+5*S6_1*pAkt_4+10*S6_2*pAkt_3+10*S6_3*pAkt_2+5*S6_4*
+pAkt_1+S6_5*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_5-reaction_8_k1*pS6_5+
+S6_6, (-pEGFR_7-pEGFR_Akt_7)*a1-80555934775647176427199447871857543016815851841\
+7043750473581231479728780427268947158806408844474003623711940617666432033915794\
+1491462730425746760152685428322618547121781176158731639422292437569740599315225\
+1370327435162372606133727677588807362533598297383466680161077541573444904203782\
+9311872037530633016560656557614904469097127151951776955652139974077819020499483\
+5253416006393747271492119807613490537999788918987990203940165157928592123592608\
+6601969325805893408608913662558165476475032621849349508337427029991794503069379\
+72184, (-pAkt_7-pAkt_S6_7)*a2-4259823726171589691945075516800104296204481577312\
+3418953852648154213363949651839896605023807775578289601476446753085551694189203\
+2300310742926723709081092029329557833041172853089368237065218696202537831406798\
+3461472972707506030091250400232399821770212596440765457364303807386445637841683\
+8826595940827572161928810210817777507063167402279726009962380326617983295801396\
+0669603970019815971446917718645815360396077214254237824291679166669712415528025\
+8215160165581951617278381791208036802470352084620424656422949389953691730569830\
+330, -a3*pS6_6+2001139206983297032050027016080283725880694368203759993525604654\
+9808100524064904383675338249278046418714794025643398920645710819534643623106207\
+3111466298623763086662331931857185967957678257072296237435826887168712431264355\
+6180379385849924883736194004265811239816194379694828222166317880810134819429211\
+6757661728984459580293881973651559862059800096229213802162514404519174936697809\
+844916922900596933045911435794119481317081585574658459924355075397974256168, 
+z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	86.526,	93.877,	9903979520
+SubsByDepth Usage (real, cpu, memory):	78.321,	85.383,	8907946672
 
 
 =======================================================
@@ -394,9 +779,6 @@ Parameters in equations:  [a1, a2, a3, EGFR_turnover, reaction_1_k1, reaction_1_
 =======================================================
 2. Truncating the polynomial system based on the Jacobian condition
 =======================================================
-Bound D_1 for testing the rank of the Jacobian probabilistically:  588900000
-Orders of prolongations of the outputs (beta) =  [8, 8, 7]
-Orders of prolongations of the state variables (alpha) =  [7, 1, 8, 8, 8, 8, 7, 7, 7]
 
 =======================================================
 3. Assessing local identifiability
@@ -405,31 +787,401 @@ Orders of prolongations of the state variables (alpha) =  [7, 1, 8, 8, 8, 8, 7, 
 =======================================================
 Creating Truncated system (old)
 =======================================================
-Bound D_2 for assessing global identifiability:  85969699260000000000000000000000000
-Random sample for the outputs and inputs is generated from  [a1 = 41035316205008043268918046924490928, a2 = 43575327278083283940535093841645835, a3 = 54534560758783874269570729333603148, EGFR_turnover = 45754475315497407802808175029189677, reaction_1_k1 = 2942439466205105514467476675860398, reaction_1_k2 = 33720606037284288652326068884961442, reaction_2_k1 = 71238090582502734396030710525800142, reaction_2_k2 = 11074714789367207996271131791066761, reaction_3_k1 = 76051189782170335434570787871929148, reaction_4_k1 = 13749972567642993149382123367834261, reaction_5_k1 = 63689515364396265680716010893335206, reaction_5_k2 = 41788673056116900819963512488946981, reaction_6_k1 = 34327799436323461006161455245103923, reaction_7_k1 = 47501535458604601388067543044951825, reaction_8_k1 = 43106450273206382849311490487240911, reaction_9_k1 = 50419158699708048030394772792433320, EGF_EGFR_0 = 7975875357316850787030952007547083, EGFR_0 = 15373089984288027869861327758650698, pEGFR_0 = 3537175624685616438771076222537486, pAkt_S6_0 = 26011755578198599443480207555928014, pEGFR_Akt_0 = 72351783635960518474114675330815038, pAkt_0 = 9911190996699531857522126150632653, S6_0 = 5363266010046863352172325904104143, pS6_0 = 80310408513898805610040954933285354, Akt_0 = 81898366598655932169068412749615090]
-The polynomial system widehat{E^t} contains  75 equations in  76  variables
 Locally identifiable paramters:  [reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1]
 Nonidentifiable parameter:  [Akt(0), EGFR(0), S6(0), a1, a2, a3, pAkt(0), pEGFR(0), pS6(0), EGFR_turnover, EGF_EGFR(0), pAkt_S6(0), pEGFR_Akt(0), reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
 
 =======================================================
 4. Randomizing the truncated system
 =======================================================
-Bound D_2 for assessing global identifiability:  114626265700000000000000000000000000
-Random sample for the outputs and inputs is generated from  [a1 = 80276488396574832123246781593482126, a2 = 75447082434597062082365575238812671, a3 = 79292844419968506282536906998646888, EGFR_turnover = 2200490220034039995541148028412635, reaction_1_k1 = 16691517871652714143872741180775386, reaction_1_k2 = 72949269663227615889458918514268338, reaction_2_k1 = 31603954774094959407107517849818212, reaction_2_k2 = 73667531213563379261800713807382210, reaction_3_k1 = 1017094211959510852335679638341656, reaction_4_k1 = 105826292055647729023216198271188619, reaction_5_k1 = 32446514017666541151765309036660883, reaction_5_k2 = 34242174601369257650441471128630351, reaction_6_k1 = 103538736357878093174614626172908091, reaction_7_k1 = 2356244768425253248809805718495334, reaction_8_k1 = 95940409059606359829638810098390448, reaction_9_k1 = 77703521023510331574035468663621595, EGF_EGFR_0 = 95571998739040963895953399041346069, EGFR_0 = 65382766621274788726655345116722238, pEGFR_0 = 57965619201070780295842655680444275, pAkt_S6_0 = 26008471023287129418418872987627164, pEGFR_Akt_0 = 107241267362941780465867438018961074, pAkt_0 = 82103085738867480735126706212918359, S6_0 = 53110528417826815491433299617239265, pS6_0 = 11157316435712657427105803274744894, Akt_0 = 56643407969541474333415166851923268]
-The polynomial system widehat{E^t} contains  75 equations in  76  variables
-Variable ordering to be used for Groebner basis computation [pEGFR_Akt_7, pAkt_S6_7, pEGFR_7, pAkt_7, pEGFR_Akt_6, EGF_EGFR_6, pAkt_S6_6, pEGFR_6, pAkt_6, pS6_6, Akt_6, S6_6, pEGFR_Akt_5, EGF_EGFR_5, pAkt_S6_5, pEGFR_5, pAkt_5, pS6_5, Akt_5, S6_5, pEGFR_Akt_4, EGF_EGFR_4, pAkt_S6_4, pEGFR_4, pAkt_4, pS6_4, Akt_4, S6_4, pEGFR_Akt_3, EGF_EGFR_3, pAkt_S6_3, pEGFR_3, pAkt_3, pS6_3, Akt_3, S6_3, pEGFR_Akt_2, EGF_EGFR_2, pAkt_S6_2, pEGFR_2, pAkt_2, pS6_2, Akt_2, S6_2, pEGFR_Akt_1, EGF_EGFR_1, pAkt_S6_1, pEGFR_1, pAkt_1, pS6_1, Akt_1, S6_1, pEGFR_Akt_0, EGF_EGFR_0, pAkt_S6_0, pEGFR_0, pAkt_0, pS6_0, Akt_0, S6_0, z_aux, w_aux, EGFR_turnover, a1, a2, a3, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, reaction_4_k1, reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, reaction_8_k1, reaction_9_k1]
-Prep CPU Time (sub_transc=false):	 5.443
-Prep Real Elapsed Time (sub_transc=false):	 4.802
-memory used=0.66GiB, alloc change=-4.00MiB, cpu time=5.44s, real time=4.80s, gc time=1.09s
+Prep CPU Time (sub_transc=false):	 6.227
+Prep Real Elapsed Time (sub_transc=false):	 5.462
+memory used=0.66GiB, alloc change=-3.52MiB, cpu time=6.23s, real time=5.46s, gc time=1.39s
 
 
-GetPolySystem Usage (real, cpu, memory):	4.803,	5.445,	707780560
+GetPolySystem Usage (real, cpu, memory):	5.464,	6.229,	707261584
 
-States for substitution:	[pS6_ = 0, reaction_7_k1 = 1, S6_ = 2, pAkt_S6_ = 0, reaction_1_k1 = 2, reaction_3_k1 = 1, pAkt_ = 0, reaction_9_k1 = 1, reaction_6_k1 = 1, pEGFR_Akt_ = 0, reaction_1_k2 = 2, a2 = 0, reaction_2_k1 = 2, reaction_5_k2 = 2, pEGFR_ = 0, reaction_5_k1 = 2, a1 = 0, a3 = 0, reaction_4_k1 = 1, Akt_ = 2, reaction_8_k1 = 1, reaction_2_k2 = 2, EGF_EGFR_ = 1]
+States for substitution:	[a1 = 0, reaction_1_k1 = 2, pAkt_S6_ = 0, reaction_5_k1 = 2, reaction_1_k2 = 2, reaction_8_k1 = 1, a2 = 0, S6_ = 2, pEGFR_ = 0, reaction_2_k2 = 2, pAkt_ = 0, a3 = 0, reaction_7_k1 = 1, Akt_ = 2, pEGFR_Akt_ = 0, reaction_5_k2 = 2, reaction_4_k1 = 1, reaction_9_k1 = 1, pS6_ = 0, EGF_EGFR_ = 1, reaction_6_k1 = 1, reaction_3_k1 = 1, reaction_2_k1 = 2]
 NonID parameters:	[Akt_0, EGFR_0, S6_0, a1, a2, a3, pAkt_0, pEGFR_0, pS6_0, EGFR_turnover, EGF_EGFR_0, pAkt_S6_0, pEGFR_Akt_0, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
-Substitutions:	[pS6_ = 1, S6_ = 3, pAkt_S6_ = 1, pAkt_ = 1, pEGFR_Akt_ = 1, reaction_5_k2 = 3, pEGFR_ = 1, Akt_ = 3, reaction_2_k2 = 3, z_aux = 2, EGF_EGFR_ = 2]
-memory used=0.67GiB, alloc change=-4.00MiB, cpu time=5.52s, real time=4.88s, gc time=1.09s
+Substitutions:	[pAkt_S6_ = 1, S6_ = 3, pEGFR_ = 1, reaction_2_k2 = 3, pAkt_ = 1, Akt_ = 3, z_aux = 2, pEGFR_Akt_ = 1, reaction_5_k2 = 3, pS6_ = 1, EGF_EGFR_ = 2]
+memory used=0.67GiB, alloc change=-3.52MiB, cpu time=6.32s, real time=5.55s, gc time=1.39s
+all_subs, system_vars[1], system_vars[2], alg_indep, original_et_hat := {Akt_0
+= Akt_0^3, Akt_1 = Akt_1^3, Akt_2 = Akt_2^3, Akt_3 = Akt_3^3, Akt_4 = Akt_4^3,
+Akt_5 = Akt_5^3, Akt_6 = Akt_6^3, S6_0 = S6_0^3, S6_1 = S6_1^3, S6_2 = S6_2^3,
+S6_3 = S6_3^3, S6_4 = S6_4^3, S6_5 = S6_5^3, S6_6 = S6_6^3, pAkt_0 = pAkt_0, 
+pAkt_1 = pAkt_1, pAkt_2 = pAkt_2, pAkt_3 = pAkt_3, pAkt_4 = pAkt_4, pAkt_5 = 
+pAkt_5, pAkt_6 = pAkt_6, pAkt_7 = pAkt_7, pEGFR_0 = pEGFR_0, pEGFR_1 = pEGFR_1,
+pEGFR_2 = pEGFR_2, pEGFR_3 = pEGFR_3, pEGFR_4 = pEGFR_4, pEGFR_5 = pEGFR_5, 
+pEGFR_6 = pEGFR_6, pEGFR_7 = pEGFR_7, pS6_0 = pS6_0, pS6_1 = pS6_1, pS6_2 = 
+pS6_2, pS6_3 = pS6_3, pS6_4 = pS6_4, pS6_5 = pS6_5, pS6_6 = pS6_6, z_aux = 
+z_aux^2, EGF_EGFR_0 = EGF_EGFR_0^2, EGF_EGFR_1 = EGF_EGFR_1^2, EGF_EGFR_2 = 
+EGF_EGFR_2^2, EGF_EGFR_3 = EGF_EGFR_3^2, EGF_EGFR_4 = EGF_EGFR_4^2, EGF_EGFR_5
+= EGF_EGFR_5^2, EGF_EGFR_6 = EGF_EGFR_6^2, pAkt_S6_0 = pAkt_S6_0, pAkt_S6_1 = 
+pAkt_S6_1, pAkt_S6_2 = pAkt_S6_2, pAkt_S6_3 = pAkt_S6_3, pAkt_S6_4 = pAkt_S6_4,
+pAkt_S6_5 = pAkt_S6_5, pAkt_S6_6 = pAkt_S6_6, pAkt_S6_7 = pAkt_S6_7, 
+pEGFR_Akt_0 = pEGFR_Akt_0, pEGFR_Akt_1 = pEGFR_Akt_1, pEGFR_Akt_2 = pEGFR_Akt_2
+, pEGFR_Akt_3 = pEGFR_Akt_3, pEGFR_Akt_4 = pEGFR_Akt_4, pEGFR_Akt_5 = 
+pEGFR_Akt_5, pEGFR_Akt_6 = pEGFR_Akt_6, pEGFR_Akt_7 = pEGFR_Akt_7, 
+reaction_2_k2 = reaction_2_k2^3, reaction_5_k2 = reaction_5_k2^3}, [-a1*pEGFR_0
+-a1*pEGFR_Akt_0+
+6096115618436689949743767558757177373416560251400802823246051772906750, Akt_0^3
+*pEGFR_0*reaction_2_k1-pEGFR_Akt_0*reaction_2_k2^3-EGF_EGFR_0^2*reaction_9_k1+
+pEGFR_0*reaction_4_k1-pEGFR_Akt_0*reaction_3_k1+pEGFR_1, -Akt_0^3*pEGFR_0*
+reaction_2_k1+pEGFR_Akt_0*reaction_2_k2^3+pEGFR_Akt_0*reaction_3_k1+pEGFR_Akt_1
+, -a2*pAkt_0-a2*pAkt_S6_0+
+8761404740728718438656897128418078823100526916036648549391718476857194, S6_0^3*
+pAkt_0*reaction_5_k1-pAkt_S6_0*reaction_5_k2^3+pAkt_0*reaction_7_k1-pAkt_S6_0*
+reaction_6_k1-pEGFR_Akt_0*reaction_3_k1+pAkt_1, -S6_0^3*pAkt_0*reaction_5_k1+
+pAkt_S6_0*reaction_5_k2^3+pAkt_S6_0*reaction_6_k1+pAkt_S6_1, -a3*pS6_0+
+4781716224863735047264644174116070834049801964233512343636673840794224, pS6_0*
+reaction_8_k1-pAkt_S6_0*reaction_6_k1+pS6_1, (-pEGFR_1-pEGFR_Akt_1)*a1+16414691\
+8161858738063446576224258290456214778161306259572326314283834042770539009737979\
+609874807905172000, (Akt_0^3*pEGFR_1+Akt_1^3*pEGFR_0)*reaction_2_k1+(-
+reaction_2_k2^3-reaction_3_k1)*pEGFR_Akt_1+pEGFR_1*reaction_4_k1-EGF_EGFR_1^2*
+reaction_9_k1+pEGFR_2, (-Akt_0^3*pEGFR_1-Akt_1^3*pEGFR_0)*reaction_2_k1+(
+reaction_2_k2^3+reaction_3_k1)*pEGFR_Akt_1+pEGFR_Akt_2, Akt_0^3*pEGFR_0*
+reaction_2_k1-pEGFR_Akt_0*reaction_2_k2^3+Akt_1^3-pAkt_0*reaction_7_k1, -
+EGF_EGFR_0^2*reaction_1_k1+EGF_EGFR_0^2*reaction_1_k2+EGF_EGFR_0^2*
+reaction_9_k1+EGF_EGFR_1^2, (-pAkt_1-pAkt_S6_1)*a2+3338866890366698908134927812\
+72456734869643792524139735715470193504378955153540613640672265881491093808182,
+(S6_0^3*pAkt_1+S6_1^3*pAkt_0)*reaction_5_k1+(-reaction_5_k2^3-reaction_6_k1)*
+pAkt_S6_1+pAkt_1*reaction_7_k1-pEGFR_Akt_1*reaction_3_k1+pAkt_2, (-S6_0^3*
+pAkt_1-S6_1^3*pAkt_0)*reaction_5_k1+(reaction_5_k2^3+reaction_6_k1)*pAkt_S6_1+
+pAkt_S6_2, S6_0^3*pAkt_0*reaction_5_k1-pAkt_S6_0*reaction_5_k2^3+S6_1^3-pS6_0*
+reaction_8_k1, -a3*pS6_1-183614421865977882056679412611074787345221477302186140\
+223913921212887784864008600224668620865074304094064, pS6_1*reaction_8_k1-
+pAkt_S6_1*reaction_6_k1+pS6_2, (-pEGFR_2-pEGFR_Akt_2)*a1+1766414383969741761986\
+9980993625617973561367729797476449499480841393006387693555937021499905058764606\
+4755182668856648724170168885443981177130188394767841328847231532423664000, (
+Akt_0^3*pEGFR_2+2*Akt_1^3*pEGFR_1+Akt_2^3*pEGFR_0)*reaction_2_k1+(-
+reaction_2_k2^3-reaction_3_k1)*pEGFR_Akt_2+pEGFR_2*reaction_4_k1-EGF_EGFR_2^2*
+reaction_9_k1+pEGFR_3, (-Akt_0^3*pEGFR_2-2*Akt_1^3*pEGFR_1-Akt_2^3*pEGFR_0)*
+reaction_2_k1+(reaction_2_k2^3+reaction_3_k1)*pEGFR_Akt_2+pEGFR_Akt_3, Akt_0^3*
+pEGFR_1*reaction_2_k1+Akt_1^3*pEGFR_0*reaction_2_k1-pEGFR_Akt_1*reaction_2_k2^3
++Akt_2^3-pAkt_1*reaction_7_k1, (-reaction_1_k1+reaction_1_k2+reaction_9_k1)*
+EGF_EGFR_1^2+EGF_EGFR_2^2, (-pAkt_2-pAkt_S6_2)*a2+40819695928933959845637810007\
+9362748997321165702957796162889354303089235977366317089906391828171809711645116\
+418966562690233590569799611534707262386399032584982424588697785950, (S6_0^3*
+pAkt_2+2*S6_1^3*pAkt_1+S6_2^3*pAkt_0)*reaction_5_k1+(-reaction_5_k2^3-
+reaction_6_k1)*pAkt_S6_2-pEGFR_Akt_2*reaction_3_k1+pAkt_2*reaction_7_k1+pAkt_3,
+(-S6_0^3*pAkt_2-2*S6_1^3*pAkt_1-S6_2^3*pAkt_0)*reaction_5_k1+(reaction_5_k2^3+
+reaction_6_k1)*pAkt_S6_2+pAkt_S6_3, S6_0^3*pAkt_1*reaction_5_k1+S6_1^3*pAkt_0*
+reaction_5_k1-pAkt_S6_1*reaction_5_k2^3+S6_2^3-pS6_1*reaction_8_k1, -a3*pS6_2+
+3473228693840877674036382484015058540118100250158525209866253215934272361593783\
+3837624335731852999813347697536032737028158888156304768288870981126985101121672\
+9492888534700144, pS6_2*reaction_8_k1-pAkt_S6_2*reaction_6_k1+pS6_3, (-pEGFR_3-
+pEGFR_Akt_3)*a1-531627098649193485542893900652637304563808674058703851759206838\
+3937820706938044426540801450200425364142771069915872408618351278964710524050972\
+0481787874139650919031245203880379059591331098619894663210810779683398323921987\
+1292796894149540087000, (Akt_0^3*pEGFR_3+3*Akt_1^3*pEGFR_2+3*Akt_2^3*pEGFR_1+
+Akt_3^3*pEGFR_0)*reaction_2_k1+(-reaction_2_k2^3-reaction_3_k1)*pEGFR_Akt_3-
+EGF_EGFR_3^2*reaction_9_k1+pEGFR_3*reaction_4_k1+pEGFR_4, (-Akt_0^3*pEGFR_3-3*
+Akt_1^3*pEGFR_2-3*Akt_2^3*pEGFR_1-Akt_3^3*pEGFR_0)*reaction_2_k1+(reaction_2_k2
+^3+reaction_3_k1)*pEGFR_Akt_3+pEGFR_Akt_4, (Akt_0^3*pEGFR_2+2*Akt_1^3*pEGFR_1+
+Akt_2^3*pEGFR_0)*reaction_2_k1-reaction_2_k2^3*pEGFR_Akt_2-pAkt_2*reaction_7_k1
++Akt_3^3, (-reaction_1_k1+reaction_1_k2+reaction_9_k1)*EGF_EGFR_2^2+EGF_EGFR_3^
+2, (-pAkt_3-pAkt_S6_3)*a2-13657140056619199276387241285035642105466989932839836\
+4306843017603957882529931337890017103498062696406827932662124483967277541776663\
+9705859332257583898262170972135801165912927676158203064021063124536580118517606\
+170066044418048952184466666155710, (S6_0^3*pAkt_3+3*S6_1^3*pAkt_2+3*S6_2^3*
+pAkt_1+S6_3^3*pAkt_0)*reaction_5_k1+(-reaction_5_k2^3-reaction_6_k1)*pAkt_S6_3-
+pEGFR_Akt_3*reaction_3_k1+pAkt_3*reaction_7_k1+pAkt_4, (-S6_0^3*pAkt_3-3*S6_1^3
+*pAkt_2-3*S6_2^3*pAkt_1-S6_3^3*pAkt_0)*reaction_5_k1+(reaction_5_k2^3+
+reaction_6_k1)*pAkt_S6_3+pAkt_S6_4, (S6_0^3*pAkt_2+2*S6_1^3*pAkt_1+S6_2^3*
+pAkt_0)*reaction_5_k1-reaction_5_k2^3*pAkt_S6_2-reaction_8_k1*pS6_2+S6_3^3, -a3
+*pS6_3-132000971942157096512937176198184813128244397658475944991820568505517824\
+5560439313047492103196703228367259624545277274643677265145797383387446097953803\
+7161564901359111453283072382157686578665558358114714312958241821514558803436232\
+15161302766096, pS6_3*reaction_8_k1-pAkt_S6_3*reaction_6_k1+pS6_4, (-pEGFR_4-
+pEGFR_Akt_4)*a1+239448935131899873912300966279483512979536600108911575963745209\
+2583238295422743607518180260536892151350156190069447172862360446312552119200245\
+1825730669470971165487281166867467773091877456999666065537771544207448868657513\
+2505886319379842509705693894086891563835530417569980217036267726318122363615796\
+2763743495000, (Akt_0^3*pEGFR_4+4*Akt_1^3*pEGFR_3+6*Akt_2^3*pEGFR_2+4*Akt_3^3*
+pEGFR_1+Akt_4^3*pEGFR_0)*reaction_2_k1+(-reaction_2_k2^3-reaction_3_k1)*
+pEGFR_Akt_4+pEGFR_4*reaction_4_k1-EGF_EGFR_4^2*reaction_9_k1+pEGFR_5, (-Akt_0^3
+*pEGFR_4-4*Akt_1^3*pEGFR_3-6*Akt_2^3*pEGFR_2-4*Akt_3^3*pEGFR_1-Akt_4^3*pEGFR_0)
+*reaction_2_k1+(reaction_2_k2^3+reaction_3_k1)*pEGFR_Akt_4+pEGFR_Akt_5, (Akt_0^
+3*pEGFR_3+3*Akt_1^3*pEGFR_2+3*Akt_2^3*pEGFR_1+Akt_3^3*pEGFR_0)*reaction_2_k1-
+reaction_2_k2^3*pEGFR_Akt_3-pAkt_3*reaction_7_k1+Akt_4^3, (-reaction_1_k1+
+reaction_1_k2+reaction_9_k1)*EGF_EGFR_3^2+EGF_EGFR_4^2, (-pAkt_4-pAkt_S6_4)*a2+
+6940081430016163573026876536224257862816813152083324310683720535535480850122387\
+5386760599502103014024516501152678880552379900220355779071868765429313993271097\
+6723586969120693480406589838991769822539301754220944522015101153973159303291425\
+1106676823863962809002426532613982421886971777430650694101882773830047053718, (
+S6_0^3*pAkt_4+4*S6_1^3*pAkt_3+6*S6_2^3*pAkt_2+4*S6_3^3*pAkt_1+S6_4^3*pAkt_0)*
+reaction_5_k1+(-reaction_5_k2^3-reaction_6_k1)*pAkt_S6_4+pAkt_4*reaction_7_k1-
+pEGFR_Akt_4*reaction_3_k1+pAkt_5, (-S6_0^3*pAkt_4-4*S6_1^3*pAkt_3-6*S6_2^3*
+pAkt_2-4*S6_3^3*pAkt_1-S6_4^3*pAkt_0)*reaction_5_k1+(reaction_5_k2^3+
+reaction_6_k1)*pAkt_S6_4+pAkt_S6_5, (S6_0^3*pAkt_3+3*S6_1^3*pAkt_2+3*S6_2^3*
+pAkt_1+S6_3^3*pAkt_0)*reaction_5_k1-reaction_5_k2^3*pAkt_S6_3-reaction_8_k1*
+pS6_3+S6_4^3, -a3*pS6_4+7524846634863291066811173900846923865794107963770115473\
+9818239165350352476324452611267922176935697459611641958064238043031806731042092\
+3655185489028518293393174576315731581545131282946654712922482045677402625286905\
+5759682077737524453034980449371044732641573729159109499162637304217019597266331\
+113605698626138839728, pS6_4*reaction_8_k1-pAkt_S6_4*reaction_6_k1+pS6_5, (-
+pEGFR_5-pEGFR_Akt_5)*a1-1437987592084892328235503543125924637672176559583026164\
+4458461064691917122758026144975155197768402870857339201696301379321377003369110\
+0181859028202142312068413288038751523786739720409762194549638501508803215983909\
+6007067092022371653315137835453740485942859401710683033663390438912066220472946\
+2971009966975314987697718746310375717808002156753786276040325355561273208335624\
+642712199000, (Akt_0^3*pEGFR_5+5*Akt_1^3*pEGFR_4+10*Akt_2^3*pEGFR_3+10*Akt_3^3*
+pEGFR_2+5*Akt_4^3*pEGFR_1+Akt_5^3*pEGFR_0)*reaction_2_k1+(-reaction_2_k2^3-
+reaction_3_k1)*pEGFR_Akt_5+pEGFR_5*reaction_4_k1-EGF_EGFR_5^2*reaction_9_k1+
+pEGFR_6, (-Akt_0^3*pEGFR_5-5*Akt_1^3*pEGFR_4-10*Akt_2^3*pEGFR_3-10*Akt_3^3*
+pEGFR_2-5*Akt_4^3*pEGFR_1-Akt_5^3*pEGFR_0)*reaction_2_k1+(reaction_2_k2^3+
+reaction_3_k1)*pEGFR_Akt_5+pEGFR_Akt_6, (Akt_0^3*pEGFR_4+4*Akt_1^3*pEGFR_3+6*
+Akt_2^3*pEGFR_2+4*Akt_3^3*pEGFR_1+Akt_4^3*pEGFR_0)*reaction_2_k1-reaction_2_k2^
+3*pEGFR_Akt_4-pAkt_4*reaction_7_k1+Akt_5^3, (-reaction_1_k1+reaction_1_k2+
+reaction_9_k1)*EGF_EGFR_4^2+EGF_EGFR_5^2, (-pAkt_5-pAkt_S6_5)*a2-47673626741997\
+6052292485441506746730282145048432644804230196147135422189382604172277474187314\
+2910248566272425103309023015371420396965165732852602852931491865652176319562654\
+5024386598055658306029644845015992330007971495198028904726891809687553559599641\
+3467981883713846373652477280777660459346838324846653351024781000946801582920021\
+18690815556594875015984808677996025842394675995251918, (S6_0^3*pAkt_5+5*S6_1^3*
+pAkt_4+10*S6_2^3*pAkt_3+10*S6_3^3*pAkt_2+5*S6_4^3*pAkt_1+S6_5^3*pAkt_0)*
+reaction_5_k1+(-reaction_5_k2^3-reaction_6_k1)*pAkt_S6_5+pAkt_5*reaction_7_k1-
+pEGFR_Akt_5*reaction_3_k1+pAkt_6, (-S6_0^3*pAkt_5-5*S6_1^3*pAkt_4-10*S6_2^3*
+pAkt_3-10*S6_3^3*pAkt_2-5*S6_4^3*pAkt_1-S6_5^3*pAkt_0)*reaction_5_k1+(
+reaction_5_k2^3+reaction_6_k1)*pAkt_S6_5+pAkt_S6_6, (S6_0^3*pAkt_4+4*S6_1^3*
+pAkt_3+6*S6_2^3*pAkt_2+4*S6_3^3*pAkt_1+S6_4^3*pAkt_0)*reaction_5_k1-
+reaction_5_k2^3*pAkt_S6_4-reaction_8_k1*pS6_4+S6_5^3, -a3*pS6_5-571948483733335\
+2706571421090120779836021441491221783333159043648031120374630770034304517362621\
+4678059122159391840087179561982412488962495857416985179021757343191266746475495\
+9949414571579303666426748739810081577816768011515928902067793509683978730393070\
+2320107692989950632411731401074522063498824517705367234787315967341475198206497\
+9441455160723899568716209189610279837570309168276496, pS6_5*reaction_8_k1-
+pAkt_S6_5*reaction_6_k1+pS6_6, (-pEGFR_6-pEGFR_Akt_6)*a1+1079463190746427911480\
+2520363193622520525317194893651726258367687307260991827625772013050597774379591\
+6394639093277799127151612912067079997628406160137152541011578220128309165275896\
+0414133668020455990208594833377366143071689812421743040141254777054230222359078\
+2676929063797156139916486270228112538616439438446037294510802796624881373200247\
+2799921236311544188751858847676919001124591221553195848071268417049125573564671\
+923857431026310167465704265089779000, (Akt_0^3*pEGFR_6+6*Akt_1^3*pEGFR_5+15*
+Akt_2^3*pEGFR_4+20*Akt_3^3*pEGFR_3+15*Akt_4^3*pEGFR_2+6*Akt_5^3*pEGFR_1+Akt_6^3
+*pEGFR_0)*reaction_2_k1+(-reaction_2_k2^3-reaction_3_k1)*pEGFR_Akt_6+pEGFR_6*
+reaction_4_k1-EGF_EGFR_6^2*reaction_9_k1+pEGFR_7, (-Akt_0^3*pEGFR_6-6*Akt_1^3*
+pEGFR_5-15*Akt_2^3*pEGFR_4-20*Akt_3^3*pEGFR_3-15*Akt_4^3*pEGFR_2-6*Akt_5^3*
+pEGFR_1-Akt_6^3*pEGFR_0)*reaction_2_k1+(reaction_2_k2^3+reaction_3_k1)*
+pEGFR_Akt_6+pEGFR_Akt_7, (Akt_0^3*pEGFR_5+5*Akt_1^3*pEGFR_4+10*Akt_2^3*pEGFR_3+
+10*Akt_3^3*pEGFR_2+5*Akt_4^3*pEGFR_1+Akt_5^3*pEGFR_0)*reaction_2_k1-
+reaction_2_k2^3*pEGFR_Akt_5-pAkt_5*reaction_7_k1+Akt_6^3, (-reaction_1_k1+
+reaction_1_k2+reaction_9_k1)*EGF_EGFR_5^2+EGF_EGFR_6^2, (-pAkt_6-pAkt_S6_6)*a2+
+4148388994050058821689127038969223156883734433123230533188450799599720227697067\
+9895034068948707388967264360040957930317134047935084431939889989777056340799089\
+4058087168305678368533310375860840957938797220067673496930853561193939493836458\
+0160337958766158142293408398988167960514258005991668123864193125421563489888371\
+6724144992449351579584488169142223172995858464854948583443413794568319710850303\
+4579735592765694231041457878166809045709565822019113216214, (S6_0^3*pAkt_6+6*
+S6_1^3*pAkt_5+15*S6_2^3*pAkt_4+20*S6_3^3*pAkt_3+15*S6_4^3*pAkt_2+6*S6_5^3*
+pAkt_1+S6_6^3*pAkt_0)*reaction_5_k1+(-reaction_5_k2^3-reaction_6_k1)*pAkt_S6_6+
+pAkt_6*reaction_7_k1-pEGFR_Akt_6*reaction_3_k1+pAkt_7, (-S6_0^3*pAkt_6-6*S6_1^3
+*pAkt_5-15*S6_2^3*pAkt_4-20*S6_3^3*pAkt_3-15*S6_4^3*pAkt_2-6*S6_5^3*pAkt_1-S6_6
+^3*pAkt_0)*reaction_5_k1+(reaction_5_k2^3+reaction_6_k1)*pAkt_S6_6+pAkt_S6_7, (
+S6_0^3*pAkt_5+5*S6_1^3*pAkt_4+10*S6_2^3*pAkt_3+10*S6_3^3*pAkt_2+5*S6_4^3*pAkt_1
++S6_5^3*pAkt_0)*reaction_5_k1-reaction_5_k2^3*pAkt_S6_5-reaction_8_k1*pS6_5+
+S6_6^3, (-pEGFR_7-pEGFR_Akt_7)*a1-972392912671961369489204435200451398758645488\
+6483853545299011369673469878088006412726130535832711023578128040099147396244499\
+5477366887237779901497584431660335890715409721146860023106069193907661989113849\
+9093885657656514403556189214351341936490919482516034994313435055309194027067480\
+3807888588321958409898904870985938004141956105817154938504009064401659815384346\
+3160207584830558945216734186089532540837187691564833591336420411382731070145008\
+7912491217997224004198999527915078901788619814047785845736701868274765650840391\
+000, (-pAkt_7-pAkt_S6_7)*a2-438637787802109007916483354464147102526138900109452\
+4446804875108607527096821348476736507636670520380961067472289345408162190344075\
+2214676821763880195378622628616851268876259533799672492951000802127964894487843\
+7860118494422073977158731370870781026172279056979434319888279621450145034344266\
+7255291033852884917376220538218356736529623021750044836872603739558810490716617\
+3875099707528749313755606773892569044494497179978854264102448763333134507508997\
+23465716184402981356192796370439064928910806815346212999558858709553960233838,
+-a3*pS6_6+543408198185100867333978726556877125754214227235154232535078651226651\
+5627150733754348469528158413253164872890114557214280758230409257523491311003259\
+1138782638901717454394966056629949347777818835508085763110659823054367779981771\
+3677213216004112926754226589988039704509252162840518695601139466158165031480934\
+0466409921000219126915397029461689297790323259292109730730619073186536217701035\
+90110197579098831519815350259486528366854812778068081959778431676720, z_aux^2-1
+], [pEGFR_Akt_7, pAkt_S6_7, pEGFR_7, pAkt_7, pEGFR_Akt_6, EGF_EGFR_6, pAkt_S6_6
+, pEGFR_6, pAkt_6, pS6_6, Akt_6, S6_6, pEGFR_Akt_5, EGF_EGFR_5, pAkt_S6_5, 
+pEGFR_5, pAkt_5, pS6_5, Akt_5, S6_5, pEGFR_Akt_4, EGF_EGFR_4, pAkt_S6_4, 
+pEGFR_4, pAkt_4, pS6_4, Akt_4, S6_4, pEGFR_Akt_3, EGF_EGFR_3, pAkt_S6_3, 
+pEGFR_3, pAkt_3, pS6_3, Akt_3, S6_3, pEGFR_Akt_2, EGF_EGFR_2, pAkt_S6_2, 
+pEGFR_2, pAkt_2, pS6_2, Akt_2, S6_2, pEGFR_Akt_1, EGF_EGFR_1, pAkt_S6_1, 
+pEGFR_1, pAkt_1, pS6_1, Akt_1, S6_1, pEGFR_Akt_0, EGF_EGFR_0, pAkt_S6_0, 
+pEGFR_0, pAkt_0, pS6_0, Akt_0, S6_0, z_aux, w_aux, EGFR_turnover, a1, a2, a3, 
+reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_2_k2, reaction_3_k1, 
+reaction_4_k1, reaction_5_k1, reaction_5_k2, reaction_6_k1, reaction_7_k1, 
+reaction_8_k1, reaction_9_k1], [], [-a1*pEGFR_0-a1*pEGFR_Akt_0+
+6096115618436689949743767558757177373416560251400802823246051772906750, Akt_0*
+pEGFR_0*reaction_2_k1+pEGFR_0*reaction_4_k1-EGF_EGFR_0*reaction_9_k1-
+pEGFR_Akt_0*reaction_2_k2-pEGFR_Akt_0*reaction_3_k1+pEGFR_1, -Akt_0*pEGFR_0*
+reaction_2_k1+pEGFR_Akt_0*reaction_2_k2+pEGFR_Akt_0*reaction_3_k1+pEGFR_Akt_1,
+-a2*pAkt_0-a2*pAkt_S6_0+
+8761404740728718438656897128418078823100526916036648549391718476857194, S6_0*
+pAkt_0*reaction_5_k1+pAkt_0*reaction_7_k1-pAkt_S6_0*reaction_5_k2-pAkt_S6_0*
+reaction_6_k1-pEGFR_Akt_0*reaction_3_k1+pAkt_1, -S6_0*pAkt_0*reaction_5_k1+
+pAkt_S6_0*reaction_5_k2+pAkt_S6_0*reaction_6_k1+pAkt_S6_1, -a3*pS6_0+
+4781716224863735047264644174116070834049801964233512343636673840794224, pS6_0*
+reaction_8_k1-pAkt_S6_0*reaction_6_k1+pS6_1, (-pEGFR_1-pEGFR_Akt_1)*a1+16414691\
+8161858738063446576224258290456214778161306259572326314283834042770539009737979\
+609874807905172000, (Akt_0*pEGFR_1+Akt_1*pEGFR_0)*reaction_2_k1+(-reaction_2_k2
+-reaction_3_k1)*pEGFR_Akt_1+pEGFR_1*reaction_4_k1-EGF_EGFR_1*reaction_9_k1+
+pEGFR_2, (-Akt_0*pEGFR_1-Akt_1*pEGFR_0)*reaction_2_k1+(reaction_2_k2+
+reaction_3_k1)*pEGFR_Akt_1+pEGFR_Akt_2, Akt_0*pEGFR_0*reaction_2_k1-pAkt_0*
+reaction_7_k1-pEGFR_Akt_0*reaction_2_k2+Akt_1, -EGF_EGFR_0*reaction_1_k1+
+EGF_EGFR_0*reaction_1_k2+EGF_EGFR_0*reaction_9_k1+EGF_EGFR_1, (-pAkt_1-
+pAkt_S6_1)*a2+33388668903666989081349278127245673486964379252413973571547019350\
+4378955153540613640672265881491093808182, (S6_0*pAkt_1+S6_1*pAkt_0)*
+reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_1+pAkt_1*reaction_7_k1-
+pEGFR_Akt_1*reaction_3_k1+pAkt_2, (-S6_0*pAkt_1-S6_1*pAkt_0)*reaction_5_k1+(
+reaction_5_k2+reaction_6_k1)*pAkt_S6_1+pAkt_S6_2, S6_0*pAkt_0*reaction_5_k1-
+pS6_0*reaction_8_k1-pAkt_S6_0*reaction_5_k2+S6_1, -a3*pS6_1-1836144218659778820\
+5667941261107478734522147730218614022391392121288778486400860022466862086507430\
+4094064, pS6_1*reaction_8_k1-pAkt_S6_1*reaction_6_k1+pS6_2, (-pEGFR_2-
+pEGFR_Akt_2)*a1+176641438396974176198699809936256179735613677297974764494994808\
+4139300638769355593702149990505876460647551826688566487241701688854439811771301\
+88394767841328847231532423664000, (Akt_0*pEGFR_2+2*Akt_1*pEGFR_1+Akt_2*pEGFR_0)
+*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_2+pEGFR_2*reaction_4_k1
+-EGF_EGFR_2*reaction_9_k1+pEGFR_3, (-Akt_0*pEGFR_2-2*Akt_1*pEGFR_1-Akt_2*
+pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_2+pEGFR_Akt_3, 
+Akt_0*pEGFR_1*reaction_2_k1+Akt_1*pEGFR_0*reaction_2_k1-pAkt_1*reaction_7_k1-
+pEGFR_Akt_1*reaction_2_k2+Akt_2, (-reaction_1_k1+reaction_1_k2+reaction_9_k1)*
+EGF_EGFR_1+EGF_EGFR_2, (-pAkt_2-pAkt_S6_2)*a2+408196959289339598456378100079362\
+7489973211657029577961628893543030892359773663170899063918281718097116451164189\
+66562690233590569799611534707262386399032584982424588697785950, (S6_0*pAkt_2+2*
+S6_1*pAkt_1+S6_2*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_2
+-pEGFR_Akt_2*reaction_3_k1+pAkt_2*reaction_7_k1+pAkt_3, (-S6_0*pAkt_2-2*S6_1*
+pAkt_1-S6_2*pAkt_0)*reaction_5_k1+(reaction_5_k2+reaction_6_k1)*pAkt_S6_2+
+pAkt_S6_3, S6_0*pAkt_1*reaction_5_k1+S6_1*pAkt_0*reaction_5_k1-pS6_1*
+reaction_8_k1-pAkt_S6_1*reaction_5_k2+S6_2, -a3*pS6_2+3473228693840877674036382\
+4840150585401181002501585252098662532159342723615937833837624335731852999813347\
+6975360327370281588881563047682888709811269851011216729492888534700144, pS6_2*
+reaction_8_k1-pAkt_S6_2*reaction_6_k1+pS6_3, (-pEGFR_3-pEGFR_Akt_3)*a1-53162709\
+8649193485542893900652637304563808674058703851759206838393782070693804442654080\
+1450200425364142771069915872408618351278964710524050972048178787413965091903124\
+52038803790595913310986198946632108107796833983239219871292796894149540087000,
+(Akt_0*pEGFR_3+3*Akt_1*pEGFR_2+3*Akt_2*pEGFR_1+Akt_3*pEGFR_0)*reaction_2_k1+(-
+reaction_2_k2-reaction_3_k1)*pEGFR_Akt_3-EGF_EGFR_3*reaction_9_k1+pEGFR_3*
+reaction_4_k1+pEGFR_4, (-Akt_0*pEGFR_3-3*Akt_1*pEGFR_2-3*Akt_2*pEGFR_1-Akt_3*
+pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_3+pEGFR_Akt_4, (
+Akt_0*pEGFR_2+2*Akt_1*pEGFR_1+Akt_2*pEGFR_0)*reaction_2_k1-reaction_2_k2*
+pEGFR_Akt_2-pAkt_2*reaction_7_k1+Akt_3, (-reaction_1_k1+reaction_1_k2+
+reaction_9_k1)*EGF_EGFR_2+EGF_EGFR_3, (-pAkt_3-pAkt_S6_3)*a2-136571400566191992\
+7638724128503564210546698993283983643068430176039578825299313378900171034980626\
+9640682793266212448396727754177666397058593322575838982621709721358011659129276\
+76158203064021063124536580118517606170066044418048952184466666155710, (S6_0*
+pAkt_3+3*S6_1*pAkt_2+3*S6_2*pAkt_1+S6_3*pAkt_0)*reaction_5_k1+(-reaction_5_k2-
+reaction_6_k1)*pAkt_S6_3-pEGFR_Akt_3*reaction_3_k1+pAkt_3*reaction_7_k1+pAkt_4,
+(-S6_0*pAkt_3-3*S6_1*pAkt_2-3*S6_2*pAkt_1-S6_3*pAkt_0)*reaction_5_k1+(
+reaction_5_k2+reaction_6_k1)*pAkt_S6_3+pAkt_S6_4, (S6_0*pAkt_2+2*S6_1*pAkt_1+
+S6_2*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_2-reaction_8_k1*pS6_2+S6_3, -
+a3*pS6_3-1320009719421570965129371761981848131282443976584759449918205685055178\
+2455604393130474921031967032283672596245452772746436772651457973833874460979538\
+0371615649013591114532830723821576865786655583581147143129582418215145588034362\
+3215161302766096, pS6_3*reaction_8_k1-pAkt_S6_3*reaction_6_k1+pS6_4, (-pEGFR_4-
+pEGFR_Akt_4)*a1+239448935131899873912300966279483512979536600108911575963745209\
+2583238295422743607518180260536892151350156190069447172862360446312552119200245\
+1825730669470971165487281166867467773091877456999666065537771544207448868657513\
+2505886319379842509705693894086891563835530417569980217036267726318122363615796\
+2763743495000, (Akt_0*pEGFR_4+4*Akt_1*pEGFR_3+6*Akt_2*pEGFR_2+4*Akt_3*pEGFR_1+
+Akt_4*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*pEGFR_Akt_4+pEGFR_4
+*reaction_4_k1-EGF_EGFR_4*reaction_9_k1+pEGFR_5, (-Akt_0*pEGFR_4-4*Akt_1*
+pEGFR_3-6*Akt_2*pEGFR_2-4*Akt_3*pEGFR_1-Akt_4*pEGFR_0)*reaction_2_k1+(
+reaction_2_k2+reaction_3_k1)*pEGFR_Akt_4+pEGFR_Akt_5, (Akt_0*pEGFR_3+3*Akt_1*
+pEGFR_2+3*Akt_2*pEGFR_1+Akt_3*pEGFR_0)*reaction_2_k1-reaction_2_k2*pEGFR_Akt_3-
+pAkt_3*reaction_7_k1+Akt_4, (-reaction_1_k1+reaction_1_k2+reaction_9_k1)*
+EGF_EGFR_3+EGF_EGFR_4, (-pAkt_4-pAkt_S6_4)*a2+694008143001616357302687653622425\
+7862816813152083324310683720535535480850122387538676059950210301402451650115267\
+8880552379900220355779071868765429313993271097672358696912069348040658983899176\
+9822539301754220944522015101153973159303291425110667682386396280900242653261398\
+2421886971777430650694101882773830047053718, (S6_0*pAkt_4+4*S6_1*pAkt_3+6*S6_2*
+pAkt_2+4*S6_3*pAkt_1+S6_4*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*
+pAkt_S6_4+pAkt_4*reaction_7_k1-pEGFR_Akt_4*reaction_3_k1+pAkt_5, (-S6_0*pAkt_4-\
+4*S6_1*pAkt_3-6*S6_2*pAkt_2-4*S6_3*pAkt_1-S6_4*pAkt_0)*reaction_5_k1+(
+reaction_5_k2+reaction_6_k1)*pAkt_S6_4+pAkt_S6_5, (S6_0*pAkt_3+3*S6_1*pAkt_2+3*
+S6_2*pAkt_1+S6_3*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_3-reaction_8_k1*
+pS6_3+S6_4, -a3*pS6_4+752484663486329106681117390084692386579410796377011547398\
+1823916535035247632445261126792217693569745961164195806423804303180673104209236\
+5518548902851829339317457631573158154513128294665471292248204567740262528690557\
+5968207773752445303498044937104473264157372915910949916263730421701959726633111\
+3605698626138839728, pS6_4*reaction_8_k1-pAkt_S6_4*reaction_6_k1+pS6_5, (-
+pEGFR_5-pEGFR_Akt_5)*a1-1437987592084892328235503543125924637672176559583026164\
+4458461064691917122758026144975155197768402870857339201696301379321377003369110\
+0181859028202142312068413288038751523786739720409762194549638501508803215983909\
+6007067092022371653315137835453740485942859401710683033663390438912066220472946\
+2971009966975314987697718746310375717808002156753786276040325355561273208335624\
+642712199000, (Akt_0*pEGFR_5+5*Akt_1*pEGFR_4+10*Akt_2*pEGFR_3+10*Akt_3*pEGFR_2+
+5*Akt_4*pEGFR_1+Akt_5*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-reaction_3_k1)*
+pEGFR_Akt_5+pEGFR_5*reaction_4_k1-EGF_EGFR_5*reaction_9_k1+pEGFR_6, (-Akt_0*
+pEGFR_5-5*Akt_1*pEGFR_4-10*Akt_2*pEGFR_3-10*Akt_3*pEGFR_2-5*Akt_4*pEGFR_1-Akt_5
+*pEGFR_0)*reaction_2_k1+(reaction_2_k2+reaction_3_k1)*pEGFR_Akt_5+pEGFR_Akt_6,
+(Akt_0*pEGFR_4+4*Akt_1*pEGFR_3+6*Akt_2*pEGFR_2+4*Akt_3*pEGFR_1+Akt_4*pEGFR_0)*
+reaction_2_k1-reaction_2_k2*pEGFR_Akt_4-pAkt_4*reaction_7_k1+Akt_5, (-
+reaction_1_k1+reaction_1_k2+reaction_9_k1)*EGF_EGFR_4+EGF_EGFR_5, (-pAkt_5-
+pAkt_S6_5)*a2-47673626741997605229248544150674673028214504843264480423019614713\
+5422189382604172277474187314291024856627242510330902301537142039696516573285260\
+2852931491865652176319562654502438659805565830602964484501599233000797149519802\
+8904726891809687553559599641346798188371384637365247728077766045934683832484665\
+3351024781000946801582920021186908155565948750159848086779960258423946759952519\
+18, (S6_0*pAkt_5+5*S6_1*pAkt_4+10*S6_2*pAkt_3+10*S6_3*pAkt_2+5*S6_4*pAkt_1+S6_5
+*pAkt_0)*reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_5+pAkt_5*
+reaction_7_k1-pEGFR_Akt_5*reaction_3_k1+pAkt_6, (-S6_0*pAkt_5-5*S6_1*pAkt_4-10*
+S6_2*pAkt_3-10*S6_3*pAkt_2-5*S6_4*pAkt_1-S6_5*pAkt_0)*reaction_5_k1+(
+reaction_5_k2+reaction_6_k1)*pAkt_S6_5+pAkt_S6_6, (S6_0*pAkt_4+4*S6_1*pAkt_3+6*
+S6_2*pAkt_2+4*S6_3*pAkt_1+S6_4*pAkt_0)*reaction_5_k1-reaction_5_k2*pAkt_S6_4-
+reaction_8_k1*pS6_4+S6_5, -a3*pS6_5-5719484837333352706571421090120779836021441\
+4912217833331590436480311203746307700343045173626214678059122159391840087179561\
+9824124889624958574169851790217573431912667464754959949414571579303666426748739\
+8100815778167680115159289020677935096839787303930702320107692989950632411731401\
+0745220634988245177053672347873159673414751982064979441455160723899568716209189\
+610279837570309168276496, pS6_5*reaction_8_k1-pAkt_S6_5*reaction_6_k1+pS6_6, (-
+pEGFR_6-pEGFR_Akt_6)*a1+1079463190746427911480252036319362252052531719489365172\
+6258367687307260991827625772013050597774379591639463909327779912715161291206707\
+9997628406160137152541011578220128309165275896041413366802045599020859483337736\
+6143071689812421743040141254777054230222359078267692906379715613991648627022811\
+2538616439438446037294510802796624881373200247279992123631154418875185884767691\
+9001124591221553195848071268417049125573564671923857431026310167465704265089779\
+000, (Akt_0*pEGFR_6+6*Akt_1*pEGFR_5+15*Akt_2*pEGFR_4+20*Akt_3*pEGFR_3+15*Akt_4*
+pEGFR_2+6*Akt_5*pEGFR_1+Akt_6*pEGFR_0)*reaction_2_k1+(-reaction_2_k2-
+reaction_3_k1)*pEGFR_Akt_6+pEGFR_6*reaction_4_k1-EGF_EGFR_6*reaction_9_k1+
+pEGFR_7, (-Akt_0*pEGFR_6-6*Akt_1*pEGFR_5-15*Akt_2*pEGFR_4-20*Akt_3*pEGFR_3-15*
+Akt_4*pEGFR_2-6*Akt_5*pEGFR_1-Akt_6*pEGFR_0)*reaction_2_k1+(reaction_2_k2+
+reaction_3_k1)*pEGFR_Akt_6+pEGFR_Akt_7, (Akt_0*pEGFR_5+5*Akt_1*pEGFR_4+10*Akt_2
+*pEGFR_3+10*Akt_3*pEGFR_2+5*Akt_4*pEGFR_1+Akt_5*pEGFR_0)*reaction_2_k1-
+reaction_2_k2*pEGFR_Akt_5-pAkt_5*reaction_7_k1+Akt_6, (-reaction_1_k1+
+reaction_1_k2+reaction_9_k1)*EGF_EGFR_5+EGF_EGFR_6, (-pAkt_6-pAkt_S6_6)*a2+4148\
+3889940500588216891270389692231568837344331232305331884507995997202276970679895\
+0340689487073889672643600409579303171340479350844319398899897770563407990894058\
+0871683056783685333103758608409579387972200676734969308535611939394938364580160\
+3379587661581422934083989881679605142580059916681238641931254215634898883716724\
+1449924493515795844881691422231729958584648549485834434137945683197108503034579\
+735592765694231041457878166809045709565822019113216214, (S6_0*pAkt_6+6*S6_1*
+pAkt_5+15*S6_2*pAkt_4+20*S6_3*pAkt_3+15*S6_4*pAkt_2+6*S6_5*pAkt_1+S6_6*pAkt_0)*
+reaction_5_k1+(-reaction_5_k2-reaction_6_k1)*pAkt_S6_6+pAkt_6*reaction_7_k1-
+pEGFR_Akt_6*reaction_3_k1+pAkt_7, (-S6_0*pAkt_6-6*S6_1*pAkt_5-15*S6_2*pAkt_4-20
+*S6_3*pAkt_3-15*S6_4*pAkt_2-6*S6_5*pAkt_1-S6_6*pAkt_0)*reaction_5_k1+(
+reaction_5_k2+reaction_6_k1)*pAkt_S6_6+pAkt_S6_7, (S6_0*pAkt_5+5*S6_1*pAkt_4+10
+*S6_2*pAkt_3+10*S6_3*pAkt_2+5*S6_4*pAkt_1+S6_5*pAkt_0)*reaction_5_k1-
+reaction_5_k2*pAkt_S6_5-reaction_8_k1*pS6_5+S6_6, (-pEGFR_7-pEGFR_Akt_7)*a1-972\
+3929126719613694892044352004513987586454886483853545299011369673469878088006412\
+7261305358327110235781280400991473962444995477366887237779901497584431660335890\
+7154097211468600231060691939076619891138499093885657656514403556189214351341936\
+4909194825160349943134350553091940270674803807888588321958409898904870985938004\
+1419561058171549385040090644016598153843463160207584830558945216734186089532540\
+8371876915648335913364204113827310701450087912491217997224004198999527915078901\
+788619814047785845736701868274765650840391000, (-pAkt_7-pAkt_S6_7)*a2-438637787\
+8021090079164833544641471025261389001094524446804875108607527096821348476736507\
+6366705203809610674722893454081621903440752214676821763880195378622628616851268\
+8762595337996724929510008021279648944878437860118494422073977158731370870781026\
+1722790569794343198882796214501450343442667255291033852884917376220538218356736\
+5296230217500448368726037395588104907166173875099707528749313755606773892569044\
+4944971799788542641024487633331345075089972346571618440298135619279637043906492\
+8910806815346212999558858709553960233838, -a3*pS6_6+543408198185100867333978726\
+5568771257542142272351542325350786512266515627150733754348469528158413253164872\
+8901145572142807582304092575234913110032591138782638901717454394966056629949347\
+7778188355080857631106598230543677799817713677213216004112926754226589988039704\
+5092521628405186956011394661581650314809340466409921000219126915397029461689297\
+7903232592921097307306190731865362177010359011019757909883151981535025948652836\
+6854812778068081959778431676720, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	4.884,	5.525,	715966696
+SubsByDepth Usage (real, cpu, memory):	5.551,	6.316,	715453296
 
-memory used=10148.9MB, alloc=211.8MB, time=99.71
+memory used=9202.1MB, alloc=211.8MB, time=92.05

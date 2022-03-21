@@ -332,11 +332,11 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, trbasis_
     perm := sort([entries(global_table, 'nolist')], 'output=permutation'):
     alg_indep := lhs([entries(global_table, 'pairs')][perm[-1]]):
     printf("%s %a %s\n", `Picked the best choice`, alg_indep, `based on heuristic:`, rhs([entries(global_table, 'pairs')][perm[-1]])):
-    alg_indep_derivs := {op(alg_indep)} intersect derivs:
-    alg_indep_params := ({op(alg_indep)} intersect {op(non_id)}) minus {op(alg_indep_derivs)}:
-    faux_outputs := []:
-    faux_odes := []:
-    idx := 1:
+    # alg_indep_derivs := {op(alg_indep)} intersect derivs:
+    # alg_indep_params := ({op(alg_indep)} intersect {op(non_id)}) minus {op(alg_indep_derivs)}:
+    # faux_outputs := []:
+    # faux_odes := []:
+    # idx := 1:
     # for each in alg_indep_params do
     #   if not (each in x_vars) then
     #     sigma_new := subs({each=each(t)}, sigma_new):
@@ -348,10 +348,10 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, trbasis_
     #   idx := idx+1:
     # end do:
     # sigma_new := [op(faux_odes), op(sigma_new), op(faux_outputs)]:
-    if infolevel>0 then
-      printf("%s %a\n", `Algebraically independent parameters among nonidentifiable:`, map(x-> ParamToOuter(x, all_vars), alg_indep_params)):
-      printf("%s %a\n", `Algebraically independent parameters among derivatives:`, map(x-> ParamToOuter(x, all_vars), alg_indep_derivs)):
-    end if:
+    # if infolevel>0 then
+    #   printf("%s %a\n", `Algebraically independent parameters among nonidentifiable:`, map(x-> ParamToOuter(x, all_vars), alg_indep_params)):
+    #   printf("%s %a\n", `Algebraically independent parameters among derivatives:`, map(x-> ParamToOuter(x, all_vars), alg_indep_derivs)):
+    # end if:
 
     # if infolevel>1 then
     #   printf("\t%s %a\n", `Adding ODEs:`, faux_odes):
@@ -360,37 +360,38 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, trbasis_
     # end if:
 
     # X_eq, Y_eq, Et, theta_l, x_vars, y_vars, mu, beta, Q, d0 := PreprocessODE(sigma_new, GetParameters(sigma_new)):
-    alg_indep
-    if trbasis_sub_method=1 then
-      #add Y_eqs for each alg_indep
-      faux_equations := [seq(parse(cat("y_faux", idx, "_0"))=alg_indep[idx], idx in 1..numelems(alg_indep))]:
-      y_faux := [seq(parse(cat("y_faux", idx, "_")), idx=1..numelems(alg_indep_derivs))]:
-      Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:
-      Y_eq := [op(Y_eq), op(faux_equations)]:
-    elif trbasis_sub_method = 2 then
-      # directly sample random values for each thing in alg_indep
-      transc_sample_ := SamplePoint(D2, x_vars, [op(y_vars)], u_vars, mu, X_eq, Y_eq, Q):
-    end if:
-    if numelems(alg_indep_derivs)>0 then
-      # if infolevel>1 then
-      #   printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
-      # end if:
-      faux_equations := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_0"))=alg_indep_derivs[idx], idx in 1..numelems(alg_indep_derivs))]:
-      y_faux := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_")), idx=1..numelems(alg_indep_derivs))]:
-      Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:
-      Y_eq := [op(Y_eq), op(faux_equations)]:
-      if infolevel>1 then
-        printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
-        printf("\t%s %a\n", `New system:`, Et):
-        printf("\t%s %a\n", `New system:`, Y_eq):
-      end if:
-    else
-      if numelems(alg_indep)=0 then
-        printf("%s\n", `No algebraically independent parameters found.`);
-      else
-        printf("%s\n", `Transcendence basis substitution turned off.`);
-      end if:
-    end if:
+    # alg_indep
+    # if trbasis_sub_method=1 then
+    #   #add Y_eqs for each alg_indep
+    #   faux_equations := [seq(parse(cat("y_faux", idx, "_0"))=alg_indep[idx], idx in 1..numelems(alg_indep))]:
+    #   y_faux := [seq(parse(cat("y_faux", idx, "_")), idx=1..numelems(alg_indep_derivs))]:
+    #   Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:
+    #   Y_eq := [op(Y_eq), op(faux_equations)]:
+    # elif trbasis_sub_method = 2 then
+    #   # directly sample random values for each thing in alg_indep
+    #   transc_sample_ := SamplePoint(D2, x_vars, [op(y_vars)], u_vars, mu, X_eq, Y_eq, Q):
+    # end if:
+    # if numelems(alg_indep_derivs)>0 then
+    #   # if infolevel>1 then
+    #   #   printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
+    #   # end if:
+    #   faux_equations := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_0"))=alg_indep_derivs[idx], idx in 1..numelems(alg_indep_derivs))]:
+    #   y_faux := [seq(parse(cat("y_faux", idx+numelems(alg_indep_params), "_")), idx=1..numelems(alg_indep_derivs))]:
+    #   Et := [op(Et), op(map(x->lhs(x)-rhs(x), faux_equations))]:
+    #   Y_eq := [op(Y_eq), op(faux_equations)]:
+    #   if infolevel>1 then
+    #     printf("\t%s %a\n", `Adding new y-equations:`, faux_equations):
+    #     printf("\t%s %a\n", `New system:`, Et):
+    #     printf("\t%s %a\n", `New system:`, Y_eq):
+    #   end if:
+    # else
+    #   if numelems(alg_indep)=0 then
+    #     printf("%s\n", `No algebraically independent parameters found.`);
+    #   else
+    #     printf("%s\n", `Transcendence basis substitution turned off.`);
+    #   end if:
+    # end if:
+
   end if:
     #----------------------------------------------
     # 3. Randomize.
@@ -402,20 +403,27 @@ GetPolySystem := proc(system_ODEs, params_to_assess, {sub_transc:=true, trbasis_
 
     # (a) ------------
     deg_variety := foldl(`*`, op( map(e -> degree(e), Et) )):
-    D2 := floor( 8 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ) : # if replace 8 with 6 => both D2 and D2(sigma_e) are equal
+    if sub_transc then
+      D2 := floor( 8 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ) : # if replace 8 with 6 => both D2 and D2(sigma_e) are equal
+    else
+      D2 := floor( 6 * nops(theta_l) * deg_variety * (1 + 2 * d0 * max(op(beta))) / (1 - p_local) ) :
+    end if:
     if infolevel > 1 then
       printf("%s %a\n", `Bound D_2 for assessing global identifiability: `, D2):
     end if:
     # (b, c) ---------
-    sample := SamplePoint(D2, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q):
+    sample := SamplePoint(D2, x_vars, y_vars, u_vars, mu, X_eq, Y_eq, Q): # [op(y_vars), op(alg_indep)],
     y_hat := sample[1]:
     u_hat := sample[2]:
-    theta_hat := sample[3]:  
+    theta_hat := sample[3]:
+    roll := rand(0 .. D2);
+    alg_indep_hat := map(p->p=roll(), alg_indep):
     if infolevel > 1 then
       printf("%s %a\n", `Random sample for the outputs and inputs is generated from `, theta_hat):
+      printf("%s %a\n", `Random sample for the algebraically independent parameters `, alg_indep_hat):
     end if:
     # (d) ------------
-    Et_hat := map(e -> subs([op(y_hat), op(u_hat)], e), Et):
+    Et_hat := map(e -> subs([op(y_hat), op(u_hat), op(alg_indep_hat)], e), Et):
 
     Et_x_vars := {}:
     for poly in Et_hat do
