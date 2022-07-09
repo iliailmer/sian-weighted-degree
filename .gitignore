@@ -5,3 +5,9 @@
 visualizations/*
 IdentifiabilityODE.mpl
 .ipynb_checkpoints
+*.json
+helens-models
+gravity.mpl
+julia-examples.mpl
+*.mw
+simple.mpl
