@@ -14,7 +14,7 @@ sigma := [
   y1(t) = x4(t),
   y2(t) = x5(t)
 ]:
-:
+
 
 # substitutions, system_vars[1], system_vars[2], counting_table_const := GetSubsTableFreq(sigma, exponent=2):
 # substitutions, system_vars[1], system_vars[2] := GetSubsTable(sigma, exponent=2,  min_level=1, strict=true):

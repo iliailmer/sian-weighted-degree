@@ -346,7 +346,7 @@ Prep Real Elapsed Time (sub_transc=true):	 78.193
 memory used=8.29GiB, alloc change=168.00MiB, cpu time=85.30s, real time=78.24s, gc time=12.98s
 
 
-GetPolySystem Usage (real, cpu, memory):	78.237,	85.299,	8899675368
+GetPolySystem Usage (real, cpu, memory):	78.237 	85.299 	8899675368
 
 States for substitution:	[a1 = 0, reaction_1_k1 = 2, pAkt_S6_ = 0, reaction_5_k1 = 2, reaction_1_k2 = 2, reaction_8_k1 = 1, a2 = 0, S6_ = 2, pEGFR_ = 0, reaction_2_k2 = 2, pAkt_ = 0, a3 = 0, reaction_7_k1 = 1, Akt_ = 2, pEGFR_Akt_ = 0, reaction_5_k2 = 2, reaction_4_k1 = 1, reaction_9_k1 = 1, pS6_ = 0, EGF_EGFR_ = 1, reaction_6_k1 = 1, reaction_3_k1 = 1, reaction_2_k1 = 2]
 NonID parameters:	[Akt_0, EGFR_0, S6_0, a1, a2, a3, pAkt_0, pEGFR_0, pS6_0, EGFR_turnover, EGF_EGFR_0, pAkt_S6_0, pEGFR_Akt_0, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
@@ -757,7 +757,7 @@ S6_6, (-pEGFR_7-pEGFR_Akt_7)*a1-80555934775647176427199447871857543016815851841\
 844916922900596933045911435794119481317081585574658459924355075397974256168, 
 z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	78.321,	85.383,	8907946672
+SubsByDepth Usage (real, cpu, memory):	78.321 	85.383 	8907946672
 
 
 =======================================================
@@ -798,7 +798,7 @@ Prep Real Elapsed Time (sub_transc=false):	 5.462
 memory used=0.66GiB, alloc change=-3.52MiB, cpu time=6.23s, real time=5.46s, gc time=1.39s
 
 
-GetPolySystem Usage (real, cpu, memory):	5.464,	6.229,	707261584
+GetPolySystem Usage (real, cpu, memory):	5.464 	6.229 	707261584
 
 States for substitution:	[a1 = 0, reaction_1_k1 = 2, pAkt_S6_ = 0, reaction_5_k1 = 2, reaction_1_k2 = 2, reaction_8_k1 = 1, a2 = 0, S6_ = 2, pEGFR_ = 0, reaction_2_k2 = 2, pAkt_ = 0, a3 = 0, reaction_7_k1 = 1, Akt_ = 2, pEGFR_Akt_ = 0, reaction_5_k2 = 2, reaction_4_k1 = 1, reaction_9_k1 = 1, pS6_ = 0, EGF_EGFR_ = 1, reaction_6_k1 = 1, reaction_3_k1 = 1, reaction_2_k1 = 2]
 NonID parameters:	[Akt_0, EGFR_0, S6_0, a1, a2, a3, pAkt_0, pEGFR_0, pS6_0, EGFR_turnover, EGF_EGFR_0, pAkt_S6_0, pEGFR_Akt_0, reaction_1_k1, reaction_1_k2, reaction_2_k1, reaction_5_k1, reaction_9_k1]
@@ -1182,6 +1182,6 @@ reaction_5_k2*pAkt_S6_5-reaction_8_k1*pS6_5+S6_6, (-pEGFR_7-pEGFR_Akt_7)*a1-972\
 7903232592921097307306190731865362177010359011019757909883151981535025948652836\
 6854812778068081959778431676720, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	5.551,	6.316,	715453296
+SubsByDepth Usage (real, cpu, memory):	5.551 	6.316 	715453296
 
 memory used=9202.1MB, alloc=211.8MB, time=92.05

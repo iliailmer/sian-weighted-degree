@@ -127,14 +127,14 @@ Prep Real Elapsed Time (sub_transc=true):	 62.632
 memory used=7.62GiB, alloc change=171.47MiB, cpu time=66.64s, real time=62.67s, gc time=7.82s
 
 
-GetPolySystem Usage (real, cpu, memory):	62.670,	66.639,	8182210800
+GetPolySystem Usage (real, cpu, memory):	62.670 	66.639 	8182210800
 
 States for substitution:	[S01_ = 0, KS00_ = 1, gamma1110 = 1, alpha10 = 1, c0011 = 1, S00_ = 0, KS01_ = 1, c0010 = 1, S11_ = 0, a00 = 1, gamma0100 = 1, KS10_ = 1, b10 = 1, c0111 = 1, S10_ = 0, a01 = 1, FS01_ = 1, c1011 = 1, a10 = 1, FS10_ = 1, gamma1101 = 1, gamma1100 = 1, beta11 = 1, FS11_ = 1, b01 = 1, beta01 = 1, beta10 = 1, Ff_ = 0, c0001 = 1, alpha11 = 1, gamma1000 = 1, K_ = 1, alpha01 = 1, b00 = 1]
 NonID parameters:	[]
 Substitutions:	[S01_ = 1, KS00_ = 2, gamma1110 = 2, alpha10 = 2, c0011 = 2, S00_ = 1, KS01_ = 2, c0010 = 2, S11_ = 1, a00 = 2, gamma0100 = 2, KS10_ = 2, b10 = 2, c0111 = 2, S10_ = 1, a01 = 2, FS01_ = 2, c1011 = 2, a10 = 2, FS10_ = 2, gamma1101 = 2, gamma1100 = 2, beta11 = 2, FS11_ = 2, b01 = 2, beta01 = 2, beta10 = 2, Ff_ = 1, c0001 = 2, alpha11 = 2, gamma1000 = 2, K_ = 2, z_aux = 1, alpha01 = 2, b00 = 2]
 memory used=7.63GiB, alloc change=171.47MiB, cpu time=66.95s, real time=62.90s, gc time=7.98s
 
-SubsByDepth Usage (real, cpu, memory):	62.898,	66.951,	8196464552
+SubsByDepth Usage (real, cpu, memory):	62.898 	66.951 	8196464552
 
 
 =======================================================
@@ -185,13 +185,13 @@ Prep Real Elapsed Time (sub_transc=false):	 25.445
 memory used=3.89GiB, alloc change=20.00KiB, cpu time=28.02s, real time=25.45s, gc time=4.66s
 
 
-GetPolySystem Usage (real, cpu, memory):	25.447,	28.023,	4174976408
+GetPolySystem Usage (real, cpu, memory):	25.447 	28.023 	4174976408
 
 States for substitution:	[S01_ = 0, KS00_ = 1, gamma1110 = 1, alpha10 = 1, c0011 = 1, S00_ = 0, KS01_ = 1, c0010 = 1, S11_ = 0, a00 = 1, gamma0100 = 1, KS10_ = 1, b10 = 1, c0111 = 1, S10_ = 0, a01 = 1, FS01_ = 1, c1011 = 1, a10 = 1, FS10_ = 1, gamma1101 = 1, gamma1100 = 1, beta11 = 1, FS11_ = 1, b01 = 1, beta01 = 1, beta10 = 1, Ff_ = 0, c0001 = 1, alpha11 = 1, gamma1000 = 1, K_ = 1, alpha01 = 1, b00 = 1]
 NonID parameters:	[]
 Substitutions:	[S01_ = 1, KS00_ = 2, gamma1110 = 2, alpha10 = 2, c0011 = 2, S00_ = 1, KS01_ = 2, c0010 = 2, S11_ = 1, a00 = 2, gamma0100 = 2, KS10_ = 2, b10 = 2, c0111 = 2, S10_ = 1, a01 = 2, FS01_ = 2, c1011 = 2, a10 = 2, FS10_ = 2, gamma1101 = 2, gamma1100 = 2, beta11 = 2, FS11_ = 2, b01 = 2, beta01 = 2, beta10 = 2, Ff_ = 1, c0001 = 2, alpha11 = 2, gamma1000 = 2, K_ = 2, z_aux = 1, alpha01 = 2, b00 = 2]
 memory used=3.90GiB, alloc change=20.00KiB, cpu time=28.28s, real time=25.64s, gc time=4.77s
 
-SubsByDepth Usage (real, cpu, memory):	25.641,	28.276,	4189193384
+SubsByDepth Usage (real, cpu, memory):	25.641 	28.276 	4189193384
 
 memory used=11816.0MB, alloc=211.8MB, time=95.40

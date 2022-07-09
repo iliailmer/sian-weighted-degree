@@ -156,14 +156,14 @@ Prep Real Elapsed Time (sub_transc=true):	 22.272
 memory used=2.69GiB, alloc change=72.00MiB, cpu time=23.70s, real time=22.29s, gc time=3.06s
 
 
-GetPolySystem Usage (real, cpu, memory):	22.290,	23.703,	2885822416
+GetPolySystem Usage (real, cpu, memory):	22.290 	23.703 	2885822416
 
 States for substitution:	[dlt_ = 0, gamma_h_ = 0, gamma_i = 1, Phi_ = 0, (NULL) = 1, gamma_a = 2, a_ = 1, i_ = 0, eta = 1, n = 1, sgm = 1, e_ = 1, s_ = 0, alpha = 1]
 NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
 Substitutions:	[dlt_ = 1, gamma_h_ = 1, Phi_ = 1, gamma_a = 3, z_aux = 2, a_ = 2, i_ = 1, e_ = 2, s_ = 1]
 memory used=2.70GiB, alloc change=72.00MiB, cpu time=23.79s, real time=22.38s, gc time=3.06s
 
-SubsByDepth Usage (real, cpu, memory):	22.381,	23.794,	2894875024
+SubsByDepth Usage (real, cpu, memory):	22.381 	23.794 	2894875024
 
 
 =======================================================
@@ -214,13 +214,13 @@ Prep Real Elapsed Time (sub_transc=false):	 7.566
 memory used=0.93GiB, alloc change=0 bytes, cpu time=8.04s, real time=7.57s, gc time=1.05s
 
 
-GetPolySystem Usage (real, cpu, memory):	7.567,	8.041,	1001548800
+GetPolySystem Usage (real, cpu, memory):	7.567 	8.041 	1001548800
 
 States for substitution:	[Phi = 1, gamma_i = 1, (NULL) = 1, gamma_a = 2, a_ = 1, i_ = 0, eta = 1, n = 1, sgm = 1, e_ = 1, s_ = 0, alpha = 1]
 NonID parameters:	[Phi, d0_0, dlt, gamma_h, gamma_i, h_0, r_0]
 Substitutions:	[gamma_a = 3, z_aux = 2, a_ = 2, i_ = 1, e_ = 2, s_ = 1]
 memory used=0.94GiB, alloc change=0 bytes, cpu time=8.13s, real time=7.66s, gc time=1.05s
 
-SubsByDepth Usage (real, cpu, memory):	7.659,	8.133,	1009976120
+SubsByDepth Usage (real, cpu, memory):	7.659 	8.133 	1009976120
 
 memory used=3728.1MB, alloc=112.3MB, time=32.09

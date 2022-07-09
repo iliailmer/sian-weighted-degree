@@ -331,7 +331,7 @@ Prep Real Elapsed Time (sub_transc=true):	 110.965
 memory used=12.82GiB, alloc change=104.00MiB, cpu time=117.90s, real time=110.99s, gc time=13.55s
 
 
-GetPolySystem Usage (real, cpu, memory):	110.993,	117.899,	13763048312
+GetPolySystem Usage (real, cpu, memory):	110.993 	117.899 	13763048312
 
 States for substitution:	[theta_i = 3, q = 2, mu_i = 3, s_ = 2, e_ = 1, De_ = 0, b = 2, nu = 3, Di_ = 2, phi_i = 3, g = 3, mu_d = 3, sgm = 2, n = 2, mu0 = 1, i_ = 2, phi_e = 1, sgm_d = 1, theta_e = 1, g_d = 3]
 NonID parameters:	[Di_0, b, e_0, f_0, g, g_d, i_0, mu_d, mu_i, n, nu, phi_e, phi_i, q, r_0, s_0, sgm, theta_e, theta_i]
@@ -375,7 +375,7 @@ Prep Real Elapsed Time (sub_transc=false):	 18.923
 memory used=3.01GiB, alloc change=0 bytes, cpu time=20.46s, real time=18.92s, gc time=3.03s
 
 
-GetPolySystem Usage (real, cpu, memory):	18.924,	20.456,	3227786696
+GetPolySystem Usage (real, cpu, memory):	18.924 	20.456 	3227786696
 
 States for substitution:	[theta_i = 3, q = 2, mu_i = 3, s_ = 2, e_ = 1, De_ = 0, b = 2, nu = 3, Di_ = 2, phi_i = 3, g = 3, mu_d = 3, sgm = 2, n = 2, mu0 = 1, i_ = 2, phi_e = 1, sgm_d = 1, theta_e = 1, g_d = 3]
 NonID parameters:	[Di_0, b, e_0, f_0, g, g_d, i_0, mu_d, mu_i, n, nu, phi_e, phi_i, q, r_0, s_0, sgm, theta_e, theta_i]

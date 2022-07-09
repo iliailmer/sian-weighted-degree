@@ -124,7 +124,7 @@ Prep Real Elapsed Time (sub_transc=true):	 .513
 memory used=55.36MiB, alloc change=39.01MiB, cpu time=535.00ms, real time=535.00ms, gc time=47.57ms
 
 
-GetPolySystem Usage (real, cpu, memory):	.535,	.535,	58045512
+GetPolySystem Usage (real, cpu, memory):	.535 	.535 	58045512
 
 States for substitution:	[xA_ = 0, k2 = 1, xC_ = 0, xB_ = 0, eC_ = 0, eA_ = 0, k1 = 1, eB = 0]
 NonID parameters:	[]
@@ -157,7 +157,7 @@ xC_3, -eA_0*xA_2-2*eA_1*xA_1-eA_2*xA_0-eB*xB_2-eC_0*xC_2-2*eC_1*xC_1-eC_2*xC_0-\
 11916592832563448442053326376984380955029250, -eA_1, -eA_2, -eA_3, -eC_1, -eC_2
 , -eC_3, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	.554,	.554,	59717400
+SubsByDepth Usage (real, cpu, memory):	.554 	.554 	59717400
 
 
 =======================================================
@@ -198,7 +198,7 @@ Prep Real Elapsed Time (sub_transc=false):	 .339
 memory used=34.77MiB, alloc change=37.00MiB, cpu time=383.00ms, real time=340.00ms, gc time=106.12ms
 
 
-GetPolySystem Usage (real, cpu, memory):	.340,	.383,	36461456
+GetPolySystem Usage (real, cpu, memory):	.340 	.383 	36461456
 
 States for substitution:	[xA_ = 0, k2 = 1, xC_ = 0, xB_ = 0, eC_ = 0, eA_ = 0, k1 = 1, eB = 0]
 NonID parameters:	[]
@@ -231,6 +231,6 @@ eA_2*xA_1-eA_3*xA_0-eB*xB_3-eC_0*xC_3-3*eC_1*xC_2-3*eC_2*xC_1-eC_3*xC_0-\
 10398327474158994005734538456541567591719616, -eA_1, -eA_2, -eA_3, -eC_1, -eC_2
 , -eC_3, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	.360,	.403,	37978144
+SubsByDepth Usage (real, cpu, memory):	.360 	.403 	37978144
 
 memory used=98.0MB, alloc=116.3MB, time=1.18

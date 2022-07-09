@@ -153,14 +153,14 @@ Prep Real Elapsed Time (sub_transc=true):	 189.023
 memory used=25.48GiB, alloc change=144.33MiB, cpu time=3.38m, real time=3.15m, gc time=25.12s
 
 
-GetPolySystem Usage (real, cpu, memory):	189.054,	202.864,	27361361688
+GetPolySystem Usage (real, cpu, memory):	189.054 	202.864 	27361361688
 
 States for substitution:	[x12_ = 0, k3 = 1, x8_ = 1, k2 = 1, i_1a = 1, x4_ = 1, x3_ = 0, x13_ = 0, c_2a = 1, x11_ = 1, t2 = 1, x9_ = 0, x7_ = 0, c_3a = 1, i1 = 1, k1 = 1, x14_ = 1, k_deg = 1, x10_ = 0, e_2a = 1, x6_ = 1, x5_ = 1, k_prod = 1, x2_ = 0, x1_ = 0, c_4a = 1, (NULL) = 1, t1 = 1, c5 = 2]
 NonID parameters:	[x15_0]
 Substitutions:	[x12_ = 1, x8_ = 2, x4_ = 2, x3_ = 1, x13_ = 1, x11_ = 2, x9_ = 1, x7_ = 1, x14_ = 2, x10_ = 1, x6_ = 2, x5_ = 2, x2_ = 1, x1_ = 1, z_aux = 2, c5 = 3]
 memory used=25.51GiB, alloc change=144.33MiB, cpu time=3.39m, real time=3.16m, gc time=25.12s
 
-SubsByDepth Usage (real, cpu, memory):	189.416,	203.225,	27392230064
+SubsByDepth Usage (real, cpu, memory):	189.416 	203.225 	27392230064
 
 
 =======================================================
@@ -211,13 +211,13 @@ Prep Real Elapsed Time (sub_transc=false):	 86.303
 memory used=12.33GiB, alloc change=32.73MiB, cpu time=92.23s, real time=86.31s, gc time=10.92s
 
 
-GetPolySystem Usage (real, cpu, memory):	86.306,	92.231,	13242740968
+GetPolySystem Usage (real, cpu, memory):	86.306 	92.231 	13242740968
 
 States for substitution:	[x12_ = 0, k3 = 1, x8_ = 1, k2 = 1, i_1a = 1, x4_ = 1, x3_ = 0, x13_ = 0, c_2a = 1, x11_ = 1, t2 = 1, x9_ = 0, x7_ = 0, c_3a = 1, i1 = 1, k1 = 1, x14_ = 1, k_deg = 1, x10_ = 0, e_2a = 1, x6_ = 1, x5_ = 1, k_prod = 1, x2_ = 0, x1_ = 0, c_4a = 1, (NULL) = 1, t1 = 1, c5 = 2]
 NonID parameters:	[x15_0]
 Substitutions:	[x12_ = 1, x8_ = 2, x4_ = 2, x3_ = 1, x13_ = 1, x11_ = 2, x9_ = 1, x7_ = 1, x14_ = 2, x10_ = 1, x6_ = 2, x5_ = 2, x2_ = 1, x1_ = 1, z_aux = 2, c5 = 3]
 memory used=12.36GiB, alloc change=32.73MiB, cpu time=92.57s, real time=86.65s, gc time=10.92s
 
-SubsByDepth Usage (real, cpu, memory):	86.649,	92.574,	13273128248
+SubsByDepth Usage (real, cpu, memory):	86.649 	92.574 	13273128248
 
 memory used=38785.6MB, alloc=217.4MB, time=295.98

@@ -331,7 +331,7 @@ Prep Real Elapsed Time (sub_transc=true):	 97.129
 memory used=9.74GiB, alloc change=127.10MiB, cpu time=101.46s, real time=97.15s, gc time=9.02s
 
 
-GetPolySystem Usage (real, cpu, memory):	97.150,	101.462,	10455228536
+GetPolySystem Usage (real, cpu, memory):	97.150 	101.462 	10455228536
 
 States for substitution:	[S_ = 2, mu2 = 1, eps_j = 2, In_ = 1, A_ = 1, d6 = 1, N_ = 3, d2 = 2, Jj_ = 0, eps_q = 2, eps_a = 2, g2 = 1, lam = 2, mu1 = 1, b = 3, g1 = 2, d4 = 2, k1 = 2, d1 = 3, k2 = 1, Q_ = 0, d5 = 1]
 NonID parameters:	[A_0, In_0, N_0, R_0, S_0, b, d2, d3, d4, d6, eps_a, eps_j, eps_q, g1, g2, k1, lam, mu1, mu2]
@@ -847,7 +847,7 @@ S_7*In_1+1460135659634167270268066076*S_8)*lam-b*N_8+S_8*d1+S_9, N_8, -Q_11-344\
 5149320043929216155676338322600540077140353801718561745289438485458493730955868\
 464092890473876121549120484166, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	97.684,	101.996,	10487411960
+SubsByDepth Usage (real, cpu, memory):	97.684 	101.996 	10487411960
 
 
 =======================================================
@@ -888,7 +888,7 @@ Prep Real Elapsed Time (sub_transc=false):	 7.442
 memory used=0.79GiB, alloc change=16.00MiB, cpu time=8.28s, real time=7.44s, gc time=1.63s
 
 
-GetPolySystem Usage (real, cpu, memory):	7.444,	8.279,	851022920
+GetPolySystem Usage (real, cpu, memory):	7.444 	8.279 	851022920
 
 States for substitution:	[S_ = 2, mu2 = 1, eps_j = 2, In_ = 1, A_ = 1, d6 = 1, N_ = 3, d2 = 2, Jj_ = 0, eps_q = 2, eps_a = 2, g2 = 1, lam = 2, mu1 = 1, b = 3, g1 = 2, d4 = 2, k1 = 2, d1 = 3, k2 = 1, Q_ = 0, d5 = 1]
 NonID parameters:	[A_0, In_0, N_0, R_0, S_0, b, d2, d3, d4, d6, eps_a, eps_j, eps_q, g1, g2, k1, lam, mu1, mu2]
@@ -1354,6 +1354,6 @@ Jj_9+27235106074908685331181177782788121468293462075435856090063423831763961260\
 8939264379853408284084380405952789482872082702781695349398283362493648161360840\
 10197946965914630502780597567700176130180733567091637943303410, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	7.870,	8.796,	884153128
+SubsByDepth Usage (real, cpu, memory):	7.870 	8.796 	884153128
 
 memory used=10853.7MB, alloc=183.4MB, time=111.06

@@ -208,7 +208,7 @@ Prep Real Elapsed Time (sub_transc=true):	 223.070
 memory used=22.73GiB, alloc change=168.45MiB, cpu time=4.07m, real time=3.72m, gc time=36.85s
 
 
-GetPolySystem Usage (real, cpu, memory):	223.117,	244.054,	24410746392
+GetPolySystem Usage (real, cpu, memory):	223.117 	244.054 	24410746392
 
 States for substitution:	[T_ = 0, Is_ = 1, Ninv = 0, Rd_ = 0, alphaEIs = 2, H_ = 0, alphaIaIs = 2, Ia_ = 1, alphaTD = 1, alphaHT = 1, S_ = 3, betaIs = 3, alphaIsH = 1, xi = 1, alphaHRd = 1, alphaIsT = 1, alphaTRd = 1, alphaIsRu = 2, betaT = 3, D_ = 0, alphaIsD = 1, betaIa = 3, alphaIaRu = 2, E_ = 2, betaH = 3, alphaEIa = 2]
 NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
@@ -841,7 +841,7 @@ betaT)*Ninv+S_8, -D_11+30444670834912421332682793586640490818345651080388979706\
 6648424475214711929421596450524063845985885462826243475143555089741266, z_aux-1
 ]
 
-SubsByDepth Usage (real, cpu, memory):	223.508,	244.602,	24436209616
+SubsByDepth Usage (real, cpu, memory):	223.508 	244.602 	24436209616
 
 
 =======================================================
@@ -882,7 +882,7 @@ Prep Real Elapsed Time (sub_transc=false):	 11.785
 memory used=1.59GiB, alloc change=-4.00MiB, cpu time=14.01s, real time=11.79s, gc time=4.17s
 
 
-GetPolySystem Usage (real, cpu, memory):	11.789,	14.011,	1711963792
+GetPolySystem Usage (real, cpu, memory):	11.789 	14.011 	1711963792
 
 States for substitution:	[T_ = 0, Is_ = 1, Ninv = 0, Rd_ = 0, alphaEIs = 2, H_ = 0, alphaIaIs = 2, Ia_ = 1, alphaTD = 1, alphaHT = 1, S_ = 3, betaIs = 3, alphaIsH = 1, xi = 1, alphaHRd = 1, alphaIsT = 1, alphaTRd = 1, alphaIsRu = 2, betaT = 3, D_ = 0, alphaIsD = 1, betaIa = 3, alphaIaRu = 2, E_ = 2, betaH = 3, alphaEIa = 2]
 NonID parameters:	[E_0, Ia_0, Is_0, S_0, betaIa, betaIs, xi, alphaEIa, alphaEIs, alphaIaIs, alphaIaRu, alphaIsD, alphaIsH, alphaIsRu, alphaIsT]
@@ -1467,6 +1467,6 @@ H_7+632965740578440827488101906555579855666490809038326189942609494758470867058\
 8588576674100449819626831088054195451870708774346315087959414702677565370568713\
 3335571446656906692596197714989568550355307929522238, z_aux-1]
 
-SubsByDepth Usage (real, cpu, memory):	12.030,	14.252,	1736391432
+SubsByDepth Usage (real, cpu, memory):	12.030 	14.252 	1736391432
 
 memory used=24987.7MB, alloc=211.8MB, time=259.24
