@@ -158,10 +158,10 @@ WriteScripts := proc(et_hat, vars, script_name, all_subs, PATH)
   printf("# %a", all_subs);
   writeto(terminal);
 
-  writeto(cat("../julia_scripts/", PATH, "/", script_name, "_zero_char.jl"));
-  printf("using Oscar\nR, vars = PolynomialRing(QQ,\"%s\")\n", convert(vars, string)[2..-2]);
-  printf("I = ideal(R, [%s])\n", convert(et_hat, string)[2..-2]);
-  printf("gb = msolve(I)\n");
-  printf("# %a", all_subs);
-  writeto(terminal);
+  # writeto(cat("../julia_scripts/", PATH, "/", script_name, "_zero_char.jl"));
+  # printf("using Oscar\nR, vars = PolynomialRing(QQ,\"%s\")\n", convert(vars, string)[2..-2]);
+  # printf("I = ideal(R, [%s])\n", convert(et_hat, string)[2..-2]);
+  # printf("gb = msolve(I)\n");
+  # printf("# %a", all_subs);
+  # writeto(terminal);
 end proc:
